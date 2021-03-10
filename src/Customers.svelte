@@ -15,33 +15,36 @@
             Unsere Kunden
         </p>
         <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            <a href="https://walo.ch" target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-20" src="/logos/walo-logo.svg"/>
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+            <a href='https://www.kibag.ch' target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-20" src="/logos/kibag-logo.svg"/>
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+            <a href='https://riwax.ch/' target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-20" src="/logos/riwax-logo.svg"/>
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+            <a href='https://switzerland.rhomberg-sersa.com' target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-12" src="/logos/sersa-logo.svg"/>
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+            <a href='https://www.enzler.com/' target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-12" src="/logos/enzler-logo.png"/>
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+            <a href='https://www.ortho-team.ch/' target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-12" src="/logos/ortho-team-logo.svg">
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+<!--            ebl-->
+<!--            ines schlienger-->
+
+            <a href='https://www.tanne.ch/' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-12" src="/logos/tanne-logo.png"/>
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+            <a href='https://www.ideesport.ch/' target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-12" src="/logos/idee-sport-logo.jpg"/>
-            </div>
-            <div class="col-span-1 flex justify-center py-8 px-8 grayscale">
+            </a>
+            <a href='https://www.bechterew.ch/' target='_blank' class="col-span-1 flex justify-center py-8 px-8 grayscale">
                 <img class="max-h-12" src="/logos/svmb-logo.svg"/>
-            </div>
+            </a>
         </div>
     </div>
 </div>
