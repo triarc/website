@@ -1,32 +1,13 @@
 <div class="relative bg-white overflow-hidden">
     <div class="max-w-screen-xl mx-auto ">
-        <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pt-32 lg:pb-28 xl:pb-32 xl:pt-32">
             <svg class="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2" fill="currentColor" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <polygon points="50,0 100,0 50,100 0,100" />
             </svg>
 
-            <div class="relative pt-6 px-4 sm:px-6 lg:px-8">
-                <nav class="relative flex items-center justify-between sm:h-10 lg:justify-start">
-                    <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
-                        <div class="flex items-center justify-between w-full md:w-auto">
-                            <a href="#" aria-label="Home">
-                                <img class="h-8 w-auto sm:h-10" src="header.svg" alt="Logo" />
-                            </a>
-                            <div class="-mr-2 flex items-center md:hidden"></div>
-                        </div>
-                    </div>
-                    <div class="hidden md:block md:ml-10 md:pr-4">
-                        <a href="#services" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Dienstleistungen</a>
-                        <a href="#projects" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Projekte</a>
-                        <a href="#product" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Produkt</a>
-                        <a href="#jobs" class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Jobs</a>
-                    </div>
-                </nav>
-            </div>
-
-            <main class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+            <main class="mt-20 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-10 lg:px-8 xl:mt-10 lg:pt-6 lg:px-4 lg:px-8">
                 <div class="sm:text-center lg:text-left">
-                    <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
+                    <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-4xl lg:text-6xl">
                         triarc laboratories
                         <br class="xl:hidden" />
                         <span class="text-indigo-600"></span>
@@ -53,6 +34,7 @@
     </div>
 </div>
 <script>
+    import Navbar from './Navbar.svelte';
     let heroSloganList = [
         "Wir leben Synergie",
         "Unsere Perspektive hinzufügen",
