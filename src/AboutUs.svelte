@@ -13,7 +13,7 @@
                             <div class="space-y-2">
                                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
                                     <h4>{name}</h4>
-                                    <p class="text-indigo-600">{job}</p>
+                                    <p class="text-blue-triarc">{job}</p>
                                 </div>
                             </div>
                         </div>
@@ -34,8 +34,10 @@
       { name: 'Fabrizio Lazaretti', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
       { name: 'Mathia Ninivaggi', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
       { name: 'Warwara Panyushkina', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+      { name: 'Andrea Honegger', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+      { name: 'Paul Tingle', job: 'Nearshore Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
       { name: 'Dave Haug', job: 'Sales', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
-      { name: 'Alicia Brede', job: 'Administration', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
-      { name: 'Paul Tingle', job: 'Nearshore Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'}
+      { name: 'Andre Urban', job: 'Administration', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+      { name: 'Bam Bam', job: 'Quality Assurance', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
     ]
 </script>

@@ -19,7 +19,7 @@
                         <a href="#services" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Dienstleistungen</a>
                         <a href="#projects" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Projekte</a>
                         <a href="#product" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Produkt</a>
-                        <a href="#jobs" class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Jobs</a>
+                        <a href="#jobs" class="ml-8 font-medium text-blue-triarc hover:text-gray-900 transition duration-150 ease-in-out">Jobs</a>
                     </div>
                 </nav>
             </div>
@@ -39,7 +39,7 @@
                     </p>
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <div class="rounded-md shadow">
-                            <a href="#contacts" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                            <a href="#contacts" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-triarc hover:bg-opacity-75 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                                 Kontaktiere uns
                             </a>
                         </div>
