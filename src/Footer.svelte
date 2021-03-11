@@ -9,8 +9,13 @@
             </a>
         </div>
         <div class="mt-8 md:mt-0 md:order-1">
+            <div>
+                <a href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html" target="_blank">
+                    <img class="max-h-20" src="/logos/swiss-logo.png"/>
+                </a>
+            </div>
             <p class="text-center text-base leading-6 text-gray-400">
-                &copy; 2020 triarc laboratories, Ltd. All rights reserved.
+                &copy; { new Date().getFullYear() } triarc laboratories, Ltd. All rights reserved.
             </p>
         </div>
     </div>
