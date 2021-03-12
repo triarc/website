@@ -1,10 +1,9 @@
 <div class="py-24 my-16 bg-gray-200" id="services">
     <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center">
-
-            <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-700 sm:text-4xl sm:leading-10">
-                CUSTOM-SOFTWAREENTWICKLUNG
-            </h3>
+            <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 break-all">
+                Custom-Softwareentwichlung
+            </h2>
             <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
                 damit Sie Ihre Informationen verständlich und überall zur Hand haben
             </p>
