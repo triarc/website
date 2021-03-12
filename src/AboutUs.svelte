@@ -13,7 +13,7 @@
                             <div class="space-y-2">
                                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
                                     <h4>{name}</h4>
-                                    <p class="text-indigo-600">{job}</p>
+                                    <p class="text-blue-triarc">{job}</p>
                                 </div>
                             </div>
                         </div>
@@ -26,16 +26,19 @@
 
 <script>
     let teamMember = [
-      { name: 'Serge Müller', job: 'CEO / Partner', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/02/serge.jpg?w=311&ssl=1'},
-      { name: 'Marco Schmidlin', job: 'CTO / Partner', image: 'https://i1.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1275.jpeg?w=311&ssl=1'},
-      { name: 'Elke Engel', job: 'CFO / Partner', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/elke-1.jpg?w=541&ssl=1'},
-      { name: 'Max Lüthi', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1276.jpeg?w=311&ssl=1'},
-      { name: 'Pascal Bertschi', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/pascal.jpg?w=311&ssl=1'},
-      { name: 'Fabrizio Lazaretti', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
-      { name: 'Mathia Ninivaggi', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
-      { name: 'Warwara Panyushkina', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
-      { name: 'Dave Haug', job: 'Sales', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
-      { name: 'Alicia Brede', job: 'Administration', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
-      { name: 'Paul Tingle', job: 'Nearshore Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'}
+          { name: 'Serge Müller', job: 'CEO / Partner', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/02/serge.jpg?w=311&ssl=1'},
+          { name: 'Marco Schmidlin', job: 'CTO / Partner', image: 'https://i1.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1275.jpeg?w=311&ssl=1'},
+          { name: 'Elke Engel', job: 'CFO / Partner', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/elke-1.jpg?w=541&ssl=1'},
+          { name: 'Max Lüthi', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1276.jpeg?w=311&ssl=1'},
+          { name: 'Pascal Bertschi', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/pascal.jpg?w=311&ssl=1'},
+          { name: 'Fabrizio Lazaretti', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Mathia Ninivaggi', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Warwara Panyushkina', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Andrea Honegger', job: 'Software Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Paul Tingle', job: 'Nearshore Developer', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Dave Haug', job: 'Sales', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Andre Urban', job: 'Administration', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Sandra Vieira da Silva Lopes', job: 'Facility Manager', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
+          { name: 'Bam Bam', job: 'Quality Assurance', image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1'},
     ]
 </script>

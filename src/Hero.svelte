@@ -20,7 +20,7 @@
                     </p>
                     <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                         <div class="rounded-md shadow">
-                            <a href="#contacts" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
+                            <a href="#contacts" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-red-triarc hover:bg-opacity-75 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10">
                                 Kontaktiere uns
                             </a>
                         </div>
@@ -34,7 +34,6 @@
     </div>
 </div>
 <script>
-    import Navbar from './Navbar.svelte';
     let heroSloganList = [
         "Wir leben Synergie",
         "Unsere Perspektive hinzufügen",
