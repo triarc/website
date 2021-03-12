@@ -20,7 +20,7 @@
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <a href="#services" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Dienstleistungen</a>
-            <a href="#projects" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Projekte</a>
+            <a href="#projects" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Stories</a>
             <a href="#product" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Produkt</a>
             <a href="#jobs" class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Jobs</a>
           </div>
@@ -30,7 +30,7 @@
     <div class={`${ isMobileMenuOpen ? 'block' : 'hidden'} bg-white h-screen`} id="mobile-menu">
       <div class="pt-2 pb-4 space-y-1 px-4" on:click={closeMenu}>
         <a href="#services" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Dienstleistungen</a>
-        <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Projekte</a>
+        <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Stories</a>
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
       </div>
