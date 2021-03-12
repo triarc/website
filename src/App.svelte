@@ -1,5 +1,4 @@
 <script>
-    import Logo from './Logo.svelte';
     import Navbar from './Navbar.svelte';
     import Hero from './Hero.svelte';
     import Footer from './Footer.svelte';
@@ -20,9 +19,6 @@
 <Navbar></Navbar>
 <Hero></Hero>
 
-<!--<Logo></Logo>-->
-<!--<Navbar></Navbar>-->
-
 <div class="section" id="services">
     <Services></Services>
 </div>
@@ -35,10 +31,8 @@
 <div class="section" id="customers">
     <Customers></Customers>
 </div>
-<div class="section" id="values">
-    <Values></Values>
-</div>
 <div class="section" id="aboutUs">
+    <Values></Values>
     <AboutUs></AboutUs>
 </div>
 <div class="section" id="contact">

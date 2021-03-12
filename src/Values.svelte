@@ -8,20 +8,20 @@
         {#each values as { id, title, content }}
           <div class="pt-6">
             <dt class="text-lg">
-              <button on:click={handleAccordion(id)} class="text-left w-full flex justify-between items-start text-gray-400">
+              <button on:click={() => handleAccordion(id)} class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none">
                 <span class="font-medium text-gray-900">
                   {title}
                 </span>
                 <span class="ml-6 h-7 flex items-center">
-                  <svg class=" -rotate-180 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                  <svg class="{ currentOpenAccordion === id ? '-rotate-180' : 'rotate-0' }  h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                   </svg>
                 </span>
               </button>
             </dt>
-            <dd class="mt-2 pr-12 ">
+            <dd class="mt-2 pr-12  { currentOpenAccordion === id ? 'visible' : 'invisible h-0' }">
               {#each content as p }
-                <p class="text-base text-gray-500">TEXT1 { p }</p>
+                <p class="text-base text-gray-500 pb-2">{ p }</p>
               {/each}
             </dd>
           </div>
@@ -69,5 +69,7 @@
     }
   ];
   let currentOpenAccordion = 'value-1';
-  const handleAccordion = (id) => currentOpenAccordion = id;
+  const handleAccordion = (id) => {
+    currentOpenAccordion = currentOpenAccordion === id ? undefined : id;
+  }
 </script>
