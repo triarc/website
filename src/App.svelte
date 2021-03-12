@@ -16,7 +16,7 @@
 <style>
 
 </style>
-
+<Navbar></Navbar>
 <Hero></Hero>
 
 <!--<Logo></Logo>-->
