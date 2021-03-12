@@ -1,5 +1,4 @@
 <script>
-    import Logo from './Logo.svelte';
     import Navbar from './Navbar.svelte';
     import Hero from './Hero.svelte';
     import Footer from './Footer.svelte';
@@ -9,8 +8,9 @@
     import Contacts from './Contacts.svelte';
     import AboutUs from './AboutUs.svelte';
     import Product from './Product.svelte';
+    import Values from './Values.svelte';
 
-    console.log('%cWe\'re hiring! https://triarc-labs.com/#jobs', 'padding:20px')
+    console.log('%cWe\'re hiring! https://triarc-labs.com/#jobs', 'padding:20px');
 </script>
 
 <style>
@@ -18,9 +18,6 @@
 </style>
 <Navbar></Navbar>
 <Hero></Hero>
-
-<!--<Logo></Logo>-->
-<!--<Navbar></Navbar>-->
 
 <div class="section" id="services">
     <Services></Services>
@@ -35,6 +32,7 @@
     <Customers></Customers>
 </div>
 <div class="section" id="aboutUs">
+    <Values></Values>
     <AboutUs></AboutUs>
 </div>
 <div class="section" id="contact">
