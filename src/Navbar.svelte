@@ -1,4 +1,4 @@
-<div class="fixed z-20 w-full {navDisplayClass}">
+<div class="z-20 w-full transform transition-all duration-500 {navDisplayClass}" id='navbar'>
   <nav class="relative max-w-screen-xl mx-auto">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
@@ -48,11 +48,17 @@
   let navDisplayClass = 'block';
   let prevScrollPosition = window.pageYOffset;
   window.onscroll = function() {
+    const navbarElement = document.getElementById('navbar')
     const currentScrollPosition = window.pageYOffset;
-    if (prevScrollPosition > currentScrollPosition) {
-      navDisplayClass = currentScrollPosition === 0 ? 'block' : 'bg-white block';
+    if(window.pageYOffset > navbarElement.offsetHeight) {
+      console.log('higher')
+      if (prevScrollPosition > currentScrollPosition) {
+        navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed bg-white translate-y-0';
+      } else {
+        navDisplayClass = '-translate-y-12';
+      }
     } else {
-      navDisplayClass = 'hidden';
+      navDisplayClass = 'translate-y-0';
     }
     prevScrollPosition = currentScrollPosition;
   }
