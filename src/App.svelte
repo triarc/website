@@ -9,8 +9,9 @@
     import Contacts from './Contacts.svelte';
     import AboutUs from './AboutUs.svelte';
     import Product from './Product.svelte';
+    import Values from './Values.svelte';
 
-    console.log('%cWe\'re hiring! https://triarc-labs.com/#jobs', 'padding:20px')
+    console.log('%cWe\'re hiring! https://triarc-labs.com/#jobs', 'padding:20px');
 </script>
 
 <style>
@@ -33,6 +34,9 @@
 </div>
 <div class="section" id="customers">
     <Customers></Customers>
+</div>
+<div class="section" id="values">
+    <Values></Values>
 </div>
 <div class="section" id="aboutUs">
     <AboutUs></AboutUs>
