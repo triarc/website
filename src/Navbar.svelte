@@ -1,74 +1,64 @@
-<style>
-    .mobile-nav {
-        height: calc(100vh - 300px)
-    }
-
-    @media (min-width: 768px) {
-        .mobile-nav {
-            height: 0;
-            padding: 0;
-        }
-    }
-
-    .mobile-nav-item {
-        @apply text-base leading-6 text-2xl font-medium p-3 text-gray-700 transition ease-in-out duration-150;
-    }
-    .mobile-nav-item:hover {
-        @apply text-gray-900;
-    }
-    .mobile-nav-item:focus {
-        @apply outline-none text-gray-900;
-    }
-
-    .desktop-nav {
-        @apply relative bg-black;
-
-        position: sticky;
-        top: 0;
-    }
-
-    .desktop-nav-item {
-        @apply text-base leading-6 font-medium text-gray-400 transition ease-in-out duration-150
-    }
-    .desktop-nav-item:hover {
-        @apply text-white;
-    }
-    .desktop-nav-item:focus {
-        @apply outline-none text-gray-900
-    }
-</style>
-
-<div class="flex flex-col p-6 mobile-nav text-2xl bg-gray-200 sm:visible md:invisible">
-    <a href="#services" class="mobile-nav-item">Dienstleistungen</a>
-    <a href="#projects" class="mobile-nav-item">Projekte</a>
-    <a href="#customers" class="mobile-nav-item">Kunden & Partner</a>
-    <a href="#aboutUs" class="mobile-nav-item">Über uns</a>
-    <a href="#jobs" class="mobile-nav-item">Jobs</a>
-    <a href="#contact" class="mobile-nav-item">Kontakt</a>
-</div>
-
-<div class="desktop-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-        <div class="flex justify-between items-center py-6 md:justify-start md:space-x-10">
-            <div class="-mr-2 -my-2 md:hidden">
-                <a type="button" href="#triarc"
-                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-100 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 focus:text-gray-500 transition duration-150 ease-in-out">
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </a>
-            </div>
-            <nav class="hidden md:flex space-x-10">
-                <a href="#services" class="desktop-nav-item">Dienstleistungen</a>
-                <a href="#projects" class="desktop-nav-item">Projekte</a>
-                <a href="#customers" class="desktop-nav-item">Kunden & Partner</a>
-                <a href="#aboutUs" class="desktop-nav-item">Über uns</a>
-                <a href="#services" class="desktop-nav-item">Jobs</a>
-            </nav>
-            <div class="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
-                <a href="#contact" class="desktop-nav-item">Kontakt</a>
-            </div>
+<div class="z-20 w-full transform transition-all duration-500 {navDisplayClass}" id='navbar'>
+  <nav class="relative max-w-screen-xl mx-auto">
+    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+      <div class="relative flex justify-between h-16">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button -->
+          <button on:click={handleMobileIconClick} type="button" class="inline-flex items-center justify-center p-2 text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <svg class={`${ isMobileMenuOpen ? 'hidden' : 'block'} h-6 w-6`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <svg class={`${ isMobileMenuOpen ? 'block' : 'hidden'} h-6 w-6`} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
+        <div class="flex-1 flex items-center justify-center sm:items-center sm:justify-start">
+          <div class="flex-shrink-0 flex items-center">
+            <a href="#"><img  class="block h-8 w-auto" src="header.svg" alt="Triarc Logo"></a>
+          </div>
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <a href="#services" class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Dienstleistungen</a>
+            <a href="#projects" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Projekte</a>
+            <a href="#product" class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Produkt</a>
+            <a href="#jobs" class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Jobs</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <div class={`${ isMobileMenuOpen ? 'block' : 'hidden'} bg-white h-screen`} id="mobile-menu">
+      <div class="pt-2 pb-4 space-y-1 px-4" on:click={closeMenu}>
+        <a href="#services" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Dienstleistungen</a>
+        <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Projekte</a>
+        <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
+        <a href="#jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
+      </div>
+    </div>
+  </nav>
 </div>
+<script>
+  let isMobileMenuOpen = false;
+  const handleMobileIconClick = () => {
+    isMobileMenuOpen = !isMobileMenuOpen;
+  }
+  const closeMenu = () => {
+    isMobileMenuOpen = false;
+  }
+  let navDisplayClass = 'block';
+  let prevScrollPosition = window.pageYOffset;
+  window.onscroll = function() {
+    const navbarElement = document.getElementById('navbar')
+    const currentScrollPosition = window.pageYOffset;
+    if(window.pageYOffset > navbarElement.offsetHeight) {
+      if (prevScrollPosition > currentScrollPosition) {
+        navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed bg-white translate-y-0';
+      } else {
+        navDisplayClass = '-translate-y-12';
+      }
+    } else {
+      navDisplayClass = 'translate-y-0';
+    }
+    prevScrollPosition = currentScrollPosition;
+  }
+</script>
