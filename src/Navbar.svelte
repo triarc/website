@@ -51,7 +51,6 @@
     const navbarElement = document.getElementById('navbar')
     const currentScrollPosition = window.pageYOffset;
     if(window.pageYOffset > navbarElement.offsetHeight) {
-      console.log('higher')
       if (prevScrollPosition > currentScrollPosition) {
         navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed bg-white translate-y-0';
       } else {
