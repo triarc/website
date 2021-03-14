@@ -62,7 +62,7 @@
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-center sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <a href="#"><img class="block h-8 w-auto" src="header.svg" alt="Triarc Logo" /></a>
+            <a href="https://triarc-labs.com"><img class="block h-8 w-auto" src="header.svg" alt="Triarc Logo" /></a>
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <a

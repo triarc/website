@@ -21,10 +21,6 @@ export default {
       preprocess: autoPreprocess({
         postcss: true,
       }),
-      dev: !production,
-      css: (css) => {
-        css.write('public/components.css')
-      },
     }),
     postcss({
       extract: 'utils.css',
