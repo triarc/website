@@ -43,11 +43,8 @@ jobs:
           GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
-      - uses: LouisBrunner/checks-action@v1.1.1
-        if: always()
+      - uses: marocchino/sticky-pull-request-comment@v2
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Deployment url
-          conclusion: ${{ job.status }}
-          output: |
-            {"summary":"${{ steps.deploy.outputs.service_url }}"}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          message: |
+            Release ${{ github.sha }} to ${{ steps.deploy.outputs.service_url }}
