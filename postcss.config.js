@@ -1,5 +1,5 @@
-const production = !process.env.ROLLUP_WATCH;
-const purgecss = require('@fullhuman/postcss-purgecss');
+const production = !process.env.ROLLUP_WATCH
+const purgecss = require('@fullhuman/postcss-purgecss')
 
 module.exports = {
   plugins: [
@@ -9,7 +9,8 @@ module.exports = {
     production &&
       purgecss({
         content: ['./**/*.html', './**/*.svelte'],
-        defaultExtractor: content => content.match(/[\w-/.:]+(?<!:)/g) || []
-      })
-  ]
-};
+        whitelistPatterns: [/^plyr/],
+        defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
+      }),
+  ],
+}
