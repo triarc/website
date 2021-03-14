@@ -2,6 +2,16 @@ name: publish
 on: [push]
 
 jobs:
+  prettier:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm run check:format
   publish:
     runs-on: ubuntu-18.04
     timeout-minutes: 10
@@ -33,3 +43,11 @@ jobs:
           GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+      - uses: LouisBrunner/checks-action@v1.1.1
+        if: always()
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          name: Deployment url
+          conclusion: ${{ job.status }}
+          output: |
+            {"summary":${{ steps.test.outputs.service_url }}}
