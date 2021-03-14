@@ -30,3 +30,6 @@ jobs:
         run: ./scripts/deploy-service.sh
         env:
           TAG: ${{ env.GITHUB_REF_SLUG }}
+          GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
