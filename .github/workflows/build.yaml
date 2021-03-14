@@ -13,4 +13,4 @@ jobs:
       - name: build docker image
         run: ./scripts/build-docker.sh
         env:
-          TAG: ${{ env.GITHUB_HEAD_REF_SLUG }}
+          TAG: ${{ env.GITHUB_REF_SLUG }}
