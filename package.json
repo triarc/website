@@ -2,16 +2,28 @@
   "name": "svelte-triarc-website",
   "version": "1.0.0",
   "dependencies": {
-    "@tailwindcss/ui": "^0.7.2",
-    "sirv-cli": "^1.0.11",
-    "tailwindcss": "^2.0.3"
+    "@nestjs/common": "^7.6.14",
+    "@nestjs/config": "^0.6.3",
+    "@nestjs/core": "^7.6.14",
+    "@nestjs/platform-express": "^7.6.14",
+    "@nestjs/serve-static": "^2.1.4",
+    "reflect-metadata": "^0.1.13",
+    "@slack/web-api": "^6.1.0",
+    "rxjs": "^6.6.6"
   },
   "devDependencies": {
+    "@nestjs/cli": "^7.5.6",
+    "@nestjs/schematics": "^7.3.0",
+    "@tailwindcss/ui": "^0.7.2",
+    "tailwindcss": "^2.0.3",
+    "@types/node": "^14.14.34",
     "@fullhuman/postcss-purgecss": "^4.0.2",
     "@tailwindcss/aspect-ratio": "^0.2.0",
+    "@sveltech/routify": "^1.9.10",
     "autoprefixer": "^10.2.5",
     "prettier": "^2.2.1",
     "npm-run-all": "^4.1.5",
+    "plyr": "^3.6.4",
     "postcss": "^8.2.8",
     "postcss-import": "^14.0.0",
     "prettier-plugin-svelte": "^2.2.0",
@@ -23,14 +35,14 @@
     "rollup-plugin-svelte": "^7.1.0",
     "rollup-plugin-terser": "^7.0.2",
     "svelte": "^3.35.0",
+    "typescript": "^4.2.3",
+    "ts-node": "^9.1.1",
     "svelte-preprocess": "^4.6.9"
   },
   "scripts": {
     "format": "prettier --plugin-search-dir=. -w src/**",
-    "build": "rollup -c",
-    "autobuild": "rollup -c -w",
-    "dev": "run-p start:dev autobuild",
-    "start": "sirv public",
-    "start:dev": "sirv public --dev"
+    "dev:app": "rollup -cw",
+    "start:client": "routify -c dev:app",
+    "start:server": "nest start --watch"
   }
 }

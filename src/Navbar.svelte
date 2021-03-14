@@ -82,10 +82,7 @@
               href="#aboutUs"
               class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Über uns</a
             >
-            <a
-              href="#jobs"
-              class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Jobs</a
-            >
+            <a href="/jobs" class="ml-8 font-medium text-blue-triarc transition duration-150 ease-in-out">Jobs</a>
           </div>
         </div>
       </div>
@@ -96,7 +93,7 @@
         <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Stories</a>
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
-        <a href="#jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
+        <a href="/jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
       </div>
     </div>
   </nav>

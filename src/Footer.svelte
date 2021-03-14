@@ -15,7 +15,7 @@
     <div class="mt-8 md:mt-0 md:order-1">
       <div>
         <a href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html" target="_blank">
-          <img class="max-h-20" src="/logos/swiss-logo.png" />
+          <img class="max-h-20" src="/logos/swiss-logo.png" alt='swissmadesoftware' />
         </a>
       </div>
       <p class="text-center text-base leading-6 text-gray-400">

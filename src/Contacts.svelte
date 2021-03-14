@@ -1,4 +1,4 @@
-<div class="bg-white" id="contacts">
+<div class="bg-gray-100" id="contacts">
   <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
     <div class="max-w-lg mx-auto md:max-w-none md:grid md:grid-cols-2 md:gap-8">
       <div>

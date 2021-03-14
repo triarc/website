@@ -6,7 +6,7 @@
     <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div class="flex-shrink-0">
-          <img class="h-50 w-full object-cover" src="img/tena-app.png" alt="" />
+          <img class="h-50 w-full object-cover" src="img/tena-app.png" alt="tanne-app" />
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
@@ -25,7 +25,7 @@
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
               <a href="#">
-                <img class="h-10 w-10" src="logos/tanne-logo-x.png" alt="" />
+                <img class="h-10 w-10" src="logos/tanne-logo-x.png" alt="tanne-app" />
               </a>
             </div>
             <div class="ml-3">
@@ -39,7 +39,7 @@
       </div>
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div class="flex-shrink-0">
-          <img class="h-50 w-full object-cover" src="img/walo-app.png" alt="" />
+          <img class="h-50 w-full object-cover" src="img/walo-app.png" alt="tanne-app" />
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
@@ -58,7 +58,7 @@
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
               <a href="#">
-                <img class="h-10 w-10" src="logos/walo-logo.svg" alt="" />
+                <img class="h-10 w-10" src="logos/walo-logo.svg" alt="walo-app" />
               </a>
             </div>
             <div class="ml-3">
@@ -72,7 +72,7 @@
       </div>
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div class="flex-shrink-0">
-          <img class="h-50 w-full object-cover" src="img/orthoteam-app.png" alt="" />
+          <img class="h-50 w-full object-cover" src="img/orthoteam-app.png" alt="ortho-app" />
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
@@ -93,7 +93,7 @@
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
               <a href="#">
-                <img class="h-10 w-10" src="logos/ortho-team-logo-x.jpg" alt="" />
+                <img class="h-10 w-10" src="logos/ortho-team-logo-x.jpg" alt="ortho-app" />
               </a>
             </div>
             <div class="ml-3">
