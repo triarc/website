@@ -43,8 +43,14 @@ jobs:
           GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
           SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
           SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+      - uses: jwalton/gh-find-current-pr@v1
+        id: finder
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          header: deployment
+          number: ${{ steps.finder.outputs.pr }}
           message: |
             Release ${{ github.sha }} to ${{ steps.deploy.outputs.service_url }}

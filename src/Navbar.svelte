@@ -101,6 +101,6 @@
 
 <style>
   #navbar {
-      transition-property: transform;
+    transition-property: transform;
   }
 </style>
