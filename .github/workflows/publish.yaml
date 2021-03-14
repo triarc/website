@@ -12,11 +12,11 @@ jobs:
       - name: build docker image
         run: ./scripts/build-docker.sh
         env:
-          TAG: ${{ env.GITHUB_HEAD_REF_SLUG }}
+          TAG: ${{ env.GITHUB_REF_SLUG }}
       - name: push docker image
         run: ./scripts/push-docker.sh
         env:
-          TAG: ${{ env.GITHUB_HEAD_REF_SLUG }}
+          TAG: ${{ env.GITHUB_REF_SLUG }}
           GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
       - name: setup gcloud
         uses: google-github-actions/setup-gcloud@master
@@ -29,4 +29,4 @@ jobs:
         id: deploy
         run: ./scripts/deploy-service.sh
         env:
-          TAG: ${{ env.GITHUB_HEAD_REF_SLUG }}
+          TAG: ${{ env.GITHUB_REF_SLUG }}
