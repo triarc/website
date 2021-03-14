@@ -18,7 +18,7 @@
     </p>
 
     <video id="player" playsinline controls>
-      <source src="videos/mlink.mp4" type="video/mp4" />
+      <source src="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4" />
     </video>
 
     <div class="mt-12">
