@@ -13,9 +13,9 @@
     const currentScrollPosition = window.pageYOffset
     if (window.pageYOffset > navbarElement.offsetHeight) {
       if (prevScrollPosition > currentScrollPosition) {
-        navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed bg-white translate-y-0'
+        navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed translate-y-0'
       } else {
-        navDisplayClass = '-translate-y-12'
+        navDisplayClass = '-translate-y-16'
       }
     } else {
       navDisplayClass = 'translate-y-0'
@@ -24,7 +24,7 @@
   }
 </script>
 
-<div class="z-20 w-full transform transition-all duration-500 {navDisplayClass}" id="navbar">
+<div class="z-20 sticky top-0 w-full transform duration-500 bg-white {navDisplayClass}" id="navbar">
   <nav class="relative max-w-screen-xl mx-auto">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
@@ -98,3 +98,9 @@
     </div>
   </nav>
 </div>
+
+<style>
+  #navbar {
+      transition-property: transform;
+  }
+</style>
