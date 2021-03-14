@@ -1,14 +1,14 @@
 <script>
-  import Plyr from 'plyr';
-  import { onMount } from 'svelte';
+  import Plyr from 'plyr'
+  import { onMount } from 'svelte'
 
   onMount(() => {
-    const player = new Plyr('#player', {
-
-    });
-    console.log(player)
+    new Plyr('#player', {
+      controls: ['play-large', 'progress']
+    })
   })
 </script>
+
 <div class="relative bg-gray-100 py-16 sm:py-20 lg:py-16">
   <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">MLink</h2>
@@ -20,6 +20,7 @@
     <video id="player" playsinline controls>
       <source src="videos/mlink.mp4" type="video/mp4" />
     </video>
+
     <div class="mt-12">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
         <div class="pt-6">

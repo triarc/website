@@ -1,4 +1,9 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import "plyr/dist/plyr.css";
+@import 'plyr/dist/plyr.css';
+
+.plyr {
+    --plyr-color-main: #c8102e;
+    --plyr-video-control-background-hover:  #c8102e;
+}
