@@ -4,7 +4,7 @@
 
   onMount(() => {
     new Plyr('#player', {
-      controls: ['play-large', 'progress']
+      controls: ['play-large', 'progress'],
     })
   })
 </script>

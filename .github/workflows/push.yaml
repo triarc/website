@@ -1,4 +1,4 @@
-name: publish
+name: push
 on: [push]
 
 jobs:
@@ -50,4 +50,4 @@ jobs:
           name: Deployment url
           conclusion: ${{ job.status }}
           output: |
-            {"summary":${{ steps.test.outputs.service_url }}}
+            {"summary":"${{ steps.deploy.outputs.service_url }}"}

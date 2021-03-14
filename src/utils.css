@@ -4,6 +4,6 @@
 @import 'plyr/dist/plyr.css';
 
 .plyr {
-    --plyr-color-main: #c8102e;
-    --plyr-video-control-background-hover:  #c8102e;
+  --plyr-color-main: #c8102e;
+  --plyr-video-control-background-hover: #c8102e;
 }
