@@ -3,13 +3,14 @@ on: [push, pull_request]
 
 jobs:
   build:
-    name: Build daita
+    name: Build docker image
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 14.x
-      - run: npm ci
-      - run: npm run build
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v3.x
+      - name: build docker image
+        run: ./scripts/build-docker.sh
+        env:
+          TAG: ${{ env.GITHUB_HEAD_REF_SLUG }}
