@@ -9,7 +9,7 @@ module.exports = {
     production &&
       purgecss({
         content: ['./**/*.html', './**/*.svelte'],
-        whitelistPatterns: [/^plyr/],
+        safelist: [/^plyr/],
         defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
       }),
   ],
