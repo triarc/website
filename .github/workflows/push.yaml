@@ -1,0 +1,56 @@
+name: push
+on: [push]
+
+jobs:
+  prettier:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm run check:format
+  publish:
+    runs-on: ubuntu-18.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v2
+      - name: Inject slug/short variables
+        uses: rlespinasse/github-slug-action@v3.x
+      - name: build docker image
+        run: ./scripts/build-docker.sh
+        env:
+          TAG: ${{ env.GITHUB_REF_SLUG }}
+      - name: push docker image
+        run: ./scripts/push-docker.sh
+        env:
+          TAG: ${{ env.GITHUB_REF_SLUG }}
+          GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
+      - name: setup gcloud
+        uses: google-github-actions/setup-gcloud@master
+        with:
+          version: '290.0.1'
+          project_id: ${{ secrets.GCP_PROJECT }}
+          service_account_key: ${{ secrets.GCP_SA_KEY }}
+          export_default_credentials: true
+      - name: deploy to cloud run
+        id: deploy
+        run: ./scripts/deploy-service.sh
+        env:
+          TAG: ${{ env.GITHUB_REF_SLUG }}
+          GCP_PROJECT: ${{ secrets.GCP_PROJECT }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          SLACK_CHANNEL: ${{ secrets.SLACK_CHANNEL }}
+      - uses: jwalton/gh-find-current-pr@v1
+        id: finder
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          header: deployment
+          number: ${{ steps.finder.outputs.pr }}
+          message: |
+            Release ${{ github.sha }} to ${{ steps.deploy.outputs.service_url }}

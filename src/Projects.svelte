@@ -6,14 +6,14 @@
     <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div class="flex-shrink-0">
-          <img class="h-50 w-full object-cover" src="img/tena-app.png" alt="" />
+          <img class="h-50 w-full object-cover" src="img/tena-app.png" alt="tanne-app" />
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
             <p class="text-sm leading-5 font-medium text-blue-triarc">
-              <a href="#" class="hover:underline"> Mobile App </a>
+              <a href="/stories/porta" class="hover:underline"> Mobile App </a>
             </p>
-            <a href="#" class="block">
+            <a href="/stories/porta" class="block">
               <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">PORTA - Tanne</h3>
               <p class="mt-3 text-base leading-6 text-gray-500">
                 Mit Porta erstellte triarc labs entwickelten wir eine Applikation mit umfangreicher Funktionalität,
@@ -24,13 +24,11 @@
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
-              <a href="#">
-                <img class="h-10 w-10" src="logos/tanne-logo-x.png" alt="" />
-              </a>
+              <img class="h-10 w-10" src="logos/tanne-logo-x.png" alt="tanne-app" />
             </div>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
-                <a href="#" class="hover:underline"> Pascal Bertschi, Peer </a>
+                <span>Pascal Bertschi</span>
               </p>
               <div class="flex text-sm leading-5 text-gray-500">Ansprechperson</div>
             </div>
@@ -39,14 +37,14 @@
       </div>
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div class="flex-shrink-0">
-          <img class="h-50 w-full object-cover" src="img/walo-app.png" alt="" />
+          <img class="h-50 w-full object-cover" src="img/walo-app.png" alt="tanne-app" />
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
             <p class="text-sm leading-5 font-medium text-blue-triarc">
-              <a href="#" class="hover:underline"> Mobile App </a>
+              <a href="/stories/my-walo" class="hover:underline"> Mobile App </a>
             </p>
-            <a href="#" class="block">
+            <a href="/stories/my-walo" class="block">
               <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">MyWalo</h3>
               <p class="mt-3 text-base leading-6 text-gray-500">
                 Auf der Baustelle treffen verschiedene analoge und digitale Prozesse aufeinander. Mit Datalake
@@ -57,13 +55,11 @@
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
-              <a href="#">
-                <img class="h-10 w-10" src="logos/walo-logo.svg" alt="" />
-              </a>
+              <img class="h-10 w-8 object-cover" src="img/avatars/serge.png" alt="serge" />
             </div>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
-                <a href="#" class="hover:underline"> Serge Müller </a>
+                <span> Serge Müller </span>
               </p>
               <div class="flex text-sm leading-5 text-gray-500">Ansprechperson</div>
             </div>
@@ -72,14 +68,14 @@
       </div>
       <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
         <div class="flex-shrink-0">
-          <img class="h-50 w-full object-cover" src="img/orthoteam-app.png" alt="" />
+          <img class="h-50 w-full object-cover" src="img/orthoteam-app.png" alt="ortho-app" />
         </div>
         <div class="flex-1 bg-white p-6 flex flex-col justify-between">
           <div class="flex-1">
             <p class="text-sm leading-5 font-medium text-blue-triarc">
-              <a href="#" class="hover:underline">Mobile App</a>
+              <a href="/stories/ortho" class="hover:underline">Mobile App</a>
             </p>
-            <a href="#" class="block">
+            <a href="/stories/ortho" class="block">
               <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">Client, Order & Shortcut</h3>
               <p class="mt-3 text-base leading-6 text-gray-500">
                 Die Fertigung von Orthesen und Prothesen ist sehr individuell auf den Kunden zugeschnitten und
@@ -92,13 +88,11 @@
           </div>
           <div class="mt-6 flex items-center">
             <div class="flex-shrink-0">
-              <a href="#">
-                <img class="h-10 w-10" src="logos/ortho-team-logo-x.jpg" alt="" />
-              </a>
+              <img class="h-10 w-8 object-cover" src="img/avatars/elke.png" alt="elke" />
             </div>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
-                <a href="#" class="hover:underline"> Elke Enge </a>
+                <span> Elke Enge </span>
               </p>
               <div class="flex text-sm leading-5 text-gray-500">Ansprechperson</div>
             </div>

@@ -13,9 +13,9 @@
     const currentScrollPosition = window.pageYOffset
     if (window.pageYOffset > navbarElement.offsetHeight) {
       if (prevScrollPosition > currentScrollPosition) {
-        navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed bg-white translate-y-0'
+        navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed translate-y-0'
       } else {
-        navDisplayClass = '-translate-y-12'
+        navDisplayClass = '-translate-y-16'
       }
     } else {
       navDisplayClass = 'translate-y-0'
@@ -24,7 +24,7 @@
   }
 </script>
 
-<div class="z-20 w-full transform transition-all duration-500 {navDisplayClass}" id="navbar">
+<div class="z-20 sticky top-0 w-full transform duration-500 bg-white {navDisplayClass}" id="navbar">
   <nav class="relative max-w-screen-xl mx-auto">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
@@ -62,7 +62,7 @@
         </div>
         <div class="flex-1 flex items-center justify-center sm:items-center sm:justify-start">
           <div class="flex-shrink-0 flex items-center">
-            <a href="#"><img class="block h-8 w-auto" src="header.svg" alt="Triarc Logo" /></a>
+            <a href="https://triarc-labs.com"><img class="block h-8 w-auto" src="header.svg" alt="Triarc Logo" /></a>
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
             <a
@@ -82,10 +82,7 @@
               href="#aboutUs"
               class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Über uns</a
             >
-            <a
-              href="#jobs"
-              class="ml-8 font-medium text-indigo-600 hover:text-indigo-900 transition duration-150 ease-in-out">Jobs</a
-            >
+            <a href="/jobs" class="ml-8 font-medium text-blue-triarc transition duration-150 ease-in-out">Jobs</a>
           </div>
         </div>
       </div>
@@ -96,8 +93,14 @@
         <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Stories</a>
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
-        <a href="#jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
+        <a href="/jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
       </div>
     </div>
   </nav>
 </div>
+
+<style>
+  #navbar {
+    transition-property: transform;
+  }
+</style>
