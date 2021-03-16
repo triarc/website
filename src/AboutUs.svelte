@@ -74,9 +74,9 @@
     },
     {
       name: 'Dave Haug',
-      job: 'Sales',
+      job: 'Business Development',
       nerdJob: 'Sales',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      image: 'img/avatars/dave.png',
       nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
     },
     {
