@@ -1,19 +1,19 @@
 <script>
-  import Navbar from '../Navbar.svelte';
-  import Hero from '../Hero.svelte';
-  import Footer from '../Footer.svelte';
-  import Services from '../Services.svelte';
-  import Projects from '../Projects.svelte';
-  import Customers from '../Customers.svelte';
-  import Contacts from '../Contacts.svelte';
-  import AboutUs from '../AboutUs.svelte';
-  import Product from '../Product.svelte';
-  import Values from '../Values.svelte';
-  import LiveChat from '../LiveChat.svelte';
-  import Job from '../Job.svelte';
-  import Technology from '../Technology.svelte';
+  import Navbar from '../Navbar.svelte'
+  import Hero from '../Hero.svelte'
+  import Footer from '../Footer.svelte'
+  import Services from '../Services.svelte'
+  import Projects from '../Projects.svelte'
+  import Customers from '../Customers.svelte'
+  import Contacts from '../Contacts.svelte'
+  import AboutUs from '../AboutUs.svelte'
+  import Product from '../Product.svelte'
+  import Values from '../Values.svelte'
+  import LiveChat from '../LiveChat.svelte'
+  import Job from '../Job.svelte'
+  import Technology from '../Technology.svelte'
 
-  console.log('%cWe\'re hiring! https://triarc-labs.com/jobs', 'padding:20px');
+  console.log("%cWe're hiring! https://triarc-labs.com/jobs", 'padding:20px')
 </script>
 
 <Navbar />
