@@ -113,7 +113,9 @@
       onlyInNerdMode: true,
     },
   ]
-  let displayedMembers = teamMember.filter(t => !t.onlyInNerdMode).map((t) => ({ name: t.name, job: t.job, image: t.image }))
+  let displayedMembers = teamMember
+    .filter((t) => !t.onlyInNerdMode)
+    .map((t) => ({ name: t.name, job: t.job, image: t.image }))
 
   function switchMode(nerdMode) {
     nerdMode = nerdMode.detail

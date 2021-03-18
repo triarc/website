@@ -22,8 +22,7 @@
       icon: 'img/technology/postgresql.svg',
       iconAlt: 'postgresql',
       title: 'PostgreSQL',
-      text:
-        'Daten hält PostgreSQL für uns in Struktur und Ordnung. Beziehungen sind der Datenbank dabei sehr wichtig.',
+      text: 'Daten hält PostgreSQL für uns in Struktur und Ordnung. Beziehungen sind der Datenbank dabei sehr wichtig.',
     },
     {
       icon: 'img/technology/mongodb.svg',
@@ -70,8 +69,7 @@
       icon: 'img/technology/kibana.svg',
       iconAlt: 'kibana',
       title: 'Kibana',
-      text:
-        'Unser Verbündeter im Kampf gegen die kniffligen Bugs. Zeichnet die Lebenszeichen aller Anwendungen auf.',
+      text: 'Unser Verbündeter im Kampf gegen die kniffligen Bugs. Zeichnet die Lebenszeichen aller Anwendungen auf.',
     },
     {
       icon: 'img/technology/sentry.svg',
