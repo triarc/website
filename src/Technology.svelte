@@ -111,7 +111,7 @@
           anbieten können, bleiben wir stehts auf dem aktuellen Stand der Technik.
         </p>
       </div>
-      <div class="grid self-center mt-8 grid-cols-3 gap-6 gap-y-6">
+      <div class="grid self-center mt-8 grid-cols-1 gap-6 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
         {#each technologies as technology}
           <div class="flex items-center">
             <img class="w-12" src={technology.icon} alt={technology.iconAlt} />
