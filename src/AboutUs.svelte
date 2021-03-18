@@ -127,7 +127,7 @@
   <div class="max-w-screen-xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
     <div class="space-y-8 sm:space-y-12">
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-        <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">The Team</h2>
+        <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Das Team</h2>
         <p class="text-xl leading-7 text-gray-500">
           Risus velit condimentum vitae tincidunt tincidunt. Mauris ridiculus fusce amet urna nunc. Ut nisl ornare diam
           in.
