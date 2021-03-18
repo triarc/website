@@ -100,26 +100,40 @@
       image: 'img/avatars/bambam.png',
       nerdImage: 'img/avatars/bambam.png',
     },
+    {
+      name: 'Kubernetes',
+      nerdJob: 'CIO',
+      nerdImage: 'img/technology/kubernetes.svg',
+      onlyInNerdMode: true,
+    },
+    {
+      name: 'Prometheus',
+      nerdJob: '24/7 Support',
+      nerdImage: 'img/technology/prometheus.svg',
+      onlyInNerdMode: true,
+    },
   ]
-  let displayedMembers = teamMember.map((t) => ({ name: t.name, job: t.job, image: t.image }))
+  let displayedMembers = teamMember.filter(t => !t.onlyInNerdMode).map((t) => ({ name: t.name, job: t.job, image: t.image }))
 
   function switchMode(nerdMode) {
     nerdMode = nerdMode.detail
-    displayedMembers = teamMember.map((t) => {
-      if (nerdMode) {
-        return {
-          name: t.name,
-          job: t.nerdJob,
-          image: t.nerdImage,
+    displayedMembers = teamMember
+      .filter((t) => (!nerdMode ? !t.onlyInNerdMode : true))
+      .map((t) => {
+        if (nerdMode) {
+          return {
+            name: t.name,
+            job: t.nerdJob,
+            image: t.nerdImage,
+          }
+        } else {
+          return {
+            name: t.name,
+            job: t.job,
+            image: t.image,
+          }
         }
-      } else {
-        return {
-          name: t.name,
-          job: t.job,
-          image: t.image,
-        }
-      }
-    })
+      })
   }
 </script>
 
@@ -139,7 +153,7 @@
         {#each displayedMembers as { name, job, image }}
           <li>
             <div class="space-y-4 mb-6">
-              <img class="mx-auto h-24 w-20 rounded-lg lg:w-24 lg:h-32 object-cover" src={image} alt={name} />
+              <img class="mx-auto h-24 w-20 rounded-lg lg:w-24 lg:h-32" src={image} alt={name} />
               <div class="space-y-2">
                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
                   <h4>{name}</h4>

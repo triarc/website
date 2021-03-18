@@ -10,20 +10,20 @@
       icon: 'img/technology/netcore.svg',
       iconAlt: 'dotnet core',
       title: 'dotnet core',
-      text: 'Damit es auch hinter der Bühne rund läuft, laufen unsere Server mit dotnet 24/7 für unsere Kunden.',
+      text: 'Damit es auch hinter der Bühne rund läuft, arbeiten unsere Server mit dotnet 24/7 für unsere Kunden.',
     },
     {
       icon: 'img/technology/nodejs.svg',
       iconAlt: 'node.js',
       title: 'node.js',
-      text: 'Die Ideenen blitzschnell umsetzen und flexibel bleiben, auch für die kleinen Dinge im Leben.',
+      text: 'Kundenideen blitzschnell umsetzen und flexibel bleiben, auch für die kleinen Features im Leben.',
     },
     {
       icon: 'img/technology/postgresql.svg',
       iconAlt: 'postgresql',
       title: 'PostgreSQL',
       text:
-        'Die wichtigen Daten hält PostgreSQL für uns in Struktur und behält stehts Ordnung. Beziehenungen zwischen den Daten ist die Geheimwaffe jedes Projektes.',
+        'Daten hält PostgreSQL für uns in Struktur und Ordnung. Beziehungen sind der Datenbank dabei sehr wichtig.',
     },
     {
       icon: 'img/technology/mongodb.svg',
@@ -37,13 +37,13 @@
       iconAlt: 'elasticsearch',
       title: 'Elasticsearch',
       text:
-        'Elasticsearch findet noch so grossen Datenberg die relevanten Resultate. Datenmessies können wieder aufatmen.',
+        'Elasticsearch findet in noch so grossen Datenmengen die relevanten Resultate. Datenmessies können wieder aufatmen.',
     },
     {
       icon: 'img/technology/docker.svg',
       iconAlt: 'docker',
       title: 'Docker',
-      text: 'Jede Anwendung braucht ihre Grenzen. Docker hält diese in Schach und hilft bei der Softwareverteilung.',
+      text: 'Jede Anwendung braucht klare Grenzen. Docker hilft uns dabei und regelt die Softwareverteilung.',
     },
     {
       icon: 'img/technology/kubernetes.svg',
@@ -57,7 +57,7 @@
       iconAlt: 'gitlab',
       title: 'Gitlab',
       text:
-        'Die Landkarte unserer Projekte, welche uns aufzeigt wohin es geht und was wir als nächsten Einplanen. Als Nebenjob auch noch unseren Sourcecode festhält und Software daraus produziert.',
+        'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unserer Projekten, zeigt uns wohin es geht.',
     },
     {
       icon: 'img/technology/prometheus.svg',
@@ -71,7 +71,7 @@
       iconAlt: 'kibana',
       title: 'Kibana',
       text:
-        'Unser verbündeter im Kampf gegen die kniffligen Bugs. Zeichnet für Lebzeichen aller Anwendungen auf und vereinfacht uns die Suche nach Problemen.',
+        'Unser Verbündeter im Kampf gegen die kniffligen Bugs. Zeichnet die Lebenszeichen aller Anwendungen auf.',
     },
     {
       icon: 'img/technology/sentry.svg',
