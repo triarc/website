@@ -29,7 +29,7 @@
       iconAlt: 'mongodb',
       title: 'MongoDB',
       text:
-        'Damit auch unstruktierte Informationen ihren Platz finden. MongoDB ist nicht wählerisch und speichert alles!',
+        'Damit auch unstrukturierte Informationen ihren Platz finden. MongoDB ist nicht wählerisch und speichert alles!',
     },
     {
       icon: 'img/technology/elasticsearch.svg',
@@ -63,7 +63,7 @@
       iconAlt: 'prometheus',
       title: 'Prometheus',
       text:
-        'Jemand der uns erinnert, wann es mal nicht rund läuft. Hält stehts Kontakt mit den Entwicklern und (fast) Teil der Familie.',
+        'Jemand der uns erinnert, wann es mal nicht rund läuft. Hält stets Kontakt mit den Entwicklern und (fast) Teil der Familie.',
     },
     {
       icon: 'img/technology/kibana.svg',
@@ -105,8 +105,8 @@
         <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Unsere Technologien</h2>
         <p class="text-xl leading-7 text-gray-200">
           Die Technologie die wir einsetzen sind vielfältig und haben alle das Ziel, unsere Projekte mit dem gewissen
-          etwas zu verleihen. Damit unsere Projekte stehts aktuell bleiben und wir ein einzigartiges Benutzererlebniss
-          anbieten können, bleiben wir stehts auf dem aktuellen Stand der Technik.
+          etwas zu verleihen. Damit unsere Projekte stets aktuell bleiben und wir ein einzigartiges Nutzererlebnis
+          anbieten können, bleiben wir stets auf dem aktuellen Stand der Technik.
         </p>
       </div>
       <div class="grid self-center mt-8 grid-cols-1 gap-6 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
