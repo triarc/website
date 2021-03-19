@@ -19,14 +19,27 @@ export class SlackGuard implements CanActivate {
     const slackSignature = headers['x-slack-signature']
     const requestTimestamp = headers['x-slack-request-timestamp']
 
-    // ~~ is equivalent to Math.floor()
-    const timeInSeconds = ~~(new Date().getTime() / 1000)
+    if (!slackSignature) {
+      return false
+    }
+
+    if (!requestTimestamp || isNaN(requestTimestamp)) {
+      return false
+    }
+
+    const timeInSeconds = Math.floor(new Date().getTime() / 1000)
     // Reject if request is older than 5 minutes
-    if (Math.abs(timeInSeconds - requestTimestamp) > 300) return false
+    if (Math.abs(timeInSeconds - requestTimestamp) > 300) {
+      return false
+    }
 
     const signatureBaseString = `v0:${requestTimestamp}:${rawBody}`
     const mySignature = 'v0=' + hmac.update(signatureBaseString, 'utf8').digest('hex')
 
-    return crypto.timingSafeEqual(Buffer.from(mySignature, 'utf8'), Buffer.from(slackSignature, 'utf8'))
+    try {
+      return crypto.timingSafeEqual(Buffer.from(mySignature, 'utf8'), Buffer.from(slackSignature, 'utf8'))
+    } catch {
+      return false
+    }
   }
 }
