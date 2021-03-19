@@ -1,6 +1,7 @@
-import { Body, Controller, Param, Post, Query, Sse } from '@nestjs/common'
+import { Body, Controller, Param, Post, Query, Sse, UseGuards } from '@nestjs/common'
 import { Observable } from 'rxjs'
 import { ChatMessage, ChatService } from './chat.service'
+import { SlackGuard } from './slack.guard'
 
 @Controller('chat')
 export class ChatController {
@@ -17,6 +18,7 @@ export class ChatController {
   }
 
   @Post('/slack')
+  @UseGuards(SlackGuard)
   async webhook(
     @Body()
     body:
