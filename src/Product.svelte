@@ -73,7 +73,7 @@
                 </span>
               </div>
               <p class="mt-5 text-base text-gray-500">
-                Ausserdem kann es als Data Broker, Datawarehouse oder Datalake agieren. Durch mlink können identische
+                Ausserdem kann es als Data Broker, Datawarehouse oder Data Lake agieren. Durch mlink können identische
                 Informationen im gesamten Ökosystem einer Unternehmung ohne Probleme auch länderübergreifend verwendet
                 werden.
               </p>
@@ -167,7 +167,7 @@
           </svg>
           <div class="ml-3">
             <dd class="mt-2 text-base text-gray-500">
-              Kann als Datalake, Datawarehouse und Data Broker genutzt werden
+              Kann als Data Lake, Datawarehouse und Data Broker genutzt werden
             </dd>
           </div>
         </div>

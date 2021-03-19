@@ -47,7 +47,7 @@
             <a href="/stories/my-walo" class="block">
               <h3 class="mt-2 text-xl leading-7 font-semibold text-gray-900">MyWalo</h3>
               <p class="mt-3 text-base leading-6 text-gray-500">
-                Auf der Baustelle treffen verschiedene analoge und digitale Prozesse aufeinander. Mit Datalake
+                Auf der Baustelle treffen verschiedene analoge und digitale Prozesse aufeinander. Mit Data Lake
                 Technologie führt die myWalo Applikation sämtlich Prozesse in Echtzeit zusammen und erlaubt die
                 Digitalisierung der Baustellen bis zur Schaufel.
               </p>
