@@ -75,7 +75,7 @@
       icon: 'img/technology/sentry.svg',
       iconAlt: 'sentry',
       title: 'Sentry',
-      text: 'Ein Insider, welcher die Probleme unserer Anwendung vor den Awender erkennt.',
+      text: 'Ein Insider, welcher die Probleme unserer Anwendungen vor den Anwendern erkennt.',
     },
     {
       icon: 'img/technology/digitalocean.svg',
