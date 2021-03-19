@@ -4,7 +4,7 @@
       <h2
         class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 break-all uppercase"
       >
-        Custom-Softwareentwichlung
+        Custom-Softwareentwicklung
       </h2>
       <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
         damit Sie Ihre Informationen verständlich und überall zur Hand haben
