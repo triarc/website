@@ -23,10 +23,6 @@ export class SlackGuard implements CanActivate {
       return false
     }
 
-    if (!requestTimestamp || isNaN(requestTimestamp)) {
-      return false
-    }
-
     const timeInSeconds = Math.floor(new Date().getTime() / 1000)
     // Reject if request is older than 5 minutes
     if (Math.abs(timeInSeconds - requestTimestamp) > 300) {
