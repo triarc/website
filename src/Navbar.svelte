@@ -6,6 +6,8 @@
   const closeMenu = () => {
     isMobileMenuOpen = false
   }
+
+  /*
   let navDisplayClass = 'block'
   let prevScrollPosition = window.pageYOffset
   window.onscroll = function () {
@@ -21,10 +23,10 @@
       navDisplayClass = 'translate-y-0'
     }
     prevScrollPosition = currentScrollPosition
-  }
+  }*/
 </script>
 
-<div class="z-20 sticky top-0 w-full transform duration-500 bg-white {navDisplayClass}" id="navbar">
+<div class="z-20 fixed top-0 w-full transform duration-500 bg-white" id="navbar">
   <nav class="relative max-w-screen-xl mx-auto">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">

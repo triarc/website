@@ -20,8 +20,15 @@
       name: 'Elke Engel',
       job: 'CFO / Partner',
       nerdJob: 'CFO / Partner',
-      image: 'img/avatars/elke.png',
-      nerdImage: 'img/avatars/elke.png',
+      image: 'img/avatars/elke.jpg',
+      nerdImage: 'img/avatars/elke.jpg',
+    },
+    {
+      name: 'Pascal Bertschi',
+      job: 'CCO / Partner',
+      nerdJob: 'Typescript maniac',
+      image: 'img/avatars/pascal.png',
+      nerdImage: 'img/avatars/pascal-nerd.png',
     },
     {
       name: 'Max Lüthi',
@@ -31,75 +38,68 @@
       nerdImage: 'img/avatars/max.png',
     },
     {
-      name: 'Pascal Bertschi',
-      job: 'Software Developer',
-      nerdJob: 'Typescript maniac',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/pascal.jpg?w=311&ssl=1',
-      nerdImage: 'img/avatars/pascal-avatar.png',
-    },
-    {
       name: 'Fabrizio Lazaretti',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      image: 'img/avatars/fabrizio.png',
+      nerdImage: 'img/avatars/fabrizio.png',
     },
     {
-      name: 'Mathia Ninivaggi',
+      name: 'Mattia Ninivaggi',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      image: 'img/avatars/mattia.png',
+      nerdImage: 'img/avatars/mattia.png',
     },
     {
       name: 'Warwara Panyushkina',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      image: 'img/avatars/warwara.png',
+      nerdImage: 'img/avatars/warwara.png',
     },
     {
       name: 'Andrea Honegger',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      image: 'img/avatars/andrea.png',
+      nerdImage: 'img/avatars/andrea.png',
     },
     {
       name: 'Paul Tingle',
       job: 'Nearshore Developer',
       nerdJob: 'Nearshore Developer',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      image: 'img/avatars/paul.png',
+      nerdImage: 'img/avatars/paul.png',
     },
     {
       name: 'Dave Haug',
       job: 'Business Development',
       nerdJob: 'Sales',
       image: 'img/avatars/dave.png',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      nerdImage: 'img/avatars/dave.png',
     },
     {
       name: 'Andre Urban',
       job: 'Administration',
       nerdJob: 'Administration',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+      image: 'img/avatars/urban.png',
+      nerdImage: 'img/avatars/urban.png',
     },
-    {
-      name: 'Sandra Vieira da Silva Lopes',
-      job: 'Facility Manager',
-      nerdJob: 'Facility Manager',
-      image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-      nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-    },
-    {
-      name: 'Bam Bam',
-      job: 'Quality Assurance',
-      nerdJob: 'Quality Assurance',
-      image: 'img/avatars/bambam.png',
-      nerdImage: 'img/avatars/bambam.png',
-    },
+    // {
+    //   name: 'Sandra Vieira da Silva Lopes',
+    //   job: 'Facility Manager',
+    //   nerdJob: 'Facility Manager',
+    //   image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+    //   nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
+    // },
+    // {
+    //   name: 'Bam Bam',
+    //   job: 'Quality Assurance',
+    //   nerdJob: 'Quality Assurance',
+    //   image: 'img/avatars/bambam.png',
+    //   nerdImage: 'img/avatars/bambam.png',
+    // },
     {
       name: 'Kubernetes',
       nerdJob: 'CIO',
@@ -155,7 +155,7 @@
         {#each displayedMembers as { name, job, image }}
           <li>
             <div class="space-y-4 mb-6">
-              <img class="mx-auto h-24 w-20 rounded-lg lg:w-24 lg:h-32" src={image} alt={name} />
+              <img class="mx-auto h-20 w-20 rounded-lg lg:w-32 lg:h-32" src={image} alt={name} />
               <div class="space-y-2">
                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
                   <h4>{name}</h4>
