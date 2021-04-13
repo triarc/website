@@ -7,3 +7,7 @@
   --plyr-color-main: #c8102e;
   --plyr-video-control-background-hover: #c8102e;
 }
+
+.hero-img-padding {
+  top: calc(100vw * 0.4 + 64px);
+}
