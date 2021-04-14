@@ -21,7 +21,7 @@
       job: 'CFO / Partner',
       nerdJob: 'CFO / Partner',
       image: 'img/avatars/elke.jpg',
-      nerdImage: 'img/avatars/elke.jpg',
+      nerdImage: 'img/avatars/elke-nerd.png',
     },
     {
       name: 'Pascal Bertschi',
