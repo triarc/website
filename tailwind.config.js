@@ -10,6 +10,7 @@ module.exports = {
         'red-triarc': '#C8102E',
         'green-triarc': '#009639',
         'blue-triarc': '#0077c8',
+        'yellow-triarc': '#FFE74C',
       },
     },
   },

@@ -38,9 +38,9 @@
   <div class="section" id="customers">
     <Customers />
   </div>
+  <Values />
+  <Technology />
   <div class="section" id="aboutUs">
-    <Values />
-    <Technology />
     <AboutUs />
     <Job />
   </div>
