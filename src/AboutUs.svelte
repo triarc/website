@@ -66,6 +66,13 @@
       nerdImage: 'img/avatars/andrea.png',
     },
     {
+      name: 'Iris Zenegaglia',
+      job: 'Project Lead',
+      nerdJob: 'Project Lead',
+      image: 'img/avatars/iris.png',
+      nerdImage: 'img/avatars/iris.png',
+    },
+    {
       name: 'Paul Tingle',
       job: 'Nearshore Developer',
       nerdJob: 'Nearshore Developer',
@@ -75,7 +82,7 @@
     {
       name: 'Dave Haug',
       job: 'Business Development',
-      nerdJob: 'Sales',
+      nerdJob: 'Business Development',
       image: 'img/avatars/dave.png',
       nerdImage: 'img/avatars/dave.png',
     },
