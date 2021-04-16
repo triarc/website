@@ -1,6 +1,0 @@
-dist
-.github
-node_modules
-public/bundle.js
-public/components.css
-public/utils.css
