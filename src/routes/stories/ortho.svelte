@@ -1,4 +1,3 @@
 <svelte:head>
-	<title>triarc-labs - Ortho</title>
+  <title>triarc-labs - Ortho</title>
 </svelte:head>
-

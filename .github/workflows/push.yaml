@@ -47,5 +47,3 @@ jobs:
         env:
           TAG: ${{ env.GITHUB_REF_SLUG }}
           GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
-
-

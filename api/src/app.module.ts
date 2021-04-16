@@ -4,9 +4,7 @@ import { ChatService } from './chat.service'
 import { ConfigModule } from '@nestjs/config'
 
 @Module({
-  imports: [
-    ConfigModule.forRoot(),
-  ],
+  imports: [ConfigModule.forRoot()],
   controllers: [ChatController],
   providers: [ChatService],
 })

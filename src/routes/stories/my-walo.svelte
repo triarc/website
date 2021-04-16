@@ -1,4 +1,3 @@
 <svelte:head>
-	<title>triarc-labs - myWalo</title>
+  <title>triarc-labs - myWalo</title>
 </svelte:head>
-
