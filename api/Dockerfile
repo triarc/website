@@ -20,4 +20,4 @@ COPY package-lock.json .
 RUN npm ci --only=production
 
 COPY --from=build /app/dist .
-CMD ["node", "index.js"]
+CMD ["node", "main.js"]

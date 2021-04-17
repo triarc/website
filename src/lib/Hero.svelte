@@ -63,7 +63,7 @@
             triarc laboratories Ltd.
             <div class="h-1 flex">
               {#each heroSloganList as heroSlogan, i}
-                <div class="w-36 flex-grow cursor-pointer bg-{heroSlogan.color}" on:click={() => selectSlogan(i)} />
+                <div class="w-36 flex-grow cursor-pointer {heroSlogan.color}" on:click={() => selectSlogan(i)} />
               {/each}
             </div>
           </h2>
