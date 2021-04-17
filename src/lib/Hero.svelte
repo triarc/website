@@ -6,7 +6,7 @@
         'Wir sind Ingenieure. Bestausgebildete und praxiserfahrene IT-Fachleute, die können, was sie tun. Und für Sie alles tun, was sie können.\n' +
         '\n' +
         'Wir sind triarc labs. Ihre Manufaktur für digitale Innovation.',
-      color: 'red-triarc',
+      color: 'bg-red-triarc',
       linkText: 'Unser Team',
       href: '#aboutUs',
     },
@@ -16,7 +16,7 @@
         'Wir entwickeln und implementieren Software-Lösungen für KMU, Behörden und Institutionen. Wir hauchen ihrer Vision digitales Leben ein. Wir weisen Geschäftsmodellen den Weg in die Zukunft. Und schaffen so nicht selten auch neue.\n' +
         '\n' +
         'Wir sind triarc labs. Wir machen mehr aus dem, was heute ist: Das, was morgen sein wird.',
-      color: 'green-triarc',
+      color: 'bg-green-triarc',
       linkText: 'Unsere Dienstleistungen',
       href: '#services',
     },
@@ -26,7 +26,7 @@
         'Wir geben uns nicht mit dem zufrieden, was es schon gibt. Wir überzeugen mit dem, was es braucht – und das ist nicht immer dasselbe. Unsere Kunden wissen das zu schätzen.\n' +
         '\n' +
         'Wir sind triarc labs. Wir tun gut daran, nicht mit der Zeit zu gehen. Sondern ihr voraus.',
-      color: 'blue-triarc',
+      color: 'bg-blue-triarc',
       linkText: 'Unsere Technologien',
       href: '#technology',
     },
@@ -36,7 +36,7 @@
         'Uns gefällt nicht, dass Kunden im Mittelpunkt stehen. Mittelpunkt ist gut. Stehen ist zu statisch in einer Zeit, die sich laufend verändert. Wir können unsere Kunden in Bewegung versetzen – und sie mit unseren Lösungen digital transformiert in Bewegung halten.\n' +
         '\n' +
         'Wir sind triarc labs. Wir können nicht alles, aber gewisse Dinge besser – sehr gut sogar (sagen nicht wir, sondern unsere Kunden)',
-      color: 'yellow-triarc',
+      color: 'bg-yellow-triarc',
       linkText: 'Unsere Stories',
       href: '#projects',
     },
@@ -77,7 +77,7 @@
             <div class="rounded-md shadow">
               <a
                 href={heroSloganList[currentIndex].href}
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white hover:bg-opacity-75 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 bg-{heroSloganList[
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white hover:bg-opacity-75 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 {heroSloganList[
                   currentIndex
                 ].color}"
               >

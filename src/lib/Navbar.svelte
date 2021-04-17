@@ -6,24 +6,6 @@
   const closeMenu = () => {
     isMobileMenuOpen = false
   }
-
-  /*
-  let navDisplayClass = 'block'
-  let prevScrollPosition = window.pageYOffset
-  window.onscroll = function () {
-    const navbarElement = document.getElementById('navbar')
-    const currentScrollPosition = window.pageYOffset
-    if (window.pageYOffset > navbarElement.offsetHeight) {
-      if (prevScrollPosition > currentScrollPosition) {
-        navDisplayClass = currentScrollPosition === 0 ? 'fixed translate-y-0' : 'fixed translate-y-0'
-      } else {
-        navDisplayClass = '-translate-y-16'
-      }
-    } else {
-      navDisplayClass = 'translate-y-0'
-    }
-    prevScrollPosition = currentScrollPosition
-  }*/
 </script>
 
 <div class="z-20 fixed top-0 w-full transform duration-500 bg-white" id="navbar">

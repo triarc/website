@@ -1,5 +1,6 @@
 <script lang="ts">
   import NerdToggle from './NerdToggle.svelte'
+
   let nerdMode = false
   let teamMember = [
     {
@@ -8,6 +9,7 @@
       nerdJob: 'CEO / Partner',
       image: 'img/avatars/serge.png',
       nerdImage: 'img/avatars/serge.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Marco Schmidlin',
@@ -15,6 +17,7 @@
       nerdJob: 'CTO / Partner',
       image: 'img/avatars/marco.png',
       nerdImage: 'img/avatars/marco.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Elke Engel',
@@ -22,6 +25,7 @@
       nerdJob: 'CFO / Partner',
       image: 'img/avatars/elke.jpg',
       nerdImage: 'img/avatars/elke-nerd.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Pascal Bertschi',
@@ -29,6 +33,7 @@
       nerdJob: 'Typescript maniac',
       image: 'img/avatars/pascal.png',
       nerdImage: 'img/avatars/pascal-nerd.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Max Lüthi',
@@ -36,6 +41,7 @@
       nerdJob: 'Software Developer',
       image: 'img/avatars/max.png',
       nerdImage: 'img/avatars/max.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Fabrizio Lazaretti',
@@ -43,6 +49,7 @@
       nerdJob: 'Software Developer',
       image: 'img/avatars/fabrizio.png',
       nerdImage: 'img/avatars/fabrizio.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Mattia Ninivaggi',
@@ -50,6 +57,7 @@
       nerdJob: 'Software Developer',
       image: 'img/avatars/mattia.png',
       nerdImage: 'img/avatars/mattia.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Warwara Panyushkina',
@@ -57,6 +65,7 @@
       nerdJob: 'Software Developer',
       image: 'img/avatars/warwara.png',
       nerdImage: 'img/avatars/warwara.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Andrea Honegger',
@@ -64,6 +73,7 @@
       nerdJob: 'Software Developer',
       image: 'img/avatars/andrea.png',
       nerdImage: 'img/avatars/andrea.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Iris Zenegaglia',
@@ -71,6 +81,7 @@
       nerdJob: 'Project Lead',
       image: 'img/avatars/iris.png',
       nerdImage: 'img/avatars/iris.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Paul Tingle',
@@ -78,6 +89,7 @@
       nerdJob: 'Nearshore Developer',
       image: 'img/avatars/paul.png',
       nerdImage: 'img/avatars/paul.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Dave Haug',
@@ -85,6 +97,7 @@
       nerdJob: 'Business Development',
       image: 'img/avatars/dave.png',
       nerdImage: 'img/avatars/dave.png',
+      onlyInNerdMode: false,
     },
     {
       name: 'Andre Urban',
@@ -92,6 +105,7 @@
       nerdJob: 'Administration',
       image: 'img/avatars/urban.png',
       nerdImage: 'img/avatars/urban.png',
+      onlyInNerdMode: false,
     },
     // {
     //   name: 'Sandra Vieira da Silva Lopes',
@@ -109,40 +123,60 @@
     // },
     {
       name: 'Kubernetes',
+      job: '',
+      image: '',
       nerdJob: 'CIO',
       nerdImage: 'img/technology/kubernetes.svg',
       onlyInNerdMode: true,
     },
     {
       name: 'Prometheus',
+      job: '',
+      image: '',
       nerdJob: '24/7 Support',
       nerdImage: 'img/technology/prometheus.svg',
       onlyInNerdMode: true,
     },
   ]
-  let displayedMembers = teamMember
-    .filter((t) => !t.onlyInNerdMode)
-    .map((t) => ({ name: t.name, job: t.job, image: t.image }))
+  let sizes = [144, 255]
+  let displayedMembers = mapMembers()
 
-  function switchMode(nerdMode) {
-    nerdMode = nerdMode.detail
-    displayedMembers = teamMember
+  function getWebpImage(val: string): string | null {
+    if (val.endsWith('svg')) {
+      return null
+    }
+    return val.substr(0, val.length - 3) + 'webp'
+  }
+
+  function getSourceSet(val: string) {
+    return `${sizes.map((s) => `${val.substr(0, val.length - 4)}-${s}.jpg ${s}w`).join(',')}`
+  }
+
+  function mapMembers() {
+    return teamMember
       .filter((t) => (!nerdMode ? !t.onlyInNerdMode : true))
       .map((t) => {
         if (nerdMode) {
           return {
             name: t.name,
             job: t.nerdJob,
-            image: t.nerdImage,
+            image: getSourceSet(t.nerdImage),
+            webpImage: getWebpImage(t.nerdImage),
           }
         } else {
           return {
             name: t.name,
             job: t.job,
-            image: t.image,
+            image: getSourceSet(t.image),
+            webpImage: getWebpImage(t.image),
           }
         }
       })
+  }
+
+  function switchMode(val: { detail: boolean }) {
+    nerdMode = val.detail
+    displayedMembers = mapMembers()
   }
 </script>
 
@@ -157,12 +191,17 @@
         </p>
       </div>
       <ul
-        class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-6"
+        class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5"
       >
-        {#each displayedMembers as { name, job, image }}
-          <li>
-            <div class="space-y-4 mb-6">
-              <img class="mx-auto h-20 w-20 rounded-lg lg:w-32 lg:h-32" src={image} alt={name} />
+        {#each displayedMembers as { name, job, image, webpImage }}
+          <li class="flex">
+            <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
+              <picture class="flex-grow flex">
+                {#if webpImage}
+                  <source type="image/webp" srcset={webpImage} />
+                {/if}
+                <img srcset={image} alt={name} />
+              </picture>
               <div class="space-y-2">
                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
                   <h4>{name}</h4>

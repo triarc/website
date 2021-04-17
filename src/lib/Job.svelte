@@ -1,15 +1,14 @@
 <div class="bg-red-triarc">
   <div class="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
     <h2 class="text-3xl font-extrabold sm:text-4xl">
-      <span class="block text-white">Looking for a new career?</span>
-      <span class="block text-gray-200">We’re hiring.</span>
+      <span class="block text-gray-200">Wir suchen dich!</span>
+      <span class="block text-white text-xl">Auf der Suche nach einer neuen Herausforderung?</span>
     </h2>
     <a
       href="/jobs"
       class="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-grape-600 hover:bg-grape-50 sm:w-auto"
     >
-      <span>See open positions</span>
-      <!-- Heroicon name: solid/external-link -->
+      <span>Offene Jobs</span>
       <svg
         class="ml-3 h-5 w-5 flex-shrink-0 text-gray-400"
         xmlns="http://www.w3.org/2000/svg"

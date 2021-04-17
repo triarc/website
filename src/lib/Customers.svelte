@@ -28,10 +28,16 @@
       <!--            ines schlienger-->
 
       <a href="https://www.tanne.ch/" class="col-span-1 flex justify-center py-8 px-8 grayscale">
-        <img class="max-h-12" src="/logos/tanne-logo.png" alt="tanne" />
+        <picture class="max-h-12">
+          <source type="image/webp" src="logos/tanne-logo.webp" alt="tanne" />
+          <img src="/logos/tanne-logo.png" alt="tanne" />
+        </picture>
       </a>
       <a href="https://www.ideesport.ch/" target="_blank" class="col-span-1 flex justify-center py-8 px-8 grayscale">
-        <img class="max-h-12" src="/logos/idee-sport-logo.jpg" alt="idee-sport" />
+        <picture class="max-h-12">
+          <source type="image/webp" src="logos/idee-sport-logo.webp" alt="idee-sport" />
+          <img src="/logos/idee-sport-logo.jpg" alt="idee-sport" />
+        </picture>
       </a>
       <a href="https://www.bechterew.ch/" target="_blank" class="col-span-1 flex justify-center py-8 px-8 grayscale">
         <img class="max-h-12" src="/logos/svmb-logo.svg" alt="svmb" />

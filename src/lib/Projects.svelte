@@ -23,9 +23,10 @@
             </a>
           </div>
           <div class="mt-6 flex items-center">
-            <div class="flex-shrink-0">
-              <img class="h-10 w-10" src="logos/tanne-logo-x.png" alt="tanne-app" />
-            </div>
+            <picture class="h-10 w-10 flex-shrink-0">
+              <source type="image/webp" srcset="img/avatars/pascal.webp" />
+              <img src="img/avatars/pascal-144.jpg" alt="pascal" />
+            </picture>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
                 <span>Pascal Bertschi</span>
@@ -54,9 +55,10 @@
             </a>
           </div>
           <div class="mt-6 flex items-center">
-            <div class="flex-shrink-0">
-              <img class="h-10 w-8 object-cover" src="img/avatars/serge.png" alt="serge" />
-            </div>
+            <picture class="h-10 w-10 flex-shrink-0">
+              <source type="image/webp" srcset="img/avatars/serge.webp" />
+              <img src="img/avatars/serge-144.jpg" alt="serge" />
+            </picture>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
                 <span> Serge Müller </span>
@@ -87,12 +89,13 @@
             </a>
           </div>
           <div class="mt-6 flex items-center">
-            <div class="flex-shrink-0">
-              <img class="h-10 w-8 object-cover" src="img/avatars/elke.jpg" alt="elke" />
-            </div>
+            <picture class="h-10 w-10 flex-shrink-0">
+              <source type="image/webp" srcset="img/avatars/elke.webp" />
+              <img src="img/avatars/elke-144.jpg" alt="pascal" />
+            </picture>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
-                <span> Elke Enge </span>
+                <span> Elke Engel </span>
               </p>
               <div class="flex text-sm leading-5 text-gray-500">Ansprechperson</div>
             </div>
