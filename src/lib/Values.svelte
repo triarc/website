@@ -53,7 +53,7 @@
         {#each values as { id, title, content }}
           <div class="pt-6" on:click={() => handleAccordion(id)}>
             <dt class="text-lg">
-              <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none">
+              <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none cursor-pointer">
                 <span class="font-medium text-gray-700 flex items-center">
                   {title}
                 </span>
@@ -79,7 +79,7 @@
                 : '-translate-y-12 text-transparent h-0'}"
             >
               {#each content as p}
-                <p class="text-base pb-2 text-justify">{p}</p>
+                <p class="text-base pb-2 text-justify cursor-pointer">{p}</p>
               {/each}
             </dd>
           </div>
