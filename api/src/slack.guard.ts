@@ -21,9 +21,9 @@ export class SlackGuard implements CanActivate {
       return false
     }
 
-    const [version, hash] = slackSignature.split('=');
-    const base = `${version}:${requestTimestamp}:${JSON.stringify(body)}`;
-    const mySign = hmac.update(base, 'utf8').digest('hex');
+    const [version, hash] = slackSignature.split('=')
+    const base = `${version}:${requestTimestamp}:${JSON.stringify(body)}`
+    const mySign = hmac.update(base, 'utf8').digest('hex')
 
     const timeInSeconds = Math.floor(new Date().getTime() / 1000)
     // Reject if request is older than 5 minutes

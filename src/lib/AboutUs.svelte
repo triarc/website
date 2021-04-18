@@ -199,11 +199,11 @@
         {#each displayedMembers as { name, job, image, webpImage }}
           <li class="flex">
             <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
-              <picture class="flex-grow flex">
+              <picture class="flex-grow flex items-center justify-center">
                 {#if webpImage}
-                  <source type="image/webp" srcset={webpImage} />
+                  <source type="image/webp" srcset={webpImage} loading="lazy" />
                 {/if}
-                <img srcset={image} alt={name} />
+                <img srcset={image} alt={name} width="144" height="144" loading="lazy" />
               </picture>
               <div class="space-y-2">
                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">

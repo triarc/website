@@ -25,7 +25,7 @@
           <div class="mt-6 flex items-center">
             <picture class="h-10 w-10 flex-shrink-0">
               <source type="image/webp" srcset="img/avatars/pascal.webp" />
-              <img src="img/avatars/pascal-144.jpg" alt="pascal" />
+              <img src="img/avatars/pascal-144.jpg" width="40" height="40" alt="pascal" />
             </picture>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
@@ -57,7 +57,7 @@
           <div class="mt-6 flex items-center">
             <picture class="h-10 w-10 flex-shrink-0">
               <source type="image/webp" srcset="img/avatars/serge.webp" />
-              <img src="img/avatars/serge-144.jpg" alt="serge" />
+              <img src="img/avatars/serge-144.jpg" width="40" height="40" alt="serge" />
             </picture>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">
@@ -91,7 +91,7 @@
           <div class="mt-6 flex items-center">
             <picture class="h-10 w-10 flex-shrink-0">
               <source type="image/webp" srcset="img/avatars/elke.webp" />
-              <img src="img/avatars/elke-144.jpg" alt="pascal" />
+              <img src="img/avatars/elke-144.jpg" width="40" height="40" alt="pascal" />
             </picture>
             <div class="ml-3">
               <p class="text-sm leading-5 font-medium text-gray-900">

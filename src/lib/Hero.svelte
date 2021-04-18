@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { browser } from '$app/env'
+
   let heroSloganList = [
     {
       title: 'WER WIR SIND',
@@ -42,13 +44,37 @@
     },
   ]
   let currentIndex = 0
+  let currentSlogan = heroSloganList[currentIndex]
+  let progress = 100
 
-  function selectSlogan(index) {
+  function selectSlogan(index: number) {
     currentIndex = index
+    currentSlogan = heroSloganList[currentIndex]
+    progress = (index * 100) / heroSloganList.length
+  }
+
+  function updateProgress() {
+    progress -= 0.05
+    if (progress < 0) {
+      progress = 100
+    }
+    currentIndex = heroSloganList.length - Math.ceil(progress / (100 / heroSloganList.length))
+    currentSlogan = heroSloganList[currentIndex]
+    requestAnimationFrame(updateProgress)
+  }
+
+  if (browser) {
+    requestAnimationFrame(updateProgress)
   }
 </script>
 
 <div class="relative bg-white overflow-hidden">
+  <div class="h-2 flex relative">
+    {#each heroSloganList as heroSlogan, i}
+      <div class="w-36 flex-grow cursor-pointer {heroSlogan.color}" on:click={() => selectSlogan(i)} />
+    {/each}
+    <div class="absolute h-2 opacity-50 right-0 top-0 bg-white" style="width: {progress}%" />
+  </div>
   <div class="max-w-screen-xl mx-auto ">
     <div
       class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-3xl lg:w-full lg:pt-32 lg:pb-28 xl:pb-32 xl:pt-32"
@@ -61,27 +87,20 @@
             class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-4xl lg:text-6xl"
           >
             triarc laboratories Ltd.
-            <div class="h-1 flex">
-              {#each heroSloganList as heroSlogan, i}
-                <div class="w-36 flex-grow cursor-pointer {heroSlogan.color}" on:click={() => selectSlogan(i)} />
-              {/each}
-            </div>
           </h2>
           <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            {heroSloganList[currentIndex].title}
+            {currentSlogan.title}
           </p>
           <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-m sm:max-w-m sm:mx-auto md:mt-5 md:text-m lg:mx-0">
-            {heroSloganList[currentIndex].content}
+            {currentSlogan.content}
           </p>
           <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <div class="rounded-md shadow">
               <a
-                href={heroSloganList[currentIndex].href}
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white hover:bg-opacity-75 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 {heroSloganList[
-                  currentIndex
-                ].color}"
+                href={currentSlogan.href}
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white hover:bg-opacity-75 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 {currentSlogan.color}"
               >
-                {heroSloganList[currentIndex].linkText}
+                {currentSlogan.linkText}
               </a>
             </div>
           </div>
