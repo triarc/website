@@ -61,7 +61,7 @@
                   <svg
                     class="{currentOpenAccordion === id
                       ? '-rotate-180'
-                      : 'rotate-0'}  h-6 w-6 transform text-green-triarc"
+                      : 'rotate-0'}  h-6 w-6 transform transition-all text-green-triarc"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 24 24"
@@ -74,8 +74,8 @@
               </button>
             </dt>
             <dd
-              class="mt-2 pr-8 transform transition-transform duration-500 {currentOpenAccordion === id
-                ? 'translate-y-0 text-gray-500'
+              class="mt-2 pr-8 transform transition-all duration-500 {currentOpenAccordion === id
+                ? 'translate-y-0 text-gray-500 h-64'
                 : '-translate-y-12 text-transparent h-0'}"
             >
               {#each content as p}
