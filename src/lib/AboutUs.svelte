@@ -155,31 +155,32 @@
     return `${sizes.map((s) => `${val.substr(0, val.length - 4)}-${s}.jpg ${s}w`).join(',')}`
   }
 
+  function mapMember(member) {
+    return {
+      name: member.name,
+      job: member.nerdJob,
+      nerdImage: getSourceSet(member.nerdImage),
+      nerdWebpImage: getWebpImage(member.nerdImage),
+      image: getSourceSet(member.image),
+      webpImage: getWebpImage(member.image),
+      onlyInNerdMode: member.onlyInNerdMode,
+    }
+  }
+
   function mapMembers() {
     return teamMember
-      .filter((t) => (!nerdMode ? !t.onlyInNerdMode : true))
-      .map((t) => {
-        if (nerdMode) {
-          return {
-            name: t.name,
-            job: t.nerdJob,
-            image: getSourceSet(t.nerdImage),
-            webpImage: getWebpImage(t.nerdImage),
-          }
-        } else {
-          return {
-            name: t.name,
-            job: t.job,
-            image: getSourceSet(t.image),
-            webpImage: getWebpImage(t.image),
-          }
-        }
-      })
+      .filter(t => !t.onlyInNerdMode || nerdMode)
+      .map((t) => mapMember(t))
   }
 
   function switchMode(val: { detail: boolean }) {
     nerdMode = val.detail
-    displayedMembers = mapMembers()
+    if (nerdMode) {
+      displayedMembers.push(...teamMember.slice(teamMember.length-2).map(m => mapMember(m)))
+    } else {
+      displayedMembers.splice(teamMember.length-2,2)
+    }
+    displayedMembers = [...displayedMembers]
   }
 </script>
 
@@ -195,24 +196,37 @@
       </div>
       <ul
         class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5"
+        class:nerd="{nerdMode}"
       >
-        {#each displayedMembers as { name, job, image, webpImage }}
+        {#each displayedMembers as member}
+
           <li class="flex">
             <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
-              <picture class="flex-grow flex items-center justify-center">
-                {#if webpImage}
-                  <source type="image/webp" srcset={webpImage} loading="lazy" />
-                {/if}
-                <img srcset={image} alt={name} width="144" height="144" loading="lazy" />
-              </picture>
+              <div class='card flex-grow flex items-center justify-center'>
+                <div class='card-content'>
+                  <picture class="front-card">
+                    {#if member.webpImage}
+                      <source type="image/webp" srcset={member.webpImage} loading="lazy" />
+                    {/if}
+                    <img srcset={member.image} alt={member.name} width="144" height="144" loading="lazy" />
+                  </picture>
+                  <picture class="back-card">
+                    {#if member.nerdWebpImage}
+                      <source type="image/webp" srcset={member.nerdWebpImage} loading="lazy" />
+                    {/if}
+                    <img srcset={member.nerdImage} alt="nerd {member.name}" width="144" height="144" loading="lazy" />
+                  </picture>
+                </div>
+              </div>
               <div class="space-y-2">
                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
-                  <h4>{name}</h4>
-                  <p class="text-blue-triarc">{job}</p>
+                  <h4>{member.name}</h4>
+                  <p class="text-blue-triarc">{member.job}</p>
                 </div>
               </div>
             </div>
           </li>
+
         {/each}
       </ul>
     </div>
@@ -220,3 +234,37 @@
     <NerdToggle on:switch={switchMode} />
   </div>
 </div>
+
+<style style lang="postcss">
+  .card {
+    width: 100%;
+    height: 144px;
+    text-align: center;
+    perspective: 600px;
+  }
+  .card-content {
+    width: 144px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s;
+    transform-style: preserve-3d;
+  }
+  .nerd .card-content {
+    transform: rotateY(180deg);
+    transition: transform 0.3s;
+  }
+  .front-card, .back-card {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .back-card {
+    transform: rotateY(180deg);
+  }
+</style>
