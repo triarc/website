@@ -1,8 +1,8 @@
 <script>
   import { onMount } from 'svelte';
 
-  onMount(() => {
-    import Plyr from 'plyr';
+  onMount(async () => {
+    const Plyr = await import('plyr');
 
     new Plyr('#player', {
       controls: ['play-large', 'progress'],
