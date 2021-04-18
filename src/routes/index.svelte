@@ -15,7 +15,14 @@
   import { onMount } from 'svelte';
 
   onMount(() => {
-    console.log('%c We\'re hiring! Checkout https://triarc-labs.com/jobs', [
+    const messages = {
+      'en': '%c We\'re hiring! Checkout https://triarc-labs.com/jobs',
+      'de': '%c Wir suchen dich! https://triarc-labs.com/jobs',
+      'de-DE': '%c Wir suchen dich! https://triarc-labs.com/jobs',
+      'de-CH': '%c Mir suched dich! https://triarc-labs.com/job s',
+    }
+    const message = messages[navigator.language] || messages['en']
+    console.log(message, [
       'background-image: url(https://dev.triarc-labs.com/header.svg)',
       'background-position: left center',
       'color: #fff',
