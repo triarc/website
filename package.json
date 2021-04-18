@@ -8,6 +8,10 @@
     "lint": "prettier --check . && eslint --ignore-path .gitignore .",
     "format": "prettier --write ."
   },
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "plyr": "^3.6.4"
+  },
   "devDependencies": {
     "@sveltejs/adapter-netlify": "next",
     "@sveltejs/adapter-static": "next",
@@ -20,7 +24,6 @@
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-svelte3": "^3.1.0",
     "firebase-tools": "^9.10.0",
-    "plyr": "^3.6.4",
     "postcss": "^8.2.10",
     "postcss-load-config": "^3.0.1",
     "prettier": "~2.2.1",
