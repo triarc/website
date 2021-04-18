@@ -1,8 +1,9 @@
 <script>
-  import Plyr from 'plyr'
-  import { onMount } from 'svelte'
+  import { onMount } from 'svelte';
 
   onMount(() => {
+    import Plyr from 'plyr';
+
     new Plyr('#player', {
       controls: ['play-large', 'progress'],
     })
