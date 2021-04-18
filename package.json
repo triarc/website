@@ -9,7 +9,6 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "node-fetch": "^2.6.1",
     "plyr": "^3.6.4"
   },
   "devDependencies": {
