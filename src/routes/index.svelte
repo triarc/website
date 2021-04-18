@@ -12,6 +12,18 @@
   import Contacts from '../lib/Contacts.svelte'
   import LiveChat from '../lib/LiveChat.svelte'
   import Footer from '../lib/Footer.svelte'
+  import { onMount } from 'svelte';
+
+  onMount(() => {
+    console.log('%c We\'re hiring! Checkout https://triarc-labs.com/jobs', [
+      'background-image: url(https://dev.triarc-labs.com/header.svg)',
+      'background-position: left center',
+      'color: #fff',
+      'padding: 10px 20px 10px 180px',
+      'line-height: 80px',
+      'background-repeat: no-repeat',
+      'height : 100px' ].join(';'));
+  })
 </script>
 
 <svelte:head>

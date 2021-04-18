@@ -29,13 +29,13 @@
 
       <a href="https://www.tanne.ch/" class="col-span-1 flex justify-center py-8 px-8 grayscale">
         <picture class="max-h-12">
-          <source type="image/webp" src="logos/tanne-logo.webp" alt="tanne" />
+          <source type="image/webp" srcset="logos/tanne-logo.webp" alt="tanne" />
           <img height="80" class="max-h-20" src="/logos/tanne-logo.png" loading="lazy" alt="tanne" />
         </picture>
       </a>
       <a href="https://www.ideesport.ch/" target="_blank" class="col-span-1 flex justify-center py-8 px-8 grayscale">
         <picture class="max-h-12">
-          <source type="image/webp" src="logos/idee-sport-logo.webp" alt="idee-sport" />
+          <source type="image/webp" srcset="logos/idee-sport-logo.webp" alt="idee-sport" />
           <img height="80" class="max-h-20" src="/logos/idee-sport-logo.jpg" loading="lazy" alt="idee-sport" />
         </picture>
       </a>

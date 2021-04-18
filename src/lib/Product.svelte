@@ -3,8 +3,7 @@
 
   onMount(async () => {
     const Plyr = await import('plyr');
-
-    new Plyr('#player', {
+    new Plyr.default('#player', {
       controls: ['play-large', 'progress'],
     })
   })
@@ -14,7 +13,7 @@
   <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
     <h2 class="text-3xl mb-8 leading-9 font-extrabold tracking-tight sm:text-4xl">MLink</h2>
     <video id="player" playsinline controls>
-      <source src="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4" />
+      <source srcset="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4" />
     </video>
 
     <div class="mt-12">
