@@ -69,3 +69,4 @@ build
 api/dist
 .svelte
 .idea
+.vercel_build_output
