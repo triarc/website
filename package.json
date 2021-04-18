@@ -13,6 +13,7 @@
     "plyr": "^3.6.4"
   },
   "devDependencies": {
+    "@architect/sandbox": "^3.4.1",
     "@sveltejs/adapter-netlify": "next",
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
