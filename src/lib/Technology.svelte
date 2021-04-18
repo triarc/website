@@ -112,7 +112,7 @@
       <div class="grid self-center mt-8 grid-cols-1 gap-6 gap-y-6 md:grid-cols-2 lg:grid-cols-3">
         {#each technologies as technology}
           <div class="flex items-center">
-            <img width="48" src={technology.icon} loading="lazy" alt={technology.iconAlt} />
+            <img width="48" height="48" src={technology.icon} loading="lazy" alt={technology.iconAlt} />
             <div class="text-left ml-4">
               <div class="text-xl underline">{technology.title}</div>
               <div class="text-gray-100">
