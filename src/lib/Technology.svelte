@@ -114,8 +114,8 @@
           <div class="flex items-center">
             <img width="48" height="48" src={technology.icon} loading="lazy" alt={technology.iconAlt} />
             <div class="text-left ml-4">
-              <div class="text-xl underline">{technology.title}</div>
-              <div class="text-gray-100">
+              <div class="text-xl text-white">{technology.title}</div>
+              <div class="text-gray-200">
                 {technology.text}
               </div>
             </div>
