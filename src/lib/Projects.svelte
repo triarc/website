@@ -35,18 +35,13 @@
         </div>
         <div class="mt-8 border-t border-gray-200 pt-6">
           <blockquote>
-            <div>
-              <p class="text-base text-gray-500">
-                &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
-              </p>
-            </div>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="">
                 </div>
                 <div class="text-base font-medium text-gray-700">
-                  Mirko Baur, Gesamtleiter Tanne
+                  Pascal Bertschi, Ansprechsperson
                 </div>
               </div>
             </footer>
@@ -79,18 +74,13 @@
         </div>
         <div class="mt-8 border-t border-gray-200 pt-6">
           <blockquote>
-            <div>
-              <p class="text-base text-gray-500">
-                &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
-              </p>
-            </div>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                  <img class="h-10 w-10" src="img/avatars/elke.jpg" alt="">
                 </div>
                 <div class="text-base font-medium text-gray-700">
-                  Patrick Rohrer, GL Ortho-Team
+                  Elke Engel, Ansprechsperson
                 </div>
               </div>
             </footer>
@@ -120,18 +110,13 @@
         </div>
         <div class="mt-8 border-t border-gray-200 pt-6">
           <blockquote>
-            <div>
-              <p class="text-base text-gray-500">
-                &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
-              </p>
-            </div>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-6 w-6 rounded-full" src="img/svmb.png" alt="svmb">
+                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="">
                 </div>
                 <div class="text-base font-medium text-gray-700">
-                  René Bräm, Geschäftsleitung
+                  Pascal Bertschi, Ansprechsperson
                 </div>
               </div>
             </footer>
@@ -162,18 +147,13 @@
         </div>
         <div class="mt-8 border-t border-gray-200 pt-6">
           <blockquote>
-            <div>
-              <p class="text-base text-gray-500">
-                &ldquo;Cras velit quis eros eget rhoncus lacus ultrices sed diam. Sit orci risus aenean curabitur donec aliquet. Mi venenatis in euismod ut.&rdquo;
-              </p>
-            </div>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-6 w-6 rounded-full" src="https://images.unsplash.com/photo-1509783236416-c9ad59bae472?ixlib=rb-=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80" alt="">
+                  <img class="h-10 w-10" src="img/avatars/serge.png" alt="">
                 </div>
                 <div class="text-base font-medium text-gray-700">
-                  René Bräm, Geschäftsleitung SVMB
+                  Serge Müller, Ansprechsperson
                 </div>
               </div>
             </footer>

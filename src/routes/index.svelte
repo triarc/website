@@ -72,9 +72,6 @@
     <AboutUs />
     <Job />
   </div>
-  <div class="section" id="contact">
-    <Contacts />
-  </div>
   <LiveChat />
   <Footer />
 </div>
