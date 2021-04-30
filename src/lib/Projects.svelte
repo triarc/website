@@ -1,4 +1,4 @@
-<div class="relative pt-8 pb-20 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">
+<div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">
   <div class="relative max-w-7xl mx-auto">
     <div class="text-center">
       <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">Stories</h2>
@@ -14,12 +14,15 @@
         <div>
           <div class="mt-6">
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-              PORTA - Tanne
+              PORTA
             </h2>
+            <p class="mt-4 text-lg text-gray-500 italic">
+              PORTA ist eine standardisierte Sammlung von Gebärden, die den Möglichkeiten und Bedürfnissen von Menschen mit geistiger und
+              mehrfacher (Sinnes-)Behinderung entsprechen.
+            </p>
             <p class="mt-4 text-lg text-gray-500">
-              Mit Porta erstellte triarc labs entwickelten wir eine Applikation mit umfangreicher Funktionalität,
-              darunter das Trainieren von Gebärden, benutzerspezifische Kataloge, eigener Gebärden und Arbeitsblättern
-              für den Austausch zwischen Betreuungspersonen.
+              Zusammen mit «Die Tanne», der Schweizerischen Stiftung für Taubblinde, entwickelte wir für Porta eine mobile Applikation mit umfangreicher Funktionalität – darunter
+              das Trainieren von Gebärden nach benutzerspezifischen Katalogen und von eigenen Gebärden – sowie Arbeitsblätter für den Austausch zwischen Betreuungspersonen.
             </p>
             <div class="mt-6">
               <div class='flex'>
@@ -61,14 +64,15 @@
         <div>
           <div class="mt-6">
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
-              Client, Order & Shortcut
+              ORTHOTEAM
             </h2>
+            <p class="mt-4 text-lg text-gray-500 italic">
+              ORTHOTEAM ist ein gesamtschweizerisch tätiges Unternehmen auf dem Gebiet der Orthopädie- und Reha-Technik, fokussiert auf ganzheitliche Versorgungskonzepte.
+            </p>
             <p class="mt-4 text-lg text-gray-500">
-              Die Fertigung von Orthesen und Prothesen ist sehr individuell auf den Kunden zugeschnitten und
-              anspruchsvoll. Mit den Applikationen Client, Order und Shortcut werden die Spezialisten während des
-              gesamten Kundenprozesses unterstützt. Die umfangreichen Funktionen führen von der vereinfachten
-              Auftragseröffnung über die Bearbeitung sowie Begleitung eines Kunden bis hin zum digitalisierten
-              Bestellwesen
+              Die Fertigung von Orthesen und Prothesen ist sehr individuell auf den Kunden zugeschnitten und anspruchsvoll. Mit den von triarc konzipierten Applikationen
+              Client, Order und Shortcut werden die Spezialisten während des gesamten Kundenprozesses unterstützt – von der vereinfachten Auftragseröffnung und der
+              Bearbeitung über die Begleitung des Kunden bis hin zum digitalisierten Bestellwesen.
             </p>
           </div>
         </div>
@@ -102,9 +106,14 @@
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
               Verba
             </h2>
+            <p class="mt-4 text-lg text-gray-500 italic">
+              Die Schweizerische Vereinigung Morbus Bechterew (SVMB) wurde 1978 von Betroffenen gegründet und zählt heute über 4300 Mitglieder. Sie berät,
+              unterstützt und vernetzt Menschen mit der chronisch-rheumatischen Erkrankung Morbus Bechterew
+            </p>
             <p class="mt-4 text-lg text-gray-500">
-              Für die Verwaltung von Therapien und deren Mitglieder. Von der digitalen Krankenkassenrechnung bis ins SAGE integriert.
-              Die Vereinslösung in der Schweizer Cloud, damit sich das Bechterew-Team auf die wichtigen Dinge im Alltag fokusieren kann.
+              Verba verwaltet die Dossiers der Mitglieder und begleitet sie im Therapieprozess.
+              Von der digitalen Krankenkassenrechnung bis hin zur vollständigen Integration ins SAGE.
+              Die Vereinslösung in der Schweizer Cloud, damit sich das Bechterew-Team auf die wichtigen Dinge im Alltag fokussieren kann.
             </p>
           </div>
         </div>
@@ -138,10 +147,12 @@
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">
               myWalo
             </h2>
+            <p class="mt-4 text-lg text-gray-500 italic">
+              WALO ist ein international tätiges, seit über 100 Jahren familiengeführtes Schweizer Bauunternehmen (heute bereits in dritter und vierter Generation).
+            </p>
             <p class="mt-4 text-lg text-gray-500">
-              Auf der Baustelle treffen verschiedene analoge und digitale Prozesse aufeinander. Mit Data Lake
-              Technologie führt die myWalo Applikation sämtlich Prozesse in Echtzeit zusammen und erlaubt die
-              Digitalisierung der Baustellen bis zur Schaufel.
+              Auf der Baustelle treffen verschiedene analoge und digitale Prozesse aufeinander. Mittels Data Lake Technologie führt die von triarc labs entwickelte «myWalo»
+              Applikation sämtliche Prozesse in Echtzeit zusammen und erlaubt die Digitalisierung der Baustellen, von der Schaufel bis zum Baukran.
             </p>
           </div>
         </div>

@@ -12,6 +12,13 @@
 <div class="relative bg-gray-100 py-16 sm:py-20 lg:py-16">
   <div class="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl">
     <h2 class="text-3xl mb-8 leading-9 font-extrabold tracking-tight sm:text-4xl">MLink</h2>
+    <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
+      Der Kommunikationshub
+    </p>
+    <p class="mt-4 max-w-4xl text-md text-gray-500 lg:mx-auto mb-5">
+      mLink ermöglicht die Kommunikation zwischen verschiedensten Applikationen / Systemen in Echtzeit. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind.
+      Dabei sind Ausfallsicherheit und Datenschutz eine Selbstverständlichkeit.
+    </p>
     <video id="player" playsinline controls>
       <source srcset="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4" />
     </video>

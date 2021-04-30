@@ -67,7 +67,7 @@
           name="chat"
           placeholder="Type something here"
           on:keyup={onKeyUp}
-          class="px-4 py-4 sm:px-6 block w-full sm:text-sm rounded-md"
+          class="px-4 py-4 sm:px-6 block w-full sm:text-sm rounded-md focus:outline-none"
         />
       </div>
     </div>
