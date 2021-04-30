@@ -24,7 +24,7 @@
 		<div class="max-w-4xl bg-gray-900 mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
 			<div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
 				<p class="mt-3 text-3xl font-extrabold text-white">Was wir dir bieten</p>
-				<p class="mt-5 text-lg text-gray-300">Wir sind ein kleines Tech Unternehmen im Herzen von Zürich. Wir entwickeln leidenschaftlich gerne Software und immer auf der Suche nach neuen Talenten die uns ergänzen.</p>
+				<p class="mt-5 text-lg text-gray-300">Wir sind ein kleines Tech Unternehmen im Herzen von Zürich. Wir entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.</p>
 				<div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
 					<p>
 						<span class="block text-2xl font-bold text-white">40 Stundenwoche</span>
@@ -38,10 +38,10 @@
 
 					<p>
 						<span class="block text-2xl font-bold text-white">Technologie</span>
-						<span class="mt-1 block text-base text-gray-300">Wir bleiben stehts aktuell und setzen die Technologie ein, die Sinn macht.</span>
+						<span class="mt-1 block text-base text-gray-300">Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht.</span>
 					</p>
 					<p>
-						<span class="block text-2xl font-bold text-white">Kaffe / Bar</span>
+						<span class="block text-2xl font-bold text-white">Kaffee / Bar</span>
 						<span class="mt-1 block text-base text-gray-300">Bediehn dich selbst an unserer triarc-Bar mit Kaffe, Bier und saisonalem Süssem.</span>
 					</p>
 

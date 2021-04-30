@@ -184,7 +184,7 @@
   }
 </script>
 
-<div class="bg-white">
+<div class="bg-white bg-about-us">
   <div class="max-w-screen-xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
     <div class="space-y-8 sm:space-y-12">
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
@@ -233,6 +233,10 @@
 </div>
 
 <style style lang="postcss">
+    .bg-about-us {
+        background-image: url("img/moroccan-flower.png");
+        background-repeat: repeat;
+    }
   .card {
     width: 100%;
     height: 144px;

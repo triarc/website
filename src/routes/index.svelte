@@ -9,7 +9,6 @@
   import Technology from '../lib/Technology.svelte'
   import AboutUs from '../lib/AboutUs.svelte'
   import Job from '../lib/Job.svelte'
-  import Contacts from '../lib/Contacts.svelte'
   import LiveChat from '../lib/LiveChat.svelte'
   import Footer from '../lib/Footer.svelte'
   import { onMount } from 'svelte';
@@ -66,9 +65,9 @@
   <div class="section" id="customers">
     <Customers />
   </div>
-  <Values />
   <Technology />
   <div class="section" id="aboutUs">
+    <Values />
     <AboutUs />
     <Job />
   </div>

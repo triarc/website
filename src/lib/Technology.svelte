@@ -56,14 +56,14 @@
       iconAlt: 'gitlab',
       title: 'Gitlab',
       text:
-        'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unserer Projekten, zeigt uns wohin es geht.',
+        'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unseren Projekten, zeigt uns wohin es geht.',
     },
     {
       icon: 'img/technology/prometheus.svg',
       iconAlt: 'prometheus',
       title: 'Prometheus',
       text:
-        'Jemand der uns erinnert, wann es mal nicht rund läuft. Hält stets Kontakt mit den Entwicklern und (fast) Teil der Familie.',
+        'Jemand der uns erinnert, wann es mal nicht rund läuft. Hält stets Kontakt mit den Entwicklern und ist (fast) Teil der Familie.',
     },
     {
       icon: 'img/technology/kibana.svg',
@@ -81,19 +81,19 @@
       icon: 'img/technology/digitalocean.svg',
       iconAlt: 'digitalocean',
       title: 'Digitalocean',
-      text: 'Die Platform für Infrastruktur in der Cloud mit kleinem Budget und viel Herz. ',
+      text: 'Die Plattform für Infrastruktur in der Cloud mit kleinem Budget und viel Herz. ',
     },
     {
       icon: 'img/technology/gcloud.svg',
       iconAlt: 'google cloud',
       title: 'Google Cloud',
-      text: 'Die Platform für Infrastruktur in der Cloud mit Standorten in der Schweiz',
+      text: 'Die Plattform für Infrastruktur in der Cloud mit Standorten in der Schweiz.',
     },
     {
       icon: 'img/technology/azure.svg',
       iconAlt: 'azure',
       title: 'Azure Cloud',
-      text: 'Die Platform für Infrastruktur in der Cloud verknüpft mit ihrem Office Paket',
+      text: 'Die Plattform für Infrastruktur in der Cloud verknüpft mit ihrem Office Paket.',
     },
   ]
 </script>
