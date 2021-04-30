@@ -33,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
+        <div class="mt-4 pt-4">
           <blockquote>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
@@ -72,7 +72,7 @@
             </p>
           </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
+        <div class="mt-4 pt-4">
           <blockquote>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
@@ -108,7 +108,7 @@
             </p>
           </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
+        <div class="mt-4 pt-4">
           <blockquote>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
@@ -145,7 +145,7 @@
             </p>
           </div>
         </div>
-        <div class="mt-8 border-t border-gray-200 pt-6">
+        <div class="mt-4 pt-4">
           <blockquote>
             <footer class="mt-3">
               <div class="flex items-center space-x-3">

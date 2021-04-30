@@ -23,7 +23,7 @@
     <div class="mt-8 md:mt-0 md:order-1">
       <div class="max-w-lg mx-auto">
         <h2 class="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
-          In Kontakt kommen
+          Kontakt
         </h2>
         <dl class="mt-8 text-base text-gray-500">
           <div class="mt-6">
@@ -35,7 +35,7 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
               <span class="ml-3">
-                <p>Neue Hard 14, 8005 Zürich</p>
+                <p><a class="underline" target='_blank' href='https://goo.gl/maps/fAMmSET8UjPNxNYr5'>Neue Hard 14, 8005 Zürich</a></p>
               </span>
             </dd>
           </div>
