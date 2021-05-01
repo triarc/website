@@ -21,8 +21,21 @@
 		</div>
 	</div>
 	<div class="relative bg-gray-900">
-		<div class="max-w-4xl bg-gray-900 mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
-			<div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
+<!--		<img src='img/office/bar.png' class='absolute right-0 w-1/2'/>-->
+		<div class="max-w-4xl bg-gray-900 mx-auto pl-4 sm:pl-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
+
+			<div class='relative md:mt-32'>
+				<div class="absolute inset-x-0 top-0 transform translate-y-px">
+					<div class="flex justify-center transform -translate-y-1/2">
+						<span class="inline-flex rounded-full bg-green-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
+							Die BAR
+						</span>
+					</div>
+				</div>
+				<img src='img/office/bar2.png' class='object-cover rounded-3xl' />
+			</div>
+
+			<div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
 				<p class="mt-3 text-3xl font-extrabold text-white">Was wir dir bieten</p>
 				<p class="mt-5 text-lg text-gray-300">Wir sind ein kleines Tech Unternehmen im Herzen von Zürich. Wir entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.</p>
 				<div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
@@ -80,11 +93,22 @@
 	</div>
 
 	<div class="relative bg-gray-900">
+
 		<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8">
-			<div class="relative pt-12 pb-64 sm:pt-24 sm:pb-64 xl:col-start-2 xl:pb-24">
+			<div class='relative'>
+				<div class="absolute inset-x-0 top-0 transform translate-y-px">
+					<div class="flex justify-center transform -translate-y-1/2">
+						<span class="inline-flex rounded-full bg-red-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white">
+							Das Gym
+						</span>
+					</div>
+				</div>
+				<img src='img/office/gym.png' class='object-cover rounded-3xl md:rounded-b-none' />
+			</div>
+			<div class="relative pt-12 pb-16 sm:pt-24 sm:pb-64 xl:col-start-2 xl:pb-24">
 				<p class="mt-3 text-3xl font-extrabold text-white text-right">Was wir von dir erwarten</p>
 				<p class="mt-5 text-lg text-gray-300 text-right">Du bist eine aufgestellte Persönlichkeit und bereit für neue Herausforderungen. Du weist welcher der Begriffe CI, E2E, SSR, SSE, XSS, UBS und CSS nichts in der Entwicklung verloren hat.</p>
-				<div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
+				<div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2 text-right">
 					<p>
 						<span class="block text-2xl font-bold text-white">Technologie</span>
 						<span class="mt-1 block text-base text-gray-300">Du kennst du aktuellen Webtechnologien aus und beherscht vorzugsweise Angular sowie andere Technologien aus unserem <a href='..#technology' class='underline'>Stack</a></span>

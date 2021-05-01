@@ -29,10 +29,10 @@
 </script>
 
 <div class="bg-gray-100">
-  <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto py-24 px-4 md:py-32 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto">
       <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Manifest</h2>
-      <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+      <dl class="mt-6 space-y-6 divide-y divide-gray-200 h-96">
         {#each values as { id, title, content }}
           <div class="pt-6" on:click={() => handleAccordion(id)}>
             <dt class="text-lg">
@@ -57,9 +57,9 @@
               </button>
             </dt>
             <dd
-              class="mt-2 pr-8 transform transition-all duration-500 {currentOpenAccordion === id
-                ? 'translate-y-0 text-gray-500 h-54'
-                : '-translate-y-12 text-transparent h-0'}"
+              class="mt-2 pr-8 transform transition-all overflow-hidden duration-500 {currentOpenAccordion === id
+                ? 'h-40 text-gray-500'
+                : 'h-0 text-transparent'}"
             >
               {#each content as p}
                 <p class="text-base pb-2 text-justify cursor-pointer">{p}</p>

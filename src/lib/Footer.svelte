@@ -19,7 +19,7 @@
               </span>
             </dd>
           </div>
-          <div class="mt-6">
+          <div class="mt-3">
             <dt class="sr-only">Phone number</dt>
             <dd class="flex">
               <!-- Heroicon name: outline/phone -->
@@ -31,7 +31,7 @@
               </span>
             </dd>
           </div>
-          <div class="mt-6">
+          <div class="mt-3">
             <dt class="sr-only">Email</dt>
             <dd class="flex">
               <!-- Heroicon name: outline/mail -->
@@ -43,7 +43,7 @@
               </span>
             </dd>
           </div>
-          <div class="mt-6">
+          <div class="mt-3">
             <dt class="sr-only">Email</dt>
             <dd class="flex">
               <!-- Heroicon name: outline/mail -->

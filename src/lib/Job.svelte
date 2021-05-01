@@ -1,4 +1,4 @@
-<div class="bg-red-triarc">
+<div class="bg-green-triarc">
   <div class="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
     <h2 class="text-3xl font-extrabold sm:text-4xl">
       <span class="block text-gray-200">Wir suchen dich!</span>
