@@ -11,8 +11,8 @@
       id: 'value-2',
       title: 'DIGITIZE!',
       content: [
-        'Der technische Wandel eröffnet uns Chancen, neue Strategien der digitalen Transformation auszuprobieren und bestehende Geschäftsmodelle weiter zu entwickeln. Durch umfangreiches Testen stärken wir das Vertrauen in die Qualität unserer Produkte und messen die Ergebnisse an den Kriterien Funktionalität, Effizienz, Zuverlässigkeit, Benutzbarkeit, Änderbarkeit, Kompatibilität und Sicherheit. Unsere Arbeit betrachten wir erst dann als erledigt, wenn wir und unsere Kunden mit dem finalen Produkt zufrieden sind und es sämtlichen Anforderungen genügt.'
-        ],
+        'Der technische Wandel eröffnet uns Chancen, neue Strategien der digitalen Transformation auszuprobieren und bestehende Geschäftsmodelle weiter zu entwickeln. Durch umfangreiches Testen stärken wir das Vertrauen in die Qualität unserer Produkte und messen die Ergebnisse an den Kriterien Funktionalität, Effizienz, Zuverlässigkeit, Benutzbarkeit, Änderbarkeit, Kompatibilität und Sicherheit. Unsere Arbeit betrachten wir erst dann als erledigt, wenn wir und unsere Kunden mit dem finalen Produkt zufrieden sind und es sämtlichen Anforderungen genügt.',
+      ],
     },
     {
       id: 'value-3',
@@ -36,7 +36,9 @@
         {#each values as { id, title, content }}
           <div class="pt-6" on:click={() => handleAccordion(id)}>
             <dt class="text-lg">
-              <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none cursor-pointer">
+              <button
+                class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none cursor-pointer"
+              >
                 <span class="font-medium text-gray-700 flex items-center">
                   {title}
                 </span>

@@ -1,5 +1,4 @@
 <script lang="ts">
-
   let nerdMode = false
   let teamMember = [
     {
@@ -168,17 +167,17 @@
 
   function mapMembers() {
     return teamMember
-      .filter(t => !t.onlyInNerdMode || nerdMode)
+      .filter((t) => !t.onlyInNerdMode || nerdMode)
       .map((t) => mapMember(t))
-      .sort((t1, t2) => t1.name.localeCompare(t2.name));
+      .sort((t1, t2) => t1.name.localeCompare(t2.name))
   }
 
   function switchMode(val: { detail: boolean }) {
     nerdMode = val.detail
     if (nerdMode) {
-      displayedMembers.push(...teamMember.slice(teamMember.length-2).map(m => mapMember(m)))
+      displayedMembers.push(...teamMember.slice(teamMember.length - 2).map((m) => mapMember(m)))
     } else {
-      displayedMembers.splice(teamMember.length-2,2)
+      displayedMembers.splice(teamMember.length - 2, 2)
     }
     displayedMembers = [...displayedMembers]
   }
@@ -189,20 +188,17 @@
     <div class="space-y-8 sm:space-y-12">
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
         <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Digital Evolutionaries</h2>
-        <p class="text-xl leading-7 text-gray-500">
-          Das Team
-        </p>
+        <p class="text-xl leading-7 text-gray-500">Das Team</p>
       </div>
       <ul
         class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5"
-        class:nerd="{nerdMode}"
+        class:nerd={nerdMode}
       >
         {#each displayedMembers as member}
-
           <li class="flex">
             <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
-              <div class='card flex-grow flex items-center justify-center'>
-                <div class='card-content'>
+              <div class="card flex-grow flex items-center justify-center">
+                <div class="card-content">
                   <picture class="front-card">
                     {#if member.webpImage}
                       <source type="image/webp" srcset={member.webpImage} loading="lazy" />
@@ -225,7 +221,6 @@
               </div>
             </div>
           </li>
-
         {/each}
       </ul>
     </div>
@@ -233,10 +228,10 @@
 </div>
 
 <style style lang="postcss">
-    .bg-about-us {
-        //background-image: url("/img/moroccan-flower.png");
-        //background-repeat: repeat;
-    }
+  .bg-about-us {
+    //background-image: url("/img/moroccan-flower.png");
+    //background-repeat: repeat;
+  }
   .card {
     width: 100%;
     height: 144px;
@@ -256,7 +251,8 @@
     transform: rotateY(180deg);
     transition: transform 0.3s;
   }
-  .front-card, .back-card {
+  .front-card,
+  .back-card {
     position: absolute;
     display: flex;
     align-items: center;

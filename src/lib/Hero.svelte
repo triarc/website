@@ -7,7 +7,7 @@
       color: 'bg-red-triarc',
       linkText: 'mehr erfahren',
       href: '#aboutUs',
-      claim: 'Ihre Manufaktur für digitale Innovation.'
+      claim: 'Ihre Manufaktur für digitale Innovation.',
     },
     {
       title: 'WAS',
@@ -16,7 +16,7 @@
       color: 'bg-green-triarc',
       linkText: 'mehr erfahren',
       href: '#services',
-      claim: 'Wir machen mehr aus dem, was heute ist: Das, was morgen sein wird.'
+      claim: 'Wir machen mehr aus dem, was heute ist: Das, was morgen sein wird.',
     },
     {
       title: 'WIE ',
@@ -25,7 +25,7 @@
       color: 'bg-blue-triarc',
       linkText: 'mehr erfahren',
       href: '#technology',
-      claim: 'Wir tun gut daran, nicht mit der Zeit zu gehen. Sondern ihr voraus.'
+      claim: 'Wir tun gut daran, nicht mit der Zeit zu gehen. Sondern ihr voraus.',
     },
     {
       title: 'WARUM',
@@ -34,17 +34,15 @@
       color: 'bg-yellow-triarc',
       linkText: 'mehr erfahren',
       href: '#projects',
-      claim: 'Wir können nicht alles, aber gewisse Dinge besser – sehr gut sogar (sagen nicht wir, sondern unsere Kunden).  '
+      claim:
+        'Wir können nicht alles, aber gewisse Dinge besser – sehr gut sogar (sagen nicht wir, sondern unsere Kunden).  ',
     },
   ]
 </script>
-<style style lang="postcss">
-
-</style>
 
 <div class="relative bg-white overflow-hidden">
-  <div class='bg-gray-100 bg-opacity-80 py-24 px-6'>
-    <img src='img/hero/triarc-labs.svg' class='h-24  mx-auto'>
+  <div class="bg-gray-100 bg-opacity-80 py-24 px-6">
+    <img src="img/hero/triarc-labs.svg" class="h-24  mx-auto" />
   </div>
 
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
@@ -56,8 +54,7 @@
           </p>
           <p class="mt-2 text-base leading-6 text-gray-600">
             {heroSolgan.content}
-            <a href={heroSolgan.href}
-              class="underline">
+            <a href={heroSolgan.href} class="underline">
               {heroSolgan.linkText}
             </a>
           </p>
@@ -69,3 +66,6 @@
     </div>
   </div>
 </div>
+
+<style style lang="postcss">
+</style>
