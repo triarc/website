@@ -2,40 +2,23 @@
   let values = [
     {
       id: 'value-1',
-      title: 'Starkes Team',
+      title: 'ANALYZE!',
       content: [
-        'Unsere Firmenkultur beruht auf den Grundsätzen der Gleichberechtigung, Mitbestimmung und Partizipation. Entscheide werden soziokratisch gemeinsam gefällt. In wöchentlichen Meetings verfeinern wir unsere Arbeitsweise, lösen Probleme und passen unsere Strategie an. Wir investieren viel in Teambildung und gutes Arbeitsklima und motivieren damit die Mitarbeiter zu Höchstleistungen.',
+        'Kreativität und Innovationshunger prägen unsere Unternehmenskultur. Gemeinsam erfinden wir uns täglich neu. Unkonventionelle Ideen fördern wir, indem wir Konventionen gezielt hinterfragen. Dabei denken und handeln wir unternehmerisch, denn mit unseren Lösungen wollen wir den entscheidenden Wettbewerbsvorsprung für unsere Kunden gewinnen. Und für uns.',
       ],
     },
     {
       id: 'value-2',
-      title: 'Transparenz',
+      title: 'DIGITIZE!',
       content: [
-        'Durch offene, ehrliche und klare Kommunikation schaffen wir gegenseitiges Vertrauen und fördern Respekt und Toleranz. Wir verstehen jedes Projekt als Kooperation und binden alle Beteiligten in den Entwicklungsprozess mit ein. Wir rapportieren unsere Arbeit transparent und präsentieren kontinuierlich Zwischenergebnisse.',
+        'Der technische Wandel eröffnet uns Chancen, neue Strategien der digitalen Transformation auszuprobieren und bestehende Geschäftsmodelle weiter zu entwickeln. Durch umfangreiches Testen stärken wir das Vertrauen in die Qualität unserer Produkte und messen die Ergebnisse an den Kriterien Funktionalität, Effizienz, Zuverlässigkeit, Benutzbarkeit, Änderbarkeit, Kompatibilität und Sicherheit. Unsere Arbeit betrachten wir erst dann als erledigt, wenn wir und unsere Kunden mit dem finalen Produkt zufrieden sind und es sämtlichen Anforderungen genügt.',
       ],
     },
     {
       id: 'value-3',
-      title: 'Innovationslust',
+      title: 'REALIZE!',
       content: [
-        'Kreativität und Innovationshunger prägen unsere Unternehmenskultur. Wir lassen Raum für unkonventionelle Ideen und fördern gezielt mit permanentem Hinterfragen. (hier fehlt ein Satz)',
-        'Der technische Wandel gibt uns die Chance neue Strategien auszuprobieren und bestehende Geschäftsmodelle weiterzuentwickeln. ',
-        'Gemeinsam erfinden wir uns täglich neu und schaffen mit unseren Lösungen den entscheidenden Wettbewerbsvorteil für Ihr Unternehmen. ',
-      ],
-    },
-    {
-      id: 'value-4',
-      title: 'Qualität (standards)',
-      content: [
-        'Unser Qualitätsverständnis ist einfach: Wir betrachten unsere Arbeit erst dann als erledigt, wenn wir und unsere Kunden mit dem finalen Produkt zufrieden und sämtliche Anforderung erfüllt sind. Die berühmte „Extrameile“ gehen wir dabei aus eigenem Antrieb. Durch umfangreiches Testen schaffen wir Vertrauen (in die Qualität der Software). Wir messen die Qualität an Funktionalität, Effizienz, Zuverlässigkeit, Benutzbarkeit, Änderbarkeit, Kompatibilität und Sicherheit.',
-      ],
-    },
-    {
-      id: 'value-5',
-      title: 'Nachhaltig',
-      content: [
-        'Der bewusste Umgang mit Ressourcen bestimmt unser Handeln. Als Unternehmen sind wir klimaneutral. Dabei halten wir den Konsum so tief wie möglich und kompensieren unvermeidbare Emissionen. Unseren Energiebedarf decken wir zu 100% durch erneuerbare Energien. Bei der Beschaffung achten wir darauf hochwertige langlebige Produkte einzukaufen und schenken ihnen nach der Ausmusterung ein zweites Leben ausserhalb von triarc. Wir motivieren unsere Mitarbeiter und Kunden zu umweltgerechtem Verhalten, reisen mit den öffentlichen Verkehrsmitteln und stellen unseren Mitarbeitern Velos zur Verfügung. Soziale Projekte unterstützen wir mit Kostenreduktion und Zusatzleistungen.',
-        'In der Softwareentwicklung achten wir besonders auf die digitale Nachhaltigkeit. Unsere Produkte müssen effizient, ausgereift, modular, wartungsarm und langlebig sein. Wir verwenden möglichst Open Source Software. ',
+        'Jedes Projekt verstehen wir als Kooperation und binden alle Beteiligten in den Entwicklungsprozess mit ein. Wir rapportieren zu jeder Zeit transparent und präsentieren kontinuierlich Zwischenergebnisse. Wir arbeiten nach den Grundsätzen der Gleichberechtigung, Mitbestimmung und Partizipation. Darum investieren wir viel in Teambildung und gutes Arbeitsklima und motivieren uns damit gegenseitig zu Höchstleistungen.',
       ],
     },
   ]
@@ -46,14 +29,16 @@
 </script>
 
 <div class="bg-gray-100">
-  <div class="max-w-7xl mx-auto py-12 px-4 sm:py-16 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto py-24 px-4 md:py-32 sm:px-6 lg:px-8">
     <div class="max-w-3xl mx-auto">
-      <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Werte</h2>
-      <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+      <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Manifest</h2>
+      <dl class="mt-6 space-y-6 divide-y divide-gray-200 h-96">
         {#each values as { id, title, content }}
           <div class="pt-6" on:click={() => handleAccordion(id)}>
             <dt class="text-lg">
-              <button class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none cursor-pointer">
+              <button
+                class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none cursor-pointer"
+              >
                 <span class="font-medium text-gray-700 flex items-center">
                   {title}
                 </span>
@@ -74,9 +59,9 @@
               </button>
             </dt>
             <dd
-              class="mt-2 pr-8 transform transition-all duration-500 {currentOpenAccordion === id
-                ? 'translate-y-0 text-gray-500 h-64'
-                : '-translate-y-12 text-transparent h-0'}"
+              class="mt-2 pr-8 transform transition-all overflow-hidden duration-500 {currentOpenAccordion === id
+                ? 'h-40 text-gray-500'
+                : 'h-0 text-transparent'}"
             >
               {#each content as p}
                 <p class="text-base pb-2 text-justify cursor-pointer">{p}</p>

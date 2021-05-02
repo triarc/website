@@ -65,6 +65,7 @@ node_modules/
 # dotenv environment variables file
 .env
 
+dist
 build
 api/dist
 .svelte

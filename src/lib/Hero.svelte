@@ -1,111 +1,71 @@
 <script lang="ts">
-  import { browser } from '$app/env'
-
   let heroSloganList = [
     {
-      title: 'WER WIR SIND',
+      title: 'WER',
       content:
-        'Wir sind Ingenieure. Bestausgebildete und praxiserfahrene IT-Fachleute, die können, was sie tun. Und für Sie alles tun, was sie können.\n' +
-        '\n' +
-        'Wir sind triarc labs. Ihre Manufaktur für digitale Innovation.',
+        'Wir sind Ingenieure. Bestausgebildete und praxiserfahrene IT-Fachleute, die können, was sie tun. Und für Sie alles tun, was sie können.',
       color: 'bg-red-triarc',
-      linkText: 'Unser Team',
+      linkText: 'mehr erfahren',
       href: '#aboutUs',
+      claim: 'Ihre Manufaktur für digitale Innovation.',
     },
     {
-      title: 'WAS WIR MACHEN',
+      title: 'WAS',
       content:
-        'Wir entwickeln und implementieren Software-Lösungen für KMU, Behörden und Institutionen. Wir hauchen ihrer Vision digitales Leben ein. Wir weisen Geschäftsmodellen den Weg in die Zukunft. Und schaffen so nicht selten auch neue.\n' +
-        '\n' +
-        'Wir sind triarc labs. Wir machen mehr aus dem, was heute ist: Das, was morgen sein wird.',
+        'Wir entwickeln und implementieren Software-Lösungen für KMU, Behörden und Institutionen. Wir hauchen ihrer Vision digitales Leben ein. Wir weisen Geschäftsmodellen den Weg in die Zukunft. Und schaffen so nicht selten auch neue.  \n',
       color: 'bg-green-triarc',
-      linkText: 'Unsere Dienstleistungen',
+      linkText: 'mehr erfahren',
       href: '#services',
+      claim: 'Wir machen mehr aus dem, was heute ist: Das, was morgen sein wird.',
     },
     {
-      title: 'WIE WIR ES TUN',
+      title: 'WIE ',
       content:
-        'Wir geben uns nicht mit dem zufrieden, was es schon gibt. Wir überzeugen mit dem, was es braucht – und das ist nicht immer dasselbe. Unsere Kunden wissen das zu schätzen.\n' +
-        '\n' +
-        'Wir sind triarc labs. Wir tun gut daran, nicht mit der Zeit zu gehen. Sondern ihr voraus.',
+        'Wir geben uns nicht mit dem zufrieden, was es schon gibt. Wir überzeugen mit dem, was es braucht – und das ist nicht immer dasselbe. Unsere Kunden wissen das zu schätzen.',
       color: 'bg-blue-triarc',
-      linkText: 'Unsere Technologien',
+      linkText: 'mehr erfahren',
       href: '#technology',
+      claim: 'Wir tun gut daran, nicht mit der Zeit zu gehen. Sondern ihr voraus.',
     },
     {
-      title: 'WARUM WIR NICHT ANDERS KÖNNEN',
+      title: 'WARUM',
       content:
-        'Uns gefällt nicht, dass Kunden im Mittelpunkt stehen. Mittelpunkt ist gut. Stehen ist zu statisch in einer Zeit, die sich laufend verändert. Wir können unsere Kunden in Bewegung versetzen – und sie mit unseren Lösungen digital transformiert in Bewegung halten.\n' +
-        '\n' +
-        'Wir sind triarc labs. Wir können nicht alles, aber gewisse Dinge besser – sehr gut sogar (sagen nicht wir, sondern unsere Kunden)',
+        'Uns gefällt nicht, dass Kunden im Mittelpunkt stehen. Mittelpunkt ist gut. Stehen ist zu statisch in einer Zeit, die sich laufend verändert. Wir können unsere Kunden in Bewegung versetzen – und sie mit unseren Lösungen digital transformiert in Bewegung halten.',
       color: 'bg-yellow-triarc',
-      linkText: 'Unsere Stories',
+      linkText: 'mehr erfahren',
       href: '#projects',
+      claim:
+        'Wir können nicht alles, aber gewisse Dinge besser – sehr gut sogar (sagen nicht wir, sondern unsere Kunden).  ',
     },
   ]
-  let currentIndex = 0
-  let currentSlogan = heroSloganList[currentIndex]
-  let progress = 100
-
-  function selectSlogan(index: number) {
-    currentIndex = index
-    currentSlogan = heroSloganList[currentIndex]
-    progress = (index * 100) / heroSloganList.length
-  }
-
-  function updateProgress() {
-    progress -= 0.05
-    if (progress < 0) {
-      progress = 100
-    }
-    currentIndex = heroSloganList.length - Math.ceil(progress / (100 / heroSloganList.length))
-    currentSlogan = heroSloganList[currentIndex]
-    requestAnimationFrame(updateProgress)
-  }
-
-  if (browser) {
-    requestAnimationFrame(updateProgress)
-  }
 </script>
 
 <div class="relative bg-white overflow-hidden">
-  <div class="h-2 flex relative">
-    {#each heroSloganList as heroSlogan, i}
-      <div class="w-36 flex-grow cursor-pointer {heroSlogan.color}" on:click={() => selectSlogan(i)} />
-    {/each}
-    <div class="absolute h-2 opacity-50 right-0 top-0 bg-white" style="width: {progress}%" />
+  <div class="bg-gray-100 bg-opacity-80 py-24 px-6">
+    <img src="img/hero/triarc-labs.svg" class="h-24  mx-auto" />
   </div>
-  <div class="max-w-screen-xl mx-auto ">
-    <div
-      class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-3xl lg:w-full lg:pt-32 lg:pb-28 xl:pb-32 xl:pt-32"
-    >
-      <main
-        class="mt-20 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-10 lg:px-8 xl:mt-10 lg:pt-6 lg:px-4 lg:px-8"
-      >
-        <div class="sm:text-center lg:text-left">
-          <h2
-            class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-4xl lg:text-6xl"
-          >
-            triarc laboratories Ltd.
-          </h2>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-            {currentSlogan.title}
+
+  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 my-16">
+    <div class="relative z-10 py-8 px-3 bg-white grid grid-cols-1 md:grid-cols-2 gap-6">
+      {#each heroSloganList as heroSolgan}
+        <div>
+          <p class="text-lg leading-6 font-medium text-gray-700">
+            {heroSolgan.title}
           </p>
-          <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-m sm:max-w-m sm:mx-auto md:mt-5 md:text-m lg:mx-0">
-            {currentSlogan.content}
+          <p class="mt-2 text-base leading-6 text-gray-600">
+            {heroSolgan.content}
+            <a href={heroSolgan.href} class="underline">
+              {heroSolgan.linkText}
+            </a>
           </p>
-          <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-            <div class="rounded-md shadow">
-              <a
-                href={currentSlogan.href}
-                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white hover:bg-opacity-75 focus:outline-none focus:shadow-outline-indigo transition duration-150 ease-in-out md:py-4 md:text-lg md:px-10 {currentSlogan.color}"
-              >
-                {currentSlogan.linkText}
-              </a>
-            </div>
-          </div>
+          <p class="mt-3">
+            {heroSolgan.claim}
+          </p>
         </div>
-      </main>
+      {/each}
     </div>
   </div>
 </div>
+
+<style style lang="postcss">
+</style>
