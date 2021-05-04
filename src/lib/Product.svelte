@@ -5,7 +5,7 @@
     const Plyr = await import('plyr')
     const player = new Plyr.default('#player', {
       controls: ['play-large', 'progress'],
-    });
+    })
   })
 </script>
 
@@ -18,8 +18,8 @@
       style="height: 100%; width: 100%"
       data-poster="img/thumbnail/mlink-1080-poster.png"
     >
-      <source src="https://storage.googleapis.com/triarc-website/mlink-1080.webm" type="video/webm">
-      <source src="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4">
+      <source src="https://storage.googleapis.com/triarc-website/mlink-1080.webm" type="video/webm" />
+      <source src="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4" />
     </video>
   </div>
   <div class="relative max-w-7xl mx-auto px-5 py-4 sm:px-6 lg:px-8 md:w-1/2 lg:w-1/2 sm:w-full ">
@@ -113,29 +113,4 @@
 <!--</div>-->
 <style style lang="postcss">
   @import 'plyr/dist/plyr.css';
-  @media (max-width: 320px) {
-      .video-sm {
-          display: block;
-      }
-      .video-lg, .video-md {
-          display: none;
-      }
-  }
-  @media (max-width: 720px) {
-      .video-md {
-          display: block;
-      }
-      .video-lg, .video-sm {
-          display: none;
-      }
-  }
-  @media (max-width: 10800px) {
-      .video-lg{
-          display: block;
-      }
-      .video-md, .video-sm {
-          display: none;
-      }
-  }
-
 </style>
