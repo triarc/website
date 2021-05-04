@@ -71,7 +71,7 @@
             <a href="/jobs" class="ml-8 font-medium text-blue-triarc transition duration-150 ease-in-out">Jobs</a>
           </div>
         </div>
-        <div class='hidden items-center sm:flex'>
+        <div class="hidden items-center sm:flex">
           <a href="/mlink" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">mLink</a>
         </div>
       </div>
