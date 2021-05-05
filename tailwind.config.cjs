@@ -25,10 +25,21 @@ module.exports = {
         'blue-triarc': '#0077c8',
         'yellow-triarc': '#FFE74C',
       },
+      animation: {
+        wiggle: 'wiggle 1s ease',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      },
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      animation: ['hover'],
+    },
   },
   plugins: [
     // require('@tailwindcss/ui')(),
