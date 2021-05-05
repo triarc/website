@@ -203,7 +203,14 @@
                     {#if member.webpImage}
                       <source type="image/webp" srcset={member.webpImage} loading="lazy" />
                     {/if}
-                    <img srcset={member.image} alt={member.name} width="144" height="144" loading="lazy" class='drop-shadow-2xl filter ' />
+                    <img
+                      srcset={member.image}
+                      alt={member.name}
+                      width="144"
+                      height="144"
+                      loading="lazy"
+                      class="drop-shadow-2xl filter "
+                    />
                   </picture>
                   <picture class="back-card">
                     {#if member.nerdWebpImage}
