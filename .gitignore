@@ -68,6 +68,7 @@ node_modules/
 dist
 build
 api/dist
+.svelte-kit
 .svelte
 .idea
 .vercel_build_output

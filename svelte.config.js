@@ -1,8 +1,8 @@
-const sveltePreprocess = require('svelte-preprocess')
-const vercel = require('@sveltejs/adapter-vercel')
+import sveltePreprocess from 'svelte-preprocess'
+import vercel from '@sveltejs/adapter-vercel'
 
 /** @type {import('@sveltejs/kit').Config} */
-module.exports = {
+const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
   preprocess: [
@@ -30,3 +30,5 @@ module.exports = {
     },
   },
 }
+
+export default config
