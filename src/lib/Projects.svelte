@@ -37,12 +37,15 @@
         </div>
         <div class="mt-4 pt-4">
           <blockquote>
-            <footer class="mt-3">
+            <footer class="">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="" />
                 </div>
-                <div class="text-base font-medium text-gray-700">Pascal Bertschi, Ansprechsperson</div>
+                <div>
+                  <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
+                  <div class='font-light text-gray-500'>Software Lead</div>
+                </div>
               </div>
             </footer>
           </blockquote>
@@ -84,7 +87,10 @@
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/elke.png" alt="" />
                 </div>
-                <div class="text-base font-medium text-gray-700">Elke Engel, Ansprechsperson</div>
+                <div>
+                  <div class="text-base font-medium text-gray-700">Elke Engel</div>
+                  <div class='font-light text-gray-500'>Project Lead</div>
+                </div>
               </div>
             </footer>
           </blockquote>
@@ -121,12 +127,15 @@
         </div>
         <div class="mt-4 pt-4">
           <blockquote>
-            <footer class="mt-3">
+            <footer class="">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="" />
                 </div>
-                <div class="text-base font-medium text-gray-700">Pascal Bertschi, Ansprechsperson</div>
+                <div>
+                  <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
+                  <div class='font-light text-gray-500'>Software Lead</div>
+                </div>
               </div>
             </footer>
           </blockquote>
@@ -162,12 +171,15 @@
         </div>
         <div class="mt-4 pt-4">
           <blockquote>
-            <footer class="mt-3">
+            <footer class="">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/serge.png" alt="" />
                 </div>
-                <div class="text-base font-medium text-gray-700">Serge Müller, Ansprechsperson</div>
+                <div>
+                  <div class="text-base font-medium text-gray-700">Serge Müller</div>
+                  <div class='font-light text-gray-500'>Software Architect</div>
+                </div>
               </div>
             </footer>
           </blockquote>
