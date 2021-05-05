@@ -10,8 +10,8 @@ cd $(pwd)
 
 shopt -s nullglob nocaseglob extglob
 
-for FILE in static/img/avatars/{andrea,bambam,dave,elke,elke-nerd,fabrizio,iris,marco,mattia,max,pascal,pascal-nerd,paul,serge,urban,warwara}.@(jpg|jpeg|tif|tiff|png); do
+for FILE in static/img/avatars/{andrea,dave,bambam,elke,fabrizio,iris,marco,mattia,max,pascal,paul,serge,urban,warwara}.png; do
     cwebp $PARAMS "$FILE" -o "${FILE%.*}".webp;
-    convert -resize 144x "$FILE" -quality 70 "${FILE%.*}"-144.jpg;
-    convert -resize 255x "$FILE" -quality 70 "${FILE%.*}"-255.jpg;
+    convert -resize 144x "$FILE" -quality 70 "${FILE%.*}"-144.png;
+    convert -resize 255x "$FILE" -quality 70 "${FILE%.*}"-255.png;
 done

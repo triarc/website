@@ -71,6 +71,9 @@
             <a href="/jobs" class="ml-8 font-medium text-blue-triarc transition duration-150 ease-in-out">Jobs</a>
           </div>
         </div>
+        <div class="hidden items-center sm:flex">
+          <a href="/mlink" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">mLink</a>
+        </div>
       </div>
     </div>
     <div class={`${isMobileMenuOpen ? 'block' : 'hidden'} bg-white h-screen`} id="mobile-menu">
@@ -80,6 +83,7 @@
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
         <a href="/jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
+        <a href="/mlink" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">mLink</a>
       </div>
     </div>
   </nav>

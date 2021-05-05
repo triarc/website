@@ -9,8 +9,8 @@
   })
 </script>
 
-<div class="relative bg-red-triarc pb-24 md:pt-24">
-  <div class="bg-red-triarc z-10 md:absolute md:left-0 md:pl-8 md:w-1/2">
+<div class="bg-red-triarc pb-24 md:pt-24 md:flex lg:flex sm:relative sm:px:10">
+  <div class="bg-red-triarc z-10 lg:relative md:left-0 md:pl-8 md:w-1/2 lg:w-1/2 sm:w-full">
     <video
       id="player"
       playsinline
@@ -18,14 +18,12 @@
       style="height: 100%; width: 100%"
       data-poster="img/thumbnail/mlink-1080-poster.png"
     >
-      <source
-        srcset="https://storage.googleapis.com/triarc-website/mlink-320.webm 320w, https://storage.googleapis.com/triarc-website/mlink-720.webm 720w, https://storage.googleapis.com/triarc-website/mlink-1080.webm 1080w"
-        type="video/webm"
-      />
+      <source src="https://storage.googleapis.com/triarc-website/mlink-1080.webm" type="video/webm" />
+      <source src="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4" />
     </video>
   </div>
-  <div class="relative max-w-7xl mx-auto px-4 py-4 sm:px-6 lg:px-8">
-    <div class="md:ml-auto md:w-1/2 md:pl-10">
+  <div class="relative max-w-7xl mx-auto px-5 py-4 sm:px-6 lg:px-8 md:w-1/2 lg:w-1/2 sm:w-full ">
+    <div class="md:ml-auto">
       <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">Der Kommunikationshub</h2>
       <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">mLink</p>
       <p class="mt-3 text-lg text-gray-100">

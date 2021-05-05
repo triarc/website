@@ -21,7 +21,7 @@
       name: 'Elke Engel',
       job: 'CFO / Partner',
       nerdJob: 'CFO / Partner',
-      image: 'img/avatars/elke.jpg',
+      image: 'img/avatars/elke.png',
       nerdImage: 'img/avatars/elke-nerd.png',
       onlyInNerdMode: false,
     },
@@ -198,12 +198,19 @@
           <li class="flex">
             <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
               <div class="card flex-grow flex items-center justify-center">
-                <div class="card-content">
-                  <picture class="front-card">
+                <div class="card-content  border-b border-blue-triarc">
+                  <picture class="front-card w-8 transition-all">
                     {#if member.webpImage}
                       <source type="image/webp" srcset={member.webpImage} loading="lazy" />
                     {/if}
-                    <img srcset={member.image} alt={member.name} width="144" height="144" loading="lazy" />
+                    <img
+                      srcset={member.image}
+                      alt={member.name}
+                      width="144"
+                      height="144"
+                      loading="lazy"
+                      class="drop-shadow-2xl filter "
+                    />
                   </picture>
                   <picture class="back-card">
                     {#if member.nerdWebpImage}

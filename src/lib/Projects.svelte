@@ -82,7 +82,7 @@
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-10 w-10" src="img/avatars/elke.jpg" alt="" />
+                  <img class="h-10 w-10" src="img/avatars/elke.png" alt="" />
                 </div>
                 <div class="text-base font-medium text-gray-700">Elke Engel, Ansprechsperson</div>
               </div>
