@@ -44,7 +44,7 @@
                 </div>
                 <div>
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
-                  <div class='font-light text-gray-500'>Software Lead</div>
+                  <div class="font-light text-gray-500">Software Lead</div>
                 </div>
               </div>
             </footer>
@@ -89,7 +89,7 @@
                 </div>
                 <div>
                   <div class="text-base font-medium text-gray-700">Elke Engel</div>
-                  <div class='font-light text-gray-500'>Project Lead</div>
+                  <div class="font-light text-gray-500">Project Lead</div>
                 </div>
               </div>
             </footer>
@@ -134,7 +134,7 @@
                 </div>
                 <div>
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
-                  <div class='font-light text-gray-500'>Software Lead</div>
+                  <div class="font-light text-gray-500">Software Lead</div>
                 </div>
               </div>
             </footer>
@@ -178,7 +178,7 @@
                 </div>
                 <div>
                   <div class="text-base font-medium text-gray-700">Serge Müller</div>
-                  <div class='font-light text-gray-500'>Software Architect</div>
+                  <div class="font-light text-gray-500">Software Architect</div>
                 </div>
               </div>
             </footer>

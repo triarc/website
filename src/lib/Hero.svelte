@@ -8,7 +8,7 @@
       linkText: 'mehr erfahren',
       href: '#aboutUs',
       claim: 'Ihre Manufaktur für digitale Innovation.',
-      img: 'img/hero/WER.svg'
+      img: 'img/hero/WER.svg',
     },
     {
       title: 'WAS',
@@ -18,7 +18,7 @@
       linkText: 'mehr erfahren',
       href: '#services',
       claim: 'Wir machen mehr aus dem, was heute ist:<br/>Das, was morgen sein wird.',
-      img: 'img/hero/WAS.svg'
+      img: 'img/hero/WAS.svg',
     },
     {
       title: 'WIE ',
@@ -28,7 +28,7 @@
       linkText: 'mehr erfahren',
       href: '#technology',
       claim: 'Wir tun gut daran, nicht mit der Zeit zu gehen.<br/>Sondern ihr voraus.',
-      img: 'img/hero/WIE.svg'
+      img: 'img/hero/WIE.svg',
     },
     {
       title: 'WARUM',
@@ -39,7 +39,7 @@
       href: '#projects',
       claim:
         'Wir können nicht alles,<br/>aber gewisse Dinge besser – sehr gut sogar<br/>(sagen nicht wir, sondern unsere Kunden).  ',
-      img: 'img/hero/WARUM.svg'
+      img: 'img/hero/WARUM.svg',
     },
   ]
 </script>
@@ -52,20 +52,23 @@
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
     <div class="relative z-10 py-8 px-3 bg-white">
       {#each heroSloganList as heroSolgan, i}
-        <div class="flex items-center mb-16 md:mb-24 {i % 2 ? 'flex-col md:flex-row justify-end' : 'flex-col justify-start md:flex-row-reverse'}">
-
+        <div
+          class="flex items-center mb-16 md:mb-24 {i % 2
+            ? 'flex-col md:flex-row justify-end'
+            : 'flex-col justify-start md:flex-row-reverse'}"
+        >
           <div class="md:w-1/2 {i % 2 ? 'md:text-right' : 'md:text-left'}">
             <p class="mt-3 text-2xl font-bold text-gray-600">
               {@html heroSolgan.claim}
             </p>
             <p class="mt-2 text-base leading-6 text-gray-600">
-              {heroSolgan.content}<br/>
+              {heroSolgan.content}<br />
               <a href={heroSolgan.href} class="underline">
                 {heroSolgan.linkText}
               </a>
             </p>
           </div>
-          <img src='{heroSolgan.img}' class='w-80 mt-8 mx-12'/>
+          <img src={heroSolgan.img} class="w-80 mt-8 mx-12" />
         </div>
       {/each}
     </div>
