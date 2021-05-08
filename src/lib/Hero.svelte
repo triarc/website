@@ -55,7 +55,7 @@
         <div
           class="flex items-center mb-16 md:mb-24 {i % 2
             ? 'flex-col md:flex-row justify-end'
-            : 'flex-col justify-start md:flex-row-reverse'}"
+            : 'flex-col justify-end md:flex-row-reverse'}"
         >
           <div class="md:w-1/2 {i % 2 ? 'md:text-right' : 'md:text-left'}">
             <p class="mt-3 text-2xl font-bold text-gray-600">
