@@ -235,10 +235,6 @@
 </div>
 
 <style style lang="postcss">
-  .bg-about-us {
-    //background-image: url("/img/moroccan-flower.png");
-    //background-repeat: repeat;
-  }
   .card {
     width: 100%;
     height: 144px;

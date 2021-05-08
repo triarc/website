@@ -42,21 +42,45 @@
 
 <Navbar />
 
-<div class="relative">
+<div class="relative hero-img">
   <picture>
     <source
       type="image/webp"
       srcset="img/hero/triarc-hero-480.webp 480w, img/hero/triarc-hero-800.webp 800w, img/hero/triarc-hero-1024.webp 1024w, img/hero/triarc-hero-1200.webp 1200w, img/hero/triarc-hero-1600.webp 1600w, img/hero/triarc-hero-2000.webp 2000w, img/hero/triarc-hero-4000.webp 4000w"
     />
     <img
-      class="w-screen fixed top-16 z-0 object-cover hero-img"
+      class="hero-img w-screen fixed top-0 z-0 object-cover"
       srcset="img/hero/triarc-hero-480.jpg 480w, img/hero/triarc-hero-800.jpg 800w, img/hero/triarc-hero-1024.jpg 1024w, img/hero/triarc-hero-1200.jpg 1200w, img/hero/triarc-hero-1600.jpg 1600w, img/hero/triarc-hero-2000.jpg 2000w, img/hero/triarc-hero-4000.jpg 4000w"
       src="img/hero/triarc-hero-2000.jpg"
     />
   </picture>
 </div>
 
-<div class="absolute hero-img-padding w-screen shadow-lg">
+<div class="absolute hero-img-padding w-screen">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative absolute top-8 z-10">
+    <a
+      href="#intro"
+      class="block bg-white rounded-full text-gray-600 h-16 w-16 p-4 shadow cursor-pointer"
+      id="arrow-down"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fal"
+        data-icon="arrow-down"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M443.5 248.5l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L241 419.9V44c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v375.9L28.5 241.4c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.8 4.8-12.3.1-17z"
+          class=""
+        />
+      </svg>
+    </a>
+  </div>
+
   <Hero />
 
   <div class="section" id="services">
@@ -80,3 +104,22 @@
   <LiveChat />
   <Footer />
 </div>
+
+<style style lang="postcss">
+  #arrow-down {
+    animation-delay: 1500ms;
+    animation-duration: 100ms;
+    animation-name: fadein;
+    animation-fill-mode: forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+</style>

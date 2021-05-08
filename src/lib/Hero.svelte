@@ -44,12 +44,12 @@
   ]
 </script>
 
-<div class="relative bg-white overflow-hidden">
-  <div class="bg-gray-100 bg-opacity-80 py-8 px-6">
+<div class="relative bg-white">
+  <div class="bg-gray-100 bg-opacity-80 py-16 px-6">
     <img src="img/hero/triarc-labs.svg" class="h-24  mx-auto" />
   </div>
 
-  <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 my-8">
+  <div id="intro" class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <div class="relative z-10 py-8 px-3 bg-white">
       {#each heroSloganList as heroSolgan, i}
         <div

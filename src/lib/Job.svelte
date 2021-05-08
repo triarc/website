@@ -4,6 +4,7 @@
       <span class="block text-gray-200">Wir suchen dich!</span>
       <span class="block text-white text-xl">Auf der Suche nach einer neuen Herausforderung?</span>
     </h2>
+    <img src="img/hero/powerfull.svg" class="mt-8" />
     <a
       href="/jobs"
       class="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-grape-600 hover:bg-grape-50 sm:w-auto"
