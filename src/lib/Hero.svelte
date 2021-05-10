@@ -57,12 +57,12 @@
             ? 'flex-col md:flex-row justify-end'
             : 'flex-col justify-end md:flex-row-reverse'}"
         >
-          <div class="md:w-1/2 {i % 2 ? 'md:text-right' : 'md:text-left'}">
+          <div class="md:max-w-2xl {i % 2 ? 'md:text-right' : 'md:text-left'}">
             <p class="mt-3 text-2xl font-bold text-gray-600">
               {@html heroSolgan.claim}
             </p>
             <p class="mt-2 text-base leading-6 text-gray-600">
-              {heroSolgan.content}<br />
+              {heroSolgan.content}<br/>
               <a href={heroSolgan.href} class="underline">
                 {heroSolgan.linkText}
               </a>
