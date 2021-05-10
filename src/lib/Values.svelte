@@ -40,8 +40,7 @@
                 </span>
               </button>
             </dt>
-            <dd
-              class="mt-2 pr-8">
+            <dd class="mt-2 pr-8">
               {#each content as p}
                 <p class="text-base pb-2 text-justify cursor-pointer">{p}</p>
               {/each}
