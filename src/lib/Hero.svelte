@@ -62,7 +62,7 @@
               {@html heroSolgan.claim}
             </p>
             <p class="mt-2 text-base leading-6 text-gray-600">
-              {heroSolgan.content}<br/>
+              {heroSolgan.content}<br />
               <a href={heroSolgan.href} class="underline">
                 {heroSolgan.linkText}
               </a>
