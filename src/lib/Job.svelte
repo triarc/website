@@ -5,6 +5,7 @@
       <span class="block text-white text-xl">Auf der Suche nach einer neuen Herausforderung?</span>
     </h2>
     <img src="img/hero/powerfull.svg" class="mt-8" />
+    <p class='text-white mt-4 text-sm'>Auf dem Weg zur Weltherrschaft suchen wir noch freiwillige verbündete Söldner, die sich für das Team und die höhere Sache in die Schusslinie werfen.</p>
     <a
       href="/jobs"
       class="mt-8 w-full inline-flex items-center justify-center py-3 px-5 bg-white border border-transparent rounded-md shadow-md text-base font-medium text-grape-600 hover:bg-grape-50 sm:w-auto"
