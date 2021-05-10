@@ -3,7 +3,7 @@
     {
       title: 'Die Software muss zum Kunden passen. Nicht umgekehrt.',
       content: 'Die Vorteile der Digitalisierung lassen sich nur dann voll ausschöpfen, wenn die Software-Lösung exakt Ihren Bedürfnissen entspricht. Basierend auf der Realität Ihres Alltags erarbeiten wir zusammen Anforderungen und Ideen, stets mit dem Nutzer im Fokus. Das Produkt testen wir eingehend und passen es solange an, bis es perfekt sitzt.',
-      img: 'img/hero/building_websites.svg',
+      img: 'img/hero/robotics.svg',
     },
     {
       title: 'Knowhow und Erfahrung sind die Grundzutaten für erfolgreiche Softwareprojekte.',
@@ -27,9 +27,9 @@
   <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="lg:text-center">
       <h2
-        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 break-all uppercase"
+        class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10 uppercase"
       >
-        Custom-Softwareentwicklung
+        Custom Software Entwicklung
       </h2>
       <p class="mt-4 max-w-2xl text-xl leading-7 text-gray-500 lg:mx-auto">
         damit Sie Ihre Informationen verständlich und überall zur Hand haben
