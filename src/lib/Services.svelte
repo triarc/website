@@ -12,7 +12,7 @@
     },
     {
       title: 'Perfekt eingebunden in die (Software-)Familie.',
-      content: 'Erst mit der Integration in Ihr Software-Ökosystem entfaltet sich das volle Potenzial neuer (insbesondere mobiler) Applikationen. Einmal an Ihr ERP-System (Enterprise Ressource Planning) angebunden, werden Medienbrüche vermieden und Prozesse greifen nahtlos ineinander. Dank Echtzeit-Integration können zahlreiche Anwender mehrerer Systeme parallel und Hand in Hand arbeiten. Daten werden in Echtzeit zwischen den verschiedenen Systemen getauscht. Gut zu wissen: Für die Zusammenarbeit mit Abacus, SAP und Dynamics bringen wir viel Erfahrung mit.',
+      content: 'Erst mit der Integration in Ihr Software-Ökosystem entfaltet sich das volle Potenzial neuer Applikationen. Mit unseren Schnittstellenlösungen binden wir die Applikation nahtlos ein. Damit entfallen Medienbrüche und Prozesse greifen nahtlos ineinander. Dank Echtzeit-Integration können zahlreiche Anwender mehrerer Systeme parallel und Hand in Hand arbeiten. Gut zu wissen: Für die Zusammenarbeit mit Abacus, SAP und Dynamics bringen wir viel Erfahrung mit.',
       img: 'img/hero/product_teardown.svg',
     },
     {
