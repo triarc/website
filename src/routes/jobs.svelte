@@ -87,7 +87,7 @@
           <p>
             <span class="block text-2xl font-bold text-white">Kaffee / Bar</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Bediehn dich selbst an unserer triarc-Bar mit Kaffe, Bier und saisonalem Süssem.</span
+              >Bediehn dich selbst an unserer triarc-Bar mit Kaffee, Bier und saisonalem Süssem.</span
             >
           </p>
 
