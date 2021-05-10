@@ -113,16 +113,13 @@
         </dl>
       </div>
     </div>
-    <div class="flex justify-center md:order-2 sm:order-2 items-center mt-5">
-      <div class="flex flex-col items-end">
-        <a href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html" target="_blank">
-          <img class="max-h-20" src="/logos/swiss-logo.png" alt="swissmadesoftware" />
-        </a>
-        <p class="text-center text-base leading-6 text-gray-400">
+    <div class="flex justify-center md:order-2 sm:order-2 items-center mt-12">
+      <div class="flex flex-col items-start md:items-end">
+        <p class="text-base leading-6 text-gray-400">
           &copy; {new Date().getFullYear()} triarc laboratories, Ltd. All rights reserved.
         </p>
-        <div class="m-5 flex">
-          <a href="https://ch.linkedin.com/company/triarc-laboratories" target="_blank" class="underline">
+        <div class="mt-5 flex">
+          <a href="https://ch.linkedin.com/company/triarc-laboratories" target="_blank" class="underline mr-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
@@ -133,7 +130,7 @@
               /></svg
             >
           </a>
-          <a href="https://github.com/triarc" class="ml-4 text-gray-400 hover:text-gray-500">
+          <a href="https://github.com/triarc" class="text-gray-400 hover:text-gray-500 mr-4">
             <span class="sr-only">GitHub</span>
             <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
               <path
@@ -142,6 +139,9 @@
                 clip-rule="evenodd"
               />
             </svg>
+          </a>
+          <a href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html" target="_blank">
+            <img class="h-8" src="/logos/swiss-logo.png" alt="swissmadesoftware" />
           </a>
         </div>
       </div>

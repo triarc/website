@@ -8,7 +8,7 @@
   }
 </script>
 
-<div class="z-20 fixed top-0 w-full transform duration-500 bg-white" id="navbar">
+<div class="z-20 fixed -top-16 w-full bg-white" id="navbar">
   <nav class="relative max-w-screen-xl mx-auto">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
@@ -92,5 +92,8 @@
 <style style lang="postcss">
   #navbar {
     transition-property: transform;
+    transition: 1.5s ease-in-out;
+    transition-delay: 500ms;
+    transform: translateY(64px);
   }
 </style>

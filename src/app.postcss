@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 .plyr {
   --plyr-color-main: #c8102e;
   --plyr-video-control-background-hover: #c8102e;
@@ -12,19 +17,36 @@
   background-size: cover;
 }
 
+.hero-img {
+  animation-delay: 500ms;
+  animation-duration: 200ms;
+  animation-name: shrink;
+  animation-fill-mode: forwards;
+  height: 100vh;
+}
+
 .hero-img-padding {
-  top: calc(100vw * 0.3 + 64px);
+  animation-delay: 500ms;
+  animation-duration: 200ms;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+  top: 100vh;
 }
 
-.logo-img {
-  height: calc(100vw * 0.3 + 64px);
-}
-
-@media only screen and (min-width: 1920px) {
-  .hero-img-padding {
-    top: 50vh;
+@keyframes slidein {
+  0% {
+    top: 100vh;
   }
-  .logo-img {
-    height: 50vh;
+  100% {
+    top: calc(100vh - 288px);
+  }
+}
+
+@keyframes shrink {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: calc(100vh - 100px);
   }
 }
