@@ -72,3 +72,4 @@ api/dist
 .svelte
 .idea
 .vercel_build_output
+.DS_Store
