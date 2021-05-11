@@ -102,12 +102,11 @@
   <div class="max-w-screen-xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
     <div class="space-y-8 sm:space-y-12">
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-        <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Unsere Technologien</h2>
+        <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Technologien</h2>
         <p class="text-xl leading-7 text-gray-200">
-          Unsere Software macht uns stolz. Elegante, einfache, wohl überlegte Lösungen sind unser Ziel. Dabei passen wir
-          die Technologie unserem Kunden an – nicht umgekehrt. Unsere Ingenieure bringen ein breites Fachwissen mit und
-          beherrschen alle gängigen Programmiersprachen. So können Sie Projekte über die Grenzen einer solchen Sprache
-          hinweg zum Erfolg führen.
+          Unsere Ingenieure bringen ein breites Fachwissen mit und
+          beherrschen <span class='text-gray-100 underline'>fast</span> alle gängigen Programmiersprachen. <br/>
+          So können wir die Projekte über mehrere Technologien hinweg zum Erfolg führen.
         </p>
       </div>
       <div class="grid self-center mt-8 grid-cols-1 gap-6 gap-y-6 md:grid-cols-2 lg:grid-cols-3">

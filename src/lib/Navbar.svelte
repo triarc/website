@@ -72,7 +72,7 @@
           </div>
         </div>
         <div class="hidden items-center sm:flex">
-          <a href="/mlink" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">mLink</a>
+          <a href="/mlink" class="ml-8 font-medium text-green-triarc transition duration-150 ease-in-out">μLink</a>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
         <a href="/jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
-        <a href="/mlink" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">mLink</a>
+        <a href="/mlink" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">μLink</a>
       </div>
     </div>
   </nav>
