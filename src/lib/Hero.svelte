@@ -37,8 +37,7 @@
       color: 'bg-yellow-triarc',
       linkText: 'mehr erfahren',
       href: '#projects',
-      claim:
-        'Wir können nicht alles,<br/>aber gewisse Dinge besser.<br/>Das sagen nicht wir, sondern unsere Kunden.',
+      claim: 'Wir können nicht alles,<br/>aber gewisse Dinge besser.<br/>Das sagen nicht wir, sondern unsere Kunden.',
       img: 'img/hero/awards.svg',
     },
   ]

@@ -1,9 +1,10 @@
-<script lang='ts'>
+<script lang="ts">
   function chat(person: string) {
     //const input = document.getElementById('#chat-message')
     //input.value = `@${person} `;
   }
 </script>
+
 <div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">
   <div class="relative max-w-7xl mx-auto">
     <div class="text-center">
@@ -48,7 +49,7 @@
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="" />
                 </div>
-                <div on:click={chat('pascal')} class='cursor-pointer'>
+                <div on:click={chat('pascal')} class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
                   <div class="font-light text-gray-500">Software Lead</div>
                 </div>
@@ -75,8 +76,8 @@
           <div class="mt-6">
             <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">Ortho Client</h2>
             <p class="mt-4 text-lg text-gray-500 italic">
-              ORTHO-TEAM ist ein gesamtschweizerisch tätiges Unternehmen auf dem Gebiet der Orthopädie- und Reha-Technik,
-              fokussiert auf ganzheitliche Versorgungskonzepte.
+              ORTHO-TEAM ist ein gesamtschweizerisch tätiges Unternehmen auf dem Gebiet der Orthopädie- und
+              Reha-Technik, fokussiert auf ganzheitliche Versorgungskonzepte.
             </p>
             <p class="mt-4 text-lg text-gray-500">
               Die Fertigung von Orthesen und Prothesen ist sehr individuell auf den Kunden zugeschnitten und
@@ -93,7 +94,7 @@
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/elke.png" alt="" />
                 </div>
-                <div on:click={chat('elke')} class='cursor-pointer'>
+                <div on:click={chat('elke')} class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Elke Engel</div>
                   <div class="font-light text-gray-500">Project Lead</div>
                 </div>
@@ -138,7 +139,7 @@
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="" />
                 </div>
-                <div on:click={chat('pascal')} class='cursor-pointer'>
+                <div on:click={chat('pascal')} class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
                   <div class="font-light text-gray-500">Software Lead</div>
                 </div>
@@ -158,48 +159,48 @@
       </div>
     </div>
   </div>
-<!--  <div class="mt-24">-->
-<!--    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">-->
-<!--      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">-->
-<!--        <div>-->
-<!--          <div class="mt-6">-->
-<!--            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">myWalo</h2>-->
-<!--            <p class="mt-4 text-lg text-gray-500 italic">-->
-<!--              WALO ist ein international tätiges, seit über 100 Jahren familiengeführtes Schweizer Bauunternehmen (heute-->
-<!--              bereits in dritter und vierter Generation).-->
-<!--            </p>-->
-<!--            <p class="mt-4 text-lg text-gray-500">-->
-<!--              Auf der Baustelle treffen verschiedene analoge und digitale Prozesse aufeinander. Mittels Data Lake-->
-<!--              Technologie führt die von triarc-labs entwickelte «myWalo» Applikation sämtliche Prozesse in Echtzeit-->
-<!--              zusammen und erlaubt die Digitalisierung der Baustellen, von der Schaufel bis zum Baukran.-->
-<!--            </p>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="mt-4 pt-4">-->
-<!--          <blockquote>-->
-<!--            <footer class="">-->
-<!--              <div class="flex items-center space-x-3">-->
-<!--                <div class="flex-shrink-0">-->
-<!--                  <img class="h-10 w-10" src="img/avatars/serge.png" alt="" />-->
-<!--                </div>-->
-<!--                <div>-->
-<!--                  <div class="text-base font-medium text-gray-700">Serge Müller</div>-->
-<!--                  <div class="font-light text-gray-500">Software Architect</div>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--            </footer>-->
-<!--          </blockquote>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">-->
-<!--        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">-->
-<!--          <img-->
-<!--            class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"-->
-<!--            src="img/walo-app.png"-->
-<!--            alt="mywalo"-->
-<!--          />-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <!--  <div class="mt-24">-->
+  <!--    <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24">-->
+  <!--      <div class="px-4 max-w-xl mx-auto sm:px-6 lg:py-32 lg:max-w-none lg:mx-0 lg:px-0 lg:col-start-2">-->
+  <!--        <div>-->
+  <!--          <div class="mt-6">-->
+  <!--            <h2 class="text-3xl font-extrabold tracking-tight text-gray-900">myWalo</h2>-->
+  <!--            <p class="mt-4 text-lg text-gray-500 italic">-->
+  <!--              WALO ist ein international tätiges, seit über 100 Jahren familiengeführtes Schweizer Bauunternehmen (heute-->
+  <!--              bereits in dritter und vierter Generation).-->
+  <!--            </p>-->
+  <!--            <p class="mt-4 text-lg text-gray-500">-->
+  <!--              Auf der Baustelle treffen verschiedene analoge und digitale Prozesse aufeinander. Mittels Data Lake-->
+  <!--              Technologie führt die von triarc-labs entwickelte «myWalo» Applikation sämtliche Prozesse in Echtzeit-->
+  <!--              zusammen und erlaubt die Digitalisierung der Baustellen, von der Schaufel bis zum Baukran.-->
+  <!--            </p>-->
+  <!--          </div>-->
+  <!--        </div>-->
+  <!--        <div class="mt-4 pt-4">-->
+  <!--          <blockquote>-->
+  <!--            <footer class="">-->
+  <!--              <div class="flex items-center space-x-3">-->
+  <!--                <div class="flex-shrink-0">-->
+  <!--                  <img class="h-10 w-10" src="img/avatars/serge.png" alt="" />-->
+  <!--                </div>-->
+  <!--                <div>-->
+  <!--                  <div class="text-base font-medium text-gray-700">Serge Müller</div>-->
+  <!--                  <div class="font-light text-gray-500">Software Architect</div>-->
+  <!--                </div>-->
+  <!--              </div>-->
+  <!--            </footer>-->
+  <!--          </blockquote>-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--      <div class="mt-12 sm:mt-16 lg:mt-0 lg:col-start-1">-->
+  <!--        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">-->
+  <!--          <img-->
+  <!--            class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"-->
+  <!--            src="img/walo-app.png"-->
+  <!--            alt="mywalo"-->
+  <!--          />-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
 </div>

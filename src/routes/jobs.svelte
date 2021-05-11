@@ -60,8 +60,8 @@
       <div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
         <p class="mt-3 text-3xl font-extrabold text-white">Was wir dir bieten</p>
         <p class="mt-5 text-lg text-gray-300">
-          Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und
-          sind immer auf der Suche nach neuen Talenten die uns ergänzen.
+          Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind
+          immer auf der Suche nach neuen Talenten die uns ergänzen.
         </p>
         <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
           <p>
@@ -155,15 +155,15 @@
           <p>
             <span class="block text-2xl font-bold text-white">Technologie</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Du kennst die aktuellen Webtechnologien und beherscht vorzugsweise Angular sowie andere Technologien
-              aus unserem <a href="..#technology" class="underline">Stack</a></span
+              >Du kennst die aktuellen Webtechnologien und beherscht vorzugsweise Angular sowie andere Technologien aus
+              unserem <a href="..#technology" class="underline">Stack</a></span
             >
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Kommunikativ</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Du arbeitest und  kommunizierst gerne im Team und das auch auf English</span
+              >Du arbeitest und kommunizierst gerne im Team und das auch auf English</span
             >
           </p>
 

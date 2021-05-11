@@ -26,7 +26,6 @@
       </a>
       <!--            ebl, glb, volvo, schindler, espace, srf, helsana, wettstein, dorean  -->
 
-
       <a href="https://www.tanne.ch/" class="col-span-1 flex justify-center py-8 px-8 ">
         <picture class="max-h-12">
           <source type="image/webp" srcset="logos/tanne-logo.webp" alt="tanne" />

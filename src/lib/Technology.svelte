@@ -104,8 +104,10 @@
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
         <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Technologien</h2>
         <p class="text-xl leading-7 text-gray-200">
-          Unsere Ingenieure bringen ein breites Fachwissen mit und
-          beherrschen <span class='text-gray-100 underline'>fast</span> alle gängigen Programmiersprachen. <br/>
+          Unsere Ingenieure bringen ein breites Fachwissen mit und beherrschen <span class="text-gray-100 underline"
+            >fast</span
+          >
+          alle gängigen Programmiersprachen. <br />
           So können wir die Projekte über mehrere Technologien hinweg zum Erfolg führen.
         </p>
       </div>
