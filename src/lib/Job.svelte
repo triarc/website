@@ -1,4 +1,4 @@
-<div class="bg-green-triarc">
+<div class="bg-red-triarc">
   <div class="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
     <h2 class="text-3xl font-extrabold sm:text-4xl">
       <span class="block text-gray-200">Wir suchen dich!</span>
@@ -6,8 +6,7 @@
     </h2>
     <img src="img/hero/powerfull.svg" class="mt-8" />
     <p class="text-white mt-4 text-sm">
-      Auf dem Weg zur Weltherrschaft suchen wir noch freiwillige verbündete Söldner, die sich für das Team und die
-      höhere Sache in die Schusslinie werfen.
+      Schliesse dich jetzt der Digitalen Revolutation an.
     </p>
     <a
       href="/jobs"

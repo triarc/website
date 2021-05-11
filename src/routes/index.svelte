@@ -57,10 +57,10 @@
 </div>
 
 <div class="absolute hero-img-padding w-screen">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 relative absolute top-8 z-10">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-6 relative absolute top-8 z-10">
     <a
       href="#intro"
-      class="block bg-white rounded-full text-gray-600 h-16 w-16 p-4 shadow cursor-pointer"
+      class="block bg-white rounded-full text-gray-600 h-14 w-14 p-4 shadow cursor-pointer"
       id="arrow-down"
     >
       <svg

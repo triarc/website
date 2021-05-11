@@ -62,7 +62,7 @@
             <p class="text-base text-gray-500 pb-2">{message.name}: {message.message}</p>
           {/each}
         </div>
-        <input
+        <input id='chat-message'
           type="text"
           name="chat"
           placeholder="Type something here"

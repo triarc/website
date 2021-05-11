@@ -10,7 +10,7 @@
       title: 'Knowhow und Erfahrung sind die Grundzutaten für erfolgreiche Softwareprojekte.',
       content:
         'Unsere Kundschaft ist breit gefächert. Unser Portfolio ist es auch: In den über zehn Jahren unseres Bestehens ist ein branchenübergreifendes fundiertes Knowhow entstanden, das in die Projekte der Zukunft einfliesst. In neue Fachgebiete arbeiten wir uns mit derselben Leidenschaft ein, rasch und kompetent.',
-      img: 'img/hero/teaching.svg',
+      img: 'img/hero/hacker_mind.svg',
     },
     {
       title: 'Perfekt eingebunden in die (Software-)Familie.',
@@ -22,7 +22,7 @@
       title: 'Schnell und flexibel durch agiles Projektmanagement',
       content:
         'Kaum ein anderer Prozess ist so sehr von Dynamik geprägt wie die Digitalisierung. In der agilen Softwareentwicklung arbeiten wir deshalb eng mit Ihnen zusammen und halten den Arbeitsprozess schlank. In regelmässigen Intervallen beurteilen wir gemeinsam den Zwischenstand unserer Arbeit. So sind Sie jederzeit auf dem neuesten Stand – und wir können schnell und flexibel auf neue Erkenntnisse und Anforderungen reagieren. Durch dieses iterative Vorgehen behalten Sie stets die Kontrolle.',
-      img: 'img/hero/content_team.svg',
+      img: 'img/hero/scrum_board.svg',
     },
   ]
 </script>
