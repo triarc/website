@@ -63,6 +63,7 @@
           {/each}
         </div>
         <input
+          id="chat-message"
           type="text"
           name="chat"
           placeholder="Type something here"

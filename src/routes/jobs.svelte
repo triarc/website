@@ -60,8 +60,8 @@
       <div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
         <p class="mt-3 text-3xl font-extrabold text-white">Was wir dir bieten</p>
         <p class="mt-5 text-lg text-gray-300">
-          Wir sind ein kleines Tech Unternehmen im Herzen von Zürich. Wir entwickeln leidenschaftlich gerne Software und
-          sind immer auf der Suche nach neuen Talenten die uns ergänzen.
+          Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind
+          immer auf der Suche nach neuen Talenten die uns ergänzen.
         </p>
         <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
           <p>
@@ -100,7 +100,7 @@
 
           <p>
             <span class="block text-2xl font-bold text-white">Mobilvertrag</span>
-            <span class="mt-1 block text-base text-gray-300">Damit du dich um wichtigeres Kümmern kannst</span>
+            <span class="mt-1 block text-base text-gray-300">Damit du dich um wichtigeres kümmern kannst</span>
           </p>
 
           <p>
@@ -148,22 +148,22 @@
       <div class="relative pt-12 pb-16 sm:pt-24 sm:pb-64 xl:col-start-2 xl:pb-24">
         <p class="mt-3 text-3xl font-extrabold text-white text-right">Was wir von dir erwarten</p>
         <p class="mt-5 text-lg text-gray-300 text-right">
-          Du bist eine aufgestellte Persönlichkeit und bereit für neue Herausforderungen. Du weist welcher der Begriffe
-          CI, E2E, SSR, SSE, XSS, UBS und CSS nichts in der Entwicklung verloren hat.
+          Du bist eine aufgestellte Persönlichkeit und bereit für neue Herausforderungen. Du weisst welcher der Begriffe
+          CI, E2E, SSR, ABS, SSE, XSS und CSS nichts mit der Entwicklung zu tun hat.
         </p>
         <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2 text-right">
           <p>
             <span class="block text-2xl font-bold text-white">Technologie</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Du kennst du aktuellen Webtechnologien aus und beherscht vorzugsweise Angular sowie andere Technologien
-              aus unserem <a href="..#technology" class="underline">Stack</a></span
+              >Du kennst die aktuellen Webtechnologien und beherscht vorzugsweise Angular sowie andere Technologien aus
+              unserem <a href="..#technology" class="underline">Stack</a></span
             >
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Kommunikativ</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Du kannst im Team arbeiten sowie kommunizieren und das auch auf English</span
+              >Du arbeitest und kommunizierst gerne im Team und das auch auf English</span
             >
           </p>
 
@@ -177,8 +177,7 @@
           <p>
             <span class="block text-2xl font-bold text-white">Begeisterung</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Dir macht die Entwicklung Freunde und verstehst warum Clean-Code wichtig ist. Neuem gegenüber bist du
-              stehts offen.</span
+              >Dir macht die Entwicklung Freunde und verstehst warum Clean-Code wichtig ist. Neues begeistert dich</span
             >
           </p>
         </div>

@@ -8,7 +8,7 @@
       linkText: 'mehr erfahren',
       href: '#aboutUs',
       claim: 'Ihre Manufaktur für digitale Innovation.',
-      img: 'img/hero/WER.svg',
+      img: 'img/hero/content_team.svg',
     },
     {
       title: 'WAS',
@@ -18,7 +18,7 @@
       linkText: 'mehr erfahren',
       href: '#services',
       claim: 'Wir machen mehr aus dem, was heute ist:<br/>Das, was morgen sein wird.',
-      img: 'img/hero/WAS.svg',
+      img: 'img/hero/mobile_wireframe.svg',
     },
     {
       title: 'WIE ',
@@ -28,7 +28,7 @@
       linkText: 'mehr erfahren',
       href: '#technology',
       claim: 'Wir tun gut daran, nicht mit der Zeit zu gehen.<br/>Sondern ihr voraus.',
-      img: 'img/hero/WIE.svg',
+      img: 'img/hero/science.svg',
     },
     {
       title: 'WARUM',
@@ -37,9 +37,8 @@
       color: 'bg-yellow-triarc',
       linkText: 'mehr erfahren',
       href: '#projects',
-      claim:
-        'Wir können nicht alles,<br/>aber gewisse Dinge besser – sehr gut sogar<br/>(sagen nicht wir, sondern unsere Kunden).  ',
-      img: 'img/hero/WARUM.svg',
+      claim: 'Wir können nicht alles,<br/>aber gewisse Dinge besser.<br/>Das sagen nicht wir, sondern unsere Kunden.',
+      img: 'img/hero/awards.svg',
     },
   ]
 </script>
