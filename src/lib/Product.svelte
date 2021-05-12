@@ -4,7 +4,7 @@
   onMount(async () => {
     const Plyr = await import('plyr')
     const player = new Plyr.default('#player', {
-      controls: ['play-large', 'progress'],
+      controls: ['play-large', 'play', 'progress', 'mute', 'volume', 'fullscreen'],
     })
   })
 </script>
