@@ -24,7 +24,7 @@
     <span class="text-4xl text-white my-6">OR</span>
     <hr class="w-32 ml-6" />
   </div>
-  <a href='/' class="bg-white text-gray-600 rounded-full px-6 py-3">Go back home</a>
+  <a href="/" class="bg-white text-gray-600 rounded-full px-6 py-3">Go back home</a>
 </div>
 
 <style style lang="postcss">
