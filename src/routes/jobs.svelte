@@ -368,7 +368,6 @@
       </div>
     </div>
 
-
     <div
       class="max-w-4xl bg-gray-900 mx-auto pl-4 sm:pl-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8"
     >
@@ -389,13 +388,11 @@
         <p class="mt-3 text-3xl font-extrabold text-white">Ein Tag im triarc-Homeoffice</p>
         <p class="mt-5 text-lg text-gray-300 mb-8">
           Warum seit Corona der Verkauf von Mützen und Caps deutlich zugenommen hat.
-          <a href='stories/day-at-triarc' class='text-white underline'>Mehr dazu hier</a>
+          <a href="stories/day-at-triarc" class="text-white underline">Mehr dazu hier</a>
         </p>
       </div>
     </div>
   </div>
-
-
 
   <div class="bg-blue-triarc">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
@@ -403,7 +400,8 @@
         <span class="block">Immer noch hier?</span>
       </h2>
       <p class="mt-4 text-lg leading-6 text-indigo-200">
-        Du findest, du passt zu uns und kannst etwas beisteuern? Entschlüssle den Code und bewirb dich mit einem Vorteil!
+        Du findest, du passt zu uns und kannst etwas beisteuern? Entschlüssle den Code und bewirb dich mit einem
+        Vorteil!
       </p>
 
       <button
