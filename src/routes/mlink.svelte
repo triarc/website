@@ -38,10 +38,10 @@
               μLink Data Broker <br /><span class="text-3xl">Bereit für die Zukunft</span>
             </h1>
             <p class="mt-6 text-xl text-gray-500">
-              μLink ist eine Kommunikationsschnittstelle mit dem Fokus Informationen schnell auffindbar und schnell
+              μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell
               lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass
               Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen
-              sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren
+              sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.
             </p>
           </div>
         </div>
@@ -100,7 +100,7 @@
               </svg>
               <div class="ml-3">
                 <dd class="mt-2 text-base text-gray-300">
-                  Das Backoffice eröffnet ein neues Projekt, die Projektleiter beginnen umgehend mit der visuellen
+                  Das Backoffice eröffnet ein neues Projekt. Die Projektleiter beginnen umgehend mit der visuellen
                   Planung.
                 </dd>
               </div>

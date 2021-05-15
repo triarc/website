@@ -49,14 +49,14 @@
       iconAlt: 'kubernetes',
       title: 'Kubernetes',
       text:
-        'Der Chef in unserer IT Infrastruktur, welcher den Laden schmeisst und sagt wo es lang geht. In der Cloud sowie bei unsere Kunden Vorort.',
+        'Der Chef in unserer IT Infrastruktur, welcher den Laden schmeisst und sagt, wo es lang geht. In der Cloud sowie bei unsere Kunden Vorort.',
     },
     {
       icon: 'img/technology/gitlab.svg',
       iconAlt: 'gitlab',
       title: 'Gitlab',
       text:
-        'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unseren Projekten, zeigt uns wohin es geht.',
+        'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unseren Projekten, zeigt uns, wohin es geht.',
     },
     {
       icon: 'img/technology/prometheus.svg',

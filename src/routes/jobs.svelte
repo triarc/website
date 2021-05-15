@@ -230,7 +230,7 @@
             <span
               class="inline-flex rounded-full bg-yellow-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-black"
             >
-              Sociakratie Flow
+              Sociocratic Flow
             </span>
           </div>
         </div>
@@ -403,7 +403,7 @@
         <span class="block">Immer noch hier?</span>
       </h2>
       <p class="mt-4 text-lg leading-6 text-indigo-200">
-        Du findest du passt zu uns und kannst etwas beisteuern? Entschlüssle den Code und bewirb dich mit einem Vorteil!
+        Du findest, du passt zu uns und kannst etwas beisteuern? Entschlüssle den Code und bewirb dich mit einem Vorteil!
       </p>
 
       <button
