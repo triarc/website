@@ -1,4 +1,7 @@
 <script>
+  import Header from '../lib/components/Header.svelte'
+  import Footer from '../lib/components/Footer.svelte'
+
   function unlock(evt) {
     if (evt.target.disabled) {
       return
@@ -8,6 +11,7 @@
     document.body.append(a)
     a.click()
   }
+
   function toggle(index) {
     const elm = document.getElementById(`job-${index}`)
     if (elm.classList.contains('h-0')) {
@@ -18,6 +22,7 @@
       elm.classList.remove('h-auto')
     }
   }
+
   const slogans = [
     {
       content:
@@ -75,7 +80,16 @@
       claim: 'Operation Engineer',
       img: 'img/hero/cloud_hosting.svg',
       open: false,
-      skills: ['Kubernetes', 'Docker', 'Postgres', 'Elasticsearch'],
+      responsiblities: 'sind breit gefächert. Unterstütz das im Infrastruktur unserer vielzälligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Unterstüze ebenfalls im Support von unserem Produkt μLink und arbeite mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewärleisten.',
+      skills: [
+        'Leidenschaft für die Software Entwicklung',
+        'Praktische Erfahrung Kubernetes, Docker und GCP',
+        'Wünscheswerte Erfahrung mit Cert Manager, Postgres, Elasticsearch und MongoDB',
+        'Spass an der Arbeit im Team',
+        'Lösungsorientiertes Denken und Handeln',
+        'Lernfähigkeit und kontinuierliche Weiterentwicklung',
+        'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+      ],
     },
   ]
 </script>
@@ -85,30 +99,7 @@
 </svelte:head>
 
 <div class="bg-gray-800 h-screen relative">
-  <div class="bg-gray-900 py-2 px-4 xm:px-6 lg:px-8">
-    <div class="max-w-4xl lg:max-w-7xl mx-auto flex items-center mx-4 h-16">
-      <a href="..">
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          role="img"
-          height="40"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-          class="text-white"
-        >
-          <path
-            fill="currentColor"
-            d="M136.97 380.485l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113l83.928-83.444c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0l-116.485 116c-4.686 4.686-4.686 12.284 0 16.971l116.485 116c4.686 4.686 12.284 4.686 16.97-.001z"
-            class=""
-          />
-        </svg>
-      </a>
-
-      <h1 class="text-white ml-4 text-xl flex-grow">Hauptseite</h1>
-      <img src="header.svg" class="h-10" />
-    </div>
-  </div>
+  <Header>Jobs</Header>
 
   <div class="relative bg-gray-900">
     <div
@@ -183,7 +174,17 @@
               </span>
             </div>
           </div>
-          <img src="img/office/triarc_lego.jpeg" class="object-cover rounded-3xl" />
+          <picture>
+            <source
+              type="image/webp"
+              srcset="/img/office/triarc_lego-320.webp 320w, /img/office/triarc_lego-640.webp 640w, /img/office/triarc_lego-1080.webp 1080w"
+            />
+            <img
+              class="object-cover rounded-3xl"
+              srcset="/img/office/triarc_lego-320.jpg 320w, /img/office/triarc_lego-640.jpg 640w, /img/office/triarc_lego-1080.jpg 1080w"
+              src="/img/office/triarc_lego-1080.jpg"
+            />
+          </picture>
         </div>
         <div class="relative pt-12 pb-16 sm:pt-24 sm:pb-64 xl:col-start-2 xl:pb-24">
           <p class="mt-3 text-3xl font-extrabold text-white">
@@ -234,7 +235,17 @@
             </span>
           </div>
         </div>
-        <img src="img/hero/triarc-flow.png" class="max-w-1/2" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/img/office/triarc-flow-320.webp 320w, /img/office/triarc-flow-640.webp 640w, /img/office/triarc-flow-1080.webp 1080w"
+          />
+          <img
+            class="object-cover max-w-1/2 rounded-3xl"
+            srcset="/img/office/triarc-flow-320.jpg 320w, /img/office/triarc-flow-640.jpg 640w, /img/office/triarc-flow-1080.jpg 1080w"
+            src="/img/office/triarc-flow-1080.jpg"
+          />
+        </picture>
       </div>
     </div>
 
@@ -251,7 +262,17 @@
             </span>
           </div>
         </div>
-        <img src="img/office/bar2.png" class="object-cover rounded-3xl" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/img/office/bar-320.webp 320w, /img/office/bar-640.webp 640w, /img/office/bar-1080.webp 1080w"
+          />
+          <img
+            class="object-cover rounded-3xl"
+            srcset="/img/office/bar-320.jpg 320w, /img/office/bar-640.jpg 640w, /img/office/bar-1080.jpg 1080w"
+            src="/img/office/bar-1080.jpg"
+          />
+        </picture>
       </div>
 
       <div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
@@ -328,7 +349,17 @@
             </span>
           </div>
         </div>
-        <img src="img/office/gym.png" class="object-cover rounded-3xl" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/img/office/gym-320.webp 320w, /img/office/gym-640.webp 640w, /img/office/gym-1080.webp 1080w"
+          />
+          <img
+            class="object-cover rounded-3xl"
+            srcset="/img/office/gym-320.jpg 320w, /img/office/gym-640.jpg 640w, /img/office/gym-1080.jpg 1080w"
+            src="/img/office/gym-1080.jpg"
+          />
+        </picture>
       </div>
       <div class="relative pt-12 pb-16 sm:pt-24 sm:pb-64 xl:col-start-2 xl:pb-24">
         <p class="mt-3 text-3xl font-extrabold text-white">Was wir grundsätzlich erwarten</p>
@@ -381,7 +412,17 @@
             </span>
           </div>
         </div>
-        <img src="img/office/teamcall.png" class="object-cover" />
+        <picture>
+          <source
+            type="image/webp"
+            srcset="/img/office/teamcall-320.webp 320w, /img/office/teamcall-640.webp 640w, /img/office/teamcall-1080.webp 1080w"
+          />
+          <img
+            class="object-cover rounded-3xl"
+            srcset="/img/office/teamcall-320.jpg 320w, /img/office/teamcall-640.jpg 640w, /img/office/teamcall-1080.jpg 1080w"
+            src="/img/office/teamcall-1080.jpg"
+          />
+        </picture>
       </div>
 
       <div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 my-auto xl:col-start-1 xl:pb-24">
@@ -413,4 +454,5 @@
       </button>
     </div>
   </div>
+  <Footer />
 </div>

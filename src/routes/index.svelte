@@ -1,16 +1,16 @@
 <script lang="ts">
-  import Navbar from '../lib/Navbar.svelte'
-  import Hero from '../lib/Hero.svelte'
-  import Services from '../lib/Services.svelte'
-  import Projects from '../lib/Projects.svelte'
-  import Product from '../lib/Product.svelte'
-  import Customers from '../lib/Customers.svelte'
-  import Values from '../lib/Values.svelte'
-  import Technology from '../lib/Technology.svelte'
-  import AboutUs from '../lib/AboutUs.svelte'
-  import Job from '../lib/Job.svelte'
-  import LiveChat from '../lib/LiveChat.svelte'
-  import Footer from '../lib/Footer.svelte'
+  import Navbar from '../lib/index/Navbar.svelte'
+  import Intro from '../lib/index/Intro.svelte'
+  import CustomSoftwareDevelopment from '../lib/index/CustomSoftwareDevelopment.svelte'
+  import Stories from '../lib/index/Stories.svelte'
+  import Mlink from '../lib/index/Mlink.svelte'
+  import Customers from '../lib/index/Customers.svelte'
+  import Manifest from '../lib/index/Manifest.svelte'
+  import Technology from '../lib/index/Technology.svelte'
+  import TeamMembers from '../lib/index/TeamMembers.svelte'
+  import Job from '../lib/index/Job.svelte'
+  import LiveChat from '../lib/index/LiveChat.svelte'
+  import Footer from '../lib/components/Footer.svelte'
   import { onMount } from 'svelte'
 
   onMount(() => {
@@ -24,7 +24,7 @@
     console.log(
       message,
       [
-        'background-image: url(https://dev.triarc-labs.com/header.svg)',
+        'background-image: url(https://triarc-labs.com/icons/header.svg)',
         'background-position: left center',
         'color: #fff',
         'padding: 10px 20px 10px 180px',
@@ -81,24 +81,24 @@
     </a>
   </div>
 
-  <Hero />
+  <Intro />
 
   <div class="section" id="services">
-    <Services />
+    <CustomSoftwareDevelopment />
   </div>
   <div class="section bg-white" id="projects">
-    <Projects />
+    <Stories />
   </div>
   <div id="product">
-    <Product />
+    <Mlink />
   </div>
   <div class="section" id="customers">
     <Customers />
   </div>
   <Technology />
   <div class="section" id="aboutUs">
-    <Values />
-    <AboutUs />
+    <Manifest />
+    <TeamMembers />
     <Job />
   </div>
   <LiveChat />

@@ -1,34 +1,15 @@
+<script>
+  import Header from '../../lib/components/Header.svelte'
+</script>
+
 <svelte:head>
   <title>triarc-labs - Day @ triarc</title>
 </svelte:head>
 
 <div class="bg-white h-screen relative">
-  <div class="bg-gray-900 py-2 px-4 xm:px-6 lg:px-8">
-    <div class="max-w-4xl lg:max-w-7xl mx-auto flex items-center mx-4 h-16">
-      <a href="..">
-        <svg
-          aria-hidden="true"
-          focusable="false"
-          role="img"
-          height="40"
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 448 512"
-          class="text-white"
-        >
-          <path
-            fill="currentColor"
-            d="M136.97 380.485l7.071-7.07c4.686-4.686 4.686-12.284 0-16.971L60.113 273H436c6.627 0 12-5.373 12-12v-10c0-6.627-5.373-12-12-12H60.113l83.928-83.444c4.686-4.686 4.686-12.284 0-16.971l-7.071-7.07c-4.686-4.686-12.284-4.686-16.97 0l-116.485 116c-4.686 4.686-4.686 12.284 0 16.971l116.485 116c4.686 4.686 12.284 4.686 16.97-.001z"
-            class=""
-          />
-        </svg>
-      </a>
+  <Header>Day @ triarc</Header>
 
-      <h1 class="text-white ml-4 text-xl flex-grow">Hauptseite</h1>
-      <img src="/header.svg" class="h-10" />
-    </div>
-  </div>
-
-  <div class="bg-white overflow-hidden">
+  <div class="bg-white mt-24 overflow-hidden">
     <div class="relative max-w-7xl mx-auto pt-8 px-4 sm:px-6 lg:px-8">
       <div class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen" />
       <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
