@@ -4,7 +4,7 @@
       <span class="block text-gray-200">Wir suchen dich!</span>
       <span class="block text-white text-xl">Auf der Suche nach einer neuen Herausforderung?</span>
     </h2>
-    <img src="img/hero/powerfull.svg" class="mt-8" />
+    <img src="img/jobs/powerful.svg" class="mt-8" />
     <p class="text-white mt-4 text-sm">Schliesse dich jetzt der digitalen Revolutation an.</p>
     <a
       href="/jobs"

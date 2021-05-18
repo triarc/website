@@ -28,7 +28,7 @@
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist das Bindeglied zwischen dem Kunden und deinen Entwickler-KollegInnen.',
       claim: 'Senior Software Engineer',
-      img: 'img/hero/super_woman.svg',
+      img: 'img/jobs/super_woman.svg',
       open: false,
       responsiblities:
         'sind breit gefächert. Vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden ist alles dabei. Die Arbeit ist herausfordernd und abwechslungsreich. In unserem Team aus den qualifiziertesten Entwicklern, profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
@@ -53,7 +53,7 @@
       content:
         'Wir sind Ingenieure. Bestausgebildete und praxiserfahrene IT-Fachleute, die können, was sie tun. Und für Sie alles tun, was sie können.',
       claim: 'Professional Software Engineer',
-      img: 'img/hero/be_the_hero.svg',
+      img: 'img/jobs/be_the_hero.svg',
       open: false,
       responsiblities:
         'sind breit gefächert. Vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden ist alles dabei. Die Arbeit ist herausfordernd und abwechslungsreich. In unserem Team aus den qualifiziertesten Entwicklern, profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
@@ -78,9 +78,10 @@
       content:
         'Unterstütze die Teams im Infrastrukturbereich und kümmere dich um unsere Kubernetes Cluster und unseren Tech-Stack. Bewirb dich unter <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
       claim: 'Operation Engineer',
-      img: 'img/hero/cloud_hosting.svg',
+      img: 'img/jobs/cloud_hosting.svg',
       open: false,
-      responsiblities: 'sind breit gefächert. Unterstütz das im Infrastruktur unserer vielzälligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Unterstüze ebenfalls im Support von unserem Produkt μLink und arbeite mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewärleisten.',
+      responsiblities:
+        'sind breit gefächert. Unterstütz das im Infrastruktur unserer vielzälligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Unterstüze ebenfalls im Support von unserem Produkt μLink und arbeite mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewärleisten.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
         'Praktische Erfahrung Kubernetes, Docker und GCP',
@@ -194,21 +195,21 @@
             Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle
             Vorschläge sind erlaubt, ja sogar aktiv gefordert.
           </p>
-          <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
-            <p>
+          <div class="mt-12 grid grid-cols-2 gap-y-12 gap-x-6">
+            <div class="col-span-2 md:col-span-1">
               <span class="block text-2xl font-bold text-white">Vom Praktikanten zum Peer</span>
               <span class="mt-1 block text-base text-gray-300"
                 >Wir wollen auf Augenhöhe zusammenarbeiten. Klare Erwartungen und gezielte Förderung begleiten Dich über
                 mehrere Etappen auf dem Weg zum Peer.
               </span>
-            </p>
-            <p>
+            </div>
+            <div class="col-span-2 md:col-span-1">
               <span class="block text-2xl font-bold text-white">Transparenz für alle</span>
               <span class="mt-1 block text-base text-gray-300"
                 >Alle Löhne sind offen kommuniziert. Als Peer gibt’s aktuell 104k – 136k CHF. Die variablen Komponenten
                 richten sich nach den Quartalszahlen, welche wir im Team besprechen.</span
               >
-            </p>
+            </div>
 
             <p class="col-span-2">
               <span class="block text-2xl font-bold text-white">Soziales Leisten</span>

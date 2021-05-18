@@ -52,7 +52,6 @@
         <img height="80" class="max-h-6" src="/img/customer/wettstein-logo.svg" loading="lazy" alt="wettstein" />
       </a>
 
-
       <a href="http://www.glb.ch/" class="col-span-1 flex justify-center py-8 px-8 ">
         <img height="80" class="max-h-16" src="/img/customer/glb-logo.svg" loading="lazy" alt="glb" />
       </a>

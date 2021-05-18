@@ -1,7 +1,10 @@
 <script lang="ts">
   function chat(person: string) {
-    //const input = document.getElementById('#chat-message')
-    //input.value = `@${person} `;
+    const input = document.getElementById('chat-message')
+    console.log(input)
+    if (input) {
+      ;(input as HTMLInputElement).value = `@${person} `
+    }
   }
 </script>
 
@@ -45,11 +48,11 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="">
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3" on:click={chat('pascal')}>
                 <div class="flex-shrink-0">
-                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="" />
+                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
                 </div>
-                <div on:click={chat('pascal')} class="cursor-pointer">
+                <div class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
                   <div class="font-light text-gray-500">Software Lead</div>
                 </div>
@@ -90,11 +93,11 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="mt-3">
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3" on:click={chat('elke')}>
                 <div class="flex-shrink-0">
-                  <img class="h-10 w-10" src="img/avatars/elke.png" alt="" />
+                  <img class="h-10 w-10" src="img/avatars/elke.png" alt="elke" />
                 </div>
-                <div on:click={chat('elke')} class="cursor-pointer">
+                <div class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Elke Engel</div>
                   <div class="font-light text-gray-500">Project Lead</div>
                 </div>
@@ -135,11 +138,11 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="">
-              <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-3" on:click={chat('pascal')}>
                 <div class="flex-shrink-0">
-                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="" />
+                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
                 </div>
-                <div on:click={chat('pascal')} class="cursor-pointer">
+                <div class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
                   <div class="font-light text-gray-500">Software Lead</div>
                 </div>

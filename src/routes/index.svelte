@@ -24,7 +24,7 @@
     console.log(
       message,
       [
-        'background-image: url(https://triarc-labs.com/icons/header.svg)',
+        'background-image: url(https://triarc-labs.com/icons/triarc-logo.svg)',
         'background-position: left center',
         'color: #fff',
         'padding: 10px 20px 10px 180px',

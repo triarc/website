@@ -8,46 +8,57 @@
     'Das Backoffice eröffnet ein neues Projekt. Die Projektleiter beginnen umgehend mit der visuellen Planung.',
     'Die Geschäftsstelle und der Mitarbeiter im Feld kollaborieren in Echtzeit am selben Prozess.',
   ]
-  let sections = [{
-    title: 'Klare Grenzen',
-    text: 'Das ERP muss nicht verschiedenste Systeme mit Exporten bedienen und kann seine Ressourcen\n' +
-      '                  ausschliesslich für den eigenen Betrieb verwenden. Die Last durch die Kommunikation mit Umsystemen\n' +
-      '                  wird transparent. Datentransformationen, welche Umsystem-spezifisch sind, sind nicht mehr Teil des ERP\n' +
-      '                  internen Ablaufs.',
-    image: 'img/mlink/mind-map.svg',
-    imageAlt: 'borders'
-  }, {
-    title: 'Skalierbarkeit',
-    text: 'Die Verfügbarkeit der Informationen kann unabhängig vom ERP ausgebaut werden. Man muss bei komplexen\n' +
-      '                  Anforderungen nicht das ganze ERP skalieren und μLink ist auch nicht von Auslastungsspitzen des ERP\n' +
-      '                  betroffen. Es ist dank der Microservice Architektur von μLink sogar möglich einzelne Aspekte der\n' +
-      '                  Schnittstelle einzeln zu skalieren. μLink kann On-Premise oder in der Cloud betrieben werden.',
-    image: 'img/mlink/scale.svg',
-    imageAlt: 'scale'
-  }, {
-    title: 'Schnittstellen',
-    text: 'μLink bietet mit REST und AMQP offene und vielseitige Schnittstellen an. Das Knowhow kann so mit wenig\n' +
-      '                  Aufwand intern aufgebaut werden.',
-    image: 'img/mlink/interface.svg',
-    imageAlt: 'interface'
-  }, {
-    title: 'Versionierung',
-    text: 'Die von μLink für die Umsysteme zur Verfügung gestellte Schnittstelle ist versionssicher, d.h.\n' +
-      '                  Anpassungen und Updates am ERP führen nicht zu Tests und Anpassungen an allen abhängigen Systemen,\n' +
-      '                  sondern beschränken sich auf μLink. Die Komplexität der Kommunikation wird mit dem ERP gekapselt.\n' +
-      '                  μLink setzt bewusst auf offene Standards um keine, nur für mLink zu erlernende, Hürde einzuführen.',
-    image: 'img/mlink/versioning.svg',
-    imageAlt: 'versioning',
-  }, {
-    title: 'Sicherheit',
-    text: 'Sämtliche Kommunikation erfolgt ausschliesslich via Https und TLS und bedarf einer Authentifizierung.\n' +
-      '                  Die Komponenten von μLink sind hochverfügbar und erlauben einen Ausfall von einzelnen Containern, ohne\n' +
-      '                  die Funktion zu mindern. Es besteht die Möglichkeit μLink in ein Monitoring System für kritische\n' +
-      '                  Systeme zu integrieren. μLink bietet eine manuelle Analyse z.B. zur Kontrolle des Zugriffs und der\n' +
-      '                  Verwendung der Schnittstellen durch Umsysteme.',
-    image: 'img/mlink/security.svg',
-    imageAlt: 'security'
-  }]
+  let sections = [
+    {
+      title: 'Klare Grenzen',
+      text:
+        'Das ERP muss nicht verschiedenste Systeme mit Exporten bedienen und kann seine Ressourcen\n' +
+        '                  ausschliesslich für den eigenen Betrieb verwenden. Die Last durch die Kommunikation mit Umsystemen\n' +
+        '                  wird transparent. Datentransformationen, welche Umsystem-spezifisch sind, sind nicht mehr Teil des ERP\n' +
+        '                  internen Ablaufs.',
+      image: 'img/mlink/mind-map.svg',
+      imageAlt: 'borders',
+    },
+    {
+      title: 'Skalierbarkeit',
+      text:
+        'Die Verfügbarkeit der Informationen kann unabhängig vom ERP ausgebaut werden. Man muss bei komplexen\n' +
+        '                  Anforderungen nicht das ganze ERP skalieren und μLink ist auch nicht von Auslastungsspitzen des ERP\n' +
+        '                  betroffen. Es ist dank der Microservice Architektur von μLink sogar möglich einzelne Aspekte der\n' +
+        '                  Schnittstelle einzeln zu skalieren. μLink kann On-Premise oder in der Cloud betrieben werden.',
+      image: 'img/mlink/scale.svg',
+      imageAlt: 'scale',
+    },
+    {
+      title: 'Schnittstellen',
+      text:
+        'μLink bietet mit REST und AMQP offene und vielseitige Schnittstellen an. Das Knowhow kann so mit wenig\n' +
+        '                  Aufwand intern aufgebaut werden.',
+      image: 'img/mlink/interface.svg',
+      imageAlt: 'interface',
+    },
+    {
+      title: 'Versionierung',
+      text:
+        'Die von μLink für die Umsysteme zur Verfügung gestellte Schnittstelle ist versionssicher, d.h.\n' +
+        '                  Anpassungen und Updates am ERP führen nicht zu Tests und Anpassungen an allen abhängigen Systemen,\n' +
+        '                  sondern beschränken sich auf μLink. Die Komplexität der Kommunikation wird mit dem ERP gekapselt.\n' +
+        '                  μLink setzt bewusst auf offene Standards um keine, nur für mLink zu erlernende, Hürde einzuführen.',
+      image: 'img/mlink/versioning.svg',
+      imageAlt: 'versioning',
+    },
+    {
+      title: 'Sicherheit',
+      text:
+        'Sämtliche Kommunikation erfolgt ausschliesslich via Https und TLS und bedarf einer Authentifizierung.\n' +
+        '                  Die Komponenten von μLink sind hochverfügbar und erlauben einen Ausfall von einzelnen Containern, ohne\n' +
+        '                  die Funktion zu mindern. Es besteht die Möglichkeit μLink in ein Monitoring System für kritische\n' +
+        '                  Systeme zu integrieren. μLink bietet eine manuelle Analyse z.B. zur Kontrolle des Zugriffs und der\n' +
+        '                  Verwendung der Schnittstellen durch Umsysteme.',
+      image: 'img/mlink/security.svg',
+      imageAlt: 'security',
+    },
+  ]
 </script>
 
 <svelte:head>
@@ -98,7 +109,7 @@
           <dl>
             {#each bulletPoints as bulletPoint}
               <div class="flex items-center mt-2">
-                <img src='icons/checkmark.svg' class="flex-shrink-0 h-6 w-6" />
+                <img src="icons/checkmark.svg" class="flex-shrink-0 h-6 w-6" />
                 <div class="ml-3">
                   <dt class="text-base text-gray-300">
                     {bulletPoint}
@@ -112,8 +123,7 @@
     </div>
   </div>
 
-  <ImageSections bind:sections={sections}></ImageSections>
-
+  <ImageSections bind:sections />
 
   <!-- Price -->
   <!--  <div class="bg-gray-100 pb-48">-->
