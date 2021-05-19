@@ -124,7 +124,7 @@
   .office-bg {
     background-position: center center;
     background-size: cover;
-    height: 400px;
+    height: 50vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
