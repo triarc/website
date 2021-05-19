@@ -2,7 +2,7 @@
   <div class="text-gray-700 font-extrabold not-found">404</div>
   <span class="text-white">Oops something went wrong</span>
   <span class="text-gray-400"
-  >complain about it on our <a class="underline" href="https://github.com/triarc/website/issues">GitHub Repo</a></span
+    >complain about it on our <a class="underline" href="https://github.com/triarc/website/issues">GitHub Repo</a></span
   >
   <div class="flex items-center">
     <hr class="w-32 mr-6" />
@@ -13,7 +13,7 @@
 </div>
 
 <style style lang="postcss">
-    .not-found {
-        font-size: 16em;
-    }
+  .not-found {
+    font-size: 16em;
+  }
 </style>
