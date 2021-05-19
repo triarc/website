@@ -277,9 +277,10 @@
       </div>
 
       <div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-        <p class="mt-3 text-3xl font-extrabold text-white">Was wir dir zusätzlich bieten</p>
+        <p class="mt-3 text-3xl font-extrabold text-white">Was wir dir bieten</p>
         <p class="mt-5 text-lg text-gray-300">
-          Zu geben tut gut; Zu bekommen noch besser. Darum geben und bekommen wir.
+          Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind
+          immer auf der Suche nach neuen Talenten die uns ergänzen.
         </p>
         <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
           <p>

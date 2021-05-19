@@ -150,7 +150,7 @@
     if (val.endsWith('svg')) {
       return val
     }
-    return `${sizes.map((s) => `${val.substr(0, val.length - 4)}-${s}.jpg ${s}w`).join(',')}`
+    return `${sizes.map((s) => `${val.substr(0, val.length - 4)}-${s}.png ${s}w`).join(',')}`
   }
 
   function mapMember(member) {
