@@ -84,7 +84,7 @@
         'sind breit gefächert. Unterstütz das im Infrastruktur unserer vielzälligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Unterstüze ebenfalls im Support von unserem Produkt μLink und arbeite mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewärleisten.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
-        'Praktische Erfahrung Kubernetes, Docker und GCP',
+        'Praktische Erfahrung mit Kubernetes, Docker und GCP',
         'Wünscheswerte Erfahrung mit Cert Manager, Postgres, Elasticsearch und MongoDB',
         'Spass an der Arbeit im Team',
         'Lösungsorientiertes Denken und Handeln',

@@ -42,84 +42,90 @@
 
 <Navbar />
 
-<div class="relative hero-img">
-  <picture>
-    <source
-      type="image/webp"
-      srcset="img/hero/triarc-hero-480.webp 480w, img/hero/triarc-hero-800.webp 800w, img/hero/triarc-hero-1024.webp 1024w, img/hero/triarc-hero-1200.webp 1200w, img/hero/triarc-hero-1600.webp 1600w, img/hero/triarc-hero-2000.webp 2000w, img/hero/triarc-hero-4000.webp 4000w"
-    />
-    <img
-      class="hero-img w-screen fixed top-0 z-0 object-cover"
-      srcset="img/hero/triarc-hero-480.jpg 480w, img/hero/triarc-hero-800.jpg 800w, img/hero/triarc-hero-1024.jpg 1024w, img/hero/triarc-hero-1200.jpg 1200w, img/hero/triarc-hero-1600.jpg 1600w, img/hero/triarc-hero-2000.jpg 2000w, img/hero/triarc-hero-4000.jpg 4000w"
-      src="img/hero/triarc-hero-2000.jpg"
-    />
-  </picture>
-</div>
+<div class="wrapper">
+  <div class="section parallax header-bg" />
 
-<div class="absolute hero-img-padding w-screen">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-6 relative absolute top-8 z-10">
-    <a
-      href="#intro"
-      class="block bg-white rounded-full text-gray-600 h-14 w-14 p-4 shadow cursor-pointer"
-      id="arrow-down"
-    >
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fal"
-        data-icon="arrow-down"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512"
-      >
-        <path
-          fill="currentColor"
-          d="M443.5 248.5l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L241 419.9V44c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v375.9L28.5 241.4c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.8 4.8-12.3.1-17z"
-          class=""
-        />
-      </svg>
-    </a>
-  </div>
+  <div class="section parallax relative">
+    <Intro />
 
-  <Intro />
-
-  <div class="section" id="services">
-    <CustomSoftwareDevelopment />
-  </div>
-  <div class="section bg-white" id="projects">
-    <Stories />
-  </div>
-  <div id="product">
-    <Mlink />
-  </div>
-  <div class="section" id="customers">
-    <Customers />
-  </div>
-  <Technology />
-  <div class="section" id="aboutUs">
+    <div class="section" id="services">
+      <CustomSoftwareDevelopment />
+    </div>
+    <div class="section bg-white" id="projects">
+      <Stories />
+    </div>
+    <div id="product">
+      <Mlink />
+    </div>
+    <div class="section" id="customers">
+      <Customers />
+    </div>
+    <Technology />
     <Manifest />
-    <TeamMembers />
-    <Job />
   </div>
-  <LiveChat />
-  <Footer />
+  <div class="section parallax office-bg" />
+  <div class="section bg-white">
+    <div class="section" id="aboutUs">
+      <TeamMembers />
+      <Job />
+    </div>
+    <LiveChat />
+    <Footer />
+  </div>
 </div>
 
 <style style lang="postcss">
-  #arrow-down {
-    animation-delay: 1500ms;
-    animation-duration: 100ms;
-    animation-name: fadein;
-    animation-fill-mode: forwards;
-    opacity: 0;
+  .wrapper {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+    scroll-behavior: smooth;
   }
 
-  @keyframes fadein {
+  .section {
+    position: relative;
+  }
+
+  .parallax::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+  }
+
+  .header-bg {
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+
+    animation-delay: 500ms;
+    animation-duration: 200ms;
+    animation-name: shrink;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes shrink {
     0% {
-      opacity: 0;
+      height: 100vh;
     }
     100% {
-      opacity: 100;
+      height: calc(100vh - 224px);
     }
+  }
+
+  .office-bg {
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
   }
 </style>

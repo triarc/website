@@ -141,19 +141,17 @@
 
   <div class="relative mt-16 py-16 bg-blue-triarc">
     <div class="max-w-7xl mx-auto bg-blue-triarc lg:bg-transparent">
-      <div
-        class="max-w-md mx-auto"
-      >
+      <div class="max-w-md mx-auto">
         <h2 class="text-3xl font-extrabold text-white" id="join-heading">Schliess Dich uns an</h2>
         <p class="text-lg text-white py-4">
           und melde dich auf <a href="mailto:development@triarc-labs.com" class="underline"
-        >development@triarc-labs.com</a
-        >
+            >development@triarc-labs.com</a
+          >
         </p>
         <a
           href="/jobs"
           class="block w-full py-3 px-5 text-center bg-white border border-transparent rounded-md shadow-md text-base font-medium text-blue-triarc hover:bg-gray-50 sm:inline-block sm:w-auto"
-        >Unsere Jobangebote</a
+          >Unsere Jobangebote</a
         >
       </div>
     </div>

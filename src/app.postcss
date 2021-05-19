@@ -3,11 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-
 .plyr {
   --plyr-color-main: #c8102e;
   --plyr-video-control-background-hover: #c8102e;
@@ -17,36 +12,168 @@ html {
   background-size: cover;
 }
 
-.hero-img {
-  animation-delay: 500ms;
-  animation-duration: 200ms;
-  animation-name: shrink;
-  animation-fill-mode: forwards;
-  height: 100vh;
+.no-js .header-bg,
+.no-webp .header-bg {
+  background-image: url('/img/hero/triarc-hero-landscape-4000.jpg');
+}
+.no-js .office-bg,
+.no-webp .office-bg {
+  background-image: url('/img/hero/triarc-meetingroom-4000.jpg');
 }
 
-.hero-img-padding {
-  animation-delay: 500ms;
-  animation-duration: 200ms;
-  animation-name: slidein;
-  animation-fill-mode: forwards;
-  top: 100vh;
+.webp .office-bg {
+  background-image: url('/img/hero/triarc-meetingroom-4000.webp');
+}
+.webp .header-bg {
+  background-image: url('/img/hero/triarc-hero-landscape-4000.webp');
 }
 
-@keyframes slidein {
-  0% {
-    top: 100vh;
+@media only screen (orientation: portrait) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-1700.jpg');
   }
-  100% {
-    top: calc(100vh - 288px);
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-1700.webp');
   }
 }
 
-@keyframes shrink {
-  0% {
-    height: 100vh;
+@media only screen and (max-height: 800px) and (orientation: portrait) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-800.jpg');
   }
-  100% {
-    height: calc(100vh - 100px);
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-800.webp');
+  }
+}
+
+@media only screen and (max-height: 1200px) and (orientation: portrait) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-1200.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-1200.webp');
+  }
+}
+
+@media only screen and (max-height: 1500px) and (orientation: portrait) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-1500.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-portrait-1500.webp');
+  }
+}
+
+@media only screen and (max-width: 800px and max-height: 342px) and (orientation: landscape) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-800.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-800.webp');
+  }
+}
+@media only screen and (max-width: 1024px and max-height: 438px) and (orientation: landscape) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-1024.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-1024.webp');
+  }
+}
+@media only screen and (max-width: 1200px and max-height: 514px) and (orientation: landscape) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-1200.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-1200.webp');
+  }
+}
+@media only screen and (max-width: 1600px and max-height: 685px) and (orientation: landscape) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-1600.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-1600.webp');
+  }
+}
+@media only screen and (max-width: 2000px and max-height: 856px) and (orientation: landscape) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-2000.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-2000.webp');
+  }
+}
+@media only screen and (max-width: 4000px and max-height: 1701px) and (orientation: landscape) {
+  .no-js .header-bg,
+  .no-webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-4000.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-hero-landscape-4000.webp');
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .no-js .office-bg,
+  .no-webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-800.jpg');
+  }
+  .webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-800.webp');
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .no-js .office-bg,
+  .no-webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-1024.jpg');
+  }
+  .webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-1024.webp');
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .no-js .office-bg,
+  .no-webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-1200.jpg');
+  }
+  .webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-1200.webp');
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .no-js .office-bg,
+  .no-webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-1600.jpg');
+  }
+  .webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-1600.webp');
+  }
+}
+@media only screen and (max-width: 2000px) {
+  .no-js .office-bg,
+  .no-webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-2000.jpg');
+  }
+  .webp .header-bg {
+    background-image: url('/img/hero/triarc-meetingroom-2000.webp');
+  }
+}
+@media only screen and (max-width: 4000px) {
+  .no-js .office-bg,
+  .no-webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-4000.jpg');
+  }
+  .webp .office-bg {
+    background-image: url('/img/hero/triarc-meetingroom-4000.webp');
   }
 }

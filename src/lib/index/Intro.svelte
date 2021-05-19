@@ -40,6 +40,30 @@
 </script>
 
 <div class="relative bg-white">
+  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-6 relative absolute -top-8 z-10">
+    <a
+      href="#intro"
+      class="block absolute bg-white rounded-full text-gray-600 h-14 w-14 p-4 shadow cursor-pointer"
+      id="arrow-down"
+    >
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fal"
+        data-icon="arrow-down"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 448 512"
+      >
+        <path
+          fill="currentColor"
+          d="M443.5 248.5l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L241 419.9V44c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v375.9L28.5 241.4c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.8 4.8-12.3.1-17z"
+          class=""
+        />
+      </svg>
+    </a>
+  </div>
+
   <div class="bg-gray-100 bg-opacity-80 py-16 px-6">
     <img src="img/hero/triarc-labs.svg" class="h-24  mx-auto" />
   </div>
@@ -69,3 +93,23 @@
     </div>
   </div>
 </div>
+
+<style style lang="postcss">
+  #arrow-down {
+    animation-delay: 1500ms;
+    animation-duration: 100ms;
+    animation-name: fadein;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fadein {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+</style>
