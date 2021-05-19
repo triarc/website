@@ -52,7 +52,7 @@
   }
 </script>
 
-<div class="bg-gray-100 pt-10">
+<div class="bg-gray-100 pt-10" id="live-chat">
   <div class="max-w-7xl mx-auto pb-12 px-4 sm:pb-16 sm:px-6 lg:px-8">
     <div class="mx-auto divide-y-2 divide-gray-200">
       <h2 class="text-2xl font-extrabold text-gray-900 sm:text-3xl">Live Chat</h2>

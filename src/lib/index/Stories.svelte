@@ -4,6 +4,7 @@
     console.log(input)
     if (input) {
       ;(input as HTMLInputElement).value = `@${person} `
+      input.focus()
     }
   }
 </script>
@@ -48,7 +49,7 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="">
-              <div class="flex items-center space-x-3" on:click={chat('pascal')}>
+              <div class="flex items-center space-x-3" on:click={() => chat('pascal')}>
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
                 </div>
@@ -93,7 +94,7 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="mt-3">
-              <div class="flex items-center space-x-3" on:click={chat('elke')}>
+              <div class="flex items-center space-x-3" on:click={() => chat('elke')}>
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/elke.png" alt="elke" />
                 </div>
@@ -138,7 +139,7 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="">
-              <div class="flex items-center space-x-3" on:click={chat('pascal')}>
+              <div class="flex items-center space-x-3" on:click={() => chat('pascal')}>
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
                 </div>
