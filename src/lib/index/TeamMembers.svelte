@@ -212,12 +212,12 @@
                       class="drop-shadow-2xl filter "
                     />
                   </picture>
-                  <picture class="back-card">
-                    {#if member.nerdWebpImage}
-                      <source type="image/webp" srcset={member.nerdWebpImage} loading="lazy" />
-                    {/if}
-                    <img srcset={member.nerdImage} alt="nerd {member.name}" width="144" height="144" loading="lazy" />
-                  </picture>
+                  <!--                  <picture class="back-card">-->
+                  <!--                    {#if member.nerdWebpImage}-->
+                  <!--                      <source type="image/webp" srcset={member.nerdWebpImage} loading="lazy" />-->
+                  <!--                    {/if}-->
+                  <!--                    <img srcset={member.nerdImage} alt="nerd {member.name}" width="144" height="144" loading="lazy" />-->
+                  <!--                  </picture>-->
                 </div>
               </div>
               <div class="space-y-2">

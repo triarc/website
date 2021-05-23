@@ -9,7 +9,7 @@
   })
 </script>
 
-<div class="bg-green-triarc pb-24 md:pt-24 md:flex lg:flex sm:relative sm:px:10">
+<div class="bg-green-triarc pb-24 md:pt-24 md:flex lg:flex sm:relative sm:px:10" id="product">
   <div class="bg-green-triarc z-10 lg:relative md:left-0 md:pl-8 md:w-1/2 lg:w-1/2 sm:w-full">
     <video
       id="player"

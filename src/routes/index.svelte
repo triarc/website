@@ -42,29 +42,20 @@
 
 <Navbar />
 
-<div class="wrapper">
-  <div class="section parallax header-bg" />
+<div class="parallax">
+  <div class="parallax__layer parallax__layer--back header-bg z-10" />
 
-  <div class="section parallax relative">
+  <div class="relative intro z-20">
     <Intro />
-
-    <div class="section" id="services">
-      <CustomSoftwareDevelopment />
-    </div>
-    <div class="section bg-white" id="projects">
-      <Stories />
-    </div>
-    <div id="product">
-      <Mlink />
-    </div>
-    <div class="section" id="customers">
-      <Customers />
-    </div>
+    <CustomSoftwareDevelopment />
+    <Stories />
+    <Mlink />
+    <Customers />
     <Technology />
     <Manifest />
   </div>
-  <div class="section parallax office-bg" />
-  <div class="section bg-white">
+  <div class="parallax__layer--back office-bg z-10" />
+  <div class="bg-white relative z-20">
     <div class="section" id="aboutUs">
       <TeamMembers />
       <Job />
@@ -75,35 +66,51 @@
 </div>
 
 <style style lang="postcss">
-  .wrapper {
+  .parallax {
+    perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
-    perspective: 2px;
+    perspective-origin-x: 100%;
     scroll-behavior: smooth;
   }
-
-  .section {
-    position: relative;
-  }
-
-  .parallax::after {
-    content: ' ';
+  .parallax__layer {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    transform: translateZ(-1px) scale(1.5);
-    background-size: 100%;
-    z-index: -1;
+    transform-origin-x: 100%;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px);
+  }
+
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .parallax__layer--deep {
+    transform: translateZ(-2px) scale(3);
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+  }
+
+  .intro {
+    margin-top: calc(100vh - 224px);
   }
 
   .header-bg {
     background-position: center center;
     background-size: cover;
-    height: 100vh;
-    background-attachment: fixed;
     background-repeat: no-repeat;
 
     animation-delay: 500ms;
@@ -125,7 +132,9 @@
     background-position: center center;
     background-size: cover;
     height: 50vh;
-    background-attachment: fixed;
+    width: 100vw;
     background-repeat: no-repeat;
+
+    transform-origin-x: 100%;
   }
 </style>

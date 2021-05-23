@@ -81,7 +81,7 @@
       img: 'img/jobs/cloud_hosting.svg',
       open: false,
       responsiblities:
-        'sind breit gefächert. Unterstütz das im Infrastruktur unserer vielzälligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Unterstüze ebenfalls im Support von unserem Produkt μLink und arbeite mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewärleisten.',
+        'sind breit gefächert. Unterstütze das Team in der Infrastruktur unserer vielzähligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Du hilfst im Support von unserem Produkt μLink und arbeitest mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewährleisten.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
         'Praktische Erfahrung mit Kubernetes, Docker und GCP',
