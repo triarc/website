@@ -26,12 +26,12 @@
   const slogans = [
     {
       content:
-        'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist das Bindeglied zwischen dem Kunden und deinen Entwickler-KollegInnen.',
+        'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. ',
       claim: 'Senior Software Engineer',
       img: 'img/jobs/super_woman.svg',
       open: false,
       responsiblities:
-        'sind breit gefächert. Vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden ist alles dabei. Die Arbeit ist herausfordernd und abwechslungsreich. In unserem Team aus den qualifiziertesten Entwicklern, profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
+        'sind so breit gefächert und abwechslungsreich wie die Arbeit, die dich bei uns erwartet: vom Design bis zur Lösungsfindung ist alles dabei, individuell angepasst auf unsere branchenübergreifenden Kunden. In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung, und wir von deiner. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobile-Anwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
 
@@ -51,12 +51,12 @@
     },
     {
       content:
-        'Wir sind Ingenieure. Bestausgebildete und praxiserfahrene IT-Fachleute, die können, was sie tun. Und für Sie alles tun, was sie können.',
+        'Wir sind Ingenieure: bestausgebildete und praxiserfahrene IT-Fachleute. Wir können, was wir tun. Und tun für unsere Kunden alles, was wir können. Willst du mittun?',
       claim: 'Professional Software Engineer',
       img: 'img/jobs/be_the_hero.svg',
       open: false,
       responsiblities:
-        'sind breit gefächert. Vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden ist alles dabei. Die Arbeit ist herausfordernd und abwechslungsreich. In unserem Team aus den qualifiziertesten Entwicklern, profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
+        'umfassen das ganze Spektrum vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden. Das ist herausfordernd, ja, aber das bringt dich auch weiter. Und du bist nicht allein: In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
 
@@ -76,7 +76,7 @@
     },
     {
       content:
-        'Unterstütze die Teams im Infrastrukturbereich und kümmere dich um unsere Kubernetes Cluster und unseren Tech-Stack. Bewirb dich unter <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
+        'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
       claim: 'Operation Engineer',
       img: 'img/jobs/cloud_hosting.svg',
       open: false,
@@ -192,33 +192,34 @@
             Kultivierte Grundlagen <span class="text-red-triarc">#Soziokratie</span>
           </p>
           <p class="mt-5 text-lg text-gray-300">
-            Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle
-            Vorschläge sind erlaubt, ja sogar aktiv gefordert.
+            Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen.
+            Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert.
+            Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?
           </p>
           <div class="mt-12 grid grid-cols-2 gap-y-12 gap-x-6">
             <div class="col-span-2 md:col-span-1">
               <span class="block text-2xl font-bold text-white">Vom Praktikanten zum Peer</span>
-              <span class="mt-1 block text-base text-gray-300"
-                >Wir wollen auf Augenhöhe zusammenarbeiten. Klare Erwartungen und gezielte Förderung begleiten Dich über
-                mehrere Etappen auf dem Weg zum Peer.
+              <span class="mt-1 block text-base text-gray-300">
+                Wir wollen auf Augenhöhe zusammenarbeiten.
+                Darum begleiten dich auf dem Weg zum Peer klar definierte Erwartungen und eine gezielte Förderung.
+                Und das über mehrere Etappen.
               </span>
             </div>
             <div class="col-span-2 md:col-span-1">
               <span class="block text-2xl font-bold text-white">Transparenz für alle</span>
-              <span class="mt-1 block text-base text-gray-300"
-                >Alle Löhne sind offen kommuniziert. Als Peer gibt’s aktuell 104k – 136k CHF. Die variablen Komponenten
-                richten sich nach den Quartalszahlen, welche wir im Team besprechen.</span
-              >
+              <span class="mt-1 block text-base text-gray-300">
+                Alle Löhne werden offen kommuniziert. Für Peers gibt’s aktuell 104k – 136k CHF.
+                Die variablen Komponenten richten sich nach den Quartalszahlen, welche wir im Team besprechen.
+              </span>
             </div>
 
             <p class="col-span-2">
-              <span class="block text-2xl font-bold text-white">Soziales Leisten</span>
-              <span class="mt-1 block text-base text-gray-300"
-                >Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork - Freiheit und Rücksicht auf
-                individuelle Bedürfnisse sind wichtig. Auch wichtig ist; Bricht sich ein Teammitglied beim Tippen einen
-                Finger, oder schlimmeres, erholen wir uns davon in einem netten Einzelzimmer mit Seeblick.
-                #privatversichert</span
-              >
+              <span class="block text-2xl font-bold text-white">Soziales leisten</span>
+              <span class="mt-1 block text-base text-gray-300">
+                Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork:
+                Nichts ist uns fremd. Denn Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig.
+                Auch gut zu wissen: Wer sich beim Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten Einzelzimmer mit Seeblick. #privatversichert...
+              </span>
             </p>
           </div>
         </div>
@@ -284,17 +285,18 @@
         </p>
         <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
           <p>
-            <span class="block text-2xl font-bold text-white">40 Stundenwoche</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Weil uns allen Freizeit irgendwann wichtig ist; Inklusive 5 Wochen Ferien.</span
-            >
+            <span class="block text-2xl font-bold text-white">40 Stunden-Woche</span>
+            <span class="mt-1 block text-base text-gray-300">
+              Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit.
+              Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.
+            </span>
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Technologie</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Zusammen suchen wir das
-              Richtige.</span
+              >Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht.
+              Die richtige suchen und finden wir zusammen. </span
             >
           </p>
 
@@ -306,30 +308,31 @@
           <p>
             <span class="block text-2xl font-bold text-white">Home-Office</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Auch nach Corona; Für die regnerischen Tage im Trainer.</span
+              >Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.</span
             >
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Kaffee / Bar</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und eine sortierte Bar warten auf Konsum. Neben
-              echten Früchtchen stellen wir auch saisonales Süsses hin.</span
-            >
+            <span class="mt-1 block text-base text-gray-300">
+              Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf deinen Zugriff.
+              Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken.
+              Und für den Beerenhunger auch mal frische Früchtchen.
+            </span>
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Company Events</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Team-Kochevents via Teams, Legobauen streng nach Anleitung und in besseren Zeiten auch Ausflüge an
-              Festivals oder eine Reise nach Italien. Alle bringen Ideen ein. Wir haben ein Budget.
+              >
+              Team-Kochevents via Teams, Legosteine verbauen (streng nach Anleitung, versteht sich) und in besseren Zeiten auch Ausflüge an Festivals oder eine Reise nach Italien...: Du hast Ideen, wir ein Budget dazu.
             </span>
           </p>
 
           <p>
-            <span class="block text-2xl font-bold text-white">Office Gymnastik</span>
+            <span class="block text-2xl font-bold text-white">Office Gym</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Blei und Matten für die «Informbleibenwollenden». Rudere dir den Bug von der Seele.
+              >Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse warten Blei und Matten auf Beschäftigung.
             </span>
           </p>
         </div>
@@ -379,22 +382,21 @@
           <p>
             <span class="block text-2xl font-bold text-white">Begeisterung</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Dir macht die Entwicklung Freunde und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert
-              dich.</span
+              >Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert dich. </span
             >
           </p>
           <p>
             <span class="block text-2xl font-bold text-white">Kommunikativ</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Du arbeitest und kommunizierst gerne im Team und das auch auf Englisch.</span
+              >Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen). </span
             >
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Offen</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Du bist eine positiv eingestellte Persönlichkeit allzeit bereit für neue Herausforderungen. Du magst
-              Mitmenschen und behandelst sie entsprechend.
+            <span class="mt-1 block text-base text-gray-300">
+              Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen.
+              Du magst Menschen und behandelst sie wie Mitmenschen.
             </span>
           </p>
         </div>
