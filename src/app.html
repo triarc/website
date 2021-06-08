@@ -1,11 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
     <script async defer data-domain="triarc-labs.com" src="https://plausible.io/js/plausible.js"></script>
     %svelte.head%
+
+    <script>
+      document.documentElement.classList.remove('no-js')
+
+      var image = new Image()
+
+      function addResult(event) {
+        var result = event && event.type === 'load' ? image.width === 1 : false
+        document.documentElement.classList.add(result ? 'webp' : 'no-webp')
+      }
+
+      image.onerror = addResult
+      image.onload = addResult
+      image.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA='
+    </script>
   </head>
   <body>
     <div id="svelte">%svelte.body%</div>

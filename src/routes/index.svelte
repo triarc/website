@@ -1,16 +1,16 @@
 <script lang="ts">
-  import Navbar from '../lib/Navbar.svelte'
-  import Hero from '../lib/Hero.svelte'
-  import Services from '../lib/Services.svelte'
-  import Projects from '../lib/Projects.svelte'
-  import Product from '../lib/Product.svelte'
-  import Customers from '../lib/Customers.svelte'
-  import Values from '../lib/Values.svelte'
-  import Technology from '../lib/Technology.svelte'
-  import AboutUs from '../lib/AboutUs.svelte'
-  import Job from '../lib/Job.svelte'
-  import LiveChat from '../lib/LiveChat.svelte'
-  import Footer from '../lib/Footer.svelte'
+  import Navbar from '../lib/index/Navbar.svelte'
+  import Intro from '../lib/index/Intro.svelte'
+  import CustomSoftwareDevelopment from '../lib/index/CustomSoftwareDevelopment.svelte'
+  import Stories from '../lib/index/Stories.svelte'
+  import Mlink from '../lib/index/Mlink.svelte'
+  import Customers from '../lib/index/Customers.svelte'
+  import Manifest from '../lib/index/Manifest.svelte'
+  import Technology from '../lib/index/Technology.svelte'
+  import TeamMembers from '../lib/index/TeamMembers.svelte'
+  import Job from '../lib/index/Job.svelte'
+  import LiveChat from '../lib/index/LiveChat.svelte'
+  import Footer from '../lib/components/Footer.svelte'
   import { onMount } from 'svelte'
 
   onMount(() => {
@@ -24,7 +24,7 @@
     console.log(
       message,
       [
-        'background-image: url(https://dev.triarc-labs.com/header.svg)',
+        'background-image: url(https://triarc-labs.com/icons/triarc-logo.svg)',
         'background-position: left center',
         'color: #fff',
         'padding: 10px 20px 10px 180px',
@@ -42,84 +42,99 @@
 
 <Navbar />
 
-<div class="relative hero-img">
-  <picture>
-    <source
-      type="image/webp"
-      srcset="img/hero/triarc-hero-480.webp 480w, img/hero/triarc-hero-800.webp 800w, img/hero/triarc-hero-1024.webp 1024w, img/hero/triarc-hero-1200.webp 1200w, img/hero/triarc-hero-1600.webp 1600w, img/hero/triarc-hero-2000.webp 2000w, img/hero/triarc-hero-4000.webp 4000w"
-    />
-    <img
-      class="hero-img w-screen fixed top-0 z-0 object-cover"
-      srcset="img/hero/triarc-hero-480.jpg 480w, img/hero/triarc-hero-800.jpg 800w, img/hero/triarc-hero-1024.jpg 1024w, img/hero/triarc-hero-1200.jpg 1200w, img/hero/triarc-hero-1600.jpg 1600w, img/hero/triarc-hero-2000.jpg 2000w, img/hero/triarc-hero-4000.jpg 4000w"
-      src="img/hero/triarc-hero-2000.jpg"
-    />
-  </picture>
-</div>
+<div class="parallax">
+  <div class="parallax__layer parallax__layer--back header-bg z-10" />
 
-<div class="absolute hero-img-padding w-screen">
-  <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-6 relative absolute top-8 z-10">
-    <a
-      href="#intro"
-      class="block bg-white rounded-full text-gray-600 h-14 w-14 p-4 shadow cursor-pointer"
-      id="arrow-down"
-    >
-      <svg
-        aria-hidden="true"
-        focusable="false"
-        data-prefix="fal"
-        data-icon="arrow-down"
-        role="img"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 448 512"
-      >
-        <path
-          fill="currentColor"
-          d="M443.5 248.5l-7.1-7.1c-4.7-4.7-12.3-4.7-17 0L241 419.9V44c0-6.6-5.4-12-12-12h-10c-6.6 0-12 5.4-12 12v375.9L28.5 241.4c-4.7-4.7-12.3-4.7-17 0l-7.1 7.1c-4.7 4.7-4.7 12.3 0 17l211 211.1c4.7 4.7 12.3 4.7 17 0l211-211.1c4.8-4.8 4.8-12.3.1-17z"
-          class=""
-        />
-      </svg>
-    </a>
-  </div>
-
-  <Hero />
-
-  <div class="section" id="services">
-    <Services />
-  </div>
-  <div class="section bg-white" id="projects">
-    <Projects />
-  </div>
-  <div id="product">
-    <Product />
-  </div>
-  <div class="section" id="customers">
+  <div class="relative intro z-20">
+    <Intro />
+    <CustomSoftwareDevelopment />
+    <Stories />
+    <Mlink />
     <Customers />
+    <Technology />
+    <Manifest />
   </div>
-  <Technology />
-  <div class="section" id="aboutUs">
-    <Values />
-    <AboutUs />
-    <Job />
+  <div class="parallax__layer--back office-bg z-10" />
+  <div class="bg-white relative z-20">
+    <div class="section" id="aboutUs">
+      <TeamMembers />
+      <Job />
+    </div>
+    <LiveChat />
+    <Footer />
   </div>
-  <LiveChat />
-  <Footer />
 </div>
 
 <style style lang="postcss">
-  #arrow-down {
-    animation-delay: 1500ms;
-    animation-duration: 100ms;
-    animation-name: fadein;
-    animation-fill-mode: forwards;
-    opacity: 0;
+  .parallax {
+    perspective: 1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective-origin-x: 100%;
+    scroll-behavior: smooth;
+  }
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform-origin-x: 100%;
+  }
+  .parallax__layer--base {
+    transform: translateZ(0);
+  }
+  .parallax__layer--back {
+    transform: translateZ(-1px);
   }
 
-  @keyframes fadein {
+  .parallax__layer--back {
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .parallax__layer--deep {
+    transform: translateZ(-2px) scale(3);
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+  }
+
+  .intro {
+    margin-top: calc(100vh - 224px);
+  }
+
+  .header-bg {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    animation-delay: 500ms;
+    animation-duration: 200ms;
+    animation-name: shrink;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes shrink {
     0% {
-      opacity: 0;
+      height: 100vh;
     }
     100% {
-      opacity: 100;
+      height: calc(100vh - 224px);
     }
+  }
+
+  .office-bg {
+    background-position: center center;
+    background-size: cover;
+    height: 50vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+
+    transform-origin-x: 100%;
   }
 </style>
