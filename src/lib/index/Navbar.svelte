@@ -44,7 +44,9 @@
             </svg>
           </button>
         </div>
-        <div class="flex-1 flex items-center ml-16 mr-4 sm:ml-0 sm:mr-0 justify-center sm:items-center sm:justify-start">
+        <div
+          class="flex-1 flex items-center ml-16 mr-4 sm:ml-0 sm:mr-0 justify-center sm:items-center sm:justify-start"
+        >
           <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow sm:hidden" />
           <div class="flex-shrink-0 flex items-center">
             <a href="https://triarc-labs.com"
@@ -73,7 +75,7 @@
         </div>
         <div class="hidden items-center sm:flex">
           <a href="/jobs" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">Jobs</a>
-          <div class='border-r border-gray-300 h-4 mx-4'></div>
+          <div class="border-r border-gray-300 h-4 mx-4" />
           <a href="/mlink" class="font-medium text-green-triarc transition duration-150 ease-in-out">μLink</a>
         </div>
       </div>

@@ -192,33 +192,33 @@
             Kultivierte Grundlagen <span class="text-red-triarc">#Soziokratie</span>
           </p>
           <p class="mt-5 text-lg text-gray-300">
-            Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen.
-            Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert.
-            Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?
+            Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle
+            Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und
+            umgekehrt. Richtig?
           </p>
           <div class="mt-12 grid grid-cols-2 gap-y-12 gap-x-6">
             <div class="col-span-2 md:col-span-1">
               <span class="block text-2xl font-bold text-white">Vom Praktikanten zum Peer</span>
               <span class="mt-1 block text-base text-gray-300">
-                Wir wollen auf Augenhöhe zusammenarbeiten.
-                Darum begleiten dich auf dem Weg zum Peer klar definierte Erwartungen und eine gezielte Förderung.
-                Und das über mehrere Etappen.
+                Wir wollen auf Augenhöhe zusammenarbeiten. Darum begleiten dich auf dem Weg zum Peer klar definierte
+                Erwartungen und eine gezielte Förderung. Und das über mehrere Etappen.
               </span>
             </div>
             <div class="col-span-2 md:col-span-1">
               <span class="block text-2xl font-bold text-white">Transparenz für alle</span>
               <span class="mt-1 block text-base text-gray-300">
-                Alle Löhne werden offen kommuniziert. Für Peers gibt’s aktuell 104k – 136k CHF.
-                Die variablen Komponenten richten sich nach den Quartalszahlen, welche wir im Team besprechen.
+                Alle Löhne werden offen kommuniziert. Für Peers gibt’s aktuell 104k – 136k CHF. Die variablen
+                Komponenten richten sich nach den Quartalszahlen, welche wir im Team besprechen.
               </span>
             </div>
 
             <p class="col-span-2">
               <span class="block text-2xl font-bold text-white">Soziales leisten</span>
               <span class="mt-1 block text-base text-gray-300">
-                Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork:
-                Nichts ist uns fremd. Denn Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig.
-                Auch gut zu wissen: Wer sich beim Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten Einzelzimmer mit Seeblick. #privatversichert...
+                Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork: Nichts ist uns fremd. Denn
+                Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig. Auch gut zu wissen: Wer sich beim
+                Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten
+                Einzelzimmer mit Seeblick. #privatversichert...
               </span>
             </p>
           </div>
@@ -287,17 +287,17 @@
           <p>
             <span class="block text-2xl font-bold text-white">40 Stunden-Woche</span>
             <span class="mt-1 block text-base text-gray-300">
-              Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit.
-              Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.
+              Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien.
+              Pro Jahr, nicht pro Monat.
             </span>
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Technologie</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht.
-              Die richtige suchen und finden wir zusammen. </span
-            >
+              >Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Die richtige suchen und finden
+              wir zusammen.
+            </span>
           </p>
 
           <p>
@@ -315,24 +315,25 @@
           <p>
             <span class="block text-2xl font-bold text-white">Kaffee / Bar</span>
             <span class="mt-1 block text-base text-gray-300">
-              Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf deinen Zugriff.
-              Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken.
-              Und für den Beerenhunger auch mal frische Früchtchen.
+              Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf
+              deinen Zugriff. Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken. Und für den
+              Beerenhunger auch mal frische Früchtchen.
             </span>
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Company Events</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >
-              Team-Kochevents via Teams, Legosteine verbauen (streng nach Anleitung, versteht sich) und in besseren Zeiten auch Ausflüge an Festivals oder eine Reise nach Italien...: Du hast Ideen, wir ein Budget dazu.
+            <span class="mt-1 block text-base text-gray-300">
+              Team-Kochevents via Teams, Legosteine verbauen (streng nach Anleitung, versteht sich) und in besseren
+              Zeiten auch Ausflüge an Festivals oder eine Reise nach Italien...: Du hast Ideen, wir ein Budget dazu.
             </span>
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Office Gym</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse warten Blei und Matten auf Beschäftigung.
+              >Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse
+              warten Blei und Matten auf Beschäftigung.
             </span>
           </p>
         </div>
@@ -382,21 +383,22 @@
           <p>
             <span class="block text-2xl font-bold text-white">Begeisterung</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert dich. </span
-            >
+              >Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert
+              dich.
+            </span>
           </p>
           <p>
             <span class="block text-2xl font-bold text-white">Kommunikativ</span>
             <span class="mt-1 block text-base text-gray-300"
-              >Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen). </span
-            >
+              >Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen).
+            </span>
           </p>
 
           <p>
             <span class="block text-2xl font-bold text-white">Offen</span>
             <span class="mt-1 block text-base text-gray-300">
-              Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen.
-              Du magst Menschen und behandelst sie wie Mitmenschen.
+              Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen. Du magst
+              Menschen und behandelst sie wie Mitmenschen.
             </span>
           </p>
         </div>

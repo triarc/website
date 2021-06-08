@@ -65,16 +65,29 @@
         <div class="mt-8 lg:mt-0">
           <div class="text-base max-w-prose mx-auto lg:max-w-none text-gray-500">
             <p class="mb-4">
-              Es ist 7:57 Uhr. Gähn. Mein Laptop ist in Sekundenschnelle wach. Ich hingegen brauche erst mal einen Kaffee. Ich blinzle um mich: Ich bin im Office. Corona-konform im Homeoffice. Und darum noch im Trainer, Bad Hair Day inklusive.
+              Es ist 7:57 Uhr. Gähn. Mein Laptop ist in Sekundenschnelle wach. Ich hingegen brauche erst mal einen
+              Kaffee. Ich blinzle um mich: Ich bin im Office. Corona-konform im Homeoffice. Und darum noch im Trainer,
+              Bad Hair Day inklusive.
             </p>
             <p class="mb-4">
-              Ich checke im Slack die automatisierten Notify-Channels, die Logs auf dem von mir betreuten System und, ob Merge Requests pendent sind. Und dann, ob ich meine Haare mit Wasser in Form kriege. Alles in Ordnung auf den Systemen. Haare: keine Chance. Ok, Cap bereitlegen oder einfach die Kamera nicht einschalten. Entspannt öffne ich das aktuelle Sprintboard in Gitlab und starte mit einer neuen mir zugewiesenen Story in den Tag.
+              Ich checke im Slack die automatisierten Notify-Channels, die Logs auf dem von mir betreuten System und, ob
+              Merge Requests pendent sind. Und dann, ob ich meine Haare mit Wasser in Form kriege. Alles in Ordnung auf
+              den Systemen. Haare: keine Chance. Ok, Cap bereitlegen oder einfach die Kamera nicht einschalten.
+              Entspannt öffne ich das aktuelle Sprintboard in Gitlab und starte mit einer neuen mir zugewiesenen Story
+              in den Tag.
             </p>
             <p class="mb-4">
-              Um 9:30 Uhr beginnt im Teams das Daily. Das ist unsere Corona-Variante des Treffs an der Kaffeemaschine.  Die «Caps Lock» Taste erinnert mich, mein Haupt zu bedecken: Cap on, Kamera off. Wir machen eine erste Runde, in der jeder das Highlight des gestrigen Tages beschreibt und worauf er/sie sich heute freut und was ihm/ihr heute Sorgen bereitet. Dabei erfahre ich über CORS Probleme, lerne wieder was zu komplexen Helm Charts und über den Umgang mit unzuverlässigen Handwerkern. Und höre, dass Dave heute seinen Waschtag hat.
+              Um 9:30 Uhr beginnt im Teams das Daily. Das ist unsere Corona-Variante des Treffs an der Kaffeemaschine.
+              Die «Caps Lock» Taste erinnert mich, mein Haupt zu bedecken: Cap on, Kamera off. Wir machen eine erste
+              Runde, in der jeder das Highlight des gestrigen Tages beschreibt und worauf er/sie sich heute freut und
+              was ihm/ihr heute Sorgen bereitet. Dabei erfahre ich über CORS Probleme, lerne wieder was zu komplexen
+              Helm Charts und über den Umgang mit unzuverlässigen Handwerkern. Und höre, dass Dave heute seinen Waschtag
+              hat.
             </p>
             <p class="mb-4">
-              Nach dem Daily beginnt meine Projektleiterin Iris das Teamly, das Daily im Projektteam. Jeder berichtet über seine gestrigen Arbeiten sowie den heutigen To do’s. Wir besprechen Unklarheiten und prüfen den zeitlichen Fortschritt. Danach wartet meine Story darauf, fortgesetzt zu werden.
+              Nach dem Daily beginnt meine Projektleiterin Iris das Teamly, das Daily im Projektteam. Jeder berichtet
+              über seine gestrigen Arbeiten sowie den heutigen To do’s. Wir besprechen Unklarheiten und prüfen den
+              zeitlichen Fortschritt. Danach wartet meine Story darauf, fortgesetzt zu werden.
             </p>
             <p class="mb-4">
               Goto – Kleinhirn meldet an Grosshirn, dass es Mittag geworden ist. Ich überprüfe die Küche nach Essbarem.
@@ -107,28 +120,31 @@
         <div class="relative lg:row-start-1 lg:col-start-2 col-span-2">
           <div class="text-base max-w-prose mx-auto lg:max-w-none text-gray-500">
             <p class="mb-4">
-              Zudem ist heute Donnerstag, also steht um 12:30 unser wöchentliches Soziokratie-Meeting an.
-              Thema heute sind die langsamen und unzuverlässigen Gitlab Runners. Das Team diskutiert Alternativen.
-              Es wird entschieden, dass zwei Mitarbeiter je eine Alternative evaluieren und dem Team über die Erfahrungen berichten.
-              An meinem Salat ist eine Spur zu viel Essig.
+              Zudem ist heute Donnerstag, also steht um 12:30 unser wöchentliches Soziokratie-Meeting an. Thema heute
+              sind die langsamen und unzuverlässigen Gitlab Runners. Das Team diskutiert Alternativen. Es wird
+              entschieden, dass zwei Mitarbeiter je eine Alternative evaluieren und dem Team über die Erfahrungen
+              berichten. An meinem Salat ist eine Spur zu viel Essig.
             </p>
             <p class="mb-4">
-              Zwei Espressi später. Mit der Story bin ich durch.
-              Ich erstelle einen Merge Request und frage im Projektchat nach einem Review.
-              Max gibt mir Feedback und schlägt eine Verbesserung vor. Ich bin nicht einverstanden.
-              Also schauen wir es gemeinsam an und kommen zu einer besseren Lösung. Nichts geht über Schwarmintelligenz (danke, Max).
-              Ich merge alles zurück auf den Development Branch und starte von dort aus ein Deployment auf die Testumgebung.
+              Zwei Espressi später. Mit der Story bin ich durch. Ich erstelle einen Merge Request und frage im
+              Projektchat nach einem Review. Max gibt mir Feedback und schlägt eine Verbesserung vor. Ich bin nicht
+              einverstanden. Also schauen wir es gemeinsam an und kommen zu einer besseren Lösung. Nichts geht über
+              Schwarmintelligenz (danke, Max). Ich merge alles zurück auf den Development Branch und starte von dort aus
+              ein Deployment auf die Testumgebung.
             </p>
             <p class="mb-4">
-              Sobald das fertig ist, teste ich die Funktionalität auf einem Endgerät.
-              Alles im Lack, klappt 1a! – Zur Belohnung spendiert mein Kühlschrank sein letztes Stracciatella-Joghurt.
-              Ich schiebe die Story auf dem Gitlab Board weiter zum Testing durch die Projektleitung und beginne mit der nächsten Story.
+              Sobald das fertig ist, teste ich die Funktionalität auf einem Endgerät. Alles im Lack, klappt 1a! – Zur
+              Belohnung spendiert mein Kühlschrank sein letztes Stracciatella-Joghurt. Ich schiebe die Story auf dem
+              Gitlab Board weiter zum Testing durch die Projektleitung und beginne mit der nächsten Story.
             </p>
             <p class="mb-4">
-              Wie ich den Merge Request auch für diese Story abschliesse und per Zufall auf die Uhr schaue, ist es bereits Abend geworden. Feierabend, aus die Maus! Verwende sie zwar nur selten, ich arbeite mit Shortcuts. Den Cap deponiere ich auf der Tastatur, Caps Lock für morgen... Oder vielleicht die neue Strickmütze? Lassen wir’s erst mal morgen werden.
-              Zudem ist es Donnerstag und somit ist um 12:30 Soziokratie-Meeting. Thema heute sind die langsamen und
-              unzuverlässigen Gitlab Runners. Das Team diskutiert Alternativen. Es wird entschieden, dass zwei
-              Mitarbeiter je eine Alternative evaluieren und dem Team über die Erfahrungen berichten.
+              Wie ich den Merge Request auch für diese Story abschliesse und per Zufall auf die Uhr schaue, ist es
+              bereits Abend geworden. Feierabend, aus die Maus! Verwende sie zwar nur selten, ich arbeite mit Shortcuts.
+              Den Cap deponiere ich auf der Tastatur, Caps Lock für morgen... Oder vielleicht die neue Strickmütze?
+              Lassen wir’s erst mal morgen werden. Zudem ist es Donnerstag und somit ist um 12:30 Soziokratie-Meeting.
+              Thema heute sind die langsamen und unzuverlässigen Gitlab Runners. Das Team diskutiert Alternativen. Es
+              wird entschieden, dass zwei Mitarbeiter je eine Alternative evaluieren und dem Team über die Erfahrungen
+              berichten.
             </p>
           </div>
         </div>
