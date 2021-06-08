@@ -152,7 +152,7 @@
     </div>
   </div>
 
-  <div class="relative mt-16 py-16 bg-blue-triarc">
+  <div class="relative mt-16 py-16 bg-blue-triarc px-3">
     <div class="max-w-7xl mx-auto bg-blue-triarc lg:bg-transparent">
       <div class="max-w-md mx-auto">
         <h2 class="text-3xl font-extrabold text-white" id="join-heading">Schliess Dich uns an</h2>
