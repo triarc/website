@@ -14,9 +14,9 @@ npm run dev
 # mLink video convert
 
 ```
-ffmpeg -i Triarc_Labs_Mlink_HD.mp4 -vf scale=320:-1 -c:v libvpx -qmin 0 -qmax 25 -crf 4 -b:v 1M -c:a libvorbis -threads 0 static/video/mlink-320.ebm
-ffmpeg -i Triarc_Labs_Mlink_HD.mp4 -vf scale=720:-1 -c:v libvpx -qmin 0 -qmax 25 -crf 4 -b:v 1M -c:a libvorbis -threads 0 static/video/mlink-720.ebm
-ffmpeg -i Triarc_Labs_Mlink_HD.mp4 -vf scale=1080:-1 -c:v libvpx -qmin 0 -qmax 25 -crf 4 -b:v 1M -c:a libvorbis -threads 0 static/video/mlink-1080.ebm
+ffmpeg -i Triarc_Labs_Mlink_HD.mp4 -vf scale=320:-1 -c:v libvpx -qmin 0 -qmax 25 -crf 4 -b:v 1M -c:a libvorbis -threads 0 static/video/mlink-320.webm
+ffmpeg -i Triarc_Labs_Mlink_HD.mp4 -vf scale=720:-1 -c:v libvpx -qmin 0 -qmax 25 -crf 4 -b:v 1M -c:a libvorbis -threads 0 static/video/mlink-720.webm
+ffmpeg -i Triarc_Labs_Mlink_HD.mp4 -vf scale=1080:-1 -c:v libvpx -qmin 0 -qmax 25 -crf 4 -b:v 1M -c:a libvorbis -threads 0 static/video/mlink-1080.webm
 ```
 
 # mLink video poster generation

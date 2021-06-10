@@ -98,10 +98,18 @@
         />
       </a>
 
-      <a href="http://www.glb.ch/" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale">
+      <a
+        href="http://www.glb.ch/"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+      >
         <img height="80" class="max-h-16" src="/img/customer/glb-logo.svg" loading="lazy" alt="glb" />
       </a>
-      <a href="http://www.ebl.ch/" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale">
+      <a
+        href="http://www.ebl.ch/"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+      >
         <img height="80" class="max-h-16" src="/img/customer/ebl-logo.svg" loading="lazy" alt="ebl" />
       </a>
       <a
@@ -133,7 +141,6 @@
       >
         <img height="80" class="max-h-28" src="/img/customer/schindler-logo.png" loading="lazy" alt="schindler" />
       </a>
-
     </div>
   </div>
 </div>
