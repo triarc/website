@@ -119,7 +119,7 @@
           &copy; {new Date().getFullYear()} triarc laboratories, Ltd. All rights reserved.
         </p>
         <div class="mt-5 flex">
-          <a href="https://ch.linkedin.com/company/triarc-laboratories" target="_blank" class="underline mr-4">
+          <a href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/" target="_blank" class="underline mr-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="currentColor"
