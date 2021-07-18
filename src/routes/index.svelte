@@ -45,8 +45,6 @@
   <title>triarc-labs</title>
 </svelte:head>
 
-<Navbar />
-
 <div class="parallax">
   <video
     style="height: calc(100vh - 64px); width: 100vw; transition: max-height 0.25s ease-out; overflow: hidden; max-height: 100vh"
