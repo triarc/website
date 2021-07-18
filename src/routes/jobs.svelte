@@ -81,8 +81,8 @@
         'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
       claim: 'Operation Engineer',
       img: 'img/jobs/cloud_hosting.svg',
-      alt: 'operation engineer',
       open: false,
+      alt: 'operation engineer',
       responsiblities:
         'sind breit gefächert. Unterstütze das Team in der Infrastruktur unserer vielzähligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Du hilfst im Support von unserem Produkt μLink und arbeitest mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewährleisten.',
       skills: [
@@ -125,7 +125,7 @@
               </p>
               <button class="text-white underline mt-6" on:click={() => toggle(i)}>Mehr erfahren</button>
             </div>
-            <img src={heroSolgan.img} class="w-80 mt-8 mx-12" alt='{heroSolgan.alt}' />
+            <img src={heroSolgan.img} class="w-80 mt-8 mx-12" alt={heroSolgan.alt} />
           </div>
           <div
             id="job-{i}"
@@ -187,7 +187,7 @@
               class="object-cover rounded-3xl"
               srcset="/img/office/triarc_lego-320.jpg 320w, /img/office/triarc_lego-640.jpg 640w, /img/office/triarc_lego-1080.jpg 1080w"
               src="/img/office/triarc_lego-1080.jpg"
-              alt='triarc lego'
+              alt="triarc lego"
             />
           </picture>
         </div>
@@ -249,7 +249,8 @@
           <img
             class="object-cover max-w-1/2 rounded-3xl"
             srcset="/img/office/triarc-flow-320.jpg 320w, /img/office/triarc-flow-640.jpg 640w, /img/office/triarc-flow-1080.jpg 1080w"
-            src="/img/office/triarc-flow-1080.jpg" alt='triarc flow'
+            src="/img/office/triarc-flow-1080.jpg"
+            alt="triarc flow"
           />
         </picture>
       </div>
@@ -276,7 +277,8 @@
           <img
             class="object-cover rounded-3xl"
             srcset="/img/office/bar-320.jpg 320w, /img/office/bar-640.jpg 640w, /img/office/bar-1080.jpg 1080w"
-            src="/img/office/bar-1080.jpg" alt='triarc bar'
+            src="/img/office/bar-1080.jpg"
+            alt="triarc bar"
           />
         </picture>
       </div>
@@ -367,7 +369,8 @@
           <img
             class="object-cover rounded-3xl"
             srcset="/img/office/gym-320.jpg 320w, /img/office/gym-640.jpg 640w, /img/office/gym-1080.jpg 1080w"
-            src="/img/office/gym-1080.jpg" alt='triarc gym'
+            src="/img/office/gym-1080.jpg"
+            alt="triarc gym"
           />
         </picture>
       </div>
@@ -430,7 +433,8 @@
           <img
             class="object-cover rounded-3xl"
             srcset="/img/office/teamcall-320.jpg 320w, /img/office/teamcall-640.jpg 640w, /img/office/teamcall-1080.jpg 1080w"
-            src="/img/office/teamcall-1080.jpg" alt='triarc teamcall'
+            src="/img/office/teamcall-1080.jpg"
+            alt="triarc teamcall"
           />
         </picture>
       </div>

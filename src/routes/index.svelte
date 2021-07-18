@@ -37,7 +37,7 @@
 
   function hideVideo() {
     console.log('hide')
-    document.getElementById('intro-video').style.maxHeight = 0;
+    document.getElementById('intro-video').style.maxHeight = 0
   }
 </script>
 
@@ -45,11 +45,19 @@
   <title>triarc-labs</title>
 </svelte:head>
 
+<Navbar />
 
 <div class="parallax">
-  <video style='height: calc(100vh - 64px); width: 100vw; transition: max-height 0.25s ease-out; overflow: hidden; max-height: 100vh' id='intro-video' autoplay muted class='object-cover' on:ended='{hideVideo}'>
-    <source src='video/intro.mp4' type="video/mp4">
-    <source src='video/intro-1080.webm' type="video/webm">
+  <video
+    style="height: calc(100vh - 64px); width: 100vw; transition: max-height 0.25s ease-out; overflow: hidden; max-height: 100vh"
+    id="intro-video"
+    autoplay
+    muted
+    class="object-cover"
+    on:ended={hideVideo}
+  >
+    <source src="video/intro.mp4" type="video/mp4" />
+    <source src="video/intro-1080.webm" type="video/webm" />
   </video>
 
   <Navbar />

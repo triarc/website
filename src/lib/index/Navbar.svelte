@@ -47,10 +47,16 @@
         <div
           class="flex-1 flex items-center ml-16 mr-4 sm:ml-0 sm:mr-0 justify-center sm:items-center sm:justify-start"
         >
-          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow sm:hidden" alt='triarc laboratories ltd' />
+          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow sm:hidden" alt="triarc laboratories ltd" />
           <div class="flex-shrink-0 flex items-center">
             <a href="https://triarc-labs.com"
-              ><img class="block h-8 w-auto" src="/icons/triarc-logo.svg" height="32" width="53" alt="triarc laboratories logo" /></a
+              ><img
+                class="block h-8 w-auto"
+                src="/icons/triarc-logo.svg"
+                height="32"
+                width="53"
+                alt="triarc laboratories logo"
+              /></a
             >
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -92,4 +98,3 @@
     </div>
   </nav>
 </div>
-

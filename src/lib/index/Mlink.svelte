@@ -18,8 +18,8 @@
       style="height: 100%; width: 100%"
       data-poster="img/thumbnail/mlink-1080-poster.png"
     >
-      <source src="https://storage.googleapis.com/triarc-website/mlink-1080.webm" type="video/webm" />
-      <source src="https://storage.googleapis.com/triarc-website/mlink.mp4" type="video/mp4" />
+      <source src="https://storage.googleapis.com/triarc-website/mlink-1080-v2.webm" type="video/webm" />
+      <source src="https://storage.googleapis.com/triarc-website/mlink-v2.mp4" type="video/mp4" />
     </video>
   </div>
   <div class="relative max-w-7xl mx-auto px-5 py-4 sm:px-6 lg:px-8 md:w-1/2 lg:w-1/2 sm:w-full ">

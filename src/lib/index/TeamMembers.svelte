@@ -57,14 +57,14 @@
       nerdImage: 'img/avatars/mattia.png',
       onlyInNerdMode: false,
     },
-    {
-      name: 'Warwara Panyushkina',
-      job: 'Software Developer',
-      nerdJob: 'Software Developer',
-      image: 'img/avatars/warwara.png',
-      nerdImage: 'img/avatars/warwara.png',
-      onlyInNerdMode: false,
-    },
+    // {
+    //   name: 'Warwara Panyushkina',
+    //   job: 'Software Developer',
+    //   nerdJob: 'Software Developer',
+    //   image: 'img/avatars/warwara.png',
+    //   nerdImage: 'img/avatars/warwara.png',
+    //   onlyInNerdMode: false,
+    // },
     {
       name: 'Andrea Honegger',
       job: 'Software Developer',
