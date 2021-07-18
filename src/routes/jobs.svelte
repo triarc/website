@@ -29,6 +29,7 @@
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. ',
       claim: 'Senior Software Engineer',
       img: 'img/jobs/super_woman.svg',
+      alt: 'senior engineer',
       open: false,
       responsiblities:
         'sind so breit gefächert und abwechslungsreich wie die Arbeit, die dich bei uns erwartet: vom Design bis zur Lösungsfindung ist alles dabei, individuell angepasst auf unsere branchenübergreifenden Kunden. In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung, und wir von deiner. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobile-Anwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
@@ -54,6 +55,7 @@
         'Wir sind Ingenieure: bestausgebildete und praxiserfahrene IT-Fachleute. Wir können, was wir tun. Und tun für unsere Kunden alles, was wir können. Willst du mittun?',
       claim: 'Professional Software Engineer',
       img: 'img/jobs/be_the_hero.svg',
+      alt: 'professional engineer',
       open: false,
       responsiblities:
         'umfassen das ganze Spektrum vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden. Das ist herausfordernd, ja, aber das bringt dich auch weiter. Und du bist nicht allein: In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
@@ -79,6 +81,7 @@
         'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
       claim: 'Operation Engineer',
       img: 'img/jobs/cloud_hosting.svg',
+      alt: 'operation engineer',
       open: false,
       responsiblities:
         'sind breit gefächert. Unterstütze das Team in der Infrastruktur unserer vielzähligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Du hilfst im Support von unserem Produkt μLink und arbeitest mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewährleisten.',
@@ -122,7 +125,7 @@
               </p>
               <button class="text-white underline mt-6" on:click={() => toggle(i)}>Mehr erfahren</button>
             </div>
-            <img src={heroSolgan.img} class="w-80 mt-8 mx-12" />
+            <img src={heroSolgan.img} class="w-80 mt-8 mx-12" alt='{heroSolgan.alt}' />
           </div>
           <div
             id="job-{i}"
@@ -184,6 +187,7 @@
               class="object-cover rounded-3xl"
               srcset="/img/office/triarc_lego-320.jpg 320w, /img/office/triarc_lego-640.jpg 640w, /img/office/triarc_lego-1080.jpg 1080w"
               src="/img/office/triarc_lego-1080.jpg"
+              alt='triarc lego'
             />
           </picture>
         </div>
@@ -245,7 +249,7 @@
           <img
             class="object-cover max-w-1/2 rounded-3xl"
             srcset="/img/office/triarc-flow-320.jpg 320w, /img/office/triarc-flow-640.jpg 640w, /img/office/triarc-flow-1080.jpg 1080w"
-            src="/img/office/triarc-flow-1080.jpg"
+            src="/img/office/triarc-flow-1080.jpg" alt='triarc flow'
           />
         </picture>
       </div>
@@ -272,7 +276,7 @@
           <img
             class="object-cover rounded-3xl"
             srcset="/img/office/bar-320.jpg 320w, /img/office/bar-640.jpg 640w, /img/office/bar-1080.jpg 1080w"
-            src="/img/office/bar-1080.jpg"
+            src="/img/office/bar-1080.jpg" alt='triarc bar'
           />
         </picture>
       </div>
@@ -363,7 +367,7 @@
           <img
             class="object-cover rounded-3xl"
             srcset="/img/office/gym-320.jpg 320w, /img/office/gym-640.jpg 640w, /img/office/gym-1080.jpg 1080w"
-            src="/img/office/gym-1080.jpg"
+            src="/img/office/gym-1080.jpg" alt='triarc gym'
           />
         </picture>
       </div>
@@ -426,7 +430,7 @@
           <img
             class="object-cover rounded-3xl"
             srcset="/img/office/teamcall-320.jpg 320w, /img/office/teamcall-640.jpg 640w, /img/office/teamcall-1080.jpg 1080w"
-            src="/img/office/teamcall-1080.jpg"
+            src="/img/office/teamcall-1080.jpg" alt='triarc teamcall'
           />
         </picture>
       </div>

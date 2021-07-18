@@ -34,17 +34,25 @@
       ].join(';')
     )
   })
+
+  function hideVideo() {
+    console.log('hide')
+    document.getElementById('intro-video').style.maxHeight = 0;
+  }
 </script>
 
 <svelte:head>
   <title>triarc-labs</title>
 </svelte:head>
 
-<Navbar />
 
 <div class="parallax">
-  <div class="parallax__layer parallax__layer--back header-bg z-10" />
+  <video style='height: calc(100vh - 64px); width: 100vw; transition: max-height 0.25s ease-out; overflow: hidden; max-height: 100vh' id='intro-video' autoplay muted class='object-cover' on:ended='{hideVideo}'>
+    <source src='video/intro.mp4' type="video/mp4">
+    <source src='video/intro-1080.webm' type="video/webm">
+  </video>
 
+  <Navbar />
   <div class="relative intro z-20">
     <Intro />
     <CustomSoftwareDevelopment />
@@ -74,58 +82,12 @@
     perspective-origin-x: 100%;
     scroll-behavior: smooth;
   }
-  .parallax__layer {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    transform-origin-x: 100%;
-  }
-  .parallax__layer--base {
-    transform: translateZ(0);
-  }
   .parallax__layer--back {
     transform: translateZ(-1px);
   }
 
   .parallax__layer--back {
     transform: translateZ(-1px) scale(2);
-  }
-
-  .parallax__layer--deep {
-    transform: translateZ(-2px) scale(3);
-  }
-
-  .parallax__group {
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
-  }
-
-  .intro {
-    margin-top: calc(100vh - 224px);
-  }
-
-  .header-bg {
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    animation-delay: 500ms;
-    animation-duration: 200ms;
-    animation-name: shrink;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes shrink {
-    0% {
-      height: 100vh;
-    }
-    100% {
-      height: calc(100vh - 224px);
-    }
   }
 
   .office-bg {

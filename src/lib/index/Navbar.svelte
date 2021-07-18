@@ -8,7 +8,7 @@
   }
 </script>
 
-<div class="z-20 fixed -top-16 w-full bg-white" id="navbar">
+<div class="w-full sticky z-30 top-0 bg-white" id="navbar">
   <nav class="relative max-w-screen-xl mx-auto">
     <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
@@ -47,10 +47,10 @@
         <div
           class="flex-1 flex items-center ml-16 mr-4 sm:ml-0 sm:mr-0 justify-center sm:items-center sm:justify-start"
         >
-          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow sm:hidden" />
+          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow sm:hidden" alt='triarc laboratories ltd' />
           <div class="flex-shrink-0 flex items-center">
             <a href="https://triarc-labs.com"
-              ><img class="block h-8 w-auto" src="/icons/triarc-logo.svg" height="32" width="53" alt="Triarc Logo" /></a
+              ><img class="block h-8 w-auto" src="/icons/triarc-logo.svg" height="32" width="53" alt="triarc laboratories logo" /></a
             >
           </div>
           <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
@@ -93,11 +93,3 @@
   </nav>
 </div>
 
-<style style lang="postcss">
-  #navbar {
-    transition-property: transform;
-    transition: 1.5s ease-in-out;
-    transition-delay: 500ms;
-    transform: translateY(64px);
-  }
-</style>

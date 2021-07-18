@@ -128,14 +128,3 @@
   </div>
 </div>
 
-<style style lang="postcss">
-  .grayscale {
-    filter: grayscale(100%);
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-    transition-property: filter;
-  }
-  .grayscale:hover {
-    filter: none;
-  }
-</style>

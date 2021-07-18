@@ -254,8 +254,8 @@
     transform: rotateY(180deg);
     transition: transform 0.3s;
   }
-  .front-card,
-  .back-card {
+  .front-card
+  /*.back-card*/ {
     position: absolute;
     display: flex;
     align-items: center;
@@ -264,7 +264,7 @@
     width: 100%;
     backface-visibility: hidden;
   }
-  .back-card {
-    transform: rotateY(180deg);
-  }
+  /*.back-card {*/
+  /*  transform: rotateY(180deg);*/
+  /*}*/
 </style>
