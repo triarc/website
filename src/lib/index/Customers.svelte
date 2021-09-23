@@ -5,49 +5,49 @@
       <a
         href="https://walo.ch"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-16" src="/img/customer/walo-logo.svg" loading="lazy" alt="walo" />
       </a>
       <a
         href="https://www.kibag.ch"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-20" src="/img/customer/kibag-logo.svg" loading="lazy" alt="kibag" />
       </a>
       <a
         href="https://riwax.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-20" src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
       </a>
       <a
         href="https://switzerland.rhomberg-sersa.com"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-14" src="/img/customer/sersa-logo.svg" loading="lazy" alt="sersa" />
       </a>
       <a
         href="https://www.enzler.com/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/enzler-logo.png" loading="lazy" alt="enzler" />
       </a>
       <a
         href="https://www.ortho-team.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/ortho-team-logo.svg" loading="lazy" alt="ortho-team" />
       </a>
       <!--            volvo, schindler, espace, srf, helsana  -->
 
       <a href="https://www.tanne.ch/" class="col-span-1 flex items-center justify-center py-8 px-8 ">
-        <picture class="max-h-12 filter grayscale">
+        <picture class="max-h-12 filter">
           <source type="image/webp" srcset="/img/customer/tanne-logo.webp" alt="tanne" />
           <img height="80" class="max-h-20" src="/img/customer/tanne-logo.png" loading="lazy" alt="tanne" />
         </picture>
@@ -57,7 +57,7 @@
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 "
       >
-        <picture class="max-h-12 filter grayscale">
+        <picture class="max-h-12 filter">
           <source type="image/webp" srcset="/img/customer/idee-sport-logo.webp" alt="idee-sport" />
           <img height="80" class="max-h-14" src="/img/customer/idee-sport-logo.jpg" loading="lazy" alt="idee-sport" />
         </picture>
@@ -65,7 +65,7 @@
       <a
         href="https://www.bechterew.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/svmb-logo.svg" loading="lazy" alt="svmb" />
       </a>
@@ -73,25 +73,25 @@
       <a
         href="https://www.srf.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/srf-logo.svg" loading="lazy" alt="srf" />
       </a>
       <a
         href="https://www.helsana.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-6" src="/img/customer/helsana-logo.svg" loading="lazy" alt="helsana" />
       </a>
       <a
         href="https://www.wettstein.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img
           height="80"
-          class="max-h-16 filter invert	"
+          class="max-h-16 filter invert"
           src="/img/customer/wettstein-logo.png"
           loading="lazy"
           alt="wettstein"
@@ -101,21 +101,21 @@
       <a
         href="http://www.glb.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-16" src="/img/customer/glb-logo.svg" loading="lazy" alt="glb" />
       </a>
       <a
         href="http://www.ebl.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-16" src="/img/customer/ebl-logo.svg" loading="lazy" alt="ebl" />
       </a>
       <a
         href="https://www.dorean.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/dorean-logo.svg" loading="lazy" alt="dorean" />
       </a>
@@ -123,21 +123,21 @@
       <a
         href="https://www.volvotrucks.com/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-24" src="/img/customer/volvo-logo.png" loading="lazy" alt="volvo" />
       </a>
       <a
         href="https://espacereal.ch/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/espace-logo.svg" loading="lazy" alt="espace" />
       </a>
       <a
         href="https://www.schindler.com/"
         target="_blank"
-        class="col-span-1 flex items-center justify-center py-8 px-8 filter grayscale"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-28" src="/img/customer/schindler-logo.png" loading="lazy" alt="schindler" />
       </a>
