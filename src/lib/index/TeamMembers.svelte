@@ -113,6 +113,14 @@
       nerdImage: 'img/avatars/eduan.png',
       onlyInNerdMode: false,
     },
+    {
+      name: 'Christopher Thonfeld-Guckes',
+      job: 'Nearshore Developer',
+      nerdJob: 'Technowizard',
+      image: 'img/avatars/chris.png',
+      nerdImage: 'img/avatars/chris.png',
+      onlyInNerdMode: false,
+    },
     // {
     //   name: 'Sandra Vieira da Silva Lopes',
     //   job: 'Facility Manager',
