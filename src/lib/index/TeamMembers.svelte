@@ -113,6 +113,14 @@
       nerdImage: 'img/avatars/eduan.png',
       onlyInNerdMode: false,
     },
+    {
+      name: 'Michel Gabriel',
+      job: 'Software Developer',
+      nerdJob: 'Software Developer',
+      image: 'img/avatars/michel.png',
+      nerdImage: 'img/avatars/michel.png',
+      onlyInNerdMode: false,
+    },
     // {
     //   name: 'Sandra Vieira da Silva Lopes',
     //   job: 'Facility Manager',
