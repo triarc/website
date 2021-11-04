@@ -85,7 +85,7 @@
         <img height="80" class="max-h-6" src="/img/customer/helsana-logo.svg" loading="lazy" alt="helsana" />
       </a>
       <a
-        href="https://www.wettstein.ch/"
+        href="http://www.wwag.ch/"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
