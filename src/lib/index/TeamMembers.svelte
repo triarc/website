@@ -121,6 +121,14 @@
       nerdImage: 'img/avatars/michel.png',
       onlyInNerdMode: false,
     },
+    {
+      name: 'Luka Kramer',
+      job: 'Software Developer',
+      nerdJob: 'Software Developer',
+      image: 'img/avatars/luka.png',
+      nerdImage: 'img/avatars/luka.png',
+      onlyInNerdMode: false,
+    },
     // {
     //   name: 'Sandra Vieira da Silva Lopes',
     //   job: 'Facility Manager',
