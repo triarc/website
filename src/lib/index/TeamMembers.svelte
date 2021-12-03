@@ -65,14 +65,14 @@
     //   nerdImage: 'img/avatars/warwara.png',
     //   onlyInNerdMode: false,
     // },
-    {
-      name: 'Andrea Honegger',
-      job: 'Software Developer',
-      nerdJob: 'Software Developer',
-      image: 'img/avatars/andrea.png',
-      nerdImage: 'img/avatars/andrea.png',
-      onlyInNerdMode: false,
-    },
+    // {
+    //   name: 'Andrea Honegger',
+    //   job: 'Software Developer',
+    //   nerdJob: 'Software Developer',
+    //   image: 'img/avatars/andrea.png',
+    //   nerdImage: 'img/avatars/andrea.png',
+    //   onlyInNerdMode: false,
+    // },
     {
       name: 'Iris Zenegaglia',
       job: 'Project Lead',
@@ -127,6 +127,14 @@
       nerdJob: 'Software Developer',
       image: 'img/avatars/luka.png',
       nerdImage: 'img/avatars/luka.png',
+      onlyInNerdMode: false,
+    },
+    {
+      name: 'Chris Thonfeld',
+      job: 'Nearshore Developer',
+      nerdJob: 'Software Developer',
+      image: 'img/avatars/chris.png',
+      nerdImage: 'img/avatars/chris.png',
       onlyInNerdMode: false,
     },
     // {
