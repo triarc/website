@@ -137,6 +137,14 @@
       nerdImage: 'img/avatars/chris.png',
       onlyInNerdMode: false,
     },
+    {
+      name: 'Lars Hornbaker',
+      job: 'Software Developer',
+      nerdJob: 'Software Developer',
+      image: 'img/avatars/lars.png',
+      nerdImage: 'img/avatars/lars.png',
+      onlyInNerdMode: false,
+    },
     // {
     //   name: 'Sandra Vieira da Silva Lopes',
     //   job: 'Facility Manager',
