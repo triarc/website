@@ -1,3 +1,3 @@
 <svelte:head>
-  <title>triarc-labs - Porta</title>
+  <title>Porta - triarc-labs</title>
 </svelte:head>
