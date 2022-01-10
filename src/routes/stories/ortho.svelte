@@ -1,3 +1,3 @@
 <svelte:head>
-  <title>triarc-labs - Ortho</title>
+  <title>Ortho - triarc-labs</title>
 </svelte:head>

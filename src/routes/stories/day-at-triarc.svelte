@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>triarc-labs - Day @ triarc</title>
+  <title>Day at triarc - triarc-labs</title>
 </svelte:head>
 
 <div class="bg-white h-screen relative">

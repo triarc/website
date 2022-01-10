@@ -96,7 +96,7 @@
 </script>
 
 <svelte:head>
-  <title>triarc-labs - Jobs</title>
+  <title>Jobs - triarc-labs</title>
 </svelte:head>
 
 <div class="bg-gray-800 h-screen relative">
