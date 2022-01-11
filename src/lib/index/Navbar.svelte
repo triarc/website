@@ -10,9 +10,9 @@
 
 <div class="z-20 fixed -top-16 w-full bg-white" id="navbar">
   <nav class="relative max-w-screen-xl mx-auto">
-    <div class="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-2 lg:px-6 lg:px-8">
       <div class="relative flex justify-between h-16">
-        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+        <div class="absolute inset-y-0 left-0 flex items-center lg:hidden">
           <!-- Mobile menu button -->
           <button
             on:click={handleMobileIconClick}
@@ -45,15 +45,15 @@
           </button>
         </div>
         <div
-          class="flex-1 flex items-center ml-16 mr-4 sm:ml-0 sm:mr-0 justify-center sm:items-center sm:justify-start"
+          class="flex-1 flex items-center ml-16 mr-4 lg:ml-0 lg:mr-0 justify-center lg:items-center lg:justify-start"
         >
-          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow sm:hidden" />
+          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow lg:hidden" />
           <div class="flex-shrink-0 flex items-center">
             <a href="https://triarc-labs.com"
               ><img class="block h-8 w-auto" src="/icons/triarc-logo.svg" height="32" width="53" alt="Triarc Logo" /></a
             >
           </div>
-          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+          <div class="hidden lg:ml-6 lg:flex lg:space-x-8 lg:items-center">
             <a
               href="#services"
               class="font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
@@ -71,9 +71,13 @@
               href="#aboutUs"
               class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Über uns</a
             >
+            <a
+              href="#customers"
+              class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Einige unserer Kunden</a
+            >
           </div>
         </div>
-        <div class="hidden items-center sm:flex">
+        <div class="hidden items-center lg:flex">
           <a href="/jobs" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">Jobs</a>
           <div class="border-r border-gray-300 h-4 mx-4" />
           <a href="/mlink" class="font-medium text-green-triarc transition duration-150 ease-in-out">μLink</a>
@@ -86,6 +90,7 @@
         <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Stories</a>
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
+        <a href="#customers" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Einige unserer Kunden</a>
         <a href="/jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
         <a href="/mlink" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">μLink</a>
       </div>
