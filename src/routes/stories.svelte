@@ -35,10 +35,10 @@
       <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>
           <h2 class="text-base text-blue-triarc font-semibold tracking-wide uppercase">
-            Triarc Labs: Success Story Ortho-Team
+            triarc-labs: Success Story Ortho-Team
           </h2>
           <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-            «Die Zusammenarbeit mit Triarc ist für uns nicht mehr wegzudenken.»
+            «Die Zusammenarbeit mit triarc-labs ist für uns nicht mehr wegzudenken.»
           </h3>
         </div>
       </div>
@@ -236,7 +236,7 @@
                 «Während des ganzen Prozesses steht für triarc-labs immer im Fokus, dem Kunden innovativen Mehrwert zu
                 bieten, von ‘Ideation to Production’»
               </p>
-              <p class="py-2 italic text-sm">Serge Müller, CEO und Partner triarc-labs</p>
+              <p class="py-2 italic text-sm">Serge Müller, CEO und Partner von triarc-labs</p>
             </blockquote>
           </div>
         </div>
