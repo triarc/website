@@ -115,7 +115,7 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="mt-3">
-              <div class="flex items-center space-x-3" on:click={() => chat('elke')}>
+              <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/elke.png" alt="elke" />
                 </div>
@@ -123,7 +123,7 @@
                   <div class="text-base font-medium text-gray-700">Elke Engel</div>
                   <div class="font-light text-gray-500">Project Lead</div>
                 </div>
-                <div class="flex items-center text-gray-500 border-gray-500 border-l px-4 cursor-pointer">
+                <div class="flex items-center text-gray-500 border-gray-500 border-l pl-4 pr-2 cursor-pointer" on:click={() => chat('elke')}>
                   <svg
                     aria-hidden="true"
                     focusable="false"
@@ -141,6 +141,11 @@
                     />
                   </svg>
                   <span class="ml-2">Chat</span>
+                </div>
+                <div class="flex items-center text-gray-500 border-gray-500 border-l h-full px-4 cursor-pointer">
+                  <a href="/stories">
+                    <span class="">Success Story</span>
+                  </a>
                 </div>
               </div>
             </footer>
