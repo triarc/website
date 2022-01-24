@@ -110,6 +110,11 @@
               Spezialisten während des gesamten Kundenprozesses unterstützt – von der vereinfachten Auftragseröffnung
               und der Bearbeitung über die Begleitung des Kunden bis hin zum digitalisierten Bestellwesen.
             </p>
+            <div class="flex pt-4  text-lg text-gray-700 cursor-pointer">
+              <a href="/stories" class="flex items-center">
+                <span class="pr-4 underline">Lesen Sie mehr dazu in unserer Success Story</span>
+              </a>
+            </div>
           </div>
         </div>
         <div class="mt-4 pt-4">
@@ -141,11 +146,6 @@
                     />
                   </svg>
                   <span class="ml-2">Chat</span>
-                </div>
-                <div class="flex items-center text-gray-500 border-gray-500 border-l h-full px-4 cursor-pointer">
-                  <a href="/stories">
-                    <span class="">Success Story</span>
-                  </a>
                 </div>
               </div>
             </footer>
