@@ -128,7 +128,10 @@
                   <div class="text-base font-medium text-gray-700">Elke Engel</div>
                   <div class="font-light text-gray-500">Project Lead</div>
                 </div>
-                <div class="flex items-center text-gray-500 border-gray-500 border-l pl-4 pr-2 cursor-pointer" on:click={() => chat('elke')}>
+                <div
+                  class="flex items-center text-gray-500 border-gray-500 border-l pl-4 pr-2 cursor-pointer"
+                  on:click={() => chat('elke')}
+                >
                   <svg
                     aria-hidden="true"
                     focusable="false"
