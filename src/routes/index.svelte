@@ -2,7 +2,6 @@
   import Navbar from '../lib/index/Navbar.svelte'
   import Intro from '../lib/index/Intro.svelte'
   import CustomSoftwareDevelopment from '../lib/index/CustomSoftwareDevelopment.svelte'
-  import Stories from '../lib/index/Stories.svelte'
   import Mlink from '../lib/index/Mlink.svelte'
   import Customers from '../lib/index/Customers.svelte'
   import Manifest from '../lib/index/Manifest.svelte'
@@ -12,6 +11,7 @@
   import LiveChat from '../lib/index/LiveChat.svelte'
   import Footer from '../lib/components/Footer.svelte'
   import { onMount } from 'svelte'
+  import References from '$lib/index/References.svelte'
 
   onMount(() => {
     const messages = {
@@ -48,7 +48,7 @@
   <div class="relative intro z-20">
     <Intro />
     <CustomSoftwareDevelopment />
-    <Stories />
+    <References />
     <Mlink />
     <Customers />
     <Technology />

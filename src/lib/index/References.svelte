@@ -12,7 +12,9 @@
 <div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">
   <div class="relative max-w-7xl mx-auto">
     <div class="text-center">
-      <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">Stories</h2>
+      <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
+        Referenzen
+      </h2>
     </div>
   </div>
 </div>
@@ -85,7 +87,7 @@
         <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
           <img
             class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-            src="img/stories/tanne-app.png"
+            src="img/references/tanne-app.png"
             alt="tanne app"
           />
         </div>
@@ -149,7 +151,7 @@
         <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
           <img
             class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"
-            src="img/stories/wunder-app.png"
+            src="img/references/wunder-app.png"
             alt="tanne app"
           />
         </div>
@@ -213,7 +215,7 @@
         <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
           <img
             class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none"
-            src="img/stories/svmb.png"
+            src="img/references/svmb.png"
             alt="verba"
           />
         </div>
@@ -257,7 +259,7 @@
   <!--        <div class="pr-4 -ml-48 sm:pr-6 md:-ml-16 lg:px-0 lg:m-0 lg:relative lg:h-full">-->
   <!--          <img-->
   <!--            class="w-full rounded-xl shadow-xl ring-1 ring-black ring-opacity-5 lg:absolute lg:right-0 lg:h-full lg:w-auto lg:max-w-none"-->
-  <!--            src="img/stories/walo-app.png"-->
+  <!--            src="img/references/walo-app.png"-->
   <!--            alt="mywalo"-->
   <!--          />-->
   <!--        </div>-->

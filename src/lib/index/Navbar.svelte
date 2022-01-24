@@ -61,7 +61,8 @@
             >
             <a
               href="#projects"
-              class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Stories</a
+              class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out"
+              >Referenzen</a
             >
             <a
               href="#product"
@@ -78,21 +79,24 @@
           </div>
         </div>
         <div class="hidden items-center lg:flex">
-          <a href="/jobs" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">Jobs</a>
+          <a href="/stories" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">Stories</a>
           <div class="border-r border-gray-300 h-4 mx-4" />
           <a href="/mlink" class="font-medium text-green-triarc transition duration-150 ease-in-out">μLink</a>
+          <div class="border-r border-gray-300 h-4 mx-4" />
+          <a href="/jobs" class="font-medium text-blue-triarc transition duration-150 ease-in-out">Jobs</a>
         </div>
       </div>
     </div>
     <div class={`${isMobileMenuOpen ? 'block' : 'hidden'} bg-white h-screen`} id="mobile-menu">
       <div class="pt-2 pb-4 space-y-1 px-4" on:click={closeMenu}>
         <a href="#services" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Dienstleistungen</a>
-        <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Stories</a>
+        <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Referenzen</a>
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#customers" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Kunden</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
-        <a href="/jobs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Jobs</a>
-        <a href="/mlink" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">μLink</a>
+        <a href="/stories" class="text-red-triarc block pr-4 py-2 border-b text-base font-medium">Stories</a>
+        <a href="/mlink" class="text-green-triarc block pr-4 py-2 border-b text-base font-medium">μLink</a>
+        <a href="/jobs" class="text-blue-triarc block pr-4 py-2 border-b text-base font-medium">Jobs</a>
       </div>
     </div>
   </nav>
