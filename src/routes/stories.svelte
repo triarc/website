@@ -31,12 +31,10 @@
 <div class="bg-gray-900 h-screen relative">
   <Header>Stories</Header>
   <div class="bg-white overflow-hidden mt-16 md:mt-32">
-    <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+    <div class="relative max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>
-          <h2 class="text-base text-blue-triarc font-semibold tracking-wide uppercase">
-            triarc-labs: Success Story Ortho-Team
-          </h2>
+          <h2 class="text-base text-blue-triarc font-semibold tracking-wide">triarc-labs: Success Story ORTHO-TEAM</h2>
           <h3 class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
             «Die Zusammenarbeit mit triarc-labs ist für uns nicht mehr wegzudenken.»
           </h3>
