@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-  <title>Custom Softwareentwicklung - triarc-labs</title>
+  <title>Custom Softwareentwicklung - triarc-labs - Schweiz</title>
 </svelte:head>
 
 <Navbar />

@@ -174,7 +174,7 @@
           <div class="flex">
             <div class="bg-gray-300 w-6 h-auto rounded-full my-1" />
             <p class="pl-4 text-gray-900 leading-7 italic">
-              Die digitale Kundenbegleiterin, gelöst als mobil einsetzbare Applikation zur Erstellung der Anamese,
+              Die digitale Kundenbegleiterin, gelöst als mobil einsetzbare Applikation zur Erstellung der Anamnese,
               Analyse bis hin zur fallbezogenen und interdisziplinären Kommunikation. Damit stellt OrthoClient eine
               effiziente Auftragsabwicklung sowie einen exzellenten Kundenservice sicher.
             </p>
