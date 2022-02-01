@@ -4,7 +4,7 @@
       content:
         'Wir sind Ingenieure. Bestausgebildete und praxiserfahrene IT-Fachleute, die können, was sie tun. Und für Sie alles tun, was sie können.',
       color: 'bg-red-triarc',
-      linkText: 'mehr erfahren',
+      linkText: 'Digital Evolutionaries',
       href: '#aboutUs',
       claim: 'Ihre Manufaktur für digitale Innovation.',
       img: 'img/intro/content_team.svg',
@@ -13,7 +13,7 @@
       content:
         'Wir entwickeln und implementieren Software-Lösungen für KMU, Behörden und Institutionen. Wir hauchen ihrer Vision digitales Leben ein. Wir weisen Geschäftsmodellen den Weg in die Zukunft. Und schaffen so nicht selten auch neue.  \n',
       color: 'bg-green-triarc',
-      linkText: 'mehr erfahren',
+      linkText: 'Custom Softwareentwicklung',
       href: '#services',
       claim: 'Wir machen mehr aus dem, was heute ist:<br/>Das, was morgen sein wird.',
       img: 'img/intro/mobile_wireframe.svg',
@@ -22,7 +22,7 @@
       content:
         'Wir geben uns nicht mit dem zufrieden, was es schon gibt. Wir überzeugen mit dem, was es braucht – und das ist nicht immer dasselbe. Unsere Kunden wissen das zu schätzen.',
       color: 'bg-blue-triarc',
-      linkText: 'mehr erfahren',
+      linkText: 'Technology Stack',
       href: '#technology',
       claim: 'Wir tun gut daran, nicht mit der Zeit zu gehen.<br/>Sondern ihr voraus.',
       img: 'img/intro/science.svg',
@@ -31,7 +31,7 @@
       content:
         'Uns gefällt nicht, dass Kunden im Mittelpunkt stehen. Mittelpunkt ist gut. Stehen ist zu statisch in einer Zeit, die sich laufend verändert. Wir können unsere Kunden in Bewegung versetzen – und sie mit unseren Lösungen digital transformiert in Bewegung halten.',
       color: 'bg-yellow-triarc',
-      linkText: 'mehr erfahren',
+      linkText: 'Kundenportfolio',
       href: '#projects',
       claim: 'Wir können nicht alles,<br/>aber gewisse Dinge besser.<br/>Das sagen nicht wir, sondern unsere Kunden.',
       img: 'img/intro/awards.svg',

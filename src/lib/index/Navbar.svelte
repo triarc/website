@@ -76,6 +76,7 @@
               href="#aboutUs"
               class="ml-8 font-medium text-gray-500 hover:text-gray-900 transition duration-150 ease-in-out">Über uns</a
             >
+            <a href="#live-chat" class="bg-red-triarc text-white rounded-md py-2 px-4 cursor-pointer">Kontakt</a>
           </div>
         </div>
         <div class="hidden items-center lg:flex">
@@ -94,6 +95,7 @@
         <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#customers" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Kunden</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
+        <a href="#live-chat" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Kontakt</a>
         <a href="/stories" class="text-red-triarc block pr-4 py-2 border-b text-base font-medium">Stories</a>
         <a href="/mlink" class="text-green-triarc block pr-4 py-2 border-b text-base font-medium">μLink</a>
         <a href="/jobs" class="text-blue-triarc block pr-4 py-2 border-b text-base font-medium">Jobs</a>
