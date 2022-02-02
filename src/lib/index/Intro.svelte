@@ -32,7 +32,7 @@
         'Uns gefällt nicht, dass Kunden im Mittelpunkt stehen. Mittelpunkt ist gut. Stehen ist zu statisch in einer Zeit, die sich laufend verändert. Wir können unsere Kunden in Bewegung versetzen – und sie mit unseren Lösungen digital transformiert in Bewegung halten.',
       color: 'bg-yellow-triarc',
       linkText: 'Kundenportfolio',
-      href: '#projects',
+      href: '#customers',
       claim: 'Wir können nicht alles,<br/>aber gewisse Dinge besser.<br/>Das sagen nicht wir, sondern unsere Kunden.',
       img: 'img/intro/awards.svg',
     },

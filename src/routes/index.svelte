@@ -49,7 +49,6 @@
     <Intro />
     <CustomSoftwareDevelopment />
     <References />
-    <Mlink />
     <Customers />
     <Technology />
     <Manifest />
