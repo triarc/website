@@ -131,7 +131,7 @@
     </div>
   </div>
 
-  <div class='bg-gray-900'>
+  <div class="bg-gray-900">
     <div class="pb-24 md:pb-48 md:pt-24 flex flex-col sm:relative lg:max-w-7xl lg:mx-auto sm:px:10" id="product">
       <h2 class="text-3xl my-8 mx-auto font-extrabold tracking-tight text-gray-100">μLink der Kommunikationshub</h2>
       <div class="z-10 lg:relative  sm:w-full rounded-xl overflow-hidden">
