@@ -9,8 +9,8 @@
   })
 </script>
 
-<div class="bg-green-triarc pb-24 md:pt-24 md:flex lg:flex sm:relative sm:px:10" id="product">
-  <div class="bg-green-triarc z-10 lg:relative md:left-0 md:pl-8 md:w-1/2 lg:w-1/2 sm:w-full">
+<div class="pb-24 md:pt-24 md:flex lg:flex sm:relative sm:px:10" id="product">
+  <div class=" z-10 lg:relative md:left-0 md:pl-8 md:w-1/2 lg:w-1/2 sm:w-full">
     <video
       id="player"
       playsinline
@@ -24,9 +24,9 @@
   </div>
   <div class="relative max-w-7xl mx-auto px-5 py-4 sm:px-6 lg:px-8 md:w-1/2 lg:w-1/2 sm:w-full ">
     <div class="md:ml-auto">
-      <h2 class="text-base font-semibold uppercase tracking-wider text-gray-300">Der Kommunikationshub</h2>
+      <h2 class="text-base font-semibold uppercase tracking-wider text-gray-900">Der Kommunikationshub</h2>
       <p class="mt-2 text-white text-3xl font-extrabold tracking-tight sm:text-4xl">μLink</p>
-      <p class="mt-3 text-lg text-gray-100">
+      <p class="mt-3 text-lg text-gray-500">
         μLink ermöglicht die Kommunikation zwischen verschiedensten Applikationen / Systemen in Echtzeit. Es erlaubt
         fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen
         Systemen identisch und in Echtzeit verfügbar sind. Dabei sind Ausfallsicherheit und Datenschutz eine

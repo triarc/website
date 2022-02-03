@@ -66,7 +66,7 @@
           id="chat-message"
           type="text"
           name="chat"
-          placeholder="Type something here"
+          placeholder="Sprich mit uns über dein nächstes Projekt!"
           on:keyup={onKeyUp}
           class="px-4 py-4 sm:px-6 block w-full sm:text-sm rounded-md focus:outline-none"
         />

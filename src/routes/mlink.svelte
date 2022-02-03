@@ -2,6 +2,8 @@
   import Header from '../lib/components/Header.svelte'
   import Footer from '../lib/components/Footer.svelte'
   import ImageSections from '../lib/components/ImageSections.svelte'
+  import Mlink from '$lib/index/Mlink.svelte'
+  import { onMount } from 'svelte'
 
   let bulletPoints = [
     'Der neu eintretende Mitarbeiter kann am selben Tag seine Zeit korrekt und vor allem digital erfassen.',
@@ -59,6 +61,13 @@
       imageAlt: 'security',
     },
   ]
+
+  onMount(async () => {
+    const Plyr = await import('plyr')
+    const player = new Plyr.default('#player', {
+      controls: ['play-large', 'play', 'progress', 'mute', 'volume', 'fullscreen'],
+    })
+  })
 </script>
 
 <svelte:head>
@@ -66,7 +75,7 @@
 </svelte:head>
 
 <div class="bg-gray-900 h-screen relative">
-  <Header>μlink</Header>
+  <Header>Produkte</Header>
 
   <div class="relative bg-gray-900">
     <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
@@ -95,7 +104,6 @@
       </div>
     </div>
   </div>
-
   <div class="relative">
     <div class="relative bg-gray-900">
       <div
@@ -123,6 +131,23 @@
     </div>
   </div>
 
+  <div class="bg-gray-900">
+    <div class="pb-24 md:pb-48 md:pt-24 flex flex-col sm:relative lg:max-w-7xl lg:mx-auto sm:px:10" id="product">
+      <h2 class="text-3xl my-8 mx-auto font-extrabold tracking-tight text-gray-100">μLink der Kommunikationshub</h2>
+      <div class="z-10 lg:relative  sm:w-full rounded-xl overflow-hidden">
+        <video
+          id="player"
+          playsinline
+          controls
+          style="height: 100%; width: 100%;"
+          data-poster="img/thumbnail/mlink-1080-poster.png"
+        >
+          <source src="https://storage.googleapis.com/triarc-website/mlink-1080-v2.webm" type="video/webm" />
+          <source src="https://storage.googleapis.com/triarc-website/mlink-v2.mp4" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
   <ImageSections bind:sections />
 
   <!-- Price -->

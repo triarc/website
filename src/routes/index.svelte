@@ -37,7 +37,7 @@
 </script>
 
 <svelte:head>
-  <title>Custom Softwareentwicklung - triarc-labs</title>
+  <title>Custom Softwareentwicklung Schweiz</title>
 </svelte:head>
 
 <Navbar />
@@ -49,7 +49,6 @@
     <Intro />
     <CustomSoftwareDevelopment />
     <References />
-    <Mlink />
     <Customers />
     <Technology />
     <Manifest />
