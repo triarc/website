@@ -92,9 +92,9 @@
       <div class="pt-2 pb-4 space-y-1 px-4" on:click={closeMenu}>
         <a href="#services" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Dienstleistungen</a>
         <a href="#projects" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Referenzen</a>
-        <a href="#product" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Produkt</a>
         <a href="#customers" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Kunden</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
+        <a href="#live-chat" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Kontakt</a>
         <a href="/stories" class="text-red-triarc block pr-4 py-2 border-b text-base font-medium">Stories</a>
         <a href="/mlink" class="text-green-triarc block pr-4 py-2 border-b text-base font-medium">Produkte</a>
         <a href="/jobs" class="text-blue-triarc block pr-4 py-2 border-b text-base font-medium">Jobs</a>
