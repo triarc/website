@@ -82,7 +82,7 @@
         <div class="hidden items-center lg:flex">
           <a href="/stories" class="ml-8 font-medium text-red-triarc transition duration-150 ease-in-out">Stories</a>
           <div class="border-r border-gray-300 h-4 mx-4" />
-          <a href="/mlink" class="font-medium text-green-triarc transition duration-150 ease-in-out">Produkt</a>
+          <a href="/mlink" class="font-medium text-green-triarc transition duration-150 ease-in-out">Produkte</a>
           <div class="border-r border-gray-300 h-4 mx-4" />
           <a href="/jobs" class="font-medium text-blue-triarc transition duration-150 ease-in-out">Jobs</a>
         </div>
@@ -96,7 +96,7 @@
         <a href="#customers" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Kunden</a>
         <a href="#aboutUs" class="text-gray-500 block pr-4 py-2 border-b text-base font-medium">Über uns</a>
         <a href="/stories" class="text-red-triarc block pr-4 py-2 border-b text-base font-medium">Stories</a>
-        <a href="/mlink" class="text-green-triarc block pr-4 py-2 border-b text-base font-medium">Produkt</a>
+        <a href="/mlink" class="text-green-triarc block pr-4 py-2 border-b text-base font-medium">Produkte</a>
         <a href="/jobs" class="text-blue-triarc block pr-4 py-2 border-b text-base font-medium">Jobs</a>
       </div>
     </div>

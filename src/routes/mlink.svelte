@@ -75,7 +75,7 @@
 </svelte:head>
 
 <div class="bg-gray-900 h-screen relative">
-  <Header>μlink</Header>
+  <Header>Produkte</Header>
 
   <div class="relative bg-gray-900">
     <div class="pt-8 overflow-hidden sm:pt-12 lg:relative lg:py-48">
