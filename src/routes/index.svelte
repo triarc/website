@@ -11,7 +11,7 @@
   import Footer from '../lib/components/Footer.svelte'
   import { onMount } from 'svelte'
   import References from '$lib/index/References.svelte'
-  import Lab from '../lib/index/Lab.svelte';
+  import Lab from '../lib/index/Lab.svelte'
 
   onMount(() => {
     const messages = {
@@ -49,7 +49,7 @@
     <Intro />
     <CustomSoftwareDevelopment />
     <References />
-    <Lab/>
+    <Lab />
     <Customers />
     <Technology />
     <Manifest />
