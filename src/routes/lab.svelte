@@ -44,7 +44,7 @@
         </div>
 
         <div class="flex items-end justify-center my-16 lg:my-0">
-          <img src="img/lab/lab.svg" class="flex-grow" />
+          <img src="img/lab/lab.svg" class="flex-grow" alt="triarc innovation lab" />
         </div>
       </div>
     </div>

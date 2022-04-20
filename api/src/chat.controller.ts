@@ -8,8 +8,8 @@ export class ChatController {
   constructor(private chat: ChatService) {}
 
   @Post('/send')
-  async send(@Query('thread') thread: string, @Body('message') message: string) {
-    return this.chat.postMessage(thread, message)
+  async send(@Query('thread') thread: string, @Body('message') message: string): Promise<void> {
+    await this.chat.postMessage(thread, message)
   }
 
   @Sse('/:thread/receive')
@@ -27,7 +27,7 @@ export class ChatController {
           type: 'event_callback'
           event: { ts: string; bot_id?: string; thread_ts: string; text: string; user: string }
         }
-  ) {
+  ): Promise<string> {
     if (body.type === 'url_verification') {
       return body.challenge
     } else if (body.type === 'event_callback') {

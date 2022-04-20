@@ -39,7 +39,7 @@
     </div>
 
     <div class="lg:m-10 mt-5">
-      <img src="/img/custom-software/smoothie-app.svg" />
+      <img src="/img/custom-software/smoothie-app.svg" alt="custom software vs standard software" />
     </div>
 
     <div class="relative z-10 py-8 px-3">
@@ -57,7 +57,7 @@
               {slogan.content}
             </p>
           </div>
-          <img src={slogan.img} class="w-80 mt-8 mx-12" />
+          <img src={slogan.img} class="w-80 mt-8 mx-12" alt={slogan.title} />
         </div>
       {/each}
     </div>

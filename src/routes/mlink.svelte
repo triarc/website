@@ -99,7 +99,7 @@
     <div class="sm:mx-auto sm:max-w-3xl sm:px-6">
       <div class="py-12 sm:relative sm:mt-12 sm:py-16 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
         <div class="relative flex pl-4 sm:mx-auto sm:max-w-3xl sm:px-0 lg:max-w-none lg:h-full lg:pl-5">
-          <img src="img/mlink/tree.svg" class="flex-grow mx-16" />
+          <img src="img/mlink/tree.svg" class="flex-grow mx-16" alt="mlink" />
         </div>
       </div>
     </div>
@@ -110,14 +110,14 @@
         class="flex justify-center max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-16 lg:px-8 lg:grid lg:grid-cols-3 lg:gap-x-8"
       >
         <div>
-          <img src="img/mlink/diagram.svg" class="flex-grow" />
+          <img src="img/mlink/diagram.svg" class="flex-grow" alt="mlink architecture" />
         </div>
         <div class="mt-12 lg:mt-0 lg:col-span-2 flex flex-col justify-center">
           <p class="mt-2 text-3xl font-extrabold text-white">Dies löst Aufgaben wie:</p>
           <dl>
             {#each bulletPoints as bulletPoint}
               <div class="flex items-center mt-2">
-                <img src="icons/checkmark.svg" class="flex-shrink-0 h-6 w-6" />
+                <img src="icons/checkmark.svg" class="flex-shrink-0 h-6 w-6" alt="checkmark" />
                 <div class="ml-3">
                   <dt class="text-base text-gray-300">
                     {bulletPoint}
