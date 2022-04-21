@@ -122,7 +122,7 @@
               </p>
               <button class="text-white underline mt-6" on:click={() => toggle(i)}>Mehr erfahren</button>
             </div>
-            <img src={heroSolgan.img} alt="{heroSolgan.claim}" class="w-80 mt-8 mx-12" />
+            <img src={heroSolgan.img} alt={heroSolgan.claim} class="w-80 mt-8 mx-12" />
           </div>
           <div
             id="job-{i}"
