@@ -62,7 +62,7 @@
               Teilnehmer findet.
             </p>
             <p class="mt-4 text-lg text-gray-300">
-              Damit du möglichst eifach einen Termin planen kannst, wählst du den Zeitraum in welchem der Termin
+              Damit du möglichst einfach einen Termin planen kannst, wählst du den Zeitraum in welchem der Termin
               stattfinden soll. Die erforderliche Zeitdauer und die Teilnehmer welche daran teilnehmen sollen. Ab da
               übernimmt Slothi für dich und prüft die Verfügbarkeiten aller Teilnehmer. Du erhälst eine Auswahl an
               möglichen Terminvorschlägen und kannst einen fixen Termin einplanen.
@@ -92,13 +92,12 @@
             <h2 class="text-3xl font-extrabold tracking-tight text-red-600">Fair Pizza</h2>
 
             <p class="mt-4 text-lg text-gray-700 italic">
-              Fair Pizza soll Restaurants eine einfache Alternative bieten, um Ihre Angebot selbständig Online zu
-              verkaufen.
+              Fair Pizza bietet Restaurants eine einfache und günstige Alternative Angebot selbständig Online zu
+              verkaufen. Die Whitelabel Lösung bietet eine Vielzahl von Konfigurationsmöglichkeiten inklusive einem Pizzabuilder.
+              Mit Stripe lassen sich die Zahlungen bequem online abwickeln.
             </p>
             <p class="mt-4 text-lg text-gray-500">
-              Zusammen mit dem <a target="_blank" class="underline" href="https://www.ultrakurier.ch/">Ultrakurier</a>
-              liefert Fair Pizza eine mobile Lösung für das Bestellen von Pizza's im Raum Zürich. Die Whitelabel Lösung kann
-              natürlich auch ausserhalb von Zürich genutzt werden, nur fällt der Velokurier dabei weg.
+              Die Auslieferung erfolgt über eigene Wege oder über einer unseren lokalen <a target="_blank" class="underline" href="https://www.ultrakurier.ch/">Partner</a>
             </p>
             <div class="mt-6 mb-12">
               <div class="flex space-x-4">
@@ -138,11 +137,11 @@
           <div>
             <p class="mt-6 text-xl text-gray-600 max-w-lg">Bist du interessiert an unseren Projekten?</p>
             <p class="text-base text-gray-600">
-              Wir halten dich gerne auf dem Laufenden, wenn wir die was neues zeigen können.
+              Wir halten dich gerne auf dem Laufenden.
             </p>
           </div>
           <form on:submit|preventDefault={submitNewsletter} class="sm:mx-auto w-full sm:flex">
-            <div class={submitted ? 'w-0 overflow-hidden' : 'min-w-0 sm:mr-3 flex-grow'}>
+            <div class={submitted ? 'w-0 overflow-hidden' : 'min-w-0 sm:mr-3 flex-grow'} style='max-width: 400px'>
               <label for="cta-email" class="sr-only">Email address</label>
               <input
                 id="cta-email"
