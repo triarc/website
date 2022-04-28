@@ -65,7 +65,7 @@
   </div>
 
   <div class="bg-gray-100 bg-opacity-80 py-16 px-6">
-    <img src="img/hero/triarc-labs.svg" class="h-24  mx-auto" />
+    <img src="img/hero/triarc-labs.svg" class="h-24 mx-auto" alt="triarc laboratories" />
   </div>
 
   <div id="intro" class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -87,7 +87,7 @@
               </a>
             </p>
           </div>
-          <img src={slogan.img} class="w-80 mt-8 mx-12" />
+          <img src={slogan.img} class="w-80 mt-8 mx-12" alt={slogan.linkText} />
         </div>
       {/each}
     </div>

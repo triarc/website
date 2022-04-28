@@ -22,7 +22,7 @@
         </h1>
         <p class="text-sm">Hautpseite</p>
       </div>
-      <img src="/icons/triarc-logo.svg" class="h-10" />
+      <img src="/icons/triarc-logo.svg" class="h-10" alt="triarc logo" />
     </a>
   </div>
 </div>

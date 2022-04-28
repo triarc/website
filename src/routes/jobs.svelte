@@ -122,7 +122,7 @@
               </p>
               <button class="text-white underline mt-6" on:click={() => toggle(i)}>Mehr erfahren</button>
             </div>
-            <img src={heroSolgan.img} class="w-80 mt-8 mx-12" />
+            <img src={heroSolgan.img} alt={heroSolgan.claim} class="w-80 mt-8 mx-12" />
           </div>
           <div
             id="job-{i}"
@@ -182,6 +182,7 @@
             />
             <img
               class="object-cover rounded-3xl"
+              alt="triarc legos"
               srcset="/img/office/triarc_lego-320.jpg 320w, /img/office/triarc_lego-640.jpg 640w, /img/office/triarc_lego-1080.jpg 1080w"
               src="/img/office/triarc_lego-1080.jpg"
             />
@@ -244,6 +245,7 @@
           />
           <img
             class="object-cover max-w-1/2 rounded-3xl"
+            alt="triarc sociocractic flow"
             srcset="/img/office/triarc-flow-320.jpg 320w, /img/office/triarc-flow-640.jpg 640w, /img/office/triarc-flow-1080.jpg 1080w"
             src="/img/office/triarc-flow-1080.jpg"
           />
@@ -271,6 +273,7 @@
           />
           <img
             class="object-cover rounded-3xl"
+            alt="triarc office bar"
             srcset="/img/office/bar-320.jpg 320w, /img/office/bar-640.jpg 640w, /img/office/bar-1080.jpg 1080w"
             src="/img/office/bar-1080.jpg"
           />
@@ -362,6 +365,7 @@
           />
           <img
             class="object-cover rounded-3xl"
+            alt="triarc gym"
             srcset="/img/office/gym-320.jpg 320w, /img/office/gym-640.jpg 640w, /img/office/gym-1080.jpg 1080w"
             src="/img/office/gym-1080.jpg"
           />
@@ -425,6 +429,7 @@
           />
           <img
             class="object-cover rounded-3xl"
+            alt="triarc teamcall"
             srcset="/img/office/teamcall-320.jpg 320w, /img/office/teamcall-640.jpg 640w, /img/office/teamcall-1080.jpg 1080w"
             src="/img/office/teamcall-1080.jpg"
           />

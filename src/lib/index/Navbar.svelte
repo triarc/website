@@ -47,7 +47,7 @@
         <div
           class="flex-1 flex items-center ml-16 mr-4 lg:ml-0 lg:mr-0 justify-center lg:items-center lg:justify-start"
         >
-          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow lg:hidden" />
+          <img src="img/hero/triarc-labs.svg" class="h-8 flex-grow lg:hidden" alt="triarc laboratories" />
           <div class="flex-shrink-0 flex items-center">
             <a href="https://triarc-labs.com"
               ><img class="block h-8 w-auto" src="/icons/triarc-logo.svg" height="32" width="53" alt="Triarc Logo" /></a
