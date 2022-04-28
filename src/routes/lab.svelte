@@ -93,11 +93,15 @@
 
             <p class="mt-4 text-lg text-gray-700 italic">
               Fair Pizza bietet Restaurants eine einfache und günstige Alternative Angebot selbständig Online zu
-              verkaufen. Die Whitelabel Lösung bietet eine Vielzahl von Konfigurationsmöglichkeiten inklusive einem Pizzabuilder.
-              Mit Stripe lassen sich die Zahlungen bequem online abwickeln.
+              verkaufen. Die Whitelabel Lösung bietet eine Vielzahl von Konfigurationsmöglichkeiten inklusive einem
+              Pizzabuilder. Mit Stripe lassen sich die Zahlungen bequem online abwickeln.
             </p>
             <p class="mt-4 text-lg text-gray-500">
-              Die Auslieferung erfolgt über eigene Wege oder über einer unseren lokalen <a target="_blank" class="underline" href="https://www.ultrakurier.ch/">Partner</a>
+              Die Auslieferung erfolgt über eigene Wege oder über einer unseren lokalen <a
+                target="_blank"
+                class="underline"
+                href="https://www.ultrakurier.ch/">Partner</a
+              >
             </p>
             <div class="mt-6 mb-12">
               <div class="flex space-x-4">
@@ -136,12 +140,10 @@
         <div class="flex flex-col justify-center space-y-3 flex-grow">
           <div>
             <p class="mt-6 text-xl text-gray-600 max-w-lg">Bist du interessiert an unseren Projekten?</p>
-            <p class="text-base text-gray-600">
-              Wir halten dich gerne auf dem Laufenden.
-            </p>
+            <p class="text-base text-gray-600">Wir halten dich gerne auf dem Laufenden.</p>
           </div>
           <form on:submit|preventDefault={submitNewsletter} class="sm:mx-auto w-full sm:flex">
-            <div class={submitted ? 'w-0 overflow-hidden' : 'min-w-0 sm:mr-3 flex-grow'} style='max-width: 400px'>
+            <div class={submitted ? 'w-0 overflow-hidden' : 'min-w-0 sm:mr-3 flex-grow'} style="max-width: 400px">
               <label for="cta-email" class="sr-only">Email address</label>
               <input
                 id="cta-email"
