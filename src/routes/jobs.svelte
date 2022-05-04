@@ -24,6 +24,10 @@
           '@type': 'PostalAddress',
           addressLocality: 'Zürich',
           addressRegion: 'ZH',
+          addressCountry: 'CH',
+          postalCode: '8005',
+          streetAddress: 'Neue Hard 14',
+          email: 'development@triarc-labs.com'
         },
       },
       occupationalCategory: '15-1132.00 Software Developers, Application',
