@@ -3,8 +3,6 @@
   import Footer from '../lib/components/Footer.svelte'
 
   function serializeSchema(jobPosting) {
-    // prettier-ignore
-    // eslint-disable-next-line
     return '<script type="application/ld+json">' + JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'JobPosting',
@@ -40,6 +38,8 @@
       salaryCurrency: 'CHF',
       specialCommitments: '60% - 100%',
       workHours: '24 - 40 Stunden pro Woche',
+      // prettier-ignore
+      // eslint-disable-next-line
     }, null, 2) + '<\/script>'
   }
 
