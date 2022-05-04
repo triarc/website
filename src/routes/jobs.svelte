@@ -3,7 +3,9 @@
   import Footer from '../lib/components/Footer.svelte'
 
   function serializeSchema(thing) {
-    return '<script type="application/ld+json">' + JSON.stringify(thing, null, 2) + '</script>'
+    // prettier-ignore
+    // eslint-disable-next-line
+    return '<script type="application/ld+json">' + JSON.stringify(thing, null, 2) + '<\/script>'
   }
 
   function unlock(evt) {
