@@ -118,75 +118,10 @@
         'Lernfähigkeit und kontinuierliche Weiterentwicklung',
         'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
       ],
-      experienceRequirements: 'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+      experienceRequirements:
+        'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
     },
   ]
-
-  const softwareEngineerJobPosting = {
-    '@context': 'https://schema.org',
-    '@type': 'JobPosting',
-    baseSalary: '104000-128000',
-    jobBenefits:
-      'Junges dynamisches Team. Modernste Technologien. Spannende Abwechslungsreiche Projekte. Soziokratie. Erfolgsbeteiligung. Grünes Open-Space Office mit Bar und Gym zentral in Zürich. Flexible Arbeitszeiten, Homeoffice und Remote. Innovation Lab, Agile Entwicklung',
-    datePosted: '2022-04-29',
-    description: 'Beschreibung: Triarc Labs sucht Software Engineers 60 - 100%',
-    educationRequirements: 'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
-    employmentType: 'Full- or Parttime',
-    experienceRequirements: 'Minimum 3 Jahre Erfahrung als Softwareentwickler',
-    incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
-    industry: 'Custom Software Development',
-    jobLocation: {
-      '@type': 'Place',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Zürich',
-        addressRegion: 'ZH',
-      },
-    },
-    occupationalCategory: '15-1132.00 Software Developers, Application',
-    qualifications:
-      'Leidenschaft für die Software Entwicklung. Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis). Hohe Methodenkompetenz und logisches, vernetztes Denken. Spass an der Arbeit im Team. Lösungsorientiertes Denken und Handeln. Lernfähigkeit und kontinuierliche Weiterentwicklung ',
-    responsibilities:
-      'Deine Aufgaben sind breit gefächert. Vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden ist alles dabei. Die Arbeit ist herausfordernd und abwechslungsreich. In unserem Team aus den qualifiziertesten Entwicklern, profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an.',
-    salaryCurrency: 'CHF',
-    skills: ' Angular, C#, .Net, NodeJS, Docker, MongoDB, PostgreSQL, ElasticSearch, Gitlab, Prometheus, Sentry, Azure',
-    specialCommitments: '60% - 100%',
-    title: 'Software Engineer',
-    workHours: '24 - 40 Stunden pro Woche',
-  }
-
-  const devopsEngineerJobPosting = {
-    '@context': 'https://schema.org',
-    '@type': 'JobPosting',
-    baseSalary: '104000-128000',
-    jobBenefits:
-      'Junges dynamisches Team. Modernste Technologien. Spannende Abwechslungsreiche Projekte. Soziokratie. Erfolgsbeteiligung. Grünes Open-Space Office mit Bar und Gym zentral in Zürich. Flexible Arbeitszeiten, Homeoffice und Remote. Innovation Lab, Agile Entwicklung',
-    datePosted: '2022-04-29',
-    description: 'Beschreibung: Triarc Labs sucht DevOps Engineers 60 - 100%',
-    educationRequirements: 'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
-    employmentType: 'Full- or Parttime',
-    experienceRequirements: 'Erfahrung im Bereich Container / CI / Kubernetes / Betrieb',
-    incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
-    industry: 'Custom Software Development',
-    jobLocation: {
-      '@type': 'Place',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Zürich',
-        addressRegion: 'ZH',
-      },
-    },
-    occupationalCategory: '15-1132.00 Software Developers, Application',
-    qualifications:
-      'Leidenschaft für die Software Entwicklung. Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis). Hohe Methodenkompetenz und logisches, vernetztes Denken. Spass an der Arbeit im Team. Lösungsorientiertes Denken und Handeln. Lernfähigkeit und kontinuierliche Weiterentwicklung ',
-    responsibilities:
-      'Deine Aufgaben sind breit gefächert. Vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden ist alles dabei. Die Arbeit ist herausfordernd und abwechslungsreich. In unserem Team aus den qualifiziertesten Entwicklern, profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an.',
-    salaryCurrency: 'CHF',
-    skills: ' Angular, C#, .Net, NodeJS, Docker, MongoDB, PostgreSQL, ElasticSearch, Gitlab, Prometheus, Sentry, Azure',
-    specialCommitments: '60% - 100%',
-    title: 'Software Engineer',
-    workHours: '24 - 40 Stunden pro Woche',
-  }
 </script>
 
 <svelte:head>
