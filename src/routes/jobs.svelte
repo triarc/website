@@ -2,10 +2,41 @@
   import Header from '../lib/components/Header.svelte'
   import Footer from '../lib/components/Footer.svelte'
 
-  function serializeSchema(thing) {
+  function serializeSchema(jobPosting) {
     // prettier-ignore
     // eslint-disable-next-line
-    return '<script type="application/ld+json">' + JSON.stringify(thing, null, 2) + '<\/script>'
+    return '<script type="application/ld+json">' + JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'JobPosting',
+      title: jobPosting.claim,
+      jobBenefits:
+        'Junges dynamisches Team. Modernste Technologien. Spannende Abwechslungsreiche Projekte. Soziokratie. Erfolgsbeteiligung. Grünes Open-Space Office mit Bar und Gym zentral in Zürich. Flexible Arbeitszeiten, Homeoffice und Remote. Innovation Lab, Agile Entwicklung',
+      datePosted: '2022-05-04',
+      description: `Beschreibung: Triarc Labs sucht ${jobPosting.claim} 60 - 100%`,
+      educationRequirements: 'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
+      employmentType: 'Full- or Parttime',
+      experienceRequirements: jobPosting.experienceRequirements,
+      incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
+      industry: 'Custom Software Development',
+      jobLocation: {
+        '@type': 'Place',
+        address: {
+          '@type': 'PostalAddress',
+          addressLocality: 'Zürich',
+          addressRegion: 'ZH',
+        },
+      },
+      occupationalCategory: '15-1132.00 Software Developers, Application',
+      qualifications:
+        'Leidenschaft für die Software Entwicklung. Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis). Hohe Methodenkompetenz und logisches, vernetztes Denken. Spass an der Arbeit im Team. Lösungsorientiertes Denken und Handeln. Lernfähigkeit und kontinuierliche Weiterentwicklung ',
+      responsibilities: jobPosting.responsibilities,
+      skills: ' Angular, C#, .Net, NodeJS, Docker, MongoDB, PostgreSQL, ElasticSearch, Gitlab, Prometheus, Sentry, Azure',
+
+      baseSalary: '104000-128000',
+      salaryCurrency: 'CHF',
+      specialCommitments: '60% - 100%',
+      workHours: '24 - 40 Stunden pro Woche',
+    }, null, 2) + '<\/script>'
   }
 
   function unlock(evt) {
@@ -29,7 +60,7 @@
     }
   }
 
-  const slogans = [
+  const jobPostings = [
     {
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. ',
@@ -40,20 +71,15 @@
         'sind so breit gefächert und abwechslungsreich wie die Arbeit, die dich bei uns erwartet: vom Design bis zur Lösungsfindung ist alles dabei, individuell angepasst auf unsere branchenübergreifenden Kunden. In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung, und wir von deiner. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobile-Anwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
-
         'Hochschulabschluss in Informatik (ETH/FH/vergleichbarer Leistungsnachweis)',
-
         'Hohe Methodenkompetenz und logisches, vernetztes Denken',
-
         'Spass an der Arbeit im Team',
-
         'Lösungsorientiertes Denken und Handeln',
-
         'Lernfähigkeit und kontinuierliche Weiterentwicklung',
-
         'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
         '5 Jahre Erfahrung mit Angular, dotnet, Postgres, Docker und Kubernetes',
       ],
+      experienceRequirements: '5 Jahre Erfahrung mit Angular, dotnet, Postgres, Docker und Kubernetes',
     },
     {
       content:
@@ -65,25 +91,20 @@
         'umfassen das ganze Spektrum vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden. Das ist herausfordernd, ja, aber das bringt dich auch weiter. Und du bist nicht allein: In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
-
         'Hochschulabschluss in Informatik (ETH/FH/vergleichbarer Leistungsnachweis)',
-
         'Hohe Methodenkompetenz und logisches, vernetztes Denken',
-
         'Spass an der Arbeit im Team',
-
         'Lösungsorientiertes Denken und Handeln',
-
         'Lernfähigkeit und kontinuierliche Weiterentwicklung',
-
         'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
         '2 Jahre Erfahrung mit Angular und einer objektorientier Sprache wie C# / Java',
       ],
+      experienceRequirements: '2 Jahre Erfahrung mit Angular und einer objektorientier Sprache wie C# / Java',
     },
     {
       content:
         'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
-      claim: 'Operation Engineer',
+      claim: 'DevOps / Operation Engineer',
       img: 'img/jobs/cloud_hosting.svg',
       open: false,
       responsiblities:
@@ -97,10 +118,11 @@
         'Lernfähigkeit und kontinuierliche Weiterentwicklung',
         'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
       ],
+      experienceRequirements: 'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
     },
   ]
 
-  const schema = {
+  const softwareEngineerJobPosting = {
     '@context': 'https://schema.org',
     '@type': 'JobPosting',
     baseSalary: '104000-128000',
@@ -132,11 +154,43 @@
     title: 'Software Engineer',
     workHours: '24 - 40 Stunden pro Woche',
   }
+
+  const devopsEngineerJobPosting = {
+    '@context': 'https://schema.org',
+    '@type': 'JobPosting',
+    baseSalary: '104000-128000',
+    jobBenefits:
+      'Junges dynamisches Team. Modernste Technologien. Spannende Abwechslungsreiche Projekte. Soziokratie. Erfolgsbeteiligung. Grünes Open-Space Office mit Bar und Gym zentral in Zürich. Flexible Arbeitszeiten, Homeoffice und Remote. Innovation Lab, Agile Entwicklung',
+    datePosted: '2022-04-29',
+    description: 'Beschreibung: Triarc Labs sucht DevOps Engineers 60 - 100%',
+    educationRequirements: 'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
+    employmentType: 'Full- or Parttime',
+    experienceRequirements: 'Erfahrung im Bereich Container / CI / Kubernetes / Betrieb',
+    incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
+    industry: 'Custom Software Development',
+    jobLocation: {
+      '@type': 'Place',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Zürich',
+        addressRegion: 'ZH',
+      },
+    },
+    occupationalCategory: '15-1132.00 Software Developers, Application',
+    qualifications:
+      'Leidenschaft für die Software Entwicklung. Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis). Hohe Methodenkompetenz und logisches, vernetztes Denken. Spass an der Arbeit im Team. Lösungsorientiertes Denken und Handeln. Lernfähigkeit und kontinuierliche Weiterentwicklung ',
+    responsibilities:
+      'Deine Aufgaben sind breit gefächert. Vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden ist alles dabei. Die Arbeit ist herausfordernd und abwechslungsreich. In unserem Team aus den qualifiziertesten Entwicklern, profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an.',
+    salaryCurrency: 'CHF',
+    skills: ' Angular, C#, .Net, NodeJS, Docker, MongoDB, PostgreSQL, ElasticSearch, Gitlab, Prometheus, Sentry, Azure',
+    specialCommitments: '60% - 100%',
+    title: 'Software Engineer',
+    workHours: '24 - 40 Stunden pro Woche',
+  }
 </script>
 
 <svelte:head>
   <title>Jobs - triarc-labs</title>
-  {@html serializeSchema(schema)}
 </svelte:head>
 
 <div class="bg-gray-800 h-screen relative">
@@ -147,7 +201,8 @@
       class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24 max-w-4xl bg-gray-900 mx-auto pl-4 sm:pl-6 lg:max-w-7xl lg:px-8"
     >
       <div class="relative z-10 py-8 px-3">
-        {#each slogans as heroSolgan, i}
+        {#each jobPostings as jobPosting, i}
+          {@html serializeSchema(jobPosting)}
           <div
             class="flex items-center {i % 2
               ? 'flex-col md:flex-row justify-end'
@@ -155,14 +210,14 @@
           >
             <div class="md:max-w-2xl {i % 2 ? 'md:text-right' : 'md:text-left'}">
               <p class="mt-3 text-2xl font-bold text-gray-100">
-                {@html heroSolgan.claim}
+                {@html jobPosting.claim}
               </p>
               <p class="mt-2 text-base leading-6 text-gray-300">
-                {@html heroSolgan.content}<br />
+                {@html jobPosting.content}<br />
               </p>
               <button class="text-white underline mt-6" on:click={() => toggle(i)}>Mehr erfahren</button>
             </div>
-            <img src={heroSolgan.img} alt={heroSolgan.claim} class="w-80 mt-8 mx-12" />
+            <img src={jobPosting.img} alt={jobPosting.claim} class="w-80 mt-8 mx-12" />
           </div>
           <div
             id="job-{i}"
@@ -171,12 +226,12 @@
             <div class="px-12 py-8">
               <div class="underline">Deine Aufgaben</div>
               <p class="mb-8">
-                {@html heroSolgan.responsiblities}
+                {@html jobPosting.responsiblities}
               </p>
 
               <div class="underline">Dein Profil umfasst</div>
 
-              {#each heroSolgan.skills as skill}
+              {#each jobPosting.skills as skill}
                 <div class="flex items-center mt-2">
                   <svg
                     class="flex-shrink-0 h-6 w-6 text-green-500"
