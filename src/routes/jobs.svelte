@@ -3,44 +3,54 @@
   import Footer from '../lib/components/Footer.svelte'
 
   function serializeSchema(jobPosting) {
-    return '<script type="application/ld+json">' + JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'JobPosting',
-      title: jobPosting.claim,
-      jobBenefits:
-        'Junges dynamisches Team. Modernste Technologien. Spannende Abwechslungsreiche Projekte. Soziokratie. Erfolgsbeteiligung. Grünes Open-Space Office mit Bar und Gym zentral in Zürich. Flexible Arbeitszeiten, Homeoffice und Remote. Innovation Lab, Agile Entwicklung',
-      datePosted: '2022-05-04',
-      description: `Beschreibung: Triarc Labs sucht ${jobPosting.claim} 60 - 100%`,
-      educationRequirements: 'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
-      employmentType: 'Full- or Parttime',
-      experienceRequirements: jobPosting.experienceRequirements,
-      incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
-      industry: 'Custom Software Development',
-      jobLocation: {
-        '@type': 'Place',
-        address: {
-          '@type': 'PostalAddress',
-          addressLocality: 'Zürich',
-          addressRegion: 'ZH',
-          addressCountry: 'CH',
-          postalCode: '8005',
-          streetAddress: 'Neue Hard 14',
-          email: 'development@triarc-labs.com'
-        },
-      },
-      occupationalCategory: '15-1132.00 Software Developers, Application',
-      qualifications:
-        'Leidenschaft für die Software Entwicklung. Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis). Hohe Methodenkompetenz und logisches, vernetztes Denken. Spass an der Arbeit im Team. Lösungsorientiertes Denken und Handeln. Lernfähigkeit und kontinuierliche Weiterentwicklung ',
-      responsibilities: jobPosting.responsibilities,
-      skills: ' Angular, C#, .Net, NodeJS, Docker, MongoDB, PostgreSQL, ElasticSearch, Gitlab, Prometheus, Sentry, Azure',
+    return (
+      '<script type="application/ld+json">' +
+      JSON.stringify(
+        {
+          '@context': 'https://schema.org',
+          '@type': 'JobPosting',
+          title: jobPosting.claim,
+          jobBenefits:
+            'Junges dynamisches Team. Modernste Technologien. Spannende Abwechslungsreiche Projekte. Soziokratie. Erfolgsbeteiligung. Grünes Open-Space Office mit Bar und Gym zentral in Zürich. Flexible Arbeitszeiten, Homeoffice und Remote. Innovation Lab, Agile Entwicklung',
+          datePosted: '2022-05-04',
+          description: `Beschreibung: Triarc Labs sucht ${jobPosting.claim} 60 - 100%`,
+          educationRequirements:
+            'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
+          employmentType: 'Full- or Parttime',
+          experienceRequirements: jobPosting.experienceRequirements,
+          incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
+          industry: 'Custom Software Development',
+          jobLocation: {
+            '@type': 'Place',
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Zürich',
+              addressRegion: 'ZH',
+              addressCountry: 'CH',
+              postalCode: '8005',
+              streetAddress: 'Neue Hard 14',
+              email: 'development@triarc-labs.com',
+            },
+          },
+          occupationalCategory: '15-1132.00 Software Developers, Application',
+          qualifications:
+            'Leidenschaft für die Software Entwicklung. Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis). Hohe Methodenkompetenz und logisches, vernetztes Denken. Spass an der Arbeit im Team. Lösungsorientiertes Denken und Handeln. Lernfähigkeit und kontinuierliche Weiterentwicklung ',
+          responsibilities: jobPosting.responsibilities,
+          skills:
+            ' Angular, C#, .Net, NodeJS, Docker, MongoDB, PostgreSQL, ElasticSearch, Gitlab, Prometheus, Sentry, Azure',
 
-      baseSalary: '104000-128000',
-      salaryCurrency: 'CHF',
-      specialCommitments: '60% - 100%',
-      workHours: '24 - 40 Stunden pro Woche',
+          baseSalary: '104000-128000',
+          salaryCurrency: 'CHF',
+          specialCommitments: '60% - 100%',
+          workHours: '24 - 40 Stunden pro Woche',
+        },
+        null,
+        2
+      ) +
       // prettier-ignore
       // eslint-disable-next-line
-    }, null, 2) + '<\/script>'
+      '<\/script>'
+    )
   }
 
   function unlock(evt) {
