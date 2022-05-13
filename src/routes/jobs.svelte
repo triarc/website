@@ -10,9 +10,27 @@
           '@context': 'https://schema.org',
           '@type': 'JobPosting',
           title: jobPosting.claim,
+          name: jobPosting.claim,
+          hiringOrganization: {
+            "@types": "Organization",
+            email: 'development@triarc-labs.com',
+            name: 'triarc laboratories ltd.',
+            url: 'https://triarc-labs.com',
+            telephone: '+41 78 946 69 51',
+            keywords: "custom software, software development, software boutique",
+            address: {
+              '@type': 'PostalAddress',
+              addressLocality: 'Zürich',
+              addressRegion: 'ZH',
+              addressCountry: 'CH',
+              postalCode: '8005',
+              streetAddress: 'Neue Hard 14',
+              email: 'development@triarc-labs.com',
+            },
+          },
           jobBenefits:
             'Junges dynamisches Team. Modernste Technologien. Spannende Abwechslungsreiche Projekte. Soziokratie. Erfolgsbeteiligung. Grünes Open-Space Office mit Bar und Gym zentral in Zürich. Flexible Arbeitszeiten, Homeoffice und Remote. Innovation Lab, Agile Entwicklung',
-          datePosted: '2022-05-04',
+          datePosted: '2022-05-13',
           description: `Beschreibung: Triarc Labs sucht ${jobPosting.claim} 60 - 100%`,
           educationRequirements:
             'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
