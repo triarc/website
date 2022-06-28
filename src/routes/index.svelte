@@ -54,8 +54,8 @@
     class="object-cover"
     on:ended={hideVideo}
   >
-    <source src="video/intro.mp4" type="video/mp4" />
-    <source src="video/intro-1080.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/triarc-website/drone-intro.mp4" type="video/mp4" />
+    <source src="https://storage.googleapis.com/triarc-website/drone-intro.webm" type="video/webm" />
   </video>
 
   <Navbar />
