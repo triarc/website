@@ -141,10 +141,7 @@
               Wie ich den Merge Request auch für diese Story abschliesse und per Zufall auf die Uhr schaue, ist es
               bereits Abend geworden. Feierabend, aus die Maus! Verwende sie zwar nur selten, ich arbeite mit Shortcuts.
               Den Cap deponiere ich auf der Tastatur, Caps Lock für morgen... Oder vielleicht die neue Strickmütze?
-              Lassen wir’s erst mal morgen werden. Zudem ist es Donnerstag und somit ist um 12:30 Soziokratie-Meeting.
-              Thema heute sind die langsamen und unzuverlässigen Gitlab Runners. Das Team diskutiert Alternativen. Es
-              wird entschieden, dass zwei Mitarbeiter je eine Alternative evaluieren und dem Team über die Erfahrungen
-              berichten.
+              Lassen wir’s erst mal morgen werden.
             </p>
           </div>
         </div>
