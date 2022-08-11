@@ -28,13 +28,15 @@
       icon: 'img/technology/mongodb.svg',
       iconAlt: 'mongodb',
       title: 'MongoDB',
-      text: 'Damit auch unstrukturierte Informationen ihren Platz finden. MongoDB ist nicht wählerisch und speichert alles!',
+      text:
+        'Damit auch unstrukturierte Informationen ihren Platz finden. MongoDB ist nicht wählerisch und speichert alles!',
     },
     {
       icon: 'img/technology/elasticsearch.svg',
       iconAlt: 'elasticsearch',
       title: 'Elasticsearch',
-      text: 'Elasticsearch findet in noch so grossen Datenmengen die relevanten Resultate. Datenmessies können wieder aufatmen.',
+      text:
+        'Elasticsearch findet in noch so grossen Datenmengen die relevanten Resultate. Datenmessies können wieder aufatmen.',
     },
     {
       icon: 'img/technology/docker.svg',
@@ -46,19 +48,22 @@
       icon: 'img/technology/kubernetes.svg',
       iconAlt: 'kubernetes',
       title: 'Kubernetes',
-      text: 'Der Chef in unserer IT Infrastruktur, welcher den Laden schmeisst und sagt, wo es lang geht. In der Cloud sowie bei unsere Kunden Vorort.',
+      text:
+        'Der Chef in unserer IT Infrastruktur, welcher den Laden schmeisst und sagt, wo es lang geht. In der Cloud sowie bei unsere Kunden Vorort.',
     },
     {
       icon: 'img/technology/gitlab.svg',
       iconAlt: 'gitlab',
       title: 'Gitlab',
-      text: 'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unseren Projekten, zeigt uns, wohin es geht.',
+      text:
+        'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unseren Projekten, zeigt uns, wohin es geht.',
     },
     {
       icon: 'img/technology/prometheus.svg',
       iconAlt: 'prometheus',
       title: 'Prometheus',
-      text: 'Jemand der uns erinnert, wann es mal nicht rund läuft. Hält stets Kontakt mit den Entwicklern und ist (fast) Teil der Familie.',
+      text:
+        'Jemand der uns erinnert, wann es mal nicht rund läuft. Hält stets Kontakt mit den Entwicklern und ist (fast) Teil der Familie.',
     },
     {
       icon: 'img/technology/kibana.svg',
