@@ -12,12 +12,12 @@
           title: jobPosting.claim,
           name: jobPosting.claim,
           hiringOrganization: {
-            "@types": "Organization",
+            '@types': 'Organization',
             email: 'development@triarc-labs.com',
             name: 'triarc laboratories ltd.',
             url: 'https://triarc-labs.com',
             telephone: '+41 78 946 69 51',
-            keywords: "custom software, software development, software boutique",
+            keywords: 'custom software, software development, software boutique',
             address: {
               '@type': 'PostalAddress',
               addressLocality: 'Zürich',

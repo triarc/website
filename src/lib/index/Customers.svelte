@@ -105,6 +105,34 @@
       </a>
 
       <a
+        href="https://www.christen-ag.ch/"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
+      >
+        <img height="80" class="max-h-12" src="/img/customer/christen.svg" loading="lazy" alt="christen ag" />
+      </a>
+      <a
+        href="https://www.burkhalter.ch/"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
+      >
+        <img
+          height="80"
+          class="max-h-12"
+          src="/img/customer/burkhalter_holding_logo.svg"
+          loading="lazy"
+          alt="burkhalter holding group"
+        />
+      </a>
+      <a
+        href="https://www.renggli.swiss"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
+      >
+        <img height="80" class="max-h-24" src="/img/customer/renggli-logo.svg" loading="lazy" alt="renggli" />
+      </a>
+
+      <a
         href="https://www.volvotrucks.com/"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
