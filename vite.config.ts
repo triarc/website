@@ -1,11 +1,11 @@
-import { sveltekit } from '@sveltejs/kit/vite';
-import type { UserConfig } from 'vite';
+import { sveltekit } from '@sveltejs/kit/vite'
+import type { UserConfig } from 'vite'
 
 const config: UserConfig = {
-	plugins: [sveltekit()],
-	ssr: {
-		noExternal: Object.keys({}),
-	},
-};
+  plugins: [sveltekit()],
+  ssr: {
+    noExternal: Object.keys({}),
+  },
+}
 
-export default config;
+export default config

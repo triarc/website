@@ -82,26 +82,12 @@
     left: 0;
     transform-origin-x: 100%;
   }
-  .parallax__layer--base {
-    transform: translateZ(0);
-  }
   .parallax__layer--back {
     transform: translateZ(-1px);
   }
 
   .parallax__layer--back {
     transform: translateZ(-1px) scale(2);
-  }
-
-  .parallax__layer--deep {
-    transform: translateZ(-2px) scale(3);
-  }
-
-  .parallax__group {
-    position: relative;
-    height: 100vh;
-    transform-style: preserve-3d;
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
   }
 
   .intro {

@@ -262,7 +262,7 @@
               </div>
               <div class="space-y-2">
                 <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
-                  <h4>{member.name}</h4>
+                  <p>{member.name}</p>
                   <p class="text-blue-triarc">{member.job}</p>
                 </div>
               </div>
