@@ -1,6 +1,6 @@
-<script>
-  import Header from '../lib/components/Header.svelte'
-  import Footer from '../lib/components/Footer.svelte'
+<script lang="ts">
+  import Header from '../../lib/components/Header.svelte'
+  import Footer from '../../lib/components/Footer.svelte'
 
   let scanBoxes = {
     image: 'img/stories/ortho/scan-boxes',
@@ -65,17 +65,15 @@
             <rect width="404" height="384" fill="url(#de316486-4a29-4312-bdfc-fbce2132a2c1)" />
           </svg>
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
-            <figure>
-              <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                <img
-                  class="object-cover overflow-hidden"
-                  alt="Ortho-Logo"
-                  src="img/stories/ortho/ortho-logo.png"
-                  height="100"
-                  width="400"
-                />
-              </div>
-            </figure>
+            <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+              <img
+                class="object-cover overflow-hidden"
+                alt="Ortho-Logo"
+                src="img/stories/ortho/ortho-logo.png"
+                height="100"
+                width="400"
+              />
+            </div>
           </div>
         </div>
         <div class="mt-8 lg:mt-0">
@@ -107,7 +105,7 @@
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
         <div class="relative z-10">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
-            <ul class="list-disc pl-4" role="list">
+            <ul class="list-disc pl-4">
               <li>50% Zeiteinsparung pro Bestellung</li>
               <li>80'000 Artikel mit über 500'000 Varianten performant verfügbar</li>
               <li>Strategische Interessen der Firma im Einkauf gesichert</li>
@@ -158,7 +156,7 @@
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
         <div class="relative z-10">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
-            <ul class="list-disc pl-4" role="list">
+            <ul class="list-disc pl-4">
               <li>7000 Aufträge pro Monat, d.h. 80% aller Aufträge</li>
               <li>Alle Arbeitsprozesse eines Kundenauftrags in einer Applikation</li>
               <li>100% digitale und auftragsfokussierte Zusammenarbeit aller Beteiligten</li>
@@ -264,15 +262,15 @@
       <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
         <div class="relative z-10 flex py-4 ">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
-            <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
-              <img class="object-cover overflow-hidden" alt="Ortho-Team" src="img/stories/ortho/ortho-team.jpg" />
-            </div>
-            <figcaption class="mt-3 flex flex-col text-sm text-gray-500 ml-2">
-              <div class="text-black">Bei der Übergabe des Dankeschöns</div>
-              <div class="italic pt-2">
-                Serge Müller, Peter Bartos, Patrick Rohrer, Kristina Michalowski, Ute Kircher
-              </div>
-            </figcaption>
+            <figure class="relative bg-white overflow-hidden">
+              <img class="object-cover overflow-hidden rounded-lg shadow-lg" alt="Ortho-Team" src="img/stories/ortho/ortho-team.jpg" />
+              <figcaption class="mt-3 flex flex-col text-sm text-gray-500 ml-2">
+                <div class="text-black">Bei der Übergabe des Dankeschöns</div>
+                <div class="italic pt-2">
+                  Serge Müller, Peter Bartos, Patrick Rohrer, Kristina Michalowski, Ute Kircher
+                </div>
+              </figcaption>
+            </figure>
           </div>
         </div>
         <div class="relative z-10 py-4 text-gray-500">

@@ -1,8 +1,8 @@
-<script>
-  import Header from '../lib/components/Header.svelte'
-  import Footer from '../lib/components/Footer.svelte'
-  import ImageSections from '../lib/components/ImageSections.svelte'
-  import Mlink from '$lib/index/Mlink.svelte'
+<script lang="ts">
+  import Header from '../../lib/components/Header.svelte'
+  import Footer from '../../lib/components/Footer.svelte'
+  import ImageSections from '../../lib/components/ImageSections.svelte'
+
   import { onMount } from 'svelte'
 
   let bulletPoints = [

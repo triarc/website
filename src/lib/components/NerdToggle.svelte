@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { createEventDispatcher } from 'svelte'
   export let enabled = false
   const dispatch = createEventDispatcher()
