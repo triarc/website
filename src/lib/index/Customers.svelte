@@ -38,7 +38,7 @@
       </a>
       <!--            volvo, schindler, espace, srf, helsana  -->
 
-      <a href="https://www.tanne.ch/" class="col-span-1 flex items-center justify-center py-8 px-8 ">
+      <a href="https://www.tanne.ch/" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 ">
         <picture class="max-h-12 filter">
           <source type="image/webp" srcset="/img/customer/tanne-logo.webp" alt="tanne" />
           <img height="80" class="max-h-20" src="/img/customer/tanne-logo.png" loading="lazy" alt="tanne" />
