@@ -149,8 +149,8 @@
       name: 'David Jahn',
       job: 'Junior Software Developer',
       nerdJob: 'Junior Software Developer',
-      image: 'img/avatars/David.png',
-      nerdImage: 'img/avatars/David.png',
+      image: 'img/avatars/david.png',
+      nerdImage: 'img/avatars/david.png',
       onlyInNerdMode: false,
     },
     // {
