@@ -7,6 +7,14 @@ npm install
 npm run dev
 ```
 
+# Scrips Generating your Profile-Picture in required sizes
+
+```
+./scrips/convert-images.sh
+brew install ffmpeg
+brew install imagemagick
+```
+
 # Demo
 
 [Demo url](https://dev.triarc-labs.com/)
