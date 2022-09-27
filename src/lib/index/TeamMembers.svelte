@@ -81,14 +81,14 @@
       nerdImage: 'img/avatars/iris.png',
       onlyInNerdMode: false,
     },
-    {
-      name: 'Paul Tingle',
-      job: 'Nearshore Developer',
-      nerdJob: 'Nearshore Developer',
-      image: 'img/avatars/paul.png',
-      nerdImage: 'img/avatars/paul.png',
-      onlyInNerdMode: false,
-    },
+    // {
+    //   name: 'Paul Tingle',
+    //   job: 'Nearshore Developer',
+    //   nerdJob: 'Nearshore Developer',
+    //   image: 'img/avatars/paul.png',
+    //   nerdImage: 'img/avatars/paul.png',
+    //   onlyInNerdMode: false,
+    // },
     {
       name: 'Dave Haug',
       job: 'Business Development',
@@ -143,6 +143,14 @@
       nerdJob: 'Software Developer',
       image: 'img/avatars/lars.png',
       nerdImage: 'img/avatars/lars.png',
+      onlyInNerdMode: false,
+    },
+    {
+      name: 'David Jahn',
+      job: 'Junior Software Developer',
+      nerdJob: 'Junior Software Developer',
+      image: 'img/avatars/David.png',
+      nerdImage: 'img/avatars/David.png',
       onlyInNerdMode: false,
     },
     // {
