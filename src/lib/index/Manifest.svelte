@@ -24,18 +24,18 @@
   ]
 </script>
 
-<div class="bg-white">
-  <div class="max-w-7xl mx-auto py-24 px-4 md:py-32 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-center text-3xl font-extrabold text-gray-900 sm:text-4xl">Manifest</h2>
-      <dl class="mt-6 space-y-6 divide-y divide-gray-200">
+<div class="bg-green-triarc bg-opacity-20">
+  <div class="px-8 md:px-16 py-32 max-w-screen-lg mx-auto">
+    <div class="mx-auto">
+      <h2 class="text-center text-3xl font-extrabold text-green-triarc sm:text-4xl">Manifest</h2>
+      <dl class="mt-6 space-y-6 divide-y divide-green-triarc text-green-triarc">
         {#each values as { id, title, content }}
           <div class="pt-6">
             <dt class="text-lg">
               <button
-                class="text-left w-full flex justify-between items-start text-gray-400 focus:outline-none cursor-pointer"
+                class="text-left w-full flex justify-between items-start focus:outline-none cursor-pointer"
               >
-                <span class="font-medium text-gray-700 flex items-center">
+                <span class="font-medium flex items-center">
                   {title}
                 </span>
               </button>

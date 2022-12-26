@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Header from '../../lib/components/Header.svelte'
+  import Block from '$lib/components/Block.svelte'
+  import type {BlockContent} from '$lib/components/Block.svelte'
   import Footer from '../../lib/components/Footer.svelte'
 
   function serializeSchema(jobPosting) {
@@ -154,378 +155,179 @@
         'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
     },
   ]
+  let contents: BlockContent[] = [
+    {
+      title: 'Starte dein Abenteuer!',
+      content:
+        'Wir sind ein junges  und dynamisches Team auf der Suche nach Verstärkung für unsere täglichen Herausforderungen.<br/><br/>Unser Team sucht stetig neue Talente im Bereich Entwicklung. Wir haben dazu vier Stufen definiert, in welchem wir alle Positionen einordnen.',
+      image: {src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Carrer'},
+    },
+    {
+      title: 'Junior Software Engineer',
+      content:
+        'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
+      image:  {src: 'img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
+      bulletPoints: [
+        'Erste Erfahrungen mit C# oder Java',
+        'Erste Erfahrungen im Bereich Web / Single Page Applications',
+      ]
+    },
+    {
+      title: 'Professional Software Engineer',
+      content:
+        'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
+      image:  {src:'img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
+      bulletPoints: [
+        'Erfahrungen mit C# in der Entwicklung von API\'s',
+        'Erfahrungen im Bereich Web und Angular',
+        'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil'
+      ]
+    },
+    {
+      title: 'Senior Software Engineer',
+      content:
+        'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
+      image:  {src: 'img/jobs/super_woman.svg', alt: 'Senior Software Engineer' },
+      bulletPoints: [
+        'Erfahrungen mit C# in der Entwicklung von API\'s',
+        'Erfahrungen im Bereich Web und Angular',
+        'Erfahrungen mit Elasticsearch / Postgres / MongoDB',
+        'Erfahrungen Docker / Kubernetes / Gitlab CI'
+      ]
+    },
+    {
+      title: '(Dev)Ops Engineer',
+      content:
+        'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
+
+      image:  {src:'img/jobs/cloud_hosting.svg', alt: 'Dev/Ops Engineer' },
+      bulletPoints: [
+        'Erfahrungen Docker / Kubernetes / Gitlab CI',
+        'Erfahrungen mit Google Cloud / Azure von Vorteil',
+        'Erfahrungen mit Cypress / E2E Testing von Vorteil',
+      ]
+    },
+    {
+      title: 'Was wir grundsätzlich erwarten',
+      content:
+        'Unabhängig von deiner gewünschten Position und vorhanden Erfahrung fordern wir.',
+      bulletPoints: [
+        'Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert dich.',
+        'Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen).',
+        'Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen. Du magst Menschen und behandelst sie wie Mitmenschen.',
+        'Leerabschluss/HF/Bachelor/Master oder selbst beigebracht. Bei uns ist nichts strikt vorgegeben, wir evaluieren immer zu deiner Situation. Erfahrung in unserem Technologien ist natürlich gern gesehen und ab Stufe Professional erwünscht.',
+      ]
+    },
+    {
+      title: 'Was wir dir bieten',
+      content: 'Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.',
+      cards: [
+        {
+          title: '40 Stunden-Woche',
+          content: 'Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.'
+        },
+        {
+          title: 'Technologie',
+          content: 'Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Die richtige suchen und finden wir zusammen.',
+        },
+        {
+          title: 'Hardware',
+          content: 'Wähle das Setup, das zu dir passt.'
+        },
+        {
+          title: 'Home-Office',
+          content: 'Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.'
+        },
+        {
+          title: 'Kaffee / Bar',
+          content: 'Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf deinen Zugriff. Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken. Und für den Beerenhunger auch mal frische Früchtchen.',
+        },
+        {
+          title: 'Company Events',
+          content: 'Team-Kochevents via Teams, Legosteine verbauen (streng nach Anleitung, versteht sich) und in besseren Zeiten auch Ausflüge an Festivals oder eine Reise nach Italien...: Du hast Ideen, wir ein Budget dazu.'
+        },
+        {
+          title: 'Office Gym',
+          content: 'Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse warten Blei und Matten auf Beschäftigung. Unser wöchentliche Gym Session mit Coach hilft dir die nötige Motivation zu finden.'
+        },
+        {
+          title: 'Office Jungle',
+          content: 'Unser Office direkt am Bahnhof Hardbrücke ist vollständig bepflanzt. Damit dir nie die Luft ausgeht und du stehts einen schönen Hintergrund in deinem Teams-Call präsentieren kannst.'
+        },
+        {
+          title: 'Coaching',
+          content: 'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggesprache. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, dein Seniorität zu fordern und unser Team zu stärken.'
+        },
+        {
+          title: 'Transparenz für alle',
+          content: 'Alle Löhne werden offen kommuniziert. Es gibt keine individuellen Löhne. Die Löhne richten sich nach deiner Stufe im Trackeesystem. Für Seniors gibt’s aktuell 104k – 136k CHF. Eine variable Komponente ist der Bonus, welcher sich nach den aktuellen Quartalszahlen richtet. Dieser wird pro Quartal im Team besprechen.'
+        },
+        {
+          title: 'Soziokratie',
+          content: 'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?'
+        },
+        {
+          title: 'Ein soziales Umfeld',
+          content: 'Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork: Nichts ist uns fremd. Denn Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig. Auch gut zu wissen: Wer sich beim Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten Einzelzimmer mit Seeblick. #privatversichert...'
+        },
+      ]
+    },
+    {
+      title: 'Wie läuft unser Bewerbungsverfahren',
+      content: 'Unser Interviewprozess verläuft in vier Schritten.',
+      steps: [
+        {
+          title: 'Bewerbung einreichen',
+          content: 'Nimm den Mut zusammen und schicke uns eine Mail an development@triarc-labs mit deinen Unterlagen.'
+        },
+        {
+          title: 'Persönliches Interview',
+          content: 'Nach kurzer Prüfung von deinem CV und dem ersten Eindruck, melden wir uns bei dir für ein erstes Vorstellungsgespräch. Remote oder in unserem Office können wir uns gegenseitig austauschen und schauen ob sich synergien ergeben.'
+        },
+        {
+          title: 'Technisches Interview',
+          content: 'Damit wir dich initial in unser Trackeesystem einstufen können, bekommst du die Gelegenheit dich mit einem Entwickler austauschen.'
+        },
+        {
+          title: 'Team Interview',
+          content: 'Das Team hat bei uns das letzte Wort. Lerne den Rest von uns kennen und sprich über deine Passion und warum du Teil vom Team werden willst.'
+        }
+      ]
+    }
+  ];
 </script>
 
 <svelte:head>
   <title>Jobs - triarc-labs</title>
 </svelte:head>
 
-<div class="bg-gray-800 h-screen relative">
-  <Header>Jobs</Header>
+<div class="bg-white">
+  {#each contents as content}
+    <Block bind:content />
+  {/each}
 
-  <div class="relative bg-gray-900">
-    <div
-      class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24 max-w-4xl bg-gray-900 mx-auto pl-4 sm:pl-6 lg:max-w-7xl lg:px-8"
-    >
-      <div class="relative z-10 py-8 px-3">
-        {#each jobPostings as jobPosting, i}
-          {@html serializeSchema(jobPosting)}
-          <div
-            class="flex items-center {i % 2
-              ? 'flex-col md:flex-row justify-end'
-              : 'flex-col justify-end md:flex-row-reverse'}"
-          >
-            <div class="md:max-w-2xl {i % 2 ? 'md:text-right' : 'md:text-left'}">
-              <p class="mt-3 text-2xl font-bold text-gray-100">
-                {@html jobPosting.claim}
-              </p>
-              <p class="mt-2 text-base leading-6 text-gray-300">
-                {@html jobPosting.content}<br />
-              </p>
-              <button class="text-white underline mt-6" on:click={() => toggle(i)}>Mehr erfahren</button>
-            </div>
-            <img src={jobPosting.img} alt={jobPosting.claim} class="w-80 mt-8 mx-12" />
-          </div>
-          <div
-            id="job-{i}"
-            class="bg-gray-700 mt-8 mb-16 md:mb-24 overflow-hidden text-white h-0 duration-500 transform transition-all"
-          >
-            <div class="px-12 py-8">
-              <div class="underline">Deine Aufgaben</div>
-              <p class="mb-8">
-                {@html jobPosting.responsiblities}
-              </p>
-
-              <div class="underline">Dein Profil umfasst</div>
-
-              {#each jobPosting.skills as skill}
-                <div class="flex items-center mt-2">
-                  <svg
-                    class="flex-shrink-0 h-6 w-6 text-green-500"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                  </svg>
-                  <div class="ml-3">
-                    <dd class="text-base text-gray-300">
-                      {skill}
-                    </dd>
-                  </div>
-                </div>
-              {/each}
-            </div>
-          </div>
-        {/each}
-      </div>
-    </div>
-
-    <div class="relative bg-gray-900">
-      <div
-        class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8"
-      >
-        <div class="relative">
-          <div class="absolute inset-x-0 top-0 transform translate-y-px">
-            <div class="flex justify-center transform -translate-y-1/2">
-              <span
-                class="inline-flex rounded-full bg-blue-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white"
-              >
-                Raytraced
-              </span>
-            </div>
-          </div>
-          <picture>
-            <source
-              type="image/webp"
-              srcset="/img/office/triarc_lego-320.webp 320w, /img/office/triarc_lego-640.webp 640w, /img/office/triarc_lego-1080.webp 1080w"
-            />
-            <img
-              class="object-cover rounded-3xl"
-              alt="triarc legos"
-              srcset="/img/office/triarc_lego-320.jpg 320w, /img/office/triarc_lego-640.jpg 640w, /img/office/triarc_lego-1080.jpg 1080w"
-              src="/img/office/triarc_lego-1080.jpg"
-            />
-          </picture>
-        </div>
-        <div class="relative pt-12 pb-16 sm:pt-24 sm:pb-64 xl:col-start-2 xl:pb-24">
-          <p class="mt-3 text-3xl font-extrabold text-white">
-            Kultivierte Grundlagen <span class="text-red-triarc">#Soziokratie</span>
-          </p>
-          <p class="mt-5 text-lg text-gray-300">
-            Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle
-            Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und
-            umgekehrt. Richtig?
-          </p>
-          <div class="mt-12 grid grid-cols-2 gap-y-12 gap-x-6">
-            <div class="col-span-2 md:col-span-1">
-              <span class="block text-2xl font-bold text-white">Vom Praktikanten zum Peer</span>
-              <span class="mt-1 block text-base text-gray-300">
-                Wir wollen auf Augenhöhe zusammenarbeiten. Darum begleiten dich auf dem Weg zum Peer klar definierte
-                Erwartungen und eine gezielte Förderung. Und das über mehrere Etappen.
-              </span>
-            </div>
-            <div class="col-span-2 md:col-span-1">
-              <span class="block text-2xl font-bold text-white">Transparenz für alle</span>
-              <span class="mt-1 block text-base text-gray-300">
-                Alle Löhne werden offen kommuniziert. Für Peers gibt’s aktuell 104k – 136k CHF. Die variablen
-                Komponenten richten sich nach den Quartalszahlen, welche wir im Team besprechen.
-              </span>
-            </div>
-
-            <p class="col-span-2">
-              <span class="block text-2xl font-bold text-white">Soziales leisten</span>
-              <span class="mt-1 block text-base text-gray-300">
-                Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork: Nichts ist uns fremd. Denn
-                Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig. Auch gut zu wissen: Wer sich beim
-                Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten
-                Einzelzimmer mit Seeblick. #privatversichert...
-              </span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bg-gray-700 py-12 sm:py-40 max-w-4xl bg-gray-900 mx-auto pl-4 sm:pl-6 lg:max-w-7xl lg:px-8">
-      <div class="bg-white rounded-3xl relative">
-        <div class="absolute inset-x-0 top-0 transform translate-y-px">
-          <div class="flex justify-center transform -translate-y-1/2">
-            <span
-              class="inline-flex rounded-full bg-yellow-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-black"
-            >
-              Sociocratic Flow
-            </span>
-          </div>
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="/img/office/triarc-flow-320.webp 320w, /img/office/triarc-flow-640.webp 640w, /img/office/triarc-flow-1080.webp 1080w"
-          />
-          <img
-            class="object-cover max-w-1/2 rounded-3xl"
-            alt="triarc sociocractic flow"
-            srcset="/img/office/triarc-flow-320.jpg 320w, /img/office/triarc-flow-640.jpg 640w, /img/office/triarc-flow-1080.jpg 1080w"
-            src="/img/office/triarc-flow-1080.jpg"
-          />
-        </picture>
-      </div>
-    </div>
-
-    <div
-      class="max-w-4xl bg-gray-900 mx-auto pl-4 sm:pl-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8"
-    >
-      <div class="relative md:mt-32">
-        <div class="absolute inset-x-0 top-0 transform translate-y-px">
-          <div class="flex justify-center transform -translate-y-1/2">
-            <span
-              class="inline-flex rounded-full bg-green-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white"
-            >
-              Die BAR
-            </span>
-          </div>
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="/img/office/bar-320.webp 320w, /img/office/bar-640.webp 640w, /img/office/bar-1080.webp 1080w"
-          />
-          <img
-            class="object-cover rounded-3xl"
-            alt="triarc office bar"
-            srcset="/img/office/bar-320.jpg 320w, /img/office/bar-640.jpg 640w, /img/office/bar-1080.jpg 1080w"
-            src="/img/office/bar-1080.jpg"
-          />
-        </picture>
-      </div>
-
-      <div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 xl:col-start-1 xl:pb-24">
-        <p class="mt-3 text-3xl font-extrabold text-white">Was wir dir bieten</p>
-        <p class="mt-5 text-lg text-gray-300">
-          Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind
-          immer auf der Suche nach neuen Talenten die uns ergänzen.
-        </p>
-        <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
-          <p>
-            <span class="block text-2xl font-bold text-white">40 Stunden-Woche</span>
-            <span class="mt-1 block text-base text-gray-300">
-              Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien.
-              Pro Jahr, nicht pro Monat.
-            </span>
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Technologie</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Die richtige suchen und finden
-              wir zusammen.
-            </span>
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Hardware</span>
-            <span class="mt-1 block text-base text-gray-300">Wähle das Setup, das zu dir passt.</span>
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Home-Office</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.</span
-            >
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Kaffee / Bar</span>
-            <span class="mt-1 block text-base text-gray-300">
-              Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf
-              deinen Zugriff. Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken. Und für den
-              Beerenhunger auch mal frische Früchtchen.
-            </span>
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Company Events</span>
-            <span class="mt-1 block text-base text-gray-300">
-              Team-Kochevents via Teams, Legosteine verbauen (streng nach Anleitung, versteht sich) und in besseren
-              Zeiten auch Ausflüge an Festivals oder eine Reise nach Italien...: Du hast Ideen, wir ein Budget dazu.
-            </span>
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Office Gym</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse
-              warten Blei und Matten auf Beschäftigung.
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="relative bg-gray-900 py-24">
-    <div
-      class="max-w-4xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8"
-    >
-      <div class="relative">
-        <div class="absolute inset-x-0 top-0 transform translate-y-px">
-          <div class="flex justify-center transform -translate-y-1/2">
-            <span
-              class="inline-flex rounded-full bg-red-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white"
-            >
-              Das Gym
-            </span>
-          </div>
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="/img/office/gym-320.webp 320w, /img/office/gym-640.webp 640w, /img/office/gym-1080.webp 1080w"
-          />
-          <img
-            class="object-cover rounded-3xl"
-            alt="triarc gym"
-            srcset="/img/office/gym-320.jpg 320w, /img/office/gym-640.jpg 640w, /img/office/gym-1080.jpg 1080w"
-            src="/img/office/gym-1080.jpg"
-          />
-        </picture>
-      </div>
-      <div class="relative pt-12 pb-16 sm:pt-24 sm:pb-64 xl:col-start-2 xl:pb-24">
-        <p class="mt-3 text-3xl font-extrabold text-white">Was wir grundsätzlich erwarten</p>
-        <div class="mt-12 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2">
-          <p>
-            <span class="block text-2xl font-bold text-white">Technologie</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Du kennst die aktuellen Technologien und beherrschst vorzugsweise sogar einige aus unserem <a
-                href="..#technology"
-                class="underline">Stack</a
-              >.</span
-            >
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Begeisterung</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert
-              dich.
-            </span>
-          </p>
-          <p>
-            <span class="block text-2xl font-bold text-white">Kommunikativ</span>
-            <span class="mt-1 block text-base text-gray-300"
-              >Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen).
-            </span>
-          </p>
-
-          <p>
-            <span class="block text-2xl font-bold text-white">Offen</span>
-            <span class="mt-1 block text-base text-gray-300">
-              Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen. Du magst
-              Menschen und behandelst sie wie Mitmenschen.
-            </span>
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div
-      class="max-w-4xl bg-gray-900 mx-auto pl-4 sm:pl-6 lg:max-w-7xl lg:px-8 xl:grid xl:grid-cols-2 xl:grid-flow-col-dense xl:gap-x-8"
-    >
-      <div class="relative md:mt-32">
-        <div class="absolute inset-x-0 top-0 transform translate-y-px">
-          <div class="flex justify-center transform -translate-y-1/2">
-            <span
-              class="inline-flex rounded-full bg-blue-triarc px-4 py-1 text-sm font-semibold tracking-wider uppercase text-white"
-            >
-              Teamcall
-            </span>
-          </div>
-        </div>
-        <picture>
-          <source
-            type="image/webp"
-            srcset="/img/office/teamcall-320.webp 320w, /img/office/teamcall-640.webp 640w, /img/office/teamcall-1080.webp 1080w"
-          />
-          <img
-            class="object-cover rounded-3xl"
-            alt="triarc teamcall"
-            srcset="/img/office/teamcall-320.jpg 320w, /img/office/teamcall-640.jpg 640w, /img/office/teamcall-1080.jpg 1080w"
-            src="/img/office/teamcall-1080.jpg"
-          />
-        </picture>
-      </div>
-
-      <div class="relative pt-12 pb-8 sm:pt-24 sm:pb-64 my-auto xl:col-start-1 xl:pb-24">
-        <p class="mt-3 text-3xl font-extrabold text-white">Ein Tag im triarc-Homeoffice</p>
-        <p class="mt-5 text-lg text-gray-300 mb-8">
-          Warum seit Corona der Verkauf von Mützen und Caps deutlich zugenommen hat.
-          <a href="stories/day-at-triarc" class="text-white underline">Mehr dazu hier</a>
-        </p>
-      </div>
-    </div>
-  </div>
-
-  <div class="bg-blue-triarc">
+  <div class="bg-blue-triarc text-blue-triarc bg-opacity-20">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold text-white sm:text-4xl">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">
         <span class="block">Immer noch hier?</span>
       </h2>
-      <p class="mt-4 text-lg leading-6 text-indigo-200">
-        Du findest, du passt zu uns und kannst etwas beisteuern? Entschlüssle den Code und bewirb dich mit einem
-        Vorteil!
+      <p class="mt-4 text-lg leading-6">
+        Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in unserem Jungle.
       </p>
-
-      <button
-        disabled
-        on:click={unlock}
-        class="mt-8 w-full inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-blue-triarc bg-white hover:bg-indigo-50 sm:w-auto"
-      >
-        Unlock me
-      </button>
+      <p class="mt-4 text-lg leading-6">
+        Für Fragen und Bewerbungen kannst du dich an <a href="mailto:development@triarc-labs.com" class="underline">development@triarc-labs.com</a> wenden.
+      </p>
     </div>
   </div>
-  <Footer />
+  <img src="img/jobs/jungle.svg" class="w-full" id="jungle" />
 </div>
+
+<style>
+  #jungle #triarc-labs {
+
+      box-shadow:
+              0 0 60px 30px #fff,  /* inner white */
+              0 0 100px 60px #f0f, /* middle magenta */
+              0 0 140px 90px #0ff; /* outer cyan */
+  }
+</style>
