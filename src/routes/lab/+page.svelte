@@ -1,7 +1,4 @@
 <script lang="ts">
-  import Header from '$lib/components/Header.svelte'
-  import Footer from '$lib/components/Footer.svelte'
-
   let email = ''
   let submitted = false
 
@@ -25,8 +22,6 @@
 </svelte:head>
 
 <div class="bg-gray-800 h-screen relative">
-  <Header>Innovation Lab</Header>
-
   <div class="relative bg-white">
     <div class="pt-32 overflow-hidden lg:relative lg:pb-24">
       <div class="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-8 lg:max-w-7xl lg:grid lg:grid-cols-2 lg:gap-24">
@@ -179,5 +174,4 @@
       </div>
     </div>
   </div>
-  <Footer />
 </div>
