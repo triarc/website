@@ -1,6 +1,4 @@
 <script lang="ts">
-  import Footer from '../../lib/components/Footer.svelte'
-
   let scanBoxes = {
     image: 'img/stories/ortho/scan-boxes',
     imageAlt: 'scan boxes',
@@ -288,5 +286,4 @@
       </div>
     </div>
   </div>
-  <Footer />
 </div>

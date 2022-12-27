@@ -227,12 +227,13 @@
             'Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Die richtige suchen und finden wir zusammen.',
         },
         {
-          title: 'Hardware',
-          content: 'Wähle das Setup, das zu dir passt.',
-        },
-        {
           title: 'Home-Office',
           content: 'Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.',
+        },
+        {
+          title: 'Hardware',
+          content:
+            'Wähle das Setup, das zu dir passt. Nutze deine vorhandenen Skills in deinem OS. Egal ob Windows, macOS, PopOS oder Arch, du bist dein eigener Administrator sowie Support.',
         },
         {
           title: 'Kaffee / Bar',
