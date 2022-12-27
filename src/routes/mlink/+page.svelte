@@ -1,20 +1,21 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
   import Video from '$lib/components/Video.svelte'
-  import type {BlockContent} from '$lib/components/Block.svelte'
+  import type { BlockContent } from '$lib/components/Block.svelte'
 
   let contents: BlockContent[] = [
     {
       title: 'μLink Data Broker <br /><span class="text-3xl">Bereit für die Zukunft</span>',
-      content: 'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell\n' +
+      content:
+        'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell\n' +
         '              lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass\n' +
         '              Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen\n' +
         '              sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
-      image: {src: 'img/mlink/tree.svg', alt: 'mlink logo'}
+      image: { src: 'img/mlink/tree.svg', alt: 'mlink logo' },
     },
     {
       title: 'Dies löst Aufgaben wie:',
-      image: {src: 'img/mlink/diagram.svg', alt: 'mlink architecture'},
+      image: { src: 'img/mlink/diagram.svg', alt: 'mlink architecture' },
       bulletPoints: [
         'Der neu eintretende Mitarbeiter kann am selben Tag seine Zeit korrekt und vor allem digital erfassen.',
         'Das Backoffice eröffnet ein neues Projekt. Die Projektleiter beginnen umgehend mit der visuellen Planung.',
@@ -25,14 +26,17 @@
       title: 'μLink der Kommunikationshub',
       video: {
         poster: 'img/thumbnail/mlink-1080-poster.png',
-        sources: [{
-          src: 'https://storage.googleapis.com/triarc-website/mlink-1080-v2.webm',
-          type: 'video/webm'
-        }, {
-          src: 'https://storage.googleapis.com/triarc-website/mlink-v2.mp4',
-          type: 'video/mp4'
-        }]
-      }
+        sources: [
+          {
+            src: 'https://storage.googleapis.com/triarc-website/mlink-1080-v2.webm',
+            type: 'video/webm',
+          },
+          {
+            src: 'https://storage.googleapis.com/triarc-website/mlink-v2.mp4',
+            type: 'video/mp4',
+          },
+        ],
+      },
     },
     {
       title: 'Klare Grenzen',
@@ -50,14 +54,14 @@
         '                  Anforderungen nicht das ganze ERP skalieren und μLink ist auch nicht von Auslastungsspitzen des ERP\n' +
         '                  betroffen. Es ist dank der Microservice Architektur von μLink sogar möglich einzelne Aspekte der\n' +
         '                  Schnittstelle einzeln zu skalieren. μLink kann On-Premise oder in der Cloud betrieben werden.',
-      image: {src: 'img/mlink/scale.svg',alt: 'scale' },
+      image: { src: 'img/mlink/scale.svg', alt: 'scale' },
     },
     {
       title: 'Schnittstellen',
       content:
         'μLink bietet mit REST und AMQP offene und vielseitige Schnittstellen an. Das Knowhow kann so mit wenig\n' +
         '                  Aufwand intern aufgebaut werden.',
-      image: {src: 'img/mlink/interface.svg', alt: 'interface' },
+      image: { src: 'img/mlink/interface.svg', alt: 'interface' },
     },
     {
       title: 'Versionierung',
@@ -66,7 +70,7 @@
         '                  Anpassungen und Updates am ERP führen nicht zu Tests und Anpassungen an allen abhängigen Systemen,\n' +
         '                  sondern beschränken sich auf μLink. Die Komplexität der Kommunikation wird mit dem ERP gekapselt.\n' +
         '                  μLink setzt bewusst auf offene Standards um keine, nur für mLink zu erlernende, Hürde einzuführen.',
-      image: {src:'img/mlink/versioning.svg',alt: 'versioning' },
+      image: { src: 'img/mlink/versioning.svg', alt: 'versioning' },
     },
     {
       title: 'Sicherheit',
@@ -76,10 +80,9 @@
         '                  die Funktion zu mindern. Es besteht die Möglichkeit μLink in ein Monitoring System für kritische\n' +
         '                  Systeme zu integrieren. μLink bietet eine manuelle Analyse z.B. zur Kontrolle des Zugriffs und der\n' +
         '                  Verwendung der Schnittstellen durch Umsysteme.',
-      image: {src:'img/mlink/security.svg', alt: 'security' },
+      image: { src: 'img/mlink/security.svg', alt: 'security' },
     },
   ]
-
 </script>
 
 <svelte:head>
@@ -89,7 +92,7 @@
 <div class="bg-white">
   {#each contents as content}
     {#if content.video}
-    <Video bind:content={content.video} />
+      <Video bind:content={content.video} />
     {:else}
       <Block bind:content />
     {/if}

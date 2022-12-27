@@ -2,7 +2,9 @@
   <div class="text-gray-700 font-thin not-found">404</div>
   <span class="text-white">Oops, leider haben wir hier nichts</span>
   <span class="text-gray-400"
-    >Melde uns das Problem auf unserem <a class="underline" href="https://github.com/triarc/website/issues">GitHub Repo</a></span
+    >Melde uns das Problem auf unserem <a class="underline" href="https://github.com/triarc/website/issues"
+      >GitHub Repo</a
+    ></span
   >
   <div class="flex items-center">
     <hr class="w-32 mr-6" />

@@ -69,7 +69,12 @@
             </p>
             <div class="mt-6 mb-12">
               <div class="flex space-x-4">
-                <a href="https://slothi.ch" class="px-6 py-2 block bg-indigo-500 text-white rounded-md" target="_blank">
+                <a
+                  href="https://slothi.ch"
+                  rel="noreferrer"
+                  class="px-6 py-2 block bg-indigo-500 text-white rounded-md"
+                  target="_blank"
+                >
                   Mehr erfahren
                 </a>
               </div>
@@ -100,15 +105,23 @@
               Die Auslieferung erfolgt über eigene Wege oder über einer unseren lokalen <a
                 target="_blank"
                 class="underline"
-                href="https://www.ultrakurier.ch/">Partner</a
+                href="https://www.ultrakurier.ch/"
+                rel="noreferrer">Partner</a
               >
             </p>
             <div class="mt-6 mb-12">
               <div class="flex space-x-4">
-                <a href="https://fairpizza.ch" class="px-6 py-2 block bg-red-500 text-white rounded-md" target="_blank">
+                <a
+                  href="https://fairpizza.ch"
+                  class="px-6 py-2 block bg-red-500 text-white rounded-md"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Mehr erfahren
                 </a>
-                <a href="https://demo.fairpizza.ch" class="text-red-500 px-6 py-2" target="_blank"> Demo </a>
+                <a href="https://demo.fairpizza.ch" class="text-red-500 px-6 py-2" target="_blank" rel="noreferrer">
+                  Demo
+                </a>
               </div>
             </div>
           </div>

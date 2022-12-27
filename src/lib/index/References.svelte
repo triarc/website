@@ -27,10 +27,18 @@
             </p>
             <div class="mt-6">
               <div class="flex">
-                <a href="https://play.google.com/store/apps/details?id=com.triarclabs.tanne" target="_blank" rel="noreferrer">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.triarclabs.tanne"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img alt="Get it on Google Play" src="icons/google-play-btn.svg" class="h-12 mr-3" />
                 </a>
-                <a href="https://apps.apple.com/ch/app/porta-portmann-tanne/id1355730154" target="_blank" rel="noreferrer">
+                <a
+                  href="https://apps.apple.com/ch/app/porta-portmann-tanne/id1355730154"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <img alt="Get it on Apple AppStore" src="icons/apple-store-btn.svg" class="h-12" />
                 </a>
               </div>
@@ -81,7 +89,10 @@
               und der Bearbeitung über die Begleitung des Kunden bis hin zum digitalisierten Bestellwesen.
             </p>
             <div class="flex pt-4  text-lg text-gray-700 cursor-pointer">
-              <a href="/stories" class="underline decoration-red-triarc text-red-triarc font-semibold py-1 inline-block mt-2">
+              <a
+                href="/stories"
+                class="underline decoration-red-triarc text-red-triarc font-semibold py-1 inline-block mt-2"
+              >
                 <span class="pr-4">Lese mehr dazu in unserer Success Story</span>
               </a>
             </div>

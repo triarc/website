@@ -1,6 +1,6 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
-  import type {BlockContent} from '$lib/components/Block.svelte'
+  import type { BlockContent } from '$lib/components/Block.svelte'
 
   function serializeSchema(jobPosting) {
     return (
@@ -138,117 +138,143 @@
       title: 'Starte dein Abenteuer!',
       content:
         'Wir sind ein junges  und dynamisches Team auf der Suche nach Verstärkung für unsere täglichen Herausforderungen.<br/><br/>Unser Team sucht stetig neue Talente im Bereich Entwicklung. Wir haben dazu vier Stufen definiert, in welchem wir alle Positionen einordnen.',
-      image: {src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Carrer'},
+      image: { src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Carrer' },
+    },
+    {
+      title: 'Was wir grundsätzlich erwarten',
+      content: 'Unabhängig von deiner gewünschten Position und vorhanden Erfahrung fordern wir.',
+      items: [
+        {
+          title: 'Begeisterung',
+          content:
+            'Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert dich.',
+        },
+        {
+          title: 'Kommunikativ',
+          content:
+            'Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen).',
+        },
+        {
+          title: 'Offen',
+          content:
+            'Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen. Du magst Menschen und behandelst sie wie Mitmenschen.',
+        },
+        {
+          title: 'Ausbildung',
+          content:
+            'Leerabschluss/HF/Bachelor/Master oder selbst beigebracht. Bei uns ist nichts strikt vorgegeben, wir evaluieren immer zu deiner Situation. Erfahrung in unserem Technologien ist natürlich gern gesehen und ab Stufe Professional erwünscht.',
+        },
+      ],
     },
     {
       title: 'Junior Software Engineer',
       content:
         'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
-      image:  {src: 'img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
+      image: { src: 'img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
       bulletPoints: [
         'Erste Erfahrungen mit C# oder Java',
         'Erste Erfahrungen im Bereich Web / Single Page Applications',
-      ]
+      ],
     },
     {
       title: 'Professional Software Engineer',
       content:
         'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
-      image:  {src:'img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
+      image: { src: 'img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
       bulletPoints: [
-        'Erfahrungen mit C# in der Entwicklung von API\'s',
+        "Erfahrungen mit C# in der Entwicklung von API's",
         'Erfahrungen im Bereich Web und Angular',
-        'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil'
-      ]
+        'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
+      ],
     },
     {
       title: 'Senior Software Engineer',
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
-      image:  {src: 'img/jobs/super_woman.svg', alt: 'Senior Software Engineer' },
+      image: { src: 'img/jobs/super_woman.svg', alt: 'Senior Software Engineer' },
       bulletPoints: [
-        'Erfahrungen mit C# in der Entwicklung von API\'s',
+        "Erfahrungen mit C# in der Entwicklung von API's",
         'Erfahrungen im Bereich Web und Angular',
         'Erfahrungen mit Elasticsearch / Postgres / MongoDB',
-        'Erfahrungen Docker / Kubernetes / Gitlab CI'
-      ]
+        'Erfahrungen Docker / Kubernetes / Gitlab CI',
+      ],
     },
     {
       title: '(Dev)Ops Engineer',
       content:
         'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
 
-      image:  {src:'img/jobs/cloud_hosting.svg', alt: 'Dev/Ops Engineer' },
+      image: { src: 'img/jobs/cloud_hosting.svg', alt: 'Dev/Ops Engineer' },
       bulletPoints: [
         'Erfahrungen Docker / Kubernetes / Gitlab CI',
         'Erfahrungen mit Google Cloud / Azure von Vorteil',
         'Erfahrungen mit Cypress / E2E Testing von Vorteil',
-      ]
-    },
-    {
-      title: 'Was wir grundsätzlich erwarten',
-      content:
-        'Unabhängig von deiner gewünschten Position und vorhanden Erfahrung fordern wir.',
-      bulletPoints: [
-        'Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert dich.',
-        'Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen).',
-        'Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen. Du magst Menschen und behandelst sie wie Mitmenschen.',
-        'Leerabschluss/HF/Bachelor/Master oder selbst beigebracht. Bei uns ist nichts strikt vorgegeben, wir evaluieren immer zu deiner Situation. Erfahrung in unserem Technologien ist natürlich gern gesehen und ab Stufe Professional erwünscht.',
-      ]
+      ],
     },
     {
       title: 'Was wir dir bieten',
-      content: 'Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.',
+      content:
+        'Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.',
       cards: [
         {
           title: '40 Stunden-Woche',
-          content: 'Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.'
+          content:
+            'Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.',
         },
         {
           title: 'Technologie',
-          content: 'Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Die richtige suchen und finden wir zusammen.',
+          content:
+            'Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Die richtige suchen und finden wir zusammen.',
         },
         {
           title: 'Hardware',
-          content: 'Wähle das Setup, das zu dir passt.'
+          content: 'Wähle das Setup, das zu dir passt.',
         },
         {
           title: 'Home-Office',
-          content: 'Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.'
+          content: 'Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.',
         },
         {
           title: 'Kaffee / Bar',
-          content: 'Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf deinen Zugriff. Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken. Und für den Beerenhunger auch mal frische Früchtchen.',
+          content:
+            'Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf deinen Zugriff. Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken. Und für den Beerenhunger auch mal frische Früchtchen.',
         },
         {
           title: 'Company Events',
-          content: 'Team-Kochevents via Teams, Legosteine verbauen (streng nach Anleitung, versteht sich) und in besseren Zeiten auch Ausflüge an Festivals oder eine Reise nach Italien...: Du hast Ideen, wir ein Budget dazu.'
+          content:
+            'Team-Kochevents via Teams, Legosteine verbauen (streng nach Anleitung, versteht sich) und in besseren Zeiten auch Ausflüge an Festivals oder eine Reise nach Italien...: Du hast Ideen, wir ein Budget dazu.',
         },
         {
           title: 'Office Gym',
-          content: 'Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse warten Blei und Matten auf Beschäftigung. Unser wöchentliche Gym Session mit Coach hilft dir die nötige Motivation zu finden.'
+          content:
+            'Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse warten Blei und Matten auf Beschäftigung. Unser wöchentliche Gym Session mit Coach hilft dir die nötige Motivation zu finden.',
         },
         {
           title: 'Office Jungle',
-          content: 'Unser Office direkt am Bahnhof Hardbrücke ist vollständig bepflanzt. Damit dir nie die Luft ausgeht und du stehts einen schönen Hintergrund in deinem Teams-Call präsentieren kannst.'
+          content:
+            'Unser Office direkt am Bahnhof Hardbrücke ist vollständig bepflanzt. Damit dir nie die Luft ausgeht und du stehts einen schönen Hintergrund in deinem Teams-Call präsentieren kannst.',
         },
         {
           title: 'Coaching',
-          content: 'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggesprache. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, dein Seniorität zu fordern und unser Team zu stärken.'
+          content:
+            'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggesprache. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, dein Seniorität zu fordern und unser Team zu stärken.',
         },
         {
           title: 'Transparenz für alle',
-          content: 'Alle Löhne werden offen kommuniziert. Es gibt keine individuellen Löhne. Die Löhne richten sich nach deiner Stufe im Trackeesystem. Für Seniors gibt’s aktuell 104k – 136k CHF. Eine variable Komponente ist der Bonus, welcher sich nach den aktuellen Quartalszahlen richtet. Dieser wird pro Quartal im Team besprechen.'
+          content:
+            'Alle Löhne werden offen kommuniziert. Es gibt keine individuellen Löhne. Die Löhne richten sich nach deiner Stufe im Trackeesystem. Für Seniors gibt’s aktuell 104k – 136k CHF. Eine variable Komponente ist der Bonus, welcher sich nach den aktuellen Quartalszahlen richtet. Dieser wird pro Quartal im Team besprechen.',
         },
         {
           title: 'Soziokratie',
-          content: 'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?'
+          content:
+            'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?',
         },
         {
           title: 'Ein soziales Umfeld',
-          content: 'Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork: Nichts ist uns fremd. Denn Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig. Auch gut zu wissen: Wer sich beim Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten Einzelzimmer mit Seeblick. #privatversichert...'
+          content:
+            'Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork: Nichts ist uns fremd. Denn Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig. Auch gut zu wissen: Wer sich beim Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten Einzelzimmer mit Seeblick. #privatversichert...',
         },
-      ]
+      ],
     },
     {
       title: 'Wie läuft unser Bewerbungsverfahren',
@@ -256,29 +282,31 @@
       steps: [
         {
           title: 'Bewerbung einreichen',
-          content: 'Nimm den Mut zusammen und schicke uns eine Mail an development@triarc-labs mit deinen Unterlagen.'
+          content: 'Nimm den Mut zusammen und schicke uns eine Mail an development@triarc-labs mit deinen Unterlagen.',
         },
         {
           title: 'Persönliches Interview',
-          content: 'Nach kurzer Prüfung von deinem CV und dem ersten Eindruck, melden wir uns bei dir für ein erstes Vorstellungsgespräch. Remote oder in unserem Office können wir uns gegenseitig austauschen und schauen ob sich synergien ergeben.'
+          content:
+            'Nach kurzer Prüfung von deinem CV und dem ersten Eindruck, melden wir uns bei dir für ein erstes Vorstellungsgespräch. Remote oder in unserem Office können wir uns gegenseitig austauschen und schauen ob sich synergien ergeben.',
         },
         {
           title: 'Technisches Interview',
-          content: 'Damit wir dich initial in unser Trackeesystem einstufen können, bekommst du die Gelegenheit dich mit einem Entwickler austauschen.'
+          content:
+            'Damit wir dich initial in unser Trackeesystem einstufen können, bekommst du die Gelegenheit dich mit einem Entwickler austauschen.',
         },
         {
           title: 'Team Interview',
-          content: 'Das Team hat bei uns das letzte Wort. Lerne den Rest von uns kennen und sprich über deine Passion und warum du Teil vom Team werden willst.'
-        }
-      ]
-    }
-  ];
+          content:
+            'Das Team hat bei uns das letzte Wort. Lerne den Rest von uns kennen und sprich über deine Passion und warum du Teil vom Team werden willst.',
+        },
+      ],
+    },
+  ]
 </script>
 
 <svelte:head>
   <title>Jobs - triarc-labs</title>
 </svelte:head>
-
 
 {#each jobPostings as jobPosting, i}
   {@html serializeSchema(jobPosting)}
@@ -289,19 +317,21 @@
     <Block bind:content />
   {/each}
 
-  <div class="bg-blue-triarc text-blue-triarc bg-opacity-20">
+  <div class="bg-blue-triarc text-gray-800 bg-opacity-20">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold sm:text-4xl">
         <span class="block">Immer noch hier?</span>
       </h2>
       <p class="mt-4 text-lg leading-6">
-        Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in unserem Jungle.
+        Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in
+        unserem Jungle.
       </p>
       <p class="mt-4 text-lg leading-6">
-        Für Fragen und Bewerbungen kannst du dich an <a href="mailto:development@triarc-labs.com" class="underline">development@triarc-labs.com</a> wenden.
+        Für Fragen und Bewerbungen kannst du dich an <a href="mailto:development@triarc-labs.com" class="underline"
+          >development@triarc-labs.com</a
+        > wenden.
       </p>
     </div>
   </div>
   <img src="img/jobs/jungle.svg" class="w-full" alt="triarc jungle" id="jungle" />
 </div>
-

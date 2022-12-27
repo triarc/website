@@ -2,35 +2,49 @@
   <div class="text-center max-w-screen-xl mx-auto py-24 md:py-32 px-4 sm:px-6 lg:px-8" id="customers">
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Einige unserer Kunden</h2>
     <div class="mt-6 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-8">
-      <a href="https://walo.ch" rel="noreferrer" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 filter">
+      <a
+        href="https://walo.ch"
+        rel="noreferrer"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
+      >
         <img height="80" class="max-h-16" src="/img/customer/walo-logo.svg" loading="lazy" alt="walo" />
       </a>
       <a
-        href="https://www.kibag.ch" rel="noreferrer"
+        href="https://www.kibag.ch"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-20" src="/img/customer/kibag-logo.svg" loading="lazy" alt="kibag" />
       </a>
-      <a href="https://riwax.ch/" rel="noreferrer" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 filter">
+      <a
+        href="https://riwax.ch/"
+        rel="noreferrer"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
+      >
         <img height="80" class="max-h-20" src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
       </a>
       <a
-        href="https://switzerland.rhomberg-sersa.com" rel="noreferrer"
+        href="https://switzerland.rhomberg-sersa.com"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-14" src="/img/customer/sersa-logo.svg" loading="lazy" alt="sersa" />
       </a>
       <a
-        href="https://www.enzler.com/" rel="noreferrer"
+        href="https://www.enzler.com/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/enzler-logo.png" loading="lazy" alt="enzler" />
       </a>
       <a
-        href="https://www.ortho-team.ch/" rel="noreferrer"
+        href="https://www.ortho-team.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
@@ -38,14 +52,20 @@
       </a>
       <!--            volvo, schindler, espace, srf, helsana  -->
 
-      <a href="https://www.tanne.ch/" rel="noreferrer" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 ">
+      <a
+        href="https://www.tanne.ch/"
+        rel="noreferrer"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 "
+      >
         <picture class="max-h-12 filter">
           <source type="image/webp" srcset="/img/customer/tanne-logo.webp" alt="tanne" />
           <img height="80" class="max-h-20" src="/img/customer/tanne-logo.png" loading="lazy" alt="tanne" />
         </picture>
       </a>
       <a
-        href="https://www.ideesport.ch/" rel="noreferrer"
+        href="https://www.ideesport.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 "
       >
@@ -55,7 +75,8 @@
         </picture>
       </a>
       <a
-        href="https://www.bechterew.ch/" rel="noreferrer"
+        href="https://www.bechterew.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
@@ -63,21 +84,24 @@
       </a>
 
       <a
-        href="https://www.srf.ch/" rel="noreferrer"
+        href="https://www.srf.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/srf-logo.svg" loading="lazy" alt="srf" />
       </a>
       <a
-        href="https://www.helsana.ch/" rel="noreferrer"
+        href="https://www.helsana.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-6" src="/img/customer/helsana-logo.svg" loading="lazy" alt="helsana" />
       </a>
       <a
-        href="http://www.wwag.ch/" rel="noreferrer"
+        href="http://www.wwag.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
@@ -90,14 +114,25 @@
         />
       </a>
 
-      <a href="http://www.glb.ch/" rel="noreferrer" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 filter">
+      <a
+        href="http://www.glb.ch/"
+        rel="noreferrer"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
+      >
         <img height="80" class="max-h-16" src="/img/customer/glb-logo.svg" loading="lazy" alt="glb" />
       </a>
-      <a href="http://www.ebl.ch/" rel="noreferrer" target="_blank" class="col-span-1 flex items-center justify-center py-8 px-8 filter">
+      <a
+        href="http://www.ebl.ch/"
+        rel="noreferrer"
+        target="_blank"
+        class="col-span-1 flex items-center justify-center py-8 px-8 filter"
+      >
         <img height="80" class="max-h-16" src="/img/customer/ebl-logo.svg" loading="lazy" alt="ebl" />
       </a>
       <a
-        href="https://www.dorean.ch/" rel="noreferrer"
+        href="https://www.dorean.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
@@ -105,14 +140,16 @@
       </a>
 
       <a
-        href="https://www.christen-ag.ch/" rel="noreferrer"
+        href="https://www.christen-ag.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-12" src="/img/customer/christen.svg" loading="lazy" alt="christen ag" />
       </a>
       <a
-        href="https://www.burkhalter.ch/" rel="noreferrer"
+        href="https://www.burkhalter.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
@@ -125,7 +162,8 @@
         />
       </a>
       <a
-        href="https://www.renggli.swiss" rel="noreferrer"
+        href="https://www.renggli.swiss"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
@@ -133,21 +171,24 @@
       </a>
 
       <a
-        href="https://www.volvotrucks.com/" rel="noreferrer"
+        href="https://www.volvotrucks.com/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-24" src="/img/customer/volvo-logo.png" loading="lazy" alt="volvo" />
       </a>
       <a
-        href="https://espacereal.ch/" rel="noreferrer"
+        href="https://espacereal.ch/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >
         <img height="80" class="max-h-10" src="/img/customer/espace-logo.svg" loading="lazy" alt="espace" />
       </a>
       <a
-        href="https://www.schindler.com/" rel="noreferrer"
+        href="https://www.schindler.com/"
+        rel="noreferrer"
         target="_blank"
         class="col-span-1 flex items-center justify-center py-8 px-8 filter"
       >

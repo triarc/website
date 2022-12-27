@@ -13,9 +13,7 @@ module.exports = {
         'blue-triarc': '#0077c8',
         'yellow-triarc': '#FFE74C',
       },
-      maxWidth: {
-
-      },
+      maxWidth: {},
       animation: {
         wiggle: 'wiggle 1s ease',
       },

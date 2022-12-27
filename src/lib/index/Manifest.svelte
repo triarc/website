@@ -32,9 +32,7 @@
         {#each values as { id, title, content }}
           <div class="pt-6">
             <dt class="text-lg">
-              <button
-                class="text-left w-full flex justify-between items-start focus:outline-none cursor-pointer"
-              >
+              <button class="text-left w-full flex justify-between items-start focus:outline-none cursor-pointer">
                 <span class="font-medium flex items-center">
                   {title}
                 </span>

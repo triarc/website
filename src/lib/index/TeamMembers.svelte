@@ -220,15 +220,15 @@
       .sort((t1, t2) => t1.name.localeCompare(t2.name))
   }
 
-  function switchMode(val: { detail: boolean }) {
-    nerdMode = val.detail
-    if (nerdMode) {
-      displayedMembers.push(...teamMember.slice(teamMember.length - 2).map((m) => mapMember(m)))
-    } else {
-      displayedMembers.splice(teamMember.length - 2, 2)
-    }
-    displayedMembers = [...displayedMembers]
-  }
+  // function switchMode(val: { detail: boolean }) {
+  //   nerdMode = val.detail
+  //   if (nerdMode) {
+  //     displayedMembers.push(...teamMember.slice(teamMember.length - 2).map((m) => mapMember(m)))
+  //   } else {
+  //     displayedMembers.splice(teamMember.length - 2, 2)
+  //   }
+  //   displayedMembers = [...displayedMembers]
+  // }
 </script>
 
 <div class="bg-white bg-about-us">
