@@ -102,6 +102,14 @@
     class="bg-gray-100 relative bg-opacity-20 flex flex-col flex items-center min-h-screen lg:aspect-[9/19] justify-center intro"
   >
     <img src={logo} alt="triarc laboratories ltd" width="167" height="101" />
+    <video
+      autoplay
+      muted
+      class="object-cover"
+    >
+      <source src="https://storage.googleapis.com/triarc-website/drone-intro.mp4" type="video/mp4" />
+      <source src="https://storage.googleapis.com/triarc-website/drone-intro.webm" type="video/webm" />
+    </video>
     <button
       class="animate-bounce lg:hidden absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
       on:click={scrollToMenu}

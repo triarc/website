@@ -3,7 +3,7 @@
     title: string
     content: string
     link?: { href: string; text: string; target?: string }
-    image?: { src: string; alt: string }
+    image?: { src: string; alt: string; height?: number }
     bulletPoints?: string[]
     cards?: { title: string; content: string }
     steps?: { title: string; content: string }
@@ -107,7 +107,7 @@
     </div>
 
     {#if content.image}
-      <img src={content.image.src} class="w-80 mt-8 mx-12" alt={content.image.alt} />
+      <img src={content.image.src} class="mt-8 mx-12" width="320" height="{content.image.height}" alt={content.image.alt} />
     {/if}
   </div>
 </div>

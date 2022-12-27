@@ -1,234 +1,106 @@
 <script lang="ts">
-  let nerdMode = false
+  import serge from '../assets/avatars/serge.png?width=255&format=webp;png&metadata'
+  import marco from '../assets/avatars/marco.png?width=255&format=webp;png&metadata'
+  import pascal from '../assets/avatars/pascal.png?width=255&format=webp;png&metadata'
+  import elke from '../assets/avatars/elke.png?width=255&format=webp;png&metadata'
+  import max from '../assets/avatars/max.png?width=255&format=webp;png&metadata'
+  import iris from '../assets/avatars/iris.png?width=255&format=webp;png&metadata'
+  import dave from '../assets/avatars/dave.png?width=255&format=webp;png&metadata'
+  import urban from '../assets/avatars/urban.png?width=255&format=webp;png&metadata'
+  import eduan from '../assets/avatars/eduan.png?width=255&format=webp;png&metadata'
+  import michel from '../assets/avatars/michel.png?width=255&format=webp;png&metadata'
+  import luka from '../assets/avatars/luka.png?width=255&format=webp;png&metadata'
+  import chris from '../assets/avatars/chris.png?width=255&format=webp;png&metadata'
+  import lars from '../assets/avatars/lars.png?width=255&format=webp;png&metadata'
+  import david from '../assets/avatars/david.png?width=255&format=webp;png&metadata'
+
   let teamMember = [
     {
       name: 'Serge Müller',
       job: 'CEO / Partner',
       nerdJob: 'CEO / Partner',
-      image: 'img/avatars/serge.png',
-      nerdImage: 'img/avatars/serge.png',
-      onlyInNerdMode: false,
+      images: serge,
     },
     {
       name: 'Marco Schmidlin',
       job: 'CTO / Partner',
       nerdJob: 'CTO / Partner',
-      image: 'img/avatars/marco.png',
-      nerdImage: 'img/avatars/marco.png',
-      onlyInNerdMode: false,
+      images: marco,
     },
     {
       name: 'Elke Engel',
       job: 'CFO / Partner',
       nerdJob: 'CFO / Partner',
-      image: 'img/avatars/elke.png',
-      nerdImage: 'img/avatars/elke-nerd.png',
-      onlyInNerdMode: false,
+      images: elke,
     },
     {
       name: 'Pascal Bertschi',
       job: 'CCO / Partner',
       nerdJob: 'Typescript maniac',
-      image: 'img/avatars/pascal.png',
-      nerdImage: 'img/avatars/pascal-nerd.png',
-      onlyInNerdMode: false,
+      images: pascal,
     },
     {
       name: 'Max Lüthi',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/max.png',
-      nerdImage: 'img/avatars/max.png',
-      onlyInNerdMode: false,
+      images: max,
     },
-    // {
-    //   name: 'Fabrizio Lazaretti',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/fabrizio.png',
-    //   nerdImage: 'img/avatars/fabrizio.png',
-    //   onlyInNerdMode: false,
-    // },
-    // {
-    //   name: 'Mattia Ninivaggi',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/mattia.png',
-    //   nerdImage: 'img/avatars/mattia.png',
-    //   onlyInNerdMode: false,
-    // },
-    // {
-    //   name: 'Warwara Panyushkina',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/warwara.png',
-    //   nerdImage: 'img/avatars/warwara.png',
-    //   onlyInNerdMode: false,
-    // },
-    // {
-    //   name: 'Andrea Honegger',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/andrea.png',
-    //   nerdImage: 'img/avatars/andrea.png',
-    //   onlyInNerdMode: false,
-    // },
     {
       name: 'Iris Zenegaglia',
       job: 'Project Lead',
       nerdJob: 'Project Lead',
-      image: 'img/avatars/iris.png',
-      nerdImage: 'img/avatars/iris.png',
-      onlyInNerdMode: false,
+      images: iris,
     },
-    // {
-    //   name: 'Paul Tingle',
-    //   job: 'Nearshore Developer',
-    //   nerdJob: 'Nearshore Developer',
-    //   image: 'img/avatars/paul.png',
-    //   nerdImage: 'img/avatars/paul.png',
-    //   onlyInNerdMode: false,
-    // },
     {
       name: 'Dave Haug',
       job: 'Business Development',
       nerdJob: 'Business Development',
-      image: 'img/avatars/dave.png',
-      nerdImage: 'img/avatars/dave.png',
-      onlyInNerdMode: false,
+      images: dave,
     },
     {
       name: 'Andre Urban',
       job: 'Administration',
       nerdJob: 'Administration',
-      image: 'img/avatars/urban.png',
-      nerdImage: 'img/avatars/urban.png',
-      onlyInNerdMode: false,
+      images: urban,
     },
     {
       name: 'Eduardo Lavaque',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/eduan.png',
-      nerdImage: 'img/avatars/eduan.png',
-      onlyInNerdMode: false,
+      images: eduan,
     },
     {
       name: 'Michel Gabriel',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/michel.png',
-      nerdImage: 'img/avatars/michel.png',
-      onlyInNerdMode: false,
+      images: michel,
     },
     {
       name: 'Luka Kramer',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/luka.png',
-      nerdImage: 'img/avatars/luka.png',
-      onlyInNerdMode: false,
+      images: luka,
     },
     {
       name: 'Chris Thonfeld',
       job: 'Nearshore Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/chris.png',
-      nerdImage: 'img/avatars/chris.png',
-      onlyInNerdMode: false,
+      images: chris,
     },
     {
       name: 'Lars Hornbaker',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/lars.png',
-      nerdImage: 'img/avatars/lars.png',
-      onlyInNerdMode: false,
+      images: lars,
     },
     {
       name: 'David Jahn',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/david.png',
-      nerdImage: 'img/avatars/david.png',
-      onlyInNerdMode: false,
-    },
-    // {
-    //   name: 'Sandra Vieira da Silva Lopes',
-    //   job: 'Facility Manager',
-    //   nerdJob: 'Facility Manager',
-    //   image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-    //   nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-    // },
-    // {
-    //   name: 'Bam Bam',
-    //   job: 'Quality Assurance',
-    //   nerdJob: 'Quality Assurance',
-    //   image: 'img/avatars/bambam.png',
-    //   nerdImage: 'img/avatars/bambam.png',
-    // },
-    {
-      name: 'Kubernetes',
-      job: '',
-      image: '',
-      nerdJob: 'CIO',
-      nerdImage: 'img/technology/kubernetes.svg',
-      onlyInNerdMode: true,
-    },
-    {
-      name: 'Prometheus',
-      job: '',
-      image: '',
-      nerdJob: '24/7 Support',
-      nerdImage: 'img/technology/prometheus.svg',
-      onlyInNerdMode: true,
+      images: david,
     },
   ]
-  let sizes = [144, 255]
-  let displayedMembers = mapMembers()
-
-  function getWebpImage(val: string): string | null {
-    if (val.endsWith('svg')) {
-      return null
-    }
-    return val.substr(0, val.length - 3) + 'webp'
-  }
-
-  function getSourceSet(val: string) {
-    if (val.endsWith('svg')) {
-      return val
-    }
-    return `${sizes.map((s) => `${val.substr(0, val.length - 4)}-${s}.png ${s}w`).join(',')}`
-  }
-
-  function mapMember(member) {
-    return {
-      name: member.name,
-      job: member.job,
-      nerdImage: getSourceSet(member.nerdImage),
-      nerdWebpImage: getWebpImage(member.nerdImage),
-      image: getSourceSet(member.image),
-      webpImage: getWebpImage(member.image),
-      onlyInNerdMode: member.onlyInNerdMode,
-    }
-  }
-
-  function mapMembers() {
-    return teamMember
-      .filter((t) => !t.onlyInNerdMode || nerdMode)
-      .map((t) => mapMember(t))
-      .sort((t1, t2) => t1.name.localeCompare(t2.name))
-  }
-
-  // function switchMode(val: { detail: boolean }) {
-  //   nerdMode = val.detail
-  //   if (nerdMode) {
-  //     displayedMembers.push(...teamMember.slice(teamMember.length - 2).map((m) => mapMember(m)))
-  //   } else {
-  //     displayedMembers.splice(teamMember.length - 2, 2)
-  //   }
-  //   displayedMembers = [...displayedMembers]
-  // }
+  console.log(teamMember)
 </script>
 
 <div class="bg-white bg-about-us" id="team">
@@ -240,32 +112,25 @@
       </div>
       <ul
         class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5"
-        class:nerd={nerdMode}
       >
-        {#each displayedMembers as member}
+        {#each teamMember as member}
           <li class="flex">
             <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
               <div class="card flex-grow flex items-center justify-center">
                 <div class="card-content  border-b border-blue-triarc">
                   <picture class="front-card w-8 transition-all">
-                    {#if member.webpImage}
-                      <source type="image/webp" srcset={member.webpImage} loading="lazy" />
-                    {/if}
+                    {#each member.images as image}
+                      <source type="image/{image.format}" srcset={image.src} loading="lazy" />
+                    {/each}
                     <img
-                      srcset={member.image}
+                      src={member.images[1].src}
                       alt={member.name}
-                      width="144"
-                      height="144"
+                      width="255"
+                      height="255"
                       loading="lazy"
                       class="drop-shadow-2xl filter "
                     />
                   </picture>
-                  <!--                  <picture class="back-card">-->
-                  <!--                    {#if member.nerdWebpImage}-->
-                  <!--                      <source type="image/webp" srcset={member.nerdWebpImage} loading="lazy" />-->
-                  <!--                    {/if}-->
-                  <!--                    <img srcset={member.nerdImage} alt="nerd {member.name}" width="144" height="144" loading="lazy" />-->
-                  <!--                  </picture>-->
                 </div>
               </div>
               <div class="space-y-2">
