@@ -61,6 +61,13 @@
     menuOpen = false
   }
 
+  function scrollToMenu() {
+    document.getElementById('page').scrollTo({
+      behavior: 'smooth',
+      top: document.getElementById('nav-menu').offsetTop,
+    })
+  }
+
   onMount(() => {
     const messages = {
       en: "%c We're hiring! Checkout https://triarc-labs.com/jobs",
@@ -85,17 +92,37 @@
 </script>
 
 <div
-  class="flex flex-col md:flex-row fixed max-h-screen overflow-y-auto md:overflow-hidden w-screen md:w-auto z-30 top-0 left-0 min-h-screen transition-transform z-10 bg-black page {data.pathname ===
+  class="flex flex-col lg:flex-row fixed max-h-screen overflow-y-auto lg:overflow-hidden w-screen lg:w-auto z-30 top-0 left-0 min-h-screen transition-transform z-10 bg-black page {data.pathname ===
   '/'
     ? 'landing'
     : 'content'} {menuOpen ? 'open' : ''}"
+  id="page"
 >
   <div
-    class="bg-gray-100 bg-opacity-20 flex flex-col flex items-center min-h-screen md:aspect-[9/19] justify-center intro"
+    class="bg-gray-100 relative bg-opacity-20 flex flex-col flex items-center min-h-screen lg:aspect-[9/19] justify-center intro"
   >
     <img src={logo} alt="triarc laboratories ltd" width="167" height="101" />
+    <button
+      class="animate-bounce absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
+      on:click={scrollToMenu}
+    >
+      <svg
+        class="w-6 h-6 text-red-triarc"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+      >
+        <path d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </button>
   </div>
-  <nav class="text-white bg-black flex items-center min-h-screen min-h-0 flex-col justify-center w-full md:max-w-sm">
+  <nav
+    class="text-white bg-black flex items-center min-h-screen flex-col justify-center w-full lg:max-w-sm"
+    id="nav-menu"
+  >
     <div class="w-full py-16 min-h-0 flex flex-col">
       <h2 class="font-bold border-b-2 border-white mx-12">Inhaltsverzeichnis</h2>
       <ul class="overflow-y-auto min-h-0 px-8 scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-red-triarc">
@@ -119,8 +146,8 @@
   </nav>
 </div>
 
-<div class="md:pl-96">
-  <div class="h-16 sticky top-0 z-20 bg-black w-full py-2 px-4 flex items-center md:hidden">
+<div class="lg:pl-96 main-container {data.pathname === '/' ? 'landing' : 'content'}">
+  <div class="navbar h-16 sticky top-0 z-20 bg-black w-full py-2 px-4 flex items-center lg:hidden">
     <button class="py-2 px-2 rounded-md" on:click={toggle} aria-label="Navigation Menu">
       <svg width="32px" height="25px" viewBox="0 0 29 25" xmlns="http://www.w3.org/2000/svg">
         <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2">
@@ -144,7 +171,12 @@
   .page.content.open {
     transform: translateX(-100%) translateX(100vw);
   }
-  @media (min-width: 768px) {
+  .main-container.content {
+  }
+  .main-container.landing .navbar {
+    @apply -translate-y-full;
+  }
+  @media (min-width: 1024px) {
     .page.content,
     .page.content.open {
       transform: translateX(-100%) translateX(24rem);
