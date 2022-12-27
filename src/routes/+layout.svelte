@@ -103,7 +103,7 @@
   >
     <img src={logo} alt="triarc laboratories ltd" width="167" height="101" />
     <button
-      class="animate-bounce absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
+      class="animate-bounce lg:hidden absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
       on:click={scrollToMenu}
     >
       <svg
