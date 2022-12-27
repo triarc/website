@@ -27,10 +27,10 @@
             </p>
             <div class="mt-6">
               <div class="flex">
-                <a href="https://play.google.com/store/apps/details?id=com.triarclabs.tanne" target="_blank">
+                <a href="https://play.google.com/store/apps/details?id=com.triarclabs.tanne" target="_blank" rel="noreferrer">
                   <img alt="Get it on Google Play" src="icons/google-play-btn.svg" class="h-12 mr-3" />
                 </a>
-                <a href="https://apps.apple.com/ch/app/porta-portmann-tanne/id1355730154" target="_blank">
+                <a href="https://apps.apple.com/ch/app/porta-portmann-tanne/id1355730154" target="_blank" rel="noreferrer">
                   <img alt="Get it on Apple AppStore" src="icons/apple-store-btn.svg" class="h-12" />
                 </a>
               </div>
@@ -40,7 +40,7 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="">
-              <div class="flex items-center space-x-3" on:click={() => chat('pascal')}>
+              <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
                 </div>
@@ -48,25 +48,6 @@
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
                   <div class="font-light text-gray-500">Software Lead</div>
                 </div>
-<!--                <div class="flex items-center text-gray-500 border-gray-500 border-l px-4 cursor-pointer">-->
-<!--                  <svg-->
-<!--                    aria-hidden="true"-->
-<!--                    focusable="false"-->
-<!--                    data-prefix="fal"-->
-<!--                    data-icon="comment-lines"-->
-<!--                    role="img"-->
-<!--                    xmlns="http://www.w3.org/2000/svg"-->
-<!--                    viewBox="0 0 512 512"-->
-<!--                    class="h-4"-->
-<!--                  >-->
-<!--                    <path-->
-<!--                      fill="currentColor"-->
-<!--                      d="M280 272H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h144c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm96-96H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zM256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 384c-28.3 0-56.3-4.3-83.2-12.8l-15.2-4.8-13 9.2c-23 16.3-58.5 35.3-102.6 39.6 12-15.1 29.8-40.4 40.8-69.6l7.1-18.7-13.7-14.6C47.3 313.7 32 277.6 32 240c0-97 100.5-176 224-176s224 79 224 176-100.5 176-224 176z"-->
-<!--                      class=""-->
-<!--                    />-->
-<!--                  </svg>-->
-<!--                  <span class="ml-2">Chat</span>-->
-<!--                </div>-->
               </div>
             </footer>
           </blockquote>
@@ -100,8 +81,8 @@
               und der Bearbeitung über die Begleitung des Kunden bis hin zum digitalisierten Bestellwesen.
             </p>
             <div class="flex pt-4  text-lg text-gray-700 cursor-pointer">
-              <a href="/stories" class="flex items-center">
-                <span class="pr-4 underline">Lesen Sie mehr dazu in unserer Success Story</span>
+              <a href="/stories" class="underline decoration-red-triarc text-red-triarc font-semibold py-1 inline-block mt-2">
+                <span class="pr-4">Lese mehr dazu in unserer Success Story</span>
               </a>
             </div>
           </div>
@@ -117,28 +98,6 @@
                   <div class="text-base font-medium text-gray-700">Elke Engel</div>
                   <div class="font-light text-gray-500">Project Lead</div>
                 </div>
-<!--                <div-->
-<!--                  class="flex items-center text-gray-500 border-gray-500 border-l pl-4 pr-2 cursor-pointer"-->
-<!--                  on:click={() => chat('elke')}-->
-<!--                >-->
-<!--                  <svg-->
-<!--                    aria-hidden="true"-->
-<!--                    focusable="false"-->
-<!--                    data-prefix="fal"-->
-<!--                    data-icon="comment-lines"-->
-<!--                    role="img"-->
-<!--                    xmlns="http://www.w3.org/2000/svg"-->
-<!--                    viewBox="0 0 512 512"-->
-<!--                    class="h-4"-->
-<!--                  >-->
-<!--                    <path-->
-<!--                      fill="currentColor"-->
-<!--                      d="M280 272H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h144c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm96-96H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zM256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 384c-28.3 0-56.3-4.3-83.2-12.8l-15.2-4.8-13 9.2c-23 16.3-58.5 35.3-102.6 39.6 12-15.1 29.8-40.4 40.8-69.6l7.1-18.7-13.7-14.6C47.3 313.7 32 277.6 32 240c0-97 100.5-176 224-176s224 79 224 176-100.5 176-224 176z"-->
-<!--                      class=""-->
-<!--                    />-->
-<!--                  </svg>-->
-<!--                  <span class="ml-2">Chat</span>-->
-<!--                </div>-->
               </div>
             </footer>
           </blockquote>
@@ -176,7 +135,7 @@
         <div class="mt-4 pt-4">
           <blockquote>
             <footer class="">
-              <div class="flex items-center space-x-3" on:click={() => chat('pascal')}>
+              <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
                   <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
                 </div>
@@ -184,25 +143,6 @@
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
                   <div class="font-light text-gray-500">Software Lead</div>
                 </div>
-<!--                <div class="flex items-center text-gray-500 border-gray-500 border-l px-4 cursor-pointer">-->
-<!--                  <svg-->
-<!--                    aria-hidden="true"-->
-<!--                    focusable="false"-->
-<!--                    data-prefix="fal"-->
-<!--                    data-icon="comment-lines"-->
-<!--                    role="img"-->
-<!--                    xmlns="http://www.w3.org/2000/svg"-->
-<!--                    viewBox="0 0 512 512"-->
-<!--                    class="h-4"-->
-<!--                  >-->
-<!--                    <path-->
-<!--                      fill="currentColor"-->
-<!--                      d="M280 272H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h144c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm96-96H136c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zM256 32C114.6 32 0 125.1 0 240c0 47.6 19.9 91.2 52.9 126.3C38 405.7 7 439.1 6.5 439.5c-6.6 7-8.4 17.2-4.6 26S14.4 480 24 480c61.5 0 110-25.7 139.1-46.3C192 442.8 223.2 448 256 448c141.4 0 256-93.1 256-208S397.4 32 256 32zm0 384c-28.3 0-56.3-4.3-83.2-12.8l-15.2-4.8-13 9.2c-23 16.3-58.5 35.3-102.6 39.6 12-15.1 29.8-40.4 40.8-69.6l7.1-18.7-13.7-14.6C47.3 313.7 32 277.6 32 240c0-97 100.5-176 224-176s224 79 224 176-100.5 176-224 176z"-->
-<!--                      class=""-->
-<!--                    />-->
-<!--                  </svg>-->
-<!--                  <span class="ml-2">Chat</span>-->
-<!--                </div>-->
               </div>
             </footer>
           </blockquote>

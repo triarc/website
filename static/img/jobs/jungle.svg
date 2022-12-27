@@ -22,7 +22,8 @@
                            values="1 0 0 0 0
                              0 0.06 0 0 0
                              0 0 0.44 0 0
-                             0 0 0 1 0" />
+                             0 0 0 1 0" >
+            </feColorMatrix>
             <feMerge>
                 <feMergeNode in="red-blur"/>       <!-- largest blurs coloured red -->
                 <feMergeNode in="blur5"/>          <!-- smallest blur left white -->

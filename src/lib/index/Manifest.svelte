@@ -24,11 +24,11 @@
   ]
 </script>
 
-<div class="bg-green-triarc bg-opacity-20">
+<div class="bg-green-triarc bg-opacity-10">
   <div class="px-8 md:px-16 py-32 max-w-screen-lg mx-auto">
     <div class="mx-auto">
-      <h2 class="text-center text-3xl font-extrabold text-green-triarc sm:text-4xl">Manifest</h2>
-      <dl class="mt-6 space-y-6 divide-y divide-green-triarc text-green-triarc">
+      <h2 class="text-center text-3xl font-extrabold text-gray-800 sm:text-4xl">Manifest</h2>
+      <dl class="mt-6 space-y-6 divide-y divide-green-triarc text-gray-800">
         {#each values as { id, title, content }}
           <div class="pt-6">
             <dt class="text-lg">
@@ -40,7 +40,7 @@
                 </span>
               </button>
             </dt>
-            <dd class="mt-2 pr-8">
+            <dd class="mt-2">
               {#each content as p}
                 <p class="text-base pb-2 text-justify cursor-pointer">{p}</p>
               {/each}

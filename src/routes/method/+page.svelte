@@ -50,6 +50,10 @@
   ]
 </script>
 
+<svelte:head>
+  <title>Methodik - triarc-labs</title>
+</svelte:head>
+
 <div class="bg-white">
   {#each contents as content}
     <Block bind:content />

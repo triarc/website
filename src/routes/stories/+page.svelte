@@ -28,9 +28,8 @@
   <title>Success stories - triarc-labs</title>
 </svelte:head>
 
-<div class="bg-gray-900 h-screen relative">
-  <Header>Stories</Header>
-  <div class="bg-white overflow-hidden mt-16 md:mt-32">
+<div class="relative">
+  <div class="bg-white overflow-hidden pt-16 md:pt-32">
     <div class="relative max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
       <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>

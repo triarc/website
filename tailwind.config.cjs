@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Lexend', ...defaultTheme.fontFamily.sans],
       },
       colors: {
         'red-triarc': '#C8102E',
@@ -34,6 +34,7 @@ module.exports = {
   },
   plugins: [
     require('tailwind-scrollbar'),
+    require('@tailwindcss/forms'),
     // require('@tailwindcss/ui')(),
     // require('@tailwindcss/aspect-ratio')
   ],

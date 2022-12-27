@@ -1,7 +1,6 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
   import type {BlockContent} from '$lib/components/Block.svelte'
-  import Footer from '../../lib/components/Footer.svelte'
 
   function serializeSchema(jobPosting) {
     return (
@@ -70,27 +69,6 @@
       // eslint-disable-next-line
       '<\/script>'
     )
-  }
-
-  function unlock(evt) {
-    if (evt.target.disabled) {
-      return
-    }
-    const a = document.createElement('a')
-    a.href = 'mailto:wanted@triarc-labs.com'
-    document.body.append(a)
-    a.click()
-  }
-
-  function toggle(index) {
-    const elm = document.getElementById(`job-${index}`)
-    if (elm.classList.contains('h-0')) {
-      elm.classList.remove('h-0')
-      elm.classList.add('h-auto')
-    } else {
-      elm.classList.add('h-0')
-      elm.classList.remove('h-auto')
-    }
   }
 
   const jobPostings = [
@@ -301,6 +279,11 @@
   <title>Jobs - triarc-labs</title>
 </svelte:head>
 
+
+{#each jobPostings as jobPosting, i}
+  {@html serializeSchema(jobPosting)}
+{/each}
+
 <div class="bg-white">
   {#each contents as content}
     <Block bind:content />
@@ -319,15 +302,6 @@
       </p>
     </div>
   </div>
-  <img src="img/jobs/jungle.svg" class="w-full" id="jungle" />
+  <img src="img/jobs/jungle.svg" class="w-full" alt="triarc jungle" id="jungle" />
 </div>
 
-<style>
-  #jungle #triarc-labs {
-
-      box-shadow:
-              0 0 60px 30px #fff,  /* inner white */
-              0 0 100px 60px #f0f, /* middle magenta */
-              0 0 140px 90px #0ff; /* outer cyan */
-  }
-</style>

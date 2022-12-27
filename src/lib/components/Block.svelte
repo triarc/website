@@ -3,7 +3,7 @@
   export interface BlockContent {
     title: string
     content: string
-    link?: { href: string; text: string }
+    link?: { href: string; text: string; target?: string }
     image?: { src: string; alt: string }
     bulletPoints?: string[]
     cards?: { title: string, content: string }
@@ -11,9 +11,10 @@
   }
 
   export let content: BlockContent
+
 </script>
 
-<div class="min-h-screen md:min-h-0 even:bg-gray-100 group">
+<div class="md:min-h-0 even:bg-gray-100 group">
   <div
     class="flex items-center relative px-8 md:px-16 py-32 max-w-screen-lg mx-auto flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
   >
@@ -21,11 +22,13 @@
       <p class="mt-3 text-2xl font-bold text-gray-600">
         {@html content.title}
       </p>
+      {#if content.content}
       <p class="mt-2 text-base leading-6 text-gray-600">
         {@html content.content}
       </p>
+      {/if}
       {#if content.link}
-      <a href={content.link.href} class="bg-red-triarc text-white px-3 py-1 inline-block mt-2">
+      <a href={content.link.href} class="bg-red-triarc text-white px-3 py-1 inline-block mt-2" target="{content.link.target ?? ''}">
         {content.link.text}
       </a>
       {/if}

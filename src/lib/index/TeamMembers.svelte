@@ -232,7 +232,7 @@
 </script>
 
 <div class="bg-white bg-about-us">
-  <div class="px-8 md:px-16 py-32 max-w-screen-lg mx-auto text-center">
+  <div class="px-8 py-32 max-w-screen-lg mx-auto text-center">
     <div class="space-y-8 sm:space-y-12">
       <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
         <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Digital Evolutionaries</h2>

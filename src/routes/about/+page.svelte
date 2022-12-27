@@ -43,6 +43,10 @@
   ]
 </script>
 
+<svelte:head>
+  <title>Über uns - triarc-labs</title>
+</svelte:head>
+
 <div class="bg-white">
   {#each contents as content}
     <Block bind:content />
@@ -50,4 +54,11 @@
 
   <Manifest></Manifest>
   <TeamMembers></TeamMembers>
+
+
+  <div class="bg-white flex justify-center px-6 py-12">
+    <a href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html" target="_blank">
+      <img src="/logos/swiss-logo.png" alt="swissmadesoftware" />
+    </a>
+  </div>
 </div>
