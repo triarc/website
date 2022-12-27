@@ -118,7 +118,7 @@
       <source src="https://storage.googleapis.com/triarc-website/drone-intro.webm" type="video/webm" />
     </video>
     <button
-      class="animate-bounce lg:hidden absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
+      class="animate-bounce z-40 lg:hidden absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
       on:click={scrollToMenu}
     >
       <svg
