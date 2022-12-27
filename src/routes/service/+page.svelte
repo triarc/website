@@ -7,15 +7,20 @@
       title: 'Beratung',
       content:
         'Die Digitalisierung und der technische Fortschritt schreiten in grossen Schritten voran. Es ist Zeit für Unternehmen traditionelle Modelle zu überdenken und die Chancen der Digitalisierung zu nutzen - und nicht nur auf der technischen Ebene. \n' +
-        '\n' +
+        '\n<br/><br/>' +
         'Unsere Digitale Transformationsberatung unterstützt Kunden bei der Analyse und Identifizierung von Chancen innerhalb des digitalen Wandels und bei der Erarbeitung von konkreten Handlungsfelder um die Ziele der Digitalisierung zu erreichen. \n' +
-        '\n' +
+        '\n<br/><br/>' +
         'Der technische Aspekt, die Prozesse, die Strukturen, die Unternehmenskultur und der Mensch gehen Hand in Hand.',
+
+      image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
+    },
+    {
+      title: 'Unsere Beratungsprozess',
       steps: [
         {
           title: 'Strategie & Vision',
           content:
-            'Strategie & Vision: Zusammen erarbeite wir eine Vision und Ziele, wohin die Reise der digitalen Transformation gehen soll, getragen vom Management und geteilt mit den Mitarbeitern.',
+            'Zusammen erarbeite wir eine Vision und Ziele, wohin die Reise der digitalen Transformation gehen soll, getragen vom Management und geteilt mit den Mitarbeitern.',
         },
         {
           title: 'Strukturen',
@@ -36,9 +41,47 @@
     },
     {
       title: 'Software Entwicklung',
-      content: 'Egal ob Webseite, App oder',
-      image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
-      link: { href: '/service#consulting', text: 'Beratung' },
+      content:
+        'Der Bedarf an Software ist Heutzutage nicht mehr wegzudenken. Selbst der Smoothie-Mixer hat inzwischen eine App, der Wecker ein Bluetooth Integration und der Kühlschrank ein Touchscreen.<br/><br/>' +
+        'Die Digitalisierung führt zu vielen neuen Möglichkeiten und bringt auch neue Herausforderungen mit sich. ' +
+        'Standardsoftware ist ein effieziente Lösung, führt jedoch nicht zum gewünschten Ergebniss. <br/><br/>' +
+        'Unserer Softwareentwicklung öffnet neue Türen und kennt keine Grenzen.',
+      image: { src: 'img/custom-software/pair_programming.svg', alt: 'Programmieren' },
+    },
+    {
+      title: 'Unsere Entwicklungsprozess',
+      content:
+        'Wir führen unseren Projekte erfolgreich seit einem Jahrzehnt Agile. Diese Methode hat sich immer bewährt für uns sowie dem Kunden. Unser Prozess besteht aus vier Schritten, welche sich pro Sprint wiederholen.',
+      steps: [
+        {
+          title: 'Concept',
+          content:
+            'Zusammen erarbeite wir Ziele sowie Anforderungen, welche erfüllen werden sollen. Gemeinsam erarbeitet durch Management, Mitarbeitern sowie unserer Projektleitung.',
+        },
+        {
+          title: 'Planning',
+          content:
+            'Nach einer Aufarbeitung der Anforderungen und Einschätzung des Aufwands, werden Anforderungen zusammen mit dem Aufwand priorisiert, verschoben oder angepasst. Das Resultat ist ein Sprint mit Anforderungen von 100-180 Stunden in Entwicklungaufwand.',
+        },
+        {
+          title: 'Entwicklung',
+          content:
+            'Die Entwicklung beginnt, es wird fleissig getestet und optimiert bis zum Review Meeting und der Deadline.',
+        },
+        {
+          title: 'Review',
+          content:
+            'Die Entwicklung ist abgeschlossen und das Resultat kann getestet werden. Sobald abgenommen, gehts direkt in den Produktiven Betrieb und die Anwender dürfen sich über die neusten Änderungen freuen.',
+        },
+      ],
+    },
+    {
+      title: 'Wartung / Hosting',
+      content:
+        'Der Betrieb sowie die Wartung unserer Software ist uns ein wichtiges Anliegen. Wir betreiben unsere Software flexibel in unserem Cloud Angebot oder auf deinen vorhandenen Servern.' +
+        '<br/><br/>' +
+        'Regelmässige Wartung der Software sowie das einspielen von sicherheitsrelevanten Patches ist für uns ein Routine-Job und läst uns Nachts besser schlafen.',
+      image: { src: 'img/custom-software/maintenance.svg', alt: 'Wartung' },
     },
   ]
 </script>

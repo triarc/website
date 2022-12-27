@@ -15,7 +15,7 @@
 
 <div class="md:min-h-0 even:bg-gray-100 group">
   <div
-    class="flex items-center relative px-8 md:px-16 py-32 max-w-screen-lg mx-auto flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
+    class="flex items-center relative px-8 md:px-16 pb-16 pt-8  md:py-32 max-w-screen-lg mx-auto flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
   >
     <div class="">
       <p class="mt-3 text-2xl font-bold text-gray-600">

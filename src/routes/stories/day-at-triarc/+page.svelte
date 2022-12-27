@@ -1,10 +1,8 @@
-
 <svelte:head>
   <title>Day at triarc - triarc-labs</title>
 </svelte:head>
 
 <div class="bg-white h-screen relative">
-
   <div class="bg-white mt-24 overflow-hidden">
     <div class="relative max-w-7xl mx-auto pt-8 px-4 sm:px-6 lg:px-8">
       <div class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />

@@ -24,14 +24,14 @@
       content:
         'Wir entwickeln und implementieren Software-Lösungen für KMU, Behörden und Institutionen. Wir hauchen ihrer Vision digitales Leben ein. Wir weisen Geschäftsmodellen den Weg in die Zukunft. Und schaffen so nicht selten auch neue.  \n',
       image: { src: 'img/intro/mobile_wireframe.svg', alt: 'Custom Software Entwicklung' },
-      link: { href: '/service#custom-software', text: 'Custom Softwareentwicklung' },
+      link: { href: '/service#custom-software', text: 'Custom Software Entwicklung' },
     },
     {
       title: 'Wir tun gut daran, nicht mit der Zeit zu gehen.<br/>Sondern ihr voraus.',
       content:
         'Wir geben uns nicht mit dem zufrieden, was es schon gibt. Wir überzeugen mit dem, was es braucht – und das ist nicht immer dasselbe. Unsere Kunden wissen das zu schätzen.',
       image: { src: 'img/intro/science.svg', alt: 'Softwareentwicklungstechnologie' },
-      link: { href: '/method#technology', text: 'Custom Softwareentwicklung' },
+      link: { href: '/method#technology', text: 'Unser Techstack' },
     },
     {
       title: 'Wir können nicht alles,<br/>aber gewisse Dinge besser.<br/>Das sagen nicht wir, sondern unsere Kunden.',
