@@ -107,7 +107,13 @@
     </div>
 
     {#if content.image}
-      <img src={content.image.src} class="mt-8 mx-12" width="320" height="{content.image.height}" alt={content.image.alt} />
+      <img
+        src={content.image.src}
+        class="mt-8 mx-12"
+        width="320"
+        height={content.image.height}
+        alt={content.image.alt}
+      />
     {/if}
   </div>
 </div>
