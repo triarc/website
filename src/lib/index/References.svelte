@@ -1,3 +1,7 @@
+<script lang="ts">
+  import pascal from '../assets/avatars/pascal.png?width=255&format=webp;png&metadata'
+  import elke from '../assets/avatars/elke.png?width=255&format=webp;png&metadata'
+</script>
 <div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">
   <div class="relative max-w-7xl mx-auto">
     <div class="text-center">
@@ -50,7 +54,19 @@
             <footer class="">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
+                  <picture class="h-10 w-10">
+                    {#each pascal as image}
+                      <source type="image/{image.format}" srcset={image.src} loading="lazy" />
+                    {/each}
+                    <img
+                      src={pascal[1].src}
+                      alt={pascal.name}
+                      width="255"
+                      height="255"
+                      loading="lazy"
+                      class="h-10 w-10"
+                    />
+                  </picture>
                 </div>
                 <div class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>
@@ -103,7 +119,19 @@
             <footer class="mt-3">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-10 w-10" src="img/avatars/elke.png" alt="elke" />
+                  <picture class="h-10 w-10">
+                    {#each elke as image}
+                      <source type="image/{image.format}" srcset={image.src} loading="lazy" />
+                    {/each}
+                    <img
+                      src={elke[1].src}
+                      alt={elke.name}
+                      width="255"
+                      height="255"
+                      loading="lazy"
+                      class="h-10 w-10"
+                    />
+                  </picture>
                 </div>
                 <div class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Elke Engel</div>
@@ -148,7 +176,19 @@
             <footer class="">
               <div class="flex items-center space-x-3">
                 <div class="flex-shrink-0">
-                  <img class="h-10 w-10" src="img/avatars/pascal.png" alt="pascal" />
+                  <picture class="h-10 w-10">
+                    {#each pascal as image}
+                      <source type="image/{image.format}" srcset={image.src} loading="lazy" />
+                    {/each}
+                    <img
+                      src={pascal[1].src}
+                      alt={pascal.name}
+                      width="255"
+                      height="255"
+                      loading="lazy"
+                      class="h-10 w-10"
+                    />
+                  </picture>
                 </div>
                 <div class="cursor-pointer">
                   <div class="text-base font-medium text-gray-700">Pascal Bertschi</div>

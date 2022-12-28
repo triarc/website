@@ -123,7 +123,7 @@
       <source src="https://storage.googleapis.com/triarc-website/drone-intro.mp4" type="video/mp4" />
       <source src="https://storage.googleapis.com/triarc-website/drone-intro.webm" type="video/webm" />
     </video>
-    <button
+    <button aria-label="Zur Navigation scrollen"
       class="animate-bounce z-40 lg:hidden absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
       on:click={scrollToMenu}
     >
