@@ -113,7 +113,13 @@
   >
     <img src={logo} alt="triarc laboratories ltd" class="absolute top-1/2 z-20" width="167" height="101" />
     <div class="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 z-10" />
-    <video autoplay muted loop class="object-cover absolute left-0 right-0 top-0 bottom-0 h-screen" id="intro-video">
+    <video
+      autoplay
+      muted
+      loop
+      class="object-cover absolute left-0 right-0 top-0 bottom-0 h-screen w-screen"
+      id="intro-video"
+    >
       <source src="https://storage.googleapis.com/triarc-website/drone-intro.mp4" type="video/mp4" />
       <source src="https://storage.googleapis.com/triarc-website/drone-intro.webm" type="video/webm" />
     </video>
