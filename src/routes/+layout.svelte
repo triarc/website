@@ -1,14 +1,24 @@
 <script lang="ts">
   import '../app.postcss'
 
-  import { onMount } from 'svelte'
+  import { beforeUpdate, onMount } from 'svelte'
   import logo from '../lib/assets/triarc-logo.svg'
   import triarclabs from '../lib/assets/triarc-labs.svg'
 
   export let menuOpen = false
 
-  /** @type {import('./$types').LayoutData} */
-  export let data
+  export let mobileTitle = ''
+  export let mobileSubTitle = ''
+
+  export let data: { pathname: string }
+
+  beforeUpdate(() => {
+    const navItem = navItems.find((i) => i.path === data.pathname)
+    if (navItem) {
+      mobileTitle = navItem.title
+      mobileSubTitle = navItem.description
+    }
+  })
 
   const navItems = [
     {
@@ -55,7 +65,6 @@
 
   function toggle() {
     menuOpen = !menuOpen
-    console.log(menuOpen)
   }
   function hideMenu() {
     menuOpen = false
@@ -123,7 +132,8 @@
       <source src="https://storage.googleapis.com/triarc-website/drone-intro.mp4" type="video/mp4" />
       <source src="https://storage.googleapis.com/triarc-website/drone-intro.webm" type="video/webm" />
     </video>
-    <button aria-label="Zur Navigation scrollen"
+    <button
+      aria-label="Zur Navigation scrollen"
       class="animate-bounce z-40 lg:hidden absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
       on:click={scrollToMenu}
     >
@@ -178,6 +188,10 @@
         </g>
       </svg>
     </button>
+    <div class="text-white ml-3 flex-grow min-w-0">
+      <div class="font-bold truncate">{mobileTitle}</div>
+      <div class="font-light text-sm truncate">{mobileSubTitle}</div>
+    </div>
   </div>
   <slot />
 </div>

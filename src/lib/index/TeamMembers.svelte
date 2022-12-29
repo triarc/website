@@ -100,7 +100,6 @@
       images: david,
     },
   ]
-  console.log(teamMember)
 </script>
 
 <div class="bg-white bg-about-us" id="team">

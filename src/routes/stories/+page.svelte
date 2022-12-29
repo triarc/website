@@ -91,7 +91,7 @@
       <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ortho-Order</p>
       </div>
-      <div class="relative z-10 text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
+      <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg text-gray-500">
           Wichtigste Effekte des Wechsels von handschriftlich ausgefüllten Formularen auf digital erstellte
           Bestellungen: Der Bestellprozess mit der Order App ist deutlich einfacher, schneller und bei Wareneingang
@@ -99,7 +99,7 @@
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative z-10">
+        <div class="relative">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <ul class="list-disc pl-4">
               <li>50% Zeiteinsparung pro Bestellung</li>
@@ -142,7 +142,7 @@
       <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ortho-Client</p>
       </div>
-      <div class="relative z-10 text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
+      <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg text-gray-500">
           Sämtliche auftragsbezogenen Daten wie die ärztliche Verordnung, Bilder oder erbrachte Leistungen (mobil und
           digital) können mit der Client App zugeordnet werden. So wurden u.a. die Durchlaufzeiten bei der
@@ -150,7 +150,7 @@
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative z-10">
+        <div class="relative">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <ul class="list-disc pl-4">
               <li>7000 Aufträge pro Monat, d.h. 80% aller Aufträge</li>
@@ -197,7 +197,7 @@
           Die Zusammenarbeit
         </p>
       </div>
-      <div class="relative z-10 text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
+      <div class="relative  text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg text-gray-500">
           «Dabei haben wir 1:1 mitbekommen, wieviel Kreativität, Erfahrung und Engagement bei der Umsetzung
           unterschiedlichster Anforderungen eingeflossen sind. Mit ein Grund dafür ist sicherlich, dass triarc-labs
@@ -205,7 +205,7 @@
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative z-10">
+        <div class="relative ">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <blockquote class="py-8 max-w-sm">
               <p class="text-gray-900 font-semibold">
@@ -256,7 +256,7 @@
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative z-10 flex py-4 ">
+        <div class="relative  flex py-4 ">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <figure class="relative bg-white overflow-hidden">
               <img
@@ -273,7 +273,7 @@
             </figure>
           </div>
         </div>
-        <div class="relative z-10 py-4 text-gray-500">
+        <div class="relative  py-4 text-gray-500">
           <p>
             Mit 15 Standorten und rund 300 Mitarbeitenden in der ganzen Schweiz ist die ORTHO-TEAM Gruppe Innovations-
             und Marktführerin in der Herstellung von Hilfsmitteln der Orthopädie- und Rehatechnik.

@@ -2,6 +2,7 @@
   import pascal from '../assets/avatars/pascal.png?width=255&format=webp;png&metadata'
   import elke from '../assets/avatars/elke.png?width=255&format=webp;png&metadata'
 </script>
+
 <div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">
   <div class="relative max-w-7xl mx-auto">
     <div class="text-center">
@@ -123,14 +124,7 @@
                     {#each elke as image}
                       <source type="image/{image.format}" srcset={image.src} loading="lazy" />
                     {/each}
-                    <img
-                      src={elke[1].src}
-                      alt={elke.name}
-                      width="255"
-                      height="255"
-                      loading="lazy"
-                      class="h-10 w-10"
-                    />
+                    <img src={elke[1].src} alt={elke.name} width="255" height="255" loading="lazy" class="h-10 w-10" />
                   </picture>
                 </div>
                 <div class="cursor-pointer">
