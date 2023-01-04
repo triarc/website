@@ -100,11 +100,12 @@
 
     const video = document.getElementById('intro-video') as HTMLVideoElement
     if (video) {
+      video.setAttribute('muted', '')
+      video.playsInline = true;
       video.onloadeddata = () => {
         video.muted = true
         video.play()
       }
-      video.muted = true
       video.play()
     }
   })
