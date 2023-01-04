@@ -126,6 +126,7 @@
       autoplay
       muted
       loop
+      playsInline
       class="object-cover absolute left-0 right-0 top-0 bottom-0 h-screen w-screen"
       id="intro-video"
     >
