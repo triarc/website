@@ -19,7 +19,7 @@
 
   <div class="bg-white">
     <Container>
-      <div class="flex flex-wrap my-6 gap-3">
+      <div class="flex items-center flex-wrap my-6 gap-3">
         <a href="/news" class="bg-gray-200 rounded-md h-10 flex {data.selectedTag === '' ? 'active' : ''}">
           <div class="px-4 py-2 ">Alle</div>
         </a>
@@ -29,6 +29,9 @@
             <div class="px-4 py-2">{tag.name}</div>
           </a>
         {/each}
+        <a class="text-gray-700 decoration-red-triarc underline flex-grow text-right" href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/">
+          Folge uns auf LinkedIn
+        </a>
       </div>
     </Container>
   </div>
