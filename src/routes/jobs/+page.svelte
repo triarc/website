@@ -1,6 +1,8 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
+  import Hero from '$lib/components/Hero.svelte'
+  import Container from '$lib/components/Container.svelte'
 
   function serializeSchema(jobPosting) {
     return (
@@ -283,7 +285,7 @@
       steps: [
         {
           title: 'Bewerbung einreichen',
-          content: 'Nimm den Mut zusammen und schicke uns eine Mail an development@triarc-labs mit deinen Unterlagen.',
+          content: 'Nimm den Mut zusammen und schicke uns eine Mail an <a class="underline decoration-red-triarc" href="mailto:development@triarc-labs">development@triarc-labs</a> mit deinen Unterlagen.',
         },
         {
           title: 'Persönliches Interview',
@@ -313,12 +315,18 @@
   {@html serializeSchema(jobPosting)}
 {/each}
 
+<Hero title="Unsere Jobs" content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte.">
+
+</Hero>
+
 <div class="bg-white">
   {#each contents as content}
     <Block bind:content />
   {/each}
+</div>
 
-  <div class="bg-blue-triarc text-gray-800 bg-opacity-20">
+<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col relative lg:min-h-screen">
+  <div class="text-white bg-opacity-20 bottom-0 absolute left-0 right-0">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold sm:text-4xl">
         <span class="block">Immer noch hier?</span>
@@ -327,12 +335,7 @@
         Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in
         unserem Jungle.
       </p>
-      <p class="mt-4 text-lg leading-6">
-        Für Fragen und Bewerbungen kannst du dich an <a href="mailto:development@triarc-labs.com" class="underline"
-          >development@triarc-labs.com</a
-        > wenden.
-      </p>
     </div>
   </div>
-  <img src="img/jobs/jungle.svg" class="w-full" alt="triarc jungle" id="jungle" />
+  <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />
 </div>

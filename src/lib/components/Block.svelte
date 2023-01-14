@@ -2,6 +2,7 @@
   export interface BlockContent {
     title: string
     content: string
+    footer?: string
     link?: { href: string; text: string; target?: string }
     image?: { src: string; alt: string; height?: number }
     bulletPoints?: string[]
@@ -26,10 +27,13 @@
           {@html content.content}
         </p>
       {/if}
+      {#if content.footer}
+        <p class="text-sm text-gray-500">{content.footer}</p>
+      {/if}
       {#if content.link}
         <a
           href={content.link.href}
-          class="bg-red-triarc text-white px-3 py-1 inline-block mt-2"
+          class="rounded bg-red-triarc text-white px-3 py-1 inline-block mt-2"
           target={content.link.target ?? ''}
         >
           {content.link.text}
@@ -82,7 +86,7 @@
                     <h3 class="font-semibold text-sm text-gray-700">
                       {step.title}
                     </h3>
-                    <p class="text-gray-600">{step.content}</p>
+                    <p class="text-gray-600">{@html step.content}</p>
                   </div>
                 </div>
               </div>
@@ -110,7 +114,7 @@
       <img
         src={content.image.src}
         class="mt-8 mx-12"
-        width="320"
+        width="{content.image.width ?? 320}"
         height={content.image.height}
         alt={content.image.alt}
       />

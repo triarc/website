@@ -1,38 +1,65 @@
 <script lang="ts">
-  import Block from '$lib/components/Block.svelte'
-  import type { BlockContent } from '../../lib/components/Block.svelte'
+  import Hero from '$lib/components/Hero.svelte'
+  import Container from '$lib/components/Container.svelte'
 
-  export interface GhostPost {
-    id: string
-    title: string
-    html: string
-    feature_image: string
-    feature_image_alt: string | null
-    excerpt: string
-  }
-
-  let contents: BlockContent[] = []
-
-  fetch('https://blog.triarc-labs.com/ghost/api/content/posts?key=93ed4aea5970c22ed269d4ec35').then(
-    async (response) => {
-      const data = await response.json()
-      console.log(data)
-      contents = data.posts.map((post) => ({
-        title: post.title,
-        content: post.excerpt,
-        image: { src: post.feature_image, alt: post.feature_image_alt ?? 'post feature image' },
-        link: { href: post.url, text: 'Weiter lesen', target: '_blank' },
-      }))
-    }
-  )
+  export let data;
 </script>
 
 <svelte:head>
   <title>Aktuelles - triarc-labs</title>
 </svelte:head>
 
-<div class="bg-white min-h-screen">
-  {#each contents as content}
-    <Block bind:content />
-  {/each}
+
+<Hero title="Aktuelles" content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!">
+
+</Hero>
+
+
+<div class="bg-gray-100 min-h-screen">
+
+  <div class="bg-white">
+    <Container>
+      <div class="flex flex-wrap my-6 gap-3">
+        <a href="/news" class="bg-gray-200 rounded-md h-10 flex {data.selectedTag === '' ? 'active' : ''}">
+          <div class="px-4 py-2 ">Alle</div>
+        </a>
+        {#each data.tags as tag}
+          <a href="/news?tag={tag.slug}" class="bg-gray-200 h-10 rounded-md flex {data.selectedTag === tag.slug ? 'active' : ''}">
+            <div class="badge">{tag.count.posts}</div>
+            <div class="px-4 py-2">{tag.name}</div>
+          </a>
+        {/each}
+      </div>
+    </Container>
+  </div>
+
+  <Container>
+    <div class="grid md:grid-cols-6 grid-cols-1 mt-6 gap-x-12 gap-y-24">
+      {#each data.posts as post}
+        <a href="/news/{post.slug}" class="{post.featured ? 'md:col-span-3' : 'md:col-span-2'} col-span-1 flex flex-col group">
+          <div class="relative mb-2 shadow">
+            <img src="{post.image.src}" alt="{post.image.alt}"
+                 class="object-cover rounded-md overflow-hidden 	block h-auto max-w-auto w-full object-center group-hover:opacity-75" />
+            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full  group-hover:shadow-inner rounded-md"></div>
+          </div>
+          <h3 class="font-bold text-xl">{post.title}</h3>
+          <p class="line-clamp-3 mb-1 text-gray-500">{post.content}</p>
+          <p class="text-sm text-gray-500">{post.footer}</p>
+        </a>
+      {/each}
+    </div>
+  </Container>
+
 </div>
+
+<style>
+  .badge {
+      @apply bg-gray-300 rounded-md px-4 py-2;
+  }
+  .active {
+      @apply bg-blue-triarc text-white;
+  }
+  .active .badge {
+      @apply bg-white bg-opacity-20;
+  }
+</style>
