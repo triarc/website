@@ -107,10 +107,10 @@
             </p>
             <div class="flex pt-4  text-lg text-gray-700 cursor-pointer">
               <a
-                href="/stories"
-                class="underline decoration-red-triarc text-red-triarc font-semibold py-1 inline-block mt-2"
+                href="/news/die-zusammenarbeit-mit-triarc-labs-ist-fur-uns-nicht-mehr-wegzudenken"
+                class="rounded bg-red-triarc text-white px-3 py-1 inline-block mt-2"
               >
-                <span class="pr-4">Lese mehr dazu in unserer Success Story</span>
+                <span class="">Mehr dazu</span>
               </a>
             </div>
           </div>
