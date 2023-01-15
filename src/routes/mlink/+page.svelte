@@ -2,6 +2,7 @@
   import Block from '$lib/components/Block.svelte'
   import Video from '$lib/components/Video.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
+  import Container from '$lib/components/Container.svelte'
 
   let contents: BlockContent[] = [
     {
@@ -92,7 +93,9 @@
 <div class="bg-white">
   {#each contents as content}
     {#if content.video}
-      <Video bind:content={content.video} />
+      <Container>
+        <Video bind:content={content.video} />
+      </Container>
     {:else}
       <Block bind:content />
     {/if}
