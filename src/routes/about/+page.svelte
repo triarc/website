@@ -12,7 +12,7 @@
         'Wir sind getrieben das nächste, höhere, bessere Level zu erreichen – für uns, vor allem aber für unsere Kunden, für Sie.\n' +
         '\n' +
         'Wir ruhen nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern oder Schwerfälliges zu vereinfachen damit Sie ihr nächstes Level erreichen.\n',
-      image: { src: 'img/intro/in_progress.svg', height: 271, alt: 'Fortschritt' },
+      image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
       link: { href: '/services#consulting', text: 'Unsere Beratung' },
     },
     {
@@ -21,7 +21,7 @@
         'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die technologischen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kunden- oder Endnutzerbedürfnisse.\n' +
         '\n' +
         'Als Spezialisten konzipieren und entwickeln wir ausschliesslich inhouse. Weil es für uns ausser Frage steht, dass die Lösung Ihren Anforderunge entsprechen muss und nicht umgekehrt.',
-      image: { src: 'img/custom-software/product_teardown.svg', alt: 'Projektportfolio' },
+      image: { src: 'img/custom-software/product_teardown.svg', height: 281, alt: 'Projektportfolio' },
       link: { href: '/services#software', text: 'Unsere Entwicklung' },
     },
     {

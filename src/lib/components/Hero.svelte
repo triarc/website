@@ -1,13 +1,15 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte'
+  import heroImage from '../assets/hero/triarc-meetingroom-2000.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   export let title: string;
   export let content: string;
 
+  const srcset = heroImage.map(i => `${i.src} ${i.width}w`).join(', ');
 </script>
 <div class="relative bg-blue-triarc">
   <div class="absolute inset-0">
-    <img class="h-full w-full object-cover" src="img/hero/triarc-meetingroom-2000.jpg" alt="">
+    <img class="h-full w-full object-cover" sizes="(max-width: 1000px) 400px, 800px" srcset="{srcset}" src="img/hero/triarc-meetingroom-2000.webp" alt="triarc office">
     <div class="absolute inset-0 bg-blue-triarc mix-blend-multiply" aria-hidden="true"></div>
   </div>
   <Container>

@@ -29,19 +29,20 @@
             <div class="px-4 py-2">{tag.name}</div>
           </a>
         {/each}
-        <a class="text-gray-700 decoration-red-triarc underline flex-grow text-right" href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/">
+        <a class="text-gray-700 decoration-red-triarc underline flex-grow xl:text-right" href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/">
           Folge uns auf LinkedIn
         </a>
       </div>
     </Container>
   </div>
+  <hr/>
 
   <Container>
     <div class="grid md:grid-cols-6 grid-cols-1 mt-6 gap-x-12 gap-y-24">
       {#each data.posts as post}
         <a href="/news/{post.slug}" class="{post.featured ? 'md:col-span-3' : 'md:col-span-2'} col-span-1 flex flex-col group">
           <div class="relative mb-2 rounded-md shadow">
-            <img src="{post.image.src}" alt="{post.image.alt}"
+            <img src="{post.image.src}" srcset="{post.image.srcset}" sizes="{post.image.sizes}" loading="lazy" alt="{post.image.alt}"
                  class="object-cover rounded-md overflow-hidden 	block h-auto max-w-auto w-full object-center group-hover:opacity-75" />
             <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full  group-hover:shadow-inner rounded-md"></div>
           </div>
