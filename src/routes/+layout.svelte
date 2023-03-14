@@ -21,37 +21,37 @@
 
   const navItems = [
     {
-      title: 'Über uns',
+      title: 'together we succeed',
       description: 'Wer sind wir und was ist uns wichtig',
-      path: '/about',
+      path: '/mission',
     },
     {
-      title: 'Unsere Methodik',
+      title: 'Custom Software',
       description: 'Die Herangehensweise unserer Projekte',
-      path: '/method',
+      path: '/custom-software',
     },
     {
-      title: 'Unsere Dienstleistung',
+      title: 'Beratung',
       description: 'Was wir können und anbieten',
-      path: '/services',
+      path: '/consulting',
     },
     {
-      title: 'Unser Produkt',
+      title: 'Innovation Lab',
       description: 'Was bei uns entsteht',
-      path: '/products',
+      path: '/innovation',
     },
     {
-      title: 'Unsere Referenzen',
+      title: 'Referenzen',
       description: 'Erfahrungen und Vollbrachtes.',
       path: '/references',
     },
     {
-      title: 'Aktuelles',
+      title: 'Stories',
       description: 'Neustes von uns und unserem Umfeld',
-      path: '/news',
+      path: '/stories',
     },
     {
-      title: 'Unsere Jobs',
+      title: 'Jobs',
       description: 'Für begeisterte, kreaktive und motivierte',
       path: '/jobs',
     },
@@ -108,7 +108,7 @@
     ? 'landing'
     : 'content'} {menuOpen ? 'open' : 'closed'}">
   <nav
-    class="text-white bg-black flex flex-shrink-0 items-center flex-col justify-center w-full lg:max-w-sm lg:fixed lg:top-0"
+    class="text-[323F33] bg-wood flex flex-shrink-0 items-center flex-col justify-center w-full lg:max-w-sm lg:fixed lg:top-0"
     id="nav-menu"
   >
     <div class="w-full h-full justify-center py-16 min-h-0 flex flex-col">

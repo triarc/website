@@ -12,6 +12,7 @@ module.exports = {
         'green-triarc': '#009639',
         'blue-triarc': '#0077c8',
         'yellow-triarc': '#FFE74C',
+        'wood': '#D0AE84'
       },
       maxWidth: {},
       animation: {

@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Footer from '$lib/components/Footer.svelte'
+
   let email = ''
   let submitted = false
 
@@ -175,3 +177,5 @@
     </div>
   </div>
 </div>
+
+<Footer></Footer>

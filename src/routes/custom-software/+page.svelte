@@ -2,44 +2,10 @@
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
+  import Technology from '$lib/index/Technology.svelte'
+  import Footer from '$lib/components/Footer.svelte'
 
   let contents: BlockContent[] = [
-    {
-      title: 'Beratung',
-      content:
-        'Die Digitalisierung und der technische Fortschritt schreiten in grossen Schritten voran. Es ist Zeit für Unternehmen traditionelle Modelle zu überdenken und die Chancen der Digitalisierung zu nutzen - und nicht nur auf der technischen Ebene. \n' +
-        '\n<br/><br/>' +
-        'Unsere Digitale Transformationsberatung unterstützt Kunden bei der Analyse und Identifizierung von Chancen innerhalb des digitalen Wandels und bei der Erarbeitung von konkreten Handlungsfelder um die Ziele der Digitalisierung zu erreichen. \n' +
-        '\n<br/><br/>' +
-        'Der technische Aspekt, die Prozesse, die Strukturen, die Unternehmenskultur und der Mensch gehen Hand in Hand.',
-
-      image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
-    },
-    {
-      title: 'Unser Beratungsprozess',
-      steps: [
-        {
-          title: 'Strategie & Vision',
-          content:
-            'Zusammen erarbeite wir eine Vision und Ziele, wohin die Reise der digitalen Transformation gehen soll, getragen vom Management und geteilt mit den Mitarbeitern.',
-        },
-        {
-          title: 'Strukturen',
-          content:
-            'Ein verbundenes IT-Ökosystem, das passende Organisationsmodell und die richtigen Qualifikationen ebnen den Weg der Digitalisierung. Wir analysieren status quo und zeigen Chancen auf.',
-        },
-        {
-          title: 'Prozesse',
-          content:
-            'Bevor wir neue Technologien und Software einführen analysieren und optimieren wir die betroffenen Geschäftsprozesse und passen sie an das neue digitale Arbeitsmodell an.',
-        },
-        {
-          title: 'Mitarbeiter',
-          content:
-            'Der Mensch steht im Mittelpunkt der Digitalisierung. Schlussendlich sollen die neuen Prozesse und Applikationen gelebt und angewendet werden. Doch oft fühlen sich die Mitarbeiter durch die angestrebte Veränderung verunsichert. Wir begleiten die Mitarbeiter durch die Transformation.',
-        },
-      ],
-    },
     {
       title: 'Software Entwicklung',
       content:
@@ -88,15 +54,31 @@
 </script>
 
 <svelte:head>
-  <title>Unsere Dienstleistung - triarc-labs</title>
+  <title>Custom Software - triarc-labs</title>
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Unsere Dienstleistung" content="Was wir bieten und einbringen können">
+  <Hero title="Custom Software" content="Was wir bieten und einbringen können">
 
   </Hero>
 
   {#each contents as content}
     <Block bind:content />
   {/each}
+
+
+  <div class="flex justify-center px-6 py-12">
+    <a
+      href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html"
+      rel="noreferrer"
+      target="_blank"
+    >
+      <img src="/logos/swiss-logo.png" width="273" height="46" alt="swissmadesoftware" />
+    </a>
+  </div>
+
+  <Technology />
+
+
+  <Footer></Footer>
 </div>

@@ -2,7 +2,7 @@
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import Container from '$lib/components/Container.svelte'
+  import Footer from '$lib/components/Footer.svelte'
 
   function serializeSchema(jobPosting) {
     return (
@@ -315,7 +315,7 @@
   {@html serializeSchema(jobPosting)}
 {/each}
 
-<Hero title="Unsere Jobs" content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte.">
+<Hero title="Jobs" content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte.">
 
 </Hero>
 
@@ -325,8 +325,9 @@
   {/each}
 </div>
 
+
 <div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col relative lg:min-h-screen">
-  <div class="text-white bg-opacity-20 bottom-0 absolute left-0 right-0">
+  <div class="text-white bg-opacity-20">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold sm:text-4xl">
         <span class="block">Immer noch hier?</span>
@@ -339,3 +340,5 @@
   </div>
   <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />
 </div>
+
+<Footer></Footer>

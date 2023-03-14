@@ -1,6 +1,7 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import Container from '$lib/components/Container.svelte'
+  import Footer from '$lib/components/Footer.svelte'
 
   let firstName = '',
     lastName = '',
@@ -231,5 +232,4 @@
       </div>
     </Container>
   </div>
-
 </div>

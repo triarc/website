@@ -2,6 +2,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
+  import Footer from '$lib/components/Footer.svelte'
 
   let contents: BlockContent[] = [
     {
@@ -40,7 +41,7 @@
   ]
 </script>
 
-<Hero title="Unsere Produkte" content="Was haben wir vollbracht und woraus ist es entstanden">
+<Hero title="Innovation Lab" content="Was haben wir vollbracht und woraus ist es entstanden">
 
 </Hero>
 
@@ -50,4 +51,5 @@
     <Block bind:content />
   {/each}
 
+  <Footer></Footer>
 </div>

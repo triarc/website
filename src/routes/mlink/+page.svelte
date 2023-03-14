@@ -3,6 +3,7 @@
   import Video from '$lib/components/Video.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Container from '$lib/components/Container.svelte'
+  import Footer from '$lib/components/Footer.svelte'
 
   let contents: BlockContent[] = [
     {
@@ -100,4 +101,5 @@
       <Block bind:content />
     {/if}
   {/each}
+  <Footer></Footer>
 </div>

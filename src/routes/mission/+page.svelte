@@ -1,0 +1,124 @@
+<script lang="ts">
+  import Block from '$lib/components/Block.svelte'
+  import type { BlockContent } from '$lib/components/Block.svelte'
+  import Hero from '$lib/components/Hero.svelte'
+  import TeamMembers from '$lib/index/TeamMembers.svelte'
+  import Manifest from '$lib/index/Manifest.svelte'
+  import Footer from '$lib/components/Footer.svelte'
+
+  let contents: BlockContent[] = [
+    {
+      title: 'Für Ihren Fortschritt.',
+      content:
+        'Wir sind getrieben das nächste, höhere, bessere Level zu erreichen – für uns, vor allem aber für unsere Kunden, für Sie.\n' +
+        '\n' +
+        'Wir ruhen nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern oder Schwerfälliges zu vereinfachen damit Sie ihr nächstes Level erreichen.\n',
+      image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
+      link: { href: '/services#consulting', text: 'Unsere Beratung' },
+    },
+
+    // {
+    //   title: 'Ihre Manufaktur für digitale Innovation.',
+    //   content:
+    //     'Wir sind Ingenieure. Bestausgebildete und praxiserfahrene IT-Fachleute, die können, was sie tun. Und für Sie alles tun, was sie können.',
+    //   image: { src: 'img/intro/content_team.svg', height: 201, alt: 'Software Development Team' },
+    //   link: { href: '#team', text: 'Digital Evolutionaries' },
+    // },
+
+    {
+      title: 'Wir machen mehr aus dem, was heute ist:<br/>Das, was morgen sein wird.',
+      content:
+        'Wir entwickeln und implementieren Software-Lösungen für KMU, Behörden und Institutionen. Wir hauchen ihrer Vision digitales Leben ein. Wir weisen Geschäftsmodellen den Weg in die Zukunft. Und schaffen so nicht selten auch neue.  \n',
+      image: { src: 'img/intro/mobile_wireframe.svg', height: 181, alt: 'Custom Software Entwicklung' },
+      link: { href: '/services#agil', text: 'Agile Entwicklung' },
+    },
+    {
+      title: 'Wir tun gut daran, nicht mit der Zeit zu gehen.<br/>Sondern ihr voraus.',
+      content:
+        'Wir geben uns nicht mit dem zufrieden, was es schon gibt. Wir überzeugen mit dem, was es braucht – und das ist nicht immer dasselbe. Unsere Kunden wissen das zu schätzen.',
+      image: { src: 'img/intro/science.svg', height: 255, alt: 'Softwareentwicklungstechnologie' },
+      link: { href: '/method#technology', text: 'Unser Techstack' },
+    },
+    {
+      title: 'Wir können nicht alles,<br/>aber gewisse Dinge besser.<br/>Das sagen nicht wir, sondern unsere Kunden.',
+      content:
+        'Uns gefällt nicht, dass Kunden im Mittelpunkt stehen. Mittelpunkt ist gut. Stehen ist zu statisch in einer Zeit, die sich laufend verändert. Wir können unsere Kunden in Bewegung versetzen – und sie mit unseren Lösungen digital transformiert in Bewegung halten.',
+      image: { src: 'img/intro/awards.svg', height: 248, alt: 'Kunde ist König' },
+      link: { href: '/news?tag=success-story', text: 'Success stories' },
+    },
+    {
+      title: 'Software passend für Sie.',
+      content:
+        'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die technologischen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kunden- oder Endnutzerbedürfnisse.\n' +
+        '\n' +
+        'Als Spezialisten konzipieren und entwickeln wir ausschliesslich inhouse. Weil es für uns ausser Frage steht, dass die Lösung Ihren Anforderunge entsprechen muss und nicht umgekehrt.',
+      image: { src: 'img/custom-software/product_teardown.svg', height: 281, alt: 'Projektportfolio' },
+      link: { href: '/services#software', text: 'Unsere Entwicklung' },
+    },
+    {
+      title: 'Digitalisierung geht nur zusammen.',
+      content: 'Topform erreichen wir nur in enger Zusammenarbeit mit Ihnen. Dann erkennen wir die genauen Bedürfnisse und können Ihre Erfahrungen und Anforderungen fortlaufend in den Prozess einbinden.\n' +
+        '\n' +
+        'Unsere Form der co-kreativen, agilen, iterativen und ja, manchmal auch aufreibenden, direkten Zusammenarbeit ist ein grundlegender Erfolgsfaktor für digitale Resultate die Sie weiterbringen.',
+      image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
+      link: { href: '/references', text: 'Unsere Referenzen' },
+    },
+    {
+      title: 'Digitale Transformation. Eine ganzheitliche Aufgabe.',
+      content:
+        'Die Begleitung durch den ganzen Transformationprozess garantiert nachhaltigen Erfolg bei der Umsetzung der Digitalisierung. Die richtige Strategie, optimale Prozesse, sinnvolle Organisationsstrukturen und der Mindset der Mitarbeiter ebnen den Weg zum Erfolg der neuen Technologie.',
+      image: { src: 'img/intro/building_websites.svg', alt: 'Software Development Team' },
+      link: { href: '/services', text: 'Unsere Dienstleistung' },
+    },
+
+    {
+      title: 'Die Software muss zum Kunden passen. Nicht umgekehrt.',
+      content:
+        'Die Vorteile der Digitalisierung lassen sich nur dann voll ausschöpfen, wenn die Software-Lösung exakt Ihren Bedürfnissen entspricht. Basierend auf der Realität Ihres Alltags erarbeiten wir zusammen Anforderungen und Ideen, stets mit dem Nutzer im Fokus. Das Produkt testen wir eingehend und passen es solange an, bis es perfekt sitzt.',
+      image: { src: 'img/custom-software/robotics.svg', alt: 'Custom Software' },
+      link: { href: '/services#custom-software', text: 'Custom Software Entwicklung' },
+    },
+    {
+      title: 'Knowhow und Erfahrung sind die Grundzutaten für erfolgreiche Softwareprojekte.',
+      content:
+        'Unsere Kundschaft ist breit gefächert. Unser Portfolio ist es auch: In den über zehn Jahren unseres Bestehens ist ein branchenübergreifendes fundiertes Knowhow entstanden, das in die Projekte der Zukunft einfliesst. In neue Fachgebiete arbeiten wir uns mit derselben Leidenschaft ein, rasch und kompetent.',
+      image: { src: 'img/custom-software/hacker_mind.svg', alt: 'Digitales Know-How' },
+      link: { href: '/references', text: 'Unsere Referenzen' },
+    },
+    {
+      title: 'Perfekt eingebunden in die (Software-)Familie.',
+      content:
+        'Erst mit der Integration in Ihr Software-Ökosystem entfaltet sich das volle Potenzial neuer Applikationen. Mit unseren Schnittstellenlösungen binden wir die Applikation nahtlos ein. Damit entfallen Medienbrüche und Prozesse greifen nahtlos ineinander. Dank Echtzeit-Integration können zahlreiche Anwender mehrerer Systeme parallel und Hand in Hand arbeiten. Gut zu wissen: Für die Zusammenarbeit mit Abacus, SAP und Dynamics bringen wir viel Erfahrung mit.',
+      image: { src: 'img/custom-software/product_teardown.svg', alt: 'Projektportfolio' },
+      link: { href: '/services#integration', text: 'Software Integration' },
+    },
+    {
+      title: 'Schnell und flexibel durch agiles Projektmanagement',
+      content:
+        'Kaum ein anderer Prozess ist so sehr von Dynamik geprägt wie die Digitalisierung. In der agilen Softwareentwicklung arbeiten wir deshalb eng mit Ihnen zusammen und halten den Arbeitsprozess schlank. In regelmässigen Intervallen beurteilen wir gemeinsam den Zwischenstand unserer Arbeit. So sind Sie jederzeit auf dem neuesten Stand – und wir können schnell und flexibel auf neue Erkenntnisse und Anforderungen reagieren. Durch dieses iterative Vorgehen behalten Sie stets die Kontrolle.',
+      image: { src: 'img/custom-software/scrum_board.svg', alt: 'Scrum Board' },
+      link: { href: '/services#agil', text: 'Agile Software' },
+    },
+
+  ]
+</script>
+
+<svelte:head>
+  <title>together we succeed - triarc-labs</title>
+</svelte:head>
+
+<div class="bg-white">
+
+  <Hero title="together we succeed" content="Wie arbeiten wir in unseren Projekten mit Kunden zusammen, bringen uns ein und schaffen Mehrwert">
+
+  </Hero>
+
+  {#each contents as content}
+    <Block bind:content />
+  {/each}
+
+  <Manifest />
+  <TeamMembers />
+
+  <Footer></Footer>
+</div>
