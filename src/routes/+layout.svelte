@@ -41,7 +41,7 @@
       path: '/innovation',
     },
     {
-      title: 'Referenzen',
+      title: 'Lösungen',
       description: 'Erfahrungen und Vollbrachtes.',
       path: '/references',
     },

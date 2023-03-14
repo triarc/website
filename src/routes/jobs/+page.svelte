@@ -219,10 +219,14 @@
         'Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.',
       cards: [
         {
-          title: '40 Stunden-Woche',
-          content:
-            'Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.',
+          title: 'Erfolgsbeteiligung',
+          content: 'Du trägst massgeblich zum Erfolg bei und sollst dafür auch belohnt werden. Ein grosser TEil des Gewinns wird quartalsweise an die Mitarbeiter ausgeschüttet'
         },
+        // {
+        //   title: '40 Stunden-Woche',
+        //   content:
+        //     'Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.',
+        // },
         {
           title: 'Technologie',
           content:

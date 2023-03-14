@@ -5,13 +5,13 @@
   import Footer from '$lib/components/Footer.svelte'
 
   let contents: BlockContent[] = [
-    {
-      title: 'Wir bauen Brücken zwischen Mitarbeiter, Prozesse und Technologien.',
-      content:
-        'Wir betrachten die digitale Transformation als ganzheitliche Aufgabe. Mit einem menschenorientierten Ansatz begleiten wir durch die Transformation. Dabei optimieren wir Prozesse, erarbeiten die richtige Vision und Strategie, definieren Strukturen und begleiten die Mitarbeiter durch die Veränderungen.',
-      image: { src: 'img/intro/lost_online.svg', height: 271, alt: 'Beratung' },
-      link: { href: '/products', text: 'Unsere Produkte' },
-    },
+    // {
+    //   title: 'Wir bauen Brücken zwischen Mitarbeiter, Prozesse und Technologien.',
+    //   content:
+    //     'Wir betrachten die digitale Transformation als ganzheitliche Aufgabe. Mit einem menschenorientierten Ansatz begleiten wir durch die Transformation. Dabei optimieren wir Prozesse, erarbeiten die richtige Vision und Strategie, definieren Strukturen und begleiten die Mitarbeiter durch die Veränderungen.',
+    //   image: { src: 'img/intro/lost_online.svg', height: 271, alt: 'Beratung' },
+    //   link: { href: '/products', text: 'Unsere Produkte' },
+    // },
     {
       title: 'Change Management. Der Mensch steht im Mittelpunkt.',
       content:

@@ -6,15 +6,15 @@
 </script>
 
 <svelte:head>
-  <title>Referenzen - triarc-labs</title>
+  <title>Lösungen - triarc-labs</title>
 </svelte:head>
 
-<Hero title="Referenzen" content="Was haben wir vollbracht und woraus ist es entstanden">
+<Hero title="Lösungen" content="Was haben wir vollbracht und woraus ist es entstanden">
 
 </Hero>
 
 <div class="bg-white">
-  <Customers />
   <References />
+  <Customers />
   <Footer></Footer>
 </div>

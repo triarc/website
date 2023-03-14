@@ -7,6 +7,20 @@
 
   let contents: BlockContent[] = [
     {
+      title: 'Die Software muss zum Kunden passen. Nicht umgekehrt.',
+      content:
+        'Die Vorteile der Digitalisierung lassen sich nur dann voll ausschöpfen, wenn die Software-Lösung exakt Ihren Bedürfnissen entspricht. Basierend auf der Realität Ihres Alltags erarbeiten wir zusammen Anforderungen und Ideen, stets mit dem Nutzer im Fokus. Das Produkt testen wir eingehend und passen es solange an, bis es perfekt sitzt.',
+      image: { src: 'img/custom-software/robotics.svg', alt: 'Custom Software' },
+      link: { href: '/services#custom-software', text: 'Custom Software Entwicklung' },
+    },
+    {
+      title: 'Knowhow und Erfahrung sind die Grundzutaten für erfolgreiche Softwareprojekte.',
+      content:
+        'Unsere Kundschaft ist breit gefächert. Unser Portfolio ist es auch: In den über zehn Jahren unseres Bestehens ist ein branchenübergreifendes fundiertes Knowhow entstanden, das in die Projekte der Zukunft einfliesst. In neue Fachgebiete arbeiten wir uns mit derselben Leidenschaft ein, rasch und kompetent.',
+      image: { src: 'img/custom-software/hacker_mind.svg', alt: 'Digitales Know-How' },
+      link: { href: '/references', text: 'Unsere Referenzen' },
+    },
+    {
       title: 'Software Entwicklung',
       content:
         'Der Bedarf an Software ist heutzutage nicht mehr wegzudenken. Selbst der Smoothie-Mixer hat inzwischen eine App, der Wecker eine Bluetooth Integration und der Kühlschrank einen Touchscreen.<br/><br/>' +
