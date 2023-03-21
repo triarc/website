@@ -32,7 +32,7 @@
     {
       quote: {
         image: '/team/serge.jpg',
-        content: 'Erfolg ist die Fähigkeit, von einem Misserfolg zu lernen und daraus zu wachsen.',
+        content: 'Software ist die Zukunft, und wir sind dafür verantwortlich, sie voranzutreiben.',
         person: 'Serge Müller',
         personTitle: 'CEO / Partner',
         email: 'serge@triarc-labs.com',
