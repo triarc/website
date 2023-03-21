@@ -308,6 +308,14 @@
         },
       ],
     },
+    {
+      quote: {
+        image: '/team/bambam.jpg',
+        content: 'Vertrauen ist gut, Sicherheit ist besser.',
+        person: 'Bambam',
+        personTitle: 'Sicherheitsinspektor',
+      },
+    },
   ]
 </script>
 
@@ -330,7 +338,7 @@
 </div>
 
 
-<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col relative lg:min-h-screen">
+<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">
   <div class="text-white bg-opacity-20">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold sm:text-4xl">

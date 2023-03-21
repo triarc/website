@@ -17,6 +17,16 @@
       link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' }
     },
     {
+      quote: {
+        image: '/team/pascal.jpg',
+        content: 'Innovationen sind der Schlüssel zu Wachstum und Erfolg in der Software-Branche.',
+        person: 'Pascal Bertschi',
+        personTitle: 'CCO / Partner',
+        email: 'pascal@triarc-labs.com',
+        linkedin: 'https://www.linkedin.com/in/pascal-bertschi-9b00b480/',
+      },
+    },
+    {
       title: 'Slothi',
       content:
         'Slothi soll deine Terminprobleme lösen. Eine smarte Lösung, welche dir den passenden Termin für alle\n' +

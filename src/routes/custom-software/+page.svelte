@@ -30,6 +30,16 @@
       image: { src: 'img/custom-software/pair_programming.svg', alt: 'Programmieren' },
     },
     {
+      quote: {
+        image: '/team/serge.jpg',
+        content: 'Erfolg ist die Fähigkeit, von einem Misserfolg zu lernen und daraus zu wachsen.',
+        person: 'Serge Müller',
+        personTitle: 'CEO / Partner',
+        email: 'serge@triarc-labs.com',
+        linkedin: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
+      },
+    },
+    {
       title: 'Unser Entwicklungsprozess',
       content:
         'Wir führen unsere Projekte erfolgreich seit einem Jahrzehnt agil. Diese Methode hat sich sowohl für uns, wie auch für den Kunden immer bewährt. Unser angiler Entwicklungsprozess besteht aus vier Schritten, welche sich pro Sprint wiederholen.',

@@ -31,6 +31,16 @@
       image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
     },
     {
+      quote: {
+        image: '/team/iris-smile.jpg',
+        content: 'Gut Ding will Weile haben, aber die Digitalisierung wartet nicht!',
+        person: 'Iris Zenegaglia',
+        personTitle: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
+        email: 'iris@triarc-labs.com',
+        linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
+      },
+    },
+    {
       title: 'Unser Beratungsprozess',
       steps: [
         {

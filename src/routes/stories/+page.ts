@@ -24,6 +24,9 @@ function getSizeUrl(match: any, size: string): string {
   return `https://${match.groups.domain}/content/images/size/w${size}/${match.groups.path} ${size}w`;
 }
 function getSourceSet(url: string): string {
+  if (!url) {
+    return ''
+  }
   const match = url.match(imageRegex)
   if(!match || !match.groups) {
     return url
@@ -32,6 +35,9 @@ function getSourceSet(url: string): string {
 }
 
 function getSource(url: string): string {
+  if (!url) {
+    return ''
+  }
   const match = url.match(imageRegex)
   if (!match || !match.groups) {
     return url
@@ -53,7 +59,7 @@ export function load({ params, url }) {
     async ([tagResponse, postResponse]) => {
       const tagData = await tagResponse.json()
       const postData = await postResponse.json()
-      const posts = postData.posts.map((post: GhostPost) => {
+      const posts = postData.posts.filter(post => !!post.feature_image).map((post: GhostPost) => {
         const publishDate = new Date(post.published_at);
         return {
           slug: post.slug,
