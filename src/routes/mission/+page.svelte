@@ -44,6 +44,16 @@
       //link: { href: '/references', text: 'Referenzen' },
     },
     {
+      quote: {
+        image: '/team/elke.jpg',
+        person: 'Elke Engel',
+        personTitle: 'Project Lead / Partner',
+        email: 'elke@triarc-labs.com',
+        linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
+        content: 'Das Wichtigste, was ein Projektleiter tun kann, ist, ein Team zu schaffen, das auf Erfolg ausgerichtet ist.',
+      }
+    },
+    {
       title: 'Digitale Transformation ist menschlich',
       content: 'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.<br/><br/>' +
         'Zusammen mit Ihnen stellen wir sicher, dass das Team die Veränderungen mitträgt und die neuen Prozesse gelebt werden.',
