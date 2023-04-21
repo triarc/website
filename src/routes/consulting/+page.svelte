@@ -13,27 +13,52 @@
     //   link: { href: '/products', text: 'Unsere Produkte' },
     // },
     {
-      title: 'Change Management. Der Mensch steht im Mittelpunkt.',
-      content:
-        'Eine Veränderung ist erst dann erfolgreich, wenn sie sich nachhaltig im Unternehmen verankert. Dabei spielen die Mitarbeiter eine zentrale Rolle. Nur mit einer gemeinsamen Vision und der Erkennung der Notwendigkeit blicken die Mitarbeiter der Veränderung motiviert entgegen. Wir begleiten die Mitarbeiter durch die Transformation, nehmen ihr Ängste und Befürchtungen ernst, binden sie im Entwicklungsprozess mit ein und unterstützen sie bei der Einführung der neuen Technologie.',
-      image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
-      link: { href: '/services#consulting', text: 'Beratung' },
-    },
-    {
       title: 'Beratung',
       content:
-        'Die Digitalisierung und der technische Fortschritt schreiten in grossen Schritten voran. Es ist Zeit für Unternehmen traditionelle Modelle zu überdenken und die Chancen der Digitalisierung zu nutzen - und nicht nur auf der technischen Ebene. \n' +
-        '\n<br/><br/>' +
-        'Unsere Digitale Transformationsberatung unterstützt Kunden bei der Analyse und Identifizierung von Chancen innerhalb des digitalen Wandels und bei der Erarbeitung von konkreten Handlungsfelder um die Ziele der Digitalisierung zu erreichen. \n' +
-        '\n<br/><br/>' +
-        'Der technische Aspekt, die Prozesse, die Strukturen, die Unternehmenskultur und der Mensch gehen Hand in Hand.',
+        '\n<br/><br/>'+
+        'Unser Digitalisierungsberatungsteam stellt sicher, dass die Digitalisierung für ein Unternehmen zum Erfolg wird. <br/><br/>Dafür ist nicht nur eine hochwertige Software relevant, sondern vorallem, dass sie genutzt wird und ihren Zweck erfüllt. Dies wird erreicht, wenn die Prozesse, Strukturen, Organisationskultur und Mitarbeiter sich mit dem technischen Fortschritt weiterentwickeln. <br/><br/>Wir unterstützen unsere Kunden bei der Analyse und Identifizierung von Chancen, Erstellung einer Transformations-Roadmap und der Umsetzung der definierten Massnahmen.  \n' +
+        
+        '\n<br/><br/>',
+
 
       image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
     },
     {
+    title: 'Visions-und Strategieentwicklung',
+      content:
+        'Für eine Transformation braucht es ein konkretes Zielbild. Wir entwickeln zusammen mit unseren Kunden eine Vision und Strategie ihrer Digitalisierung. Daraus entstehen Massnahen für die konkrete Umsetzung und schlussendlich Erreichung des Zielbildes.',
+      image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
+      link: { href: '/services#consulting', text: 'Beratung' },
+    },
+    {
+      title: 'Change Management. Der Mensch steht im Mittelpunkt.',
+      content:
+        'Eine Veränderung ist erst dann erfolgreich, wenn sie sich nachhaltig im Unternehmen verankert. Dabei spielen die Mitarbeiter eine zentrale Rolle. Nur mit einer gemeinsamen Vision und der Erkennung der Notwendigkeit blicken die Mitarbeiter der Veränderung motiviert entgegen. <br/><br/>Wir begleiten die Mitarbeiter durch die Transformation, nehmen ihr Ängste und Befürchtungen ernst, binden sie im Entwicklungsprozess mit ein und unterstützen sie bei der Einführung der neuen Technologie.',
+      image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
+      link: { href: '/services#consulting', text: 'Beratung' },
+    },
+
+    {
+      title: 'Strukturen und Prozesse',
+      content:
+      'Ein verbundenes IT-Ökosystem, das passende Organisationsmodell und die richtigen Qualifikationen ebnen den Weg der Digitalisierung. Wir analysieren status quo und zeigen Chancen auf.<br/><br/>Bevor wir neue Technologien und Software einführen analysieren und optimieren wir die betroffenen Geschäftsprozesse und passen sie an das neue digitale Arbeitsmodell an.',
+      image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
+      link: { href: '/services#consulting', text: 'Beratung' },
+    },
+
+    {
+
+title: 'Führungs-, Team- und Mitarbeiter Coaching',
+content:
+  'Die digitale Transformation birgt unzählige und vielschichtige Herausforderungen und Stolpersteine. Wir begleiten und befähigen Führungskräfte, Mitarbeiter und Teams auf dem Weg durch den Wandel. <br/><br/>Wir arbeiten mit systemischen-lösungsorientierten Methoden und verfolgen das Ziel der Selbstbefähigung. Je nach Bedarf agieren wir auch als Sparring-Partner.',
+image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
+link: { href: '/services#consulting', text: 'Beratung' },
+},
+   
+    {
       quote: {
         image: '/team/iris-smile.jpg',
-        content: 'Gut Ding will Weile haben, aber die Digitalisierung wartet nicht!',
+        content: 'Der Mensch digitalisiert für die Menschen - ich stelle den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
         person: 'Iris Zenegaglia',
         personTitle: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
         email: 'iris@triarc-labs.com',
@@ -41,7 +66,7 @@
       },
     },
     {
-      title: 'Unser Beratungsprozess',
+      title: 'Beratungsinhalte',
       steps: [
         {
           title: 'Strategie & Vision',
