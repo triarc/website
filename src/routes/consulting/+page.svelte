@@ -27,22 +27,22 @@
     title: 'Visions-und Strategieentwicklung',
       content:
         'Für eine Transformation braucht es ein konkretes Zielbild. Wir entwickeln zusammen mit unseren Kunden eine Vision und Strategie ihrer Digitalisierung. Daraus entstehen Massnahmen für die konkrete Umsetzung und schlussendlich Erreichung des Zielbildes. So wird die massgeschneiderte Software für das ganze Unternehmen zum vollen Erfolg! ',
-      image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
+      image: { src: 'img/intro/strategy.svg', alt: 'Beratung' },
       link: { href: '/services#consulting', text: 'Custom Software' },
     },
     {
       title: 'Change Management. Der Mensch steht im Mittelpunkt.',
       content:
         'Eine Veränderung ist erst dann erfolgreich, wenn sie sich nachhaltig im Unternehmen verankert. Dabei spielen die Mitarbeiter eine zentrale Rolle. Nur mit einer gemeinsamen Vision und der Erkennung der Notwendigkeit blicken die Mitarbeiter der Veränderung motiviert entgegen. <br/><br/>Wir begleiten die Mitarbeiter durch die Transformation, nehmen ihr Ängste und Befürchtungen ernst, binden sie im Entwicklungsprozess mit ein und unterstützen sie bei der Einführung der neuen Technologie.',
-      image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
-      link: { href: '/services#consulting', text: 'Kontaktiere uns' },
+      image: { src: 'img/intro/team.svg', alt: 'Beratung' },
+      link: { href: '/contact#change-management', text: 'Kontaktiere uns' },
     },
 
     {
       title: 'Strukturen und Prozesse',
       content:
       'Ein verbundenes IT-Ökosystem, das passende Organisationsmodell und die richtigen Qualifikationen ebnen den Weg der Digitalisierung. Wir analysieren status quo und zeigen Chancen auf.<br/><br/>Bevor wir neue Technologien und Software einführen analysieren und optimieren wir die betroffenen Geschäftsprozesse und passen sie an das neue digitale Arbeitsmodell an.<br/><br/> Interessiert? Dann kontaktiere uns für ein unverbindliches Erstgespräch.',
-      image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
+      image: { src: 'img/intro/process.svg', alt: 'Beratung' },
       link: { href: '/services#consulting', text: 'Kontakt für mehr' },
     },
 
@@ -51,7 +51,7 @@
 title: 'Führungs-, Team- und Mitarbeiter Coaching',
 content:
   'Die digitale Transformation birgt unzählige und vielschichtige Herausforderungen und Stolpersteine. Wir begleiten und befähigen Führungskräfte, Mitarbeiter und Teams auf dem Weg durch den Wandel. <br/><br/>Wir arbeiten mit einem systemisch-lösungsorientierten Beratungsansatz und verfolgen das Ziel der Selbstbefähigung. Je nach Bedarf agieren wir auch als Sparring-Partner.',
-image: { src: 'img/intro/engineering_team.svg', alt: 'Beratung' },
+image: { src: 'img/intro/coaching.svg', alt: 'Beratung' },
 link: { href: '/services#consulting', text: 'Coaching Kontakt' },
 },
    
