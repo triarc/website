@@ -2,7 +2,7 @@
   import '../app.postcss'
 
   import { beforeUpdate, onMount } from 'svelte'
-  import logo from "../lib/assets/triarc-logo.svg"
+  import logo from "../lib/assets/triarc-labs-black.svg"
   import NavDropDown from "$lib/components/NavDropDown.svelte";
   import NavDropDownItem from "$lib/components/NavDropDownItem.svelte";
 
@@ -167,8 +167,8 @@
     id="nav-menu"
   >
     <div class="navbar-container">
-      <a href="/" class="flex items-center px-12">
-        <img src={logo} alt="triarc laboratories ltd" width="60" height="20" />
+      <a href="/" class="flex items-center px-12 py-2">
+        <img src={logo} alt="triarc laboratories ltd" width="240" height="20" />
       </a>
       <ul class="nav-links">
         {#each navItems as navItem}
@@ -185,8 +185,8 @@
             {:else}
               <NavDropDown title="{navItem.title}" inline={data.pathname === '/'} let:close>
                 {#each navItem.items as subItem}
-                  <NavDropDownItem title={subItem.title} description={subItem.description} close="{close}"
-                                   path={subItem.path} inline={data.pathname === '/'}>></NavDropDownItem>
+                  <NavDropDownItem title={subItem.title} description={subItem.description} close="{close && toggle}"
+                                   path={subItem.path} inline={data.pathname === '/'}></NavDropDownItem>
                 {/each}
               </NavDropDown>
             {/if}
@@ -247,11 +247,6 @@
       @apply h-16;
   }
 
-
-  #page.content.open .navbar {
-      /*@apply max-h-[calc(100vh_-_64px)];*/
-  }
-
   #page.content.closed .navbar {
       @apply max-h-0 overflow-hidden lg:max-h-max lg:overflow-visible;
   }
@@ -259,10 +254,13 @@
       @apply bottom-0;
   }
   #page.content.open .main-container {
-      @apply h-16 overflow-hidden sticky bottom-0 z-20 lg:h-auto lg:relative;
+      @apply h-16 overflow-hidden sticky bottom-0 z-20 lg:h-auto lg:relative lg:overflow-visible lg:h-auto lg:z-auto;
   }
   #page.content.open .page-content {
       @apply max-h-0 lg:max-h-max;
+  }
+  #page.content.open .navbar-container {
+      @apply pt-8 lg:pt-0;
   }
   #page.content.closed .mobile-bar {
       @apply sticky top-0;
@@ -292,26 +290,6 @@
       @apply min-h-0 px-8;
   }
 
-  @media (max-width: 1024px) {
-
-
-      /*#page.closed .navbar {*/
-      /*    transform: translateY(-100vh);*/
-      /*}*/
-
-      /*#page.closed .main-container {*/
-      /*    transform: translateY(-100vh) translateY(64px);*/
-      /*}*/
-  }
-
-
-
-
-  /*.content #nav-menu {*/
-  /*    min-height: calc(100vh - 64px);*/
-  /*    max-height: calc(100vh - 64px);*/
-  /*}*/
-
   #page.landing .navbar {
       @apply px-0 py-8 items-stretch flex-col justify-center w-full lg:max-w-sm lg:fixed lg:top-0 overflow-x-hidden;
   }
@@ -320,7 +298,10 @@
   }
 
   #page.landing .navbar .nav-links {
-      @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8 scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-red-triarc;
+      @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8;
+  }
+  #page .navbar .nav-links {
+      @apply scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-blue-triarc lg:overflow-visible;
   }
 
   #page.landing .main-container {

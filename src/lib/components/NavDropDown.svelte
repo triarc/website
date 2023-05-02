@@ -19,6 +19,7 @@
   function close() {
     open = false;
   }
+
   function registerEscape() {
     document.addEventListener('keydown', escapeListener, {capture: true});
     document.addEventListener('mouseup', blurListener, {capture: true})
@@ -42,8 +43,7 @@
     if (dropdown && evt.target && evt.target instanceof HTMLElement && dropdown.contains(evt.target)) {
       return;
     }
-    if (this.open) { // && evt.target && evt.target instanceof HTMLElement && (!dropdown || !dropdown.contains(evt.target))
-
+    if (this.open) {
       open = false;
       evt.stopPropagation();
     }
@@ -51,27 +51,16 @@
 </script>
 
 <div class="relative" bind:this={dropdown}>
-  {#if !inline}
-    <MediaQuery query="(min-width: 1025px)" let:matches>
-      {#if matches}
-        <button type="button" class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false"
-                on:click={toggle}>
-          <span>{title}</span>
-          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                  clip-rule="evenodd" />
-          </svg>
-        </button>
+    <button type="button" class="inline-flex text-gray-800 items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false"
+            on:click={toggle}>
+      <span>{title}</span>
+      {#if !inline}
+      <svg class="h-5 w-5 hidden lg:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+              clip-rule="evenodd" />
+      </svg>
       {/if}
-    </MediaQuery>
-    <MediaQuery query="(max-width: 1024px)" let:matches>
-      {#if matches}
-        <h1 class="header">{title}</h1>
-      {/if}
-    </MediaQuery>
-  {:else}
-    <h1 class="header">{title}</h1>
-  {/if}
+    </button>
 
   <MediaQuery query="(max-width: 1024px)" let:matches>
   {#if open || inline || matches}
