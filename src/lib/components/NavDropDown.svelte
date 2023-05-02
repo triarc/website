@@ -1,0 +1,109 @@
+<script lang="ts">
+  import MediaQuery from "$lib/components/MediaQuery.svelte";
+
+  export let title;
+  export let open=false;
+  export let inline=false;
+
+  let dropdown;
+
+  function toggle() {
+    open = !open;
+    if (open) {
+      registerEscape();
+    } else {
+      unregisterEscape();
+    }
+  }
+
+  function close() {
+    open = false;
+  }
+  function registerEscape() {
+    document.addEventListener('keydown', escapeListener, {capture: true});
+    document.addEventListener('mouseup', blurListener, {capture: true})
+  }
+
+  function unregisterEscape() {
+    document.removeEventListener('keydown', escapeListener);
+    document.removeEventListener('mouseup', blurListener);
+  }
+
+  function escapeListener(evt: KeyboardEvent) {
+    if (evt.key === 'Escape') {
+      if (open) {
+        open = false;
+        evt.stopPropagation();
+      }
+    }
+  }
+
+  function blurListener(evt: MouseEvent) {
+    if (dropdown && evt.target && evt.target instanceof HTMLElement && dropdown.contains(evt.target)) {
+      return;
+    }
+    if (this.open) { // && evt.target && evt.target instanceof HTMLElement && (!dropdown || !dropdown.contains(evt.target))
+
+      open = false;
+      evt.stopPropagation();
+    }
+  }
+</script>
+
+<div class="relative" bind:this={dropdown}>
+  {#if !inline}
+    <MediaQuery query="(min-width: 1025px)" let:matches>
+      {#if matches}
+        <button type="button" class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false"
+                on:click={toggle}>
+          <span>{title}</span>
+          <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd" />
+          </svg>
+        </button>
+      {/if}
+    </MediaQuery>
+    <MediaQuery query="(max-width: 1024px)" let:matches>
+      {#if matches}
+        <h1 class="header">{title}</h1>
+      {/if}
+    </MediaQuery>
+  {:else}
+    <h1 class="header">{title}</h1>
+  {/if}
+
+  <MediaQuery query="(max-width: 1024px)" let:matches>
+  {#if open || inline || matches}
+    <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}">
+      <div class="container">
+        <slot {close}></slot>
+      </div>
+    </div>
+  {/if}
+  </MediaQuery>
+</div>
+
+<style>
+  .header {
+      @apply bg-gray-300 text-gray-900 py-1 -mx-4 px-4;
+  }
+
+  .inline {
+      @apply flex flex-col;
+  }
+
+  .dialog {
+      @apply absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4;
+  }
+
+  .dialog.open {
+      @apply transition ease-out duration-200 opacity-100 translate-y-0 z-30;
+  }
+  .dialog.closed {
+      @apply transition ease-in duration-150 opacity-0 translate-y-1;
+  }
+  .dialog .container {
+      @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4;
+  }
+</style>

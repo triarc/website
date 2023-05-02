@@ -79,7 +79,7 @@
       {#if content.link}
         <a
           href={content.link.href}
-          class="rounded bg-red-triarc text-white px-3 py-1 inline-block mt-2"
+          class="rounded bg-blue-triarc text-white px-3 py-1 inline-block mt-2"
           target={content.link.target ?? ''}
         >
           {content.link.text}

@@ -312,7 +312,7 @@
       quote: {
         image: '/team/bambam.jpg',
         content: 'Vertrauen ist gut, Sicherheit ist besser.',
-        person: 'Bambam',
+        person: 'Bamm Bamm',
         personTitle: 'Sicherheitsinspektor',
       }
     },

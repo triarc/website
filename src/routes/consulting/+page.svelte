@@ -57,7 +57,7 @@ link: { href: '/services#consulting', text: 'Coaching Kontakt' },
    
     {
       quote: {
-        image: '/team/iris-smile.jpg',
+        image: '/team/iris.jpg',
         content: 'Der Mensch digitalisiert für die Menschen - ich stelle den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
         person: 'Iris Zenegaglia',
         personTitle: 'Management-, Strategie- und Digitalisierungsberatung / Partner',

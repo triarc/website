@@ -9,7 +9,7 @@
   let content: BlockContent =
     {
       quote: {
-        image: '/team/dave-smile.jpg',
+        image: '/team/dave.jpg',
         content: 'Gewinnen Sie durch maßgeschneiderte Software einen entscheidenden Wettbewerbsvorteil!',
         person: 'Dave Haug',
         personTitle: 'Business Development',

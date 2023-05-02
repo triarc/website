@@ -1,18 +1,19 @@
 <script lang="ts">
-  import serge from '../assets/avatars/serge.png?width=255&format=webp;png&metadata'
-  import marco from '../assets/avatars/marco.png?width=255&format=webp;png&metadata'
-  import pascal from '../assets/avatars/pascal.png?width=255&format=webp;png&metadata'
-  import elke from '../assets/avatars/elke.png?width=255&format=webp;png&metadata'
-  import max from '../assets/avatars/max.png?width=255&format=webp;png&metadata'
-  import iris from '../assets/avatars/iris.png?width=255&format=webp;png&metadata'
-  import dave from '../assets/avatars/dave.png?width=255&format=webp;png&metadata'
-  import urban from '../assets/avatars/urban.png?width=255&format=webp;png&metadata'
-  import eduan from '../assets/avatars/eduan.png?width=255&format=webp;png&metadata'
-  import michel from '../assets/avatars/michel.png?width=255&format=webp;png&metadata'
-  import luka from '../assets/avatars/luka.png?width=255&format=webp;png&metadata'
-  import chris from '../assets/avatars/chris.png?width=255&format=webp;png&metadata'
-  import lars from '../assets/avatars/lars.png?width=255&format=webp;png&metadata'
-  import david from '../assets/avatars/david.png?width=255&format=webp;png&metadata'
+  import serge from '../../../static/team/serge.jpg?width=255&format=webp;png&metadata'
+  import marco from '../../../static/team/marco.jpg?width=255&format=webp;png&metadata'
+  import pascal from '../../../static/team/pascal.jpg?width=255&format=webp;png&metadata'
+  import elke from '../../../static/team/elke.jpg?width=255&format=webp;png&metadata'
+  import max from '../../../static/team/max.jpg?width=255&format=webp;png&metadata'
+  import iris from '../../../static/team/iris.jpg?width=255&format=webp;png&metadata'
+  import dave from '../../../static/team/dave.jpg?width=255&format=webp;png&metadata'
+  import simona from '../../../static/team/simona.jpg?width=255&format=webp;png&metadata'
+  import eduan from '../../../static/team/eduan.jpg?width=255&format=webp;png&metadata'
+  import michel from '../../../static/team/michel.jpg?width=255&format=webp;png&metadata'
+  import luka from '../../../static/team/luka.jpg?width=255&format=webp;png&metadata'
+  import chris from '../../../static/team/chris.jpg?width=255&format=webp;png&metadata'
+  import sebastian from '../../../static/team/sebastian.jpg?width=255&format=webp;png&metadata'
+  import david from '../../../static/team/david.jpg?width=255&format=webp;png&metadata'
+  import bammbamm from '../../../static/team/bambam.jpg?width=255&format=webp;png&metadata'
 
   let teamMember = [
     {
@@ -20,129 +21,146 @@
       job: 'CEO / Partner',
       nerdJob: 'CEO / Partner',
       images: serge,
+      special: false,
     },
     {
       name: 'Marco Schmidlin',
       job: 'CTO / Partner',
       nerdJob: 'CTO / Partner',
       images: marco,
+      special: false,
     },
     {
       name: 'Elke Engel',
       job: 'CFO / Partner',
       nerdJob: 'CFO / Partner',
       images: elke,
+      special: false,
     },
     {
       name: 'Pascal Bertschi',
       job: 'CCO / Partner',
       nerdJob: 'Typescript maniac',
       images: pascal,
+      special: false,
     },
     {
       name: 'Max Lüthi',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
       images: max,
+      special: false,
     },
     {
       name: 'Iris Zenegaglia',
-      job: 'Project Lead',
-      nerdJob: 'Project Lead',
+      job: 'Beratung / Partner',
+      nerdJob: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
       images: iris,
+      special: false,
     },
     {
       name: 'Dave Haug',
       job: 'Business Development',
       nerdJob: 'Business Development',
       images: dave,
+      special: false,
     },
     {
-      name: 'Andre Urban',
-      job: 'Administration',
-      nerdJob: 'Administration',
-      images: urban,
+      name: 'Simona Miljanovic',
+      job: 'UX Designerin',
+      nerdJob: 'UX Designerin',
+      images: simona,
+      special: false,
     },
     {
       name: 'Eduardo Lavaque',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
       images: eduan,
+      special: false,
     },
     {
       name: 'Michel Gabriel',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
       images: michel,
+      special: false,
     },
     {
       name: 'Luka Kramer',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
       images: luka,
+      special: false,
     },
     {
       name: 'Chris Thonfeld',
       job: 'Nearshore Developer',
       nerdJob: 'Software Developer',
       images: chris,
+      special: false,
     },
     {
-      name: 'Lars Hornbaker',
+      name: 'Sebastian Bortz',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      images: lars,
+      images: sebastian,
+      special: false,
     },
     {
       name: 'David Jahn',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
       images: david,
+      special: false,
+    },
+    {
+      name: 'Bam Bam',
+      job: 'Sicherheitsinspektor',
+      nerdJob: 'Sicherheitsinspektor',
+      images: bammbamm,
+      special: true,
     },
   ]
+
+  teamMember.sort((first, second) => {
+    if(first.special) {
+      return 1;
+    } else if (second.special) {
+      return -1;
+    }
+    return first.name.localeCompare(second.name);
+  })
 </script>
 
-<div class="bg-white bg-about-us" id="team">
-  <div class="px-8 py-32 max-w-screen-lg mx-auto text-center">
-    <div class="space-y-8 sm:space-y-12">
-      <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-        <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Digital Evolutionaries</h2>
-        <p class="text-xl leading-7 text-gray-500">Das Team</p>
-      </div>
-      <ul
-        class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5"
-      >
-        {#each teamMember as member}
-          <li class="flex">
-            <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
-              <div class="card flex-grow flex items-center justify-center">
-                <div class="card-content  border-b border-blue-triarc">
-                  <picture class="front-card w-8 transition-all">
-                    {#each member.images as image}
-                      <source type="image/{image.format}" srcset={image.src} loading="lazy" />
-                    {/each}
-                    <img
-                      src={member.images[1].src}
-                      alt={member.name}
-                      width="255"
-                      height="255"
-                      loading="lazy"
-                      class="drop-shadow-2xl filter "
-                    />
-                  </picture>
-                </div>
-              </div>
-              <div class="space-y-2">
-                <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
-                  <p>{member.name}</p>
-                  <p class="text-blue-triarc">{member.job}</p>
-                </div>
-              </div>
-            </div>
-          </li>
-        {/each}
-      </ul>
+
+<div class="bg-gray-900 py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Unser Team</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-300">Eine dynamische Gruppe voller Digital Evolutionaries. Jederzeit Leidenschaftlich dabei um das beste Resutlat aus dem Projekt zu holen.</p>
     </div>
+    <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
+      {#each teamMember as member}
+      <li>
+        <picture class="aspect-[14/13] w-full rounded-2xl object-cover">
+          {#each member.images as image}
+            <source type="image/{image.format}" srcset={image.src} loading="lazy" />
+          {/each}
+          <img
+            src={member.images[1].src}
+            alt={member.name}
+            width="255"
+            height="255"
+            loading="lazy"
+            class="drop-shadow-2xl filter rounded-2xl"
+          />
+        </picture>
+        <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{member.name}</h3>
+        <p class="text-base leading-7 text-gray-300">{member.job}</p>
+      </li>
+      {/each}
+    </ul>
   </div>
 </div>
 

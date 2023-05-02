@@ -3,7 +3,7 @@
 </svelte:head>
 
 <script lang="ts">
-  import logo from '../lib/assets/triarc-logo.svg'
+  import logo from "../lib/assets/triarc-labs-white.svg"
 
   function scrollToMenu() {
     document.scrollingElement.scrollTo({
@@ -16,8 +16,8 @@
 <div
   class="bg-gray-100 relative bg-opacity-20 flex flex-col flex items-center min-h-screen w-full flex-grow justify-center intro"
 >
-  <img src={logo} alt="triarc laboratories ltd" class="absolute top-1/2 z-20" width="167" height="101" />
-  <div class="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-70 z-10" />
+<!--  <img src={logo} alt="triarc laboratories ltd" class="absolute top-8 left-8 right-8 z-20" width="242" height="42" />-->
+<!--  <div class="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-10" />-->
   <video
     autoplay
     muted
