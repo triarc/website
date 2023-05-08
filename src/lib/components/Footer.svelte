@@ -16,7 +16,7 @@
 
       <div class="flex flex-col justify-end">
         <div class="flex space-x-6 mb-6 justify-end">
-          <a
+          <a aria-label="Linkedin"
             class="fill-white xl:text-right"
             href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
           >

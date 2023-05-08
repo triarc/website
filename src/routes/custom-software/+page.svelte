@@ -7,7 +7,7 @@
 
   let contents: BlockContent[] = [
     {
-      title: 'Willkommen in den Custom Software Manufaktur.',
+      title: 'Willkommen in der Custom Software Manufaktur.',
       bulletPoints: [
         'Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind.',
         'Dank unserer jahrelangen Erfahrung und Knowhow sind wir in der Lage, einzigartige Lösungen zu entwickeln, die den Kunden helfen, ihre Ziele effizient und kosteneffektiv zu erreichen. Wir verstehen, dass jedes Unternehmen einzigartig ist und dass es keine "One-Size-Fits-All"-Lösungen gibt.',

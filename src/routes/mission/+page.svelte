@@ -10,9 +10,6 @@
   import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
   import bammbamm from '../../../static/team/bambam.jpg?width=500&format=webp;png&metadata'
 
-
-  console.log(serge)
-
   let contents: BlockContent[] = [
     {
       title: 'Für Ihren Fortschritt.',

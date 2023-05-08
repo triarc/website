@@ -62,6 +62,10 @@
   ]
 </script>
 
+<svelte:head>
+  <title>Innovation Lab - triarc-labs</title>
+</svelte:head>
+
 <Hero title="Innovation Lab" content="Was haben wir vollbracht und woraus ist es entstanden" />
 
 <div class="bg-white min-h-screen">
