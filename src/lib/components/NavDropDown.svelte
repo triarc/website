@@ -1,98 +1,105 @@
 <script lang="ts">
-  import MediaQuery from "$lib/components/MediaQuery.svelte";
+  import MediaQuery from '$lib/components/MediaQuery.svelte'
 
-  export let title;
-  export let open=false;
-  export let inline=false;
+  export let title
+  export let open = false
+  export let inline = false
 
-  let dropdown;
+  let dropdown
 
   function toggle() {
-    open = !open;
+    open = !open
     if (open) {
-      registerEscape();
+      registerEscape()
     } else {
-      unregisterEscape();
+      unregisterEscape()
     }
   }
 
   function close() {
-    open = false;
+    open = false
   }
 
   function registerEscape() {
-    document.addEventListener('keydown', escapeListener, {capture: true});
-    document.addEventListener('mouseup', blurListener, {capture: true})
+    document.addEventListener('keydown', escapeListener, { capture: true })
+    document.addEventListener('mouseup', blurListener, { capture: true })
   }
 
   function unregisterEscape() {
-    document.removeEventListener('keydown', escapeListener);
-    document.removeEventListener('mouseup', blurListener);
+    document.removeEventListener('keydown', escapeListener)
+    document.removeEventListener('mouseup', blurListener)
   }
 
   function escapeListener(evt: KeyboardEvent) {
     if (evt.key === 'Escape') {
       if (open) {
-        open = false;
-        evt.stopPropagation();
+        open = false
+        evt.stopPropagation()
       }
     }
   }
 
   function blurListener(evt: MouseEvent) {
     if (dropdown && evt.target && evt.target instanceof HTMLElement && dropdown.contains(evt.target)) {
-      return;
+      return
     }
     if (this.open) {
-      open = false;
-      evt.stopPropagation();
+      open = false
+      evt.stopPropagation()
     }
   }
 </script>
 
 <div class="relative" bind:this={dropdown}>
-    <button type="button" class="inline-flex text-gray-800 items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900" aria-expanded="false"
-            on:click={toggle}>
-      <span>{title}</span>
-      {#if !inline}
+  <button
+    type="button"
+    class="inline-flex text-gray-800 items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+    aria-expanded="false"
+    on:click={toggle}
+  >
+    <span>{title}</span>
+    {#if !inline}
       <svg class="h-5 w-5 hidden lg:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-              clip-rule="evenodd" />
+        <path
+          fill-rule="evenodd"
+          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+          clip-rule="evenodd"
+        />
       </svg>
-      {/if}
-    </button>
+    {/if}
+  </button>
 
   <MediaQuery query="(max-width: 1024px)" let:matches>
-  {#if open || inline || matches}
-    <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}">
-      <div class="container" on:click={open ? close() : {}}>
-        <slot></slot>
+    {#if open || inline || matches}
+      <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}">
+        <div class="container" on:click={open ? close() : {}}>
+          <slot />
+        </div>
       </div>
-    </div>
-  {/if}
+    {/if}
   </MediaQuery>
 </div>
 
 <style>
   .header {
-      @apply bg-gray-300 text-gray-900 py-1 -mx-4 px-4;
+    @apply bg-gray-300 text-gray-900 py-1 -mx-4 px-4;
   }
 
   .inline {
-      @apply flex flex-col;
+    @apply flex flex-col;
   }
 
   .dialog {
-      @apply absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4;
+    @apply absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4;
   }
 
   .dialog.open {
-      @apply transition ease-out duration-200 opacity-100 translate-y-0 z-30;
+    @apply transition ease-out duration-200 opacity-100 translate-y-0 z-30;
   }
   .dialog.closed {
-      @apply transition ease-in duration-150 opacity-0 translate-y-1;
+    @apply transition ease-in duration-150 opacity-0 translate-y-1;
   }
   .dialog .container {
-      @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4;
+    @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4;
   }
 </style>

@@ -101,5 +101,5 @@
       <Block bind:content />
     {/if}
   {/each}
-  <Footer></Footer>
+  <Footer />
 </div>

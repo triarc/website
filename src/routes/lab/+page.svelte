@@ -178,4 +178,4 @@
   </div>
 </div>
 
-<Footer></Footer>
+<Footer />

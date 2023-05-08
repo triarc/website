@@ -11,8 +11,8 @@
       bulletPoints: [
         'Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind.',
         'Dank unserer jahrelangen Erfahrung und Knowhow sind wir in der Lage, einzigartige Lösungen zu entwickeln, die den Kunden helfen, ihre Ziele effizient und kosteneffektiv zu erreichen. Wir verstehen, dass jedes Unternehmen einzigartig ist und dass es keine "One-Size-Fits-All"-Lösungen gibt.',
-        'Unser Ziel ist es, unseren Kunden die besten und innovativsten Lösungen zu bieten, die ihnen dabei helfen, ihr Geschäft zu verbessern und ihre Wettbewerbsfähigkeit zu erhöhen. Zusammen'
-      ]
+        'Unser Ziel ist es, unseren Kunden die besten und innovativsten Lösungen zu bieten, die ihnen dabei helfen, ihr Geschäft zu verbessern und ihre Wettbewerbsfähigkeit zu erhöhen. Zusammen',
+      ],
     },
     {
       title: 'Die Software muss zum Kunden passen. Nicht umgekehrt.',
@@ -41,8 +41,7 @@
         },
         {
           title: 'Entwicklung',
-          content:
-            'Die Entwicklung beginnt, es wird fleissig getestet und optimiert bis zum Review Meeting.',
+          content: 'Die Entwicklung beginnt, es wird fleissig getestet und optimiert bis zum Review Meeting.',
         },
         {
           title: 'Review',
@@ -98,8 +97,6 @@
       ],
     },
 
-
-
     {
       title: 'Wartung / Hosting',
       content:
@@ -116,9 +113,7 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Custom Software" content="Willkommen in den Custom Software Manufaktur. ">
-
-  </Hero>
+  <Hero title="Custom Software" content="Willkommen in den Custom Software Manufaktur. " />
 
   {#each contents as content}
     <Block bind:content />
@@ -136,7 +131,5 @@
     </a>
   </div>
 
-
-
-  <Footer></Footer>
+  <Footer />
 </div>

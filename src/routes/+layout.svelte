@@ -2,9 +2,9 @@
   import '../app.postcss'
 
   import { beforeUpdate, onMount } from 'svelte'
-  import logo from "../lib/assets/triarc-labs-black.svg"
-  import NavDropDown from "$lib/components/NavDropDown.svelte";
-  import NavDropDownItem from "$lib/components/NavDropDownItem.svelte";
+  import logo from '../lib/assets/triarc-labs-black.svg'
+  import NavDropDown from '$lib/components/NavDropDown.svelte'
+  import NavDropDownItem from '$lib/components/NavDropDownItem.svelte'
 
   export let menuOpen = false
 
@@ -12,17 +12,17 @@
   export let mobileSubTitle = ''
 
   export interface NavItemHeading {
-    type: 'heading';
-    title: string;
-    items: NavItemLink[];
+    type: 'heading'
+    title: string
+    items: NavItemLink[]
   }
   export interface NavItemLink {
-    type: 'link';
-    title: string;
-    description: string;
-    path: string;
+    type: 'link'
+    title: string
+    description: string
+    path: string
   }
-  export type NavItem = NavItemHeading | NavItemLink;
+  export type NavItem = NavItemHeading | NavItemLink
 
   export let data: { pathname: string }
 
@@ -38,32 +38,38 @@
     {
       type: 'heading',
       title: 'together we succeed',
-      items: [{
-        type: 'link',
-        title: 'Mission',
-        path: '/mission',
-        description: 'Was uns ausmacht',
-      },  {
-        type: 'link',
-        title: 'Team',
-        path: '/team',
-        description: 'Wer wir sind',
-      }]
+      items: [
+        {
+          type: 'link',
+          title: 'Mission',
+          path: '/mission',
+          description: 'Was uns ausmacht',
+        },
+        {
+          type: 'link',
+          title: 'Team',
+          path: '/team',
+          description: 'Wer wir sind',
+        },
+      ],
     },
     {
       type: 'heading',
       title: 'Lösungen',
-      items: [{
-        type: 'link',
-        title: 'Projekte',
-        description: 'Erfahrungen und Referenzen',
-        path: '/references',
-      }, {
-        type: 'link',
-        title: 'Stories',
-        description: 'Neustes von uns und unserem Umfeld',
-        path: '/stories',
-      }]
+      items: [
+        {
+          type: 'link',
+          title: 'Projekte',
+          description: 'Erfahrungen und Referenzen',
+          path: '/references',
+        },
+        {
+          type: 'link',
+          title: 'Stories',
+          description: 'Neustes von uns und unserem Umfeld',
+          path: '/stories',
+        },
+      ],
     },
     {
       type: 'heading',
@@ -87,34 +93,37 @@
           description: 'Produktentwicklung',
           path: '/innovation',
         },
-      ]
+      ],
     },
     {
       type: 'heading',
       title: 'Kontakt',
-      items: [{
-        type: 'link',
-        title: 'Kontaktinfos',
-        description: 'Sprich mit uns über deine Anliegen',
-        path: '/contact',
-      }, {
-        type: 'link',
-        title: 'Jobs',
-        description: 'Für begeisterte und motivierte',
-        path: '/jobs',
-      }]
+      items: [
+        {
+          type: 'link',
+          title: 'Kontaktinfos',
+          description: 'Sprich mit uns über deine Anliegen',
+          path: '/contact',
+        },
+        {
+          type: 'link',
+          title: 'Jobs',
+          description: 'Für begeisterte und motivierte',
+          path: '/jobs',
+        },
+      ],
     },
   ]
 
   const linkMetaInfo = navItems.reduce((map, item) => {
     if (item.type === 'heading') {
       for (const subItem of item.items) {
-        map[subItem.path] = {title: subItem.title, description: subItem.description }
+        map[subItem.path] = { title: subItem.title, description: subItem.description }
       }
     } else {
-      map[item.path] = {title: item.title, description: item.description }
+      map[item.path] = { title: item.title, description: item.description }
     }
-    return map;
+    return map
   }, {})
 
   function toggle() {
@@ -148,7 +157,7 @@
     const video = document.getElementById('intro-video') as HTMLVideoElement
     if (video) {
       video.setAttribute('muted', '')
-      video.playsInline = true;
+      video.playsInline = true
       video.onloadeddata = () => {
         video.muted = true
         video.play()
@@ -158,14 +167,8 @@
   })
 </script>
 
-<div id="page" class="{data.pathname ===
-  '/'
-    ? 'landing'
-    : 'content'} {menuOpen ? 'open' : 'closed'}">
-  <nav
-    class="navbar"
-    id="nav-menu"
-  >
+<div id="page" class="{data.pathname === '/' ? 'landing' : 'content'} {menuOpen ? 'open' : 'closed'}">
+  <nav class="navbar" id="nav-menu">
     <div class="navbar-container">
       <a href="/" class="flex items-center px-12 py-2">
         <img src={logo} alt="triarc laboratories ltd" width="240" height="20" />
@@ -177,16 +180,21 @@
               ? 'rounded-md bg-gray-100 bg-opacity-10'
               : ''}"
           >
-            {#if navItem.type==='link'}
+            {#if navItem.type === 'link'}
               <a href={navItem.path} on:click={hideMenu}>
                 <div class="font-semibold leading-6 text-gray-900 text-sm">{navItem.title}</div>
                 <!--            <div class="font-light text-sm">{navItem.description}</div>-->
               </a>
             {:else}
-              <NavDropDown title="{navItem.title}" inline={data.pathname === '/'}>
+              <NavDropDown title={navItem.title} inline={data.pathname === '/'}>
                 {#each navItem.items as subItem}
-                  <NavDropDownItem title={subItem.title} description={subItem.description} close="{toggle}"
-                                   path={subItem.path} inline={data.pathname === '/'}></NavDropDownItem>
+                  <NavDropDownItem
+                    title={subItem.title}
+                    description={subItem.description}
+                    close={toggle}
+                    path={subItem.path}
+                    inline={data.pathname === '/'}
+                  />
                 {/each}
               </NavDropDown>
             {/if}
@@ -194,7 +202,6 @@
         {/each}
       </ul>
     </div>
-
   </nav>
 
   <div class="main-container w-full {data.pathname === '/' ? 'landing' : 'content'}">
@@ -221,93 +228,94 @@
 
 <style>
   #page {
-      @apply bg-white flex flex-col min-h-screen;
+    @apply bg-white flex flex-col min-h-screen;
   }
 
   #page.landing {
-      @apply flex-col-reverse lg:flex-row;
+    @apply flex-col-reverse lg:flex-row;
   }
   #page.content {
-      @apply flex flex-col;
+    @apply flex flex-col;
   }
 
   #page .navbar {
-      @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col lg:flex-row h-screen h-auto lg:h-16
+    @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col lg:flex-row h-screen h-auto lg:h-16
       group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all flex-grow;
   }
 
   #page.landing .navbar {
-      @apply max-h-screen;
+    @apply max-h-screen;
   }
   #page.landing .mobile-bar {
-      @apply hidden;
+    @apply hidden;
   }
 
   #page .mobile-bar {
-      @apply h-16;
+    @apply h-16;
   }
 
   #page.content.closed .navbar {
-      @apply max-h-0 overflow-hidden lg:max-h-max lg:overflow-visible;
+    @apply max-h-0 overflow-hidden lg:max-h-max lg:overflow-visible;
   }
   #page.content.open .mobile-bar {
-      @apply bottom-0;
+    @apply bottom-0;
   }
   #page.content.open .main-container {
-      @apply h-16 overflow-hidden sticky bottom-0 z-20 lg:h-auto lg:relative lg:overflow-visible lg:h-auto lg:z-auto;
+    @apply h-16 overflow-hidden sticky bottom-0 z-20 lg:h-auto lg:relative lg:overflow-visible lg:h-auto lg:z-auto;
   }
   #page.content.open .page-content {
-      @apply max-h-0 lg:max-h-max;
+    @apply max-h-0 lg:max-h-max;
   }
   #page.content.open .navbar-container {
-      @apply pt-8 lg:pt-0;
+    @apply pt-8 lg:pt-0;
   }
   #page.content.closed .mobile-bar {
-      @apply sticky top-0;
+    @apply sticky top-0;
   }
 
   .navbar-container {
-      @apply max-w-screen-lg mx-auto flex w-full flex-col lg:flex-row min-h-0;
+    @apply max-w-screen-lg mx-auto flex w-full flex-col lg:flex-row min-h-0;
   }
 
   #page .main-container {
-      @apply  transition-transform;
+    @apply transition-transform;
   }
 
-  #page .navbar.open, #page.landing .navbar {
-      @apply h-screen;
+  #page .navbar.open,
+  #page.landing .navbar {
+    @apply h-screen;
   }
 
   #page.content .navbar {
-      @apply items-center flex items-center;
+    @apply items-center flex items-center;
   }
 
   #page .navbar .nav-links {
-      @apply flex flex-col lg:flex-row w-full;
+    @apply flex flex-col lg:flex-row w-full;
   }
 
   #page.content .navbar .nav-links {
-      @apply min-h-0 px-8;
+    @apply min-h-0 px-8;
   }
 
   #page.landing .navbar {
-      @apply px-0 py-8 items-stretch flex-col justify-center w-full lg:max-w-sm lg:fixed lg:top-0 overflow-x-hidden;
+    @apply px-0 py-8 items-stretch flex-col justify-center w-full lg:max-w-sm lg:fixed lg:top-0 overflow-x-hidden;
   }
   #page.landing .navbar-container {
-      @apply flex-col;
+    @apply flex-col;
   }
 
   #page.landing .navbar .nav-links {
-      @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8;
+    @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8;
   }
   #page .navbar .nav-links {
-      @apply scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-blue-triarc lg:overflow-visible;
+    @apply scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-blue-triarc lg:overflow-visible;
   }
 
   #page.landing .main-container {
-      @apply lg:pl-96;
+    @apply lg:pl-96;
   }
   #nav-menu {
-      transition: max-height 200ms;
+    transition: max-height 200ms;
   }
 </style>

@@ -7,7 +7,8 @@
   let contents: BlockContent[] = [
     {
       title: 'Willkommen im Innovation Lab.',
-      content: 'Hier entwickeln wir Prototypen für innovative Software-Lösungen. Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. Zusammen mit lokalen Partner setzen wir Ideen um und bringen sie auf den Markt. '
+      content:
+        'Hier entwickeln wir Prototypen für innovative Software-Lösungen. Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. Zusammen mit lokalen Partner setzen wir Ideen um und bringen sie auf den Markt. ',
     },
     {
       quote: {
@@ -24,7 +25,7 @@
       content:
         'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
       image: { src: 'img/mlink/tree.svg', alt: 'mlink logo' },
-      link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' }
+      link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' },
     },
     {
       title: 'M3Express',
@@ -32,7 +33,7 @@
         'Die digitale Verbindung von der Baustelle bis zum Lieferanten. Erlaube deinen Kunden bequem Mulde, Kies oder Transport über die M3Express-App zu bestellen. Behalte als Lieferant jederzeit den Überblick und optimiere die Kommunikation zwischen Fahrer, Kunde und dir.',
 
       image: { src: 'img/lab/m3express.png', width: 200, alt: 'm3express' },
-      link: { href: 'https://m3express.ch', text: 'Mehr dazu', target: '_blank' }
+      link: { href: 'https://m3express.ch', text: 'Mehr dazu', target: '_blank' },
     },
     {
       title: 'Slothi',
@@ -44,7 +45,7 @@
         '              möglichen Terminvorschlägen und kannst einen fixen Termin einplanen.',
 
       image: { src: 'img/lab/slothi.svg', width: 200, alt: 'slothi' },
-      link: { href: 'https://slothi.ch', text: 'Mehr dazu', target: '_blank' }
+      link: { href: 'https://slothi.ch', text: 'Mehr dazu', target: '_blank' },
     },
     {
       title: 'Fair Pizza',
@@ -54,20 +55,17 @@
         '              Pizzabuilder. Mit Stripe lassen sich die Zahlungen bequem online abwickeln.',
 
       image: { src: 'img/lab/fairpizza-icon-512.png', width: 120, alt: 'slothi' },
-      link: { href: 'https://fairpizza.ch', text: 'Mehr dazu', target: '_blank' }
+      link: { href: 'https://fairpizza.ch', text: 'Mehr dazu', target: '_blank' },
     },
   ]
 </script>
 
-<Hero title="Innovation Lab" content="Was haben wir vollbracht und woraus ist es entstanden">
-
-</Hero>
+<Hero title="Innovation Lab" content="Was haben wir vollbracht und woraus ist es entstanden" />
 
 <div class="bg-white min-h-screen">
-
   {#each contents as content}
     <Block bind:content />
   {/each}
 
-  <Footer></Footer>
+  <Footer />
 </div>

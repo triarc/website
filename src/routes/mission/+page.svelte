@@ -17,7 +17,8 @@
     {
       quote: {
         image: '/team/serge.jpg',
-        content: 'Für Ihren Erfolg zögern wir nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern und Schwerfälliges zu beschleunigen.',
+        content:
+          'Für Ihren Erfolg zögern wir nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern und Schwerfälliges zu beschleunigen.',
         person: 'Serge Müller',
         personTitle: 'CEO / Partner',
         email: 'serge@triarc-labs.com',
@@ -36,7 +37,8 @@
     {
       quote: {
         image: '/team/marco.jpg',
-        content: 'Als Spezialisten konzipieren und entwickeln wir massgeschneiderte Software, ausschliesslich inhouse. Für uns steht es ausser Frage, dass die Lösung Ihren spezifischen Anforderungen entsprechen muss und nicht umgekehrt.',
+        content:
+          'Als Spezialisten konzipieren und entwickeln wir massgeschneiderte Software, ausschliesslich inhouse. Für uns steht es ausser Frage, dass die Lösung Ihren spezifischen Anforderungen entsprechen muss und nicht umgekehrt.',
         person: 'Marco Schmidlin',
         personTitle: 'CTO / Partner',
         email: 'marco@triarc-labs.com',
@@ -44,10 +46,10 @@
       },
     },
 
-
     {
       title: 'Digitale Transformation ist menschlich ',
-      content: 'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.',
+      content:
+        'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.',
       image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
       link: { href: '/references', text: 'Referenzen' },
     },
@@ -65,7 +67,8 @@
     },
     {
       title: 'Digitalisierung geht nur zusammen.',
-      content: 'Topform erreichen wir nur in enger Zusammenarbeit mit Ihnen. Im interdisziplinären Team erkennen wir die exakten Bedürfnisse und binden Ihre Erfahrungen und Anforderungen fortlaufend in den Prozess ein.',
+      content:
+        'Topform erreichen wir nur in enger Zusammenarbeit mit Ihnen. Im interdisziplinären Team erkennen wir die exakten Bedürfnisse und binden Ihre Erfahrungen und Anforderungen fortlaufend in den Prozess ein.',
       link: { href: '/consulting', text: 'Beratung' },
     },
     {
@@ -75,12 +78,14 @@
         personTitle: 'Project Lead / Partner',
         email: 'elke@triarc-labs.com',
         linkedin: 'https://www.linkedin.com/in/elke-engel-6761998/',
-        content: 'Unsere Form der co-kreativen, agilen und ja, manchmal auch intensiven, direkten Zusammenarbeit ist ein grundlegender Erfolgsfaktor für digitale Resultate, die Sie weiterbringen. ',
-      }
+        content:
+          'Unsere Form der co-kreativen, agilen und ja, manchmal auch intensiven, direkten Zusammenarbeit ist ein grundlegender Erfolgsfaktor für digitale Resultate, die Sie weiterbringen. ',
+      },
     },
     {
       title: 'Für uns ist es mehr als Arbeit',
-      content: 'Unseren Anspruch, revolutionäre Lösungen zu entwickeln, erreichen wir nur mit der Leidenschaft, die uns ausmacht. Da können Schnittstellen, Synapsen und Diskussionen auch mal heisslaufen.<br/><br/>' +
+      content:
+        'Unseren Anspruch, revolutionäre Lösungen zu entwickeln, erreichen wir nur mit der Leidenschaft, die uns ausmacht. Da können Schnittstellen, Synapsen und Diskussionen auch mal heisslaufen.<br/><br/>' +
         'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
       //image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
       link: { href: '/references', text: 'Referenzen' },
@@ -88,10 +93,11 @@
     {
       quote: {
         image: '/team/bambam.jpg',
-        content: 'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
+        content:
+          'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
         person: 'Bamm Bamm',
         personTitle: 'Sicherheitsinspektor',
-      }
+      },
     },
 
     // {
@@ -145,7 +151,6 @@
     //   image: { src: 'img/custom-software/scrum_board.svg', alt: 'Scrum Board' },
     //   link: { href: '/services#agil', text: 'Agile Software' },
     // },
-
   ]
 </script>
 
@@ -154,17 +159,14 @@
 </svelte:head>
 
 <div class="bg-white">
-
-  <Hero title="together we succeed" content="Gemeinsam durch den IT-Dschungel">
-
-  </Hero>
+  <Hero title="together we succeed" content="Gemeinsam durch den IT-Dschungel" />
 
   {#each contents as content}
     <Block bind:content />
   {/each}
 
   <Manifest />
-<!--  <TeamMembers />-->
+  <!--  <TeamMembers />-->
 
-  <Footer></Footer>
+  <Footer />
 </div>

@@ -124,41 +124,46 @@
   ]
 
   teamMember.sort((first, second) => {
-    if(first.special) {
-      return 1;
+    if (first.special) {
+      return 1
     } else if (second.special) {
-      return -1;
+      return -1
     }
-    return first.name.localeCompare(second.name);
+    return first.name.localeCompare(second.name)
   })
 </script>
-
 
 <div class="bg-gray-900 py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
       <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Unser Team</h2>
-      <p class="mt-6 text-lg leading-8 text-gray-300">Eine dynamische Gruppe voller Digital Evolutionaries. Jederzeit Leidenschaftlich dabei um das beste Resutlat aus dem Projekt zu holen.</p>
+      <p class="mt-6 text-lg leading-8 text-gray-300">
+        Eine dynamische Gruppe voller Digital Evolutionaries. Jederzeit Leidenschaftlich dabei um das beste Resutlat aus
+        dem Projekt zu holen.
+      </p>
     </div>
-    <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4">
+    <ul
+      role="list"
+      class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
+    >
       {#each teamMember as member}
-      <li>
-        <picture class="aspect-[14/13] w-full rounded-2xl object-cover">
-          {#each member.images as image}
-            <source type="image/{image.format}" srcset={image.src} loading="lazy" />
-          {/each}
-          <img
-            src={member.images[1].src}
-            alt={member.name}
-            width="255"
-            height="255"
-            loading="lazy"
-            class="drop-shadow-2xl filter rounded-2xl"
-          />
-        </picture>
-        <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{member.name}</h3>
-        <p class="text-base leading-7 text-gray-300">{member.job}</p>
-      </li>
+        <li>
+          <picture class="aspect-[14/13] w-full rounded-2xl object-cover">
+            {#each member.images as image}
+              <source type="image/{image.format}" srcset={image.src} loading="lazy" />
+            {/each}
+            <img
+              src={member.images[1].src}
+              alt={member.name}
+              width="255"
+              height="255"
+              loading="lazy"
+              class="drop-shadow-2xl filter rounded-2xl"
+            />
+          </picture>
+          <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{member.name}</h3>
+          <p class="text-base leading-7 text-gray-300">{member.job}</p>
+        </li>
       {/each}
     </ul>
   </div>

@@ -221,15 +221,18 @@
       cards: [
         {
           title: 'Soziokratie',
-          content: 'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?'
+          content:
+            'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?',
         },
         {
           title: 'Erfolgsbeteiligung',
-          content: 'Du trägst massgeblich zum Erfolg bei und sollst dafür auch belohnt werden. Ein grosser TEil des Gewinns wird quartalsweise an die Mitarbeiter ausgeschüttet'
+          content:
+            'Du trägst massgeblich zum Erfolg bei und sollst dafür auch belohnt werden. Ein grosser TEil des Gewinns wird quartalsweise an die Mitarbeiter ausgeschüttet',
         },
         {
           title: 'Coaching',
-          content: 'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggespräche. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, deine Seniorität zu fordern und unser Team zu stärken.'
+          content:
+            'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggespräche. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, deine Seniorität zu fordern und unser Team zu stärken.',
         },
         {
           title: 'Technologie',
@@ -246,7 +249,6 @@
           content:
             'Unser Office direkt am Bahnhof Hardbrücke ist vollständig bepflanzt. Damit dir nie die Luft ausgeht und du stehts einen schönen Hintergrund in deinem Teams-Call präsentieren kannst.',
         },
-
 
         // {
         //   title: '40 Stunden-Woche',
@@ -291,7 +293,8 @@
       steps: [
         {
           title: 'Bewerbung einreichen',
-          content: 'Nimm den Mut zusammen und schicke uns eine Mail an <a class="underline decoration-red-triarc" href="mailto:development@triarc-labs">development@triarc-labs</a> mit deinen Unterlagen.',
+          content:
+            'Nimm den Mut zusammen und schicke uns eine Mail an <a class="underline decoration-red-triarc" href="mailto:development@triarc-labs">development@triarc-labs</a> mit deinen Unterlagen.',
         },
         {
           title: 'Persönliches Interview',
@@ -333,9 +336,10 @@
   {@html serializeSchema(jobPosting)}
 {/each}
 
-<Hero title="Jobs" content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte.">
-
-</Hero>
+<Hero
+  title="Jobs"
+  content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte."
+/>
 
 <div class="bg-white">
   {#each contents as content}
@@ -358,4 +362,4 @@
   <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />
 </div>
 
-<Footer></Footer>
+<Footer />
