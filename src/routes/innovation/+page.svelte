@@ -17,6 +17,7 @@
         person: 'Pascal Bertschi',
         personTitle: 'CCO / Partner',
         email: 'pascal@triarc-labs.com',
+        highlight: 'green',
         linkedin: 'https://www.linkedin.com/in/pascal-bertschi-9b00b480/',
       },
     },

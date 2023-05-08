@@ -13,6 +13,7 @@
       person: 'Dave Haug',
       personTitle: 'Business Development',
       email: 'dave@triarc-labs.com',
+      highlight: 'green',
       linkedin: 'https://www.linkedin.com/in/dave-haug-442064a5/',
     },
   }
