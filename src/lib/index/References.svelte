@@ -108,7 +108,7 @@
             <div class="flex pt-4  text-lg text-gray-700 cursor-pointer">
               <a
                 href="/news/die-zusammenarbeit-mit-triarc-labs-ist-fur-uns-nicht-mehr-wegzudenken"
-                class="rounded bg-red-triarc text-white px-3 py-1 inline-block mt-2"
+                class="rounded bg-blue-triarc text-white px-3 py-1 inline-block mt-2"
               >
                 <span class="">Mehr dazu</span>
               </a>

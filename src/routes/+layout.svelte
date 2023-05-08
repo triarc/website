@@ -183,9 +183,9 @@
                 <!--            <div class="font-light text-sm">{navItem.description}</div>-->
               </a>
             {:else}
-              <NavDropDown title="{navItem.title}" inline={data.pathname === '/'} let:close>
+              <NavDropDown title="{navItem.title}" inline={data.pathname === '/'}>
                 {#each navItem.items as subItem}
-                  <NavDropDownItem title={subItem.title} description={subItem.description} close="{close && toggle}"
+                  <NavDropDownItem title={subItem.title} description={subItem.description} close="{toggle}"
                                    path={subItem.path} inline={data.pathname === '/'}></NavDropDownItem>
                 {/each}
               </NavDropDown>
@@ -221,7 +221,7 @@
 
 <style>
   #page {
-      @apply bg-white flex flex-col;
+      @apply bg-white flex flex-col min-h-screen;
   }
 
   #page.landing {
@@ -233,7 +233,7 @@
 
   #page .navbar {
       @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col lg:flex-row h-screen h-auto lg:h-16
-      group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all;
+      group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all flex-grow;
   }
 
   #page.landing .navbar {
