@@ -6,15 +6,8 @@
 
   let contents: BlockContent[] = [
     {
-      title: 'mLink',
-      content:
-        'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell\n' +
-        '              lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass\n' +
-        '              Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen\n' +
-        '              sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
-
-      image: { src: 'img/mlink/tree.svg', alt: 'mlink logo' },
-      link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' }
+      title: 'Willkommen im Innovation Lab.',
+      content: 'Hier entwickeln wir Prototypen für innovative Software-Lösungen. Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. Zusammen mit lokalen Partner setzen wir Ideen um und bringen sie auf den Markt. '
     },
     {
       quote: {
@@ -25,6 +18,21 @@
         email: 'pascal@triarc-labs.com',
         linkedin: 'https://www.linkedin.com/in/pascal-bertschi-9b00b480/',
       },
+    },
+    {
+      title: 'μLink Data Broker',
+      content:
+        'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
+      image: { src: 'img/mlink/tree.svg', alt: 'mlink logo' },
+      link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' }
+    },
+    {
+      title: 'M3Express',
+      content:
+        'Die digitale Verbindung von der Baustelle bis zum Lieferanten. Erlaube deinen Kunden bequem Mulde, Kies oder Transport über die M3Express-App zu bestellen. Behalte als Lieferant jederzeit den Überblick und optimiere die Kommunikation zwischen Fahrer, Kunde und dir.',
+
+      image: { src: 'img/lab/m3express.png', width: 200, alt: 'm3express' },
+      link: { href: 'https://m3express.ch', text: 'Mehr dazu', target: '_blank' }
     },
     {
       title: 'Slothi',

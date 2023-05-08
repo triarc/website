@@ -7,37 +7,22 @@
 
   let contents: BlockContent[] = [
     {
+      title: 'Willkommen in den Custom Software Manufaktur.',
+      bulletPoints: [
+        'Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind.',
+        'Dank unserer jahrelangen Erfahrung und Knowhow sind wir in der Lage, einzigartige Lösungen zu entwickeln, die den Kunden helfen, ihre Ziele effizient und kosteneffektiv zu erreichen. Wir verstehen, dass jedes Unternehmen einzigartig ist und dass es keine "One-Size-Fits-All"-Lösungen gibt.',
+        'Unser Ziel ist es, unseren Kunden die besten und innovativsten Lösungen zu bieten, die ihnen dabei helfen, ihr Geschäft zu verbessern und ihre Wettbewerbsfähigkeit zu erhöhen. Zusammen'
+      ]
+    },
+    {
       title: 'Die Software muss zum Kunden passen. Nicht umgekehrt.',
       content:
-        'Die Vorteile der Digitalisierung lassen sich nur dann voll ausschöpfen, wenn die Software-Lösung exakt Ihren Bedürfnissen entspricht. Basierend auf der Realität Ihres Alltags erarbeiten wir zusammen Anforderungen und Ideen, stets mit dem Nutzer im Fokus. Das Produkt testen wir eingehend und passen es solange an, bis es perfekt sitzt.',
+        'Wir führen unsere Projekte erfolgreich seit einem Jahrzehnt agil. Diese Methode hat sich sowohl für uns, wie auch für den Kunden immer bewährt.</>br>' +
+        'Die Entwicklung erfolgt dabei schrittweise in Zyklen. Die Definition der Anforderungen wird vorab auf ein Minimum reduziert, damit so früh wie möglich mit der Entwicklung der Software zu begonnen werden kann.</br>' +
+        'In regelmäßigen Abständen wird die Software durch Tests und Kundenfeedback evaluiert. Die Anforderungen können verändert und neu definiert werden und die Software wird entsprechend der neuen Maßgaben weiterentwickelt.</br>' +
+        'Unser agiler Entwicklungsprozess besteht aus vier Schritten, welche sich pro Sprint wiederholen.',
       image: { src: 'img/custom-software/robotics.svg', alt: 'Custom Software' },
-      link: { href: '/services#custom-software', text: 'Custom Software Entwicklung' },
-    },
-    {
-      title: 'Knowhow und Erfahrung sind die Grundzutaten für erfolgreiche Softwareprojekte.',
-      content:
-        'Unsere Kundschaft ist breit gefächert. Unser Portfolio ist es auch: In den über zehn Jahren unseres Bestehens ist ein branchenübergreifendes fundiertes Knowhow entstanden, das in die Projekte der Zukunft einfliesst. In neue Fachgebiete arbeiten wir uns mit derselben Leidenschaft ein, rasch und kompetent.',
-      image: { src: 'img/custom-software/hacker_mind.svg', alt: 'Digitales Know-How' },
-      link: { href: '/references', text: 'Unsere Referenzen' },
-    },
-    {
-      title: 'Software Entwicklung',
-      content:
-        'Der Bedarf an Software ist heutzutage nicht mehr wegzudenken. Selbst der Smoothie-Mixer hat inzwischen eine App, der Wecker eine Bluetooth Integration und der Kühlschrank einen Touchscreen.<br/><br/>' +
-        'Die Digitalisierung führt zu vielen neuen Möglichkeiten und bringt auch neue Herausforderungen mit sich. ' +
-        'Standardsoftware ist eine effiziente Lösung, führt jedoch oft nicht zum gewünschten Ergebnis. <br/><br/>' +
-        'Unserer Softwareentwicklung öffnet neue Türen und kennt keine Grenzen.',
-      image: { src: 'img/custom-software/pair_programming.svg', alt: 'Programmieren' },
-    },
-    {
-      quote: {
-        image: '/team/serge.jpg',
-        content: 'Software ist die Zukunft, und wir sind dafür verantwortlich, sie voranzutreiben.',
-        person: 'Serge Müller',
-        personTitle: 'CEO / Partner',
-        email: 'serge@triarc-labs.com',
-        linkedin: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
-      },
+      //link: { href: '/services#custom-software', text: 'Custom Software Entwicklung' },
     },
     {
       title: 'Unser Entwicklungsprozess',
@@ -67,6 +52,55 @@
       ],
     },
     {
+      title: 'Knowhow und Erfahrung sind die Grundzutaten für erfolgreiche Softwareprojekte.',
+      content:
+        'Unsere Kundschaft ist breit gefächert. Unser Portfolio ist es auch: In den über zehn Jahren unseres Bestehens ist ein branchenübergreifendes fundiertes Knowhow entstanden, das in die Projekte der Zukunft einfliesst. In neue Fachgebiete arbeiten wir uns mit derselben Leidenschaft ein, rasch und kompetent.',
+      image: { src: 'img/custom-software/hacker_mind.svg', alt: 'Digitales Know-How' },
+      link: { href: '/references', text: 'Unsere Referenzen' },
+    },
+    {
+      title: 'Software Entwicklung',
+      content:
+        'Der Bedarf an Software ist heutzutage nicht mehr wegzudenken. Selbst der Smoothie-Mixer hat inzwischen eine App, der Wecker eine Bluetooth Integration und der Kühlschrank einen Touchscreen.<br/><br/>' +
+        'Die Digitalisierung führt zu vielen neuen Möglichkeiten und bringt auch neue Herausforderungen mit sich. ' +
+        'Standardsoftware ist eine effiziente Lösung, führt jedoch oft nicht zum gewünschten Ergebnis. <br/><br/>' +
+        'Unserer Softwareentwicklung öffnet neue Türen und kennt keine Grenzen.',
+      image: { src: 'img/custom-software/pair_programming.svg', alt: 'Programmieren' },
+    },
+    {
+      title: 'Vorteile der agilen Entwicklung',
+      steps: [
+        {
+          title: 'Flexibilität',
+          content:
+            'Während sich das Projekt entwickelt, entwickeln sich auch die Bedürfnisse und Anforderungen. Die agile Softwareentwicklung ermöglicht es, flexibel auf Hindernisse und neue Anforderungen im Entwicklungsprozess zu reagieren. Änderungswünsche können nach jedem Zyklus berücksichtigt werden.',
+        },
+        {
+          title: 'Qualität durch Lerneffekte',
+          content:
+            'Mit jedem Entwicklungszyklus erzielt man Lerneffekte, die dazu beitragen, die Qualität der Software kontinuierlich zu verbessern. Im Vergleich zur klassischen Softwareentwicklung wird auf diese Weise eine Software entwickelt, die genau den Bedarf des Kunden deckt und ihren Zweck erfüllt.',
+        },
+        {
+          title: 'Effizienzsteigerung',
+          content:
+            'Durch die schrittweise Entwicklung und kontinuierlichem Testen werden Fehler und Fehlentwicklungen früh entdeckt und können sofort eliminiert werden.',
+        },
+        {
+          title: 'Geringeres Risiko',
+          content:
+            'In der klassischen Softwareentwicklung werden Schwachstellen oder falsch definierte Anforderungen erst am Ende sichtbar. Die agile Arbeitsweise beugt diesen Risiken vor, indem mögliche Schwachstellen während des Entwicklungsprozesses aufgedeckt werden und Anforderungen flexibel angepasst werden können.',
+        },
+        {
+          title: 'Transparente Kommunikation',
+          content:
+            'Die Teams sind untereinander und mit dem Kunden im ständigen Austausch. Der Kunde ist jederzeit auf dem aktuellen Stand und in die Entwicklung involviert. Mögliche Änderungen oder Hindernisse können direkt kommuniziert werden. Dadurch wird eine enge Zusammenarbeit gefördert, welche sich wiederum positiv auf die Qualität der Software auswirkt.',
+        },
+      ],
+    },
+
+
+
+    {
       title: 'Wartung / Hosting',
       content:
         'Der Betrieb sowie die Wartung unserer Software ist uns ein wichtiges Anliegen. Wir betreiben unsere Software flexibel in unserem Cloud Angebot oder auf deinen vorhandenen Servern.' +
@@ -82,7 +116,7 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Custom Software" content="Was wir bieten und einbringen können">
+  <Hero title="Custom Software" content="Willkommen in den Custom Software Manufaktur. ">
 
   </Hero>
 
@@ -90,6 +124,7 @@
     <Block bind:content />
   {/each}
 
+  <Technology />
 
   <div class="flex justify-center px-6 py-12">
     <a
@@ -101,7 +136,6 @@
     </a>
   </div>
 
-  <Technology />
 
 
   <Footer></Footer>

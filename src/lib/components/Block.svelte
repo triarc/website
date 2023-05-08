@@ -89,7 +89,8 @@
         <ul class="mt-8">
           {#each content.bulletPoints as bulletPoint}
             <li class="flex my-1">
-              <img src="icons/checkmark.svg" class="flex-shrink-0 h-6 w-6" alt="checkmark" />
+<!--              <img src="icons/checkmark.svg" alt="checkmark" />-->
+              <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0 h-6 w-6" viewBox="0 0 128 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M64 384a32 32 0 1 1 0 64 32 32 0 1 1 0-64zm0 96a64 64 0 1 0 0-128 64 64 0 1 0 0 128z"/></svg>
               <div class="ml-3">
                 <span class="text-base text-gray-600">
                   {bulletPoint}

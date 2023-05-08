@@ -139,7 +139,8 @@
     {
       title: 'Starte dein Abenteuer!',
       content:
-        'Wir sind ein junges  und dynamisches Team auf der Suche nach Verstärkung für unsere täglichen Herausforderungen.<br/><br/>Unser Team sucht stetig neue Talente im Bereich Entwicklung. Wir haben dazu vier Stufen definiert, in welchem wir alle Positionen einordnen.',
+        'Zusammen können wir alles erreichen. <br/><br/>' +
+        'Werde Teil des Teams und bewirb dich, wenn du Leidenschaft, Elan und Tatendrang hast und du dich mit unseren Werten identifizieren kannst. ',
       image: { src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Carrer' },
     },
     {
@@ -201,37 +202,57 @@
         'Erfahrungen Docker / Kubernetes / Gitlab CI',
       ],
     },
-    {
-      title: '(Dev)Ops Engineer',
-      content:
-        'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
-
-      image: { src: 'img/jobs/cloud_hosting.svg', alt: 'Dev/Ops Engineer' },
-      bulletPoints: [
-        'Erfahrungen Docker / Kubernetes / Gitlab CI',
-        'Erfahrungen mit Google Cloud / Azure von Vorteil',
-        'Erfahrungen mit Cypress / E2E Testing von Vorteil',
-      ],
-    },
+    // {
+    //   title: '(Dev)Ops Engineer',
+    //   content:
+    //     'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
+    //
+    //   image: { src: 'img/jobs/cloud_hosting.svg', alt: 'Dev/Ops Engineer' },
+    //   bulletPoints: [
+    //     'Erfahrungen Docker / Kubernetes / Gitlab CI',
+    //     'Erfahrungen mit Google Cloud / Azure von Vorteil',
+    //     'Erfahrungen mit Cypress / E2E Testing von Vorteil',
+    //   ],
+    // },
     {
       title: 'Was wir dir bieten',
       content:
         'Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.',
       cards: [
         {
+          title: 'Soziokratie',
+          content: 'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?'
+        },
+        {
           title: 'Erfolgsbeteiligung',
           content: 'Du trägst massgeblich zum Erfolg bei und sollst dafür auch belohnt werden. Ein grosser TEil des Gewinns wird quartalsweise an die Mitarbeiter ausgeschüttet'
         },
-        // {
-        //   title: '40 Stunden-Woche',
-        //   content:
-        //     'Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.',
-        // },
+        {
+          title: 'Coaching',
+          content: 'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggespräche. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, deine Seniorität zu fordern und unser Team zu stärken.'
+        },
         {
           title: 'Technologie',
           content:
             'Wir bleiben immer aktuell und setzen die Technologie ein, die Sinn macht. Die richtige suchen und finden wir zusammen.',
         },
+        {
+          title: 'Transparenz für alle',
+          content:
+            'Alle Löhne werden offen kommuniziert. Es gibt keine individuellen Löhne. Die Löhne richten sich nach deiner Stufe im Trackeesystem. Für Seniors gibt’s aktuell 104k – 136k CHF. Eine variable Komponente ist der Bonus, welcher sich nach den aktuellen Quartalszahlen richtet. Dieser wird pro Quartal im Team besprechen.',
+        },
+        {
+          title: 'Office Jungle',
+          content:
+            'Unser Office direkt am Bahnhof Hardbrücke ist vollständig bepflanzt. Damit dir nie die Luft ausgeht und du stehts einen schönen Hintergrund in deinem Teams-Call präsentieren kannst.',
+        },
+
+
+        // {
+        //   title: '40 Stunden-Woche',
+        //   content:
+        //     'Wir arbeiten gern. Damit das so bleibt, brauchen wir genügend Freizeit. Dazu gehören auch 5 Wochen Ferien. Pro Jahr, nicht pro Monat.',
+        // },
         {
           title: 'Home-Office',
           content: 'Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.',
@@ -246,6 +267,7 @@
           content:
             'Bediene dich an der triarc-Bar. Kaffee, Softdrinks, Bier und ein sortiertes Snack-Angebot warten auf deinen Zugriff. Darunter Sachen, die den Futterneid deiner Ernährungsberaterin wecken. Und für den Beerenhunger auch mal frische Früchtchen.',
         },
+
         {
           title: 'Company Events',
           content:
@@ -255,26 +277,6 @@
           title: 'Office Gym',
           content:
             'Rudere den Bug von der Seele. Pump dir frische Ideen ins Hirn. Stemm dich gegen Widerstand. Inhouse warten Blei und Matten auf Beschäftigung. Unser wöchentliche Gym Session mit Coach hilft dir die nötige Motivation zu finden.',
-        },
-        {
-          title: 'Office Jungle',
-          content:
-            'Unser Office direkt am Bahnhof Hardbrücke ist vollständig bepflanzt. Damit dir nie die Luft ausgeht und du stehts einen schönen Hintergrund in deinem Teams-Call präsentieren kannst.',
-        },
-        {
-          title: 'Coaching',
-          content:
-            'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggesprache. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, dein Seniorität zu fordern und unser Team zu stärken.',
-        },
-        {
-          title: 'Transparenz für alle',
-          content:
-            'Alle Löhne werden offen kommuniziert. Es gibt keine individuellen Löhne. Die Löhne richten sich nach deiner Stufe im Trackeesystem. Für Seniors gibt’s aktuell 104k – 136k CHF. Eine variable Komponente ist der Bonus, welcher sich nach den aktuellen Quartalszahlen richtet. Dieser wird pro Quartal im Team besprechen.',
-        },
-        {
-          title: 'Soziokratie',
-          content:
-            'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?',
         },
         {
           title: 'Ein soziales Umfeld',
@@ -308,18 +310,18 @@
         },
       ],
     },
-    {
-      quote: {
-        image: '/team/bambam.jpg',
-        content: 'Vertrauen ist gut, Sicherheit ist besser.',
-        person: 'Bamm Bamm',
-        personTitle: 'Sicherheitsinspektor',
-      }
-    },
-    {
-      title: 'Immer noch hier?',
-      content: 'Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in unserem Jungle.'
-    }
+    // {
+    //   quote: {
+    //     image: '/team/bambam.jpg',
+    //     content: 'Vertrauen ist gut, Sicherheit ist besser.',
+    //     person: 'Bamm Bamm',
+    //     personTitle: 'Sicherheitsinspektor',
+    //   }
+    // },
+    // {
+    //   title: 'Immer noch hier?',
+    //   content: 'Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in unserem Jungle.'
+    // }
   ]
 </script>
 
@@ -339,6 +341,21 @@
   {#each contents as content}
     <Block bind:content />
   {/each}
+</div>
+
+<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">
+  <div class="text-white bg-opacity-20">
+    <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">
+        <span class="block">Immer noch hier?</span>
+      </h2>
+      <p class="mt-4 text-lg leading-6">
+        Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in
+        unserem Jungle.
+      </p>
+    </div>
+  </div>
+  <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />
 </div>
 
 <Footer></Footer>
