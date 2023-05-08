@@ -14,6 +14,7 @@
   import sebastian from '../../../static/team/sebastian.jpg?width=255&format=webp;png&metadata'
   import david from '../../../static/team/david.jpg?width=255&format=webp;png&metadata'
   import bammbamm from '../../../static/team/bambam.jpg?width=255&format=webp;png&metadata'
+  import simon from '../../../static/team/simon.jpg?width=255&format=webp;png&metadata'
   import Picture from "$lib/index/Picture.svelte";
 
   let teamMember = [
@@ -64,6 +65,13 @@
       job: 'Business Development',
       nerdJob: 'Business Development',
       images: dave,
+      special: false,
+    },
+    {
+      name: 'Simon Hasler',
+      job: 'Project Lead',
+      nerdJob: 'Project Lead',
+      images: simon,
       special: false,
     },
     {
