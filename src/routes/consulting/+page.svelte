@@ -61,6 +61,7 @@
         person: 'Iris Zenegaglia',
         personTitle: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
         email: 'iris@triarc-labs.com',
+        highlight: 'green',
         linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
       },
     },

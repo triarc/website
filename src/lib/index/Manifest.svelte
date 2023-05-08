@@ -24,7 +24,7 @@
   ]
 </script>
 
-<div class="bg-green-triarc bg-opacity-10">
+<div class="bg-white">
   <div class="px-8 md:px-16 py-32 max-w-screen-lg mx-auto">
     <div class="mx-auto">
       <h2 class="text-center text-3xl font-extrabold text-gray-800 sm:text-4xl">Manifest</h2>
