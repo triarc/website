@@ -14,8 +14,7 @@
     {
       title: 'Für Ihren Fortschritt.',
       content:
-        'Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie.<br/><br/>' +
-        'Für Ihren Erfolg zögern wir nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern und Schwerfälliges zu beschleunigen.',
+        'Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie.',
       image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
     },
     {
@@ -34,8 +33,7 @@
     {
       title: 'Software passend für Sie.',
       content:
-        'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.<br/><br/>' +
-        'Als Spezialisten konzipieren und entwickeln wir massgeschneiderte Software, ausschliesslich inhouse. Für uns steht es ausser Frage, dass die Lösung Ihren spezifischen Anforderungen entsprechen muss und nicht umgekehrt.',
+        'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.',
       image: { src: 'img/custom-software/product_teardown.svg', height: 281, alt: 'Projektportfolio' },
       link: { href: '/custom-software', text: 'Custom Software' },
     },
@@ -93,8 +91,7 @@
     {
       title: 'Für uns ist es mehr als Arbeit',
       content:
-        'Unseren Anspruch, revolutionäre Lösungen zu entwickeln, erreichen wir nur mit der Leidenschaft, die uns ausmacht. Da können Schnittstellen, Synapsen und Diskussionen auch mal heisslaufen.<br/><br/>' +
-        'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
+        'Unseren Anspruch, revolutionäre Lösungen zu entwickeln, erreichen wir nur mit der Leidenschaft, die uns ausmacht. Da können Schnittstellen, Synapsen und Diskussionen auch mal heisslaufen.',
       //image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
       link: { href: '/references', text: 'Referenzen' },
     },
