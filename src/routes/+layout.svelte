@@ -78,13 +78,13 @@
         {
           type: 'link',
           title: 'Beratung',
-          description: 'Was wir können und anbieten',
+          description: 'Wir bauen Brücken',
           path: '/consulting',
         },
         {
           type: 'link',
           title: 'Custom Software',
-          description: 'Massgeschneiterte Software',
+          description: 'Massgeschneiderte Software',
           path: '/custom-software',
         },
         {
@@ -108,7 +108,7 @@
         {
           type: 'link',
           title: 'Jobs',
-          description: 'Für begeisterte und motivierte',
+          description: 'Für Begeisterte und Motivierte',
           path: '/jobs',
         },
       ],
