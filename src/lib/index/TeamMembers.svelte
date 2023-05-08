@@ -14,6 +14,7 @@
   import sebastian from '../../../static/team/sebastian.jpg?width=255&format=webp;png&metadata'
   import david from '../../../static/team/david.jpg?width=255&format=webp;png&metadata'
   import bammbamm from '../../../static/team/bambam.jpg?width=255&format=webp;png&metadata'
+  import Picture from "$lib/index/Picture.svelte";
 
   let teamMember = [
     {
@@ -148,19 +149,10 @@
     >
       {#each teamMember as member}
         <li>
-          <picture class="aspect-[14/13] w-full rounded-2xl object-cover">
-            {#each member.images as image}
-              <source type="image/{image.format}" srcset={image.src} loading="lazy" />
-            {/each}
-            <img
-              src={member.images[1].src}
-              alt={member.name}
-              width="255"
-              height="255"
-              loading="lazy"
-              class="drop-shadow-2xl filter rounded-2xl"
-            />
-          </picture>
+          <Picture height="280" width="373"
+                   alt="{member.name}"
+                   images="{member.images}"
+                   cssClass="aspect-[3/4] w-full drop-shadow-2xl filter rounded-2xl object-cover"></Picture>
           <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{member.name}</h3>
           <p class="text-base leading-7 text-gray-300">{member.job}</p>
         </li>

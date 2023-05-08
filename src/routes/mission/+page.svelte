@@ -2,9 +2,16 @@
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import TeamMembers from '$lib/index/TeamMembers.svelte'
   import Manifest from '$lib/index/Manifest.svelte'
   import Footer from '$lib/components/Footer.svelte'
+  import serge from '../../../static/team/serge.jpg?width=500&format=webp;png&metadata'
+  import marco from '../../../static/team/marco.jpg?width=500&format=webp;png&metadata'
+  import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
+  import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
+  import bammbamm from '../../../static/team/bambam.jpg?width=500&format=webp;png&metadata'
+
+
+  console.log(serge)
 
   let contents: BlockContent[] = [
     {
@@ -16,7 +23,7 @@
     },
     {
       quote: {
-        image: '/team/serge.jpg',
+        images: serge,
         content:
           'Für Ihren Erfolg zögern wir nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern und Schwerfälliges zu beschleunigen.',
         person: 'Serge Müller',
@@ -37,7 +44,7 @@
     },
     {
       quote: {
-        image: '/team/marco.jpg',
+        images: marco,
         content:
           'Als Spezialisten konzipieren und entwickeln wir massgeschneiderte Software, ausschliesslich inhouse. Für uns steht es ausser Frage, dass die Lösung Ihren spezifischen Anforderungen entsprechen muss und nicht umgekehrt.',
         person: 'Marco Schmidlin',
@@ -58,7 +65,7 @@
 
     {
       quote: {
-        image: '/team/iris.jpg',
+        images: iris,
         content:
           'Zusammen mit Ihnen stellen wir sicher, dass das Team die Veränderungen mitträgt und die neuen Prozesse gelebt werden. ',
         person: 'Iris Zenegaglia',
@@ -76,7 +83,7 @@
     },
     {
       quote: {
-        image: '/team/elke.jpg',
+        images: elke,
         person: 'Elke Engel',
         personTitle: 'Project Lead / Partner',
         email: 'elke@triarc-labs.com',
@@ -96,7 +103,7 @@
     },
     {
       quote: {
-        image: '/team/bambam.jpg',
+        images: bammbamm,
         content:
           'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
         person: 'Bamm Bamm',

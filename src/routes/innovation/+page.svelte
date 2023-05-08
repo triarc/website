@@ -3,6 +3,7 @@
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Footer from '$lib/components/Footer.svelte'
+  import pascal from '../../../static/team/pascal.jpg?width=500&format=webp;png&metadata'
 
   let contents: BlockContent[] = [
     {
@@ -12,7 +13,7 @@
     },
     {
       quote: {
-        image: '/team/pascal.jpg',
+        images: pascal,
         content: 'Innovationen sind der Schlüssel zu Wachstum und Erfolg in der Software-Branche.',
         person: 'Pascal Bertschi',
         personTitle: 'CCO / Partner',

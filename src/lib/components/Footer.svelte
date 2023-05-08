@@ -6,7 +6,7 @@
   <Container>
     <div class="flex justify-between">
       <div class="flex items-end">
-        <img src="icons/triarc-logo.svg" class="h-24 mr-3" alt="triarc laboratories" />
+        <img src="icons/triarc-logo.svg" class="mr-3" alt="triarc laboratories" height="76" width="120" />
         <div>
           <div class="text-xl">triarc laboratories ltd.</div>
           <div>Neue Hard 14</div>

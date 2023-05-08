@@ -3,6 +3,7 @@
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
+  import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
 
   let contents: BlockContent[] = [
     // {
@@ -54,7 +55,7 @@
 
     {
       quote: {
-        image: '/team/iris.jpg',
+        images: iris,
         content:
           'Der Mensch digitalisiert für die Menschen - ich stelle den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
         person: 'Iris Zenegaglia',

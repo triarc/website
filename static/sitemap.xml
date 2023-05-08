@@ -2,25 +2,67 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://www.triarc-labs.com</loc>
-        <lastmod>2021-05-13</lastmod>
+        <lastmod>2023-05-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
+        <loc>https://www.triarc-labs.com/mission</loc>
+        <lastmod>2023-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.triarc-labs.com/contact</loc>
+        <lastmod>2023-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.triarc-labs.com/custom-software</loc>
+        <lastmod>2023-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.triarc-labs.com/consulting</loc>
+        <lastmod>2023-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.triarc-labs.com/innovation</loc>
+        <lastmod>2023-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.triarc-labs.com/references</loc>
+        <lastmod>2023-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1</priority>
+    </url>
+    <url>
+        <loc>https://www.triarc-labs.com/team</loc>
+        <lastmod>2023-05-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    <url>
         <loc>https://www.triarc-labs.com/jobs</loc>
-        <lastmod>2021-05-13</lastmod>
+        <lastmod>2023-05-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://www.triarc-labs.com/mlink</loc>
-        <lastmod>2021-05-13</lastmod>
+        <lastmod>2023-05-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://www.triarc-labs.com/stories</loc>
-        <lastmod>2022-03-31</lastmod>
+        <lastmod>2023-05-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.5</priority>
     </url>

@@ -171,7 +171,7 @@
   <nav class="navbar" id="nav-menu">
     <div class="navbar-container">
       <a href="/" class="flex items-center px-12 py-2">
-        <img src={logo} alt="triarc laboratories ltd" width="240" height="20" />
+        <img src={logo} alt="triarc laboratories ltd" width="172" height="29" />
       </a>
       <ul class="nav-links">
         {#each navItems as navItem}

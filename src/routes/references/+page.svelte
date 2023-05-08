@@ -5,10 +5,11 @@
   import Footer from '$lib/components/Footer.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
+  import dave from '../../../static/team/dave.jpg?width=500&format=webp;png&metadata'
 
   let content: BlockContent = {
     quote: {
-      image: '/team/dave.jpg',
+      images: dave,
       content: 'Gewinnen Sie durch maßgeschneiderte Software einen entscheidenden Wettbewerbsvorteil!',
       person: 'Dave Haug',
       personTitle: 'Business Development',

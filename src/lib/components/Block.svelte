@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Picture from "$lib/index/Picture.svelte";
+
   export interface BlockContent {
     title?: string
     content?: string
@@ -9,7 +11,7 @@
     cards?: { title: string; content: string }
     steps?: { title: string; content: string }
     items?: { title: string; content: string }
-    quote?: { content: string; person: string; image: string; personTitle: string; linkedin: string; email: string; highlight?: 'green' | 'blue'; }
+    quote?: { content: string; person: string; images: any; personTitle: string; linkedin: string; email: string; highlight?: 'green' | 'blue'; }
   }
 
   export let content: BlockContent
@@ -22,12 +24,11 @@
         class="mx-auto flex max-w-7xl flex-col items-center gap-y-10 gap-x-8 px-8 sm:gap-y-8 lg:px-8 xl:items-stretch group-odd:xl:flex-row-reverse group-even:xl:flex-row"
       >
         <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-          <div class="relative aspect-[1/1.2] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
-            <img
-              class="absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"
-              src={content.quote.image}
-              alt={content.quote.person}
-            />
+          <div class="relative aspect-[3/4] h-full md:-mx-8 xl:mx-0 xl:aspect-auto">
+            <Picture height="280" width="373"
+                     alt="{content.quote.person}"
+                     images="{content.quote.images}"
+                     cssClass="aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl"></Picture>
           </div>
         </div>
         <div class="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:py-24 xl:px-16">
