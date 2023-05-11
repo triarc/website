@@ -12,12 +12,6 @@
 
   let contents: BlockContent[] = [
     {
-      title: 'Für Ihren Fortschritt.',
-      content:
-        'Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie.',
-      image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
-    },
-    {
       quote: {
         images: serge,
         content:
@@ -30,6 +24,12 @@
       },
     },
 
+    {
+      title: 'Für Ihren Fortschritt.',
+      content:
+        'Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie.',
+      //image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
+    },
     {
       title: 'Software passend für Sie.',
       content:
@@ -55,7 +55,7 @@
       content:
         'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.',
       image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
-      link: { href: '/references', text: 'Referenzen' },
+      link: { href: '/consulting', text: 'Beratung' },
     },
 
     {
@@ -74,7 +74,7 @@
       title: 'Digitalisierung geht nur zusammen.',
       content:
         'Topform erreichen wir nur in enger Zusammenarbeit mit Ihnen. Im interdisziplinären Team erkennen wir die exakten Bedürfnisse und binden Ihre Erfahrungen und Anforderungen fortlaufend in den Prozess ein.',
-      link: { href: '/consulting', text: 'Beratung' },
+      link: { href: '/references', text: 'Referenzen' },
     },
     {
       quote: {
@@ -93,7 +93,7 @@
       content:
         'Unseren Anspruch, revolutionäre Lösungen zu entwickeln, erreichen wir nur mit der Leidenschaft, die uns ausmacht. Da können Schnittstellen, Synapsen und Diskussionen auch mal heisslaufen.',
       //image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
-      link: { href: '/references', text: 'Referenzen' },
+      link: { href: '/lab', text: 'Innovation Lab' },
     },
     {
       quote: {
@@ -102,7 +102,7 @@
           'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
         person: 'Bamm Bamm',
         highlight: 'red',
-        personTitle: 'Sicherheitsinspektor',
+        personTitle: 'Head of Happiness',
       },
     },
 

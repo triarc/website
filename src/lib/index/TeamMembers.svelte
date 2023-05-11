@@ -24,6 +24,7 @@
       nerdJob: 'CEO / Partner',
       images: serge,
       special: false,
+      email: 'serge@triarc-labs.com'
     },
     {
       name: 'Marco Schmidlin',
@@ -31,6 +32,7 @@
       nerdJob: 'CTO / Partner',
       images: marco,
       special: false,
+      email: 'marco@triarc-labs.com'
     },
     {
       name: 'Elke Engel',
@@ -38,6 +40,7 @@
       nerdJob: 'CFO / Partner',
       images: elke,
       special: false,
+      email: 'elke@triarc-labs.com'
     },
     {
       name: 'Pascal Bertschi',
@@ -45,6 +48,7 @@
       nerdJob: 'Typescript maniac',
       images: pascal,
       special: false,
+      email: 'pascal@triarc-labs.com'
     },
     {
       name: 'Max Lüthi',
@@ -52,6 +56,7 @@
       nerdJob: 'Software Developer',
       images: max,
       special: false,
+      email: 'max@triarc-labs.com'
     },
     {
       name: 'Iris Zenegaglia',
@@ -59,6 +64,7 @@
       nerdJob: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
       images: iris,
       special: false,
+      email: 'iris@triarc-labs.com'
     },
     {
       name: 'Dave Haug',
@@ -66,6 +72,7 @@
       nerdJob: 'Business Development',
       images: dave,
       special: false,
+      email: 'dave@triarc-labs.com'
     },
     {
       name: 'Simon Hasler',
@@ -73,6 +80,7 @@
       nerdJob: 'Project Lead',
       images: simon,
       special: false,
+      email: 'simon@triarc-labs.com'
     },
     {
       name: 'Simona Miljanovic',
@@ -80,6 +88,7 @@
       nerdJob: 'UX Designerin',
       images: simona,
       special: false,
+      email: 'simona@triarc-labs.com'
     },
     {
       name: 'Eduardo Lavaque',
@@ -87,6 +96,7 @@
       nerdJob: 'Software Developer',
       images: eduan,
       special: false,
+      email: 'eduan@triarc-labs.com'
     },
     {
       name: 'Michel Gabriel',
@@ -94,6 +104,7 @@
       nerdJob: 'Software Developer',
       images: michel,
       special: false,
+      email: 'michel@triarc-labs.com'
     },
     {
       name: 'Luka Kramer',
@@ -101,13 +112,15 @@
       nerdJob: 'Software Developer',
       images: luka,
       special: false,
+      email: 'luka@triarc-labs.com'
     },
     {
       name: 'Chris Thonfeld',
-      job: 'Nearshore Developer',
+      job: 'Software Developer',
       nerdJob: 'Software Developer',
       images: chris,
       special: false,
+      email: 'chris@triarc-labs.com'
     },
     {
       name: 'Sebastian Bortz',
@@ -115,6 +128,7 @@
       nerdJob: 'Software Developer',
       images: sebastian,
       special: false,
+      email: 'sebastian@triarc-labs.com'
     },
     {
       name: 'David Jahn',
@@ -122,13 +136,15 @@
       nerdJob: 'Software Developer',
       images: david,
       special: false,
+      email: 'david@triarc-labs.com'
     },
     {
       name: 'Bam Bam',
-      job: 'Sicherheitsinspektor',
+      job: 'Head of Happiness',
       nerdJob: 'Sicherheitsinspektor',
       images: bammbamm,
       special: true,
+      email: 'bammbamm@triarc-labs.com'
     },
   ]
 
@@ -142,13 +158,14 @@
   })
 </script>
 
-<div class="bg-gray-900 py-24 sm:py-32">
+<div class="bg-white py-24 sm:py-32">
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Unser Team</h2>
-      <p class="mt-6 text-lg leading-8 text-gray-300">
-        Eine dynamische Gruppe voller Digital Evolutionaries. Jederzeit Leidenschaftlich dabei um das beste Resutlat aus
-        dem Projekt zu holen.
+      <h2 class="text-3xl font-bold tracking-tight text-gray-800 sm:text-4xl">Unser Team</h2>
+      <p class="mt-6 text-lg leading-8 text-gray-500">
+        Wir lieben was wir tun, und dass wir das gemeinsam tun.
+        Von der Vision bis zur Anwendung können Sie sich auf unsere Kompetenz und Konstanz verlassen.
+        Sie werden von erfahrenen, engagierten Spezialisten persönlich begleitet.
       </p>
     </div>
     <ul
@@ -160,9 +177,10 @@
           <Picture height="280" width="373"
                    alt="{member.name}"
                    images="{member.images}"
-                   cssClass="aspect-[3/4] w-full drop-shadow-2xl filter rounded-2xl object-cover"></Picture>
-          <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">{member.name}</h3>
-          <p class="text-base leading-7 text-gray-300">{member.job}</p>
+                   cssClass="aspect-[3/4] w-full drop-shadow filter rounded-2xl object-cover"></Picture>
+          <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-800">{member.name}</h3>
+          <p class="text-base leading-7 text-gray-600">{member.job}</p>
+          <a class="underline text-gray-500 decoration-blue-triarc" href="mailto:{member.email}">{member.email}</a>
         </li>
       {/each}
     </ul>

@@ -9,7 +9,7 @@
     {
       title: 'Willkommen im Innovation Lab.',
       content:
-        'Hier entwickeln wir Prototypen für innovative Software-Lösungen. Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. Zusammen mit lokalen Partner setzen wir Ideen um und bringen sie auf den Markt. ',
+        'In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. In unserer Kernkompetenz als technologischer Partner beteiligen wir uns an Startups und bringen Produkte zur Marktreife.',
     },
     {
       quote: {

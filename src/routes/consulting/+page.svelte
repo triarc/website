@@ -14,11 +14,21 @@
     //   link: { href: '/products', text: 'Unsere Produkte' },
     // },
     {
+      quote: {
+        images: iris,
+        content:
+          'Der Mensch digitalisiert für die Menschen - wir stellen den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
+        person: 'Iris Zenegaglia',
+        personTitle: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
+        email: 'iris@triarc-labs.com',
+        highlight: 'green',
+        linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
+      },
+    },
+    {
       title: 'Beratung',
       content:
-        '\n<br/><br/>' +
-        'Unser Digitalisierungsberatungsteam stellt sicher, dass die Digitalisierung für ein Unternehmen zum Erfolg wird. <br/><br/>Dafür ist nicht nur eine hochwertige Software relevant, sondern vorallem, dass sie genutzt wird und ihren Zweck erfüllt. Dies wird erreicht, wenn die Prozesse, Strukturen, Organisationskultur und Mitarbeiter sich mit dem technischen Fortschritt weiterentwickeln. <br/><br/>Wir unterstützen unsere Kunden bei der Analyse und Identifizierung von Chancen, Erstellung einer Transformations-Roadmap und der Umsetzung der definierten Massnahmen.  \n' +
-        '\n<br/><br/>',
+        'Unser Digitalisierungsberatungsteam stellt sicher, dass die Digitalisierung für ein Unternehmen zum Erfolg wird. <br/><br/>Dafür ist nicht nur eine hochwertige Software relevant, sondern vorallem, dass sie genutzt wird und ihren Zweck erfüllt. Dies wird erreicht, wenn die Prozesse, Strukturen, Organisationskultur und Mitarbeiter sich mit dem technischen Fortschritt weiterentwickeln. <br/><br/>Wir unterstützen unsere Kunden bei der Analyse und Identifizierung von Chancen, Erstellung einer Transformations-Roadmap und der Umsetzung der definierten Massnahmen.',
 
       image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
     },
@@ -27,7 +37,6 @@
       content:
         'Für eine Transformation braucht es ein konkretes Zielbild. Wir entwickeln zusammen mit unseren Kunden eine Vision und Strategie ihrer Digitalisierung. Daraus entstehen Massnahmen für die konkrete Umsetzung und schlussendlich Erreichung des Zielbildes. So wird die massgeschneiderte Software für das ganze Unternehmen zum vollen Erfolg! ',
       image: { src: 'img/intro/strategy.svg', alt: 'Beratung' },
-      link: { href: '/custom-software', text: 'Custom Software' },
     },
     {
       title: 'Change Management. Der Mensch steht im Mittelpunkt.',
@@ -40,9 +49,8 @@
     {
       title: 'Strukturen und Prozesse',
       content:
-        'Ein verbundenes IT-Ökosystem, das passende Organisationsmodell und die richtigen Qualifikationen ebnen den Weg der Digitalisierung. Wir analysieren status quo und zeigen Chancen auf.<br/><br/>Bevor wir neue Technologien und Software einführen analysieren und optimieren wir die betroffenen Geschäftsprozesse und passen sie an das neue digitale Arbeitsmodell an.<br/><br/> Interessiert? Dann kontaktiere uns für ein unverbindliches Erstgespräch.',
+        'Ein verbundenes IT-Ökosystem, das passende Organisationsmodell und die richtigen Qualifikationen ebnen den Weg der Digitalisierung. Wir analysieren den Status quo und zeigen Chancen auf.<br/><br/>Bevor wir neue Technologien und Software einführen analysieren und optimieren wir die betroffenen Geschäftsprozesse und passen sie an das neue digitale Arbeitsmodell an.',
       image: { src: 'img/intro/process.svg', alt: 'Beratung' },
-      link: { href: '/contact', text: 'Kontakt für mehr' },
     },
 
     {
@@ -52,26 +60,13 @@
       image: { src: 'img/intro/coaching.svg', alt: 'Beratung' },
       link: { href: '/contact', text: 'Coaching Kontakt' },
     },
-
-    {
-      quote: {
-        images: iris,
-        content:
-          'Der Mensch digitalisiert für die Menschen - ich stelle den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
-        person: 'Iris Zenegaglia',
-        personTitle: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
-        email: 'iris@triarc-labs.com',
-        highlight: 'green',
-        linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
-      },
-    },
     {
       title: 'Beratungsinhalte',
       steps: [
         {
           title: 'Strategie & Vision',
           content:
-            'Zusammen erarbeite wir eine Vision und Ziele, wohin die Reise der digitalen Transformation gehen soll, getragen vom Management und geteilt mit den Mitarbeitern.',
+            'Zusammen erarbeiten wir eine Vision und Ziele, wohin die Reise der digitalen Transformation gehen soll, getragen vom Management und geteilt mit den Mitarbeitern.',
         },
         {
           title: 'Strukturen',
@@ -98,11 +93,25 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Beratung" content="Wir bauen Brücken zwischen Mitarbeiter, Prozesse und Technologien" />
+  <Hero title="Beratung" content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken." />
 
   {#each contents as content}
     <Block bind:content />
   {/each}
+
+
+  <div class="bg-[#0D1214] flex flex-col">
+    <div class="text-white bg-opacity-20">
+      <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-extrabold sm:text-4xl">
+          <span class="block">Interessiert? </span>
+        </h2>
+        <p class="mt-4 text-lg leading-6">
+          Dann kontaktiere uns für ein unverbindliches Erstgespräch.
+        </p>
+      </div>
+    </div>
+  </div>
 
   <Footer />
 </div>

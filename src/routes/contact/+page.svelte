@@ -36,13 +36,12 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">
-  <Hero title="Kontakt" class="flex-shrink-0" content="" />
+  <Hero title="Kontaktangaben" class="flex-shrink-0" content="" />
 
   <div class="bg-white flex-shrink-0">
     <Container>
       <div class="py-16">
         <div>
-          <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Unsere Kontaktangaben</h2>
           <div class="mt-3">
             <p class="text-lg text-gray-500">
               Für Fragen zu uns oder sonstiges was du auf dem Herzen hast, erreichst du uns hier:

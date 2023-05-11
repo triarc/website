@@ -27,7 +27,7 @@
 <div class="bg-white">
   <div class="px-8 md:px-16 py-32 max-w-screen-lg mx-auto">
     <div class="mx-auto">
-      <h2 class="text-center text-3xl font-extrabold text-gray-800 sm:text-4xl">Manifest</h2>
+      <h2 class="text-center text-xl font-extrabold text-gray-800 sm:text-2xl">Manifest</h2>
       <dl class="mt-6 space-y-6 divide-y divide-green-triarc text-gray-800">
         {#each values as { id, title, content }}
           <div class="pt-6">

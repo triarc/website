@@ -53,7 +53,7 @@
 <div class="relative" bind:this={dropdown}>
   <button
     type="button"
-    class="inline-flex text-gray-800 items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900"
+    class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 {inline ? 'cursor-default bg-black text-white px-4 -mx-4': 'cursor-pointer text-gray-800'}"
     aria-expanded="false"
     on:click={toggle}
   >
