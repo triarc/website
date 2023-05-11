@@ -11,6 +11,13 @@
   import bammbamm from '../../../static/team/bambam.jpg?width=500&format=webp;png&metadata'
 
   let contents: BlockContent[] = [
+
+    {
+      title: 'Für Ihren Fortschritt.',
+      content:
+        'Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie.',
+      //image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
+    },
     {
       quote: {
         images: serge,
@@ -22,13 +29,6 @@
         highlight: 'green',
         linkedin: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
       },
-    },
-
-    {
-      title: 'Für Ihren Fortschritt.',
-      content:
-        'Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie.',
-      //image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
     },
     {
       title: 'Software passend für Sie.',
