@@ -139,7 +139,7 @@
       email: 'david@triarc-labs.com'
     },
     {
-      name: 'Bam Bam',
+      name: 'Bamm Bamm',
       job: 'Head of Happiness',
       nerdJob: 'Sicherheitsinspektor',
       images: bammbamm,
