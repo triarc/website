@@ -46,7 +46,7 @@
 
   <div class="flex-grow">
     <Container>
-      <div class="grid md:grid-cols-6 grid-cols-1 mt-6 gap-x-12 gap-y-24">
+      <div class="grid md:grid-cols-6 grid-cols-1 mt-6 gap-x-12 gap-y-24 pb-24">
         {#each data.posts as post}
           <a
             href="/stories/{post.slug}"

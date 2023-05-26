@@ -11,13 +11,6 @@
   import bammbamm from '../../../static/team/bambam.jpg?width=500&format=webp;png&metadata'
 
   let contents: BlockContent[] = [
-
-    {
-      title: 'Für Ihren Fortschritt.',
-      content:
-        'Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie.',
-      //image: { src: 'img/intro/in_progress.svg', height: 174, alt: 'Fortschritt' },
-    },
     {
       quote: {
         images: serge,
@@ -103,6 +96,7 @@
         person: 'Bamm Bamm',
         highlight: 'red',
         personTitle: 'Head of Happiness',
+        email: 'bammbamm@triarc-labs.com',
       },
     },
 
@@ -165,13 +159,13 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="together we succeed" content="Gemeinsam durch den IT-Dschungel" />
+  <Hero title="together we succeed" content="Für Ihren Fortschritt. Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie." />
 
   {#each contents as content}
     <Block bind:content />
   {/each}
 
-  <Manifest />
+<!--  <Manifest />-->
   <!--  <TeamMembers />-->
 
   <Footer />

@@ -2,15 +2,26 @@
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import marco from '../../../static/team/marco.jpg?width=500&format=webp;png&metadata'
+  import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
   import Technology from '$lib/index/Technology.svelte'
   import Footer from '$lib/components/Footer.svelte'
 
   let contents: BlockContent[] = [
     {
-      title: 'Willkommen in der Custom Software Manufaktur.',
+      quote: {
+        images: elke,
+        content:
+          'Die Software muss zum Kunden passen. Nicht umgekehrt. Die Vorteile der Digitalisierung lassen sich nur dann voll ausschöpfen, wenn die Software-Lösung exakt den Bedürfnissen entspricht.',
+        person: 'Elke Engel',
+        personTitle: 'CFO / Partner',
+        email: 'elke@triarc-labs.com',
+        highlight: 'blue',
+        linkedin: 'https://www.linkedin.com/in/elke-engel-6761998/',
+      },
+    },
+    {
+      title: 'Lösungen entwickeln',
       content:
-        'Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind.<br/><br/>' +
         'Dank unserer jahrelangen Erfahrung und Knowhow sind wir in der Lage, einzigartige Lösungen zu entwickeln, die den Kunden helfen, ihre Ziele effizient und kosteneffektiv zu erreichen. Wir verstehen, dass jedes Unternehmen einzigartig ist und dass es keine "One-Size-Fits-All"-Lösungen gibt.<br/><br/>' +
         'Unser Ziel ist es, unseren Kunden die besten und innovativsten Lösungen zu bieten, die ihnen dabei helfen, ihr Geschäft zu verbessern und ihre Wettbewerbsfähigkeit zu erhöhen.',
     },
@@ -22,7 +33,7 @@
       //link: { href: '/services#custom-software', text: 'Custom Software Entwicklung' },
     },
     {
-      title: 'Unser Entwicklungsprozess',
+      title: 'Unser agiler Entwicklungsprozess',
       content:
         'Wir führen unsere Projekte erfolgreich seit einem Jahrzehnt agil. Diese Methode hat sich sowohl für uns, wie auch für den Kunden immer bewährt. Unser angiler Entwicklungsprozess besteht aus vier Schritten, welche sich pro Sprint wiederholen.',
       steps: [
@@ -46,18 +57,6 @@
             'Die Entwicklung ist abgeschlossen und das Resultat kann vom Kunden getestet werden. Sobald abgenommen, gehts direkt in den produktiven Betrieb und die Anwender dürfen sich über die neusten Änderungen freuen.',
         },
       ],
-    },
-    {
-      quote: {
-        images: marco,
-        content:
-          'Basierend auf der Realität Ihres Alltags erarbeiten wir zusammen Anforderungen und Ideen, stets mit dem Nutzer im Fokus. Das Produkt testen wir eingehend und passen es solange an, bis es perfekt sitzt.',
-        person: 'Marco Schmidlin',
-        personTitle: 'CTO / Partner',
-        email: 'marco@triarc-labs.com',
-        highlight: 'blue',
-        linkedin: 'https://www.linkedin.com/in/marco-schmidlin-1444ab2a/',
-      },
     },
     // {
     //   title: 'Knowhow und Erfahrung sind die Grundzutaten für erfolgreiche Softwareprojekte.',
@@ -122,13 +121,11 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Custom Software" content="Willkommen in den Custom Software Manufaktur. " />
+  <Hero title="Custom Software" content="Willkommen in den Custom Software Manufaktur. Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind." />
 
   {#each contents as content}
     <Block bind:content />
   {/each}
-
-  <Technology />
 
   <div class="flex justify-center px-6 py-12">
     <a

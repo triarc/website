@@ -4,17 +4,17 @@
 
 <div class="bg-[#0D1214] text-white pt-24 pb-12">
   <Container>
-    <div class="flex justify-between">
-      <div class="flex items-end">
+    <div class="flex justify-between flex-col lg:flex-row">
+      <div class="flex md:items-end md:flex-row flex-col items-center">
         <img src="icons/triarc-logo.svg" class="mr-3" alt="triarc laboratories" height="76" width="120" />
-        <div>
+        <div class="text-center mt-2 md:mt-0 md:text-left">
           <div class="text-xl">triarc laboratories ltd.</div>
           <div>Neue Hard 14</div>
           <div>8005 Zürich</div>
         </div>
       </div>
 
-      <div class="flex flex-col justify-end">
+      <div class="flex flex-col justify-end items-center md:items-end mt-16 md:mt-0">
         <div class="flex space-x-6 mb-6 justify-end">
           <a aria-label="Linkedin"
             class="fill-white xl:text-right"

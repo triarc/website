@@ -3,6 +3,8 @@
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
+  import Technology from "$lib/index/Technology.svelte";
+  import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
 
   function serializeSchema(jobPosting) {
     return (
@@ -139,9 +141,21 @@
     {
       title: 'Starte dein Abenteuer!',
       content:
-        'Zusammen können wir alles erreichen. <br/><br/>' +
+        'Together we succeed <br/><br/>' +
         'Werde Teil des Teams und bewirb dich, wenn du Leidenschaft, Elan und Tatendrang hast und du dich mit unseren Werten identifizieren kannst. ',
       image: { src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Carrer' },
+    },
+    {
+      quote: {
+        images: elke,
+        content:
+          'Unsere Firmenkultur beruht auf den Grundsätzen der Gleichberechtigung, Mitbestimmung und Partizipation. Denn zusammen sind wir innovativer, kreativer und finden die besten Lösungen für unsere Kunden.',
+        person: 'Elke Engel',
+        personTitle: 'CFO / Partner',
+        email: 'elke@triarc-labs.com',
+        highlight: 'blue',
+        linkedin: 'https://www.linkedin.com/in/elke-engel-6761998/',
+      },
     },
     {
       title: 'Was wir grundsätzlich erwarten',
@@ -214,6 +228,9 @@
     //     'Erfahrungen mit Cypress / E2E Testing von Vorteil',
     //   ],
     // },
+  ]
+
+  let offerBlocks: BlockContent[] = [
     {
       title: 'Was wir dir bieten',
       content:
@@ -222,17 +239,17 @@
         {
           title: 'Soziokratie',
           content:
-            'Wöchentlich optimieren wir im Team unsere Prozesse. Zusammen bearbeiten wir Themen, die beschäftigen. Alle Vorschläge sind erlaubt, ja sogar aktiv gefordert. Denn das alte «falsch» kann das neue «richtig» sein. Und umgekehrt. Richtig?',
+            'Kollektive Intelligenz und Gleichberechtigung. In der Soziokratie wird jeder Einzelne gehört, geschätzt und kann aktiv an Entscheidungen teilnehmen. Zusammen schaffen wir optimale Arbeitsbedingungen, damit alle ihr volles Potenzial entfalten können.',
         },
         {
           title: 'Erfolgsbeteiligung',
           content:
-            'Du trägst massgeblich zum Erfolg bei und sollst dafür auch belohnt werden. Ein grosser TEil des Gewinns wird quartalsweise an die Mitarbeiter ausgeschüttet',
+            'Du trägst massgeblich zum Erfolg bei und sollst dafür auch belohnt werden. Ein grosser Teil des Gewinns wird quartalsweise an die Mitarbeiter ausgeschüttet',
         },
         {
           title: 'Coaching',
           content:
-            'Bis und mit zur Senior Stufen haben wir regelmässig Coachinggespräche. Darin gehts um dein Wohlbefinden in der Firma sowie Probleme oder Konflikte direkt anzusprechen. Unser gemeinsames Ziel, deine Seniorität zu fordern und unser Team zu stärken.',
+            'In regelmässigen Coachingmeetings sprechen wir über Wohlbefinden, Probleme, Blackboxes und Wins. Unser gemeinsames Ziel: Eine optimale Entwicklung jedes Einzelnen zu fördern',
         },
         {
           title: 'Technologie',
@@ -242,12 +259,12 @@
         {
           title: 'Transparenz für alle',
           content:
-            'Alle Löhne werden offen kommuniziert. Es gibt keine individuellen Löhne. Die Löhne richten sich nach deiner Stufe im Trackeesystem. Für Seniors gibt’s aktuell 104k – 136k CHF. Eine variable Komponente ist der Bonus, welcher sich nach den aktuellen Quartalszahlen richtet. Dieser wird pro Quartal im Team besprechen.',
+            'Alle Löhne werden offen kommuniziert. Es gibt keine individuellen Löhne. Die Löhne richten sich nach deiner Stufe im Trackeesystem. Für Seniors gibt’s aktuell 104k – 136k CHF.',
         },
         {
           title: 'Office Jungle',
           content:
-            'Unser Office direkt am Bahnhof Hardbrücke ist vollständig bepflanzt. Damit dir nie die Luft ausgeht und du stehts einen schönen Hintergrund in deinem Teams-Call präsentieren kannst.',
+            'Unser Office direkt am Bahnhof Hardbrücke ist eine Oase mitten in der Stadt. Über 100 Pflanzen sorgen für frische Luft und einen zauberhaften Hintergrund in deinen Teams-Calls',
         },
 
         // {
@@ -257,12 +274,12 @@
         // },
         {
           title: 'Home-Office',
-          content: 'Weil es auch nach Corona Tage geben kann, die man einfach lieber im Trainer verbringt.',
+          content: 'Arbeite von zuhause aus, wenn du willst. Wieso auch nicht? Wir arbeiten so oder so komplett digital zusammen. Unsere Weisung: Lass dich min. 1 Mal pro Woche im Office blicken (ab 80% zweimal). Guter Kaffee, gute Gesellschaft, Dschungel und Gym bekommst du aber nur im Büro',
         },
         {
           title: 'Hardware',
           content:
-            'Wähle das Setup, das zu dir passt. Nutze deine vorhandenen Skills in deinem OS. Egal ob Windows, macOS, PopOS oder Arch, du bist dein eigener Administrator sowie Support.',
+            'Wähle das Setup, das zu dir passt. Nutze deine vorhandenen Skills in deinem OS. Egal ob Windows, macOS, PopOS oder Arch, du bist dein eigener Administrator sowie Support. Dazu gibt es deine Lieblingsmaus, Tastatur und Kopfhörer.',
         },
         {
           title: 'Kaffee / Bar',
@@ -283,7 +300,7 @@
         {
           title: 'Ein soziales Umfeld',
           content:
-            'Von monatlich veränderbarem Arbeitspensum über Workation und FlexWork: Nichts ist uns fremd. Denn Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig. Auch gut zu wissen: Wer sich beim Tippen den Finger bricht oder gar noch Übleres erdulden muss, erholt sich davon in einem netten Einzelzimmer mit Seeblick. #privatversichert...',
+            'Work-Life-Balance: Von monatlich veränderbarem Arbeitspensum, über Workation bis zu Einkauf von zusätzlichen Ferientagen. Freiheit und Rücksicht auf individuelle Bedürfnisse sind uns wichtig. Auch gut zu wissen: Wer sich beim Tippen die Finger bricht erholt sich davon in einem netten Einzelzimmer mit Seeblick #privatversichert',
         },
       ],
     },
@@ -345,21 +362,29 @@
   {#each contents as content}
     <Block bind:content />
   {/each}
+
+  <Technology />
+
+  {#each offerBlocks as content}
+    <Block bind:content />
+  {/each}
 </div>
 
-<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">
-  <div class="text-white bg-opacity-20">
-    <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
-      <h2 class="text-3xl font-extrabold sm:text-4xl">
-        <span class="block">Immer noch hier?</span>
-      </h2>
-      <p class="mt-4 text-lg leading-6">
-        Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in
-        unserem Jungle.
-      </p>
-    </div>
-  </div>
-  <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />
-</div>
+
+
+<!--<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">-->
+<!--  <div class="text-white bg-opacity-20">-->
+<!--    <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">-->
+<!--      <h2 class="text-3xl font-extrabold sm:text-4xl">-->
+<!--        <span class="block">Immer noch hier?</span>-->
+<!--      </h2>-->
+<!--      <p class="mt-4 text-lg leading-6">-->
+<!--        Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in-->
+<!--        unserem Jungle.-->
+<!--      </p>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />-->
+<!--</div>-->
 
 <Footer />

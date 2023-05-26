@@ -3,15 +3,15 @@
   import elke from '../assets/avatars/elke.png?width=255&format=webp;png&metadata'
 </script>
 
-<div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">
-  <div class="relative max-w-7xl mx-auto">
-    <div class="text-center">
-      <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">
-        Einige unserer Referenzen
-      </h2>
-    </div>
-  </div>
-</div>
+<!--<div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">-->
+<!--  <div class="relative max-w-7xl mx-auto">-->
+<!--    <div class="text-center">-->
+<!--      <h2 class="text-3xl leading-9 tracking-tight font-extrabold text-gray-900 sm:text-4xl sm:leading-10">-->
+<!--        Einige unserer Referenzen-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 
 <div class="relative bg-white pt-16 pb-32 overflow-hidden">
   <div class="relative">

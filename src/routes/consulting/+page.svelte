@@ -100,14 +100,14 @@
   {/each}
 
 
-  <div class="bg-[#0D1214] flex flex-col">
+  <div class="bg-blue-triarc flex flex-col">
     <div class="text-white bg-opacity-20">
       <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
         <h2 class="text-3xl font-extrabold sm:text-4xl">
           <span class="block">Interessiert? </span>
         </h2>
         <p class="mt-4 text-lg leading-6">
-          Dann kontaktiere uns für ein unverbindliches Erstgespräch.
+          Wir freuen uns auf Sie
         </p>
       </div>
     </div>

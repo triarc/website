@@ -7,14 +7,9 @@
 
   let contents: BlockContent[] = [
     {
-      title: 'Willkommen im Innovation Lab.',
-      content:
-        'In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. In unserer Kernkompetenz als technologischer Partner beteiligen wir uns an Startups und bringen Produkte zur Marktreife.',
-    },
-    {
       quote: {
         images: pascal,
-        content: 'Innovationen sind der Schlüssel zu Wachstum und Erfolg in der Software-Branche.',
+        content: 'Innovationen sind der Schlüssel zu Wachstum und Erfolg.',
         person: 'Pascal Bertschi',
         personTitle: 'CCO / Partner',
         email: 'pascal@triarc-labs.com',
@@ -34,8 +29,18 @@
       content:
         'Die digitale Verbindung von der Baustelle bis zum Lieferanten. Erlaube deinen Kunden bequem Mulde, Kies oder Transport über die M3Express-App zu bestellen. Behalte als Lieferant jederzeit den Überblick und optimiere die Kommunikation zwischen Fahrer, Kunde und dir.',
 
-      image: { src: 'img/lab/m3express.png', width: 200, alt: 'm3express' },
+      image: { src: 'img/lab/m3express-icon.svg', width: 200, alt: 'm3express' },
       link: { href: 'https://m3express.ch', text: 'Mehr dazu', target: '_blank' },
+    },
+    {
+      title: 'Fair Pizza',
+      content:
+        'Fair Pizza bietet Restaurants eine einfache und günstige Alternative Angebot selbständig Online zu\n' +
+        '              verkaufen. Die Whitelabel Lösung bietet eine Vielzahl von Konfigurationsmöglichkeiten inklusive einem\n' +
+        '              Pizzabuilder. Mit Stripe lassen sich die Zahlungen bequem online abwickeln.',
+
+      image: { src: 'img/lab/fairpizza-icon-512.png', width: 220, alt: 'slothi' },
+      link: { href: 'https://fairpizza.ch', text: 'Mehr dazu', target: '_blank' },
     },
     {
       title: 'Slothi',
@@ -49,16 +54,6 @@
       image: { src: 'img/lab/slothi.svg', width: 200, alt: 'slothi' },
       link: { href: 'https://slothi.ch', text: 'Mehr dazu', target: '_blank' },
     },
-    {
-      title: 'Fair Pizza',
-      content:
-        'Fair Pizza bietet Restaurants eine einfache und günstige Alternative Angebot selbständig Online zu\n' +
-        '              verkaufen. Die Whitelabel Lösung bietet eine Vielzahl von Konfigurationsmöglichkeiten inklusive einem\n' +
-        '              Pizzabuilder. Mit Stripe lassen sich die Zahlungen bequem online abwickeln.',
-
-      image: { src: 'img/lab/fairpizza-icon-512.png', width: 120, alt: 'slothi' },
-      link: { href: 'https://fairpizza.ch', text: 'Mehr dazu', target: '_blank' },
-    },
   ]
 </script>
 
@@ -66,7 +61,7 @@
   <title>Innovation Lab - triarc-labs</title>
 </svelte:head>
 
-<Hero title="Innovation Lab" content="Was haben wir vollbracht und woraus ist es entstanden" />
+<Hero title="Innovation Lab" content="Entwicklung von etwas Grossem. In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. In unserer Kernkompetenz als technologischer Partner beteiligen wir uns an Startups und bringen Produkte zur Marktreife." />
 
 <div class="bg-white min-h-screen">
   {#each contents as content}

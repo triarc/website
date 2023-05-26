@@ -26,8 +26,8 @@
     class="object-cover absolute left-0 right-0 top-0 bottom-0 h-screen w-screen"
     id="intro-video"
   >
-    <source src="https://storage.googleapis.com/triarc-website/triarc-intro-1080.mp4" type="video/mp4" />
-    <source src="https://storage.googleapis.com/triarc-website/triarc-intro-1080.webm" type="video/webm" />
+    <source src="https://storage.googleapis.com/triarc-website/triarc-intro-1080-v2.mp4" type="video/mp4" />
+    <source src="https://storage.googleapis.com/triarc-website/triarc-intro-1080-v2.webm" type="video/webm" />
   </video>
   <button
     aria-label="Zur Navigation scrollen"

@@ -78,7 +78,7 @@
         {
           type: 'link',
           title: 'Beratung',
-          description: 'Wir bauen Brücken',
+          description: 'Brücken bauen',
           path: '/consulting',
         },
         {

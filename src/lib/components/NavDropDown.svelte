@@ -53,7 +53,7 @@
 <div class="relative" bind:this={dropdown}>
   <button
     type="button"
-    class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 {inline ? 'cursor-default bg-black text-white px-4 -mx-4': 'cursor-pointer text-gray-800'}"
+    class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 {inline ? 'cursor-default rounded bg-black mb-1 text-white px-4 -mx-4': 'cursor-pointer text-gray-800'}"
     aria-expanded="false"
     on:click={toggle}
   >
@@ -100,6 +100,6 @@
     @apply transition ease-in duration-150 opacity-0 translate-y-1;
   }
   .dialog .container {
-    @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4;
+    @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4 rounded;
   }
 </style>

@@ -95,13 +95,16 @@
     </Container>
   </div>
 
+
+  <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.2671823979445!2d8.517355577834325!3d47.387219571170775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b957b32cc15%3A0xe780cae32dc86415!2striarc%20laboratories%20Ltd.!5e0!3m2!1sen!2sch!4v1685088338553!5m2!1sen!2sch" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
   <hr />
 
   <div class="bg-gray-100 flex-grow">
     <Container>
       <div class="py-16">
         <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Kontaktformular</h2>
-        <h3 class="text-lg mt-3 font-medium text-gray-500">Schreib uns eine Nachricht</h3>
+        <h3 class="text-lg mt-3 font-medium text-gray-500">Interessiert? Schreib uns eine Nachricht</h3>
         <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
           <div>
             <label for="first-name" class="block text-sm font-medium text-gray-900">Vorname</label>

@@ -17,12 +17,12 @@
       src="img/hero/triarc-meetingroom-2000.webp"
       alt="triarc office"
     />
-    <div class="absolute inset-0 bg-blue-triarc mix-blend-multiply" aria-hidden="true" />
+    <div class="absolute inset-0 bg-green-triarc mix-blend-multiply" aria-hidden="true" />
   </div>
   <Container>
     <div class="py-24 sm:py-32">
       <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{title}</h1>
-      <p class="mt-6 max-w-3xl text-xl text-indigo-100">{content}</p>
+      <p class="mt-6 max-w-3xl text-xl text-white">{content}</p>
     </div>
   </Container>
 </div>
