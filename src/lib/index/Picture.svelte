@@ -4,16 +4,18 @@
   export let cssClass;
 </script>
 
+{#if images.length > 0}
 <picture class="{cssClass}">
   {#each images as image}
     <source type="image/{image.format}" srcset={image.src} loading="lazy" />
   {/each}
   <img
-    src={images[1].src}
+    src={images[0].src}
     alt={alt}
-    width="{images[1].width}"
-    height="{images[1].height}"
+    width="{images[0].width}"
+    height="{images[0].height}"
     loading="lazy"
     class="{cssClass}"
   />
 </picture>
+{/if}
