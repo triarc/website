@@ -61,7 +61,7 @@
   <title>Innovation Lab - triarc-labs</title>
 </svelte:head>
 
-<Hero title="Innovation Lab" content="Innovationen sind der Schlüssel zu Wachstum und Erfolg.In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). " />
+<Hero title="Innovation Lab" content="Innovationen sind der Schlüssel zu Wachstum und Erfolg. In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). " />
 
 <div class="bg-white min-h-screen">
   {#each contents as content}
