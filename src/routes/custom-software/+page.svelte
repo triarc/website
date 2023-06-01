@@ -127,15 +127,5 @@
     <Block bind:content />
   {/each}
 
-  <div class="flex justify-center px-6 py-12">
-    <a
-      href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html"
-      rel="noreferrer"
-      target="_blank"
-    >
-      <img src="/logos/swiss-logo.png" width="273" height="46" alt="swissmadesoftware" />
-    </a>
-  </div>
-
   <Footer />
 </div>
