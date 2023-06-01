@@ -26,13 +26,6 @@
         'Unser Ziel ist es, unseren Kunden die besten und innovativsten Lösungen zu bieten, die ihnen dabei helfen, ihr Geschäft zu verbessern und ihre Wettbewerbsfähigkeit zu erhöhen.',
     },
     {
-      title: 'Die Software muss zum Kunden passen. Nicht umgekehrt.',
-      content:
-        'Die Vorteile der Digitalisierung lassen sich nur dann voll ausschöpfen, wenn die Software-Lösung exakt den Bedürfnissen entspricht.',
-      image: { src: 'img/custom-software/robotics.svg', alt: 'Custom Software' },
-      //link: { href: '/services#custom-software', text: 'Custom Software Entwicklung' },
-    },
-    {
       title: 'Unser agiler Entwicklungsprozess',
       content:
         'Wir führen unsere Projekte erfolgreich seit einem Jahrzehnt agil. Diese Methode hat sich sowohl für uns, wie auch für den Kunden immer bewährt. Unser angiler Entwicklungsprozess besteht aus vier Schritten, welche sich pro Sprint wiederholen.',
@@ -121,7 +114,7 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Custom Software" content="Willkommen in den Custom Software Manufaktur. Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind." />
+  <Hero title="Custom Software" content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind." />
 
   {#each contents as content}
     <Block bind:content />
