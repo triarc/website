@@ -9,7 +9,7 @@
         In unserem Lab wird laufend an neue Ideen gearbeitet und getüftelt. Wir versuchen dabei stehts Neues zu schaffen
         in Zusammenarbeit mit lokalen Partnern.
       </p>
-      <a href="/lab" class="inline-block bg-black bg-opacity-50 px-6 py-2 rounded-md">Projekte entdecken</a>
+      <a href="/innovation" class="inline-block bg-black bg-opacity-50 px-6 py-2 rounded-md">Projekte entdecken</a>
     </div>
   </div>
 </div>

@@ -86,7 +86,7 @@
       content:
         'Unseren Anspruch, revolutionäre Lösungen zu entwickeln, erreichen wir nur mit der Leidenschaft, die uns ausmacht. Da können Schnittstellen, Synapsen und Diskussionen auch mal heisslaufen.',
       //image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
-      link: { href: '/lab', text: 'Innovation Lab' },
+      link: { href: '/innovation', text: 'Innovation Lab' },
     },
     {
       quote: {
