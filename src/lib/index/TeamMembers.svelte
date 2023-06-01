@@ -11,7 +11,7 @@
   import michel from '../../../static/team/michel.jpg?width=255&format=webp;png&metadata'
   import luka from '../../../static/team/luka.jpg?width=255&format=webp;png&metadata'
   import chris from '../../../static/team/chris.jpg?width=255&format=webp;png&metadata'
-  import sebastian from '../../../static/team/sebastian.jpg?width=255&format=webp;png&metadata'
+  import till from '../../../static/team/till.jpg?width=255&format=webp;png&metadata'
   import david from '../../../static/team/david.jpg?width=255&format=webp;png&metadata'
   import bammbamm from '../../../static/team/bambam.jpg?width=255&format=webp;png&metadata'
   import simon from '../../../static/team/simon.jpg?width=255&format=webp;png&metadata'
@@ -123,12 +123,12 @@
       email: 'chris@triarc-labs.com'
     },
     {
-      name: 'Sebastian Bortz',
-      job: 'Software Developer',
-      nerdJob: 'Software Developer',
-      images: sebastian,
+      name: 'Till Wegmüller',
+      job: 'Operation Engineer',
+      nerdJob: 'Operation Engineer',
+      images: till,
       special: false,
-      email: 'sebastian@triarc-labs.com'
+      email: 'till@triarc-labs.com'
     },
     {
       name: 'David Jahn',

@@ -139,13 +139,6 @@
   ]
   let contents: BlockContent[] = [
     {
-      title: 'Starte dein Abenteuer!',
-      content:
-        'Together we succeed <br/><br/>' +
-        'Werde Teil des Teams und bewirb dich, wenn du Leidenschaft, Elan und Tatendrang hast und du dich mit unseren Werten identifizieren kannst. ',
-      image: { src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Carrer' },
-    },
-    {
       quote: {
         images: elke,
         content:
@@ -158,33 +151,16 @@
       },
     },
     {
-      title: 'Was wir grundsätzlich erwarten',
-      content: 'Unabhängig von deiner gewünschten Position und vorhanden Erfahrung fordern wir.',
-      items: [
-        {
-          title: 'Begeisterung',
-          content:
-            'Dir macht die Entwicklung Freude und du verstehst, weshalb Clean Code wichtig ist. Das Neue begeistert dich.',
-        },
-        {
-          title: 'Kommunikativ',
-          content:
-            'Du arbeitest und kommunizierst gerne im Team. Und das auch auf Englisch (kannst du eh schon, vom Gamen).',
-        },
-        {
-          title: 'Offen',
-          content:
-            'Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen. Du magst Menschen und behandelst sie wie Mitmenschen.',
-        },
-        {
-          title: 'Ausbildung',
-          content:
-            'Leerabschluss/HF/Bachelor/Master oder selbst beigebracht. Bei uns ist nichts strikt vorgegeben, wir evaluieren immer zu deiner Situation. Erfahrung in unserem Technologien ist natürlich gern gesehen und ab Stufe Professional erwünscht.',
-        },
-      ],
+      title: 'Starte dein Abenteuer!',
+      content:
+        'Together we succeed <br/><br/>' +
+        'Werde Teil des Teams und bewirb dich, wenn du Leidenschaft, Elan und Tatendrang hast und du dich mit unseren <a class="underline decoration-red-triarc" href="/mission">Werten</a> identifizieren kannst. <br/> <br/>' +
+        'Du arbeitest und kommunizierst gerne im Team. Das Neue begeistert dich. Du bist eine positiv eingestellte Persönlichkeit, allzeit bereit für neue Herausforderungen. <br/><br/>' +
+        'Leerabschluss/HF/Bachelor/Master oder selbst beigebracht. Bei uns ist nichts strikt vorgegeben, wir evaluieren immer zu deiner Situation. ',
+      image: { src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Carrer' },
     },
     {
-      title: 'Junior Software Engineer',
+      title: '<span class="text-sm">wir suchen</span><br/>Junior Software Engineer',
       content:
         'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
       image: { src: 'img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
@@ -194,7 +170,7 @@
       ],
     },
     {
-      title: 'Professional Software Engineer',
+      title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
       content:
         'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
       image: { src: 'img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
@@ -205,7 +181,7 @@
       ],
     },
     {
-      title: 'Senior Software Engineer',
+      title: '<span class="text-sm">wir suchen</span><br/>Senior Software Engineer',
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
       image: { src: 'img/jobs/super_woman.svg', alt: 'Senior Software Engineer' },
@@ -228,9 +204,6 @@
     //     'Erfahrungen mit Cypress / E2E Testing von Vorteil',
     //   ],
     // },
-  ]
-
-  let offerBlocks: BlockContent[] = [
     {
       title: 'Was wir dir bieten',
       content:
@@ -330,18 +303,6 @@
         },
       ],
     },
-    // {
-    //   quote: {
-    //     image: '/team/bambam.jpg',
-    //     content: 'Vertrauen ist gut, Sicherheit ist besser.',
-    //     person: 'Bamm Bamm',
-    //     personTitle: 'Sicherheitsinspektor',
-    //   }
-    // },
-    // {
-    //   title: 'Immer noch hier?',
-    //   content: 'Du findest, du passt zu uns und kannst etwas beisteuern? Wir freuen uns auf deine Bewerbung und sehen dich in unserem Jungle.'
-    // }
   ]
 </script>
 
@@ -365,9 +326,6 @@
 
   <Technology />
 
-  {#each offerBlocks as content}
-    <Block bind:content />
-  {/each}
 </div>
 
 

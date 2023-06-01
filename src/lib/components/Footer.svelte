@@ -2,6 +2,22 @@
   import Container from '$lib/components/Container.svelte'
 </script>
 
+
+<div class="bg-blue-triarc flex flex-col">
+  <div class="text-white bg-opacity-20">
+    <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">
+        <span class="block">Interessiert? </span>
+      </h2>
+      <p class="mt-4 text-lg leading-6">
+        Wir freuen uns auf Sie
+      </p>
+
+      <a class="rounded bg-white mt-4 text-blue-triarc px-6 py-2 inline-block" href="/contact" > Kontakt </a>
+    </div>
+  </div>
+</div>
+
 <div class="bg-[#0D1214] text-white pt-24 pb-12">
   <Container>
     <div class="flex justify-between flex-col lg:flex-row">
@@ -15,20 +31,19 @@
       </div>
 
       <div class="flex flex-col justify-end items-center md:items-end mt-16 md:mt-0">
-        <div class="flex space-x-6 mb-6 justify-end">
-          <a aria-label="Linkedin"
-            class="fill-white xl:text-right"
-            href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
+
+
+        <div class="mb-6">Keine Cookies aus Überzeugung</div>
+
+        <div class="flex justify-center">
+          <a
+            href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html"
+            rel="noreferrer"
+            target="_blank"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 448 512"
-              ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-              /></svg
-            >
+            <img src="/logos/swiss-logo.png" width="200" height="30" alt="swissmadesoftware" />
           </a>
-          <a class="decoration-red-triarc underline xl:text-right" href="/contact"> Kontaktiere uns </a>
         </div>
-        <div>Keine Cookies aus Überzeugung</div>
       </div>
     </div>
   </Container>

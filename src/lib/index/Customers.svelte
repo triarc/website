@@ -25,7 +25,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
+          <img height="80" class="max-h-12" src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
         </a>
       </div>
 
@@ -230,12 +230,12 @@
           <img height="80" class="max-h-10" src="/img/customer/helvetas.gif" loading="lazy" alt="helvetas" />
         </a>
         <a
-          href="https://afry.com/"
+          href="https://www.fidinam.com/"
           rel="noreferrer"
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-28" src="/img/customer/afry.svg" loading="lazy" alt="afry" />
+          <img height="80" class="max-h-28" src="/img/customer/fidigit.jpeg" loading="lazy" alt="afry" />
         </a>
       </div>
     </div>

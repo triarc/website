@@ -18,7 +18,7 @@
       },
     },
     {
-      title: 'μLink Data Broker',
+      title: 'μLink Datahub',
       content:
         'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
       image: { src: 'img/mlink/tree.svg', alt: 'mlink logo' },

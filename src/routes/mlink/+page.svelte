@@ -7,12 +7,12 @@
 
   let contents: BlockContent[] = [
     {
-      title: "μLink Datahub <br /><span class=\"text-3xl\">Real time data hub</span>",
+      title: "μLink Datahub",
       content:
         "Die Schnittstellenlösung, welche ihre komplette Software-Infrastruktur unter einen Hut bringt! ERP, CRM, Disposition, Zeiterfassung, Projektsoftware, HR Suite, Lagerbewirtschaftung usw. sind mit µLink in einem einzigen digitalen Ökosystem vereint. <br/><br/>" +
         "Unternehmen, die konsequent auf digitale Lösungen setzen, haben einen klaren Wettbewerbsvorteil. Dabei wird mit Hilfe unterschiedlichen Softwarelösungen ein Prozess nach dem anderen digitalisiert. Durch diese stetig wachsende und sich verändernde Ökosystem entsteht das Bedürfnis die Datenflüsse zu managen. <br/><br/>" +
         "Essenziell sind dabei Bedürfnisse wie das Verhindern manueller Arbeitsschritte, die direkte Zusammenarbeit von Mitarbeitern über Systemgrenzen hinweg, sowie das schnelle Finden aller massgebenden Informationen in den angebundenen Softwarelösungen. µLink liefert dafür die hochmoderne und effiziente Lösung mit dem Fokus auf Echtzeitkommunikation und Sicherheit.",
-      image: { src: "img/mlink/tree.svg", alt: "mlink logo" }
+      image: { src: "img/mlink/mLink_tree.svg", alt: "mlink logo" }
     },
     {
       title: "μLink der Kommunikationshub",
@@ -32,7 +32,7 @@
     },
     {
       title: "Softwareökosystem",
-      image: { src: "img/mlink/ecosystem.png", alt: "mlink ecosystem" },
+      image: { src: "img/mlink/mLink_Datenfluss.svg", alt: "mlink ecosystem" },
       content: "Schritt um Schritt zur perfekten Schnittstelle. Bei der Digitalisierung von Geschäftsprozessen kommen meist mehrere Software Systeme zum Einsatz. Die Schnittstellen zwischen den verschiedenen Systemen mit unterschiedlichen Technologien stellt Unternehmen vor grosse Herausforderungen. µLink vereinfacht als zentrale Instanz die Schnittstellenproblematik, vernetzt die verschiedenen Systeme und ermöglicht damit die " +
         "zentrale Bewirtschaftung der Schnittstellen. So kann mit minimalem Aufwand neue " +
         "Software ins Ökosystem integriert oder bestehende abgelöst werden."
@@ -41,14 +41,14 @@
       title: "Monitoring",
       content:
         "Mit µLink lassen sich die Datenflüsse zwischen Softwaresystemen zentral observieren. Bei einem Ausfall, einer Abnahme der Leistung oder weiterer konfigurierbarer Parameter kann proaktiv alarmiert werden. Über das Grafana-Dashboard lassen sich alle systemrelevanten Komponenten in Echtzeit über-wachen und visualisieren.",
-      image: { src: "img/mlink/mind-map.svg", alt: "borders" }
+      image: { src: "img/mlink/Monitoring.svg", alt: "borders" }
     },
     {
       title: "Business Intelligence",
       content:
         "In der heutigen Zeit werden Erkenntnisse aufgrund von Daten immer wertvoller. Somit nehmen Systeme, die es ermöglichen aktuelle Daten zu sammeln, kombiniert bereitzustellen und diese zu interpretieren, eine immer wichtigere Rolle für erfolgreiche Unternehmen ein." +
         "Eine zentrale Funktionalität von µLink ist der Zugriff auf komplexe Daten in Echtzeit. Die Kombination der Daten (wie Stammdaten, Betriebsdaten, temp. Daten) aus verschiedenen Systemen erlauben eine umfassende Einsicht und eröffnen neue Möglichkeiten, um basierend auf Algorithmen oder künstlicher Intelligenz überzeugende Entscheidungen zu treffen. Beispielsweise ermöglicht µLink die einfache Echtzeit-Integration ins Power BI von Microsoft.",
-      image: { src: "img/mlink/scale.svg", alt: "scale" }
+      image: { src: "img/mlink/BusinessIntelligence.svg", alt: "scale" }
     },
     {
       title: "Die Vorteile von µlink im Überblick",
@@ -93,7 +93,7 @@
             src: "img/customer/ebl-logo.svg",
             format: "svg"
           }],
-          imageCss: "aspect-[1/1] absolute h-24 rounded-2xl",
+          imageCss: "h-24",
           content: "μLink ist die Datendrehscheibe, welche Microsoft Dynamics AX und das Data Warehouse mit unseren Applikationen in Echtzeit vernetzt",
           person: "Philippe Kienner",
           personTitle: "CIO"
@@ -105,7 +105,7 @@
             src: "img/customer/glb-logo.svg",
             format: "svg"
           }],
-          imageCss: "aspect-[1/1] absolute h-32 rounded-2xl",
+          imageCss: "h-24",
           content: "Mit μLink erweitern wir ABACUS nach Belieben",
           person: "Ueli Grossen",
           personTitle: "CIO"
@@ -119,7 +119,7 @@
             src: "img/customer/riwax-logo.svg",
             format: "svg"
           }],
-          imageCss: "aspect-[1/1] absolute h-32 rounded-2xl",
+          imageCss: "h-12",
           content: "μLink bindet unseren Aussendienst eng in unseren Betrieb ein",
           person: "Michel Scherz",
           personTitle: "Purchasing Manager"
@@ -128,13 +128,13 @@
       right: {
         quote: {
           images: [{
-            src: "img/customer/walo-logo.svg",
+            src: "img/customer/ortho-team-logo.svg",
             format: "svg"
           }],
-          imageCss: "aspect-[1/1] flex h-24 absolute h-full w-full rounded-2xl",
-          content: "μLink ist die zentrale Datendrehscheibe in unserem Ökosystem",
-          person: "Roger Bühlmann",
-          personTitle: "Group CIO"
+          imageCss: "h-12",
+          content: "μLink verbindet unsere Mitarbeiter von der Kundenberatung ohne Zeitverlust direkt zum Techniker",
+          person: "Patrick Rohrer",
+          personTitle: "CFO"
         }
       }
     },
@@ -145,7 +145,7 @@
             src: "img/customer/kibag-logo.svg",
             format: "svg"
           }],
-          imageCss: "aspect-[1/1] absolute h-24 rounded-2xl",
+          imageCss: "h-24 w-24",
           content: "μLink liefert uns die Grundlage für die digitale Bauakte",
           person: "Yves Stucki",
           personTitle: "CIO"
@@ -154,13 +154,13 @@
       right: {
         quote: {
           images: [{
-            src: "img/customer/ortho-team-logo.svg",
+            src: "img/customer/walo-logo.svg",
             format: "svg"
           }],
-          imageCss: "aspect-[1/1] absolute h-32 rounded-2xl",
-          content: "μLink verbindet unsere Mitarbeiter von der Kundenberatung ohne Zeitverlust direkt zum Techniker",
-          person: "Patrick Rohrer",
-          personTitle: "CFO"
+          imageCss: "h-24",
+          content: "μLink ist die zentrale Datendrehscheibe in unserem Ökosystem",
+          person: "Roger Bühlmann",
+          personTitle: "Group CIO"
         }
       }
     }
@@ -186,10 +186,10 @@
 
   {#each quotes as quote}
     <section class="bg-white even:bg-gray-100">
-      <div class="mx-auto max-w-7xl px-6 lg:px-8  py-24 sm:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8  py-24 sm:py-16">
         <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
-            <img class="h-12 self-start" src={quote.left.quote.images[0].src} alt="" />
+            <img class="{quote.left.quote.imageCss} self-start" src={quote.left.quote.images[0].src} alt="" />
             <figure class="mt-10 flex flex-auto flex-col justify-between">
               <blockquote class="text-lg leading-8 text-gray-900">
                 <p>“{quote.left.quote.content}”</p>
@@ -205,7 +205,7 @@
           <div
             class="flex flex-col border-t border-gray-900/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20"
           >
-            <img class="h-12 self-start" src={quote.right.quote.images[0].src} alt="" />
+            <img class="{quote.right.quote.imageCss} self-start" src={quote.right.quote.images[0].src} alt="" />
             <figure class="mt-10 flex flex-auto flex-col justify-between">
               <blockquote class="text-lg leading-8 text-gray-900">
                 <p>“{quote.right.quote.content}”</p>
