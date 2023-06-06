@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   lint:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v2
@@ -13,7 +13,7 @@ jobs:
       - run: npm ci
       - run: npm run lint
   web:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
@@ -23,7 +23,7 @@ jobs:
       - run: npm ci
       - run: npm run build
   api:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v2
