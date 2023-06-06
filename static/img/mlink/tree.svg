@@ -2,7 +2,7 @@
     <defs>
         <style>
             .cls-1{fill:#00973a;}.cls-2{fill:#0a7bc0;}.cls-3{fill:#dd0b2f;}
-            .cls-4{fill:#009739;}.cls-5{fill:#077bc0;}.cls-6{fill:#fff;}
+            .cls-4{fill:#009739;}.cls-5{fill:#077bc0;}.cls-6{fill:#000;}
         </style>
     </defs>
     <path class="cls-1" d="M135.6,149.18a28.49,28.49,0,1,1-28.48-28.49,28.48,28.48,0,0,1,28.48,28.49"/>

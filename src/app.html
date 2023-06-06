@@ -2,7 +2,7 @@
 <html lang="de" class="no-js">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.png" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Accept-CH" content="DPR,Width,Viewport-Width" />
     <meta
@@ -13,9 +13,20 @@
       name="keywords"
       content="Softwareentwicklung, App Entwicklung, Custom Software, KMU Software, Softwarelösung, Softwareprojekte, Abacus, SAP, Dynamics, Web Applikation, Mobile Applikationen, iOS Entwicklung, Android Entwicklung, Business Intelligence"
     />
-    <script async defer data-domain="triarc-labs.com" src="https://plausible.io/js/plausible.js"></script>
-    <script defer data-domain="triarc-labs.com" src="https://plausible.io/js/script.manual.js"></script>
-    <script>
+    <script
+      async
+      defer
+      data-domain="triarc-labs.com"
+      src="https://plausible.io/js/plausible.js"
+      type="application/javascript"
+    ></script>
+    <script
+      defer
+      data-domain="triarc-labs.com"
+      src="https://plausible.io/js/script.manual.js"
+      type="application/javascript"
+    ></script>
+    <script type="application/javascript">
       window.plausible =
         window.plausible ||
         function () {
@@ -23,9 +34,9 @@
         }
     </script>
 
-    %svelte.head%
+    %sveltekit.head%
 
-    <script>
+    <script lang="ts">
       document.documentElement.classList.remove('no-js')
 
       var image = new Image()
@@ -41,6 +52,6 @@
     </script>
   </head>
   <body>
-    <div id="svelte">%svelte.body%</div>
+    <div id="svelte">%sveltekit.body%</div>
   </body>
 </html>

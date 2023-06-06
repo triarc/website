@@ -7,9 +7,6 @@ const config = {
   // for more information about preprocessors
   preprocess: [
     sveltePreprocess({
-      defaults: {
-        style: 'postcss',
-      },
       postcss: true,
     }),
   ],
@@ -19,15 +16,6 @@ const config = {
     // You can create optimized builds for different platforms by
     // specifying a different adapter
     adapter: vercel(),
-
-    // hydrate the <div id="svelte"> element in src/app.html
-    target: '#svelte',
-
-    vite: {
-      ssr: {
-        noExternal: Object.keys({}),
-      },
-    },
   },
 }
 

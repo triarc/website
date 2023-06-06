@@ -3,6 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  background: #000;
+  font-family: 'Lexend', sans-serif;
+}
+
 .plyr {
   --plyr-color-main: #c8102e;
   --plyr-video-control-background-hover: #c8102e;
@@ -12,168 +18,72 @@
   background-size: cover;
 }
 
-.no-js .header-bg,
-.no-webp .header-bg {
-  background-image: url('/img/hero/triarc-hero-landscape-4000.jpg');
-}
-.no-js .office-bg,
-.no-webp .office-bg {
-  background-image: url('/img/hero/triarc-meetingroom-4000.jpg');
+.plyr--video .plyr__controls {
+  background: #333;
+  padding-top: 12px;
 }
 
-.webp .office-bg {
-  background-image: url('/img/hero/triarc-meetingroom-4000.webp');
-}
-.webp .header-bg {
-  background-image: url('/img/hero/triarc-hero-landscape-4000.webp');
+.plyr--video,
+.plyr__video-wrapper {
+  background: white;
 }
 
-@media only screen (orientation: portrait) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-1700.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-1700.webp');
-  }
+* {
+  scroll-behavior: smooth;
 }
-
-@media only screen and (max-height: 800px) and (orientation: portrait) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-800.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-800.webp');
-  }
+/* vietnamese */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/lexend/wlpwgwvFAVdoq2_v9KQU82RHaBBX.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
-
-@media only screen and (max-height: 1200px) and (orientation: portrait) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-1200.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-1200.webp');
-  }
+/* latin-ext */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/lexend/wlpwgwvFAVdoq2_v9aQU82RHaBBX.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-
-@media only screen and (max-height: 1500px) and (orientation: portrait) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-1500.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-portrait-1500.webp');
-  }
+/* latin */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(/fonts/lexend/wlpwgwvFAVdoq2_v-6QU82RHaA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
-@media only screen and (max-width: 800px and max-height: 342px) and (orientation: landscape) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-800.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-800.webp');
-  }
+/* vietnamese */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/lexend/wlpwgwvFAVdoq2_v9KQU82RHaBBX.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
 }
-@media only screen and (max-width: 1024px and max-height: 438px) and (orientation: landscape) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-1024.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-1024.webp');
-  }
+/* latin-ext */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/lexend/wlpwgwvFAVdoq2_v9aQU82RHaBBX.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
 }
-@media only screen and (max-width: 1200px and max-height: 514px) and (orientation: landscape) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-1200.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-1200.webp');
-  }
-}
-@media only screen and (max-width: 1600px and max-height: 685px) and (orientation: landscape) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-1600.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-1600.webp');
-  }
-}
-@media only screen and (max-width: 2000px and max-height: 856px) and (orientation: landscape) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-2000.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-2000.webp');
-  }
-}
-@media only screen and (max-width: 4000px and max-height: 1701px) and (orientation: landscape) {
-  .no-js .header-bg,
-  .no-webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-4000.jpg');
-  }
-  .webp .header-bg {
-    background-image: url('/img/hero/triarc-hero-landscape-4000.webp');
-  }
-}
-
-@media only screen and (max-width: 800px) {
-  .no-js .office-bg,
-  .no-webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-800.jpg');
-  }
-  .webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-800.webp');
-  }
-}
-@media only screen and (max-width: 1024px) {
-  .no-js .office-bg,
-  .no-webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-1024.jpg');
-  }
-  .webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-1024.webp');
-  }
-}
-@media only screen and (max-width: 1200px) {
-  .no-js .office-bg,
-  .no-webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-1200.jpg');
-  }
-  .webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-1200.webp');
-  }
-}
-@media only screen and (max-width: 1600px) {
-  .no-js .office-bg,
-  .no-webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-1600.jpg');
-  }
-  .webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-1600.webp');
-  }
-}
-@media only screen and (max-width: 2000px) {
-  .no-js .office-bg,
-  .no-webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-2000.jpg');
-  }
-  .webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-2000.webp');
-  }
-}
-@media only screen and (max-width: 4000px) {
-  .no-js .office-bg,
-  .no-webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-4000.jpg');
-  }
-  .webp .office-bg {
-    background-image: url('/img/hero/triarc-meetingroom-4000.webp');
-  }
+/* latin */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/fonts/lexend/wlpwgwvFAVdoq2_v-6QU82RHaA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC,
+    U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }

@@ -1,284 +1,183 @@
 <script lang="ts">
-  let nerdMode = false
+  import serge from '../../../static/team/serge.jpg?width=255&format=webp;png&metadata'
+  import marco from '../../../static/team/marco.jpg?width=255&format=webp;png&metadata'
+  import pascal from '../../../static/team/pascal.jpg?width=255&format=webp;png&metadata'
+  import elke from '../../../static/team/elke.jpg?width=255&format=webp;png&metadata'
+  import max from '../../../static/team/max.jpg?width=255&format=webp;png&metadata'
+  import iris from '../../../static/team/iris.jpg?width=255&format=webp;png&metadata'
+  import dave from '../../../static/team/dave.jpg?width=255&format=webp;png&metadata'
+  import simona from '../../../static/team/simona.jpg?width=255&format=webp;png&metadata'
+  import eduan from '../../../static/team/eduan.jpg?width=255&format=webp;png&metadata'
+  import michel from '../../../static/team/michel.jpg?width=255&format=webp;png&metadata'
+  import luka from '../../../static/team/luka.jpg?width=255&format=webp;png&metadata'
+  import chris from '../../../static/team/chris.jpg?width=255&format=webp;png&metadata'
+  import till from '../../../static/team/till.jpg?width=255&format=webp;png&metadata'
+  import david from '../../../static/team/david.jpg?width=255&format=webp;png&metadata'
+  import bammbamm from '../../../static/team/bambam.jpg?width=255&format=webp;png&metadata'
+  import simon from '../../../static/team/simon.jpg?width=255&format=webp;png&metadata'
+  import Picture from '$lib/index/Picture.svelte'
+
   let teamMember = [
     {
       name: 'Serge Müller',
       job: 'CEO / Partner',
       nerdJob: 'CEO / Partner',
-      image: 'img/avatars/serge.png',
-      nerdImage: 'img/avatars/serge.png',
-      onlyInNerdMode: false,
+      images: serge,
+      special: false,
+      email: 'serge@triarc-labs.com',
     },
     {
       name: 'Marco Schmidlin',
       job: 'CTO / Partner',
       nerdJob: 'CTO / Partner',
-      image: 'img/avatars/marco.png',
-      nerdImage: 'img/avatars/marco.png',
-      onlyInNerdMode: false,
+      images: marco,
+      special: false,
+      email: 'marco@triarc-labs.com',
     },
     {
       name: 'Elke Engel',
       job: 'CFO / Partner',
       nerdJob: 'CFO / Partner',
-      image: 'img/avatars/elke.png',
-      nerdImage: 'img/avatars/elke-nerd.png',
-      onlyInNerdMode: false,
+      images: elke,
+      special: false,
+      email: 'elke@triarc-labs.com',
     },
     {
       name: 'Pascal Bertschi',
       job: 'CCO / Partner',
       nerdJob: 'Typescript maniac',
-      image: 'img/avatars/pascal.png',
-      nerdImage: 'img/avatars/pascal-nerd.png',
-      onlyInNerdMode: false,
+      images: pascal,
+      special: false,
+      email: 'pascal@triarc-labs.com',
     },
     {
       name: 'Max Lüthi',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/max.png',
-      nerdImage: 'img/avatars/max.png',
-      onlyInNerdMode: false,
+      images: max,
+      special: false,
+      email: 'max@triarc-labs.com',
     },
-    // {
-    //   name: 'Fabrizio Lazaretti',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/fabrizio.png',
-    //   nerdImage: 'img/avatars/fabrizio.png',
-    //   onlyInNerdMode: false,
-    // },
-    // {
-    //   name: 'Mattia Ninivaggi',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/mattia.png',
-    //   nerdImage: 'img/avatars/mattia.png',
-    //   onlyInNerdMode: false,
-    // },
-    // {
-    //   name: 'Warwara Panyushkina',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/warwara.png',
-    //   nerdImage: 'img/avatars/warwara.png',
-    //   onlyInNerdMode: false,
-    // },
-    // {
-    //   name: 'Andrea Honegger',
-    //   job: 'Software Developer',
-    //   nerdJob: 'Software Developer',
-    //   image: 'img/avatars/andrea.png',
-    //   nerdImage: 'img/avatars/andrea.png',
-    //   onlyInNerdMode: false,
-    // },
     {
       name: 'Iris Zenegaglia',
-      job: 'Project Lead',
-      nerdJob: 'Project Lead',
-      image: 'img/avatars/iris.png',
-      nerdImage: 'img/avatars/iris.png',
-      onlyInNerdMode: false,
+      job: 'Beratung / Partner',
+      nerdJob: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
+      images: iris,
+      special: false,
+      email: 'iris@triarc-labs.com',
     },
-    // {
-    //   name: 'Paul Tingle',
-    //   job: 'Nearshore Developer',
-    //   nerdJob: 'Nearshore Developer',
-    //   image: 'img/avatars/paul.png',
-    //   nerdImage: 'img/avatars/paul.png',
-    //   onlyInNerdMode: false,
-    // },
     {
       name: 'Dave Haug',
       job: 'Business Development',
       nerdJob: 'Business Development',
-      image: 'img/avatars/dave.png',
-      nerdImage: 'img/avatars/dave.png',
-      onlyInNerdMode: false,
+      images: dave,
+      special: false,
+      email: 'dave@triarc-labs.com',
     },
     {
-      name: 'Andre Urban',
-      job: 'Administration',
-      nerdJob: 'Administration',
-      image: 'img/avatars/urban.png',
-      nerdImage: 'img/avatars/urban.png',
-      onlyInNerdMode: false,
+      name: 'Simon Hasler',
+      job: 'Project Lead',
+      nerdJob: 'Project Lead',
+      images: simon,
+      special: false,
+      email: 'simon@triarc-labs.com',
+    },
+    {
+      name: 'Simona Miljanovic',
+      job: 'UX Designerin',
+      nerdJob: 'UX Designerin',
+      images: simona,
+      special: false,
+      email: 'simona@triarc-labs.com',
     },
     {
       name: 'Eduardo Lavaque',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/eduan.png',
-      nerdImage: 'img/avatars/eduan.png',
-      onlyInNerdMode: false,
+      images: eduan,
+      special: false,
+      email: 'eduan@triarc-labs.com',
     },
     {
       name: 'Michel Gabriel',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/michel.png',
-      nerdImage: 'img/avatars/michel.png',
-      onlyInNerdMode: false,
+      images: michel,
+      special: false,
+      email: 'michel@triarc-labs.com',
     },
     {
       name: 'Luka Kramer',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/luka.png',
-      nerdImage: 'img/avatars/luka.png',
-      onlyInNerdMode: false,
+      images: luka,
+      special: false,
+      email: 'luka@triarc-labs.com',
     },
     {
       name: 'Chris Thonfeld',
-      job: 'Nearshore Developer',
-      nerdJob: 'Software Developer',
-      image: 'img/avatars/chris.png',
-      nerdImage: 'img/avatars/chris.png',
-      onlyInNerdMode: false,
-    },
-    {
-      name: 'Lars Hornbaker',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      image: 'img/avatars/lars.png',
-      nerdImage: 'img/avatars/lars.png',
-      onlyInNerdMode: false,
+      images: chris,
+      special: false,
+      email: 'chris@triarc-labs.com',
+    },
+    {
+      name: 'Till Wegmüller',
+      job: 'Operation Engineer',
+      nerdJob: 'Operation Engineer',
+      images: till,
+      special: false,
+      email: 'till@triarc-labs.com',
     },
     {
       name: 'David Jahn',
-      job: 'Junior Software Developer',
-      nerdJob: 'Junior Software Developer',
-      image: 'img/avatars/david.png',
-      nerdImage: 'img/avatars/david.png',
-      onlyInNerdMode: false,
-    },
-    // {
-    //   name: 'Sandra Vieira da Silva Lopes',
-    //   job: 'Facility Manager',
-    //   nerdJob: 'Facility Manager',
-    //   image: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-    //   nerdImage: 'https://i0.wp.com/triarc-labs.com/wp-content/uploads/2016/01/1281.jpg?w=311&ssl=1',
-    // },
-    // {
-    //   name: 'Bam Bam',
-    //   job: 'Quality Assurance',
-    //   nerdJob: 'Quality Assurance',
-    //   image: 'img/avatars/bambam.png',
-    //   nerdImage: 'img/avatars/bambam.png',
-    // },
-    {
-      name: 'Kubernetes',
-      job: '',
-      image: '',
-      nerdJob: 'CIO',
-      nerdImage: 'img/technology/kubernetes.svg',
-      onlyInNerdMode: true,
+      job: 'Software Developer',
+      nerdJob: 'Software Developer',
+      images: david,
+      special: false,
+      email: 'david@triarc-labs.com',
     },
     {
-      name: 'Prometheus',
-      job: '',
-      image: '',
-      nerdJob: '24/7 Support',
-      nerdImage: 'img/technology/prometheus.svg',
-      onlyInNerdMode: true,
+      name: 'Bamm Bamm',
+      job: 'Head of Happiness',
+      nerdJob: 'Sicherheitsinspektor',
+      images: bammbamm,
+      special: true,
+      email: 'bammbamm@triarc-labs.com',
     },
   ]
-  let sizes = [144, 255]
-  let displayedMembers = mapMembers()
 
-  function getWebpImage(val: string): string | null {
-    if (val.endsWith('svg')) {
-      return null
+  teamMember.sort((first, second) => {
+    if (first.special) {
+      return 1
+    } else if (second.special) {
+      return -1
     }
-    return val.substr(0, val.length - 3) + 'webp'
-  }
-
-  function getSourceSet(val: string) {
-    if (val.endsWith('svg')) {
-      return val
-    }
-    return `${sizes.map((s) => `${val.substr(0, val.length - 4)}-${s}.png ${s}w`).join(',')}`
-  }
-
-  function mapMember(member) {
-    return {
-      name: member.name,
-      job: member.job,
-      nerdImage: getSourceSet(member.nerdImage),
-      nerdWebpImage: getWebpImage(member.nerdImage),
-      image: getSourceSet(member.image),
-      webpImage: getWebpImage(member.image),
-      onlyInNerdMode: member.onlyInNerdMode,
-    }
-  }
-
-  function mapMembers() {
-    return teamMember
-      .filter((t) => !t.onlyInNerdMode || nerdMode)
-      .map((t) => mapMember(t))
-      .sort((t1, t2) => t1.name.localeCompare(t2.name))
-  }
-
-  function switchMode(val: { detail: boolean }) {
-    nerdMode = val.detail
-    if (nerdMode) {
-      displayedMembers.push(...teamMember.slice(teamMember.length - 2).map((m) => mapMember(m)))
-    } else {
-      displayedMembers.splice(teamMember.length - 2, 2)
-    }
-    displayedMembers = [...displayedMembers]
-  }
+    return first.name.localeCompare(second.name)
+  })
 </script>
 
-<div class="bg-white bg-about-us">
-  <div class="max-w-screen-xl mx-auto py-12 px-4 text-center sm:px-6 lg:px-8 lg:py-24">
-    <div class="space-y-8 sm:space-y-12">
-      <div class="space-y-5 sm:mx-auto sm:max-w-xl sm:space-y-4 lg:max-w-5xl">
-        <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Digital Evolutionaries</h2>
-        <p class="text-xl leading-7 text-gray-500">Das Team</p>
-      </div>
-      <ul
-        class="mx-auto grid grid-cols-2 gap-x-4 gap-y-8 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-12 xl:grid-cols-5"
-        class:nerd={nerdMode}
-      >
-        {#each displayedMembers as member}
-          <li class="flex">
-            <div class="space-y-4 mb-6 mx-auto flex-grow flex flex-col">
-              <div class="card flex-grow flex items-center justify-center">
-                <div class="card-content  border-b border-blue-triarc">
-                  <picture class="front-card w-8 transition-all">
-                    {#if member.webpImage}
-                      <source type="image/webp" srcset={member.webpImage} loading="lazy" />
-                    {/if}
-                    <img
-                      srcset={member.image}
-                      alt={member.name}
-                      width="144"
-                      height="144"
-                      loading="lazy"
-                      class="drop-shadow-2xl filter "
-                    />
-                  </picture>
-                  <!--                  <picture class="back-card">-->
-                  <!--                    {#if member.nerdWebpImage}-->
-                  <!--                      <source type="image/webp" srcset={member.nerdWebpImage} loading="lazy" />-->
-                  <!--                    {/if}-->
-                  <!--                    <img srcset={member.nerdImage} alt="nerd {member.name}" width="144" height="144" loading="lazy" />-->
-                  <!--                  </picture>-->
-                </div>
-              </div>
-              <div class="space-y-2">
-                <div class="text-xs leading-4 font-medium lg:text-sm lg:leading-5">
-                  <h4>{member.name}</h4>
-                  <p class="text-blue-triarc">{member.job}</p>
-                </div>
-              </div>
-            </div>
-          </li>
-        {/each}
-      </ul>
-    </div>
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <ul
+      class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3 xl:grid-cols-4"
+    >
+      {#each teamMember as member}
+        <li>
+          <Picture
+            height="280"
+            width="373"
+            alt={member.name}
+            images={member.images}
+            cssClass="aspect-[3/4] w-full drop-shadow filter rounded-2xl object-cover"
+          />
+          <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-800">{member.name}</h3>
+          <p class="text-base leading-7 text-gray-600">{member.job}</p>
+          <a class="underline text-gray-500 decoration-blue-triarc" href="mailto:{member.email}">{member.email}</a>
+        </li>
+      {/each}
+    </ul>
   </div>
 </div>
 
@@ -302,8 +201,7 @@
     transform: rotateY(180deg);
     transition: transform 0.3s;
   }
-  .front-card,
-  .back-card {
+  .front-card {
     position: absolute;
     display: flex;
     align-items: center;
@@ -311,8 +209,5 @@
     height: 100%;
     width: 100%;
     backface-visibility: hidden;
-  }
-  .back-card {
-    transform: rotateY(180deg);
   }
 </style>
