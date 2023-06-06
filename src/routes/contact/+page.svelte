@@ -91,18 +91,21 @@
             </div>
           </div>
 
-
-
           <div class="flex">
             <div class="flex-shrink-0 items-center flex justify-center w-6">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
+                ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                /></svg
+              >
             </div>
-            <a aria-label="Linkedin"
-               class="ml-3 text-base text-gray-500" target="_blank"
-               href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
+            <a
+              aria-label="Linkedin"
+              class="ml-3 text-base text-gray-500"
+              target="_blank"
+              href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
             >
               LinkedIn
-
             </a>
           </div>
         </div>
@@ -110,8 +113,15 @@
     </Container>
   </div>
 
-
-  <iframe class="w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.2671823979445!2d8.517355577834325!3d47.387219571170775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b957b32cc15%3A0xe780cae32dc86415!2striarc%20laboratories%20Ltd.!5e0!3m2!1sen!2sch!4v1685088338553!5m2!1sen!2sch" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  <iframe
+    class="w-full"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.2671823979445!2d8.517355577834325!3d47.387219571170775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b957b32cc15%3A0xe780cae32dc86415!2striarc%20laboratories%20Ltd.!5e0!3m2!1sen!2sch!4v1685088338553!5m2!1sen!2sch"
+    height="450"
+    style="border:0;"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  />
 
   <hr />
 

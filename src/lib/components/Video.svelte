@@ -18,7 +18,14 @@
   })
 </script>
 
-<video id="player" playsinline controls style="height: 100%; width: 100%;" class="rounded overflow-hidden" data-poster={content.poster}>
+<video
+  id="player"
+  playsinline
+  controls
+  style="height: 100%; width: 100%;"
+  class="rounded overflow-hidden"
+  data-poster={content.poster}
+>
   {#each content.sources as source}
     <source src={source.src} type={source.type} />
   {/each}

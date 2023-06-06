@@ -3,7 +3,7 @@
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import Technology from "$lib/index/Technology.svelte";
+  import Technology from '$lib/index/Technology.svelte'
   import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
 
   function serializeSchema(jobPosting) {
@@ -247,7 +247,8 @@
         // },
         {
           title: 'Home-Office',
-          content: 'Arbeite von zuhause aus, wenn du willst. Wieso auch nicht? Wir arbeiten so oder so komplett digital zusammen. Unsere Weisung: Lass dich min. 1 Mal pro Woche im Office blicken (ab 80% zweimal). Guter Kaffee, gute Gesellschaft, Dschungel und Gym bekommst du aber nur im Büro',
+          content:
+            'Arbeite von zuhause aus, wenn du willst. Wieso auch nicht? Wir arbeiten so oder so komplett digital zusammen. Unsere Weisung: Lass dich min. 1 Mal pro Woche im Office blicken (ab 80% zweimal). Guter Kaffee, gute Gesellschaft, Dschungel und Gym bekommst du aber nur im Büro',
         },
         {
           title: 'Hardware',
@@ -325,10 +326,7 @@
   {/each}
 
   <Technology />
-
 </div>
-
-
 
 <!--<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">-->
 <!--  <div class="text-white bg-opacity-20">-->

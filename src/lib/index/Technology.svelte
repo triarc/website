@@ -101,7 +101,8 @@
         <p class="text-xl leading-7">
           Unsere Team bringen ein breites Fachwissen mit und beherrscht <span class="underline">fast</span>
           alle gängigen Programmiersprachen. <br />
-          Wir freuen uns auf deine Unterstützung in unseren Projekten, welche wir über mehrere Technologien hinweg zum Erfolg führen.
+          Wir freuen uns auf deine Unterstützung in unseren Projekten, welche wir über mehrere Technologien hinweg zum Erfolg
+          führen.
         </p>
       </div>
       <div class="grid self-center mt-8 grid-cols-1 gap-6 gap-y-6 md:grid-cols-2 lg:grid-cols-3" id="technology">

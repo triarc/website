@@ -15,7 +15,7 @@
   import david from '../../../static/team/david.jpg?width=255&format=webp;png&metadata'
   import bammbamm from '../../../static/team/bambam.jpg?width=255&format=webp;png&metadata'
   import simon from '../../../static/team/simon.jpg?width=255&format=webp;png&metadata'
-  import Picture from "$lib/index/Picture.svelte";
+  import Picture from '$lib/index/Picture.svelte'
 
   let teamMember = [
     {
@@ -24,7 +24,7 @@
       nerdJob: 'CEO / Partner',
       images: serge,
       special: false,
-      email: 'serge@triarc-labs.com'
+      email: 'serge@triarc-labs.com',
     },
     {
       name: 'Marco Schmidlin',
@@ -32,7 +32,7 @@
       nerdJob: 'CTO / Partner',
       images: marco,
       special: false,
-      email: 'marco@triarc-labs.com'
+      email: 'marco@triarc-labs.com',
     },
     {
       name: 'Elke Engel',
@@ -40,7 +40,7 @@
       nerdJob: 'CFO / Partner',
       images: elke,
       special: false,
-      email: 'elke@triarc-labs.com'
+      email: 'elke@triarc-labs.com',
     },
     {
       name: 'Pascal Bertschi',
@@ -48,7 +48,7 @@
       nerdJob: 'Typescript maniac',
       images: pascal,
       special: false,
-      email: 'pascal@triarc-labs.com'
+      email: 'pascal@triarc-labs.com',
     },
     {
       name: 'Max Lüthi',
@@ -56,7 +56,7 @@
       nerdJob: 'Software Developer',
       images: max,
       special: false,
-      email: 'max@triarc-labs.com'
+      email: 'max@triarc-labs.com',
     },
     {
       name: 'Iris Zenegaglia',
@@ -64,7 +64,7 @@
       nerdJob: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
       images: iris,
       special: false,
-      email: 'iris@triarc-labs.com'
+      email: 'iris@triarc-labs.com',
     },
     {
       name: 'Dave Haug',
@@ -72,7 +72,7 @@
       nerdJob: 'Business Development',
       images: dave,
       special: false,
-      email: 'dave@triarc-labs.com'
+      email: 'dave@triarc-labs.com',
     },
     {
       name: 'Simon Hasler',
@@ -80,7 +80,7 @@
       nerdJob: 'Project Lead',
       images: simon,
       special: false,
-      email: 'simon@triarc-labs.com'
+      email: 'simon@triarc-labs.com',
     },
     {
       name: 'Simona Miljanovic',
@@ -88,7 +88,7 @@
       nerdJob: 'UX Designerin',
       images: simona,
       special: false,
-      email: 'simona@triarc-labs.com'
+      email: 'simona@triarc-labs.com',
     },
     {
       name: 'Eduardo Lavaque',
@@ -96,7 +96,7 @@
       nerdJob: 'Software Developer',
       images: eduan,
       special: false,
-      email: 'eduan@triarc-labs.com'
+      email: 'eduan@triarc-labs.com',
     },
     {
       name: 'Michel Gabriel',
@@ -104,7 +104,7 @@
       nerdJob: 'Software Developer',
       images: michel,
       special: false,
-      email: 'michel@triarc-labs.com'
+      email: 'michel@triarc-labs.com',
     },
     {
       name: 'Luka Kramer',
@@ -112,7 +112,7 @@
       nerdJob: 'Software Developer',
       images: luka,
       special: false,
-      email: 'luka@triarc-labs.com'
+      email: 'luka@triarc-labs.com',
     },
     {
       name: 'Chris Thonfeld',
@@ -120,7 +120,7 @@
       nerdJob: 'Software Developer',
       images: chris,
       special: false,
-      email: 'chris@triarc-labs.com'
+      email: 'chris@triarc-labs.com',
     },
     {
       name: 'Till Wegmüller',
@@ -128,7 +128,7 @@
       nerdJob: 'Operation Engineer',
       images: till,
       special: false,
-      email: 'till@triarc-labs.com'
+      email: 'till@triarc-labs.com',
     },
     {
       name: 'David Jahn',
@@ -136,7 +136,7 @@
       nerdJob: 'Software Developer',
       images: david,
       special: false,
-      email: 'david@triarc-labs.com'
+      email: 'david@triarc-labs.com',
     },
     {
       name: 'Bamm Bamm',
@@ -144,7 +144,7 @@
       nerdJob: 'Sicherheitsinspektor',
       images: bammbamm,
       special: true,
-      email: 'bammbamm@triarc-labs.com'
+      email: 'bammbamm@triarc-labs.com',
     },
   ]
 
@@ -166,10 +166,13 @@
     >
       {#each teamMember as member}
         <li>
-          <Picture height="280" width="373"
-                   alt="{member.name}"
-                   images="{member.images}"
-                   cssClass="aspect-[3/4] w-full drop-shadow filter rounded-2xl object-cover"></Picture>
+          <Picture
+            height="280"
+            width="373"
+            alt={member.name}
+            images={member.images}
+            cssClass="aspect-[3/4] w-full drop-shadow filter rounded-2xl object-cover"
+          />
           <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-800">{member.name}</h3>
           <p class="text-base leading-7 text-gray-600">{member.job}</p>
           <a class="underline text-gray-500 decoration-blue-triarc" href="mailto:{member.email}">{member.email}</a>

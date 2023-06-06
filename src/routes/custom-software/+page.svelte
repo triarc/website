@@ -114,7 +114,10 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Custom Software" content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind." />
+  <Hero
+    title="Custom Software"
+    content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind."
+  />
 
   {#each contents as content}
     <Block bind:content />

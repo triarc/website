@@ -150,7 +150,6 @@
         </a>
       </div>
 
-
       <div class="customer-grid-row">
         <a
           href="https://www.christen-ag.ch/"
@@ -211,7 +210,6 @@
         </a>
       </div>
 
-
       <div class="customer-grid-row">
         <a
           href="https://www.sutterbau.ch/"
@@ -244,15 +242,15 @@
 
 <style style lang="postcss">
   .customer-grid a {
-      @apply border-4 border-gray-100 last:border-r-0 first:border-l-0;
+    @apply border-4 border-gray-100 last:border-r-0 first:border-l-0;
   }
   .customer-grid-row {
-      @apply contents;
+    @apply contents;
   }
   .customer-grid-row:last-child a {
-      @apply border-b-0;
+    @apply border-b-0;
   }
   .customer-grid-row:first-child a {
-      @apply border-t-0;
+    @apply border-t-0;
   }
 </style>

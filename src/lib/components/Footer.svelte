@@ -2,18 +2,15 @@
   import Container from '$lib/components/Container.svelte'
 </script>
 
-
 <div class="bg-blue-triarc flex flex-col">
   <div class="text-white bg-opacity-20">
     <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold sm:text-4xl">
         <span class="block">Interessiert? </span>
       </h2>
-      <p class="mt-4 text-lg leading-6">
-        Wir freuen uns auf Sie
-      </p>
+      <p class="mt-4 text-lg leading-6">Wir freuen uns auf Sie</p>
 
-      <a class="rounded bg-white mt-4 text-blue-triarc px-6 py-2 inline-block" href="/contact" > Kontakt </a>
+      <a class="rounded bg-white mt-4 text-blue-triarc px-6 py-2 inline-block" href="/contact"> Kontakt </a>
     </div>
   </div>
 </div>
@@ -31,8 +28,6 @@
       </div>
 
       <div class="flex flex-col justify-end items-center md:items-end mt-16 md:mt-0">
-
-
         <div class="mb-6">Keine Cookies aus Überzeugung</div>
 
         <div class="flex justify-center">

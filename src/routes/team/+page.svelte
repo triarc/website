@@ -1,8 +1,8 @@
 <script>
   import TeamMembers from '$lib/index/TeamMembers.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import Hero from "$lib/components/Hero.svelte";
-  import Block from "$lib/components/Block.svelte";
+  import Hero from '$lib/components/Hero.svelte'
+  import Block from '$lib/components/Block.svelte'
 
   let content = {
     title: 'Werde Teil des Teams!',
@@ -17,9 +17,12 @@
 <svelte:head>
   <title>Team - triarc-labs</title>
 </svelte:head>
-<Hero title="Unser Team" content="Wir lieben was wir tun, und dass wir das gemeinsam tun.
+<Hero
+  title="Unser Team"
+  content="Wir lieben was wir tun, und dass wir das gemeinsam tun.
         Von der Vision bis zur Anwendung können Sie sich auf unsere Kompetenz und Konstanz verlassen.
-        Sie werden von erfahrenen, engagierten Spezialisten persönlich begleitet." />
+        Sie werden von erfahrenen, engagierten Spezialisten persönlich begleitet."
+/>
 
 <TeamMembers />
 

@@ -159,13 +159,16 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="together we succeed" content="Für Ihren Fortschritt. Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie." />
+  <Hero
+    title="together we succeed"
+    content="Für Ihren Fortschritt. Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie."
+  />
 
   {#each contents as content}
     <Block bind:content />
   {/each}
 
-<!--  <Manifest />-->
+  <!--  <Manifest />-->
   <!--  <TeamMembers />-->
 
   <Footer />

@@ -9,7 +9,8 @@
     {
       quote: {
         images: pascal,
-        content: 'Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. In unserer Kernkompetenz als technologischer Partner beteiligen wir uns an Startups und bringen Produkte zur Marktreife.',
+        content:
+          'Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. In unserer Kernkompetenz als technologischer Partner beteiligen wir uns an Startups und bringen Produkte zur Marktreife.',
         person: 'Pascal Bertschi',
         personTitle: 'CCO / Partner',
         email: 'pascal@triarc-labs.com',
@@ -61,7 +62,10 @@
   <title>Innovation Lab - triarc-labs</title>
 </svelte:head>
 
-<Hero title="Innovation Lab" content="Innovationen sind der Schlüssel zu Wachstum und Erfolg. In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). " />
+<Hero
+  title="Innovation Lab"
+  content="Innovationen sind der Schlüssel zu Wachstum und Erfolg. In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). "
+/>
 
 <div class="bg-white min-h-screen">
   {#each contents as content}
