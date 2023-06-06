@@ -83,10 +83,6 @@
 </div>
 
 <style>
-  .header {
-    @apply bg-gray-300 text-gray-900 py-1 -mx-4 px-4;
-  }
-
   .inline {
     @apply flex flex-col;
   }

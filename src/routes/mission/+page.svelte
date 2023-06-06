@@ -2,7 +2,6 @@
   import Block from '$lib/components/Block.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import Manifest from '$lib/index/Manifest.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import serge from '../../../static/team/serge.jpg?width=500&format=webp;png&metadata'
   import marco from '../../../static/team/marco.jpg?width=500&format=webp;png&metadata'

@@ -9,7 +9,7 @@ export function load({ params }) {
       const data = await response.json()
       return data.posts[0]
     })
-    .catch((err) => {
+    .catch(() => {
       throw error(404, 'Not found')
     })
 }

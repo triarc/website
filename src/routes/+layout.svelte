@@ -226,7 +226,7 @@
   </div>
 </div>
 
-<style>
+<style style lang="postcss">
   #page {
     @apply bg-white flex flex-col min-h-screen;
   }

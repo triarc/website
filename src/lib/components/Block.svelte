@@ -29,7 +29,7 @@
 {#if content.quote}
   <div class="bg-white group">
     <div
-      class="{!!content.quote.highlight
+      class="{content.quote.highlight
         ? 'bg-' + content.quote.highlight + '-triarc bg-opacity-10'
         : 'group-even:bg-gray-100'} pb-20 sm:pb-24 xl:pb-0"
     >
@@ -64,16 +64,16 @@
               <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
             </svg>
             <blockquote
-              class="text-xl font-semibold leading-8 {!!content.quote.highlight
+              class="text-xl font-semibold leading-8 {content.quote.highlight
                 ? 'text-gray-900'
                 : 'text-gray-600'} sm:text-2xl sm:leading-9"
             >
               <p>{@html content.quote.content}</p>
             </blockquote>
-            <figcaption class="mt-8 text-base {!!content.quote.highlight ? 'text-gray-900' : 'text-gray-600'}">
+            <figcaption class="mt-8 text-base {content.quote.highlight ? 'text-gray-900' : 'text-gray-600'}">
               <div class="font-semibold">{content.quote.person}</div>
               <div class="mt-1">{content.quote.personTitle}</div>
-              <div class="flex space-x-6 mt-4 {!!content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
+              <div class="flex space-x-6 mt-4 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
                 {#if content.quote.email}
                   <a href="mailto:{content.quote.email}" aria-label="Email">
                     <svg class="h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -84,9 +84,9 @@
                   </a>
                 {/if}
                 {#if content.quote.linkedin}
-                  <a href={content.quote.linkedin} target="_blank" aria-label="Linkedin">
+                  <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                     <svg
-                      class="h-5  {!!content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                      class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >

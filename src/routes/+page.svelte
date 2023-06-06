@@ -1,6 +1,4 @@
 <script lang="ts">
-  import logo from '../lib/assets/triarc-labs-white.svg'
-
   function scrollToMenu() {
     document.scrollingElement.scrollTo({
       behavior: 'smooth',

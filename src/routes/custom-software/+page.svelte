@@ -3,7 +3,6 @@
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
-  import Technology from '$lib/index/Technology.svelte'
   import Footer from '$lib/components/Footer.svelte'
 
   let contents: BlockContent[] = [

@@ -15,10 +15,6 @@
     image: 'img/stories/ortho/application-iPad-view',
     imageAlt: 'application close up view',
   }
-  let userFront = {
-    image: 'img/stories/ortho/user-front',
-    imageAlt: 'frontal view of person',
-  }
 </script>
 
 <svelte:head>
