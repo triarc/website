@@ -149,7 +149,7 @@
   content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte."
 />
 
-<DeveloperListing></DeveloperListing>
+<DeveloperListing />
 
 <!--<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">-->
 <!--  <div class="text-white bg-opacity-20">-->

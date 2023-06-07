@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { BlockContent } from "$lib/components/Block.svelte";
+  import type { BlockContent } from '$lib/components/Block.svelte'
   import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
-  import Block from "$lib/components/Block.svelte";
+  import Block from '$lib/components/Block.svelte'
 
   let contents: BlockContent[] = [
     {
@@ -27,7 +27,6 @@
     },
   ]
 </script>
-
 
 <div class="bg-white">
   {#each contents as content}

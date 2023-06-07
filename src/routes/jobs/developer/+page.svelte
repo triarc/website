@@ -1,20 +1,19 @@
 <script>
-  import Hero from "$lib/components/Hero.svelte";
-  import Footer from "$lib/components/Footer.svelte";
-  import DeveloperListing from "../developer-listing.svelte";
+  import Hero from '$lib/components/Hero.svelte'
+  import Footer from '$lib/components/Footer.svelte'
+  import DeveloperListing from '../developer-listing.svelte'
 </script>
 
 <svelte:head>
   <title>Developer Job - triarc-labs</title>
 </svelte:head>
 
-
 <Hero
   title="Developer Job"
   content="Erfahre mehr über unsere offene Entwickler Stelle und was dich sonst noch dazu interessieren könnte."
 />
 
-<DeveloperListing></DeveloperListing>
+<DeveloperListing />
 
 <!--<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">-->
 <!--  <div class="text-white bg-opacity-20">-->

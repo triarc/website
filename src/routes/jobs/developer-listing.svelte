@@ -1,9 +1,8 @@
 <script lang="ts">
-
-  import type { BlockContent } from "$lib/components/Block.svelte";
-  import Block from "$lib/components/Block.svelte";
-  import Technology from "$lib/index/Technology.svelte";
-  import JobIntro from "./job-intro.svelte";
+  import type { BlockContent } from '$lib/components/Block.svelte'
+  import Block from '$lib/components/Block.svelte'
+  import Technology from '$lib/index/Technology.svelte'
+  import JobIntro from './job-intro.svelte'
 
   let contents: BlockContent[] = [
     {
@@ -154,8 +153,7 @@
   ]
 </script>
 
-<JobIntro></JobIntro>
-
+<JobIntro />
 
 <div class="bg-blue-triarc flex flex-col">
   <div class="text-white bg-opacity-20">
@@ -163,11 +161,12 @@
       <h2 class="text-3xl font-extrabold sm:text-4xl">
         <span class="block">Entwicklerpositionen</span>
       </h2>
-      <p class="mt-4 text-lg leading-6">Wir bieten unterschiedliche Stufen, in welcher du deine Karriere bei uns starten kannst.</p>
+      <p class="mt-4 text-lg leading-6">
+        Wir bieten unterschiedliche Stufen, in welcher du deine Karriere bei uns starten kannst.
+      </p>
     </div>
   </div>
 </div>
-
 
 <div class="bg-white">
   {#each contents as content}
