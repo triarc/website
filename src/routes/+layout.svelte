@@ -276,7 +276,7 @@
   }
 
   .navbar-container {
-    @apply max-w-screen-lg mx-auto flex w-full flex-col lg:flex-row min-h-0;
+    @apply max-w-screen-xl mx-auto flex w-full flex-col lg:flex-row min-h-0;
   }
 
   #page .main-container {
