@@ -24,6 +24,5 @@
     <h1 class="text-4xl mb-3 font-bold">{data.title}</h1>
     <div>{@html data.html}</div>
   </div>
-
 </div>
 <Footer />
