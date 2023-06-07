@@ -19,7 +19,7 @@
   <Container>
     <div class="flex justify-between flex-col lg:flex-row">
       <div class="flex md:items-end md:flex-row flex-col items-center">
-        <img src="icons/triarc-logo.svg" class="mr-3" alt="triarc laboratories" height="76" width="120" />
+        <img src="/icons/triarc-logo.svg" class="mr-3" alt="triarc laboratories" height="76" width="120" />
         <div class="text-center mt-2 md:mt-0 md:text-left">
           <div class="text-xl">triarc laboratories ltd.</div>
           <div>Neue Hard 14</div>

@@ -6,7 +6,7 @@
 
 <div class="bg-white min-h-screen px-12 md:px-24 py-16 md:py-24 w-full">
   <div class="prose lg:prose-xl prose-img:rounded-xl prose-a:text-blue-triarc mx-auto">
-    <div class="flex space-x-2 bg-white">
+    <div class="flex space-x-2 items-center bg-white mb-2">
       <a href="/stories" class="flex items-center text-blue-triarc fill-blue-triarc">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 448 512"
           ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
@@ -14,7 +14,6 @@
           /></svg
         >
       </a>
-      <div>/</div>
       <div>{data.title}</div>
     </div>
     <img
@@ -26,5 +25,5 @@
     <div>{@html data.html}</div>
   </div>
 
-  <Footer />
 </div>
+<Footer />
