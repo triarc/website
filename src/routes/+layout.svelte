@@ -128,9 +128,11 @@
 
   function toggle() {
     menuOpen = !menuOpen
+    console.log('menuOpen', menuOpen)
   }
   function hideMenu() {
     menuOpen = false
+    console.log('hideMenu', menuOpen)
   }
 
   onMount(() => {
@@ -191,7 +193,7 @@
                   <NavDropDownItem
                     title={subItem.title}
                     description={subItem.description}
-                    close={toggle}
+                    close={hideMenu}
                     path={subItem.path}
                     inline={data.pathname === '/'}
                   />
