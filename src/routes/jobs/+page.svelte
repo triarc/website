@@ -2,6 +2,9 @@
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import DeveloperListing from './developer-listing.svelte'
+  import JobIntro from './job-intro.svelte'
+  import type { BlockContent } from '$lib/components/Block.svelte'
+  import Block from '$lib/components/Block.svelte'
 
   function serializeSchema(jobPosting) {
     return (
@@ -113,26 +116,74 @@
       ],
       experienceRequirements: '2 Jahre Erfahrung mit Angular und einer objektorientier Sprache wie C# / Java',
     },
+    // {
+    //   content:
+    //     'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
+    //   claim: 'DevOps / Operation Engineer',
+    //   img: 'img/jobs/cloud_hosting.svg',
+    //   open: false,
+    //   responsiblities:
+    //     'sind breit gefächert. Unterstütze das Team in der Infrastruktur unserer vielzähligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Du hilfst im Support von unserem Produkt μLink und arbeitest mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewährleisten.',
+    //   skills: [
+    //     'Leidenschaft für die Software Entwicklung',
+    //     'Praktische Erfahrung mit Kubernetes, Docker und GCP',
+    //     'Wünscheswerte Erfahrung mit Cert Manager, Postgres, Elasticsearch und MongoDB',
+    //     'Spass an der Arbeit im Team',
+    //     'Lösungsorientiertes Denken und Handeln',
+    //     'Lernfähigkeit und kontinuierliche Weiterentwicklung',
+    //     'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+    //   ],
+    //   experienceRequirements:
+    //     'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+    // },
+  ]
+
+  let contents: BlockContent[] = [
     {
+      title: '<span class="text-sm">wir suchen</span><br/>Junior Software Engineer',
       content:
-        'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
-      claim: 'DevOps / Operation Engineer',
-      img: 'img/jobs/cloud_hosting.svg',
-      open: false,
-      responsiblities:
-        'sind breit gefächert. Unterstütze das Team in der Infrastruktur unserer vielzähligen Projekte. Dazu gehört die Wartung von OnPremise Maschinen mit Linux und kubeadm sowie gemanagte Kubernetes-Cluster auf Google Cloud. Du hilfst im Support von unserem Produkt μLink und arbeitest mit der Entwicklung eng zusammen, um die Stabilität und Verfügbarkeit zu gewährleisten.',
-      skills: [
-        'Leidenschaft für die Software Entwicklung',
-        'Praktische Erfahrung mit Kubernetes, Docker und GCP',
-        'Wünscheswerte Erfahrung mit Cert Manager, Postgres, Elasticsearch und MongoDB',
-        'Spass an der Arbeit im Team',
-        'Lösungsorientiertes Denken und Handeln',
-        'Lernfähigkeit und kontinuierliche Weiterentwicklung',
-        'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+        'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
+      image: { src: '/img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
+      bulletPoints: [
+        'Erste Erfahrungen mit C# oder Java',
+        'Erste Erfahrungen im Bereich Web / Single Page Applications',
       ],
-      experienceRequirements:
-        'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
     },
+    {
+      title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
+      content:
+        'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
+      image: { src: '/img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
+      bulletPoints: [
+        "Erfahrungen mit C# in der Entwicklung von API's",
+        'Erfahrungen im Bereich Web und Angular',
+        'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
+      ],
+    },
+    {
+      title: '<span class="text-sm">wir suchen</span><br/>Senior Software Engineer',
+      content:
+        'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
+      image: { src: '/img/jobs/super_woman.svg', alt: 'Senior Software Engineer' },
+      bulletPoints: [
+        "Erfahrungen mit C# in der Entwicklung von API's",
+        'Erfahrungen im Bereich Web und Angular',
+        'Erfahrungen mit Elasticsearch / Postgres / MongoDB',
+        'Erfahrungen Docker / Kubernetes / Gitlab CI',
+      ],
+    },
+    // {
+    //   title: '(Dev)Ops Engineer',
+    //   content:
+    //     'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
+    //
+    //   image: { src: 'img/jobs/cloud_hosting.svg', alt: 'Dev/Ops Engineer' },
+    //   bulletPoints: [
+    //     'Erfahrungen Docker / Kubernetes / Gitlab CI',
+    //     'Erfahrungen mit Google Cloud / Azure von Vorteil',
+    //     'Erfahrungen mit Cypress / E2E Testing von Vorteil',
+    //   ],
+    // },
   ]
 </script>
 
@@ -148,6 +199,24 @@
   title="Jobs"
   content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte."
 />
+<JobIntro />
+
+<div class="bg-blue-triarc flex flex-col">
+  <div class="text-white bg-opacity-20">
+    <div class="max-w-2xl mx-auto text-center py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold sm:text-4xl">
+        <span class="block">Entwicklerpositionen</span>
+      </h2>
+      <p class="mt-4 text-lg leading-6">
+        Wir bieten unterschiedliche Stufen, in welcher du deine Karriere bei uns starten kannst.
+      </p>
+    </div>
+  </div>
+</div>
+
+{#each contents as content}
+  <Block bind:content />
+{/each}
 
 <DeveloperListing />
 
