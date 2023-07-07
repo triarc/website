@@ -46,26 +46,28 @@
 
   <div class="flex-grow">
     <Container>
-      <div class="grid md:grid-cols-6 grid-cols-1 mt-6 gap-x-12 gap-y-24 pb-24">
+      <div class="md:columns-3 columns-1 mt-6 gap-12 pb-24">
         {#each data.posts as post}
           <a
             href="/stories/{post.slug}"
-            class="{post.featured ? 'md:col-span-3' : 'md:col-span-2'} col-span-1 flex flex-col group"
+            class="{post.featured ? 'md:col-span-3' : 'md:col-span-2'} block break-inside-avoid	 col-span-1 mb-12 shadow flex flex-col group rounded-md"
           >
-            <div class="relative mb-2 rounded-md shadow">
+            <div class="relative rounded-md shadow">
               <img
                 src={post.image.src}
                 srcset={post.image.srcset}
                 sizes={post.image.sizes}
                 loading="lazy"
                 alt={post.image.alt}
-                class="object-cover rounded-md overflow-hidden 	block h-auto max-w-auto w-full object-center group-hover:opacity-75"
+                class="object-cover rounded-md rounded-b-none overflow-hidden block h-auto max-w-auto w-full object-center group-hover:opacity-75"
               />
-              <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full  group-hover:shadow-inner rounded-md" />
+              <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
             </div>
-            <h3 class="font-bold text-xl">{post.title}</h3>
-            <p class="line-clamp-3 mb-1 text-gray-500">{post.content}</p>
-            <p class="text-sm text-gray-500">{post.footer}</p>
+            <div class="px-4 py-3 bg-white rounded-md">
+              <h3 class="font-bold text-xl">{post.title}</h3>
+              <p class="line-clamp-3 mb-1 text-gray-500">{post.content}</p>
+              <p class="text-sm text-gray-500">{post.footer}</p>
+            </div>
           </a>
         {/each}
       </div>

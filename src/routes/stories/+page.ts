@@ -61,7 +61,7 @@ export function load({ params, url }) {
     `https://blog.triarc-labs.com/ghost/api/content/tags/?include=count.posts&key=93ed4aea5970c22ed269d4ec35`
   )
   const posts = fetch(
-    `https://blog.triarc-labs.com/ghost/api/content/posts?include=tags,authors${postFilter}&key=93ed4aea5970c22ed269d4ec35`
+    `https://blog.triarc-labs.com/ghost/api/content/posts?include=tags,authors${postFilter}&key=93ed4aea5970c22ed269d4ec35&limit=25`
   )
 
   return Promise.all([tags, posts]).then(async ([tagResponse, postResponse]) => {
