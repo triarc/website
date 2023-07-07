@@ -41,7 +41,7 @@
       items: [
         {
           type: 'link',
-          title: 'Mission',
+          title: 'Mission 2',
           path: '/mission',
           description: 'Was uns ausmacht',
         },
