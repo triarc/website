@@ -24,15 +24,14 @@
         height="1442"
       />
       <div class="relative" aria-hidden="true">
-        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]">
-
-        </div>
+        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
       </div>
     </div>
   </div>
   <div class="mx-auto mt-16 max-w-5xl px-6 sm:mt-5 md:mt-10 lg:px-8">
     <dl
-      class="mx-auto flex flex-col gap-x-6 gap-y-3 text-base leading-8 text-gray-600 lg:mx-0 lg:max-w-7xl lg:gap-x-4 lg:gap-y-8">
+      class="mx-auto flex flex-col gap-x-6 gap-y-3 text-base leading-8 text-gray-600 lg:mx-0 lg:max-w-7xl lg:gap-x-4 lg:gap-y-8"
+    >
       <!--            <div class="overflow-hidden rounded-lg">-->
       <!--                <div class="px-4 py-5 sm:p-6">-->
       <div class="relative pl-0 " style="max-width: 50ch">
