@@ -8,14 +8,14 @@
 </script>
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10 ">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <div class="mx-auto max-w-5xl px-6 lg:px-8">
     <div class="mx-auto max-w-5xl sm:text-center">
       <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{appName}</p>
       <p class="mt-6 text-lg leading-8 text-gray-600">{companyDescription}</p>
     </div>
   </div>
   <div class="relative overflow-hidden pt-8">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl px-6 lg:px-8">
       <img
         src={imageSource}
         alt="App screenshot"
@@ -24,17 +24,18 @@
         height="1442"
       />
       <div class="relative" aria-hidden="true">
-        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
+        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]">
+
+        </div>
       </div>
     </div>
   </div>
-  <div class="mx-auto mt-16 max-w-7xl px-6 sm:mt-5 md:mt-10 lg:px-8">
+  <div class="mx-auto mt-16 max-w-5xl px-6 sm:mt-5 md:mt-10 lg:px-8">
     <dl
-      class="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-3 text-base leading-7 text-gray-600 lg:mx-0 lg:max-w-none lg:grid-cols-2 md:grid-cols-2 lg:gap-x-4 lg:gap-y-8"
-    >
+      class="mx-auto flex flex-col gap-x-6 gap-y-3 text-base leading-8 text-gray-600 lg:mx-0 lg:max-w-7xl lg:gap-x-4 lg:gap-y-8">
       <!--            <div class="overflow-hidden rounded-lg">-->
       <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative pl-0 col-span-1">
+      <div class="relative pl-0 " style="max-width: 50ch">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -54,7 +55,7 @@
       <!--            </div>-->
       <!--            <div class="overflow-hidden rounded-lg">-->
       <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative pl-0 col-span-1">
+      <div class="relative lg:ml-96 md:ml-96" style="max-width: 50ch">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -74,7 +75,7 @@
       <!--</div>-->
       <!--            <div class="overflow-hidden rounded-lg col-span-2">-->
       <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative pl-0 lg:col-span-2 sm:col-span-1 md:col-span-2">
+      <div class="relative pl-0 " style="max-width: 50ch">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
