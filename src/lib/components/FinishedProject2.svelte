@@ -30,11 +30,11 @@
   </div>
   <div class="mx-auto mt-16 max-w-5xl px-6 sm:mt-5 md:mt-10 lg:px-8">
     <dl
-      class="mx-auto flex flex-col gap-x-6 gap-y-3 text-base leading-8 text-gray-600 lg:mx-0 lg:max-w-7xl lg:gap-x-4 lg:gap-y-8"
+      class="mx-auto flex flex-col gap-x-6 gap-y-16 text-base leading-8 text-gray-600 lg:mx-0 lg:max-w-7xl lg:gap-x-4 lg:gap-y-16"
     >
       <!--            <div class="overflow-hidden rounded-lg">-->
       <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative pl-0 " style="max-width: 50ch">
+      <div class="relative pl-0 " style="max-width: 75ch">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -54,7 +54,7 @@
       <!--            </div>-->
       <!--            <div class="overflow-hidden rounded-lg">-->
       <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative lg:ml-96 md:ml-96" style="max-width: 50ch">
+      <div class="relative lg:ml-56 md:ml-56 " style="max-width: 75ch">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -74,7 +74,7 @@
       <!--</div>-->
       <!--            <div class="overflow-hidden rounded-lg col-span-2">-->
       <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative pl-0 " style="max-width: 50ch">
+      <div class="relative pl-0 " style="max-width: 75ch">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
