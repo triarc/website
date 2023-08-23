@@ -2,6 +2,7 @@
   // import pascal from '../assets/avatars/pascal.png?width=255&format=webp;png&metadata'
   // import elke from '../assets/avatars/elke.png?width=255&format=webp;png&metadata'
   import FinishedProject2 from '$lib/components/FinishedProject2.svelte'
+  import FinishedProjectMobile from '$lib/components/FinishedProjectMobile.svelte'
   let finishedProject = [
     {
       appName: 'Porta',
@@ -187,6 +188,53 @@
     //    imageSource:'',
     //  },
   ]
+  let finishedProjectMobile = [
+    {
+      appName: 'Sutter App',
+      companyDescription:
+        'Das Leistungsspektrum erstreckt sich über das ganze Bauhauptgewerbe. Sie haben spezialisierte Teams und Maschinen für unterschiedlichste Aufgaben' +
+        ' - Sie bieten ein breites Angebot im Hoch- und Tiefbau und sind dabei in vielen Bau-Disziplinen wie zum Beispiel dem Trassebau hochspezialisiert.',
+      situation:
+        'Die Firma Sutter Bauunternehmung AG wünschte sich eine auf ihr Arbeitsumfeld und Anforderungen optimierte Lösung zur Präsenz- und Projektzeiterfassung' +
+        ' für Personen und Material. Zusätzlich sollen Tages/Regie-Rapporte erstellt und verteilt werden können.',
+      challenges:
+        'Die Mitarbeiter sollen eine möglichst einfach bedienbare Lösung erhalten. Die Applikation soll durchlässig sein, um einen flexiblen Einsatz zu ermöglichen.' +
+        ' Die Auswahl der Projekte, Mitarbeiter, Maschinen und Produkte soll aufgrund der Planung oder Konfiguration vereinfacht resp. unterstützt werden.' +
+        ' Keine Maschinenstunden sollen mehr vergessen gehen!',
+      solutions:
+        'Die Erfassung von Tagesrapporten auf den Baustellen wurde durch die gemeinsam entwickelte Applikation «SutterApp» um ein Vielfaches übersichtlicher' +
+        ' und effizienter. Die App ist handlich und kann auf Desktop und mobilen Geräten verwendet werden, wodurch die Tagesrapporte direkt im Feld erfasst werden können.' +
+        ' Mitarbeiter werden im Rapportierungsprozess unterstützt, da die SutterApp Plandaten aus ABACUS für Rollen, Inventar, Material und Fremdleistungen vorschlägt.' +
+        ' Zusätzlich können Schnellbausteine und die Historie-Funktion genutzt werden.',
+      imageSources: [
+        'img/references/Sutter1.png',
+        'img/references/Sutter2.png',
+        'img/references/Sutter3.png',
+        'img/references/Sutter1.png',
+        'img/references/Sutter2.png',
+        'img/references/Sutter3.png',
+      ],
+      // imageSource1:'img/references/Sutter1.png',
+      // imageSource2:'img/references/Sutter2.png',
+      // imageSource3: 'img/references/Sutter3.png',
+    },
+    {
+      appName: '',
+      companyDescription: '',
+      situation: '',
+      challenges: '',
+      solutions: '',
+      imageSources: [],
+    },
+    {
+      appName: '',
+      companyDescription: '',
+      situation: '',
+      challenges: '',
+      solutions: '',
+      imageSources: [],
+    },
+  ]
 </script>
 
 <!--<div class="relative pt-8 md:pb-10 px-4 sm:px-6 lg:pt-16 lg:pb-28 lg:px-8" id="projects">-->
@@ -207,6 +255,17 @@
     challenges={project.challenges}
     solutions={project.solutions}
     imageSource={project.imageSource}
+  />
+{/each}
+
+{#each finishedProjectMobile as mobileProject}
+  <FinishedProjectMobile
+    appName={mobileProject.appName}
+    companyDescription={mobileProject.companyDescription}
+    situation={mobileProject.situation}
+    challenges={mobileProject.challenges}
+    solutions={mobileProject.solutions}
+    imageSources={mobileProject.imageSources}
   />
 {/each}
 

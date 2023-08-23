@@ -11,6 +11,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "embla-carousel-auto-height": "^8.0.0-rc12",
+    "embla-carousel-svelte": "^8.0.0-rc12",
     "plyr": "^3.6.4"
   },
   "devDependencies": {
