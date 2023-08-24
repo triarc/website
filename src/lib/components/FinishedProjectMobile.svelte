@@ -142,36 +142,49 @@
     overflow: hidden;
   }
   .embla__container {
-    display: flex;
+      display: flex;
+      will-change: transform;
   }
   .embla__slide {
-    flex: 0 0 100%;
-    position: relative;
-    margin-left: 13px;
-    margin-right: 13px;
+      min-width: 0;
+      max-width: 80vh;
+      flex: 0 0 auto;
+      max-height: 80vh;
+      position: relative;
+      margin-left: 2.5vh;
+      margin-right: 2.5vh;
   }
   /* Phone sideways or Tablet */
   @media (min-width: 400px) {
     .embla__slide {
-      flex: 0 0 50%;
-      margin-left: 13px;
-      margin-right: 13px;
-      position: relative;
+        min-width: 0;
+        max-width: 80vh;
+        flex: 0 0 auto;
+        max-height: 80vh;
+        margin-left: 2.5vh;
+        margin-right: 2.5vh;
+        position: relative;
     }
   }
   /* Desktop */
   @media (min-width: 992px) {
     .embla__slide {
-      flex: 0 0 40%;
-      margin-left: 13px;
-      margin-right: 13px;
-      position: relative;
+        min-width: 0;
+        max-width: 80vh;
+        flex: 0 0 auto;
+        max-height: 80vh;
+        margin-left: 2.5vh;
+        margin-right: 2.5vh;
+        position: relative;
     }
   }
   .embla__slide__inner {
+      display:flex;
+      align-items: center;
+      justify-content: center;
   }
   .embla__slide__img {
-    max-height: 80vh;
+      max-height: 80vh;
   }
   .embla__button {
     background-color: transparent;
@@ -188,7 +201,7 @@
     padding: 0;
   }
   .embla__button__svg__next {
-    fill: #1bcacd;
+    fill: #009534;
     opacity: 0.5;
     width: 3.5rem;
     height: 3.5rem;
@@ -197,7 +210,7 @@
   }
 
   .embla__button__svg__prev {
-    fill: #1bcacd;
+    fill: #009534;
     opacity: 0.5;
     width: 3.5rem;
     height: 3.5rem;
