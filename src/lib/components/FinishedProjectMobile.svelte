@@ -171,7 +171,7 @@
   .embla__slide__inner {
   }
   .embla__slide__img {
-    max-height: 800px;
+    max-height: 80vh;
   }
   .embla__button {
     background-color: transparent;
