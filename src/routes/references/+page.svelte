@@ -3,7 +3,7 @@
   import References from '$lib/index/References.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
+  import type {BlockContent} from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
   import dave from '../../../static/team/dave.jpg?width=500&format=webp;png&metadata'
 

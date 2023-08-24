@@ -24,6 +24,7 @@
         ' kann das erworbene Wissen mit einem Lernspiel getestet und vertieft werden. Probier es aus und lass' +
         ' dich begeistern!',
       imageSource: 'img/references/tanne-app.png',
+      // id: 'porta'
     },
     {
       appName: 'Ortho Client',
@@ -41,6 +42,7 @@
         ' zugeordnet werden. So wurden u.a. die Durchlaufzeiten bei der Leistungsverrechnung wesentlich verkürzt und' +
         'der Aufwand in Backoffice und Administration reduziert.',
       imageSource: 'img/references/wunder-app.png',
+      // id: 'ortho-client'
     },
     {
       appName: 'myWalo',
@@ -58,6 +60,7 @@
         'BauBit, Sharepoint, DMS, Fleetmanagment. Funktionen: nach Anlagen suchen und finden. Indexierung. Dokumente, Bedienungsanleitungen in div. Sprachen, ' +
         'Maschinenstunden etc. verfügbar. Baustellen können direkt eröffnet werden und der Mitarbeiter kann persönliche HR-Daten abrufen.',
       imageSource: 'img/references/walo-app.png',
+      // id: 'myWalo'
     },
     {
       appName: 'Riwaxique',
@@ -74,6 +77,7 @@
         ' ebenfalls auf der jeweiligen Arbeitsroute befinden. Ausserdem können Bestellungen direkt via App aufgenommen und ausgelöst werden.' +
         ' Integriertes Bestellwesen und Produktekatalog. Alle benötigten Kundendaten (CRM) sind ebenfalls jederzeit abrufbar.',
       imageSource: 'img/references/Riwaxique.png',
+      // id: 'riwaxique'
     },
     {
       appName: 'Vademecum',
@@ -86,6 +90,7 @@
         ' Eltern (oder anderen Bezugspersonen) im Bereich der frühen Diagnostik oder Entwicklungsbegleitung bis zu' +
         ' einem Entwicklungsalter von vier Jahren.',
       imageSource: 'img/references/Vademecum.png',
+      // id: 'vademecum'
     },
     {
       appName: 'CondAct',
@@ -101,6 +106,7 @@
         ' Entwicklungsprozess immer wieder eine Herausforderung ist.',
       solutions: '???',
       imageSource: 'img/references/CondAct.png',
+      //id: 'condAct'
     },
     {
       appName: 'Ortho-Order',
@@ -121,6 +127,7 @@
         ' Details, wie bei welchem Lieferanten bestellt werden soll, kümmern zu müssen. Vom digital koordinierten Einkauf' +
         ' bis zur Benachrichtigung auf Grund von Wareneingängen regelt OrthoOrder alle Details selbst.',
       imageSource: 'img/references/OrthoOrder.png',
+      //id: 'ortho-order'
     },
     {
       appName: 'Fastspace',
@@ -141,6 +148,7 @@
         ' Neues Businessmodell / mehr Umsatz zu generieren. Zusätzlicher Services der Verwaltung' +
         ' 24/7 Kommunikationsboard für beide Parteien. Mieterprofil mit allen relevanten Daten hinterlegt und zugänglich bei Bedarf',
       imageSource: 'img/references/Fastspace.png',
+      //id: 'fastspace'
     },
     {
       appName: 'CAL',
@@ -158,6 +166,7 @@
         ' aus nach TomTom. Eine Echtzeit-Routenberechnung wurde ebenfalls integriert, dies hilft der Dispo die' +
         ' Planung effizienter zu gestalten.',
       imageSource: 'img/references/CAL.png',
+      //id: 'cal'
     },
     {
       appName: 'M3 Express',
@@ -178,6 +187,7 @@
         'Kundenseite: Digital und in Echtzeit alle Information zur Bestellung überwachen können und alle Informationen zugänglich zu haben' +
         'M3 Express vereinfacht den digitalen Zugang zu Schüttgut, Transport und Mulden auch für kleine Unternehmungen.',
       imageSource: 'img/references/M3Express.png',
+      //id: 'm3express'
     },
     // {
     //    appName:'',
@@ -214,26 +224,29 @@
         'img/references/Sutter2.png',
         'img/references/Sutter3.png',
       ],
+      // id: 'sutter',
       // imageSource1:'img/references/Sutter1.png',
       // imageSource2:'img/references/Sutter2.png',
       // imageSource3: 'img/references/Sutter3.png',
     },
-    {
-      appName: '',
-      companyDescription: '',
-      situation: '',
-      challenges: '',
-      solutions: '',
-      imageSources: [],
-    },
-    {
-      appName: '',
-      companyDescription: '',
-      situation: '',
-      challenges: '',
-      solutions: '',
-      imageSources: [],
-    },
+    // {
+    //   appName: '',
+    //   companyDescription: '',
+    //   situation: '',
+    //   challenges: '',
+    //   solutions: '',
+    //   imageSources: [],
+    //   id: '',
+    // },
+    // {
+    //   appName: '',
+    //   companyDescription: '',
+    //   situation: '',
+    //   challenges: '',
+    //   solutions: '',
+    //   imageSources: [],
+    //   id: '',
+    // },
   ]
 </script>
 
