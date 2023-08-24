@@ -44,24 +44,24 @@
       imageSource: 'img/references/wunder-app.png',
       // id: 'ortho-client'
     },
-    {
-      appName: 'myWalo',
-      companyDescription:
-        'Verankert in der Schweiz und international tätig wird WALO als Familienunternehmen in 4. und 5. Generation geführt. ' +
-        'Seit über 100 Jahren setzt WALO auf die Verbindung von Beständigkeit und Innovation.',
-      situation:
-        'Die Walo Baumaschinen waren geografisch irgendwo verteilt. Keine Übersicht der genauen GPS-Daten, wo sich was befindet. Dokumentationen in Anlagen' +
-        ' immer wieder verschwunden. Zertifikate bei Baustellenprüfung nicht zur Hand. Mühsamer Prozess bei einer Baustellen Eröffnung/Etappe/Gewerk ' +
-        'via ABACUS. Die Anlagen stehen herum, werden nicht sachgemäss verwendet, zu lange auch ohne Service.',
-      challenges:
-        'Daten aus 4 Umsystemen dort verfügbar machen – wo sie gebraucht werden. Datenqualität bei Walo war ebenfalls ein Thema.',
-      solutions:
-        'Die Applikation kann dank unserem Datahub verschiedene Prozesse digital im Feld anbieten (Daten aus den vier Umsystemen) ABACUS, Inventar/Verwaltung, ' +
-        'BauBit, Sharepoint, DMS, Fleetmanagment. Funktionen: nach Anlagen suchen und finden. Indexierung. Dokumente, Bedienungsanleitungen in div. Sprachen, ' +
-        'Maschinenstunden etc. verfügbar. Baustellen können direkt eröffnet werden und der Mitarbeiter kann persönliche HR-Daten abrufen.',
-      imageSource: 'img/references/walo-app.png',
-      // id: 'myWalo'
-    },
+    // {
+    //   appName: 'myWalo',
+    //   companyDescription:
+    //     'Verankert in der Schweiz und international tätig wird WALO als Familienunternehmen in 4. und 5. Generation geführt. ' +
+    //     'Seit über 100 Jahren setzt WALO auf die Verbindung von Beständigkeit und Innovation.',
+    //   situation:
+    //     'Die Walo Baumaschinen waren geografisch irgendwo verteilt. Keine Übersicht der genauen GPS-Daten, wo sich was befindet. Dokumentationen in Anlagen' +
+    //     ' immer wieder verschwunden. Zertifikate bei Baustellenprüfung nicht zur Hand. Mühsamer Prozess bei einer Baustellen Eröffnung/Etappe/Gewerk ' +
+    //     'via ABACUS. Die Anlagen stehen herum, werden nicht sachgemäss verwendet, zu lange auch ohne Service.',
+    //   challenges:
+    //     'Daten aus 4 Umsystemen dort verfügbar machen – wo sie gebraucht werden. Datenqualität bei Walo war ebenfalls ein Thema.',
+    //   solutions:
+    //     'Die Applikation kann dank unserem Datahub verschiedene Prozesse digital im Feld anbieten (Daten aus den vier Umsystemen) ABACUS, Inventar/Verwaltung, ' +
+    //     'BauBit, Sharepoint, DMS, Fleetmanagment. Funktionen: nach Anlagen suchen und finden. Indexierung. Dokumente, Bedienungsanleitungen in div. Sprachen, ' +
+    //     'Maschinenstunden etc. verfügbar. Baustellen können direkt eröffnet werden und der Mitarbeiter kann persönliche HR-Daten abrufen.',
+    //   imageSource: 'img/references/walo-app.png',
+    // id: 'myWalo'
+    // },
     {
       appName: 'Riwaxique',
       companyDescription:
@@ -189,14 +189,30 @@
       imageSource: 'img/references/M3Express.png',
       //id: 'm3express'
     },
-    // {
-    //    appName:'',
-    //    companyDescription: '',
-    //    situation: '',
-    //    challenges:'',
-    //    solutions:'',
-    //    imageSource:'',
-    //  },
+    {
+      appName: 'Verba',
+      companyDescription:
+        'Die Schweizerische Vereinigung Morbus Bechterew (SVMB) wurde 1978 von Betroffenen gegründet und zählt' +
+        ' heute über 4300 Mitglieder. Sie berät, unterstützt und vernetzt Menschen mit der chronisch-rheumatischen' +
+        ' Erkrankung Morbus Bechterew',
+      situation: '???',
+      challenges: '???',
+      solutions:
+        'Verba verwaltet die Dossiers der Mitglieder und begleitet sie im Therapieprozess. Von der digitalen' +
+        ' Krankenkassenrechnung bis hin zur vollständigen Integration ins SAGE. Die Vereinslösung in der Schweizer' +
+        ' Cloud, damit sich das Bechterew-Team auf die wichtigen Dinge im Alltag fokussieren kann.',
+      imageSource: 'img/references/svmb.png',
+    },
+    {
+      appName: 'Chauffeur App',
+      companyDescription:
+        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG ' +
+        'seit Jahren als führenden Schweizer Hersteller und Anbieter von Spezialitäten für die Fahrzeugpflege aus.',
+      situation: '???',
+      challenges: '???',
+      solutions: '???',
+      imageSource: 'img/references/Chauffeur.png',
+    },
   ]
   let finishedProjectMobile = [
     {
@@ -224,29 +240,77 @@
         'img/references/Sutter2.png',
         'img/references/Sutter3.png',
       ],
-      // id: 'sutter',
-      // imageSource1:'img/references/Sutter1.png',
-      // imageSource2:'img/references/Sutter2.png',
-      // imageSource3: 'img/references/Sutter3.png',
     },
-    // {
-    //   appName: '',
-    //   companyDescription: '',
-    //   situation: '',
-    //   challenges: '',
-    //   solutions: '',
-    //   imageSources: [],
-    //   id: '',
-    // },
-    // {
-    //   appName: '',
-    //   companyDescription: '',
-    //   situation: '',
-    //   challenges: '',
-    //   solutions: '',
-    //   imageSources: [],
-    //   id: '',
-    // },
+    {
+      appName: 'My Business',
+      companyDescription:
+        'Planen, Bauen, Einrichten - das Portfolio der GLB ist vielfältig.' +
+        ' Mit Standorten in den Kantonen Bern und Zürich und den rund 900 Mitarbeitenden ist die GLB seit über' +
+        ' 50 Jahren die kompetente Partnerin für Lebensräume.\n',
+      situation:
+        'Ob Arbeitszeit, Spesen, Absenzen oder Material: Bis vor kurzem erfassten alle Berufsgruppen innerhalb der GLB Gruppe' +
+        ' ihre Daten auf Papierrapporten. Die Kontrolle der Rapportierungen erfolgte zunächst durch den Auftraggeber oder den' +
+        ' zuständigen Vorgesetzen und anschliessend mussten die Daten in aufwändiger Handarbeit vom Büro erfasst werden. Das galt es zu ändern' +
+        ' und nach einer zukunftsfähigen Lösung zu suchen.',
+      challenges:
+        'Die Ansprüche waren umfangreich. Die Vereinfachung des bis anhin umständlichen Prozesses und die intuitive sowie effiziente Bedienung bei' +
+        ' möglichst minimalem Schulungsaufwand, zählten zu den zentralen Anforderungen. Nur so konnte die Lösung' +
+        ' auch zu einem positiven Nutzererlebnis führen, schliesslich gab es Bedenken bezüglich der' +
+        ' Akzeptanz einer digitalen Lösung seitens der Mitarbeitenden.',
+      solutions:
+        'Die interne Kommunikationsplattform «MyBusiness» mit der integrierten digitalen Zeiterfassung «digiZeit» ermöglicht für über 900 Mitarbeitende,' +
+        ' von den Bauarbeitenden über die Schreiner bis hin zu den Energieberatern, eine einfache und bedienerfreundliche Rapportierung,' +
+        ' reduziert damit erheblich den Administrativaufwands und schafft zeitnah aktuelle Projektdaten',
+      imageSources: [
+        'img/references/MyBusiness1.png',
+        'img/references/MyBusiness2.png',
+        'img/references/MyBusiness3.png',
+        'img/references/MyBusiness1.png',
+        'img/references/MyBusiness2.png',
+        'img/references/MyBusiness3.png',
+      ],
+    },
+    {
+      appName: 'Bienvenu',
+      companyDescription:
+        'Die Stiftung IdéeSport engagiert sich im Bereich der Kinder- und Jugendförderung.' +
+        ' Sie nutzt Sport als Mittel der Suchtprävention, der Gesundheitsförderung und der gesellschaftlichen Integration.',
+      situation: '???',
+      challenges: '???',
+      solutions: '???',
+      imageSources: [
+        'img/references/Bienvenue1.png',
+        'img/references/Bienvenue2.png',
+        'img/references/Bienvenue3.png',
+        'img/references/Bienvenue1.png',
+        'img/references/Bienvenue2.png',
+        'img/references/Bienvenue3.png',
+      ],
+    },
+    {
+      appName: 'myWalo',
+      companyDescription:
+        'Verankert in der Schweiz und international tätig wird WALO als Familienunternehmen in 4. und 5. Generation geführt. ' +
+        'Seit über 100 Jahren setzt WALO auf die Verbindung von Beständigkeit und Innovation.',
+      situation:
+        'Die Walo Baumaschinen waren geografisch irgendwo verteilt. Keine Übersicht der genauen GPS-Daten, wo sich was befindet. Dokumentationen in Anlagen' +
+        ' immer wieder verschwunden. Zertifikate bei Baustellenprüfung nicht zur Hand. Mühsamer Prozess bei einer Baustellen Eröffnung/Etappe/Gewerk ' +
+        'via ABACUS. Die Anlagen stehen herum, werden nicht sachgemäss verwendet, zu lange auch ohne Service.',
+      challenges:
+        'Daten aus 4 Umsystemen dort verfügbar machen – wo sie gebraucht werden. Datenqualität bei Walo war ebenfalls ein Thema.',
+      solutions:
+        'Die Applikation kann dank unserem Datahub verschiedene Prozesse digital im Feld anbieten (Daten aus den vier Umsystemen) ABACUS, Inventar/Verwaltung, ' +
+        'BauBit, Sharepoint, DMS, Fleetmanagment. Funktionen: nach Anlagen suchen und finden. Indexierung. Dokumente, Bedienungsanleitungen in div. Sprachen, ' +
+        'Maschinenstunden etc. verfügbar. Baustellen können direkt eröffnet werden und der Mitarbeiter kann persönliche HR-Daten abrufen.',
+      imageSources: [
+        'img/references/myWalo1.png',
+        'img/references/myWalo2.png',
+        'img/references/myWalo3.png',
+        'img/references/myWalo1.png',
+        'img/references/myWalo2.png',
+        'img/references/myWalo3.png',
+      ],
+    },
   ]
 </script>
 

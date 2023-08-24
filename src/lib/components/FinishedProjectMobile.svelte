@@ -13,101 +13,12 @@
   let emblaCarousel: EmblaCarouselType
   let options = { loop: true }
   //const autoHeightOptions = { destroyHeight: 'auto' }
- // let plugins = [AutoHeight(autoHeightOptions)]
+  // let plugins = [AutoHeight(autoHeightOptions)]
   const onInit = (event) => {
     emblaCarousel = event.detail
     console.log(emblaCarousel.slideNodes()) // Access API
   }
 </script>
-
-<style>
-    .embla {
-        position: relative;
-    }
-    .embla__viewport {
-        overflow: hidden;
-    }
-    .embla__container {
-        display: flex;
-    }
-    .embla__slide {
-        flex: 0 0 100%;
-        position: relative;
-        margin-left: 13px;
-        margin-right: 13px;
-    }
-    /* Phone sideways or Tablet */
-    @media (min-width: 400px) {
-        .embla__slide {
-            flex: 0 0 50%;
-            margin-left: 13px;
-            margin-right: 13px;
-            position: relative;
-        }
-    }
-    /* Desktop */
-    @media (min-width: 992px) {
-        .embla__slide {
-            flex: 0 0 40%;
-            margin-left: 13px;
-            margin-right: 13px;
-            position: relative;
-        }
-    }
-    .embla__slide__inner {
-    }
-    .embla__slide__img {
-        max-height: 800px;
-    }
-    .embla__button {
-        background-color: transparent;
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        transform: translateY(-50%);
-        border: 0;
-        width: 5rem;
-        height: 5rem;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        padding: 0;
-    }
-    .embla__button__svg__next {
-        fill: #1bcacd;
-        opacity: 0.5;
-        width: 3.5rem;
-        height: 3.5rem;
-        position: absolute;
-        right: 0;
-    }
-    .embla__button__svg__prev {
-        fill: #1bcacd;
-        opacity: 0.5;
-        width: 3.5rem;
-        height: 3.5rem;
-        position: absolute;
-        left: 0;
-    }
-    .embla__button--prev {
-        left: -2rem;
-    }
-    .embla__button--next {
-        right: -2rem;
-    }
-    /*.embla__dots {*/
-    /*    position: absolute;*/
-    /*    margin-top: 1rem;*/
-    /*    display: flex;*/
-    /*    list-style: none;*/
-    /*    padding-left: 0;*/
-    /*    justify-content: center;*/
-    /*    left: 0;*/
-    /*    right: 0;*/
-    /*    top: 100%;*/
-    /*}*/
-</style>
-
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10 ">
   <div class="mx-auto max-w-5xl px-6 lg:px-8">
@@ -119,12 +30,12 @@
   <div class="relative overflow-hidden pt-8">
     <div class="mx-auto max-w-5xl px-6 lg:px-8">
       <div class="embla">
-        <div class="embla__viewport" use:emblaCarouselSvelte={{options }} on:emblaInit={onInit}>
+        <div class="embla__viewport" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
           <div class="embla__container ">
             {#each imageSources as imageSource}
               <div class="embla__slide">
                 <div class="embla__slide__inner">
-                  <img class="embla__slide__img" src={imageSource} alt='Screenshot of '{appName}  />
+                  <img class="embla__slide__img" src={imageSource} alt="Screenshot of " {appName} />
                 </div>
               </div>
             {/each}
@@ -223,4 +134,106 @@
   </div>
 </div>
 
+<style>
+  .embla {
+    position: relative;
+  }
+  .embla__viewport {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 100%;
+    position: relative;
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+  /* Phone sideways or Tablet */
+  @media (min-width: 400px) {
+    .embla__slide {
+      flex: 0 0 50%;
+      margin-left: 13px;
+      margin-right: 13px;
+      position: relative;
+    }
+  }
+  /* Desktop */
+  @media (min-width: 992px) {
+    .embla__slide {
+      flex: 0 0 40%;
+      margin-left: 13px;
+      margin-right: 13px;
+      position: relative;
+    }
+  }
+  .embla__slide__inner {
+  }
+  .embla__slide__img {
+    max-height: 800px;
+  }
+  .embla__button {
+    background-color: transparent;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    width: 5rem;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 0;
+  }
+  .embla__button__svg__next {
+    fill: #1bcacd;
+    opacity: 0.5;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    right: 0;
+  }
 
+  .embla__button__svg__prev {
+    fill: #1bcacd;
+    opacity: 0.5;
+    width: 3.5rem;
+    height: 3.5rem;
+    position: absolute;
+    left: 0;
+  }
+
+  .embla__button--prev {
+    left: -1.5rem;
+  }
+  /* Desktop */
+  @media (min-width: 992px) {
+    .embla__button--prev {
+      left: -2rem;
+    }
+  }
+
+  .embla__button--next {
+    right: -1.5rem;
+  }
+
+  /* Desktop */
+  @media (min-width: 992px) {
+    .embla__button--next {
+      right: -2rem;
+    }
+  }
+  /*.embla__dots {*/
+  /*    position: absolute;*/
+  /*    margin-top: 1rem;*/
+  /*    display: flex;*/
+  /*    list-style: none;*/
+  /*    padding-left: 0;*/
+  /*    justify-content: center;*/
+  /*    left: 0;*/
+  /*    right: 0;*/
+  /*    top: 100%;*/
+  /*}*/
+</style>
