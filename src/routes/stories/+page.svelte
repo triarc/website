@@ -114,7 +114,7 @@
   }
 </script>
 
-<svelte:window bind:scrollY={scrollbarYPos} bind:outerHeight={windowHeight} on:scroll={scrollCheck} />
+<svelte:window bind:scrollY={scrollbarYPos} on:scroll={scrollCheck} />
 
 
 <svelte:head>
