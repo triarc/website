@@ -1,60 +1,9 @@
-export interface GhostPost {
-  id: string
-  title: string
-  html: string
-  feature_image: string
-  feature_image_alt: string | null
-  excerpt: string
-  featured: boolean
-  published_at: string
-  url: string
-  slug: string
-  primary_author: {
-    name: string
-  }
-  tags: [
-    {
-      id: string
-      slug: string
-      name: string
-    }
-  ]
-}
+import type { PageLoad } from './$types'
+import { error } from '@sveltejs/kit'
+import type { GhostPost } from './utils'
+import { getSizes, getSource, getSourceSet } from './utils'
 
-const imageRegex = /^https:\/\/(?<domain>.+)\/content\/images\/(?<path>.+)$/
-function getSizeUrl(match: any, size: string): string {
-  return `https://${match.groups.domain}/content/images/size/w${size}/${match.groups.path} ${size}w`
-}
-function getSourceSet(url: string): string {
-  if (!url) {
-    return ''
-  }
-  const match = url.match(imageRegex)
-  if (!match || !match.groups) {
-    return url
-  }
-  return `${getSizeUrl(match, '300')}, ${getSizeUrl(match, '600')}, ${getSizeUrl(match, '1000')}, ${getSizeUrl(
-    match,
-    '2000'
-  )}`
-}
-
-function getSource(url: string): string {
-  if (!url) {
-    return ''
-  }
-  const match = url.match(imageRegex)
-  if (!match || !match.groups) {
-    return url
-  }
-  return `https://${match.groups.domain}/content/images/size/w600/${match.groups.path}`
-}
-
-function getSizes(url: string): string {
-  return '(max-width: 1000px) 400px, 800px'
-}
-
-export function load({ params, url }) {
+export const load: PageLoad = ({ params, url }) => {
   const tagSlug = url.searchParams.get('tag') ?? ''
   const postFilter = tagSlug ? `&filter=tag:${tagSlug}` : ''
   const tags = fetch(
@@ -68,7 +17,7 @@ export function load({ params, url }) {
     const tagData = await tagResponse.json()
     const postData = await postResponse.json()
     const posts = postData.posts
-      .filter((post) => !!post.feature_image)
+      .filter((post: GhostPost) => !!post.feature_image)
       .map((post: GhostPost) => {
         const publishDate = new Date(post.published_at)
         return {
@@ -90,7 +39,7 @@ export function load({ params, url }) {
         }
       })
 
-    posts.sort((first, second) => {
+    posts.sort((first: { featured: any; published_at: number }, second: { featured: any; published_at: number }) => {
       if (first.featured && !second.featured) {
         return -1
       } else if (second.featured && !first.featured) {
@@ -104,8 +53,8 @@ export function load({ params, url }) {
       posts,
       selectedTag: tagSlug,
       tags: tagData.tags
-        .filter((t) => t.count.posts > 0)
-        .map((tag) => ({
+        .filter((t: any) => t.count.posts > 0)
+        .map((tag: any) => ({
           name: tag.name,
           slug: tag.slug,
           count: tag.count,
