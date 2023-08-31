@@ -4,6 +4,7 @@
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import pascal from '../../../static/team/pascal.jpg?width=500&format=webp;png&metadata'
+  import heroImage from '/src/lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   let contents: BlockContent[] = [
     {
@@ -65,6 +66,9 @@
 <Hero
   title="Innovation Lab"
   content="Innovationen sind der Schlüssel zu Wachstum und Erfolg. In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). "
+  imageSrc="InnovationLab"
+  imageAlt="Triarc InnovationLab Header"
+  image={heroImage}
 />
 
 <div class="bg-white min-h-screen">

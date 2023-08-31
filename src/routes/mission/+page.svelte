@@ -8,6 +8,7 @@
   import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
   import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
   import bammbamm from '../../../static/team/bambam.jpg?width=500&format=webp;png&metadata'
+  import heroImage from '/src/lib/assets/hero/Mission.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   let contents: BlockContent[] = [
     {
@@ -161,6 +162,9 @@
   <Hero
     title="together we succeed"
     content="Für Ihren Fortschritt. Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie."
+    imageSrc="Mission"
+    imageAlt="Triarc Mission Header"
+    image={heroImage}
   />
 
   {#each contents as content}

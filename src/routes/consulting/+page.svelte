@@ -4,6 +4,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
+  import heroImage from '/src/lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   let contents: BlockContent[] = [
     // {
@@ -93,7 +94,13 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Beratung" content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken." />
+  <Hero
+    title="Beratung"
+    content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken."
+    imageSrc="Beratung"
+    imageAlt="Triarc Consulting Header"
+    image={heroImage}
+  />
 
   {#each contents as content}
     <Block bind:content />

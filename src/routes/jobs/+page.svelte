@@ -5,6 +5,7 @@
   import JobIntro from './job-intro.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
+  import heroImage from '/src/lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   function serializeSchema(jobPosting) {
     return (
@@ -198,6 +199,9 @@
 <Hero
   title="Jobs"
   content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte."
+  imageSrc="Jobs"
+  imageAlt="Triarc Jobs Header"
+  image={heroImage}
 />
 <JobIntro />
 

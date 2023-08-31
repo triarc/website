@@ -4,6 +4,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
   import Footer from '$lib/components/Footer.svelte'
+  import heroImage from '/src/lib/assets/hero/CustomSoftware.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   let contents: BlockContent[] = [
     {
@@ -116,6 +117,9 @@
   <Hero
     title="Custom Software"
     content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind."
+    imageSrc="CustomSoftware"
+    imageAlt="Triarc Custom Sofware Header"
+    image={heroImage}
   />
 
   {#each contents as content}

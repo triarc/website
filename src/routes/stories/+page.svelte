@@ -2,7 +2,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Container from '$lib/components/Container.svelte'
   import Footer from '$lib/components/Footer.svelte'
-
+  import heroImage from '/src/lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata'
   export let data
 </script>
 
@@ -10,7 +10,13 @@
   <title>Stories - triarc-labs</title>
 </svelte:head>
 
-<Hero title="Stories" content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!" />
+<Hero
+  title="Stories"
+  content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!"
+  imageSrc="Stories"
+  imageAlt="Triarc Stories Header"
+  image={heroImage}
+/>
 
 <div class="bg-gray-100 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">
   <div class="bg-white">

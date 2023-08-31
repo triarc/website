@@ -1,6 +1,7 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import Container from '$lib/components/Container.svelte'
+  import heroImage from '/src/lib/assets/hero/Contact.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   let firstName = '',
     lastName = '',
@@ -35,7 +36,14 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">
-  <Hero title="Kontaktinfos" class="flex-shrink-0" content="" />
+  <Hero
+    title="Kontaktinfos"
+    class="flex-shrink-0"
+    content=""
+    imageSrc="Contact"
+    imageAlt="Triarc Contact Header"
+    image={heroImage}
+  />
 
   <div class="bg-white flex-shrink-0">
     <Container>
