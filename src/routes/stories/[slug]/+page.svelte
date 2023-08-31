@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Footer from '$lib/components/Footer.svelte';
-  import type { PageData } from './$types';
-  export let data: PageData;
+  import Footer from '$lib/components/Footer.svelte'
+  import type { PageData } from './$types'
+  export let data: PageData
 </script>
 
 <div class="bg-white min-h-screen px-12 md:px-24 py-16 md:py-24 w-full">

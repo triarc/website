@@ -53,3 +53,28 @@ export function getSource(url: string): string {
 export function getSizes(url: string): string {
   return '(max-width: 1000px) 400px, 800px'
 }
+
+export function mapPosts(postData: { posts: GhostPost[] }) {
+  return postData.posts
+    .filter((post: GhostPost) => !!post.feature_image)
+    .map((post: GhostPost) => {
+      const publishDate = new Date(post.published_at)
+      return {
+        slug: post.slug,
+        title: post.title,
+        content: post.excerpt.length === 500 ? post.excerpt + '...' : post.excerpt,
+        image: {
+          srcset: getSourceSet(post.feature_image),
+          sizes: getSizes(post.feature_image),
+          src: getSource(post.feature_image),
+          alt: post.feature_image_alt ?? 'post feature image',
+        },
+        link: { href: post.url, text: 'Weiter lesen', target: '_blank' },
+        featured: post.featured,
+        published_at: publishDate,
+        footer: `${publishDate.getDate().toString().padStart(2, '0')}.${(publishDate.getMonth() + 1)
+          .toString()
+          .padStart(2, '0')}.${publishDate.getFullYear()}`,
+      }
+    })
+}
