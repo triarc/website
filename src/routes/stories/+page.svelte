@@ -52,9 +52,9 @@
   //}
   async function loadMoreStories() {
     const tagSlug = $page.url.searchParams.get('tag') ?? ''
-    const postFilter = tagSlug ? `&filter=tag:${tagSlug}` : ''
+    const postFilter = tagSlug ? `%2Btag:${tagSlug}` : ''
     const postResponse = await fetch(
-      `https://blog.triarc-labs.com/ghost/api/content/posts?include=tags,authors${postFilter}&key=93ed4aea5970c22ed269d4ec35&limit=25&page=${pageNumber}&filter=featured:false&order=published_at%20desc`
+      `https://blog.triarc-labs.com/ghost/api/content/posts?include=tags,authors&filter=featured:false${postFilter}&key=93ed4aea5970c22ed269d4ec35&limit=25&page=${pageNumber}&order=published_at%20desc`
     )
 
     const postData = await postResponse.json()
@@ -191,7 +191,7 @@
   .active .badge {
     @apply bg-white bg-opacity-20;
   }
-  .item {
-    transition: all ease 0.3s;
-  }
+  /*.item {*/
+  /*  transition: all ease 0.3s;*/
+  /*}*/
 </style>
