@@ -2,6 +2,10 @@
   import Hero from '$lib/components/Hero.svelte'
   import Container from '$lib/components/Container.svelte'
   import heroImage from '/src/lib/assets/hero/Contact.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import iris from '/src/team/iris.jpg?width=500&format=webp;png&metadata'
+  import serge from '/src/team/serge.jpg?width=500&format=webp;png&metadata'
+  import dave from '/src/team/dave.jpg?width=500&format=webp;png&metadata'
+  import Picture from '$lib/index/Picture.svelte'
 
   let firstName = '',
     lastName = '',
@@ -50,9 +54,7 @@
       <div class="py-16">
         <div>
           <div class="mt-3">
-            <p class="text-lg text-gray-500">
-              Für Fragen zu uns oder sonstiges was du auf dem Herzen hast, erreichst du uns hier:
-            </p>
+            <p class="text-lg text-gray-500">Sprich mit uns über deine Ideen:</p>
           </div>
         </div>
         <div class="grid grid-cols-1 gap-y-6 gap-x-8 mt-9 md:grid-cols-2">
@@ -92,15 +94,82 @@
               >
             </div>
             <div class="ml-3 text-base text-gray-500">
-              <a href="mailto:development@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline"
-                >development@triarc-labs.com</a
-              >
+              <div>
+                <a href="mailto:development@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline"
+                  >development@triarc-labs.com</a
+                >
+                <br />
+                <br />
+              </div>
+              <div class="flex mb-2">
+                <div class="inline-block">
+                  <Picture
+                    height="280"
+                    width="373"
+                    alt="Serge Müller Photo"
+                    images={serge}
+                    cssClass="aspect-[3/4] w-12 drop-shadow filter rounded-md object-cover"
+                  />
+                </div>
+                <div class="flex flex-col justify-center ml-3">
+                  <div>
+                  <p>Serge Müller</p>
+                </div>
+                  <div>
+                  <a href="mailto:serge@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline "
+                    >serge@triarc-labs.com</a
+                  >
+                  </div>
+                </div>
+              </div>
+              <div class="flex mb-2">
+                <div class="inline-block">
+                  <Picture
+                    height="280"
+                    width="373"
+                    alt="Iris Zenegaglia Photo"
+                    images={iris}
+                    cssClass="aspect-[3/4] w-12 drop-shadow filter rounded-md object-cover"
+                  />
+                </div>
+                <div class="flex flex-col justify-center ml-3 ">
+                 <div>
+                  <p>Iris Zenegaglia</p>
+                 </div>
+                  <div>
+                  <a href="mailto:iris@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline "
+                    >iris@triarc-labs.com</a
+                  >
+                    </div>
+                </div>
+              </div>
+              <div class="flex mb-2">
+                <div class="inline-block ">
+                  <Picture
+                    height="280"
+                    width="373"
+                    alt="Dave Haug Photo"
+                    images={dave}
+                    cssClass="aspect-[3/4] w-12 drop-shadow filter rounded-md object-cover"
+                  />
+                </div>
+                <div class="flex flex-col justify-center ml-3 ">
+                  <div>
+                  <p>Dave Haug</p>
+                  </div>
+                  <div>
+                  <a href="mailto:dave@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline "
+                    >dave@triarc-labs.com</a
+                  >
+                    </div>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="flex">
-            <div class="flex-shrink-0 items-center flex justify-center w-6">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
+            <div class="flex-shrink-0 items-start flex justify-center w-6 ">
+              <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
                 ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
                   d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
                 /></svg
@@ -138,7 +207,9 @@
     <Container>
       <div class="py-16">
         <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Kontaktformular</h2>
-        <h3 class="text-lg mt-3 font-medium text-gray-500">Interessiert? Schreib uns eine Nachricht</h3>
+        <h3 class="text-lg mt-3 font-medium text-gray-500">
+          Interessiert? Trete in Kontakt, damit wir gemeinsam Lösungen schaffen
+        </h3>
         <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
           <div>
             <label for="first-name" class="block text-sm font-medium text-gray-900">Vorname</label>

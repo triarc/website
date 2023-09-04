@@ -15,6 +15,7 @@
   import david from '/src/team/david.jpg?width=500&format=webp;png&metadata'
   import bammbamm from '/src/team/bambam.jpg?width=500&format=webp;png&metadata'
   import simon from '/src/team/simon.jpg?width=500&format=webp;png&metadata'
+  import lukas from '/src/team/lukas.jpg?width=500&format=webp;png&metadata'
   import Picture from '$lib/index/Picture.svelte'
 
   let teamMember = [
@@ -91,24 +92,6 @@
       linkedIn: 'https://www.linkedin.com/in/simon-hasler-82069083/',
     },
     {
-      name: 'Simona Miljanovic',
-      job: 'UX Designerin',
-      nerdJob: 'UX Designerin',
-      images: simona,
-      special: false,
-      email: 'simona@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/simona-miljanovic-15a777143/',
-    },
-    {
-      name: 'Eduardo Lavaque',
-      job: 'Software Developer',
-      nerdJob: 'Software Developer',
-      images: eduan,
-      special: false,
-      email: 'eduan@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/greduan/',
-    },
-    {
       name: 'Michel Gabriel',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
@@ -152,6 +135,15 @@
       special: false,
       email: 'david@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/david-jahn-b32940197/',
+    },
+    {
+      name: 'Lukas Hartmann',
+      job: 'Praktikant',
+      nerdJob: 'Praktikant',
+      images: lukas,
+      special: false,
+      email: 'lukas@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
     },
     {
       name: 'Bamm Bamm',
