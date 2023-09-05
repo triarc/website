@@ -51,140 +51,189 @@
 
   <div class="bg-white flex-shrink-0">
     <Container>
-      <div class="py-16">
-        <div>
-          <div class="mt-3">
-            <p class="text-lg text-gray-500">Sprich mit uns über deine Ideen:</p>
-          </div>
-        </div>
-        <div class="grid grid-cols-1 gap-y-6 gap-x-8 mt-9 md:grid-cols-2">
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-400" viewBox="0 0 512 512"
-                ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
-                  d="M484.6 330.6C484.6 330.6 484.6 330.6 484.6 330.6l-101.8-43.66c-18.5-7.688-40.2-2.375-52.75 13.08l-33.14 40.47C244.2 311.8 200.3 267.9 171.6 215.2l40.52-33.19c15.67-12.92 20.83-34.16 12.84-52.84L181.4 27.37C172.7 7.279 150.8-3.737 129.6 1.154L35.17 23.06C14.47 27.78 0 45.9 0 67.12C0 312.4 199.6 512 444.9 512c21.23 0 39.41-14.44 44.17-35.13l21.8-94.47C515.7 361.1 504.7 339.3 484.6 330.6zM457.9 469.7c-1.375 5.969-6.844 10.31-12.98 10.31c-227.7 0-412.9-185.2-412.9-412.9c0-6.188 4.234-11.48 10.34-12.88l94.41-21.91c1-.2344 2-.3438 2.984-.3438c5.234 0 10.11 3.094 12.25 8.031l43.58 101.7C197.9 147.2 196.4 153.5 191.8 157.3L141.3 198.7C135.6 203.4 133.8 211.4 137.1 218.1c33.38 67.81 89.11 123.5 156.9 156.9c6.641 3.313 14.73 1.531 19.44-4.219l41.39-50.5c3.703-4.563 10.16-6.063 15.5-3.844l101.6 43.56c5.906 2.563 9.156 8.969 7.719 15.22L457.9 469.7z"
-                /></svg
-              >
-            </div>
-            <div class="ml-3 text-base text-gray-500">
-              <a href="tel:+41789466951" class="decoration-red-triarc underline">+41 78 946 69 51</a>
-              <p class="mt-1">Mon-Fri 09:00 - 18:00</p>
-            </div>
-          </div>
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-400" viewBox="0 0 576 512"
-                ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
-                  d="M570.6 244C577.2 249.8 577.8 259.1 571.1 266.6C566.2 273.2 556 273.8 549.4 267.1L512 234.1V432C512 476.2 476.2 512 432 512H144C99.82 512 64 476.2 64 432V234.1L26.59 267.1C19.96 273.8 9.849 273.2 4.003 266.6C-1.844 259.1-1.212 249.8 5.414 244L277.4 4.002C283.5-1.334 292.5-1.334 298.6 4.002L570.6 244zM144 480H208V320C208 302.3 222.3 288 240 288H336C353.7 288 368 302.3 368 320V480H432C458.5 480 480 458.5 480 432V206.7L288 37.34L96 206.7V432C96 458.5 117.5 480 144 480zM240 480H336V320H240V480z"
-                /></svg
-              >
-            </div>
-            <div class="ml-3 text-base text-gray-500">
-              <p>triarc laboratories ltd.</p>
-              <p>Neue Hard 14</p>
-              <p>8005 Zürich</p>
-            </div>
-          </div>
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-400" viewBox="0 0 512 512"
-                ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
-                  d="M64 96c-17.7 0-32 14.3-32 32v39.9L227.6 311.3c16.9 12.4 39.9 12.4 56.8 0L480 167.9V128c0-17.7-14.3-32-32-32H64zM32 207.6V384c0 17.7 14.3 32 32 32H448c17.7 0 32-14.3 32-32V207.6L303.3 337.1c-28.2 20.6-66.5 20.6-94.6 0L32 207.6zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
-                /></svg
-              >
-            </div>
-            <div class="ml-3 text-base text-gray-500">
-              <div>
-                <a href="mailto:development@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline"
-                  >development@triarc-labs.com</a
+      <div class="bg-white py-16 md:py-24">
+        <div class="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-5">
+          <div class="max-w-2xl xl:col-span-2">
+            <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Kontakt</h2>
+            <p class="mt-6 text-lg leading-8 text-gray-500">Sprich mit uns über deine Ideen</p>
+            <div class="grid grid-cols-1 gap-y-6 gap-x-8 mt-9">
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-400" viewBox="0 0 512 512"
+                    ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
+                      d="M484.6 330.6C484.6 330.6 484.6 330.6 484.6 330.6l-101.8-43.66c-18.5-7.688-40.2-2.375-52.75 13.08l-33.14 40.47C244.2 311.8 200.3 267.9 171.6 215.2l40.52-33.19c15.67-12.92 20.83-34.16 12.84-52.84L181.4 27.37C172.7 7.279 150.8-3.737 129.6 1.154L35.17 23.06C14.47 27.78 0 45.9 0 67.12C0 312.4 199.6 512 444.9 512c21.23 0 39.41-14.44 44.17-35.13l21.8-94.47C515.7 361.1 504.7 339.3 484.6 330.6zM457.9 469.7c-1.375 5.969-6.844 10.31-12.98 10.31c-227.7 0-412.9-185.2-412.9-412.9c0-6.188 4.234-11.48 10.34-12.88l94.41-21.91c1-.2344 2-.3438 2.984-.3438c5.234 0 10.11 3.094 12.25 8.031l43.58 101.7C197.9 147.2 196.4 153.5 191.8 157.3L141.3 198.7C135.6 203.4 133.8 211.4 137.1 218.1c33.38 67.81 89.11 123.5 156.9 156.9c6.641 3.313 14.73 1.531 19.44-4.219l41.39-50.5c3.703-4.563 10.16-6.063 15.5-3.844l101.6 43.56c5.906 2.563 9.156 8.969 7.719 15.22L457.9 469.7z"
+                    /></svg
+                  >
+                </div>
+                <div class="ml-3 text-base text-gray-500">
+                  <a href="tel:+41789466951" class="decoration-red-triarc underline">+41 78 946 69 51</a>
+                  <p class="mt-1">Mon-Fri 09:00 - 18:00</p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-400" viewBox="0 0 576 512"
+                    ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
+                      d="M570.6 244C577.2 249.8 577.8 259.1 571.1 266.6C566.2 273.2 556 273.8 549.4 267.1L512 234.1V432C512 476.2 476.2 512 432 512H144C99.82 512 64 476.2 64 432V234.1L26.59 267.1C19.96 273.8 9.849 273.2 4.003 266.6C-1.844 259.1-1.212 249.8 5.414 244L277.4 4.002C283.5-1.334 292.5-1.334 298.6 4.002L570.6 244zM144 480H208V320C208 302.3 222.3 288 240 288H336C353.7 288 368 302.3 368 320V480H432C458.5 480 480 458.5 480 432V206.7L288 37.34L96 206.7V432C96 458.5 117.5 480 144 480zM240 480H336V320H240V480z"
+                    /></svg
+                  >
+                </div>
+                <div class="ml-3 text-base text-gray-500">
+                  <p>triarc laboratories ltd.</p>
+                  <p>Neue Hard 14</p>
+                  <p>8005 Zürich</p>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex-shrink-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 fill-gray-400" viewBox="0 0 512 512"
+                    ><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path
+                      d="M64 96c-17.7 0-32 14.3-32 32v39.9L227.6 311.3c16.9 12.4 39.9 12.4 56.8 0L480 167.9V128c0-17.7-14.3-32-32-32H64zM32 207.6V384c0 17.7 14.3 32 32 32H448c17.7 0 32-14.3 32-32V207.6L303.3 337.1c-28.2 20.6-66.5 20.6-94.6 0L32 207.6zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z"
+                    /></svg
+                  >
+                </div>
+                <div class="ml-3 text-base text-gray-500">
+                  <div>
+                    <a href="mailto:development@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline"
+                      >development@triarc-labs.com</a
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="flex">
+                <div class="flex-shrink-0 items-start flex justify-center w-6 ">
+                  <svg class="mt-1 fill-gray-400" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
+                    ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                    /></svg
+                  >
+                </div>
+                <a
+                  aria-label="Linkedin"
+                  class="ml-3 text-base text-gray-500"
+                  href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
                 >
-                <br />
-                <br />
-              </div>
-              <div class="flex mb-2">
-                <div class="inline-block">
-                  <Picture
-                    height="280"
-                    width="373"
-                    alt="Serge Müller Photo"
-                    images={serge}
-                    cssClass="aspect-[3/4] w-12 drop-shadow filter rounded-md object-cover"
-                  />
-                </div>
-                <div class="flex flex-col justify-center ml-3">
-                  <div>
-                  <p>Serge Müller</p>
-                </div>
-                  <div>
-                  <a href="mailto:serge@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline "
-                    >serge@triarc-labs.com</a
-                  >
-                  </div>
-                </div>
-              </div>
-              <div class="flex mb-2">
-                <div class="inline-block">
-                  <Picture
-                    height="280"
-                    width="373"
-                    alt="Iris Zenegaglia Photo"
-                    images={iris}
-                    cssClass="aspect-[3/4] w-12 drop-shadow filter rounded-md object-cover"
-                  />
-                </div>
-                <div class="flex flex-col justify-center ml-3 ">
-                 <div>
-                  <p>Iris Zenegaglia</p>
-                 </div>
-                  <div>
-                  <a href="mailto:iris@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline "
-                    >iris@triarc-labs.com</a
-                  >
-                    </div>
-                </div>
-              </div>
-              <div class="flex mb-2">
-                <div class="inline-block ">
-                  <Picture
-                    height="280"
-                    width="373"
-                    alt="Dave Haug Photo"
-                    images={dave}
-                    cssClass="aspect-[3/4] w-12 drop-shadow filter rounded-md object-cover"
-                  />
-                </div>
-                <div class="flex flex-col justify-center ml-3 ">
-                  <div>
-                  <p>Dave Haug</p>
-                  </div>
-                  <div>
-                  <a href="mailto:dave@triarc-labs.com&subject=Kontakt" class="decoration-red-triarc underline "
-                    >dave@triarc-labs.com</a
-                  >
-                    </div>
-                </div>
+                  LinkedIn
+                </a>
               </div>
             </div>
           </div>
-
-          <div class="flex">
-            <div class="flex-shrink-0 items-start flex justify-center w-6 ">
-              <svg class="mt-1" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
-                ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                /></svg
-              >
-            </div>
-            <a
-              aria-label="Linkedin"
-              rel="noreferrer"
-              class="ml-3 text-base text-gray-500"
-              target="_blank"
-              href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
-            >
-              LinkedIn
-            </a>
-          </div>
+          <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
+            <li class="flex flex-col gap-10 pt-12 border-t border-gray-200 md:border-none sm:flex-row">
+              <img class="aspect-[4/5] w-52 flex-none rounded-xl object-cover" src="src/team/serge.jpg" alt="" />
+              <div class="max-w-xl flex-auto">
+                <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Serge Müller</h3>
+                <p class="text-base leading-7 text-gray-500">CEO</p>
+                <p class="mt-6 text-base leading-7 text-gray-500">
+                  Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget
+                  turpis urna maecenas cras. Nisl dictum.
+                </p>
+                <ul role="list" class="mt-6 flex gap-x-6">
+                  <li>
+                    <div class="flex">
+                      <div class="flex-shrink-0 items-start flex w-6 ">
+                        <a
+                          aria-label="Linkedin"
+                          class="text-base text-gray-500"
+                          href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
+                        >
+                          <svg
+                            class="mt-1 fill-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            /></svg
+                          >
+                        </a>
+                      </div>
+                      <a
+                        href="mailto:serge@triarc-labs.com&subject=Kontakt"
+                        class="decoration-red-triarc underline text-base text-gray-500 ">serge@triarc-labs.com</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="flex flex-col gap-10 pt-12 sm:flex-row">
+              <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="src/team/iris.jpg" alt="" />
+              <div class="max-w-xl flex-auto">
+                <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Iris Zenegaglia</h3>
+                <p class="text-base leading-7 text-gray-500">Beratung Digitalisierung / Partner</p>
+                <p class="mt-6 text-base leading-7 text-gray-500">
+                  Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget
+                  turpis urna maecenas cras. Nisl dictum.
+                </p>
+                <ul role="list" class="mt-6 flex gap-x-6">
+                  <li>
+                    <div class="flex">
+                      <div class="flex-shrink-0 items-start flex w-6 ">
+                        <a
+                          aria-label="Linkedin"
+                          class="text-base text-gray-500"
+                          href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
+                        >
+                          <svg
+                            class="mt-1 fill-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            /></svg
+                          >
+                        </a>
+                      </div>
+                      <a
+                        href="mailto:serge@triarc-labs.com&subject=Kontakt"
+                        class="decoration-red-triarc underline text-base text-gray-500 ">iris@triarc-labs.com</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="flex flex-col gap-10 pt-12 sm:flex-row">
+              <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="src/team/dave.jpg" alt="" />
+              <div class="max-w-xl flex-auto">
+                <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>
+                <p class="text-base leading-7 text-gray-500">Business Development</p>
+                <p class="mt-6 text-base leading-7 text-gray-500">
+                  Ultricies massa malesuada viverra cras lobortis. Tempor orci hac ligula dapibus mauris sit ut eu. Eget
+                  turpis urna maecenas cras. Nisl dictum.
+                </p>
+                <ul role="list" class="mt-6 flex gap-x-6">
+                  <li>
+                    <div class="flex">
+                      <div class="flex-shrink-0 items-start flex w-6 ">
+                        <a
+                          aria-label="Linkedin"
+                          class="text-base text-gray-500"
+                          href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
+                        >
+                          <svg
+                            class="mt-1 fill-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            /></svg
+                          >
+                        </a>
+                      </div>
+                      <a
+                        href="mailto:serge@triarc-labs.com&subject=Kontakt"
+                        class="decoration-red-triarc underline text-base text-gray-500 ">dave@triarc-labs.com</a
+                      >
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </Container>
