@@ -5,6 +5,23 @@
   import FinishedProjectMobile from '$lib/components/FinishedProjectMobile.svelte'
   let finishedProject = [
     {
+      appName: 'µLink',
+      companyDescription:
+        'Die Schnittstellen zwischen den verschiedenen Systemen mit unterschiedlichen Technologien stellt Unternehmen vor grosse Herausforderungen. ' +
+        'µLink vereinfacht als zentrale Instanz die Schnittstellenproblematik, vernetzt die verschiedenen Systeme und ermöglicht damit die zentrale Bewirtschaftung ' +
+        'der Schnittstellen. So kann mit minimalem Aufwand neue Software ins Ökosystem integriert oder bestehende abgelöst werden.',
+      situation:
+        'Innovation kam Historisch bedingt zustande. Wir sind spezialisiert auf Anbindungen an (allgemein ERP’s). Mit unserer Echtzeit Datahub-Lösung µLink umgehen' +
+        ' wir die Komplexität und Geschwindigkeitsproblematik der ABA-Connect Schnittstelle. 80% unserer Kunden haben ABACUS im Einsatz.',
+      challenges: '???',
+      solutions:
+        'Mit µLink lassen sich die Datenflüsse zwischen Softwaresystemen zentral observieren. Bei einem Ausfall, einer Abnahme der Leistung oder ' +
+        'weiterer konfigurierbarer Parameter kann proaktiv alarmiert werden. Über das Grafana-Dashboard lassen sich alle systemrelevanten Komponenten ' +
+        'in Echtzeit über-wachen und visualisieren.',
+      imageSource: 'img/references/mLink.png',
+      // id: 'porta'
+    },
+    {
       appName: 'Porta',
       companyDescription:
         'Die Tanne, Schweizerische Stiftung für Taubblinde, ist das Kompetenz-Zentrum bei angeborener Hörseh-Behinderung und verwandter mehrfacher ' +

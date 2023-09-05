@@ -14,17 +14,17 @@
       <p class="mt-6 text-lg leading-8 text-gray-600">{companyDescription}</p>
     </div>
   </div>
-  <div class="relative overflow-hidden pt-8">
+  <div class="relative overflow-y-visible pt-8">
     <div class="mx-auto max-w-5xl px-6 lg:px-8">
       <img
         src={imageSource}
         alt="App screenshot"
-        class="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+        class=" rounded-md shadow-xl ring-1 ring-gray-900/10"
         width="2432"
         height="1442"
       />
       <div class="relative" aria-hidden="true">
-        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />
+        <!--        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />-->
       </div>
     </div>
   </div>
