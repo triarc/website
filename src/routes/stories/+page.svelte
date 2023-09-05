@@ -95,9 +95,10 @@
 <Hero title="Stories" content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!" />
 
 <div class="bg-gray-100 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">
-  <div class="bg-white">
-    <Container>
-      <div class="flex items-center flex-wrap my-6 gap-3">
+  <dialog id="filter" class="modal rounded-md w-full">
+    <div class="modal-box ">
+      <div class="flex mb-6 flex-col gap-3">
+        <p class="font-bold ">Posts auswählen</p>
         <a
           href="/stories"
           target="_self"
@@ -116,11 +117,55 @@
           </a>
         {/each}
       </div>
+      <div class="modal-action ">
+        <form class="flex" method="dialog">
+          <button class="btn bg-gray-200 rounded-md h-10 flex-grow px-4 py-2">Abbrechen</button>
+        </form>
+      </div>
+    </div>
+  </dialog>
+
+  <div class="bg-white sticky top-0 will-change-transform z-50">
+    <Container>
+      <div class="flex items-start md:flex-row my-6 gap-3">
+        <button class="btn bg-gray-200 rounded-md h-10 md:hidden flex-grow px-4 py-2" onclick="filter.showModal()"
+          >Filter</button
+        >
+        <div class="px-4 py-2 bg-gray-200 rounded-md h-10 md:hidden">
+          Aktiv:
+          {#if data.selectedTag.startsWith('news')}
+            News
+          {:else if data.selectedTag.startsWith('success')}
+            Success Story
+          {:else if data.selectedTag.startsWith('tech')}
+            Tech
+          {:else}
+            Alle
+          {/if}
+        </div>
+        <a
+          href="/stories"
+          target="_self"
+          class="bg-gray-200 rounded-md h-10 hidden md:flex {data.selectedTag === '' ? 'active' : ''} "
+        >
+          <div class="px-4 py-2 ">Alle</div>
+        </a>
+        {#each data.tags as tag}
+          <a
+            href="/stories?tag={tag.slug}"
+            target="_self"
+            class="bg-gray-200 h-10 rounded-md md:flex hidden {data.selectedTag === tag.slug ? 'active' : ''}"
+          >
+            <div class="badge">{tag.count.posts}</div>
+            <div class="px-4 py-2">{tag.name}</div>
+          </a>
+        {/each}
+      </div>
     </Container>
   </div>
   <hr />
 
-  <div class="flex-grow">
+  <div class="flex-grow ">
     <div class="px-6 py-4">
       <MasonryInfiniteGrid
         gap={40}
@@ -141,10 +186,7 @@
       >
         {#each visibleItems as item}
           <div class="item max-w-xs md:max-w-md">
-            <a
-              href="/stories/{item.data.slug}"
-              class=" block break-inside-avoid  shadow flex flex-col group rounded-md"
-            >
+            <a href="/stories/{item.data.slug}" class=" break-inside-avoid shadow flex flex-col group rounded-md">
               <div class="relative rounded-md shadow">
                 <img
                   src={item.data.image.src}
@@ -152,6 +194,8 @@
                   sizes={item.data.image.sizes}
                   loading="lazy"
                   alt={item.data.image.alt}
+                  data-width={item.data.image.width}
+                  data-height={item.data.image.height}
                   class="object-cover rounded-md rounded-b-none overflow-hidden block h-auto max-w-auto w-full object-center group-hover:opacity-75"
                 />
                 <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
@@ -168,24 +212,23 @@
     </div>
   </div>
 
-  <hr/>
+  <hr />
 
-    <div class="bg-white py-6">
-      <Container>
-          <a
-                  class="text-gray-700 decoration-red-triarc justify-center flex space-x-2 underline flex-grow xl:text-right"
-                  href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
-          >
-            <span>Folge uns auf</span>
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 448 512"
-            ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                    d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-            /></svg
-            >
-          </a>
-      </Container>
-    </div>
-
+  <div class="bg-white py-6">
+    <Container>
+      <a
+        class="text-gray-700 decoration-red-triarc justify-center flex space-x-2 underline flex-grow xl:text-right"
+        href="https://www.linkedin.com/company/triarc-laboratories-ltd/mycompany/"
+      >
+        <span>Folge uns auf</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 448 512"
+          ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+          /></svg
+        >
+      </a>
+    </Container>
+  </div>
 
   <Footer />
 </div>
@@ -200,7 +243,7 @@
   .active .badge {
     @apply bg-white bg-opacity-20;
   }
-  /*.item {*/
-  /*  transition: all ease 0.3s;*/
-  /*}*/
+  .item {
+    transition: all ease 0.2s;
+  }
 </style>
