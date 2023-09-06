@@ -120,7 +120,11 @@
           </div>
           <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
             <li class="flex flex-col gap-10 pt-12 border-t border-gray-200 md:border-none sm:flex-row">
-              <img class="aspect-[4/5] w-52 flex-none rounded-xl object-cover" src="src/team/serge.jpg" alt="" />
+              <Picture
+                alt="Photo Serge Müller"
+                images={serge}
+                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+              />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Serge Müller</h3>
                 <p class="text-base leading-7 text-gray-500">CEO</p>
@@ -158,7 +162,11 @@
               </div>
             </li>
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="src/team/iris.jpg" alt="" />
+              <Picture
+                alt="Photo Iris Zenegaglia"
+                images={iris}
+                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+              />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Iris Zenegaglia</h3>
                 <p class="text-base leading-7 text-gray-500">Beratung Digitalisierung / Partner</p>
@@ -196,7 +204,11 @@
               </div>
             </li>
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <img class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover" src="src/team/dave.jpg" alt="" />
+              <Picture
+                alt="Photo Dave Haug"
+                images={dave}
+                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+              />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>
                 <p class="text-base leading-7 text-gray-500">Business Development</p>

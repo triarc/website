@@ -6,8 +6,6 @@
   import max from '/src/team/max.jpg?width=500&format=webp;png&metadata'
   import iris from '/src/team/iris.jpg?width=500&format=webp;png&metadata'
   import dave from '/src/team/dave.jpg?width=500&format=webp;png&metadata'
-  import simona from '/src/team/simona.jpg?width=500&format=webp;png&metadata'
-  import eduan from '/src/team/eduan.jpg?width=500&format=webp;png&metadata'
   import michel from '/src/team/michel.jpg?width=500&format=webp;png&metadata'
   import luka from '/src/team/luka.jpg?width=500&format=webp;png&metadata'
   import chris from '/src/team/chris.jpg?width=500&format=webp;png&metadata'
