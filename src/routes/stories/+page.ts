@@ -6,8 +6,10 @@ export const load: PageLoad = ({ params, url }) => {
   const tagSlug = url.searchParams.get('tag') ?? ''
   const postFilter = tagSlug ? `%2Btag:${tagSlug}` : ''
   console.log(postFilter)
+
+    //filter=visibility:public wird benötigt im interne tags (#xxx) nicht anzuzeigen)
   const tags = fetch(
-    `https://blog.triarc-labs.com/ghost/api/content/tags/?include=count.posts&key=93ed4aea5970c22ed269d4ec35`
+    `https://blog.triarc-labs.com/ghost/api/content/tags/?include=count.posts&filter=visibility:public&key=93ed4aea5970c22ed269d4ec35`
   )
   const postsFeatured = fetch(
     `https://blog.triarc-labs.com/ghost/api/content/posts?include=tags,authors&filter=featured:true${postFilter}&key=93ed4aea5970c22ed269d4ec35&limit=4&order=published_at%20desc`
