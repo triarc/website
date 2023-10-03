@@ -4,6 +4,14 @@
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
+  import { page } from '$app/stores'
+  import type { PageData } from './$types'
+  import {onMount} from "svelte";
+
+  export let data
+
+
+
 
   let contents: BlockContent[] = [
     // {
@@ -26,11 +34,12 @@
       },
     },
     {
+      slides: data.posts,
       title: 'Beratung',
       content:
         'Unser Digitalisierungsberatungsteam stellt sicher, dass die Digitalisierung für ein Unternehmen zum Erfolg wird. <br/><br/>Dafür ist nicht nur eine hochwertige Software relevant, sondern vorallem, dass sie genutzt wird und ihren Zweck erfüllt. Dies wird erreicht, wenn die Prozesse, Strukturen, Organisationskultur und Mitarbeiter sich mit dem technischen Fortschritt weiterentwickeln. <br/><br/>Wir unterstützen unsere Kunden bei der Analyse und Identifizierung von Chancen, Erstellung einer Transformations-Roadmap und der Umsetzung der definierten Massnahmen.',
 
-      image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
+
     },
     {
       title: 'Visions-und Strategieentwicklung',

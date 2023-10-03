@@ -13,6 +13,7 @@
   "dependencies": {
     "@egjs/svelte-grid": "^1.14.2",
     "@egjs/svelte-infinitegrid": "^4.10.2",
+    "embla-carousel-svelte": "^8.0.0-rc12",
     "plyr": "^3.6.4"
   },
   "devDependencies": {
