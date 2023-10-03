@@ -1,20 +1,19 @@
 <script lang="ts">
-  import serge from '../../../static/team/serge.jpg?width=500&format=webp;png&metadata'
-  import marco from '../../../static/team/marco.jpg?width=500&format=webp;png&metadata'
-  import pascal from '../../../static/team/pascal.jpg?width=500&format=webp;png&metadata'
-  import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
-  import max from '../../../static/team/max.jpg?width=500&format=webp;png&metadata'
-  import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
-  import dave from '../../../static/team/dave.jpg?width=500&format=webp;png&metadata'
-  import simona from '../../../static/team/simona.jpg?width=500&format=webp;png&metadata'
-  import eduan from '../../../static/team/eduan.jpg?width=500&format=webp;png&metadata'
-  import michel from '../../../static/team/michel.jpg?width=500&format=webp;png&metadata'
-  import luka from '../../../static/team/luka.jpg?width=500&format=webp;png&metadata'
-  import chris from '../../../static/team/chris.jpg?width=500&format=webp;png&metadata'
-  import till from '../../../static/team/till.jpg?width=500&format=webp;png&metadata'
-  import david from '../../../static/team/david.jpg?width=500&format=webp;png&metadata'
-  import bammbamm from '../../../static/team/bambam.jpg?width=500&format=webp;png&metadata'
-  import simon from '../../../static/team/simon.jpg?width=500&format=webp;png&metadata'
+  import serge from '/src/team/serge.jpg?width=500&format=webp;png&metadata'
+  import marco from '/src/team/marco.jpg?width=500&format=webp;png&metadata'
+  import pascal from '/src/team/pascal.jpg?width=500&format=webp;png&metadata'
+  import elke from '/src/team/elke.jpg?width=500&format=webp;png&metadata'
+  import max from '/src/team/max.jpg?width=500&format=webp;png&metadata'
+  import iris from '/src/team/iris.jpg?width=500&format=webp;png&metadata'
+  import dave from '/src/team/dave.jpg?width=500&format=webp;png&metadata'
+  import michel from '/src/team/michel.jpg?width=500&format=webp;png&metadata'
+  import luka from '/src/team/luka.jpg?width=500&format=webp;png&metadata'
+  import chris from '/src/team/chris.jpg?width=500&format=webp;png&metadata'
+  import till from '/src/team/till.jpg?width=500&format=webp;png&metadata'
+  import david from '/src/team/david.jpg?width=500&format=webp;png&metadata'
+  import bammbamm from '/src/team/bambam.jpg?width=500&format=webp;png&metadata'
+  import simon from '/src/team/simon.jpg?width=500&format=webp;png&metadata'
+  import lukas from '/src/team/lukas.jpg?width=500&format=webp;png&metadata'
   import Picture from '$lib/index/Picture.svelte'
 
   let teamMember = [
@@ -25,6 +24,7 @@
       images: serge,
       special: false,
       email: 'serge@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
     },
     {
       name: 'Marco Schmidlin',
@@ -33,6 +33,7 @@
       images: marco,
       special: false,
       email: 'marco@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/marco-schmidlin-1444ab2a/',
     },
     {
       name: 'Elke Engel',
@@ -41,6 +42,7 @@
       images: elke,
       special: false,
       email: 'elke@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/elke-engel-6761998/',
     },
     {
       name: 'Pascal Bertschi',
@@ -49,6 +51,7 @@
       images: pascal,
       special: false,
       email: 'pascal@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/pascal-bertschi-9b00b480/',
     },
     {
       name: 'Max Lüthi',
@@ -57,6 +60,7 @@
       images: max,
       special: false,
       email: 'max@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/max-l%C3%BCthi-864848214/',
     },
     {
       name: 'Iris Zenegaglia',
@@ -65,6 +69,7 @@
       images: iris,
       special: false,
       email: 'iris@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/iriszenegagliagloor/',
     },
     {
       name: 'Dave Haug',
@@ -73,6 +78,7 @@
       images: dave,
       special: false,
       email: 'dave@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/dave-haug-442064a5/',
     },
     {
       name: 'Simon Hasler',
@@ -81,22 +87,7 @@
       images: simon,
       special: false,
       email: 'simon@triarc-labs.com',
-    },
-    {
-      name: 'Simona Miljanovic',
-      job: 'UX Designerin',
-      nerdJob: 'UX Designerin',
-      images: simona,
-      special: false,
-      email: 'simona@triarc-labs.com',
-    },
-    {
-      name: 'Eduardo Lavaque',
-      job: 'Software Developer',
-      nerdJob: 'Software Developer',
-      images: eduan,
-      special: false,
-      email: 'eduan@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/simon-hasler-82069083/',
     },
     {
       name: 'Michel Gabriel',
@@ -105,6 +96,7 @@
       images: michel,
       special: false,
       email: 'michel@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/michel-gabriel/',
     },
     {
       name: 'Luka Kramer',
@@ -113,6 +105,7 @@
       images: luka,
       special: false,
       email: 'luka@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/luka-kramer/',
     },
     {
       name: 'Chris Thonfeld',
@@ -121,6 +114,7 @@
       images: chris,
       special: false,
       email: 'chris@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/christopher-thonfeld-guckes-452b771b7/',
     },
     {
       name: 'Till Wegmüller',
@@ -129,6 +123,7 @@
       images: till,
       special: false,
       email: 'till@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/till-wegm%C3%BCller-825ba3131/',
     },
     {
       name: 'David Jahn',
@@ -137,6 +132,16 @@
       images: david,
       special: false,
       email: 'david@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/david-jahn-b32940197/',
+    },
+    {
+      name: 'Lukas Hartmann',
+      job: 'Praktikant',
+      nerdJob: 'Praktikant',
+      images: lukas,
+      special: false,
+      email: 'lukas@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
     },
     {
       name: 'Bamm Bamm',
@@ -145,6 +150,7 @@
       images: bammbamm,
       special: true,
       email: 'bammbamm@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
     },
   ]
 
@@ -172,7 +178,19 @@
             images={member.images}
             cssClass="aspect-[3/4] w-full drop-shadow filter rounded-2xl object-cover"
           />
-          <h3 class="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-800">{member.name}</h3>
+          <h3
+            class="mt-6 text-lg inline-flex font-semibold leading-8 tracking-tight text-gray-800 justify-center align-middle"
+          >
+            {member.name}
+            <a class="flex justify-center content-center" href={member.linkedIn}>
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-[1.125em] ml-3 self-center" viewBox="0 0 448 512"
+                ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                /></svg
+              >
+            </a>
+          </h3>
           <p class="text-base leading-7 text-gray-600">{member.job}</p>
           <a class="underline text-gray-500 decoration-blue-triarc" href="mailto:{member.email}">{member.email}</a>
         </li>
