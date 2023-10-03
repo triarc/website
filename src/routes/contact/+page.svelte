@@ -121,40 +121,41 @@
           <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
             <li class="flex flex-col gap-10 pt-12 border-t border-gray-200 md:border-none sm:flex-row">
               <Picture
-                      alt="Photo Iris Zenegaglia"
-                      images={iris}
-                      cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                alt="Photo Iris Zenegaglia"
+                images={iris}
+                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
               />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Iris Zenegaglia</h3>
                 <p class="text-base leading-7 text-gray-500">Beratung Digitalisierung / Partner</p>
                 <p class="mt-6 text-base leading-7 text-gray-500">
-                  Wenn Sie in Ihrer digitalen Transformation vorankommen möchten oder Unterstützung bei der Entwicklung von
-                  Visionen und Strategien im digitalen Bereich wünschen, dann lade ich Sie herzlich dazu ein mich zu kontaktieren.
+                  Wenn Sie in Ihrer digitalen Transformation vorankommen möchten oder Unterstützung bei der Entwicklung
+                  von Visionen und Strategien im digitalen Bereich wünschen, dann lade ich Sie herzlich dazu ein mich zu
+                  kontaktieren.
                 </p>
                 <ul role="list" class="mt-6 flex gap-x-6">
                   <li>
                     <div class="flex">
                       <div class="flex-shrink-0 items-start flex w-6 ">
                         <a
-                                aria-label="Linkedin"
-                                class="text-base text-gray-500"
-                                href="https://www.linkedin.com/in/iriszenegagliagloor/"
+                          aria-label="Linkedin"
+                          class="text-base text-gray-500"
+                          href="https://www.linkedin.com/in/iriszenegagliagloor/"
                         >
                           <svg
-                                  class="mt-1 fill-gray-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  height="1em"
-                                  viewBox="0 0 448 512"
-                          ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                          /></svg
+                            class="mt-1 fill-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            /></svg
                           >
                         </a>
                       </div>
                       <a
-                              href="mailto:iris@triarc-labs.com&subject=Kontakt"
-                              class="decoration-red-triarc underline text-base text-gray-500 ">iris@triarc-labs.com</a
+                        href="mailto:iris@triarc-labs.com&subject=Kontakt"
+                        class="decoration-red-triarc underline text-base text-gray-500 ">iris@triarc-labs.com</a
                       >
                     </div>
                   </li>
@@ -163,40 +164,41 @@
             </li>
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
               <Picture
-                      alt="Photo Dave Haug"
-                      images={dave}
-                      cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                alt="Photo Dave Haug"
+                images={dave}
+                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
               />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>
                 <p class="text-base leading-7 text-gray-500">Business Development</p>
                 <p class="mt-6 text-base leading-7 text-gray-500">
-                  Wollen Sie mehr über unsere Projekte und Schnittstellenlösungen, sowie darüber, wie wir eine individuell auf Ihre Bedürfnisse zugeschnittene digitale Lösung bereitstellen können.
-                  Zögern Sie nicht, mich zu kontaktieren.
+                  Wollen Sie mehr über unsere Projekte und Schnittstellenlösungen, sowie darüber, wie wir eine
+                  individuell auf Ihre Bedürfnisse zugeschnittene digitale Lösung bereitstellen können. Zögern Sie
+                  nicht, mich zu kontaktieren.
                 </p>
                 <ul role="list" class="mt-6 flex gap-x-6">
                   <li>
                     <div class="flex">
                       <div class="flex-shrink-0 items-start flex w-6 ">
                         <a
-                                aria-label="Linkedin"
-                                class="text-base text-gray-500"
-                                href="https://www.linkedin.com/in/dave-haug-442064a5/"
+                          aria-label="Linkedin"
+                          class="text-base text-gray-500"
+                          href="https://www.linkedin.com/in/dave-haug-442064a5/"
                         >
                           <svg
-                                  class="mt-1 fill-gray-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  height="1em"
-                                  viewBox="0 0 448 512"
-                          ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                          /></svg
+                            class="mt-1 fill-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            /></svg
                           >
                         </a>
                       </div>
                       <a
-                              href="mailto:dave@triarc-labs.com&subject=Kontakt"
-                              class="decoration-red-triarc underline text-base text-gray-500 ">dave@triarc-labs.com</a
+                        href="mailto:dave@triarc-labs.com&subject=Kontakt"
+                        class="decoration-red-triarc underline text-base text-gray-500 ">dave@triarc-labs.com</a
                       >
                     </div>
                   </li>
@@ -205,40 +207,42 @@
             </li>
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
               <Picture
-                      alt="Photo Serge Müller"
-                      images={serge}
-                      cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                alt="Photo Serge Müller"
+                images={serge}
+                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
               />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Serge Müller</h3>
                 <p class="text-base leading-7 text-gray-500">CEO</p>
                 <p class="mt-6 text-base leading-7 text-gray-500">
-                  Sind Sie auf der Suche nach einem verlässlichen Sparring-Partner für Ihre digitale Entwicklungsreise? Meine Mission ist es, Unternehmen wie Ihres aktiv dabei zu unterstützen.
-                  Von der ersten Idee bis in den Betrieb. Lassen Sie uns die digitalen Möglichkeiten Ihres Unternehmens entfalten und gemeinsam innovative Wege gehen. Melden Sie sich bei mir.
+                  Sind Sie auf der Suche nach einem verlässlichen Sparring-Partner für Ihre digitale Entwicklungsreise?
+                  Meine Mission ist es, Unternehmen wie Ihres aktiv dabei zu unterstützen. Von der ersten Idee bis in
+                  den Betrieb. Lassen Sie uns die digitalen Möglichkeiten Ihres Unternehmens entfalten und gemeinsam
+                  innovative Wege gehen. Melden Sie sich bei mir.
                 </p>
                 <ul role="list" class="mt-6 flex gap-x-6">
                   <li>
                     <div class="flex">
                       <div class="flex-shrink-0 items-start flex w-6 ">
                         <a
-                                aria-label="Linkedin"
-                                class="text-base text-gray-500"
-                                href="https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/"
+                          aria-label="Linkedin"
+                          class="text-base text-gray-500"
+                          href="https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/"
                         >
                           <svg
-                                  class="mt-1 fill-gray-400"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  height="1em"
-                                  viewBox="0 0 448 512"
-                          ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                                  d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                          /></svg
+                            class="mt-1 fill-gray-400"
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1em"
+                            viewBox="0 0 448 512"
+                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
+                            /></svg
                           >
                         </a>
                       </div>
                       <a
-                              href="mailto:serge@triarc-labs.com&subject=Kontakt"
-                              class="decoration-red-triarc underline text-base text-gray-500 ">serge@triarc-labs.com</a
+                        href="mailto:serge@triarc-labs.com&subject=Kontakt"
+                        class="decoration-red-triarc underline text-base text-gray-500 ">serge@triarc-labs.com</a
                       >
                     </div>
                   </li>
