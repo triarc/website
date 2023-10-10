@@ -128,7 +128,7 @@
           </svg>
           Lösungen und Mehrwerte <br />
         </dt>
-        <dd class="inline-block pt-3">{solutions}</dd>
+        <dd class="inline-block pt-3">{@html solutions}</dd>
       </div>
     </dl>
   </div>
