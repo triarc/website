@@ -66,7 +66,7 @@
                   >
                 </div>
                 <div class="ml-3 text-base text-gray-500">
-                  <a href="tel:+41789466951" class="decoration-red-triarc underline">+41 78 946 69 51</a>
+                  <a href="tel:+41789466951" class="decoration-red-triarc underline">+41 44 279 10 00</a>
                   <p class="mt-1">Mon-Fri 09:00 - 18:00</p>
                 </div>
               </div>
