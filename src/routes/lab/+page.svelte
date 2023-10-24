@@ -34,7 +34,7 @@
             </h1>
 
             <p class="mt-6 text-xl text-gray-500">
-              Wilkommen im Lab von triarc. Hier erfährst du mehr zu den entstandenen Produkten, welche wir im Rahmen des
+              Willkommen im Lab von triarc. Hier erfährst du mehr zu den entstandenen Produkten, welche wir im Rahmen des
               Labs entwickeln.
             </p>
           </div>
@@ -61,7 +61,7 @@
             <p class="mt-4 text-lg text-gray-300">
               Damit du möglichst einfach einen Termin planen kannst, wählst du den Zeitraum in welchem der Termin
               stattfinden soll. Die erforderliche Zeitdauer und die Teilnehmer welche daran teilnehmen sollen. Ab da
-              übernimmt Slothi für dich und prüft die Verfügbarkeiten aller Teilnehmer. Du erhälst eine Auswahl an
+              übernimmt Slothi für dich und prüft die Verfügbarkeiten aller Teilnehmer. Du erhältst eine Auswahl an
               möglichen Terminvorschlägen und kannst einen fixen Termin einplanen.
             </p>
             <div class="mt-6 mb-12">

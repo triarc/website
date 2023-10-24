@@ -28,7 +28,7 @@
     {
       title: 'Unser agiler Entwicklungsprozess',
       content:
-        'Wir führen unsere Projekte erfolgreich seit einem Jahrzehnt agil. Diese Methode hat sich sowohl für uns, wie auch für den Kunden immer bewährt. Unser angiler Entwicklungsprozess besteht aus vier Schritten, welche sich pro Sprint wiederholen.',
+        'Wir führen unsere Projekte erfolgreich seit einem Jahrzehnt agil. Diese Methode hat sich sowohl für uns, wie auch für den Kunden immer bewährt. Unser agiler Entwicklungsprozess besteht aus vier Schritten, welche sich pro Sprint wiederholen.',
       steps: [
         {
           title: 'Concept',
@@ -116,9 +116,9 @@
 <div class="bg-white">
   <Hero
     title="Custom Software"
-    content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln maßgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind."
+    content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln massgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind."
     imageSrc="CustomSoftware"
-    imageAlt="Triarc Custom Sofware Header"
+    imageAlt="Triarc Custom Software Header"
     image={heroImage}
   />
 
