@@ -34,8 +34,8 @@
             </h1>
 
             <p class="mt-6 text-xl text-gray-500">
-              Willkommen im Lab von triarc. Hier erfährst du mehr zu den entstandenen Produkten, welche wir im Rahmen des
-              Labs entwickeln.
+              Willkommen im Lab von triarc. Hier erfährst du mehr zu den entstandenen Produkten, welche wir im Rahmen
+              des Labs entwickeln.
             </p>
           </div>
         </div>
