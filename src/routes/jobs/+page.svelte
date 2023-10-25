@@ -39,7 +39,7 @@
           description: `Beschreibung: Triarc Labs sucht ${jobPosting.claim} 60 - 100%`,
           educationRequirements:
             'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
-          employmentType: 'Full- or Parttime',
+          employmentType: 'Full- or Part-time',
           experienceRequirements: jobPosting.experienceRequirements,
           incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
           industry: 'Custom Software Development',
@@ -113,12 +113,12 @@
         'Lösungsorientiertes Denken und Handeln',
         'Lernfähigkeit und kontinuierliche Weiterentwicklung',
         'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
-        '2 Jahre Erfahrung mit Angular und einer objektorientier Sprache wie C# / Java',
+        '2 Jahre Erfahrung mit Angular und einer objektorientierten Sprache wie C# / Java',
       ],
-      experienceRequirements: '2 Jahre Erfahrung mit Angular und einer objektorientier Sprache wie C# / Java',
+      experienceRequirements: '2 Jahre Erfahrung mit Angular und einer objektorientierten Sprache wie C# / Java',
     },
     // {
-    //   content:
+    //  content:
     //     'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
     //   claim: 'DevOps / Operation Engineer',
     //   img: 'img/jobs/cloud_hosting.svg',
@@ -135,7 +135,7 @@
     //     'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
     //   ],
     //   experienceRequirements:
-    //     'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+    //     'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch-Kenntnisse in Wort und Schrift',
     // },
   ]
 
