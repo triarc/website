@@ -36,7 +36,7 @@ export const load: PageLoad = ({ params, url }) => {
   // console.log(postFilter)
 
   const postsBeratung = fetch(
-    `https://blog.triarc-labs.com/ghost/api/content/posts?include=tags,authors&key=93ed4aea5970c22ed269d4ec35&limit=3&order=published_at%20desc`
+    `https://blog.triarc-labs.com/ghost/api/content/posts?include=tags,authors&key=93ed4aea5970c22ed269d4ec35&limit=3&order=published_at%20desc&filter=tag:getting-started&filter=tag:beratung`
   )
 
   // const postsVision = fetch(
