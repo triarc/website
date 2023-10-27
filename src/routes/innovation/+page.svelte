@@ -4,6 +4,7 @@
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import pascal from '../../../static/team/pascal.jpg?width=500&format=webp;png&metadata'
+  import heroImage from '/src/lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   let contents: BlockContent[] = [
     {
@@ -49,7 +50,7 @@
         'Slothi soll deine Terminprobleme lösen. Eine smarte Lösung, welche dir den passenden Termin für alle\n' +
         '              Teilnehmer findet. \n\nDamit du möglichst einfach einen Termin planen kannst, wählst du den Zeitraum in welchem der Termin\n' +
         '              stattfinden soll. Die erforderliche Zeitdauer und die Teilnehmer welche daran teilnehmen sollen. Ab da\n' +
-        '              übernimmt Slothi für dich und prüft die Verfügbarkeiten aller Teilnehmer. Du erhälst eine Auswahl an\n' +
+        '              übernimmt Slothi für dich und prüft die Verfügbarkeiten aller Teilnehmer. Du erhältst eine Auswahl an\n' +
         '              möglichen Terminvorschlägen und kannst einen fixen Termin einplanen.',
 
       image: { src: 'img/lab/slothi.svg', width: 200, alt: 'slothi' },
@@ -65,6 +66,9 @@
 <Hero
   title="Innovation Lab"
   content="Innovationen sind der Schlüssel zu Wachstum und Erfolg. In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). "
+  imageSrc="InnovationLab"
+  imageAlt="Triarc InnovationLab Header"
+  image={heroImage}
 />
 
 <div class="bg-white min-h-screen">

@@ -84,12 +84,12 @@
         {
           title: 'Bewerbung einreichen',
           content:
-            'Nimm den Mut zusammen und schicke uns eine Mail an <a class="underline decoration-red-triarc" href="mailto:development@triarc-labs">development@triarc-labs</a> mit deinen Unterlagen.',
+            'Nimm den Mut zusammen und schicke uns eine Mail an <a class="underline decoration-red-triarc" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a> mit deinen Unterlagen.',
         },
         {
           title: 'Persönliches Interview',
           content:
-            'Nach kurzer Prüfung von deinem CV und dem ersten Eindruck, melden wir uns bei dir für ein erstes Vorstellungsgespräch. Remote oder in unserem Office können wir uns gegenseitig austauschen und schauen ob sich synergien ergeben.',
+            'Nach kurzer Prüfung von deinem CV und dem ersten Eindruck, melden wir uns bei dir für ein erstes Vorstellungsgespräch. Remote oder in unserem Office können wir uns gegenseitig austauschen und schauen ob sich Synergien ergeben.',
         },
         {
           title: 'Technisches Interview',

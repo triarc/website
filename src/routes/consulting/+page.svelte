@@ -4,6 +4,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
+  import heroImage from '/src/lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   let contents: BlockContent[] = [
     // {
@@ -28,7 +29,7 @@
     {
       title: 'Beratung',
       content:
-        'Unser Digitalisierungsberatungsteam stellt sicher, dass die Digitalisierung für ein Unternehmen zum Erfolg wird. <br/><br/>Dafür ist nicht nur eine hochwertige Software relevant, sondern vorallem, dass sie genutzt wird und ihren Zweck erfüllt. Dies wird erreicht, wenn die Prozesse, Strukturen, Organisationskultur und Mitarbeiter sich mit dem technischen Fortschritt weiterentwickeln. <br/><br/>Wir unterstützen unsere Kunden bei der Analyse und Identifizierung von Chancen, Erstellung einer Transformations-Roadmap und der Umsetzung der definierten Massnahmen.',
+        'Unser Digitalisierungsberatungsteam stellt sicher, dass die Digitalisierung für ein Unternehmen zum Erfolg wird. <br/><br/>Dafür ist nicht nur eine hochwertige Software relevant, sondern vor allem, dass sie genutzt wird und ihren Zweck erfüllt. Dies wird erreicht, wenn die Prozesse, Strukturen, Organisationskultur und Mitarbeiter sich mit dem technischen Fortschritt weiterentwickeln. <br/><br/>Wir unterstützen unsere Kunden bei der Analyse und Identifizierung von Chancen, Erstellung einer Transformations-Roadmap und der Umsetzung der definierten Massnahmen.',
 
       image: { src: 'img/intro/lost_online.svg', alt: 'Beratung' },
     },
@@ -93,7 +94,13 @@
 </svelte:head>
 
 <div class="bg-white">
-  <Hero title="Beratung" content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken." />
+  <Hero
+    title="Beratung"
+    content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken."
+    imageSrc="Beratung"
+    imageAlt="Triarc Consulting Header"
+    image={heroImage}
+  />
 
   {#each contents as content}
     <Block bind:content />

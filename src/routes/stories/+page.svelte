@@ -7,6 +7,7 @@
   import { getSizes, getSource, getSourceSet } from './utils'
   import type { GhostPost } from './utils'
   import { onMount } from 'svelte'
+  import heroImage from '/src/lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata'
   import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
 
   export let data: PageData
@@ -86,13 +87,21 @@
     console.log(items, newPosts)
     return [...items, ...newPosts]
   }
+
+
 </script>
 
 <svelte:head>
   <title>Stories - triarc-labs</title>
 </svelte:head>
 
-<Hero title="Stories" content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!" />
+<Hero
+  title="Stories"
+  content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!"
+  imageSrc="Stories"
+  imageAlt="Triarc Stories Header"
+  image={heroImage}
+/>
 
 <div class="bg-gray-100 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">
   <dialog id="filter" class="modal rounded-md w-full">
