@@ -87,8 +87,6 @@
     console.log(items, newPosts)
     return [...items, ...newPosts]
   }
-
-
 </script>
 
 <svelte:head>
