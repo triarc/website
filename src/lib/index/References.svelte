@@ -95,7 +95,7 @@
         'Die intergierte Kontakt- und Routenplanung schlägt den MA automatisch Kunden vor, die sie lange nicht mehr besucht haben oder welche sich' +
         ' ebenfalls auf der jeweiligen Arbeitsroute befinden. Ausserdem können Bestellungen direkt via App aufgenommen und ausgelöst werden.' +
         ' Integriertes Bestellwesen und Produktekatalog. Alle benötigten Kundendaten (CRM) sind ebenfalls jederzeit abrufbar.',
-      imageSource: 'img/references/Riwaxique.png',
+      imageSource: 'img/references/Riwax.png',
       // id: 'riwaxique'
     },
     {
@@ -282,12 +282,13 @@
         ' von den Bauarbeitenden über die Schreiner bis hin zu den Energieberatern, eine einfache und bedienerfreundliche Rapportierung,' +
         ' reduziert damit erheblich den Administrativaufwands und schafft zeitnah aktuelle Projektdaten',
       imageSources: [
-        'img/references/MyBusiness1.png',
-        'img/references/MyBusiness2.png',
-        'img/references/MyBusiness3.png',
-        'img/references/MyBusiness1.png',
-        'img/references/MyBusiness2.png',
-        'img/references/MyBusiness3.png',
+        'img/references/GLB1.png',
+        'img/references/GLB2.png',
+        'img/references/GLB3.png',
+        'img/references/GLB4.png',
+        'img/references/GLB5.png',
+        'img/references/GLB6.png',
+        'img/references/GLB7.png',
       ],
     },
     {
@@ -304,12 +305,13 @@
               ' (Lange Warteschlange werden verhinder Teilnehmer müssen nur noch einmalig erfasst werden,' +
               ' Stammdaten sind hinterlegt und können für zukünftige Events schnell und einfach gesucht werden. ',
       imageSources: [
-        'img/references/Bienvenue1.png',
-        'img/references/Bienvenue2.png',
-        'img/references/Bienvenue3.png',
-        'img/references/Bienvenue1.png',
-        'img/references/Bienvenue2.png',
-        'img/references/Bienvenue3.png',
+        'img/references/Bienvenu1.png',
+        'img/references/Bienvenu2.png',
+        'img/references/Bienvenu3.png',
+        'img/references/Bienvenu4.png',
+        'img/references/Bienvenu5.png',
+        'img/references/Bienvenu6.png',
+        'img/references/Bienvenu7.png',
       ],
     },
     {
@@ -331,12 +333,14 @@
         ' Nach Anlagen suchen und finden. Indexierung. Dokumente, Bedienungsanleitungen in div. Sprachen, ' +
         'Maschinenstunden etc. verfügbar. Baustellen können direkt eröffnet werden und der Mitarbeiter kann persönliche HR-Daten abrufen.',
       imageSources: [
-        'img/references/myWalo1.png',
-        'img/references/myWalo2.png',
-        'img/references/myWalo3.png',
-        'img/references/myWalo1.png',
-        'img/references/myWalo2.png',
-        'img/references/myWalo3.png',
+        'img/references/MyWalo1.png',
+        'img/references/MyWalo2.png',
+        'img/references/MyWalo3.png',
+        'img/references/MyWalo4.png',
+        'img/references/MyWalo1.png',
+        'img/references/MyWalo2.png',
+        'img/references/MyWalo3.png',
+        'img/references/MyWalo4.png',
       ],
     },
   ]

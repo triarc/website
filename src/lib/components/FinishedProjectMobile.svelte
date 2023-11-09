@@ -1,7 +1,6 @@
 <script lang="ts">
   import emblaCarouselSvelte from 'embla-carousel-svelte'
   import type { EmblaCarouselType } from 'embla-carousel'
-  import AutoHeight from 'embla-carousel-auto-height'
   export let appName: string
   export let companyDescription: string
   export let situation: string
@@ -12,8 +11,7 @@
 
   let emblaCarousel: EmblaCarouselType
   let options = { loop: true }
-  //const autoHeightOptions = { destroyHeight: 'auto' }
-  // let plugins = [AutoHeight(autoHeightOptions)]
+
   const onInit = (event) => {
     emblaCarousel = event.detail
     console.log(emblaCarousel.slideNodes()) // Access API
