@@ -1,8 +1,7 @@
-
 <script lang="ts">
   import Picture from '$lib/index/Picture.svelte'
-  import type {GhostPost} from "../../routes/stories/utils";
-  import Slideshow from "$lib/components/Slideshow.svelte";
+  import type { GhostPost } from '../../routes/stories/utils'
+  import Slideshow from '$lib/components/Slideshow.svelte'
 
   export interface BlockContent {
     slides?: GhostPost[]
@@ -112,12 +111,11 @@
 
 {#if content.title}
   <div class="md:min-h-0 even:bg-gray-100 group">
-
     <div
       class="flex items-center relative px-8 md:px-16 pb-16 pt-8  md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
     >
       {#if content.slides}
-        <Slideshow posts={content.slides}/>
+        <Slideshow posts={content.slides} />
       {/if}
       <div class="">
         <h2 class="mt-3 text-2xl font-bold text-gray-600">
