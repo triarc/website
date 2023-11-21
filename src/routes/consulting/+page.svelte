@@ -100,13 +100,13 @@
 </svelte:head>
 
 <div class="bg-white">
-    <Hero
-            title="Beratung"
-            content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken."
-            imageSrc="Beratung"
-            imageAlt="Triarc Consulting Header"
-            image={heroImage}
-    />
+  <Hero
+    title="Beratung"
+    content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken."
+    imageSrc="Beratung"
+    imageAlt="Triarc Consulting Header"
+    image={heroImage}
+  />
   <BlogPostFeatures bind:content />
   <FooterNoContact />
 </div>
