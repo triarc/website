@@ -10,7 +10,7 @@
       title: 'μLink Datahub',
       content:
         'Die Schnittstellenlösung, welche ihre komplette Software-Infrastruktur unter einen Hut bringt! ERP, CRM, Disposition, Zeiterfassung, Projektsoftware, HR Suite, Lagerbewirtschaftung usw. sind mit µLink in einem einzigen digitalen Ökosystem vereint. <br/><br/>' +
-        'Unternehmen, die konsequent auf digitale Lösungen setzen, haben einen klaren Wettbewerbsvorteil. Dabei wird mit Hilfe unterschiedlichen Softwarelösungen ein Prozess nach dem anderen digitalisiert. Durch diese stetig wachsende und sich verändernde Ökosystem entsteht das Bedürfnis die Datenflüsse zu managen. <br/><br/>' +
+        'Unternehmen, die konsequent auf digitale Lösungen setzen, haben einen klaren Wettbewerbsvorteil. Dabei wird mithilfe unterschiedlicher Softwarelösungen ein Prozess nach dem anderen digitalisiert. Durch diese stetig wachsende und sich verändernde Ökosystem entsteht das Bedürfnis die Datenflüsse zu managen. <br/><br/>' +
         'Essenziell sind dabei Bedürfnisse wie das Verhindern manueller Arbeitsschritte, die direkte Zusammenarbeit von Mitarbeitern über Systemgrenzen hinweg, sowie das schnelle Finden aller massgebenden Informationen in den angebundenen Softwarelösungen. µLink liefert dafür die hochmoderne und effiziente Lösung mit dem Fokus auf Echtzeitkommunikation und Sicherheit.',
       image: { src: 'img/mlink/mLink_tree.svg', alt: 'mlink logo' },
     },
@@ -86,7 +86,7 @@
           content:
             'Integratoren bewegen sich immer nur im Umfeld ihrer Applikation, somit fällt der grösste Teil der Einarbeitungskosten und Koordinationsaufwand weg. Wird ein angebotenes System ausgetauscht, muss nur die Schnittstelle zu µLInk entwickelt werden. \n' +
             'Für diverse Applikationen bieten wir Standardmodule an und sind gewillt auf Kundenwunsch weitere zu erarbeiten. \n' +
-            'Das Lizenzmodel von µLink könnte nicht simpler sein. Module werden einmalig erworben, danach verwenden sie mLink so oft und mit sovielen Usern wie sie wollen.\n',
+            'Das Lizenzmodel von µLink könnte nicht simpler sein. Module werden einmalig erworben, danach verwenden sie mLink so oft und mit so vielen Usern wie sie wollen.\n',
         },
       ],
     },
