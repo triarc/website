@@ -9,6 +9,7 @@
   import { onMount } from 'svelte'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import type { FeaturedContent } from '$lib/components/BlogPostFeatures.svelte'
+  import FooterNoContact from "$lib/components/FooterNoContact.svelte";
 
   export let data
 
@@ -100,5 +101,5 @@
 <div class="bg-white">
   <Hero title="Beratung" content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken." />
   <BlogPostFeatures bind:content />
-  <Footer />
+  <FooterNoContact />
 </div>
