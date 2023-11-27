@@ -2,14 +2,12 @@
   import emblaCarouselSvelte from 'embla-carousel-svelte'
   import type { EmblaCarouselType } from 'embla-carousel-svelte'
   import type { GhostPost } from '../../routes/stories/utils'
-  import type { PageParentData } from '../../../.svelte-kit/types/src/routes/$types'
+
 
   let emblaCarousel: EmblaCarouselType
   const options = { loop: true }
-  let plugins = [{}]
   const onInit = (event) => {
     emblaCarousel = event.detail
-    console.log(emblaCarousel.slideNodes()) // Access API
   }
   export let posts: GhostPost[]
 </script>

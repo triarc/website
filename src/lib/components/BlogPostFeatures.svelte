@@ -5,7 +5,7 @@
     quote?: {
       content: string
       person: string
-      images: any
+      images: File
       imageCss?: string
       personTitle: string
       linkedin: string
@@ -22,8 +22,9 @@
     ]
   }
 
+  const highlightColors = {green: 'bg-green-triarc', blue: 'bg-blue-triarc'}
+
   export let content: FeaturedContent
-  console.log(content.categories[0].posts)
 </script>
 
 {#if content}
@@ -31,7 +32,7 @@
     <div class="flex flex-col lg:flex-row">
       <div
         class="{content.quote.highlight
-          ? 'bg-' + content.quote.highlight + '-triarc bg-opacity-10'
+          ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
           : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 lg:h-screen"
       >
         <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center gap-x-8 px-16 lg:px-8 lg:ml-auto">

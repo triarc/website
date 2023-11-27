@@ -17,7 +17,7 @@
     quote?: {
       content: string
       person: string
-      images: any
+      images: File
       imageCss?: string
       personTitle: string
       linkedin: string

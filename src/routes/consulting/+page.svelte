@@ -1,12 +1,6 @@
 <script lang="ts">
-  import Block from '$lib/components/Block.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import Footer from '$lib/components/Footer.svelte'
   import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
-  import { page } from '$app/stores'
-  import type { PageData } from './$types'
-  import { onMount } from 'svelte'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import type { FeaturedContent } from '$lib/components/BlogPostFeatures.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
