@@ -3,7 +3,6 @@
   import type { EmblaCarouselType } from 'embla-carousel-svelte'
   import type { GhostPost } from '../../routes/stories/utils'
 
-
   let emblaCarousel: EmblaCarouselType
   const options = { loop: true }
   const onInit = (event) => {

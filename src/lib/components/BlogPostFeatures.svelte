@@ -22,7 +22,7 @@
     ]
   }
 
-  const highlightColors = {green: 'bg-green-triarc', blue: 'bg-blue-triarc'}
+  const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
 
   export let content: FeaturedContent
 </script>
