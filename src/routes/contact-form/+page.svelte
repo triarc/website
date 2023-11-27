@@ -6,10 +6,19 @@
   import serge from '/src/team/serge.jpg?width=500&format=webp;png&metadata'
   import dave from '/src/team/dave.jpg?width=500&format=webp;png&metadata'
   import Picture from '$lib/index/Picture.svelte'
-  import { load } from './+page'
-
   export let data
   const passedContact: String = data.contact
+
+  let contactedPerson = passedContact ?? 'Allgemein',
+    firstName = '',
+    lastName = '',
+    phone,
+    email = '',
+    subject = '',
+    message = ''
+
+  let sent = false
+  let sending = false
   const possibleContacts = [
     { value: 'Allgemein', label: 'Allgemein' },
     { value: 'Iris', label: 'Iris' },
@@ -17,18 +26,6 @@
     { value: 'Dave', label: 'Dave' },
     { value: 'Pascal', label: 'Pascal' },
   ]
-
-  let contactedPerson = passedContact ?? '',
-    firstName = '',
-    lastName = '',
-    phone,
-    email = '',
-    subject = '',
-    message = ''
-  console.log(contactedPerson)
-  let sent = false
-  let sending = false
-
   async function send() {
     const baseUrl = 'https://chatbot.triarc-labs.com'
     const chatMessage = `Person: ${firstName} ${lastName}\nBetreff: ${subject}\nNachricht: ${message}\nEmail: ${email}\nTelefon: ${
@@ -49,14 +46,14 @@
 </script>
 
 <div class="min-h-screen flex flex-col">
-  <div class="bg-gray-100 flex-grow">
+  <div class="bg-gray-100 flex flex-col flex-grow items-center justify-center">
     <Container>
-      <div class="py-16">
+      <div class="py-16 max-w-2xl">
         <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Kontaktformular</h2>
         <h3 class="text-lg mt-3 font-medium text-gray-500">
           Interessiert? Trete in Kontakt, damit wir gemeinsam Lösungen schaffen
         </h3>
-        <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:gap-x-8">
           <div>
             <label for="contacted-person" class="block text-sm font-medium text-gray-900"
               >Meine Anfrage geht an:
@@ -70,16 +67,21 @@
               >
                 {#each possibleContacts as contact}
                   {#if contact.label === passedContact}
-                      <option value={contact.value} selected >{contact.label}</option>
+                    <option value={contact.value} selected >{contact.label}</option>
+                  {:else if contact.label === 'Allgemein' && passedContact !== ''}
+                    <option value={contact.value} selected >{contact.label}</option>
                   {:else}
-                      <option value={contact.value}>{contact.label}</option>
+                    <option value={contact.value}>{contact.label}</option>
                   {/if}
                 {/each}
               </select>
             </div>
           </div>
-          <div />
-          <div>
+          <div class="relative">
+            <input type="text" id="floating_outlined" class="block px-2.5 pb-2.5 pt-4 w-full text-sm text-gray-900 bg-transparent rounded-lg border-1 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+            <label for="floating_outlined" class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Floating outlined</label>
+          </div>
+          <div class="relative">
             <label for="first-name" class="block text-sm font-medium text-gray-900">Vorname</label>
             <div class="mt-1">
               <input
@@ -135,7 +137,7 @@
               />
             </div>
           </div>
-          <div class="sm:col-span-2">
+          <div class="">
             <label for="subject" class="block text-sm font-medium text-gray-900">Betreff</label>
             <div class="mt-1">
               <input
@@ -147,7 +149,7 @@
               />
             </div>
           </div>
-          <div class="sm:col-span-2">
+          <div class="">
             <div class="flex justify-between">
               <label for="message" class="block text-sm font-medium text-gray-900">Nachricht</label>
             </div>
@@ -162,7 +164,7 @@
               />
             </div>
           </div>
-          <div class="sm:col-span-2 sm:flex sm:justify-end space-between gap-x-6">
+          <div class="sm:flex sm:justify-center space-between gap-x-6">
             {#if sent}
               <div class="rounded-md bg-green-triarc bg-opacity-10 p-4 mt-2 flex-grow">
                 <div class="flex">
