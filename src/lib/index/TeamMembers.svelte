@@ -15,6 +15,7 @@
   import simon from '/src/team/simon.jpg?width=500&format=webp;png&metadata'
   import lukas from '/src/team/lukas.jpg?width=500&format=webp;png&metadata'
   import Picture from '$lib/index/Picture.svelte'
+  import TeamMember from "$lib/components/TeamMember.svelte";
 
   let teamMember = [
     {
@@ -194,6 +195,16 @@
           <p class="text-base leading-7 text-gray-600">{member.job}</p>
           <a class="underline text-gray-500 decoration-blue-triarc" href="mailto:{member.email}">{member.email}</a>
         </li>
+      {/each}
+    </ul>
+  </div>
+</div>
+
+<div class="bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <ul class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      {#each teamMember as member}
+      <TeamMember bind:member ></TeamMember>
       {/each}
     </ul>
   </div>

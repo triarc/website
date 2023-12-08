@@ -154,7 +154,7 @@
                             alt={post.image.alt}
                             data-width={post.image.width}
                             data-height={post.image.height}
-                            class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-center group-hover:opacity-75"
+                            class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top group-hover:opacity-75"
                           />
                           <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
                         </div>
