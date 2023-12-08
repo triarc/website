@@ -200,15 +200,15 @@
   </div>
 </div>
 
-<div class="bg-white py-24 sm:py-32">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
-    <ul class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-2">
-      {#each teamMember as member}
-      <TeamMember bind:member ></TeamMember>
-      {/each}
-    </ul>
-  </div>
-</div>
+<!--<div class="bg-white py-24 sm:py-32">-->
+<!--  <div class="mx-auto max-w-7xl px-6 lg:px-8">-->
+<!--    <ul class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-14 lg:mx-0 lg:max-w-none lg:grid-cols-2">-->
+<!--      {#each teamMember as member}-->
+<!--      <TeamMember bind:member ></TeamMember>-->
+<!--      {/each}-->
+<!--    </ul>-->
+<!--  </div>-->
+<!--</div>-->
 
 <style style lang="postcss">
   .card {
