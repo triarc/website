@@ -138,9 +138,9 @@
       challenges:
         'Präventive Lerninhalte spielerisch der digital anspruchsvollen Usergruppe (Jugendliche) zu vermitteln.',
       solutions:
-         'Die App bietet eine Vielzahl von Lernvideos zum Thema Verhaltenskodex und Risikosituationen für Coaches (Jugendliche)' +
-         ' die mit Kindern arbeiten. Nach der Wissensvermittlung gibt es Kontrollfragen. Um das Ganze spielerischer zu gestalten,' +
-         ' stehen verschiedene Level zur Verfügung, ein persönlicher Avatar kann erstellt werden, und ein Buddy steht mit hilfreichen Tipps und Tricks zur Seite.',
+        'Die App bietet eine Vielzahl von Lernvideos zum Thema Verhaltenskodex und Risikosituationen für Coaches (Jugendliche)' +
+        ' die mit Kindern arbeiten. Nach der Wissensvermittlung gibt es Kontrollfragen. Um das Ganze spielerischer zu gestalten,' +
+        ' stehen verschiedene Level zur Verfügung, ein persönlicher Avatar kann erstellt werden, und ein Buddy steht mit hilfreichen Tipps und Tricks zur Seite.',
       imageSource: 'img/references/CondAct.png',
       //id: 'condAct'
     },
@@ -289,7 +289,7 @@
         'Bis vor Kurzem erfassten alle Berufsgruppen innerhalb der GLB-Gruppe ihre Daten, sei es Arbeitszeit, Spesen, Absenzen oder Material, auf Papier.' +
         ' Die Überprüfung der Berichte erfolgte zunächst durch den Auftraggeber oder den zuständigen Vorgesetzten und anschließend mussten die Daten mühsam manuell im Backoffice' +
         ' erfasst werden. Dieser Prozess sollte überdacht werden, um nach einer zukunftsfähigen Gesamtlösung zu suchen. Im ersten Durchgang wurde die Zeiterfassung digitalisiert,' +
-        ' inklusive Tagesrapport und Verbuchung von Material auf Aufträge, Lagerbestellungen und Inventur.' ,
+        ' inklusive Tagesrapport und Verbuchung von Material auf Aufträge, Lagerbestellungen und Inventur.',
       challenges:
         'Die Ansprüche waren umfangreich. Die Vereinfachung des bis anhin umständlichen Prozesses und die intuitive sowie effiziente Bedienung bei möglichst minimalem Schulungsaufwand' +
         ' zählten zu den zentralen Anforderungen. Nur so konnte die Lösung zu einem positiven Nutzererlebnis führen, schließlich gab es Bedenken bezüglich der Akzeptanz' +
@@ -387,7 +387,7 @@
     appName={project.appName}
     companyDescription={project.companyDescription}
     situation={project.situation}
-    challenges = {project.challenges}
+    challenges={project.challenges}
     solutions={project.solutions}
     imageSource={project.imageSource}
   />
@@ -397,7 +397,7 @@
   <FinishedProjectMobile
     appName={mobileProject.appName}
     companyDescription={mobileProject.companyDescription}
-    situation={ mobileProject.situation}
+    situation={mobileProject.situation}
     challenges={mobileProject.challenges}
     solutions={mobileProject.solutions}
     imageSources={mobileProject.imageSources}
