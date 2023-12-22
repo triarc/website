@@ -228,30 +228,30 @@
       imageSource: 'img/references/M3Express.png',
       //id: 'm3express'
     },
-    {
-      appName: 'Verba',
-      companyDescription:
-        'Die Schweizerische Vereinigung Morbus Bechterew (SVMB) wurde 1978 von Betroffenen gegründet und zählt' +
-        ' heute über 4300 Mitglieder. Sie berät, unterstützt und vernetzt Menschen mit der chronisch-rheumatischen' +
-        ' Erkrankung Morbus Bechterew',
-      situation: '???',
-      challenges: '???',
-      solutions:
-        'Verba verwaltet die Dossiers der Mitglieder und begleitet sie im Therapieprozess. Von der digitalen' +
-        ' Krankenkassenrechnung bis hin zur vollständigen Integration ins SAGE. Die Vereinslösung in der Schweizer' +
-        ' Cloud, damit sich das Bechterew-Team auf die wichtigen Dinge im Alltag fokussieren kann.',
-      imageSource: 'img/references/svmb.png',
-    },
-    {
-      appName: 'Chauffeur App',
-      companyDescription:
-        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG ' +
-        'seit Jahren als führenden Schweizer Hersteller und Anbieter von Spezialitäten für die Fahrzeugpflege aus.',
-      situation: '???',
-      challenges: '???',
-      solutions: '???',
-      imageSource: 'img/references/Chauffeur.png',
-    },
+    // {
+    //   appName: 'Verba',
+    //   companyDescription:
+    //     'Die Schweizerische Vereinigung Morbus Bechterew (SVMB) wurde 1978 von Betroffenen gegründet und zählt' +
+    //     ' heute über 4300 Mitglieder. Sie berät, unterstützt und vernetzt Menschen mit der chronisch-rheumatischen' +
+    //     ' Erkrankung Morbus Bechterew',
+    //   situation: '???',
+    //   challenges: '???',
+    //   solutions:
+    //     'Verba verwaltet die Dossiers der Mitglieder und begleitet sie im Therapieprozess. Von der digitalen' +
+    //     ' Krankenkassenrechnung bis hin zur vollständigen Integration ins SAGE. Die Vereinslösung in der Schweizer' +
+    //     ' Cloud, damit sich das Bechterew-Team auf die wichtigen Dinge im Alltag fokussieren kann.',
+    //   imageSource: 'img/references/svmb.png',
+    // },
+    // {
+    //   appName: 'Chauffeur App',
+    //   companyDescription:
+    //     'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG ' +
+    //     'seit Jahren als führenden Schweizer Hersteller und Anbieter von Spezialitäten für die Fahrzeugpflege aus.',
+    //   situation: '???',
+    //   challenges: '???',
+    //   solutions: '???',
+    //   imageSource: 'img/references/Chauffeur.png',
+    // },
   ]
   let finishedProjectMobile = [
     {
