@@ -28,37 +28,39 @@
         'Sinnes-Behinderung. Sie begleitet Betroffene in jedem Lebens-Alter',
       situation:
         'Die Stiftung Tanne verfügte nur über eine Webseite als Informationsquelle. Eine dafür eigens entwickelte App war der Lösungswunsch,' +
-        ' um einen persönlichen Zugang (mittels Login) zu verschaffen um Schulungen, Lernstunden zu konsumieren. ',
+        ' um einen persönlichen Zugang zu verschaffen um Schulungen, Lernstunden zu konsumieren. ',
       challenges:
         'Beim UI/UX fokussierte man sich verstärkt auf die Anforderung/Bedürfnisse von Taubstummen und' +
-        ' Analphabeten Menschen, gleichzeitig sollte auch der Spagat zu Usergruppe (Das Umfeld der beeinträchtigten' +
+        ' Analphabeten, gleichzeitig sollte auch der Spagat zu Usergruppe (Das Umfeld der beeinträchtigten' +
         ' Menschen) gelingen.',
       solutions:
-        'Die PORTA App ist eine Lernsoftware mit umfangreicher Funktionalität, mit der es richtig' +
-        ' Spass macht zu lernen. Die App ermöglicht neben dem Erlernen der Portagebärden, das Erfassen und' +
-        ' Teilen bedürfnisspezifischer Gebärden, benutzerdefinierter Kataloge und Arbeitsblätter. Spielerisch' +
-        ' kann das erworbene Wissen mit einem Lernspiel getestet und vertieft werden. Probier es aus und lass' +
-        ' dich begeistern!',
+        'Die PORTA App wurde entwickelt, um ein persönliches Lernerlebnis zu bieten und dabei die Bedürfnisse der Zielgruppe zu berücksichtigen. Sie ist eine umfassende Lernsoftware,' +
+        ' die nicht nur das Erlernen von Portagebärden ermöglicht, sondern auch das Erfassen und Teilen von bedürfnisspezifischen Gebärden, benutzerdefinierten Katalogen und Arbeitsblättern.' +
+        ' Die App bietet eine einfache Navigation im Gebärdenkatalog, die Möglichkeit zur Erfassung eigener Gebärden mit Videos, sowie die Zusammenstellung und gemeinsame Nutzung eigener Kataloge.' +
+        ' Zusätzlich wurde ein Lernspiel mit Gamifikation integriert, um das erworbene Wissen spielerisch zu testen und zu vertiefen. Die App ist dabei so gestaltet, dass sie von jeder Person,' +
+        ' auch solchen mit leichten Behinderungen, einfach bedient werden kann.',
       imageSource: 'img/references/tanne-app.png',
       // id: 'porta'
     },
     {
       appName: 'Ortho Client',
       companyDescription:
-        'Die ORTHO-TEAM Gruppe ist ein national tätiges Schweizer Unternehmen, welches ein ganzheitliches Versorgungskonzept in der Orthopädie- und Rehatechnik bietet.' +
-        ' Hochspezialisiert auf der ganzen Bandbreite der Branche entwickelt der Technologiedienstleister höchst innovative Produkte, um Menschen zu mehr Unabhängigkeit' +
-        ' und Lebensqualität zu verhelfen. 23 Standorte in der Schweiz.',
-
+        'Die ORTHO-TEAM Gruppe ist ein Schweizer Unternehmen, welches ein ganzheitliches Versorgungskonzept in der Orthopädie- und Rehatechnik bietet. Hochspezialisiert auf der' +
+        ' ganzen Bandbreite der Branche entwickelt der Technologiedienstleister höchst innovative Produkte, um Menschen zu mehr Unabhängigkeit und Lebensqualität zu verhelfen.' +
+        ' 23 Standorte in der Schweiz.',
       situation:
-        'Man strebte an, gemeinsam eine digitale Plattform zu entwickeln, um den bisherigen papierbasierten Kernprozess von der Anamnese bis zur Produktion zu ersetzen.',
-      challenges: '???',
+        'Am Anfang des Projektes wurden alle Prozesse der Kundenauftragsbearbeitung noch manuell auf Papier durchgeführt. Das Ziel bestand darin, gemeinsam eine digitale Plattform zu schaffen, um den papierbasierten Kernprozess von der Anamnese bis zur Produktion zu ersetzen.',
+      challenges:
+        'Zuerst wurden grundlegende Herausforderungen identifiziert, darunter die Notwendigkeit, den bisherigen papierbasierten Prozess zu überwinden. Später kamen zusätzliche Herausforderungen hinzu,' +
+        ' wie die Vielfalt der Prozesse und Prozessvarianten in verschiedenen Bereichen wie Rollstühle, Schuhe, Orthesen, Prothesen, und in verschiedenen Regionen. Die Abstimmung der Auftragsabwicklung' +
+        ' mit der Einreichung von Kostenvoranschlägen bei Krankenkassen oder der IV wurde ebenfalls als komplex erkannt.',
       solutions:
-        'Die digitale Kundenbegleiterin, gelöst als mobil einsetzbare Applikation zur Erstellung der Anamese, ' +
-        'Analyse bis hin zur fallbezogenen und interdisziplinären Kommunikation. Damit stellt OrthoClient' +
-        ' eine effiziente Auftragsabwicklung sowie einen exzellenten Kundenservice sicher. Sämtliche auftragsbezogenen Daten' +
-        ' wie die ärztliche Verordnung, Bilder oder erbrachte Leistungen (mobil und digital) können mit der Client App' +
-        ' zugeordnet werden. So wurden u.a. die Durchlaufzeiten bei der Leistungsverrechnung wesentlich verkürzt und' +
-        'der Aufwand in Backoffice und Administration reduziert.',
+        'Die Lösung bestand in der Entwicklung einer mobilen Applikation namens OrthoClient, die den gesamten Prozess von der Anamnese bis zur interdisziplinären Kommunikation abdeckt.' +
+        ' Diese App ermöglichte eine effiziente Auftragsabwicklung und gewährleistete exzellenten Kundenservice. Nach erfolgreicher Einführung wurden weitere Funktionen implementiert,' +
+        ' darunter eine zentrale Ansicht aller Informationen und Kommunikationen, ein Statusmodell in Abstimmung mit der ERP Lösung ABACUS, ein Chatmodul mit Mentions- und Notifikationen,' +
+        ' ein Formulargenerator für die flexible Erstellung von Formularen, sowie die Integration von Trello für die Kommunikation mit der Produktion. Die Kundenerfassung wurde direkt ins ERP' +
+        ' integriert. Die Bestellung von Artikeln erfolgt nun direkt über die Order App. Diese Maßnahmen führten zu verkürzten Durchlaufzeiten bei der Leistungsverrechnung und einer' +
+        ' erheblichen Reduzierung des Aufwands in Backoffice und Administration.',
       imageSource: 'img/references/wunder-app.png',
       // id: 'ortho-client'
     },
@@ -83,18 +85,18 @@
     {
       appName: 'Riwaxique',
       companyDescription:
-        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren als ' +
-        ' führenden Schweizer Hersteller und Anbieter von Spezialitäten für die Fahrzeugpflege aus.',
+        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren' +
+        ' als führenden Schweizer Hersteller und Anbieter von Spezialitäten für die Fahrzeugpflege aus.',
       situation:
-        'Die Vision der Geschäftsleitung: Die RIWAX Aussendienst Mitarbeitenden sollen mit einer digitalen Kundenapplikation optimal und in' +
-        ' Echtzeit draussen im Feld unterstützt werden.',
+        'Die Geschäftsleitung hatte die Vision, die RIWAX Aussendienst-Mitarbeitenden sollen mit einer digitalen Kundenapplikation' +
+        ' optimal und in Echtzeit draussen im Feld unterstützt werden.',
       challenges:
-        'Die Herausforderung bestand darin, den Aussendienst effizient zu leiten, um sicherzustellen, dass die richtigen Kunden zum' +
-        ' optimalen Zeitpunkt besucht werden. Dies erforderte die Bereitstellung aktueller und relevanter Daten über Kunden sowie die Stärkung der Selbstorganisation der Außendienstmitarbeiter.',
+        'Die Herausforderung bestand darin, den Aussendienst effizient zu leiten, um sicherzustellen, dass die richtigen Kunden zum optimalen Zeitpunkt besucht werden.' +
+        ' Dies erforderte die Bereitstellung aktueller und relevanter Daten über Kunden sowie die Stärkung der Selbstorganisation der Mitarbeiter.',
       solutions:
-        'Die intergierte Kontakt- und Routenplanung schlägt den MA automatisch Kunden vor, die sie lange nicht mehr besucht haben oder welche sich' +
-        ' ebenfalls auf der jeweiligen Arbeitsroute befinden. Ausserdem können Bestellungen direkt via App aufgenommen und ausgelöst werden.' +
-        ' Integriertes Bestellwesen und Produktekatalog. Alle benötigten Kundendaten (CRM) sind ebenfalls jederzeit abrufbar.',
+        'Die intergierte Kontakt- und Routenplanung schlägt dem Mitarbeiter automatisch Kunden vor, die sie lange nicht mehr besucht haben, in ihrem Bestellverhalten abweichen' +
+        ' oder welche sich ebenfalls auf der jeweiligen Arbeitsroute befinden. Ausserdem können Bestellungen direkt via der App Riwaxique mittels integriertem Bestellwesen' +
+        ' und Produktekatalog aufgenommen und ausgelöst werden. Alle benötigten Kundendaten (CRM) sind ebenfalls jederzeit verfügbar. Der Aussendienst setzt seine Zeit nun strategisch im Sinne der Unternehmung ein.',
       imageSource: 'img/references/Riwax.png',
       // id: 'riwaxique'
     },
@@ -102,51 +104,66 @@
       appName: 'Vademecum',
       companyDescription: 'Dr. Ines Schlienger, Psychologin und Sonderpädagogin, Zürich',
       situation:
-        'Die Digitalisierung des VADEMECUM (App und Webapplikation) wurde durch ein Crowdfunding mitfinanziert.',
-      challenges: '???',
+        'VADEMECUM, finanziert durch ein Crowdfunding, erfolgte der Start für die Entwicklung einer App und Webapplikation.' +
+        ' In dieser Phase lag der Fokus auf der Unterstützung und Vereinfachung der Zusammenarbeit zwischen Fachpersonen' +
+        ' und Eltern (oder anderen Bezugspersonen) im Bereich der frühen Diagnostik oder Entwicklungsbegleitung bis zu einem Alter von vier Jahren.\n' +
+        '\n' +
+        'In einem nächsten Schritt wurde die Herausforderung angenommen, das bisher auf Papier beliebte VADEMECUM zu' +
+        ' digitalisieren. Das Ziel war es, die Erfassung von Beobachtungen durch Eltern zu erleichtern, sofort wenn sie' +
+        ' eine Handlung beobachten, und dies inklusive der Möglichkeit von Bildern. Die Auswertung sollte für Therapeuten' +
+        ' einfacher sein und über mehrere Beobachtungszeitpunkte hinweg einfach vergleichbar.',
+      challenges:
+        'In der Entwicklung wurde darauf geachtet, das Design der Papierversion zu erhalten und gleichzeitig zu' +
+        ' digitalisieren. Der Prozess zwischen Administration, Therapeuten und Eltern sollte möglichst einfach gestaltet' +
+        ' sein. Die Anforderungen umfassten eine einfache Bedienung und kostengünstige Umsetzung.',
       solutions:
-        'Die VADEMECUM App und Webapplikation unterstützt und vereinfacht das Zusammenwirken von Fachpersonen und' +
-        ' Eltern (oder anderen Bezugspersonen) im Bereich der frühen Diagnostik oder Entwicklungsbegleitung bis zu' +
-        ' einem Entwicklungsalter von vier Jahren.',
+        'Die resultierende VADEMECUM App und Webapplikation bietet eine mobile Anwendung, die es Eltern ermöglicht, den Beobachtungskatalog einfach zu' +
+        ' einem bestimmten Zeitpunkt auszufüllen. Zusätzlich können sie Kommentare und Bilder als Zusatzdokumentation hinzufügen. Die Webapplikation' +
+        ' ermöglicht eine übersichtliche Darstellung aller Klienten und Beobachtungszeitpunkte. Ein einfacher Vergleich mit verschiedenen Verhaltensmatrizen' +
+        ' erleichtert die Identifikation möglicher Entwicklungsschwächen. Diese Lösung bietet somit einen effizienten und benutzerfreundlichen Ansatz für' +
+        ' die digitale Erfassung und Auswertung des VADEMECUMs.',
       imageSource: 'img/references/Vademecum.png',
       // id: 'vademecum'
     },
     {
       appName: 'CondAct',
       companyDescription:
-        'Die Stiftung IdéeSport engagiert sich im Bereich der Kinder- und Jugendförderung.' +
-        ' Sie nutzt Sport als Mittel der Suchtprävention, der Gesundheitsförderung und der gesellschaftlichen Integration.',
+        'Seit 1999 setzt sich IdeéSport aktiv für die Kinder- und Jugendförderung in der Schweiz ein. Durch die Nutzung von Sport als Instrument fördert das Unternehmen' +
+        ' die Suchtprävention, Gesundheitsförderung und gesellschaftliche Integration. Mit seinen Programmen eröffnet IdeéSport brachliegende Räume für Sport und Begegnung,' +
+        ' schafft damit die Grundlage für regelmäßige Treffpunkte über kulturelle und gesellschaftliche Grenzen hinweg und ist in mehr als 120 Gemeinden in allen Sprachregionen' +
+        ' der Schweiz vertreten.',
       situation:
-        'Die Hallenteams, die mit den Kindern im direkten Kontakt sind, brauchten ein Instrument, um den Verhaltenskodex' +
-        ' unkompliziert und konsequent während der Veranstaltungen anzuwenden. Dafür wurde eine dreisprachige «CondAct»-App seitens IdeéSport gewünscht.',
+        'Die Hallenteams, die mit den Kindern im direkten Kontakt sind, brauchten ein Instrument, um den Verhaltenskodex unkompliziert und konsequent während der' +
+        ' Veranstaltungen anzuwenden. Dafür wurde eine dreisprachige «CondAct»-App seitens IdeéSport gewünscht.',
       challenges:
         'Präventive Lerninhalte spielerisch der digital anspruchsvollen Usergruppe (Jugendliche) zu vermitteln.',
-      solutions: 'Die App bietet eine Vielzahl von Lernvideos zum Thema Verhaltenskodex und Risikosituationen für Coaches (Jugendliche) die mit Kindern arbeiten.' +
-        ' Nach der Wissensvermittlung gibt es Kontrollfragen. Um das Ganze spielerischer zu gestalten, stehen verschiedene Level zur Verfügung, ein persönlicher' +
-        ' Avatar kann erstellt werden, und ein Buddy steht mit hilfreichen Tipps und Tricks zur Seite.',
+      solutions:
+         'Die App bietet eine Vielzahl von Lernvideos zum Thema Verhaltenskodex und Risikosituationen für Coaches (Jugendliche)' +
+         ' die mit Kindern arbeiten. Nach der Wissensvermittlung gibt es Kontrollfragen. Um das Ganze spielerischer zu gestalten,' +
+         ' stehen verschiedene Level zur Verfügung, ein persönlicher Avatar kann erstellt werden, und ein Buddy steht mit hilfreichen Tipps und Tricks zur Seite.',
       imageSource: 'img/references/CondAct.png',
       //id: 'condAct'
     },
     {
       appName: 'Ortho-Order',
       companyDescription:
-        'Die ORTHO-TEAM Gruppe ist ein national tätiges Schweizer Unternehmen, welches ein ganzheitliches Versorgungskonzept' +
-        ' in der Orthopädie- und Rehatechnik bietet. Hochspezialisiert auf der ganzen Bandbreite der Branche entwickelt der' +
-        ' Technologiedienstleister höchst innovative Produkte, um Menschen zu mehr Unabhängigkeit und Lebensqualität zu verhelfen.' +
-        ' 23 Standorte in der Schweiz.',
+        'Die ORTHO-TEAM Gruppe ist ein national tätiges Schweizer Unternehmen, welches ein ganzheitliches Versorgungskonzept in der Orthopädie- und Rehatechnik bietet.' +
+        ' Hochspezialisiert auf der ganzen Bandbreite der Branche entwickeln der Technologiedienstleister höchst innovative Produkte,' +
+        ' um Menschen zu mehr Unabhängigkeit und Lebensqualität zu verhelfen.',
       situation:
-        'Die Orthoteam Geschäftsführung wollte das Bestellwesen revolutionieren, sodass alle MI ohne grosse Vorkenntnisse sofort und schnell,' +
-        ' die Lieferanten-Bestellungen vornehmen können. Den Wareneinkauf gesamtschweizerisch zu koordinieren.' +
-        ' Wie wird was wann eingekauft.',
+        'Die ORTHO-TEAM Geschäftsführung strebte an, das Bestellwesen zu revolutionieren, um eine einfache und schnelle Lieferantenbestellung für alle Mitarbeiter an den' +
+        ' 23 Standorten zu ermöglichen. Ziel war es, den gesamtschweizerischen Wareneinkauf zu koordinieren, dabei jedoch jedem Angestellten die eigenständige Materialbeschaffung' +
+        ' transparent und benutzerfreundlich zu gestalten, ohne die Kontrolle zu verlieren. In weiteren Schritten wurden zusätzliche Herausforderungen identifiziert: Bestellungen' +
+        ' wurden pro Standort von einer Person koordiniert, was zu manuellen Aufwänden und Unklarheiten führte. Besonders bei komplexen Bestellungen, wie z.B. für Rollstühle, mussten' +
+        ' Teile von verschiedenen Lieferanten bestellt werden, und es war schwer nachvollziehbar, für welchen Auftrag welche Teile bestellt wurden.',
       challenges:
-              'Unsere Herausforderung bestand darin, die Lieferantenbestellungen für den Materialbedarf an allen 23 Standorten sowie für alle Mitarbeitenden sicherzustellen,' +
-              ' um sowohl die internen Unternehmensinteressen als auch die externen Kundenbedürfnisse zu erfüllen. Dabei war es unser Ziel, jedem Mitarbeitenden die eigenständige' +
-              ' Materialbeschaffung transparent und benutzerfreundlich zu gestalten, ohne das er dabei die Kontrolle vollständig abgibt.',
+        'Die Herausforderungen bestanden darin, die Lieferantenbestellungen an allen Standorten sicherzustellen und die Transparenz sowie Benutzerfreundlichkeit für die Mitarbeiter zu' +
+        ' gewährleisten. Der Prozess sollte in nachvollziehbare Schritte aufgeteilt werden, und es galt, Spezialfälle abzubilden.',
       solutions:
-              'Preis- und Zeit-optimiertes Bestellwesen. Eine mobile Applikation zum effizienten Bestellen von benötigten Artikeln ohne sich um Details,' +
-              ' wie bei welchem Lieferanten bestellt werden soll, kümmern zu müssen. Vom digital koordinierten Einkauf bis zur Benachrichtigung auf Grund von' +
-              ' Wareneingängen regelt OrthoOrder alle Details selbst. Der Bestellprozess mit der Order App ist deutlich einfacher, schneller und bei Wareneingang' +
-              ' besser nachvollziehbar. Die Interessen des Einkaufs bleiben gewahrt.',
+        'Die Lösung war OrthoOrder, eine mobile Applikation für ein preis- und zeitoptimiertes Bestellwesen. Diese ermöglichte einen effizienten Bestellprozess ohne detaillierte Kenntnisse' +
+        ' zu den Lieferanten. Der gesamte Bestellprozess wurde deutlich einfacher, schneller und nachvollziehbarer, wobei die Interessen des Einkaufs gewahrt blieben. Das System teilte die' +
+        ' Bestellungen auf die Lieferanten auf, ermöglichte die präzise Dokumentation des Wareneingangs und die direkte Erfassung von Retouren. Die Möglichkeit, Bestellung und Rechnung des' +
+        ' Lieferanten side-by-side zu prüfen und freizugeben, trug weiter zur Effizienzsteigerung bei.',
       imageSource: 'img/references/OrthoOrder.png',
       //id: 'ortho-order'
     },
@@ -269,18 +286,20 @@
         ' Mit Standorten in den Kantonen Bern und Zürich und den rund 900 Mitarbeitenden ist die GLB seit über' +
         ' 50 Jahren die kompetente Partnerin für Lebensräume.\n',
       situation:
-        'Bis vor Kurzem erfassten alle Berufsgruppen innerhalb der GLB-Gruppe ihre Daten, sei es Arbeitszeit, Spesen, Absenzen oder Material,' +
-        ' auf Papier. Die Überprüfung der Berichte erfolgte zunächst durch den Auftraggeber oder den zuständigen Vorgesetzten, und anschliessend ' +
-        'mussten die Daten mühsam manuell im Büro erfasst werden. Dieser Prozess musste überdacht werden, um nach einer zukunftsfähigen Lösung zu suchen.',
+        'Bis vor Kurzem erfassten alle Berufsgruppen innerhalb der GLB-Gruppe ihre Daten, sei es Arbeitszeit, Spesen, Absenzen oder Material, auf Papier.' +
+        ' Die Überprüfung der Berichte erfolgte zunächst durch den Auftraggeber oder den zuständigen Vorgesetzten und anschließend mussten die Daten mühsam manuell im Backoffice' +
+        ' erfasst werden. Dieser Prozess sollte überdacht werden, um nach einer zukunftsfähigen Gesamtlösung zu suchen. Im ersten Durchgang wurde die Zeiterfassung digitalisiert,' +
+        ' inklusive Tagesrapport und Verbuchung von Material auf Aufträge, Lagerbestellungen und Inventur.' ,
       challenges:
-        'Die Ansprüche waren umfangreich. Die Vereinfachung des bis anhin umständlichen Prozesses und die intuitive sowie effiziente Bedienung bei' +
-        ' möglichst minimalem Schulungsaufwand, zählten zu den zentralen Anforderungen. Nur so konnte die Lösung' +
-        ' auch zu einem positiven Nutzererlebnis führen, schliesslich gab es Bedenken bezüglich der' +
-        ' Akzeptanz einer digitalen Lösung seitens der Mitarbeitenden.',
+        'Die Ansprüche waren umfangreich. Die Vereinfachung des bis anhin umständlichen Prozesses und die intuitive sowie effiziente Bedienung bei möglichst minimalem Schulungsaufwand' +
+        ' zählten zu den zentralen Anforderungen. Nur so konnte die Lösung zu einem positiven Nutzererlebnis führen, schließlich gab es Bedenken bezüglich der Akzeptanz' +
+        ' einer digitalen Lösung seitens der Mitarbeitenden. Die Herausforderung bestand auch darin, dass neue Funktionen nahtlos miteinander funktionieren und einfach auf einem Mobilgerät nutzbar sein müssen.',
       solutions:
-        'Die interne Kommunikationsplattform «MyBusiness» mit der integrierten digitalen Zeiterfassung «digiZeit» ermöglicht für über 900 Mitarbeitende,' +
-        ' von den Bauarbeitenden über die Schreiner bis hin zu den Energieberatern, eine einfache und bedienerfreundliche Rapportierung,' +
-        ' reduziert damit erheblich den Administrativaufwands und schafft zeitnah aktuelle Projektdaten',
+        'Die interne Kommunikationsplattform «MyBusiness» mit der integrierten digitalen Zeiterfassung «digiZeit» ermöglicht nun allen Berufsgruppen,' +
+        ' von den Bauarbeitern über die Architekten bis hin zu den Energieberatern, eine einfache und bedienerfreundliche Rapportierung, reduziert damit erheblich' +
+        ' den Administrativaufwand und schafft in Echtzeit Projektdaten. Neu können sich alle Mitarbeitenden kontextspezifisch miteinander austauschen, alle nötigen Informationen' +
+        ' sind an einem Ort für alle verfügbar. Zudem können alle Arbeiten digital dokumentiert und aufgetragen werden. Es ist jederzeit ersichtlich, wer, was bis wann zu erledigen hat.' +
+        ' In der zweiten Phase wurde die Kommunikationsplattform um Funktionen wie Kontexträume, todos und den Ressourcenplaner erweitert.',
       imageSources: [
         'img/references/GLB1.png',
         'img/references/GLB2.png',
@@ -294,16 +313,22 @@
     {
       appName: 'Bienvenu',
       companyDescription:
-        'Die Stiftung IdéeSport engagiert sich im Bereich der Kinder- und Jugendförderung.' +
-        ' Sie nutzt Sport als Mittel der Suchtprävention, der Gesundheitsförderung und der gesellschaftlichen Integration.',
-      situation: 'Die manuelle Eingangskontrolle bei Events, die auf Excel basiert, ist fehleranfällig und zeitaufwändig.' +
-        ' Dies führt oft zu langen Warteschlangen beim Check-In der Teilnehmer.',
-      challenges: 'Die Übermittlung der Eventdaten an die ERP-Lösung von ABACUS. ' +
-        'Offlinenutzung in den Eventhallen mit unzureichender Netzverbindung. ',
-      solutions: 'Einfach, bedienbare, intuitive Event-App. Wichtige Teilnehmerdaten in Echtzeit verfügbar.' +
-              ' Zb Notfallkontakt, Alter, Schulhaus, usw. Verbesserte Teilnehmer Eingangskontrolle.' +
-              ' (Lange Warteschlange werden verhinder Teilnehmer müssen nur noch einmalig erfasst werden,' +
-              ' Stammdaten sind hinterlegt und können für zukünftige Events schnell und einfach gesucht werden. ',
+        'Seit 1999 setzt sich IdeéSport aktiv für die Kinder- und Jugendförderung in der Schweiz ein. Durch die Nutzung von Sport als Instrument' +
+        ' fördert das Unternehmen die Suchtprävention, Gesundheitsförderung und gesellschaftliche Integration. Mit seinen Programmen eröffnet' +
+        ' IdeéSport brachliegende Räume für Sport und Begegnung, schafft damit die Grundlage für regelmäßige Treffpunkte über kulturelle und' +
+        ' gesellschaftliche Grenzen hinweg und ist in mehr als 120 Gemeinden in allen Sprachregionen der Schweiz vertreten.',
+      situation:
+        'Die bisherige manuelle Eingangskontrolle durch die IDS-Coaches bei Events, basierend auf Excel, erwies sich als fehleranfällig und zeitaufwendig.' +
+        ' Dies führte häufig zu langen Warteschlangen beim Check-In der Teilnehmer. Zusätzlich mussten die Daten der Teilnehmenden im Anschluss an den Event' +
+        ' manuell ins ERP-System übertragen werden.',
+      challenges:
+        'Die Übermittlung der Eventdaten an die ERP-Lösung von ABACUS umfasste eine komplexe Datenstruktur. Gleichzeitig gibt es in den Eventhallen oft eine' +
+        ' unzureichende Netzverbindung, besonders bei der Offline-Nutzung, das stellte das Projektteam vor Herausforderungen, für welche Lösungen gesucht werden mussten.',
+      solutions:
+        'Eine einfach zu bedienende und intuitive Event-App wurde implementiert. Wichtige Teilnehmerdaten, wie Notfallkontakt, Alter und Schulhaus,' +
+        ' sind nun in Echtzeit verfügbar. Die gesamte Eingangskontrolle wurde verbessert, lange Warteschlangen vermieden, und Teilnehmer müssen' +
+        ' nur noch einmalig erfasst werden. Die notwendigen Stammdaten sind hinterlegt und können für zukünftige Events schnell und einfach abgerufen' +
+        ' werden. Die Selbstanmeldung via QR-Code ermöglicht einen noch schnelleren Einlass.',
       imageSources: [
         'img/references/Bienvenu1.png',
         'img/references/Bienvenu2.png',
@@ -317,21 +342,22 @@
     {
       appName: 'myWalo',
       companyDescription:
-        'Verankert in der Schweiz und international tätig wird WALO als Familienunternehmen in 4. und 5. Generation geführt. ' +
-        'Seit über 100 Jahren setzt WALO auf die Verbindung von Beständigkeit und Innovation.',
+        'Verankert in der Schweiz und international tätig wird WALO Bertschinger AG als Familienunternehmen in 4. und 5. Generation geführt.' +
+        ' Seit über 100 Jahren setzt WALO Bertschinger AG auf die Verbindung von Beständigkeit und Innovation.',
       situation:
-        'Die Walo Baumaschinen waren geografisch verstreut, ohne eine klare Übersicht über die genauen GPS-Daten, um ihren Standort zu bestimmen.' +
-        ' Dokumentationen in den Anlagen gingen immer wieder verloren, und Zertifikate für Baustellenprüfungen waren nicht leicht zugänglich.' +
-        ' Der Prozess zur Eröffnung von Baustellen, Etappen oder Gewerken über ABACUS gestaltete sich mühsam. Die Maschinen wurden vernachlässigt,' +
-        ' nicht sachgemäss verwendet und blieben oft zu lange ohne Wartungsservice.',
+        'Die Walo Bertschinger AG Anlagen waren geografisch verstreut, ohne eine klare Übersicht über genaue GPS-Daten, um ihren Standort zu bestimmen.' +
+        ' Dokumentationen in den Anlagen gingen verloren, und Zertifikate für Baustellenprüfungen waren schwer zugänglich. Der Prozess zur Eröffnung von' +
+        ' Baustellen über die ERP Lösung ABACUS gestaltete sich mühsam und es gab Probleme bei der sachgemässen Verwendung der Maschinen sowie Unklarheiten' +
+        ' im Wartungsserviceprozess. Daten aus diversen Umsystemen waren nicht überall verfügbar, und die Datenqualität bei Walo Bertschinger AG war ein grosses Anliegen.' +
+        ' Ausserdem wurden viele verschiedene Anlagen auf Baustellen benötigt, jedoch waren diese für die Mitarbeiter nicht ersichtlich, und Informationen mussten vom Werkhof eingeholt werden.',
       challenges:
-        'Daten aus 4 Umsystemen dort verfügbar machen – wo sie gebraucht werden. Datenqualität bei Walo war ebenfalls ein Thema.',
+        'Die Herausforderungen bestanden darin, Daten aus diversen Umsystemen dort verfügbar zu machen, wo sie gebraucht wurden.' +
+        ' Zusätzlich sollte eine klare und kompakte Anzeige von Anlageinformationen im Mobileformat gewährleistet werden.',
       solutions:
-        'Die Applikation kann dank unserem Datahub verschiedene Prozesse digital im Feld anbieten (Daten aus den vier Umsystemen) ABACUS, Inventar/Verwaltung, ' +
-        'BauBit, Sharepoint, DMS, Fleetmanagment.<br>' +
-        ' <strong>Funktionen</strong>: <br>' +
-        ' Nach Anlagen suchen und finden. Indexierung. Dokumente, Bedienungsanleitungen in div. Sprachen, ' +
-        'Maschinenstunden etc. verfügbar. Baustellen können direkt eröffnet werden und der Mitarbeiter kann persönliche HR-Daten abrufen.',
+        'myWalo konnte dank unserem Datahub „mLink“ verschiedene Prozesse digital im Feld anbieten und Daten aus diversen Systemen wie: ABACUS, Digitale Bauakte, Visual Planning, Baubit, Kyberna, BLP (Kreditorenworkflow),' +
+        ' Sharepoint, DMS und Fleetmanagment zur Verfügung stellen. Die App-Funktionen umfassten die Suche und das Finden von Anlagen, Indexierung, Verfügbarkeit von Dokumenten und Bedienungsanleitungen in verschiedenen Sprachen,' +
+        ' Angabe von Maschinenstunden und mehr. Baustellen konnten direkt eröffnet werden und die Mitarbeitenden haben Zugriff auf persönliche HR-Daten. Jeder Walo Mitarbeiter kann den gesamten Inventarstamm der Walo Bertschinger AG' +
+        ' einsehen, wichtige Dokumente jeder Anlage sind jederzeit verfügbar, und bei Anlagen mit Kyburz GPS kann die aktuelle Position sowie die Nutzung bestimmt werden.',
       imageSources: [
         'img/references/MyWalo1.png',
         'img/references/MyWalo2.png',
