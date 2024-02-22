@@ -1,31 +1,13 @@
 <script lang="ts">
   import Picture from '$lib/index/Picture.svelte'
-  import type { GhostPost } from '../../routes/stories/utils'
-  export interface FeaturedContent {
-    quote?: {
-      content: string
-      person: string
-      images: File
-      imageCss?: string
-      personTitle: string
-      linkedin: string
-      email: string
-      highlight?: 'green' | 'blue'
-    }
-    categories: [
-      {
-        title: string
-        content?: string
-        steps?: { title: string; content: string }
-        posts?: GhostPost[]
-      }
-    ]
-  }
+  import type {FeaturedContent} from "$lib/components/FeaturedContent";
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
-
   export let content: FeaturedContent
 </script>
+<style>
+
+</style>
 
 {#if content}
   <div class="bg-white">
@@ -114,6 +96,11 @@
                   {@html category.content}
                 </p>
               {/if}
+              {#if category.quote}
+                <blockquote class="bg-transparent border-l-4 border-l-gray-500 mx-8 p-4 rounded-xl my-6 text-gray-500" >
+                  {@html category.quote}
+                </blockquote>
+              {/if}
               {#if category.steps}
                 <ul class="-mb-8 mt-6">
                   {#each category.steps as step, i}
@@ -140,11 +127,11 @@
                   {/each}
                 </ul>
               {/if}
-              <div class="flex flex-col lg:flex-row lg:flex-nowrap lg:overflow-hidden gap-x-4 gap-y-16 mt-16 lg:mt-8">
-                {#if category.posts}
+              {#if category.posts && category.posts.length === 3}
+                <div class="flex flex-col lg:flex-row lg:flex-nowrap lg:overflow-hidden gap-x-4 gap-y-16 mt-16 lg:mt-8">
                   {#each category.posts as post}
                     <div class="max-w-sm flex flex-row">
-                      <a href="/stories/{post.slug}" class="break-inside-avoid flex flex-col group rounded-md">
+                      <a href="/stories/{post.slug}" class="break-inside-avoid flex flex-col rounded-md hover:opacity-80">
                         <div class="relative rounded-xl rounded-b-none h-60 overflow-hidden shadow">
                           <img
                             src={post.image.src}
@@ -154,7 +141,7 @@
                             alt={post.image.alt}
                             data-width={post.image.width}
                             data-height={post.image.height}
-                            class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top group-hover:opacity-75"
+                            class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top"
                           />
                           <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
                         </div>
@@ -167,10 +154,68 @@
                       </a>
                     </div>
                   {/each}
+                    </div>
+                {/if}
+                {#if category.posts && category.posts.length === 2}
+                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-4 gap-y-8 mt-16 lg:mt-8">
+                  {#each category.posts as post, index}
+                    <div class="flex flex-row mt-2">
+                      <a href="/stories/{post.slug}" class="break-inside-avoid flex flex-row {index % 2 === 1 ? 'flex-row-reverse' : ''} rounded-md hover:opacity-80">
+                        <div class="relative rounded-xl {index % 2 === 1 ? 'rounded-l-none' : 'rounded-r-none'} h-60  w-[33%] overflow-hidden shadow">
+                          <img
+                                  src={post.image.src}
+                                  srcset={post.image.srcset}
+                                  sizes={post.image.sizes}
+                                  loading="lazy"
+                                  alt={post.image.alt}
+                                  data-width={post.image.width}
+                                  data-height={post.image.height}
+                                  class="object-cover rounded-xl {index % 2 === 1 ? 'rounded-l-none' : 'rounded-r-none'} overflow-hidden block h-60 max-w-auto w-full object-left-top"
+                          />
+                          <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
+                        </div>
+                        <div
+                                class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between {index % 2 === 1 ? 'rounded-r-none' : 'rounded-l-none'} h-60 rounded-xl shadow max-w-[66%]"
+                        >
+                          <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
+                          <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                        </div>
+                      </a>
+                    </div>
+                  {/each}
+                  </div>
+                {/if}
+                {#if category.posts && category.posts.length === 1}
+                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-4 gap-y-16 mt-16 lg:mt-8 ">
+                  {#each category.posts as post}
+                    <div class="flex flex-row mt-2">
+                      <a href="/stories/{post.slug}" class="break-inside-avoid flex flex-row rounded-md hover:opacity-80">
+                        <div class="relative rounded-xl rounded-r-none h-60 w-[33%] overflow-hidden shadow">
+                          <img
+                                  src={post.image.src}
+                                  srcset={post.image.srcset}
+                                  sizes={post.image.sizes}
+                                  loading="lazy"
+                                  alt={post.image.alt}
+                                  data-width={post.image.width}
+                                  data-height={post.image.height}
+                                  class="object-cover rounded-xl rounded-r-none overflow-hidden block h-60 max-w-auto w-full object-left-top"
+                          />
+                          <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
+                        </div>
+                        <div
+                                class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-l-none h-60 rounded-xl shadow max-w-[66%]"
+                        >
+                          <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
+                          <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                        </div>
+                      </a>
+                    </div>
+                  {/each}
+                  </div>
                 {/if}
               </div>
             </div>
-          </div>
         {/each}
       </div>
     </div>
