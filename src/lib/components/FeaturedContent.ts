@@ -10,6 +10,8 @@ export interface FeaturedContent {
     linkedin: string
     email: string
     highlight?: 'green' | 'blue'
+    contactButton: string
+    customLogos?: string[]
   }
   categories: [
     {

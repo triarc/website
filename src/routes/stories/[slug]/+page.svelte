@@ -1,7 +1,9 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte'
+  import ContactForm from "$lib/components/ContactForm.svelte";
   import type { PageData } from './$types'
   export let data: PageData
+  export let contactString: string = data.title
 </script>
 
 <div class="bg-white min-h-screen px-12 md:px-24 py-16 md:py-24 w-full">
@@ -25,4 +27,5 @@
     <div>{@html data.html}</div>
   </div>
 </div>
+<ContactForm {contactString}/>
 <Footer />

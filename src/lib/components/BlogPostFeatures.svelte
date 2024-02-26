@@ -1,6 +1,7 @@
 <script lang="ts">
   import Picture from '$lib/index/Picture.svelte'
   import type {FeaturedContent} from "$lib/components/FeaturedContent";
+  import Partners from "$lib/index/Partners.svelte";
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
@@ -53,7 +54,7 @@
               <figcaption class="mt-8 text-base {content.quote.highlight ? 'text-gray-900' : 'text-gray-600'}">
                 <div class="font-semibold">{content.quote.person}</div>
                 <div class="mt-1">{content.quote.personTitle}</div>
-                <div class="flex space-x-6 mt-4 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
+                <div class="flex flex-row gap-x-4 mt-4 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
                   {#if content.quote.linkedin}
                     <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                       <svg
@@ -77,8 +78,16 @@
                     </a>
                   {/if}
                 </div>
+                <div class="flex justify-center my-8">
+                  <a class="rounded bg-blue-triarc text-white px-6 py-2 inline-block" href="#contactform">{content.quote.contactButton}</a>
+                </div>
               </figcaption>
             </figure>
+            <div class="flex flex-col gap-y-8 my-8">
+              {#each content.quote.customLogos as customLogo}
+                <img src={customLogo} alt="{customLogo} image">
+              {/each}
+            </div>
           </div>
         </div>
       </div>
@@ -217,6 +226,7 @@
               </div>
             </div>
         {/each}
+        <Partners />
       </div>
     </div>
   </div>

@@ -5,10 +5,13 @@
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import heroImage from '/src/lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
   import type {MappedPost} from "./+page";
+  import Partners from "$lib/index/Partners.svelte";
+  import ContactForm from "$lib/components/ContactForm.svelte";
 
 
 
   export let data
+  export let contactString: string = 'Iris direkt kontaktieren'
   let content =
     {
       quote: {
@@ -20,6 +23,8 @@
         linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
         email: 'iris@triarc-labs.com',
         highlight: 'green',
+        contactButton: 'Iris kontaktieren',
+        customLogos: ['/img/partners/bso_logo_desktop.svg']
       },
       categories: [
         {
@@ -83,5 +88,7 @@
     image={heroImage}
   />
   <BlogPostFeatures bind:content />
+<!--  <Partners />-->
+  <ContactForm {contactString}/>
   <FooterNoContact />
 </div>
