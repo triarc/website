@@ -2,6 +2,7 @@
   import Picture from '$lib/index/Picture.svelte'
   import type {FeaturedContent} from "$lib/components/FeaturedContent";
   import Partners from "$lib/index/Partners.svelte";
+  import ConsultationCustomers from "$lib/index/ConsultationCustomers.svelte";
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
@@ -53,7 +54,7 @@
               </blockquote>
               <figcaption class="mt-8 text-base {content.quote.highlight ? 'text-gray-900' : 'text-gray-600'}">
                 <div class="font-semibold">{content.quote.person}</div>
-                <div class="mt-1">{content.quote.personTitle}</div>
+                <div class="mt-1">{@html content.quote.personTitle}</div>
                 <div class="flex flex-row gap-x-4 mt-4 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
                   {#if content.quote.linkedin}
                     <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
@@ -226,7 +227,7 @@
               </div>
             </div>
         {/each}
-        <Partners />
+        <ConsultationCustomers />
       </div>
     </div>
   </div>

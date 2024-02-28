@@ -5,7 +5,6 @@
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import heroImage from '/src/lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
   import type {MappedPost} from "./+page";
-  import Partners from "$lib/index/Partners.svelte";
   import ContactForm from "$lib/components/ContactForm.svelte";
 
 
@@ -19,11 +18,12 @@
           'Der Mensch digitalisiert für die Menschen - wir stellen den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
         person: 'Iris Zenegaglia',
         images: iris,
-        personTitle: 'Digitalisierungs-und Organisationsberaterin / Coach(bso i.A) / Partnerin',
+        personTitle: 'Digitalisierungs/Organisationsberaterin <br> ' +
+                'Coach (bso i.A) <br> Partnerin',
         linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
         email: 'iris@triarc-labs.com',
         highlight: 'green',
-        contactButton: 'Iris kontaktieren',
+        contactButton: 'Kontaktiere mich',
         customLogos: ['/img/partners/bso_logo_desktop.svg']
       },
       categories: [
