@@ -18,11 +18,11 @@
       <div
         class="{content.quote.highlight
           ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
-          : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 lg:h-screen"
+          : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 "
       >
-        <div class="">
+        <div class="lg:sticky lg:top-20">
         <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center px-8 gap-x-8 lg:ml-auto">
-          <div class="-mt-8 w-full ">
+          <div class="-mt-8 w-full">
             <div class="relative aspect-[3/4] h-full flex justify-center items-center">
               <Picture
                 height="280"
@@ -95,7 +95,7 @@
         </div>
       </div>
       </div>
-      <div class="lg:h-screen lg:overflow-auto lg:overscroll-auto flex-grow group ">
+      <div class="flex-grow group ">
         {#each content.categories as category}
           <div class="bg-gray-100 even:bg-white ">
             <div class="px-8 py-8 max-w-4xl lg:pr-16 lg:mr-auto">
