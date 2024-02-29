@@ -36,21 +36,12 @@
         {
           title: 'Analysieren sie ihr Digitalisierungspotential',
           content:'',
-          quote: '<p class="text-gray-900 text-md">Patric Masar von Helvetas: </p> \n' +
-                  '<i>"Dank der effizienten und zielorientierten Methodik konnten wir in nur zwei von Triarc moderierten halbtägigen Workshops ' +
-                  'ein umfassendes Konzept für eine Zeiterfassunges und Spesenapp mit dem Erweiterungspotential für eine vielzahl weiterer ' +
-                  'Anwendung erarbeiten. Neben dem definieren der Kernanforderungen haben wir in Brainstormingsessions auch Ideen für zukünftige ' +
-                  'Anwendungsgebiete der App erarbeitet. Es ist erstaunlich welche Vielzahl an guten und realisierbaren Ideen daraus resultierten."</i>',
             posts: data.posts.potential as MappedPost[]
         },
         {
           title: 'Visions-und Strategieentwicklung',
           content:
             'Für eine Transformation braucht es ein konkretes Zielbild. Wir entwickeln zusammen mit unseren Kunden eine Vision und Strategie ihrer Digitalisierung. Daraus entstehen Massnahmen für die konkrete Umsetzung und schlussendlich Erreichung des Zielbildes. So wird die massgeschneiderte Software für das ganze Unternehmen zum vollen Erfolg! ',
-          quote: '<p class="text-gray-900 text-md">Andrea Isler von Analytica: </p> \n' +
-                  '<i>"Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern."\n' +
-                  '"Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.\n' +
-                  'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg."</i>',
           posts: data.posts.vision as MappedPost[]
         },
         {
@@ -71,6 +62,25 @@
           posts: data.posts.coaching as MappedPost[]
         },
       ],
+      testimonials: [
+        {
+          logo: '/img/customer/analytica-logo-main.svg',
+          quote: {
+            source: 'Andrea Isler von Analytica',
+            content: '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
+                    'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
+                    'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»'}
+        },
+        {
+          logo: '/img/customer/helvetas.gif',
+          quote: {
+            source: 'Patric Masar von Helvetas',
+            content:'«Dank der effizienten und zielorientierten Methodik konnten wir in nur zwei von Triarc moderierten halbtägigen Workshops ' +
+                    'ein umfassendes Konzept für eine Zeiterfassunges und Spesenapp mit dem Erweiterungspotential für eine vielzahl weiterer ' +
+                    'Anwendung erarbeiten. Neben dem definieren der Kernanforderungen haben wir in Brainstormingsessions auch Ideen für zukünftige ' +
+                    'Anwendungsgebiete der App erarbeitet. Es ist erstaunlich welche Vielzahl an guten und realisierbaren Ideen daraus resultierten.»'}
+        },
+      ]
     }
 </script>
 

@@ -17,9 +17,15 @@ export interface FeaturedContent {
     {
       title: string
       content?: string
-      quote?: string
+      quote?: { source: string; content: string }
       steps?: { title: string; content: string }
       posts?: MappedPost[]
     }
   ]
+  testimonials: Testimonial[]
+}
+
+export interface Testimonial {
+  logo: string
+  quote: { source: string; content: string }
 }

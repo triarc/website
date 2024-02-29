@@ -1,8 +1,9 @@
 <script lang="ts">
   import Picture from '$lib/index/Picture.svelte'
   import type {FeaturedContent} from "$lib/components/FeaturedContent";
-  import Partners from "$lib/index/Partners.svelte";
   import ConsultationCustomers from "$lib/index/ConsultationCustomers.svelte";
+  import Testimonials from "$lib/index/Testimonials.svelte";
+  import Container from "$lib/components/Container.svelte";
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
@@ -19,7 +20,8 @@
           ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
           : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 lg:h-screen"
       >
-        <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center gap-x-8 px-16 lg:px-8 lg:ml-auto">
+        <div class="px-8 lg:pl-16">
+        <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center gap-x-8 lg:ml-auto">
           <div class="-mt-8 w-full ">
             <div class="relative aspect-[3/4] h-full flex justify-center items-center">
               <Picture
@@ -92,10 +94,11 @@
           </div>
         </div>
       </div>
+      </div>
       <div class="lg:h-screen lg:overflow-auto lg:overscroll-auto flex-grow group ">
         {#each content.categories as category}
           <div class="bg-gray-100 even:bg-white ">
-            <div class="px-16 lg:px-8 py-8 max-w-4xl lg:mr-auto">
+            <div class="px-8 py-8 max-w-4xl lg:pl-8 lg:pr-16 lg:mr-auto">
               {#if category.title}
                 <h2 class="mt-3 text-2xl font-bold text-gray-600">
                   {@html category.title}
@@ -226,6 +229,9 @@
                 {/if}
               </div>
             </div>
+        {/each}
+        {#each content.testimonials as testimonial}
+          <Testimonials {testimonial} />
         {/each}
         <ConsultationCustomers />
       </div>
