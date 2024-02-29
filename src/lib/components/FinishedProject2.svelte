@@ -11,33 +11,26 @@
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10 ">
   <Container>
-  <div class="mx-auto max-w-5xl px-6 lg:px-8">
-    <div class="mx-auto max-w-5xl sm:text-center">
+  <div class="mx-auto">
+    <div class="sm:text-center">
       <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{appName}</p>
       <p class="mt-6 text-lg leading-8 text-gray-600">{companyDescription}</p>
     </div>
   </div>
-  <div class="relative overflow-y-visible pt-8">
-    <div class="mx-auto max-w-5xl px-6 lg:px-8">
+  <div class="relative flex items-center justify-center pt-8">
       <img
         src={imageSource}
-        alt="App screenshot"
-        class=" rounded-md shadow-xl ring-1 ring-gray-900/10"
+        alt="{appName} App screenshot"
+        class=" rounded-md lg:h-[600px] w-auto shadow-xl ring-1 ring-gray-900/10 "
         width="2432"
         height="1442"
       />
-      <div class="relative" aria-hidden="true">
-        <!--        <div class="absolute -inset-x-20 bottom-0 bg-gradient-to-t from-white pt-[7%]" />-->
-      </div>
-    </div>
   </div>
-  <div class="mx-auto mt-16 max-w-5xl px-6 sm:mt-5 md:mt-10 lg:px-8">
+  <div class="mt-16 sm:mt-5 md:mt-10">
     <dl
       class="mx-auto flex flex-col gap-x-6 gap-y-16 text-base leading-8 text-gray-600 lg:mx-0 lg:max-w-7xl lg:gap-x-4 lg:gap-y-16"
     >
-      <!--            <div class="overflow-hidden rounded-lg">-->
-      <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative pl-0 " style="max-width: 75ch">
+      <div class="relative pl-0 max-w-[75ch]">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -53,11 +46,7 @@
         </dt>
         <dd class="inline-block pt-3">{situation}</dd>
       </div>
-      <!--                </div>-->
-      <!--            </div>-->
-      <!--            <div class="overflow-hidden rounded-lg">-->
-      <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative lg:ml-56 md:ml-56 " style="max-width: 75ch">
+      <div class="relative lg:self-end max-w-[75ch] lg:w-[75ch]">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -73,11 +62,7 @@
         </dt>
         <dd class="inline-block pt-3">{challenges}</dd>
       </div>
-      <!--                </div>-->
-      <!--</div>-->
-      <!--            <div class="overflow-hidden rounded-lg col-span-2">-->
-      <!--                <div class="px-4 py-5 sm:p-6">-->
-      <div class="relative pl-0 " style="max-width: 75ch">
+      <div class="relative pl-0 max-w-[75ch]">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -93,8 +78,6 @@
         </dt>
         <dd class="inline-block pt-3">{solutions}</dd>
       </div>
-      <!--                </div>-->
-      <!--            </div>-->
     </dl>
   </div>
   </Container>

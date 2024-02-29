@@ -1,6 +1,7 @@
 <script lang="ts">
   import emblaCarouselSvelte from 'embla-carousel-svelte'
   import type { EmblaCarouselType } from 'embla-carousel'
+  import Container from "$lib/components/Container.svelte";
   export let appName: string
   export let companyDescription: string
   export let situation: string
@@ -19,21 +20,22 @@
 </script>
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10 ">
-  <div class="mx-auto max-w-5xl px-6 lg:px-8">
-    <div class="mx-auto max-w-5xl sm:text-center">
+  <Container>
+  <div class="mx-auto">
+    <div class="sm:text-center">
       <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{appName}</p>
       <p class="mt-6 text-lg leading-8 text-gray-600">{companyDescription}</p>
     </div>
   </div>
   <div class="relative overflow-hidden pt-8">
-    <div class="mx-auto max-w-5xl px-6 lg:px-8">
+    <div class="mx-auto max-w-5xl">
       <div class="embla">
         <div class="embla__viewport" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
           <div class="embla__container ">
             {#each imageSources as imageSource}
               <div class="embla__slide">
                 <div class="embla__slide__inner">
-                  <img class="embla__slide__img" src={imageSource} alt="Screenshot of " {appName} />
+                  <img class="embla__slide__img max-h-[450px] lg:max-h-[600px]" src={imageSource} alt="Screenshot of " {appName} />
                 </div>
               </div>
             {/each}
@@ -74,13 +76,12 @@
           >
         </button>
       </div>
-    </div>
   </div>
-  <div class="mx-auto mt-16 max-w-5xl px-6 sm:mt-5 md:mt-10 lg:px-8">
+  <div class="mt-16 sm:mt-5 md:mt-10">
     <dl
       class="mx-auto flex flex-col gap-x-6 gap-y-16 text-base leading-8 text-gray-600 lg:mx-0 lg:max-w-7xl lg:gap-x-4 lg:gap-y-16"
     >
-      <div class="relative pl-0 " style="max-width: 75ch">
+      <div class="relative pl-0 max-w-[75ch]">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -96,7 +97,7 @@
         </dt>
         <dd class="inline-block pt-3">{situation}</dd>
       </div>
-      <div class="relative lg:ml-56 md:ml-56 " style="max-width: 75ch">
+      <div class="relative max-w-[75ch] lg: w-[75ch] lg:self-end ">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -112,7 +113,7 @@
         </dt>
         <dd class="inline-block pt-3">{challenges}</dd>
       </div>
-      <div class="relative pl-0 " style="max-width: 75ch">
+      <div class="relative pl-0 max-w-[75ch]">
         <dt class="inline font-semibold text-gray-900 pl-9">
           <svg
             class="absolute left-1 top-1 h-6 w-6"
@@ -130,6 +131,8 @@
       </div>
     </dl>
   </div>
+  </div>
+  </Container>
 </div>
 
 <style>
@@ -182,18 +185,18 @@
     justify-content: center;
   }
   .embla__slide__img {
-    max-height: 40vh;
+
   }
   .embla__button {
     background-color: transparent;
     position: absolute;
+    display: grid;
     z-index: 1;
     top: 50%;
     transform: translateY(-50%);
     border: 0;
     width: 5rem;
     height: 5rem;
-    justify-content: center;
     align-items: center;
     cursor: pointer;
     padding: 0;
@@ -203,8 +206,7 @@
     opacity: 0.5;
     width: 3.5rem;
     height: 3.5rem;
-    position: absolute;
-    right: 0;
+    justify-self: end;
   }
 
   .embla__button__svg__prev {
@@ -212,28 +214,28 @@
     opacity: 0.5;
     width: 3.5rem;
     height: 3.5rem;
-    position: absolute;
-    left: 0;
+   justify-self: start;
   }
 
   .embla__button--prev {
-    left: -1.5rem;
+    left: 0;
+    z-index: 10;
   }
   /* Desktop */
   @media (min-width: 992px) {
     .embla__button--prev {
-      left: -2rem;
+
     }
   }
 
   .embla__button--next {
-    right: -1.5rem;
+    right: 0;
+    z-index: 10;
   }
 
   /* Desktop */
   @media (min-width: 992px) {
     .embla__button--next {
-      right: -2rem;
     }
   }
   /*.embla__dots {*/
