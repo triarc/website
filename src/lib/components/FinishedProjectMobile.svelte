@@ -182,7 +182,7 @@
     justify-content: center;
   }
   .embla__slide__img {
-    max-height: 80vh;
+    max-height: 40vh;
   }
   .embla__button {
     background-color: transparent;

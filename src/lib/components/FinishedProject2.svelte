@@ -1,4 +1,6 @@
 <script lang="ts">
+  import Container from "$lib/components/Container.svelte";
+
   export let appName: string
   export let companyDescription: string
   export let situation: string
@@ -8,6 +10,7 @@
 </script>
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10 ">
+  <Container>
   <div class="mx-auto max-w-5xl px-6 lg:px-8">
     <div class="mx-auto max-w-5xl sm:text-center">
       <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{appName}</p>
@@ -94,4 +97,6 @@
       <!--            </div>-->
     </dl>
   </div>
+  </Container>
 </div>
+

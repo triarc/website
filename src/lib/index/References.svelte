@@ -193,7 +193,7 @@
         'Dokumente digital im Feld zur Verfügung stellen.',
       solutions:
         'Effizienz im Ablauf, umfassende Rückverfolgbarkeit des gesamten Prozesses (einschliesslich sofortiger Integration von unterzeichneten Lieferscheinen durch Kunden in das ERP), digitale Verfügbarkeit von Transportpapieren und ADR-Papieren, jeweils angepasst an die spezifische Tour. Die Ladeliste für Lastwagen wird automatisch für den Fahrer generiert, und die Tourenoptimierung basiert auf automatisierten Fahrzeiten. Neue Mitarbeiter in der Disposition und Fahrer können ohne umfassende Kenntnisse der Anwendung direkt mit ihrer Arbeit beginnen.',
-      imageSource: 'img/references/chauffeur.png',
+      imageSource: 'img/references/Chauffeur.png',
     },
     // {
     //   appName: 'Verba',
