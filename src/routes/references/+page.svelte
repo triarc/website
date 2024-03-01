@@ -7,7 +7,7 @@
   import Block from '$lib/components/Block.svelte'
   import dave from '../../../static/team/dave.jpg?width=500&format=webp;png&metadata'
   import heroImage from '/src/lib/assets/hero/Projekte.jpg?width=300;600;1000;2000&format=webp&metadata'
-  import Partners from "$lib/index/Partners.svelte";
+  import Partners from '$lib/index/Partners.svelte'
 
   let content: BlockContent = {
     quote: {

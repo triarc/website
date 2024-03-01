@@ -1,6 +1,6 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte'
-  import ContactForm from "$lib/components/ContactForm.svelte";
+  import ContactForm from '$lib/components/ContactForm.svelte'
   import type { PageData } from './$types'
   export let data: PageData
   export let contactString: string = data.title
@@ -27,5 +27,5 @@
     <div>{@html data.html}</div>
   </div>
 </div>
-<ContactForm {contactString}/>
+<ContactForm {contactString} />
 <Footer />
