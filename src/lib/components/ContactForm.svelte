@@ -37,7 +37,7 @@
 </script>
 
 <div class="bg-gray-100 flex-grow" id="contactform">
-  <Container>
+  <Container class="ml-0">
     <div class="py-16">
       <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Kontaktformular</h2>
       <h3 class="text-lg mt-3 font-medium text-gray-500">Interessiert? Schreib uns eine Nachricht</h3>

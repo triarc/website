@@ -2,13 +2,10 @@
   import Hero from '$lib/components/Hero.svelte'
   import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
-  import FooterNoContact from '$lib/components/FooterNoContact.svelte'
-  import heroImage from '/src/lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '../../lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
   import type { MappedPost } from './+page'
-  import ContactForm from '$lib/components/ContactForm.svelte'
 
   export let data
-  export let contactString = 'Iris direkt kontaktieren'
   let content = {
     quote: {
       content:
@@ -21,6 +18,7 @@
       highlight: 'green',
       contactButton: 'Kontaktiere mich',
       customLogos: ['/img/partners/bso_logo_desktop.svg'],
+      contactString: 'Iris direkt kontaktieren',
     },
     categories: [
       {
@@ -98,7 +96,4 @@
     image={heroImage}
   />
   <BlogPostFeatures bind:content />
-  <!--  <Partners />-->
-  <ContactForm {contactString} />
-  <FooterNoContact />
 </div>

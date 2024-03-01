@@ -4,6 +4,8 @@
   import ConsultationCustomers from '$lib/index/ConsultationCustomers.svelte'
   import Testimonials from '$lib/index/Testimonials.svelte'
   import Container from '$lib/components/Container.svelte'
+  import FooterNoContact from "$lib/components/FooterNoContact.svelte";
+  import ContactForm from "$lib/components/ContactForm.svelte";
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
@@ -97,7 +99,8 @@
       <div class="flex-grow group ">
         {#each content.categories as category}
           <div class="bg-gray-100 even:bg-white ">
-            <div class="px-8 py-8 max-w-4xl lg:pr-16 lg:mr-auto">
+            <Container class="ml-0">
+              <div class="py-8 lg:py-16">
               {#if category.title}
                 <h2 class="mt-3 text-2xl font-bold text-gray-600">
                   {@html category.title}
@@ -247,15 +250,22 @@
                   {/each}
                 </div>
               {/if}
-            </div>
+              </div>
+            </Container>
           </div>
         {/each}
         {#each content.testimonials as testimonial, i}
           <Testimonials {testimonial} {i} />
         {/each}
+
+
+        <!--  <Partners />-->
+        <ContactForm bind:contactString={content.quote.contactString} />
       </div>
     </div>
   </div>
+
+  <FooterNoContact />
 {/if}
 
 <style>
