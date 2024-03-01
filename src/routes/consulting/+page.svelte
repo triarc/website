@@ -8,7 +8,7 @@
   import ContactForm from '$lib/components/ContactForm.svelte'
 
   export let data
-  export let contactString: string = 'Iris direkt kontaktieren'
+  export let contactString = 'Iris direkt kontaktieren'
   let content = {
     quote: {
       content:
