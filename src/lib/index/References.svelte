@@ -324,5 +324,3 @@
     imageSources={mobileProject.imageSources}
   />
 {/each}
-
-
