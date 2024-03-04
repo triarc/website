@@ -9,6 +9,8 @@
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
+
+  console.log(content)
 </script>
 
 {#if content}
@@ -98,7 +100,8 @@
       </div>
       <div class="flex-grow group ">
         {#each content.categories as category}
-          <div class="bg-gray-100 even:bg-white ">
+          <div class=" {category.highlight
+        ? 'bg-' + content.quote.highlight + '-triarc bg-opacity-20' : 'bg-gray-100 even:bg-white'}">
             <Container class="ml-0">
               <div class="py-8 lg:py-16">
               {#if category.title}
@@ -143,34 +146,42 @@
                 </ul>
               {/if}
               {#if category.posts && category.posts.length === 3}
-                <div class="flex flex-col lg:flex-row lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-16 mt-16 lg:mt-8">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-x-8 gap-y-16 mt-16">
                   {#each category.posts as post}
-                    <div class="max-w-sm flex flex-row">
-                      <a
-                        href="/stories/{post.slug}"
-                        class="break-inside-avoid flex flex-col rounded-md hover:opacity-80"
-                      >
-                        <div class="relative rounded-xl rounded-b-none h-60 overflow-hidden shadow">
-                          <img
-                            src={post.image.src}
-                            srcset={post.image.srcset}
-                            sizes={post.image.sizes}
-                            loading="lazy"
-                            alt={post.image.alt}
-                            data-width={post.image.width}
-                            data-height={post.image.height}
-                            class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top"
-                          />
-                          <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
+                    <a href="/stories/{post.slug}"
+                       class="relative shadow isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80">
+                      <img
+                        src={post.image.src}
+                        srcset={post.image.srcset}
+                        sizes={post.image.sizes}
+                        loading="lazy"
+                        alt={post.image.alt}
+                        data-width={post.image.width}
+                        data-height={post.image.height}
+                        class="absolute inset-0 -z-10 h-full w-full object-cover object-top"
+                      />
+
+                      <div class="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
+                      <div class="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10"></div>
+
+                      <div class="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
+                        <time datetime="2020-03-16" class="mr-8">{post.published_at.toLocaleDateString()}</time>
+                        <div class="-ml-4 flex items-center gap-x-4">
+                          <svg viewBox="0 0 2 2" class="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50">
+                            <circle cx="1" cy="1" r="1" />
+                          </svg>
+                          <div class="flex gap-x-2.5">
+                            {content.quote.person}
+                          </div>
                         </div>
-                        <div
-                          class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-t-none h-60 rounded-xl shadow"
-                        >
-                          <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
-                          <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                      </div>
+                      <h3 class="mt-3 text-lg font-semibold leading-6 text-white">
+                        <div>
+                          <span class="absolute inset-0"></span>
+                          {post.title}
                         </div>
-                      </a>
-                    </div>
+                      </h3>
+                    </a>
                   {/each}
                 </div>
               {/if}
@@ -252,12 +263,24 @@
               {/if}
               </div>
             </Container>
+
+            {#if category.testimonial}
+              <div class="py-16 bg-white">
+                <Container class="ml-0">
+                  <Testimonials bind:testimonial={category.testimonial}  />
+                </Container>
+              </div>
+            {/if}
           </div>
         {/each}
-        {#each content.testimonials as testimonial, i}
-          <Testimonials {testimonial} {i} />
-        {/each}
 
+        {#if content.testimonials}
+        {#each content.testimonials as testimonial}
+          <Container class="ml-0 bg-gray-100 even:bg-white">
+            <Testimonials bind:testimonial={testimonial}  />
+          </Container>
+        {/each}
+        {/if}
 
         <!--  <Partners />-->
         <ContactForm bind:contactString={content.quote.contactString} />

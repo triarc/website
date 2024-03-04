@@ -20,12 +20,14 @@ export interface FeaturedContent {
       quote?: { source: string; content: string }
       steps?: { title: string; content: string }
       posts?: MappedPost[]
+      testimonial?: Testimonial,
+      highlight?: 'green' | 'blue'
     }
-  ]
-  testimonials: Testimonial[]
+  ],
+  testimonials?: Testimonial[]
 }
 
 export interface Testimonial {
   logo: string
-  quote: { source: string; content: string }
+  quote: { source: string; sourceSubtitle: string, content: string }
 }

@@ -16,8 +16,8 @@
       linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
       email: 'iris@triarc-labs.com',
       highlight: 'green',
-      contactButton: 'Kontaktiere mich',
-      customLogos: ['/img/partners/bso_logo_desktop.svg'],
+      contactButton: 'Kontakt',
+      customLogos: [],
       contactString: 'Iris direkt kontaktieren',
     },
     categories: [
@@ -25,19 +25,27 @@
         title: 'Beratung',
         content:
           'Unser Digitalisierungsberatungsteam stellt sicher, dass die Digitalisierung für ein Unternehmen zum Erfolg wird. <br/><br/>Dafür ist nicht nur eine hochwertige Software relevant, sondern vor allem, dass sie genutzt wird und ihren Zweck erfüllt. Dies wird erreicht, wenn die Prozesse, Strukturen, Organisationskultur und Mitarbeiter sich mit dem technischen Fortschritt weiterentwickeln. <br/><br/>Wir unterstützen unsere Kunden bei der Analyse und Identifizierung von Chancen, Erstellung einer Transformations-Roadmap und der Umsetzung der definierten Massnahmen.',
-        posts: data.posts.consulting as MappedPost[],
+        posts: [...data.posts.consulting, ...data.posts.potential, ...data.posts.vision ] as MappedPost[],
       },
       {
-        title: 'Analysieren sie ihr Digitalisierungspotential',
-        content: '',
-        posts: data.posts.potential as MappedPost[],
+        // title: 'Visions-und Strategieentwicklung',
+        // content:
+        //   'Für eine Transformation braucht es ein konkretes Zielbild. Wir entwickeln zusammen mit unseren Kunden eine Vision und Strategie ihrer Digitalisierung. Daraus entstehen Massnahmen für die konkrete Umsetzung und schlussendlich Erreichung des Zielbildes. So wird die massgeschneiderte Software für das ganze Unternehmen zum vollen Erfolg! ',
+        testimonial: {
+          logo: '/img/customer/helvetas.gif',
+          quote: {
+            source: 'Patric Masar',
+            sourceSubtitle: 'Helvetas',
+            content:
+              '«Dank der effizienten und zielorientierten Methodik konnten wir in nur zwei von Triarc moderierten halbtägigen Workshops ' +
+              'ein umfassendes Konzept für eine Zeiterfassunges und Spesenapp mit dem Erweiterungspotential für eine vielzahl weiterer ' +
+              'Anwendung erarbeiten. Neben dem definieren der Kernanforderungen haben wir in Brainstormingsessions auch Ideen für zukünftige ' +
+              'Anwendungsgebiete der App erarbeitet. Es ist erstaunlich welche Vielzahl an guten und realisierbaren Ideen daraus resultierten.»',
+          },
+        },
+        //highlight: 'green',
       },
-      {
-        title: 'Visions-und Strategieentwicklung',
-        content:
-          'Für eine Transformation braucht es ein konkretes Zielbild. Wir entwickeln zusammen mit unseren Kunden eine Vision und Strategie ihrer Digitalisierung. Daraus entstehen Massnahmen für die konkrete Umsetzung und schlussendlich Erreichung des Zielbildes. So wird die massgeschneiderte Software für das ganze Unternehmen zum vollen Erfolg! ',
-        posts: data.posts.vision as MappedPost[],
-      },
+
       {
         title: 'Change Management. Der Mensch steht im Mittelpunkt.',
         content:
@@ -45,9 +53,20 @@
         posts: data.posts.changeManagement as MappedPost[],
       },
       {
-        title: 'Strukturen und Prozesse',
-        content:
-          'Ein verbundenes IT-Ökosystem, das passende Organisationsmodell und die richtigen Qualifikationen ebnen den Weg der Digitalisierung. Wir analysieren den Status quo und zeigen Chancen auf.<br/><br/>Bevor wir neue Technologien und Software einführen analysieren und optimieren wir die betroffenen Geschäftsprozesse und passen sie an das neue digitale Arbeitsmodell an.',
+        // title: 'Strukturen und Prozesse',
+        // content:
+        //   'Ein verbundenes IT-Ökosystem, das passende Organisationsmodell und die richtigen Qualifikationen ebnen den Weg der Digitalisierung. Wir analysieren den Status quo und zeigen Chancen auf.<br/><br/>Bevor wir neue Technologien und Software einführen analysieren und optimieren wir die betroffenen Geschäftsprozesse und passen sie an das neue digitale Arbeitsmodell an.',
+        testimonial: {
+          logo: '/img/customer/analytica-logo-main.svg',
+          quote: {
+            source: 'Andrea Isler',
+            sourceSubtitle: 'Analytica',
+            content:
+              '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
+              'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
+              'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»',
+          },
+        },
       },
       {
         title:
@@ -57,29 +76,31 @@
         posts: data.posts.coaching as MappedPost[],
       },
     ],
-    testimonials: [
-      {
-        logo: '/img/customer/analytica-logo-main.svg',
-        quote: {
-          source: 'Andrea Isler von Analytica',
-          content:
-            '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
-            'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
-            'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»',
-        },
-      },
-      {
-        logo: '/img/customer/helvetas.gif',
-        quote: {
-          source: 'Patric Masar von Helvetas',
-          content:
-            '«Dank der effizienten und zielorientierten Methodik konnten wir in nur zwei von Triarc moderierten halbtägigen Workshops ' +
-            'ein umfassendes Konzept für eine Zeiterfassunges und Spesenapp mit dem Erweiterungspotential für eine vielzahl weiterer ' +
-            'Anwendung erarbeiten. Neben dem definieren der Kernanforderungen haben wir in Brainstormingsessions auch Ideen für zukünftige ' +
-            'Anwendungsgebiete der App erarbeitet. Es ist erstaunlich welche Vielzahl an guten und realisierbaren Ideen daraus resultierten.»',
-        },
-      },
-    ],
+    // testimonials: [
+    //   {
+    //     logo: '/img/customer/helvetas.gif',
+    //     quote: {
+    //       source: 'Patric Masar',
+    //       sourceSubtitle: 'Helvetas',
+    //       content:
+    //         '«Dank der effizienten und zielorientierten Methodik konnten wir in nur zwei von Triarc moderierten halbtägigen Workshops ' +
+    //         'ein umfassendes Konzept für eine Zeiterfassunges und Spesenapp mit dem Erweiterungspotential für eine vielzahl weiterer ' +
+    //         'Anwendung erarbeiten. Neben dem definieren der Kernanforderungen haben wir in Brainstormingsessions auch Ideen für zukünftige ' +
+    //         'Anwendungsgebiete der App erarbeitet. Es ist erstaunlich welche Vielzahl an guten und realisierbaren Ideen daraus resultierten.»',
+    //     },
+    //   },
+    //   {
+    //     logo: '/img/customer/analytica-logo-main.svg',
+    //     quote: {
+    //       source: 'Andrea Isler',
+    //       sourceSubtitle: 'Analytica',
+    //       content:
+    //         '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
+    //         'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
+    //         'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»',
+    //     },
+    //   },
+    // ]
   }
 </script>
 
