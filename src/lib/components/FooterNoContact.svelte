@@ -17,14 +17,22 @@
       <div class="flex flex-col justify-end items-center md:items-end mt-16 md:mt-0">
         <div class="mb-6">Keine Cookies aus Überzeugung</div>
 
-        <div class="flex justify-center">
+        <div class="flex justify-center items-center gap-x-4">
+
+          <a href="https://www.bso.ch/" target="_blank" rel="noreferrer">
+            <img src="/img/partners/bso_logo_desktop.svg" alt="bso" width="200" height="30" />
+          </a>
+
+          <div>|</div>
+
           <a
             href="https://www.swissmadesoftware.org/en/companies/triarc-laboratories-ltd./home.html"
             rel="noreferrer"
             target="_blank"
           >
-            <img src="/logos/swiss-logo.png" width="200" height="30" alt="swissmadesoftware" />
+            <img src="/logos/swiss-logo-trim.png" width="200" height="30" alt="swissmadesoftware" />
           </a>
+
         </div>
       </div>
     </div>
