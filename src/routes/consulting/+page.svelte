@@ -7,10 +7,6 @@
   import type { MappedPost } from './+page'
   import ContactForm from '$lib/components/ContactForm.svelte'
 
-
-
-
-
   export let data
   export let contactString = 'Iris direkt kontaktieren'
   let content = {
