@@ -46,11 +46,11 @@
           <label for="subject" class="block text-sm font-medium text-gray-900">Betreff</label>
           <div class="mt-1">
             <input
-                    type="text"
-                    name="subject"
-                    id="subject"
-                    bind:value={subject}
-                    class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+              type="text"
+              name="subject"
+              id="subject"
+              bind:value={subject}
+              class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
             />
           </div>
         </div>
