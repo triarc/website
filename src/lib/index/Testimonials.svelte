@@ -6,7 +6,7 @@
 </script>
 
 <div class="bg-gray-100 even:bg-white ">
-  <div class="px-8 py-16 max-w-4xl lg:pr-16 lg:mr-auto">
+  <div class="px-8 py-8 max-w-4xl lg:pr-16 lg:mr-auto">
     <div class="grid lg:grid-cols-3 gap-8 items-center">
       <img
         height="80"

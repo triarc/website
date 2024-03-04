@@ -1,9 +1,7 @@
 <script lang="ts">
   import Picture from '$lib/index/Picture.svelte'
   import type { FeaturedContent } from '$lib/components/FeaturedContent'
-  import ConsultationCustomers from '$lib/index/ConsultationCustomers.svelte'
   import Testimonials from '$lib/index/Testimonials.svelte'
-  import Container from '$lib/components/Container.svelte'
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
