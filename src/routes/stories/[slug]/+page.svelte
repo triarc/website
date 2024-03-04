@@ -5,13 +5,16 @@
   export let data: PageData
   export let contactString: string = data.title
   import { onMount } from 'svelte'
+  import Container from "$lib/components/Container.svelte";
+  import FooterNoContact from "$lib/components/FooterNoContact.svelte";
   export function nav_back() {
     window.history.back()
   }
 </script>
 
-<div class="bg-white min-h-screen px-12 md:px-24 py-16 md:py-24 w-full">
-  <div class="prose lg:prose-xl prose-img:rounded-xl prose-a:text-blue-triarc mx-auto">
+<div class="bg-white min-h-screen pt-16 md:pt-24 w-full">
+  <Container>
+  <div class="prose max-w-none lg:prose-xl prose-img:rounded-xl prose-a:text-blue-triarc mx-auto">
     <div class="flex space-x-2 items-center bg-white mb-2">
       <a on:click={() => nav_back()} class="flex items-center text-blue-triarc fill-blue-triarc">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 448 512"
@@ -30,6 +33,7 @@
     <h1 class="text-4xl mb-3 font-bold">{data.title}</h1>
     <div>{@html data.html}</div>
   </div>
+  </Container>
 </div>
 <ContactForm {contactString} />
-<Footer />
+<FooterNoContact />
