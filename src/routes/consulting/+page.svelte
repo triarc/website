@@ -53,9 +53,10 @@
       },
       {
         title:
-          '<a class="flex flex-row items-center gap-x-2" target="_blank" href="https://www.coaching-digitalisierung.ch">Führungs-, Team- und Mitarbeiter Coaching <img class="inline-block"  width="20px" height="20px" src="src/lib/assets/icons/up-right-from-square-solid.svg" alt="external link icon"></a>',
+          'Führungs-, Team- und Mitarbeiter Coaching',
         content:
-          'Die digitale Transformation birgt unzählige und vielschichtige Herausforderungen und Stolpersteine. Wir begleiten und befähigen Führungskräfte, Mitarbeiter und Teams auf dem Weg durch den Wandel. <br/><br/>Wir arbeiten mit einem systemisch-lösungsorientierten Beratungsansatz und verfolgen das Ziel der Selbstbefähigung. Je nach Bedarf agieren wir auch als Sparring-Partner.',
+                'Die digitale Transformation birgt unzählige und vielschichtige Herausforderungen und Stolpersteine. Wir begleiten und befähigen Führungskräfte, Mitarbeiter und Teams auf dem Weg durch den Wandel. <br/><br/>Wir arbeiten mit einem systemisch-lösungsorientierten Beratungsansatz und verfolgen das Ziel der Selbstbefähigung. Je nach Bedarf agieren wir auch als Sparring-Partner.',
+        link: 'https://www.coaching-digitalisierung.ch',
         posts: data.posts.coaching as MappedPost[],
       },
     ],

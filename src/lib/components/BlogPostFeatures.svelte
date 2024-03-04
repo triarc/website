@@ -97,7 +97,8 @@
       <div class="flex-grow group ">
         {#each content.categories as category}
           <div class="bg-gray-100 even:bg-white ">
-            <div class="px-8 py-8 max-w-4xl lg:pr-16 lg:mr-auto">
+            <Container class="ml-0" size="small">
+            <div class="py-8 lg:mr-auto">
               {#if category.title}
                 <h2 class="mt-3 text-2xl font-bold text-gray-600">
                   {@html category.title}
@@ -107,6 +108,15 @@
                 <p class="mt-2 text-base leading-6 text-gray-600">
                   {@html category.content}
                 </p>
+              {/if}
+              {#if category.link}
+                <a
+                        href={category.link}
+                        class="rounded bg-blue-triarc text-white px-3 py-1 inline-block mt-2"
+                        target="_blank"
+                >
+                  Mehr dazu
+                </a>
               {/if}
               {#if category.quote}
                 <blockquote class="bg-transparent border-l-4 border-l-gray-500 mx-8 p-4 rounded-xl my-6 text-gray-500">
@@ -244,14 +254,22 @@
                         </div>
                       </a>
                     </div>
+
                   {/each}
                 </div>
               {/if}
             </div>
+            </Container>
           </div>
+
         {/each}
+
         {#each content.testimonials as testimonial, i}
+          <div class="bg-gray-100 even:bg-white">
+          <Container class="ml-0 " size='small'>
           <Testimonials {testimonial} {i} />
+          </Container>
+          </div>
         {/each}
       </div>
     </div>
