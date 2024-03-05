@@ -1,7 +1,6 @@
 import { error } from '@sveltejs/kit'
-
-/** @type {import('./$types').PageLoad} */
-export function load({ params }) {
+import type { PageLoad } from './$types'
+export const load: PageLoad = ({ params }) => {
   return fetch(
     `https://blog.triarc-labs.com/ghost/api/content/posts/slug/${params.slug}?key=93ed4aea5970c22ed269d4ec35`
   )

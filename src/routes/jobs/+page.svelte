@@ -5,6 +5,7 @@
   import JobIntro from './job-intro.svelte'
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
+  import heroImage from '/src/lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata'
 
   function serializeSchema(jobPosting) {
     return (
@@ -38,7 +39,7 @@
           description: `Beschreibung: Triarc Labs sucht ${jobPosting.claim} 60 - 100%`,
           educationRequirements:
             'Hochschulabschluss in Informatik (ETH/Universität/FH/vergleichbarer Leistungsnachweis).',
-          employmentType: 'Full- or Parttime',
+          employmentType: 'Full- or Part-time',
           experienceRequirements: jobPosting.experienceRequirements,
           incentiveCompensation: 'Beteiligung am Unternehmenserfolg',
           industry: 'Custom Software Development',
@@ -96,28 +97,28 @@
       ],
       experienceRequirements: '5 Jahre Erfahrung mit Angular, dotnet, Postgres, Docker und Kubernetes',
     },
-    {
-      content:
-        'Wir sind Ingenieure: bestausgebildete und praxiserfahrene IT-Fachleute. Wir können, was wir tun. Und tun für unsere Kunden alles, was wir können. Willst du mittun?',
-      claim: 'Professional Software Engineer',
-      img: 'img/jobs/be_the_hero.svg',
-      open: false,
-      responsiblities:
-        'umfassen das ganze Spektrum vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden. Das ist herausfordernd, ja, aber das bringt dich auch weiter. Und du bist nicht allein: In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
-      skills: [
-        'Leidenschaft für die Software Entwicklung',
-        'Hochschulabschluss in Informatik (ETH/FH/vergleichbarer Leistungsnachweis)',
-        'Hohe Methodenkompetenz und logisches, vernetztes Denken',
-        'Spass an der Arbeit im Team',
-        'Lösungsorientiertes Denken und Handeln',
-        'Lernfähigkeit und kontinuierliche Weiterentwicklung',
-        'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
-        '2 Jahre Erfahrung mit Angular und einer objektorientier Sprache wie C# / Java',
-      ],
-      experienceRequirements: '2 Jahre Erfahrung mit Angular und einer objektorientier Sprache wie C# / Java',
-    },
     // {
     //   content:
+    //     'Wir sind Ingenieure: bestausgebildete und praxiserfahrene IT-Fachleute. Wir können, was wir tun. Und tun für unsere Kunden alles, was wir können. Willst du mittun?',
+    //   claim: 'Professional Software Engineer',
+    //   img: 'img/jobs/be_the_hero.svg',
+    //   open: false,
+    //   responsiblities:
+    //     'umfassen das ganze Spektrum vom Design bis zur Lösungsfindung, individuell angepasst auf unsere branchenübergreifenden Kunden. Das ist herausfordernd, ja, aber das bringt dich auch weiter. Und du bist nicht allein: In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobileanwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
+    //   skills: [
+    //     'Leidenschaft für die Software Entwicklung',
+    //     'Hochschulabschluss in Informatik (ETH/FH/vergleichbarer Leistungsnachweis)',
+    //     'Hohe Methodenkompetenz und logisches, vernetztes Denken',
+    //     'Spass an der Arbeit im Team',
+    //     'Lösungsorientiertes Denken und Handeln',
+    //     'Lernfähigkeit und kontinuierliche Weiterentwicklung',
+    //     'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+    //     '2 Jahre Erfahrung mit Angular und einer objektorientierten Sprache wie C# / Java',
+    //   ],
+    //   experienceRequirements: '2 Jahre Erfahrung mit Angular und einer objektorientierten Sprache wie C# / Java',
+    // },
+    // {
+    //  content:
     //     'Möchtest du die Teams im Infrastrukturbereich unterstützen und dich um unsere Kubernetes Cluster und unseren Tech-Stack kümmern? Dann fehlt dir jetzt nur noch ein Klick zum Glück: <a class="underline" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a>',
     //   claim: 'DevOps / Operation Engineer',
     //   img: 'img/jobs/cloud_hosting.svg',
@@ -134,32 +135,32 @@
     //     'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
     //   ],
     //   experienceRequirements:
-    //     'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+    //     'Praktische Erfahrung mit Kubernetes, Docker und GCP, Gute Deutsch- sowie Englisch-Kenntnisse in Wort und Schrift',
     // },
   ]
 
   let contents: BlockContent[] = [
-    {
-      title: '<span class="text-sm">wir suchen</span><br/>Junior Software Engineer',
-      content:
-        'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
-      image: { src: '/img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
-      bulletPoints: [
-        'Erste Erfahrungen mit C# oder Java',
-        'Erste Erfahrungen im Bereich Web / Single Page Applications',
-      ],
-    },
-    {
-      title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
-      content:
-        'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
-      image: { src: '/img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
-      bulletPoints: [
-        "Erfahrungen mit C# in der Entwicklung von API's",
-        'Erfahrungen im Bereich Web und Angular',
-        'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
-      ],
-    },
+    // {
+    //   title: '<span class="text-sm">wir suchen</span><br/>Junior Software Engineer',
+    //   content:
+    //     'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
+    //   image: { src: '/img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
+    //   bulletPoints: [
+    //     'Erste Erfahrungen mit C# oder Java',
+    //     'Erste Erfahrungen im Bereich Web / Single Page Applications',
+    //   ],
+    // },
+    // {
+    //   title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
+    //   content:
+    //     'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
+    //   image: { src: '/img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
+    //   bulletPoints: [
+    //     "Erfahrungen mit C# in der Entwicklung von API's",
+    //     'Erfahrungen im Bereich Web und Angular',
+    //     'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
+    //   ],
+    // },
     {
       title: '<span class="text-sm">wir suchen</span><br/>Senior Software Engineer',
       content:
@@ -198,6 +199,9 @@
 <Hero
   title="Jobs"
   content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte."
+  imageSrc="Jobs"
+  imageAlt="Triarc Jobs Header"
+  image={heroImage}
 />
 <JobIntro />
 

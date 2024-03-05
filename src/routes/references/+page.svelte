@@ -6,6 +6,8 @@
   import type { BlockContent } from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
   import dave from '../../../static/team/dave.jpg?width=500&format=webp;png&metadata'
+  import heroImage from '/src/lib/assets/hero/Projekte.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import Partners from '$lib/index/Partners.svelte'
 
   let content: BlockContent = {
     quote: {
@@ -24,11 +26,18 @@
   <title>Lösungen - triarc-labs</title>
 </svelte:head>
 
-<Hero title="Lösungen" content="Was haben wir vollbracht und woraus ist es entstanden" />
+<Hero
+  title="Lösungen"
+  content="Was haben wir vollbracht und woraus ist es entstanden"
+  imageSrc="Projekte"
+  imageAlt="Triarc Reference Projects Header"
+  image={heroImage}
+/>
 
 <div class="bg-white">
   <References />
   <Block bind:content />
   <Customers />
+  <Partners />
   <Footer />
 </div>
