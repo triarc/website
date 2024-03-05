@@ -11,7 +11,7 @@
       situation:
         'Innovation kam Historisch bedingt zustande. Wir sind spezialisiert auf Anbindungen an (allgemein ERP’s). Mit unserer Echtzeit Datahub-Lösung µLink umgehen' +
         ' wir die Komplexität und Geschwindigkeitsproblematik der ABA-Connect Schnittstelle. 80% unserer Kunden haben ABACUS im Einsatz.',
-      challenges: '???',
+      challenges: '',
       solutions:
         'Mit µLink lassen sich die Datenflüsse zwischen Softwaresystemen zentral observieren. Bei einem Ausfall, einer Abnahme der Leistung oder ' +
         'weiterer konfigurierbarer Parameter kann proaktiv alarmiert werden. Über das Grafana-Dashboard lassen sich alle systemrelevanten Komponenten ' +
@@ -38,45 +38,10 @@
       situation:
         'Alle Prozesse der Kundenauftragsbearbeitung wurden noch manuell auf Papier durchgeführt. Das Ziel bestand darin, gemeinsam eine Work Managment Plattform zu schaffen, um den papierbasierten Kernprozess von der Anamnese bis zur Produktion zu ersetzen.',
       challenges:
-        'Die Vielfalt der Prozesse und Prozessvarianten in verschiedenen Bereichen wie Rollstühle, Schuhe, Orthesen, Prothesen, und in verschiedenen Regionen ergab ein hohes Mass an Komplexität. Die Abstimmung der Auftragsabwicklung mit der Einreichung von Kostenvoranschlägen bei Krankenkassen oder der IV war ebenfalls herausfordernd.',
+        'Die Vielfalt der Prozesse und Prozessvarianten in verschiedenen Bereichen wie Rollstühle, Schuhe, Orthesen, Prothesen, und in verschiedenen Regionen, ergab ein hohes Mass an Komplexität. Die Abstimmung der Auftragsabwicklung mit der Einreichung von Kostenvoranschlägen bei Krankenkassen oder der IV war ebenfalls herausfordernd.',
       solutions:
         'OrthoClient deckt den gesamten Prozess von der Anamnese bis zur interdisziplinären Kommunikation ab. Diese App ermöglicht eine effiziente Auftragsabwicklung und gewährleistet exzellenten Kundenservice. Nach erfolgreicher Einführung wurden weitere Funktionen implementiert, darunter eine zentrale Ansicht aller Informationen und Kommunikation, ein Statusmodell in Abstimmung mit der ERP Lösung ABACUS, ein Chatmodul mit Mentions- und Notifikationen, ein Formulargenerator für die flexible Erstellung von Formularen, sowie die Integration von Trello für die Kommunikation mit der Produktion. Die Kundenerfassung ist direkt ins ERP integriert. Die Bestellung von Artikeln erfolgt nun direkt über die Order App. Diese Massnahmen führen zu verkürzten Durchlaufzeiten bei der Leistungsverrechnung und einer erheblichen Reduzierung des Aufwands in Backoffice und Administration',
       imageSource: 'img/references/wunder-app.png',
-    },
-    {
-      appName: 'Riwaxique',
-      companyDescription:
-        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren als führenden Schweizer Hersteller und Anbieter von Spezialitäten für die Fahrzeugpflege aus.',
-      situation:
-        'Die Geschäftsleitung hatte die Vision, die RIWAX Aussendienst-Mitarbeitenden mit einer digitalen Kundenapplikation optimal und in Echtzeit zu unterstützen und datenbasiert anzuleiten.',
-      challenges:
-        'Die Herausforderung bestand darin, den Aussendienst effizient zu leiten, um sicherzustellen, dass die richtigen Kunden zum optimalen Zeitpunkt besucht werden. Dies erforderte die Bereitstellung aktueller und relevanter Daten über Kunden sowie die Stärkung der Selbstorganisation der Mitarbeiter.',
-      solutions:
-        'Die intergierte Kontakt- und Routenplanung schlägt dem Mitarbeiter automatisch Kunden vor, die sie lange nicht mehr besucht haben, in ihrem Bestellverhalten abweichen oder welche sich ebenfalls auf der jeweiligen Arbeitsroute befinden. Ausserdem können Bestellungen direkt via der App mittels integriertem Bestellwesen und Produktekatalog aufgenommen und ausgelöst werden. Alle benötigten Kundendaten (CRM) sind ebenfalls jederzeit verfügbar. Der Aussendienst setzt seine Zeit nun strategisch im Sinne der Unternehmung ein.',
-      imageSource: 'img/references/Riwax.png',
-    },
-    {
-      appName: 'Vademecum',
-      companyDescription: 'Dr. Ines Schlienger, Psychologin und Sonderpädagogin, Zürich',
-      situation:
-        'Die Digitalisierung des VADEMECUM, finanziert durch ein Crowdfunding, war die Antwort auf die wachsende Nachfrage nach einer modernen Anwendung. Ursprünglich als Papier-Version bekannt und beliebt, bestand der Wunsch, VADEMECUM zu digitalisieren, um die Erfassung von Beobachtungen durch Eltern zu vereinfachen. Dies ermöglichte eine direkte Erfassung von Handlungen inklusive Bildmaterial. Die VADEMECUM App und Webapplikation hat das Ziel, das Zusammenwirken von Fachpersonen und Eltern im Bereich der frühen Diagnostik oder Entwicklungsbegleitung bis zu einem Alter von vier Jahren zu unterstützen und zu vereinfachen.',
-      challenges:
-        'Die Herausforderungen beinhalteten die Notwendigkeit, den Prozess der Papierversion beizubehalten, ihn jedoch gleichzeitig zu digitalisieren. Der Prozess zwischen Administration, Therapeuten und Eltern sollte möglichst einfach gestaltet werden, ebenso wie die Bedienung. Die Lösung sollte kostengünstig sein. Zusätzlich bestand die Schwierigkeit, die Applikation in über 40 Sprachen anbieten zu können.',
-      solutions:
-        'Die VADEMECUM Mobilapplikation bietet eine einfache Erfassung des Beobachtungskatalogs zu einem bestimmten Zeitpunkt, einschließlich der Möglichkeit zur Zusatzdokumentation durch Kommentare und Bilder. Die Webapplikation ermöglicht eine umfassende Übersicht über alle Klienten und Beobachtungszeitpunkte. Die einfache Vergleichbarkeit mit verschiedenen Verhaltensmatrizen erleichtert Therapeuten die Identifikation möglicher Entwicklungsschwächen. Insgesamt bietet die Digitalisierung von VADEMECUM eine zeitgemäße Lösung, die den Informationsaustausch zwischen allen Beteiligten verbessert und den Diagnoseprozess bis zum Alter von vier Jahren unterstützt. Aktuell kommt VADEMECUM weltweit, wie Beispielsweise in der Mongolei, zum Einsatz.',
-      imageSource: 'img/references/Vademecum.png',
-    },
-    {
-      appName: 'CondAct',
-      companyDescription:
-        'Die Stiftung IdéeSport engagiert sich im Bereich der Kinder- und Jugendförderung. Sie nutzt Sport als Mittel der Suchtprävention, der Gesundheitsförderung und der gesellschaftlichen Integration.',
-      situation:
-        'Die Hallenteams, die mit den Kindern im direkten Kontakt sind, brauchten ein Instrument, um den Verhaltenskodex unkompliziert und konsequent während der Veranstaltungen anzuwenden. Dafür wurde eine dreisprachige «CondAct»-App seitens IdeéSport gewünscht.',
-      challenges:
-        'Präventive Lerninhalte spielerisch der digital anspruchsvollen Usergruppe (Jugendliche) zu vermitteln.',
-      solutions:
-        'Die App bietet eine Vielzahl von Lernvideos zum Thema Verhaltenskodex und Risikosituationen für Coaches (Jugendliche) die mit Kindern arbeiten. Nach der Wissensvermittlung gibt es Kontrollfragen. Um das Ganze spielerischer zu gestalten, stehen verschiedene Level zur Verfügung, ein persönlicher Avatar kann erstellt werden, und ein Buddy steht mit hilfreichen Tipps und Tricks zur Seite.',
-      imageSource: 'img/references/CondAct.png',
     },
     {
       appName: 'Ortho-Order',
@@ -102,22 +67,34 @@
         ' wobei die Interessen des Einkaufs gewahrt sind. Das System teilt die Bestellungen auf die Lieferanten auf, ermöglicht die präzise' +
         ' Dokumentation des Wareneingangs und die direkte Erfassung von Retouren. Die Möglichkeit, Bestellung und Rechnung des Lieferanten' +
         ' side-by-side zu prüfen und freizugeben, trägt weiter zur Effizienzsteigerung bei.',
-      imageSource: 'img/references/OrthoOrder.png',
+      imageSource: 'img/references/ortho-order.png',
+    },
+    {
+      appName: 'Riwaxique',
+      companyDescription:
+        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren als führenden Schweizer Hersteller und Anbieter von Produkten für die Fahrzeugpflege aus.',
+      situation:
+        'Die Geschäftsleitung hatte die Vision, die RIWAX Aussendienst-Mitarbeitenden mit einer digitalen Kundenapplikation optimal und in Echtzeit zu unterstützen und datenbasiert anzuleiten.',
+      challenges:
+        'Die Herausforderung bestand darin, den Aussendienst effizient zu leiten, um sicherzustellen, dass die richtigen Kunden zum optimalen Zeitpunkt besucht werden. Dies erforderte die Bereitstellung aktueller und relevanter Daten über Kunden sowie die Stärkung der Selbstorganisation der Mitarbeiter.',
+      solutions:
+        'Die intergierte Kontakt- und Routenplanung schlägt dem Mitarbeiter automatisch Kunden vor, die sie lange nicht mehr besucht haben, in ihrem Bestellverhalten abweichen oder welche sich ebenfalls auf der jeweiligen Arbeitsroute befinden. Ausserdem können Bestellungen direkt via der App mittels integriertem Bestellwesen und Produktekatalog aufgenommen und ausgelöst werden. Alle benötigten Kundendaten (CRM) sind ebenfalls jederzeit verfügbar. Der Aussendienst setzt seine Zeit nun strategisch im Sinne der Unternehmung ein.',
+      imageSource: 'img/references/riwax.png',
     },
     {
       appName: 'Fastspace',
       companyDescription:
         'Die Espace Real Estate Holding AG (Espace) ist eine Immobilienanlagegesellschaft mit Sitz in Solothurn. Die Gesellschaft investiert in Immobilien in den Kantonen Bern, Solothurn, Aargau, Luzern und Schaffhausen.',
       situation:
-        'Der Wunsch war die Immobilienbewirtschaftung ins digitale Zeitalter zu bewegen. Neues Businessmodell für das Jahr 2023. Ihre Mieter sollen ganz unkompliziert ohne grosse analoge Hürden eine Wohnung, Lagerräume, Parkplatz, Hobbyraum mieten. Papierlos, schnell, unkompliziert und komplett Digital.',
+        'Der Wunsch war die Immobilienbewirtschaftung ins digitale Zeitalter zu bewegen. Ihre Mieter sollen ganz unkompliziert ohne grosse administrative Hürden eine Wohnung, Lagerräume, Parkplatz, Hobbyraum mieten. Papierlos, schnell, unkompliziert und komplett digital.',
       challenges:
         'Auf Mieterseite: Einbindung in den neuen Prozess, die Zahlungsabwicklungen via  Stripe' +
         ' (nur Zahlungen mit Kreditkarten sind möglich) dies führte zu Einschränken.\n' +
         'Auf Verwaltungsseite: die gesamte Abwicklung (Mietprozess) digital zu lösen, Konzeptionell Prozesse darstellen' +
         ' ohne grosse Erfahrungswerte.',
       solutions:
-        'Mehr Flexibilität auf beiden Seiten (Mieter wie auch Vermieter) schnellere Abwicklungen des Mietprozesse. Die Lösung bietet die Möglichkeit kurzfristige Mietverhältnisse anbieten zu können.',
-      imageSource: 'img/references/Fastspace.png',
+        'Mehr Flexibilität auf beiden Seiten (Mieter wie auch Vermieter) und schnellere Abwicklungen der Mietprozesse. Die Lösung bietet ausserdem die Möglichkeit kurzfristige Mietverhältnisse abschliessen zu können.',
+      imageSource: 'img/references/fastspace.png',
     },
     {
       appName: 'CAL',
@@ -125,12 +102,12 @@
         'Die Christen Holding AG wird heute noch von der Gründerfamilie geführt. Als einer der grössten Arbeitgeber' +
         ' im Kanton Schwyz ist sie die erfolgreiche Baupartnerin für private und öffentliche Bauherrschaften.',
       situation:
-        'Die alte Logistiklösung für Dispositionen der Fahrzeuge, wurde vom bevorstehenden Anbieter nicht mehr Unterstützt sprich Weiterentwickelt. Dies veranlasste die Christen AG eine eigene Custom Lösung zu bauen, damit der gesamte End to End Prozess von der Logistik, zum Chauffeur und Endkunden digital abgebildet werden kann.',
+        'Die alte Logistiklösung für Dispositionen der Fahrzeuge, wurde vom bevorstehenden Anbieter nicht mehr unterstützt sprich weiterentwickelt. Dies veranlasste die Christen AG eine eigene Custom Lösung zu bauen, damit der gesamte End to End Prozess von der Logistik, zum Chauffeur bis zum Endkunden digital abgebildet werden kann.',
       challenges:
         'Der gesamte Fahrzeugpark musste integriert werden. Der sehr komplexe analoge Prozess umfasste viele verschiedene Ausnahmen im Bereich der Anforderungen und Wünsche auf der Userseite.  Ausserdem wurde eine Schnittstelle zwischen ABACUS und der Applikation benötigt, um Daten wie Kundenstamm, Abrechnungsprozess, Auftragsverwaltungen in der Applikation anzubieten.',
       solutions:
-        'Verbesserte und transparentere Kommunikation zwischen Dispo und Chauffeuren. Auftragserteilung erfolgt nun direkt von CAL aus nach TomTom. Eine Echtzeit-Routenberechnung wurde ebenfalls integriert, dies hilft der Dispo die Planung effizienter zu gestalten. Die automatische Rapportierung und Verrechnung erbrachten Leistungen, minimiert den Administrationsaufwand und beugt Missverständnissen vor.',
-      imageSource: 'img/references/CAL.png',
+        'Verbesserte und transparentere Kommunikation zwischen Dispo und Chauffeuren. Auftragserteilung erfolgt nun direkt von CAL aus nach TomTom. Eine Echtzeit-Routenberechnung wurde ebenfalls integriert, dies hilft der Dispo die Planung effizienter zu gestalten und Leerfahrten zu vermeiden. Die automatische Rapportierung und Verrechnung erbrachten Leistungen, minimiert den Administrationsaufwand und beugt Missverständnissen vor.',
+      imageSource: 'img/references/cal.png',
     },
     {
       appName: 'M3 Express',
@@ -138,24 +115,24 @@
         'Liver IT AG – möchte die Digitalisierung im Bauwesen vorantreiben. Transparent und' +
         ' zugänglich Schüttgut, Transport und Mulden anbieten.',
       situation:
-        'Ivan – Gründer und  leidenschaftlicher Gartenbauer, war ein frustierter Jungunternehmer – viele Prozesse immer noch' +
-        ' Analog sind sprich via Telefon koordiniert werden. Es gab diverse Probleme mit vielen Fehlerquellen, keine Transparenz. ',
+        'Ivan – Gründer und  leidenschaftlicher Gartenbauer, war ein frustierter Jungunternehmer' +
+        ' – viele Prozesse waren analog und mussten via Telefon koordiniert werden. Es gab diverse Probleme mit vielen Fehlerquellen, keine Transparenz. ',
       challenges:
-        'Auf Lieferantenseite: Kies- und Muldentransportunternehmen zu überzeugen, mitzumachen.\n' +
-        'Auf Kundenseite: Für die Nutzer, einen effizienten Prozess abzubilden (von der Baustelle bis zum Lieferanten) diverse Zielgruppen' +
+        'Auf Lieferantenseite:\n Kies- und Muldentransportunternehmen zu überzeugen mitzumachen.\n' +
+        'Auf Kundenseite:\n Für die Nutzer, einen effizienten Prozess abzubilden (von der Baustelle bis zum Lieferanten) diverse Zielgruppen' +
         ' (Gartenbauer, Polier, etc.) mit sämtlichen Bedürfnissen abholen zu können – alle sollen Digital arbeiten. Für einen' +
         ' verbesserten Kommunikations- und Informationsfluss.',
       solutions:
-        'Lieferantenseiten: Flexible Planung von Fahrer und Fahrzeuge, Kommunikationsfluss vom Kunden bis zum eigentlichen' +
+        'Auf Lieferantenseite:\n Flexible Planung von Fahrer und Fahrzeuge, Kommunikationsfluss vom Kunden bis zum eigentlichen' +
         ' Lieferanten zu gewährleisten. Mehr Transparenz. \n' +
-        'Kundenseite: Digital und in Echtzeit alle Information zur Bestellung überwachen können und alle Informationen zugänglich zu haben' +
+        'Auf Kundenseite:\n Digital und in Echtzeit alle Information zur Bestellung überwachen können und alle Informationen zugänglich zu haben.' +
         'M3 Express vereinfacht den digitalen Zugang zu Schüttgut, Transport und Mulden auch für kleine Unternehmungen.',
-      imageSource: 'img/references/M3Express.png',
+      imageSource: 'img/references/m3express.png',
     },
     {
       appName: 'Chauffeur APP',
       companyDescription:
-        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren als führenden Schweizer Hersteller und Anbieter von Spezialitäten für die Fahrzeugpflege aus.',
+        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren als führenden Schweizer Hersteller und Anbieter von Produkten für die Fahrzeugpflege aus.',
       situation:
         'Sämtliche Prozesse in der Logistik fanden auf Papier statt. Die nötigen Informationen zu den Aufträgen wurden im ERP System Abacus ausgedruckt. Logistik wurden manuell organisiert. Mitarbeiter ohne grossen Erfahrungsschatz brauchten lange Einarbeitungszeit.',
       challenges:
@@ -163,7 +140,7 @@
         'Dokumente digital im Feld zur Verfügung stellen.',
       solutions:
         'Effizienz im Ablauf, umfassende Rückverfolgbarkeit des gesamten Prozesses (einschliesslich sofortiger Integration von unterzeichneten Lieferscheinen durch Kunden in das ERP), digitale Verfügbarkeit von Transportpapieren und ADR-Papieren, jeweils angepasst an die spezifische Tour. Die Ladeliste für Lastwagen wird automatisch für den Fahrer generiert, und die Tourenoptimierung basiert auf automatisierten Fahrzeiten. Neue Mitarbeiter in der Disposition und Fahrer können ohne umfassende Kenntnisse der Anwendung direkt mit ihrer Arbeit beginnen.',
-      imageSource: 'img/references/Chauffeur.png',
+      imageSource: 'img/references/chauffeur.png',
     },
     // {
     //   appName: 'Verba',
@@ -193,12 +170,12 @@
       solutions:
         'Die Erfassung von Tagesrapporten auf den Baustellen wurde durch die gemeinsam entwickelte Applikation «SutterApp» um ein Vielfaches übersichtlicher und effizienter. Mitarbeiter werden im Rapportierungsprozess unterstützt, da die SutterApp Plandaten aus dem ERP-System ABACUS für Rollen, Inventar, Material und Fremdleistungen vorschlägt. Zusätzlich können Schnellbausteine und die Historie-Funktion genutzt werden.',
       imageSources: [
-        'img/references/Sutter1.png',
-        'img/references/Sutter2.png',
-        'img/references/Sutter3.png',
-        'img/references/Sutter1.png',
-        'img/references/Sutter2.png',
-        'img/references/Sutter3.png',
+        'img/references/sutter1.png',
+        'img/references/sutter2.png',
+        'img/references/sutter3.png',
+        'img/references/sutter1.png',
+        'img/references/sutter2.png',
+        'img/references/sutter3.png',
       ],
     },
     {
@@ -227,13 +204,38 @@
         ' Es ist jederzeit ersichtlich, wer, was bis wann zu erledigen hat. In der zweiten Phase wurde die Kommunikationsplattform' +
         ' um Funktionen wie Kontexträume, Todos und den Ressourcenplaner erweitert.',
       imageSources: [
-        'img/references/GLB1.png',
-        'img/references/GLB2.png',
-        'img/references/GLB3.png',
-        'img/references/GLB4.png',
-        'img/references/GLB5.png',
-        'img/references/GLB6.png',
-        'img/references/GLB7.png',
+        'img/references/glb1.png',
+        'img/references/glb2.png',
+        'img/references/glb3.png',
+        'img/references/glb4.png',
+        'img/references/glb5.png',
+        'img/references/glb6.png',
+        'img/references/glb7.png',
+      ],
+    },
+    {
+      appName: 'CondAct',
+      companyDescription:
+        'Die Stiftung IdéeSport engagiert sich im Bereich der Kinder- und Jugendförderung. Sie nutzt Sport als Mittel der Suchtprävention, der Gesundheitsförderung und der gesellschaftlichen Integration.',
+      situation:
+        'Die Hallenteams, die mit den Kindern im direkten Kontakt sind, brauchten ein Instrument, um den Verhaltenskodex unkompliziert und konsequent während der Veranstaltungen anzuwenden und die Coaches für das Thema zu schulen und zu sensibilisieren. In allen drei Landessprachen.',
+      challenges:
+        'Präventive Lerninhalte spielerisch der digital anspruchsvollen Usergruppe (Jugendliche) zu vermitteln.',
+      solutions:
+        'Die App bietet eine Vielzahl von Lernvideos zum Thema Verhaltenskodex und Risikosituationen für Coaches (Jugendliche) die mit Kindern arbeiten. Nach der Wissensvermittlung gibt es Kontrollfragen. Um das Ganze spielerischer zu gestalten, stehen verschiedene Level zur Verfügung, ein persönlicher Avatar kann erstellt werden, und ein Buddy steht mit hilfreichen Tipps und Tricks zur Seite.',
+      imageSources: [
+        'img/references/cond-act1.png',
+        'img/references/cond-act2.png',
+        'img/references/cond-act3.png',
+        'img/references/cond-act4.png',
+        'img/references/cond-act5.png',
+        'img/references/cond-act6.png',
+        'img/references/cond-act7.png',
+        'img/references/cond-act8.png',
+        'img/references/cond-act9.png',
+        'img/references/cond-act10.png',
+        'img/references/cond-act11.png',
+        'img/references/cond-act12.png',
       ],
     },
     {
@@ -247,13 +249,13 @@
       solutions:
         'Einfach, bedienbare, intuitive Event-App. Wichtige Teilnehmerdaten in Echtzeit verfügbar. Zb Notfallkontakt, Alter, Schulhaus, usw. Verbesserte Teilnehmer Eingangskontrolle. (Lange Warteschlange werden verhindert Teilnehmer müssen nur noch einmalig erfasst werden, Stammdaten sind hinterlegt und können für zukünftige Events schnell und einfach gesucht werden.',
       imageSources: [
-        'img/references/Bienvenu1.png',
-        'img/references/Bienvenu2.png',
-        'img/references/Bienvenu3.png',
-        'img/references/Bienvenu4.png',
-        'img/references/Bienvenu5.png',
-        'img/references/Bienvenu6.png',
-        'img/references/Bienvenu7.png',
+        'img/references/bienvenu1.png',
+        'img/references/bienvenu2.png',
+        'img/references/bienvenu3.png',
+        'img/references/bienvenu4.png',
+        'img/references/bienvenu5.png',
+        'img/references/bienvenu6.png',
+        'img/references/bienvenu7.png',
       ],
     },
     {
@@ -280,14 +282,37 @@
         ' kann den gesamten Inventarstamm der Walo Bertschinger AG einsehen, wichtige Dokumente jeder Anlage sind jederzeit verfügbar,' +
         ' und bei Anlagen mit Kyburz GPS kann die aktuelle Position sowie die Nutzung bestimmt werden.',
       imageSources: [
-        'img/references/MyWalo1.png',
-        'img/references/MyWalo2.png',
-        'img/references/MyWalo3.png',
-        'img/references/MyWalo4.png',
-        'img/references/MyWalo1.png',
-        'img/references/MyWalo2.png',
-        'img/references/MyWalo3.png',
-        'img/references/MyWalo4.png',
+        'img/references/my-walo1.png',
+        'img/references/my-walo2.png',
+        'img/references/my-walo3.png',
+        'img/references/my-walo4.png',
+        'img/references/my-walo1.png',
+        'img/references/my-walo2.png',
+        'img/references/my-walo3.png',
+        'img/references/my-walo4.png',
+      ],
+    },
+    {
+      appName: 'Vademecum',
+      companyDescription: 'Dr. Ines Schlienger, Psychologin und Sonderpädagogin, Zürich',
+      situation:
+        'Die Digitalisierung des VADEMECUM, finanziert durch ein Crowdfunding, war die Antwort auf die wachsende Nachfrage nach einer modernen Anwendung. Ursprünglich als Papier-Version bekannt und beliebt, bestand der Wunsch, VADEMECUM zu digitalisieren, um die Erfassung von Beobachtungen durch Eltern zu vereinfachen. Dies ermöglichte eine direkte Erfassung von Handlungen inklusive Bildmaterial. Die VADEMECUM App und Webapplikation hat das Ziel, das Zusammenwirken von Fachpersonen und Eltern im Bereich der frühen Diagnostik oder Entwicklungsbegleitung bis zu einem Alter von vier Jahren zu unterstützen und zu vereinfachen.',
+      challenges:
+        'Die Herausforderungen beinhalteten die Notwendigkeit, den Prozess der Papierversion beizubehalten, ihn jedoch gleichzeitig zu digitalisieren. Der Prozess zwischen Administration, Therapeuten und Eltern sollte möglichst einfach gestaltet werden, ebenso wie die Bedienung. Die Lösung sollte kostengünstig sein. Zusätzlich bestand die Schwierigkeit, die Applikation in über 40 Sprachen anbieten zu können.',
+      solutions:
+        'Die VADEMECUM Mobilapplikation bietet eine einfache Erfassung des Beobachtungskatalogs zu einem bestimmten Zeitpunkt, einschließlich der Möglichkeit zur Zusatzdokumentation durch Kommentare und Bilder. Die Webapplikation ermöglicht eine umfassende Übersicht über alle Klienten und Beobachtungszeitpunkte. Die einfache Vergleichbarkeit mit verschiedenen Verhaltensmatrizen erleichtert Therapeuten die Identifikation möglicher Entwicklungsschwächen. Insgesamt bietet die Digitalisierung von VADEMECUM eine zeitgemäße Lösung, die den Informationsaustausch zwischen allen Beteiligten verbessert und den Diagnoseprozess bis zum Alter von vier Jahren unterstützt. Aktuell kommt VADEMECUM weltweit, wie beispielsweise in der Mongolei, zum Einsatz.',
+      imageSources: [
+        'img/references/vademecum1.png',
+        'img/references/vademecum2.png',
+        'img/references/vademecum3.png',
+        'img/references/vademecum4.png',
+        'img/references/vademecum5.png',
+        'img/references/vademecum6.png',
+        'img/references/vademecum7.png',
+        'img/references/vademecum8.png',
+        'img/references/vademecum9.png',
+        'img/references/vademecum10.png',
+        'img/references/vademecum11.png',
       ],
     },
   ]

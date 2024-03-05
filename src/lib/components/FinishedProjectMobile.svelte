@@ -108,7 +108,7 @@
               </svg>
               Ausgangslage <br />
             </dt>
-            <dd class="inline-block pt-3">{situation}</dd>
+            <dd class="inline-block pt-3 whitespace-pre-line">{situation}</dd>
           </div>
           <div class="relative max-w-[75ch] lg: w-[75ch] lg:self-end ">
             <dt class="inline font-semibold text-gray-900 pl-9">
@@ -124,7 +124,7 @@
               </svg>
               Herausforderungen <br />
             </dt>
-            <dd class="inline-block pt-3">{challenges}</dd>
+            <dd class="inline-block pt-3 whitespace-pre-line">{challenges}</dd>
           </div>
           <div class="relative pl-0 max-w-[75ch]">
             <dt class="inline font-semibold text-gray-900 pl-9">
@@ -140,7 +140,7 @@
               </svg>
               Lösungen und Mehrwerte <br />
             </dt>
-            <dd class="inline-block pt-3">{@html solutions}</dd>
+            <dd class="inline-block pt-3 whitespace-pre-line">{@html solutions}</dd>
           </div>
         </dl>
       </div>

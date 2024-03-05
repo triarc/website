@@ -44,25 +44,27 @@
             </svg>
             Ausgangslage <br />
           </dt>
-          <dd class="inline-block pt-3">{situation}</dd>
+          <dd class="inline-block pt-3 whitespace-pre-line">{situation}</dd>
         </div>
-        <div class="relative lg:self-end max-w-[75ch] lg:w-[75ch]">
-          <dt class="inline font-semibold text-gray-900 pl-9">
-            <svg
-              class="absolute left-1 top-1 h-6 w-6"
-              xmlns="http://www.w3.org/2000/svg"
-              height="1.25em"
-              viewBox="0 0 512 512"
-              ><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-              <path
-                d="M320 0c-17.7 0-32 14.3-32 32V56c0 17.7 14.3 32 32 32h16c8.8 0 16 7.2 16 16s-7.2 16-16 16H320c-17.7 0-32 14.3-32 32v24c0 17.7 14.3 32 32 32h32c0 26.5 21.5 48 48 48s48-21.5 48-48h32c17.7 0 32-14.3 32-32V64c0-35.3-28.7-64-64-64H320zm0 32H448c17.7 0 32 14.3 32 32V176H432c-8.8 0-16 7.2-16 16v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8-7.2-16-16-16H320V152h16c26.5 0 48-21.5 48-48s-21.5-48-48-48H320V32zM64 64C28.7 64 0 92.7 0 128V288 448c0 35.3 28.7 64 64 64H224 384c35.3 0 64-28.7 64-64V304c0-17.7-14.3-32-32-32H368c-17.7 0-32 14.3-32 32v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-17.7-14.3-32-32-32H240V96c0-17.7-14.3-32-32-32H64zM208 96V272H176V256c0-26.5-21.5-48-48-48s-48 21.5-48 48v16H32V128c0-17.7 14.3-32 32-32H208zM80 304c17.7 0 32-14.3 32-32V256c0-8.8 7.2-16 16-16s16 7.2 16 16v16c0 17.7 14.3 32 32 32h32v32H192c-26.5 0-48 21.5-48 48s21.5 48 48 48h16v48H64c-17.7 0-32-14.3-32-32V304H80zM240 432c0-17.7-14.3-32-32-32H192c-8.8 0-16-7.2-16-16s7.2-16 16-16h16c17.7 0 32-14.3 32-32V304h32v16c0 26.5 21.5 48 48 48s48-21.5 48-48V304h48V448c0 17.7-14.3 32-32 32H240V432z"
-              />
-            </svg>
-            Herausforderungen <br />
-          </dt>
-          <dd class="inline-block pt-3">{challenges}</dd>
-        </div>
-        <div class="relative pl-0 max-w-[75ch]">
+        {#if challenges !== ''}
+          <div class="relative lg:self-end max-w-[75ch] lg:w-[75ch]">
+            <dt class="inline font-semibold text-gray-900 pl-9">
+              <svg
+                class="absolute left-1 top-1 h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                height="1.25em"
+                viewBox="0 0 512 512"
+                ><!--! Font Awesome Pro 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M320 0c-17.7 0-32 14.3-32 32V56c0 17.7 14.3 32 32 32h16c8.8 0 16 7.2 16 16s-7.2 16-16 16H320c-17.7 0-32 14.3-32 32v24c0 17.7 14.3 32 32 32h32c0 26.5 21.5 48 48 48s48-21.5 48-48h32c17.7 0 32-14.3 32-32V64c0-35.3-28.7-64-64-64H320zm0 32H448c17.7 0 32 14.3 32 32V176H432c-8.8 0-16 7.2-16 16v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8-7.2-16-16-16H320V152h16c26.5 0 48-21.5 48-48s-21.5-48-48-48H320V32zM64 64C28.7 64 0 92.7 0 128V288 448c0 35.3 28.7 64 64 64H224 384c35.3 0 64-28.7 64-64V304c0-17.7-14.3-32-32-32H368c-17.7 0-32 14.3-32 32v16c0 8.8-7.2 16-16 16s-16-7.2-16-16V304c0-17.7-14.3-32-32-32H240V96c0-17.7-14.3-32-32-32H64zM208 96V272H176V256c0-26.5-21.5-48-48-48s-48 21.5-48 48v16H32V128c0-17.7 14.3-32 32-32H208zM80 304c17.7 0 32-14.3 32-32V256c0-8.8 7.2-16 16-16s16 7.2 16 16v16c0 17.7 14.3 32 32 32h32v32H192c-26.5 0-48 21.5-48 48s21.5 48 48 48h16v48H64c-17.7 0-32-14.3-32-32V304H80zM240 432c0-17.7-14.3-32-32-32H192c-8.8 0-16-7.2-16-16s7.2-16 16-16h16c17.7 0 32-14.3 32-32V304h32v16c0 26.5 21.5 48 48 48s48-21.5 48-48V304h48V448c0 17.7-14.3 32-32 32H240V432z"
+                />
+              </svg>
+              Herausforderungen <br />
+            </dt>
+            <dd class="inline-block pt-3 whitespace-pre-line">{challenges}</dd>
+          </div>
+        {/if}
+        <div class="relative pl-0 {challenges === '' ? 'lg:self-end' : ''} max-w-[75ch]">
           <dt class="inline font-semibold text-gray-900 pl-9">
             <svg
               class="absolute left-1 top-1 h-6 w-6"
@@ -76,7 +78,7 @@
             </svg>
             Lösungen und Mehrwerte <br />
           </dt>
-          <dd class="inline-block pt-3">{solutions}</dd>
+          <dd class="inline-block pt-3 whitespace-pre-line">{solutions}</dd>
         </div>
       </dl>
     </div>
