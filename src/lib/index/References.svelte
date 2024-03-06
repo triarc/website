@@ -9,13 +9,13 @@
         'µLink vereinfacht als zentrale Instanz die Schnittstellenproblematik, vernetzt die verschiedenen Systeme und ermöglicht damit die zentrale Bewirtschaftung ' +
         'der Schnittstellen. So kann mit minimalem Aufwand neue Software ins Ökosystem integriert oder bestehende abgelöst werden.',
       situation:
-        'Innovation kam Historisch bedingt zustande. Wir sind spezialisiert auf Anbindungen an (allgemein ERP’s). Mit unserer Echtzeit Datahub-Lösung µLink umgehen' +
+        'Innovation kam historisch bedingt zustande. Wir sind spezialisiert auf Anbindungen an ERP-Systeme (Enterprise-Resource-Planning). Mit unserer Echtzeit Datahub-Lösung µLink umgehen' +
         ' wir die Komplexität und Geschwindigkeitsproblematik der ABA-Connect Schnittstelle. 80% unserer Kunden haben ABACUS im Einsatz.',
       challenges: '',
       solutions:
         'Mit µLink lassen sich die Datenflüsse zwischen Softwaresystemen zentral observieren. Bei einem Ausfall, einer Abnahme der Leistung oder ' +
         'weiterer konfigurierbarer Parameter kann proaktiv alarmiert werden. Über das Grafana-Dashboard lassen sich alle systemrelevanten Komponenten ' +
-        'in Echtzeit über-wachen und visualisieren.',
+        'in Echtzeit überwachen und visualisieren.',
       imageSource: 'img/references/mLink.png',
     },
     {
@@ -24,7 +24,7 @@
         'Die Tanne, Schweizerische Stiftung für Taubblinde, ist das Kompetenz-Zentrum bei angeborener Hörseh-Behinderung und verwandter mehrfacher ' +
         'Sinnes-Behinderung. Sie begleitet Betroffene in jedem Lebens-Alter',
       situation:
-        'Die PORTA App sollte die digitale Abbildung des Porta Gebärden Katalogs mit Spiel und der Möglichkeit zur Erfassung eigener Gebärden bieten. Eine einfache und intuitive Bedienung stand dabei im Fokus, um auch Personen mit leichten Behinderungen zu erreichen.',
+        'Die PORTA App sollte die digitale Abbildung des Porta Gebärden-Katalogs mit Spiel und der Möglichkeit zur Erfassung eigener Gebärden bieten. Eine einfache und intuitive Bedienung stand dabei im Fokus, um auch Personen mit leichten Behinderungen zu erreichen.',
       challenges:
         'Die Usergruppe erstreckt sich von Bezugspersonen bis in die Betreuung. Die Herausforderungen umfassten die Umsetzung einer möglichst einfachen Bedienung und die Realisierung der App zu kostengünstigen Konditionen.',
       solutions:
