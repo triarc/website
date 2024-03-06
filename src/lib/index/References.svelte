@@ -32,7 +32,7 @@
       imageSource: 'img/references/tanne-app.png',
     },
     {
-      appName: 'Ortho Client',
+      appName: 'Ortho-Client',
       companyDescription:
         'Die ORTHO-TEAM Gruppe ist ein Schweizer Unternehmen, welches ein ganzheitliches Versorgungskonzept in der Orthopädie- und Rehatechnik bietet. Hochspezialisiert auf der ganzen Bandbreite der Branche entwickelt der Technologiedienstleister höchst innovative Produkte, um Menschen zu mehr Unabhängigkeit und Lebensqualität zu verhelfen. 23 Standorte in der Schweiz.',
       situation:
@@ -82,6 +82,18 @@
       imageSource: 'img/references/riwax.png',
     },
     {
+      appName: 'Chauffeur App',
+      companyDescription:
+              'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren als führenden Schweizer Hersteller und Anbieter von Produkten für die Fahrzeugpflege aus.',
+      situation:
+              'Sämtliche Prozesse in der Logistik fanden auf Papier statt. Die nötigen Informationen zu den Aufträgen wurden im ERP System Abacus ausgedruckt. Logistik wurden manuell organisiert. Mitarbeiter ohne grossen Erfahrungsschatz brauchten lange Einarbeitungszeit.',
+      challenges:
+              'Die analogen Prozesse in der Logistik/Disposition wurden soweit wie möglich digitalisiert, optimiert und standardisiert, gleichzeitig müssen sie aber einen hohen Grad an Flexibilität offen lassen, der den LKW-Chauffeuren erlaubt, manuelle Anpassungen vorzunehmen: Dazu gehören u.a. Punkte wie individuelle Routengestaltung, Anpassung der Routen, Zusammenfassen und Abändern von Lieferpunkten. Im Hinterkopf steht die Wirtschaftlichkeit der Lösung punkto Komplexität und Lizenzkosten. Die Digitalisierung einer Logistiklösung verlangt zudem, dass die (Gefahrengut)-Dokumente nach gesetzlichen Vorgaben digital im Feld zur Verfügung stehen.',
+      solutions:
+              'Effizienz im Ablauf, umfassende Rückverfolgbarkeit des gesamten Prozesses (einschliesslich sofortiger Integration von unterzeichneten Lieferscheinen durch Kunden in das ERP), digitale Verfügbarkeit von Transportpapieren und ADR-Papieren, jeweils angepasst an die spezifische Tour. Die Ladeliste für Lastwagen wird automatisch für den Fahrer generiert, und die Tourenoptimierung basiert auf automatisierten Fahrzeiten. Neue Mitarbeiter in der Disposition und Fahrer können ohne umfassende Kenntnisse der Anwendung direkt mit ihrer Arbeit beginnen.',
+      imageSource: 'img/references/chauffeur.png',
+    },
+    {
       appName: 'Fastspace',
       companyDescription:
         'Die Espace Real Estate Holding AG (Espace) ist eine Immobilienanlagegesellschaft mit Sitz in Solothurn. Die Gesellschaft investiert in Immobilien in den Kantonen Bern, Solothurn, Aargau, Luzern und Schaffhausen.',
@@ -115,7 +127,7 @@
         'Liver IT AG – möchte die Digitalisierung im Bauwesen vorantreiben. Transparent und' +
         ' zugänglich Schüttgut, Transport und Mulden anbieten.',
       situation:
-        'Ivan – Gründer und  leidenschaftlicher Gartenbauer, war ein frustierter Jungunternehmer' +
+        'Ivan – Gründer und  leidenschaftlicher Gartenbauer, war ein frustrierter Jungunternehmer' +
         ' – viele Prozesse waren analog und mussten via Telefon koordiniert werden. Es gab diverse Probleme mit vielen Fehlerquellen, keine Transparenz. ',
       challenges:
         'Auf Lieferantenseite:\n Kies- und Muldentransportunternehmen zu überzeugen mitzumachen.\n' +
@@ -128,19 +140,6 @@
         'Auf Kundenseite:\n Digital und in Echtzeit alle Information zur Bestellung überwachen können und alle Informationen zugänglich zu haben.' +
         'M3 Express vereinfacht den digitalen Zugang zu Schüttgut, Transport und Mulden auch für kleine Unternehmungen.',
       imageSource: 'img/references/m3express.png',
-    },
-    {
-      appName: 'Chauffeur APP',
-      companyDescription:
-        'Produktionsanlagen und eine flächendeckende und kompetente Kundenbetreuung zeichnen die RIWAX Chemie AG seit Jahren als führenden Schweizer Hersteller und Anbieter von Produkten für die Fahrzeugpflege aus.',
-      situation:
-        'Sämtliche Prozesse in der Logistik fanden auf Papier statt. Die nötigen Informationen zu den Aufträgen wurden im ERP System Abacus ausgedruckt. Logistik wurden manuell organisiert. Mitarbeiter ohne grossen Erfahrungsschatz brauchten lange Einarbeitungszeit.',
-      challenges:
-        'Analoge Prozesse in der Logistik zu standartisieren und digitalisieren. Augenmerk auf die Lizenzkosten betr. Routenplanung und Dokument Erstellungen. Die nötige Flexibilliät trotz digitalisiertem Prozess den Chauffeuren zur Verfügung zu stellen. ADR Punkte (Gefahrengut)' +
-        'Dokumente digital im Feld zur Verfügung stellen.',
-      solutions:
-        'Effizienz im Ablauf, umfassende Rückverfolgbarkeit des gesamten Prozesses (einschliesslich sofortiger Integration von unterzeichneten Lieferscheinen durch Kunden in das ERP), digitale Verfügbarkeit von Transportpapieren und ADR-Papieren, jeweils angepasst an die spezifische Tour. Die Ladeliste für Lastwagen wird automatisch für den Fahrer generiert, und die Tourenoptimierung basiert auf automatisierten Fahrzeiten. Neue Mitarbeiter in der Disposition und Fahrer können ohne umfassende Kenntnisse der Anwendung direkt mit ihrer Arbeit beginnen.',
-      imageSource: 'img/references/chauffeur.png',
     },
     // {
     //   appName: 'Verba',

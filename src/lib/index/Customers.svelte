@@ -1,3 +1,23 @@
+<script lang="ts">
+  // import {onMount} from "svelte";
+  // onMount(() => {
+  //   setTimeout(() => {
+  //     let aElements = document.querySelectorAll('.customer-grid-row a');
+  //     console.log(aElements);
+  //     if (aElements.length % 2 === 0) {
+  //       aElements[aElements.length - 2].classList.add('grid-even-last');
+  //       aElements[aElements.length - 1].classList.add('grid-even-last');
+  //     } else {
+  //       console.log(aElements[aElements.length - 2].classList);
+  //       aElements[aElements.length - 2].classList.add('grid-odd-lone');
+  //       console.log(aElements[aElements.length - 2].classList);
+  //       aElements[aElements.length - 1].classList.add('grid-odd-last');
+  //     }
+  //   }, 0);
+  //   });
+</script>
+
+
 <div class="bg-white">
   <div class="text-center max-w-screen-xl mx-auto py-24 md:py-32 px-4 sm:px-6 lg:px-8" id="customers">
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Auszug aus unserem Kundenportfolio</h2>
@@ -25,7 +45,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-12" src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
+          <img height="80" class="max-h-12 " src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
         </a>
       </div>
 
@@ -275,15 +295,60 @@
 
 <style style lang="postcss">
   .customer-grid a {
-    @apply border-4 border-gray-100 last:border-r-0 first:border-l-0;
+    @apply border-4 border-gray-100;
   }
   .customer-grid-row {
     @apply contents;
   }
-  .customer-grid-row:last-child a {
-    @apply border-b-0;
+  .customer-grid-row:nth-child(odd) a{
+    @apply odd:border-l-0 even:border-r-0
   }
-  .customer-grid-row:first-child a {
+  .customer-grid-row:nth-child(odd) a{
+    @apply odd:border-r-0 even:border-l-0
+  }
+
+  .customer-grid-row:nth-child(odd) a:nth-child(1) {
+    @apply border-r-4 md:border-r-4;
+  }
+  .customer-grid-row:nth-child(odd) a:nth-child(2) {
+    @apply border-l-4 border-r-0 md:border-l-4 md:border-r-4;
+  }
+  .customer-grid-row:nth-child(odd) a:nth-child(3) {
+    @apply border-r-4 md:border-l-4 md:border-r-0;
+  }
+  .customer-grid-row:nth-child(even) a:nth-child(1) {
+    @apply border-l-4 border-r-0 md:border-r-4 md:border-l-0;
+  }
+  .customer-grid-row:nth-child(even) a:nth-child(2) {
+    @apply border-l-0 md:border-l-4 md:border-r-4;
+  }
+  .customer-grid-row:nth-child(even) a:nth-child(3) {
+    @apply border-r-0 md:border-l-4 md:border-r-0;
+  }
+  .customer-grid-row:first-child a:nth-child(1) {
     @apply border-t-0;
   }
+  .customer-grid-row:first-child a:nth-child(2) {
+    @apply border-t-0;
+  }
+  .customer-grid-row:last-child a:last-child,  .customer-grid-row:last-child a:nth-last-child(2):nth-child(odd){
+    @apply border-b-0
+  }
+  .customer-grid-row:last-child a {
+    @apply md:border-b-0;
+  }
+  .customer-grid-row:first-child a {
+    @apply md:border-t-0;
+  }
+  /*.grid-even-last {*/
+  /*  @apply border-b-0 border-r-8;*/
+  /*}*/
+  /*.grid-odd-last {*/
+  /*  @apply border-b-0 border-r-8;*/
+  /*}*/
+  /*.grid-odd-lone {*/
+  /* @apply  border-b-8;*/
+  /*}*/
+
+
 </style>
