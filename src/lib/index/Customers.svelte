@@ -244,7 +244,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/Header.svg" loading="lazy" alt="customer-h&b" />
+          <img height="80" class="max-h-13" src="/img/customer/Header.svg" loading="lazy" alt="customer-h&b" />
         </a>
         <a
           href="https://www.iwb.ch/"
@@ -252,7 +252,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/iwbLogo.svg" loading="lazy" alt="customer-iwb" />
+          <img height="80" class="max-h-12" src="/img/customer/iwbLogo.svg" loading="lazy" alt="customer-iwb" />
         </a>
         <a
           href="https://www.analytica.ch/"
@@ -262,7 +262,7 @@
         >
           <img
             height="80"
-            class="max-h-20"
+            class="max-h-12"
             src="/img/customer/analytica-logo-main.svg"
             loading="lazy"
             alt="customer-analytica"
