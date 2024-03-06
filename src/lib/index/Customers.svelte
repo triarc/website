@@ -17,7 +17,6 @@
   //   });
 </script>
 
-
 <div class="bg-white">
   <div class="text-center max-w-screen-xl mx-auto py-24 md:py-32 px-4 sm:px-6 lg:px-8" id="customers">
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Auszug aus unserem Kundenportfolio</h2>
@@ -300,11 +299,11 @@
   .customer-grid-row {
     @apply contents;
   }
-  .customer-grid-row:nth-child(odd) a{
-    @apply odd:border-l-0 even:border-r-0
+  .customer-grid-row:nth-child(odd) a {
+    @apply odd:border-l-0 even:border-r-0;
   }
-  .customer-grid-row:nth-child(odd) a{
-    @apply odd:border-r-0 even:border-l-0
+  .customer-grid-row:nth-child(odd) a {
+    @apply odd:border-r-0 even:border-l-0;
   }
 
   .customer-grid-row:nth-child(odd) a:nth-child(1) {
@@ -331,8 +330,9 @@
   .customer-grid-row:first-child a:nth-child(2) {
     @apply border-t-0;
   }
-  .customer-grid-row:last-child a:last-child,  .customer-grid-row:last-child a:nth-last-child(2):nth-child(odd){
-    @apply border-b-0
+  .customer-grid-row:last-child a:last-child,
+  .customer-grid-row:last-child a:nth-last-child(2):nth-child(odd) {
+    @apply border-b-0;
   }
   .customer-grid-row:last-child a {
     @apply md:border-b-0;
@@ -349,6 +349,4 @@
   /*.grid-odd-lone {*/
   /* @apply  border-b-8;*/
   /*}*/
-
-
 </style>

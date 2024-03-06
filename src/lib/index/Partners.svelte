@@ -45,11 +45,11 @@
   .partner-grid-row {
     @apply contents;
   }
-  .partner-grid-row:nth-child(odd) a{
-    @apply odd:border-l-0 even:border-r-0
+  .partner-grid-row:nth-child(odd) a {
+    @apply odd:border-l-0 even:border-r-0;
   }
-  .partner-grid-row:nth-child(odd) a{
-    @apply odd:border-r-0 even:border-l-0
+  .partner-grid-row:nth-child(odd) a {
+    @apply odd:border-r-0 even:border-l-0;
   }
 
   .partner-grid-row:nth-child(odd) a:nth-child(1) {
@@ -76,8 +76,9 @@
   .partner-grid-row:first-child a:nth-child(2) {
     @apply border-t-0;
   }
-  .partner-grid-row:last-child a:last-child,  .partner-grid-row:last-child a:nth-last-child(2):nth-child(odd){
-    @apply border-b-0
+  .partner-grid-row:last-child a:last-child,
+  .partner-grid-row:last-child a:nth-last-child(2):nth-child(odd) {
+    @apply border-b-0;
   }
   .partner-grid-row:last-child a {
     @apply md:border-b-0;
