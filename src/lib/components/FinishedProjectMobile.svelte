@@ -28,9 +28,9 @@
       </div>
     </div>
     <div class="relative overflow-hidden pt-8">
-      <div class="mx-auto max-w-5xl">
+      <div class="">
         <div class="embla">
-          <div class="embla__viewport" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
+          <div class="embla__viewport px-10" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
             <div class="embla__container ">
               {#each imageSources as imageSource}
                 <div class="embla__slide">
@@ -162,7 +162,7 @@
   .embla__slide {
     min-width: 0;
     max-width: 80vh;
-    flex: 0 0 auto;
+    flex: 0 0 100%;
     max-height: 80vh;
     position: relative;
     margin-left: 2.5vh;
@@ -173,7 +173,7 @@
     .embla__slide {
       min-width: 0;
       max-width: 80vh;
-      flex: 0 0 auto;
+      flex: 0 0 100%;
       max-height: 80vh;
       margin-left: 2.5vh;
       margin-right: 2.5vh;
@@ -185,7 +185,7 @@
     .embla__slide {
       min-width: 0;
       max-width: 80vh;
-      flex: 0 0 auto;
+      flex: 0 0 31%;
       max-height: 80vh;
       margin-left: 2.5vh;
       margin-right: 2.5vh;
