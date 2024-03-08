@@ -2,34 +2,34 @@
   import FinishedProject2 from '$lib/components/FinishedProject2.svelte'
   import FinishedProjectMobile from '$lib/components/FinishedProjectMobile.svelte'
   let finishedProject = [
+    // {
+    //   appName: 'µLink',
+    //   companyDescription:
+    //     'Die Schnittstellen zwischen den verschiedenen Systemen mit unterschiedlichen Technologien stellt Unternehmen vor grosse Herausforderungen. ' +
+    //     'µLink vereinfacht als zentrale Instanz die Schnittstellenproblematik, vernetzt die verschiedenen Systeme und ermöglicht damit die zentrale Bewirtschaftung ' +
+    //     'der Schnittstellen. So kann mit minimalem Aufwand neue Software ins Ökosystem integriert oder bestehende abgelöst werden.',
+    //   situation:
+    //     'Innovation kam historisch bedingt zustande. Wir sind spezialisiert auf Anbindungen an ERP-Systeme (Enterprise-Resource-Planning). Mit unserer Echtzeit Datahub-Lösung µLink umgehen' +
+    //     ' wir die Komplexität und Geschwindigkeitsproblematik der ABA-Connect Schnittstelle. 80% unserer Kunden haben ABACUS im Einsatz.',
+    //   challenges: '',
+    //   solutions:
+    //     'Mit µLink lassen sich die Datenflüsse zwischen Softwaresystemen zentral observieren. Bei einem Ausfall, einer Abnahme der Leistung oder ' +
+    //     'weiterer konfigurierbarer Parameter kann proaktiv alarmiert werden. Über das Grafana-Dashboard lassen sich alle systemrelevanten Komponenten ' +
+    //     'in Echtzeit überwachen und visualisieren.',
+    //   imageSource: 'img/references/mLink.png',
+    // },
     {
-      appName: 'µLink',
+      appName: 'CAL',
       companyDescription:
-        'Die Schnittstellen zwischen den verschiedenen Systemen mit unterschiedlichen Technologien stellt Unternehmen vor grosse Herausforderungen. ' +
-        'µLink vereinfacht als zentrale Instanz die Schnittstellenproblematik, vernetzt die verschiedenen Systeme und ermöglicht damit die zentrale Bewirtschaftung ' +
-        'der Schnittstellen. So kann mit minimalem Aufwand neue Software ins Ökosystem integriert oder bestehende abgelöst werden.',
+              'Die Christen Holding AG wird heute noch von der Gründerfamilie geführt. Als einer der grössten Arbeitgeber' +
+              ' im Kanton Schwyz ist sie die erfolgreiche Baupartnerin für private und öffentliche Bauherrschaften.',
       situation:
-        'Innovation kam historisch bedingt zustande. Wir sind spezialisiert auf Anbindungen an ERP-Systeme (Enterprise-Resource-Planning). Mit unserer Echtzeit Datahub-Lösung µLink umgehen' +
-        ' wir die Komplexität und Geschwindigkeitsproblematik der ABA-Connect Schnittstelle. 80% unserer Kunden haben ABACUS im Einsatz.',
-      challenges: '',
-      solutions:
-        'Mit µLink lassen sich die Datenflüsse zwischen Softwaresystemen zentral observieren. Bei einem Ausfall, einer Abnahme der Leistung oder ' +
-        'weiterer konfigurierbarer Parameter kann proaktiv alarmiert werden. Über das Grafana-Dashboard lassen sich alle systemrelevanten Komponenten ' +
-        'in Echtzeit überwachen und visualisieren.',
-      imageSource: 'img/references/mLink.png',
-    },
-    {
-      appName: 'Porta',
-      companyDescription:
-        'Die Tanne, Schweizerische Stiftung für Taubblinde, ist das Kompetenz-Zentrum bei angeborener Hörseh-Behinderung und verwandter mehrfacher ' +
-        'Sinnes-Behinderung. Sie begleitet Betroffene in jedem Lebens-Alter',
-      situation:
-        'Die PORTA App sollte die digitale Abbildung des Porta Gebärden-Katalogs mit Spiel und der Möglichkeit zur Erfassung eigener Gebärden bieten. Eine einfache und intuitive Bedienung stand dabei im Fokus, um auch Personen mit leichten Behinderungen zu erreichen.',
+              'Die alte Logistiklösung für Dispositionen der Fahrzeuge, wurde vom bevorstehenden Anbieter nicht mehr unterstützt sprich weiterentwickelt. Dies veranlasste die Christen AG eine eigene Custom Lösung zu bauen, damit der gesamte End to End Prozess von der Logistik, zum Chauffeur bis zum Endkunden digital abgebildet werden kann.',
       challenges:
-        'Die Usergruppe erstreckt sich von Bezugspersonen bis in die Betreuung. Die Herausforderungen umfassten die Umsetzung einer möglichst einfachen Bedienung und die Realisierung der App zu kostengünstigen Konditionen.',
+              'Der gesamte Fahrzeugpark musste integriert werden. Der sehr komplexe analoge Prozess umfasste viele verschiedene Ausnahmen im Bereich der Anforderungen und Wünsche auf der Userseite.  Ausserdem wurde eine Schnittstelle zwischen ABACUS und der Applikation benötigt, um Daten wie Kundenstamm, Abrechnungsprozess, Auftragsverwaltungen in der Applikation anzubieten.',
       solutions:
-        'Die PORTA App wurde als umfangreiche Lernsoftware konzipiert, die nicht nur das Erlernen der Portagebärden ermöglicht, sondern auch das Erfassen und Teilen bedürfnisspezifischer Gebärden, benutzerdefinierter Kataloge und Arbeitsblätter. Die App bietet eine einfache Navigation im Gebärdenkatalog, die Möglichkeit zur Erfassung eigener Gebärden mit Video und die Zusammenstellung eigener Kataloge, die mit anderen geteilt werden können. Spielerisch kann das erworbene Wissen mit einem Lernspiel getestet und vertieft werden, und die Gamifikation trägt dazu bei, dass das Lernen Spaß macht. Das Ziel war eine kostenbewusste Lösung mit einer intuitiven App, die von jeder Person, idealerweise auch von Menschen mit leichten Behinderungen, bedient werden kann. Die Applikation findet weiter Verbreitung in betreuenden Institutionen, wie auch in heilpädagogischen Schulen.',
-      imageSource: 'img/references/tanne-app.png',
+              'Verbesserte und transparentere Kommunikation zwischen Dispo und Chauffeuren. Auftragserteilung erfolgt nun direkt von CAL aus nach TomTom. Eine Echtzeit-Routenberechnung wurde ebenfalls integriert, dies hilft der Dispo die Planung effizienter zu gestalten und Leerfahrten zu vermeiden. Die automatische Rapportierung und Verrechnung erbrachten Leistungen, minimiert den Administrationsaufwand und beugt Missverständnissen vor.',
+      imageSource: 'img/references/cal.png',
     },
     {
       appName: 'Ortho-Client',
@@ -107,19 +107,6 @@
       solutions:
         'Mehr Flexibilität auf beiden Seiten (Mieter wie auch Vermieter) und schnellere Abwicklungen der Mietprozesse. Die Lösung bietet ausserdem die Möglichkeit kurzfristige Mietverhältnisse abschliessen zu können.',
       imageSource: 'img/references/fastspace.png',
-    },
-    {
-      appName: 'CAL',
-      companyDescription:
-        'Die Christen Holding AG wird heute noch von der Gründerfamilie geführt. Als einer der grössten Arbeitgeber' +
-        ' im Kanton Schwyz ist sie die erfolgreiche Baupartnerin für private und öffentliche Bauherrschaften.',
-      situation:
-        'Die alte Logistiklösung für Dispositionen der Fahrzeuge, wurde vom bevorstehenden Anbieter nicht mehr unterstützt sprich weiterentwickelt. Dies veranlasste die Christen AG eine eigene Custom Lösung zu bauen, damit der gesamte End to End Prozess von der Logistik, zum Chauffeur bis zum Endkunden digital abgebildet werden kann.',
-      challenges:
-        'Der gesamte Fahrzeugpark musste integriert werden. Der sehr komplexe analoge Prozess umfasste viele verschiedene Ausnahmen im Bereich der Anforderungen und Wünsche auf der Userseite.  Ausserdem wurde eine Schnittstelle zwischen ABACUS und der Applikation benötigt, um Daten wie Kundenstamm, Abrechnungsprozess, Auftragsverwaltungen in der Applikation anzubieten.',
-      solutions:
-        'Verbesserte und transparentere Kommunikation zwischen Dispo und Chauffeuren. Auftragserteilung erfolgt nun direkt von CAL aus nach TomTom. Eine Echtzeit-Routenberechnung wurde ebenfalls integriert, dies hilft der Dispo die Planung effizienter zu gestalten und Leerfahrten zu vermeiden. Die automatische Rapportierung und Verrechnung erbrachten Leistungen, minimiert den Administrationsaufwand und beugt Missverständnissen vor.',
-      imageSource: 'img/references/cal.png',
     },
     {
       appName: 'M3 Express',
@@ -211,6 +198,27 @@
         'img/references/glb6.png',
         'img/references/glb7.png',
       ],
+    },
+    {
+      appName: 'Porta',
+      companyDescription:
+              'Die Tanne, Schweizerische Stiftung für Taubblinde, ist das Kompetenz-Zentrum bei angeborener Hörseh-Behinderung und verwandter mehrfacher ' +
+              'Sinnes-Behinderung. Sie begleitet Betroffene in jedem Lebens-Alter',
+      situation:
+              'Die PORTA App sollte die digitale Abbildung des Porta Gebärden-Katalogs mit Spiel und der Möglichkeit zur Erfassung eigener Gebärden bieten. Eine einfache und intuitive Bedienung stand dabei im Fokus, um auch Personen mit leichten Behinderungen zu erreichen.',
+      challenges:
+              'Die Usergruppe erstreckt sich von Bezugspersonen bis in die Betreuung. Die Herausforderungen umfassten die Umsetzung einer möglichst einfachen Bedienung und die Realisierung der App zu kostengünstigen Konditionen.',
+      solutions:
+              'Die PORTA App wurde als umfangreiche Lernsoftware konzipiert, die nicht nur das Erlernen der Portagebärden ermöglicht, sondern auch das Erfassen und Teilen bedürfnisspezifischer Gebärden, benutzerdefinierter Kataloge und Arbeitsblätter. Die App bietet eine einfache Navigation im Gebärdenkatalog, die Möglichkeit zur Erfassung eigener Gebärden mit Video und die Zusammenstellung eigener Kataloge, die mit anderen geteilt werden können. Spielerisch kann das erworbene Wissen mit einem Lernspiel getestet und vertieft werden, und die Gamifikation trägt dazu bei, dass das Lernen Spaß macht. Das Ziel war eine kostenbewusste Lösung mit einer intuitiven App, die von jeder Person, idealerweise auch von Menschen mit leichten Behinderungen, bedient werden kann. Die Applikation findet weiter Verbreitung in betreuenden Institutionen, wie auch in heilpädagogischen Schulen.',
+      imageSources: [
+        'img/references/porta1.png',
+        'img/references/porta2.png',
+        'img/references/porta3.png',
+        'img/references/porta4.png',
+        'img/references/porta5.png',
+        'img/references/porta6.png',
+        'img/references/porta7.png',
+      ]
     },
     {
       appName: 'CondAct',

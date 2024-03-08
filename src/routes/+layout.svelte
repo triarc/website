@@ -59,7 +59,13 @@
       items: [
         {
           type: 'link',
-          title: 'Projekte',
+          title: 'Schnittstellenlösung',
+          description: 'μLink Datahub',
+          path: '/mlink',
+        },
+        {
+          type: 'link',
+          title: 'Umgesetzte Projekte',
           description: 'Erfahrungen und Referenzen',
           path: '/references',
         },
