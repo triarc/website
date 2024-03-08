@@ -31,6 +31,7 @@ module.exports = {
       animation: ['hover'],
     },
   },
+  safelist: ["bg-red-200", "p-20"],
   plugins: [
     require('tailwind-scrollbar'),
     require('@tailwindcss/forms'),
