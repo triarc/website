@@ -59,8 +59,8 @@
       items: [
         {
           type: 'link',
-          title: 'Schnittstellenlösung',
-          description: 'μLink Datahub',
+          title: 'μLink',
+          description: 'Real time data hub',
           path: '/mlink',
         },
         {
