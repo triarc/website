@@ -65,7 +65,7 @@
         },
         {
           type: 'link',
-          title: 'Umgesetzte Projekte',
+          title: 'Projekte',
           description: 'Erfahrungen und Referenzen',
           path: '/references',
         },
