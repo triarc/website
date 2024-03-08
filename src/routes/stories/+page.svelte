@@ -194,6 +194,7 @@
         {#each visibleItems as item}
           <div class="item max-w-xs md:max-w-md">
             <a href="/stories/{item.data.slug}" class=" break-inside-avoid shadow flex flex-col group rounded-md">
+              {#if item.data.image.src !== ''}
               <div class="relative rounded-md shadow">
                 <img
                   src={item.data.image.src}
@@ -207,6 +208,7 @@
                 />
                 <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
               </div>
+                {/if}
               <div class="px-4 py-3 bg-white rounded-md">
                 <h3 class="font-bold text-xl">{item.data.title}</h3>
                 <p class="line-clamp-3 mb-1 text-gray-500">{item.data.content}</p>
