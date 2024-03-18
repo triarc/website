@@ -11,10 +11,32 @@
     window.history.back()
   }
 </script>
+<svelte:head>
+  <title>{data.title} - triarc-labs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script lang="js">tailwind.config = {
+        theme: {
+        extend: {
+          colors: {
+            'red-triarc': '#C8102E',
+            'green-triarc': '#009639',
+            'blue-triarc': '#0077c8',
+            'yellow-triarc': '#FFE74C',
+            wood: '#D0AE84',
+            'orange-ebl-base': 'rgba(254, 107, 21, 1)',
+            'orange-ebl-medium': 'rgba(254, 107, 21, 0.6)',
+            'orange-ebl-weak': 'rgba(254, 107, 21, 0.1)',
+            'blue-ideesport-weak':'rgba(30, 170, 230, 0.1)'
+          },
+      }
+    }
+  }
+  </script>
+</svelte:head>
 
 <div class="bg-white min-h-screen pt-16 md:pt-24 w-full">
   <Container>
-  <div class="prose max-w-none lg:prose-xl prose-img:rounded-xl prose-a:text-blue-triarc mx-auto">
+  <div class="prose max-w-none lg:prose-xl prose-img:rounded-xl prose-a:text-blue-triarc">
     <div class="flex space-x-2 items-center bg-white mb-2">
       <a on:click={() => nav_back()} class="flex items-center text-blue-triarc fill-blue-triarc">
         <svg xmlns="http://www.w3.org/2000/svg" class="h-6" viewBox="0 0 448 512"
