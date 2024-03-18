@@ -1,22 +1,3 @@
-<script lang="ts">
-  // import {onMount} from "svelte";
-  // onMount(() => {
-  //   setTimeout(() => {
-  //     let aElements = document.querySelectorAll('.customer-grid-row a');
-  //     console.log(aElements);
-  //     if (aElements.length % 2 === 0) {
-  //       aElements[aElements.length - 2].classList.add('grid-even-last');
-  //       aElements[aElements.length - 1].classList.add('grid-even-last');
-  //     } else {
-  //       console.log(aElements[aElements.length - 2].classList);
-  //       aElements[aElements.length - 2].classList.add('grid-odd-lone');
-  //       console.log(aElements[aElements.length - 2].classList);
-  //       aElements[aElements.length - 1].classList.add('grid-odd-last');
-  //     }
-  //   }, 0);
-  //   });
-</script>
-
 <div class="bg-white">
   <div class="text-center max-w-screen-xl mx-auto py-24 md:py-32 px-4 sm:px-6 lg:px-8" id="customers">
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Auszug aus unserem Kundenportfolio</h2>
