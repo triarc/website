@@ -25,7 +25,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-12" src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
+          <img height="80" class="max-h-12 " src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
         </a>
       </div>
 
@@ -65,7 +65,7 @@
           class="col-span-1 flex items-center justify-center py-8 px-8 "
         >
           <picture class="max-h-12 filter">
-            <source type="image/webp" srcset="/img/customer/tanne-logo.webp" alt="tanne" />
+            <source type="image/png" srcset="/img/customer/Tanne_Logo_4sprachig.png" alt="tanne" />
             <img height="80" class="max-h-20" src="/img/customer/tanne-logo.png" loading="lazy" alt="tanne" />
           </picture>
         </a>
@@ -244,7 +244,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/Header.svg" loading="lazy" alt="customer-h&b" />
+          <img height="80" class="max-h-13" src="/img/customer/Header.svg" loading="lazy" alt="customer-h&b" />
         </a>
         <a
           href="https://www.iwb.ch/"
@@ -252,7 +252,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/iwbLogo.svg" loading="lazy" alt="customer-iwb" />
+          <img height="80" class="max-h-12" src="/img/customer/iwbLogo.svg" loading="lazy" alt="customer-iwb" />
         </a>
         <a
           href="https://www.analytica.ch/"
@@ -262,7 +262,7 @@
         >
           <img
             height="80"
-            class="max-h-20"
+            class="max-h-12"
             src="/img/customer/analytica-logo-main.svg"
             loading="lazy"
             alt="customer-analytica"
@@ -275,15 +275,59 @@
 
 <style style lang="postcss">
   .customer-grid a {
-    @apply border-4 border-gray-100 last:border-r-0 first:border-l-0;
+    @apply border-4 border-gray-100;
   }
   .customer-grid-row {
     @apply contents;
   }
-  .customer-grid-row:last-child a {
-    @apply border-b-0;
+  .customer-grid-row:nth-child(odd) a {
+    @apply odd:border-l-0 even:border-r-0;
   }
-  .customer-grid-row:first-child a {
+  .customer-grid-row:nth-child(odd) a {
+    @apply odd:border-r-0 even:border-l-0;
+  }
+
+  .customer-grid-row:nth-child(odd) a:nth-child(1) {
+    @apply border-r-4 md:border-r-4;
+  }
+  .customer-grid-row:nth-child(odd) a:nth-child(2) {
+    @apply border-l-4 border-r-0 md:border-l-4 md:border-r-4;
+  }
+  .customer-grid-row:nth-child(odd) a:nth-child(3) {
+    @apply border-r-4 md:border-l-4 md:border-r-0;
+  }
+  .customer-grid-row:nth-child(even) a:nth-child(1) {
+    @apply border-l-4 border-r-0 md:border-r-4 md:border-l-0;
+  }
+  .customer-grid-row:nth-child(even) a:nth-child(2) {
+    @apply border-l-0 md:border-l-4 md:border-r-4;
+  }
+  .customer-grid-row:nth-child(even) a:nth-child(3) {
+    @apply border-r-0 md:border-l-4 md:border-r-0;
+  }
+  .customer-grid-row:first-child a:nth-child(1) {
     @apply border-t-0;
   }
+  .customer-grid-row:first-child a:nth-child(2) {
+    @apply border-t-0;
+  }
+  .customer-grid-row:last-child a:last-child,
+  .customer-grid-row:last-child a:nth-last-child(2):nth-child(odd) {
+    @apply border-b-0;
+  }
+  .customer-grid-row:last-child a {
+    @apply md:border-b-0;
+  }
+  .customer-grid-row:first-child a {
+    @apply md:border-t-0;
+  }
+  /*.grid-even-last {*/
+  /*  @apply border-b-0 border-r-8;*/
+  /*}*/
+  /*.grid-odd-last {*/
+  /*  @apply border-b-0 border-r-8;*/
+  /*}*/
+  /*.grid-odd-lone {*/
+  /* @apply  border-b-8;*/
+  /*}*/
 </style>

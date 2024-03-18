@@ -59,6 +59,12 @@
       items: [
         {
           type: 'link',
+          title: 'μLink',
+          description: 'Real time data hub',
+          path: '/mlink',
+        },
+        {
+          type: 'link',
           title: 'Projekte',
           description: 'Erfahrungen und Referenzen',
           path: '/references',

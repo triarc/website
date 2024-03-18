@@ -42,6 +42,18 @@
       <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Kontaktformular</h2>
       <h3 class="text-lg mt-3 font-medium text-gray-500">Interessiert? Schreib uns eine Nachricht</h3>
       <form action="#" method="POST" class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+        <div class="sm:col-span-2">
+          <label for="subject" class="block text-sm font-medium text-gray-900">Betreff</label>
+          <div class="mt-1">
+            <input
+              type="text"
+              name="subject"
+              id="subject"
+              bind:value={subject}
+              class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+            />
+          </div>
+        </div>
         <div>
           <label for="first-name" class="block text-sm font-medium text-gray-900">Vorname</label>
           <div class="mt-1">
@@ -95,18 +107,6 @@
               bind:value={phone}
               class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
               aria-describedby="phone-optional"
-            />
-          </div>
-        </div>
-        <div class="sm:col-span-2">
-          <label for="subject" class="block text-sm font-medium text-gray-900">Betreff</label>
-          <div class="mt-1">
-            <input
-              type="text"
-              name="subject"
-              id="subject"
-              bind:value={subject}
-              class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
             />
           </div>
         </div>
