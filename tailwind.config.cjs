@@ -16,7 +16,7 @@ module.exports = {
         'orange-ebl-base': 'rgba(254, 107, 21, 1)',
         'orange-ebl-medium': 'rgba(254, 107, 21, 0.6)',
         'orange-ebl-weak': 'rgba(254, 107, 21, 0.1)',
-        'blue-ideesport-weak':'rgba(30, 170, 230, 0.1)'
+        'blue-ideesport-weak': 'rgba(30, 170, 230, 0.1)',
       },
       maxWidth: {},
       animation: {
