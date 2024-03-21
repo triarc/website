@@ -9,7 +9,7 @@ export interface FeaturedContent {
     personTitle: string
     linkedin: string
     email: string
-    highlight?: 'green' | 'blue'
+    highlight: 'green' | 'blue'
     contactButton: string
     customLogos?: string[]
   }

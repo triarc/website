@@ -1,7 +1,7 @@
 <script lang="ts">
   import MediaQuery from '$lib/components/MediaQuery.svelte'
 
-  export let title
+  export let title: string
   export let open = false
   export let inline = false
 
@@ -55,7 +55,7 @@
     type="button"
     class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 text-gray-900 {inline
       ? 'cursor-default rounded bg-black mb-1 text-white px-4 -mx-4'
-      : 'cursor-pointer text-gray-800'}"
+      : 'cursor-pointer bg-black md:bg-transparent text-white md:text-gray-800'}"
     aria-expanded="false"
     on:click={toggle}
   >

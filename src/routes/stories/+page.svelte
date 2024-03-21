@@ -7,18 +7,31 @@
   import { getSizes, getSource, getSourceSet } from './utils'
   import type { GhostPost } from './utils'
   import { onMount } from 'svelte'
-  import heroImage from '/src/lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '$lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata'
   import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
+  import type { MappedPost } from '../consulting/+page'
 
   export let data: PageData
   let pageNumber = 2 //
   let reachedEnd = false
   let loading = false
   let pageBodyHeight = 0
+  let top: number | undefined = 0
+  let element: HTMLElement | null = null
+  let filter!: HTMLDialogElement
+  let items:MappedPost[] = []
+  $: {
+    if (element && top) {
+      element.style.top = `${top}px`;
+    }
+  }
 
-  let items = []
 
   onMount(() => {
+    top = document.getElementById('mobile-bar')?.offsetHeight
+    element = document.querySelector('.filter-bar') as HTMLElement;
+    filter = document.getElementById('filter') as HTMLDialogElement;
+
     const observer = new ResizeObserver(() => {
       pageBodyHeight = document.body.scrollHeight
       console.log('size changed')
@@ -27,6 +40,8 @@
     items = [...data.posts]
     console.log(items)
   })
+
+
   // async function scrollCheck() {
   // if (reachedEnd || loading) {
   //   return
@@ -132,20 +147,20 @@
     </div>
   </dialog>
 
-  <div class="bg-white sticky top-0 will-change-transform z-50">
+  <div class="filter-bar bg-white sticky will-change-transform z-50">
     <Container>
       <div class="flex items-start md:flex-row my-6 gap-3">
-        <button class="btn bg-gray-200 rounded-md h-10 md:hidden flex-grow px-4 py-2" onclick="filter.showModal()"
+        <button class="btn bg-gray-200 rounded-md h-10 md:hidden flex-shrink px-4 py-2" on:click={() => filter.showModal()}
           >Filter</button
         >
-        <div class="px-4 py-2 bg-gray-200 rounded-md h-10 md:hidden">
+        <div class="px-4 py-2 flex flex-grow justify-center items-center bg-gray-200 rounded-md h-10 md:hidden">
           Aktiv:
-          {#if data.selectedTag.startsWith('news')}
-            News
-          {:else if data.selectedTag.startsWith('success')}
-            Success Story
-          {:else if data.selectedTag.startsWith('tech')}
-            Tech
+          {#if data.selectedTag.startsWith('beratung')}
+            Beratung
+          {:else if data.selectedTag.startsWith('custom')}
+            Custom Software
+          {:else if data.selectedTag.startsWith('triarc')}
+            Triarc
           {:else}
             Alle
           {/if}
@@ -173,7 +188,7 @@
   <hr />
 
   <div class="flex-grow ">
-    <div class="px-6 py-4">
+    <div class="px-8 lg:px-16 py-4">
       <MasonryInfiniteGrid
         gap={40}
         align="center"
@@ -255,4 +270,5 @@
   .item {
     transition: all ease 0.2s;
   }
+
 </style>

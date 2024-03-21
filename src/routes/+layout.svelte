@@ -213,7 +213,7 @@
   </nav>
 
   <div class="main-container w-full {data.pathname === '/' ? 'landing' : 'content'}">
-    <div class="mobile-bar z-20 bg-black w-full py-2 px-4 flex items-center lg:hidden">
+    <div class="mobile-bar z-20 bg-white w-full py-2 px-4 flex items-center lg:hidden" id="mobile-bar">
       <button class="py-2 px-2 rounded-md" on:click={toggle} aria-label="Navigation Menu">
         <svg width="32px" height="25px" viewBox="0 0 29 25" xmlns="http://www.w3.org/2000/svg">
           <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2">
@@ -223,7 +223,7 @@
           </g>
         </svg>
       </button>
-      <div class="text-white ml-3 flex-grow min-w-0">
+      <div class="text-black ml-3 flex-grow min-w-0">
         <div class="font-bold truncate">{mobileTitle}</div>
         <div class="font-light text-sm truncate">{mobileSubTitle}</div>
       </div>
@@ -317,7 +317,8 @@
     @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8;
   }
   #page .navbar .nav-links {
-    @apply scrollbar-thin scrollbar-track-gray-800 scrollbar-thumb-blue-triarc lg:overflow-visible;
+    @apply scrollbar-thin scrollbar-thumb-blue-triarc lg:overflow-visible scrollbar-track-transparent;
+      /* scrollbar-track-gray-800*/
   }
 
   #page.landing .main-container {
