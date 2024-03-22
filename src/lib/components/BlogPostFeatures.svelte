@@ -48,14 +48,18 @@
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
                 </svg>
                 <blockquote
-                  class="text-xl font-semibold {content?.quote?.highlight ? 'text-gray-900' : 'text-gray-600'} leading-9"
+                  class="text-xl font-semibold {content?.quote?.highlight
+                    ? 'text-gray-900'
+                    : 'text-gray-600'} leading-9"
                 >
                   <p>{@html content?.quote?.content}</p>
                 </blockquote>
                 <figcaption class="mt-8 text-base {content?.quote?.highlight ? 'text-gray-900' : 'text-gray-600'}">
                   <div class="font-semibold">{content?.quote?.person}</div>
                   <div class="mt-1">{@html content?.quote?.personTitle}</div>
-                  <div class="flex flex-row gap-x-4 mt-4 {content?.quote?.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
+                  <div
+                    class="flex flex-row gap-x-4 mt-4 {content?.quote?.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                  >
                     {#if content?.quote?.linkedin}
                       <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                         <svg
@@ -80,12 +84,8 @@
                     {/if}
                   </div>
                   <div class="flex justify-center my-8">
-                  <Button
-                    buttonSize="Standard"
-                    reference="#contactform"
-                    label={content?.quote?.contactButton}
-                  ></Button>
-                    </div>
+                    <Button buttonSize="Standard" reference="#contactform" label={content?.quote?.contactButton} />
+                  </div>
                 </figcaption>
               </figure>
               <div class="flex flex-col gap-y-8 my-8">
@@ -113,12 +113,7 @@
                   </p>
                 {/if}
                 {#if category.link}
-                  <Button
-                  buttonSize="Small"
-                  reference={category.link}
-                  label="Mehr dazu"
-                  target="_blank">
-                  </Button>
+                  <Button buttonSize="Small" reference={category.link} label="Mehr dazu" target="_blank" />
                 {/if}
                 {#if category.quote}
                   <blockquote

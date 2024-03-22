@@ -136,7 +136,7 @@
             reference={content.link.href}
             label={content.link.text}
             target={content.link.target ?? ''}
-          ></Button>
+          />
         {/if}
         {#if content.bulletPoints}
           <ul class="mt-8">

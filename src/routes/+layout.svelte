@@ -318,7 +318,7 @@
   }
   #page .navbar .nav-links {
     @apply scrollbar-thin scrollbar-thumb-blue-triarc lg:overflow-visible scrollbar-track-transparent;
-      /* scrollbar-track-gray-800*/
+    /* scrollbar-track-gray-800*/
   }
 
   #page.landing .main-container {

@@ -9,21 +9,19 @@
     })
   }
 
-
-
   onMount(() => {
     button = document.getElementById('nav-jump-button')
 
-    window.addEventListener('scroll', function() {
-      console.log(button);
+    window.addEventListener('scroll', function () {
+      console.log(button)
       if (button) {
         if (window.scrollY > 400) {
-          button.style.display = 'flex';
+          button.style.display = 'flex'
         } else {
-          button.style.display = 'none';
+          button.style.display = 'none'
         }
       }
-    });
+    })
   })
 </script>
 

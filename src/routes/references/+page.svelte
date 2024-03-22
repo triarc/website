@@ -36,7 +36,6 @@
 />
 
 <div class="bg-white">
-
   <References />
   <Block bind:content />
   <Customers />

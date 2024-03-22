@@ -18,12 +18,11 @@
   let pageBodyHeight = 0
   let element: HTMLElement | null = null
   let filter!: HTMLDialogElement
-  let items:MappedPost[] = []
-
+  let items: MappedPost[] = []
 
   onMount(() => {
-    element = document.querySelector('.filter-bar') as HTMLElement;
-    filter = document.getElementById('filter') as HTMLDialogElement;
+    element = document.querySelector('.filter-bar') as HTMLElement
+    filter = document.getElementById('filter') as HTMLDialogElement
 
     const observer = new ResizeObserver(() => {
       pageBodyHeight = document.body.scrollHeight
@@ -33,7 +32,6 @@
     items = [...data.posts]
     console.log(items)
   })
-
 
   // async function scrollCheck() {
   // if (reachedEnd || loading) {
@@ -263,5 +261,4 @@
   .item {
     transition: all ease 0.2s;
   }
-
 </style>
