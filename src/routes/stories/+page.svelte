@@ -118,18 +118,24 @@
   <div class="filter-bar bg-gray-200 sticky md:relative top-16 md:top-0  will-change-transform z-50">
     <Container>
       <div class="flex items-start md:flex-row my-6 gap-3">
-          <button class="btn flex flex-grow bg-white items-center rounded-md h-10 shadow-md md:hidden px-0 py-2 {data.selectedTag === '' ? '' : 'active'}" on:click={() => filter.showModal()}>
-              <span class="badge flex-shrink">Filter</span>
-            {#if data.selectedTag.startsWith('beratung')}
-              <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Beratung</span>
-            {:else if data.selectedTag.startsWith('custom')}
-              <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Custom Software</span>
-            {:else if data.selectedTag.startsWith('triarc')}
-              <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Triarc</span>
-            {:else}
-              <span class="flex-grow inline-flex justify-center px-4 py-2">Keine</span>
-            {/if}
-          </button>
+        <button
+          class="btn flex flex-grow bg-white items-center rounded-md h-10 shadow-md md:hidden px-0 py-2 {data.selectedTag ===
+          ''
+            ? ''
+            : 'active'}"
+          on:click={() => filter.showModal()}
+        >
+          <span class="badge flex-shrink">Filter</span>
+          {#if data.selectedTag.startsWith('beratung')}
+            <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Beratung</span>
+          {:else if data.selectedTag.startsWith('custom')}
+            <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Custom Software</span>
+          {:else if data.selectedTag.startsWith('triarc')}
+            <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Triarc</span>
+          {:else}
+            <span class="flex-grow inline-flex justify-center px-4 py-2">Keine</span>
+          {/if}
+        </button>
         <a
           href="/stories"
           target="_self"
@@ -228,7 +234,7 @@
     @apply bg-gray-300 shadow-md rounded-md px-4 py-2;
   }
   .active {
-    @apply bg-white ;
+    @apply bg-white;
   }
   .active .badge {
     @apply bg-blue-triarc text-white z-10;
