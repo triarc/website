@@ -108,7 +108,7 @@
 />
 
 <div class="bg-gray-100 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">
-  <dialog id="filter" class="modal rounded-md w-full bg-gray-300 shadow-xl">
+  <dialog id="filter" class="modal rounded-md w-full bg-gray-200 shadow-xl">
     <div class="modal-box ">
       <div class="flex mb-6 flex-col gap-3">
         <p class="font-bold ">Posts auswählen</p>
@@ -117,6 +117,7 @@
           target="_self"
           class="bg-white rounded-md h-10 flex {data.selectedTag === '' ? 'active' : ''} "
         >
+          <div class="badge">{data.totalPosts}</div>
           <div class="px-4 py-2 ">Alle</div>
         </a>
         {#each data.tags as tag}
@@ -144,30 +145,31 @@
         <button class="btn bg-white rounded-md h-10 md:hidden flex-shrink px-4 py-2" on:click={() => filter.showModal()}
           >Filter</button
         >
-        <div class="pr-4 py-2 flex flex-grow rounded-md items-center bg-gray-300 h-10 md:hidden">
-          <div class="badge justify-self-start">Aktiv</div>
+        <div class="pr-0 py-2 flex flex-grow rounded-md items-center bg-white h-10 md:hidden">
+          <div class="px-4 py-2 bg-blue-triarc text-white shadow-lg rounded-md justify-self-start">Aktiv</div>
           {#if data.selectedTag.startsWith('beratung')}
-            <div class="flex-grow inline-flex justify-items-center px-4 py-2">Beratung</div>
+            <div class="flex-grow inline-flex justify-center items-center px-4 py-2">Beratung</div>
           {:else if data.selectedTag.startsWith('custom')}
-            <div class="flex-grow inline-flex justify-items-center px-4 py-2">Custom Software</div>
+            <div class="flex-grow inline-flex justify-center items-center px-4 py-2">Custom Software</div>
           {:else if data.selectedTag.startsWith('triarc')}
-            <div class="flex-grow inline-flex justify-items-center px-4 py-2">Triarc</div>
+            <div class="flex-grow inline-flex justify-center items-center px-4 py-2">Triarc</div>
           {:else}
-            <div class="flex-grow inline-flex justify-center px-4 py-2">Keine</div>
+            <div class="flex-grow inline-flex justify-center  px-4 py-2">Keine</div>
           {/if}
         </div>
         <a
           href="/stories"
           target="_self"
-          class="bg-gray-300 rounded-md h-10 hidden md:flex {data.selectedTag === '' ? 'active' : ''} "
+          class="bg-white rounded-md h-10 hidden md:flex {data.selectedTag === '' ? 'active' : ''} "
         >
+          <div class="badge">{data.totalPosts}</div>
           <div class="px-4 py-2 ">Alle</div>
         </a>
         {#each data.tags as tag}
           <a
             href="/stories?tag={tag.slug}"
             target="_self"
-            class="bg-gray-300 h-10 rounded-md md:flex hidden {data.selectedTag === tag.slug ? 'active' : ''}"
+            class="bg-white h-10 rounded-md md:flex hidden {data.selectedTag === tag.slug ? 'active' : ''}"
           >
             <div class="badge">{tag.count.posts}</div>
             <div class="px-4 py-2 rounded-md">{tag.name}</div>
@@ -250,13 +252,13 @@
 
 <style>
   .badge {
-    @apply bg-white rounded-md px-4 py-2;
+    @apply bg-gray-300 shadow-lg rounded-md px-4 py-2;
   }
   .active {
-    @apply bg-blue-triarc text-white;
+    @apply bg-white ;
   }
   .active .badge {
-    @apply bg-blue-triarc-light text-white z-10;
+    @apply bg-blue-triarc text-white z-10;
   }
   .item {
     transition: all ease 0.2s;
