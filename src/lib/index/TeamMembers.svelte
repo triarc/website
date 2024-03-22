@@ -165,7 +165,7 @@
     },
     {
       name: 'Sakima',
-      job: '',
+      job: 'Head of Security',
       nerdJob: '',
       images: sakima,
       special: false,
