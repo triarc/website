@@ -1,8 +1,8 @@
 <script lang="ts">
   export let buttonSize: 'Standard' | 'Small'
-  export let reference: string = ''
-  export let label: string = ''
-  export let target: string = ''
+  export let reference = ''
+  export let label = ''
+  export let target = ''
 </script>
 
 <a
