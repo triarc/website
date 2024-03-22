@@ -33,7 +33,7 @@
     on:click={scrollToMenu}
   >
     <svg
-      class="w-6 h-6 text-red-triarc"
+      class="w-6 h-6 text-blue-triarc"
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
