@@ -11,6 +11,7 @@ module.exports = {
         'red-triarc': '#C8102E',
         'green-triarc': '#009639',
         'blue-triarc': '#0077c8',
+        'blue-triarc-light': '#3392d3',
         'yellow-triarc': '#FFE74C',
         wood: '#D0AE84',
         'orange-ebl-base': 'rgba(254, 107, 21, 1)',
