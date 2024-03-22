@@ -133,23 +133,24 @@
                   von Visionen und Strategien im digitalen Bereich wünschen, dann lade ich Sie herzlich dazu ein mich zu
                   kontaktieren.
                 </p>
-                <ul role="list" class="mt-6 flex gap-x-6">
+                <ul class="mt-6 flex gap-x-6">
                   <li>
                     <div class="flex">
-                      <div class="flex-shrink-0 items-start flex w-6 ">
+                      <div class="flex-shrink-0 items-center justify-start flex w-6">
                         <a
                           aria-label="Linkedin"
                           class="text-base text-gray-500"
                           href="https://www.linkedin.com/in/iriszenegagliagloor/"
                         >
                           <svg
-                            class="mt-1 fill-gray-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="1em"
+                            class="self-center"
                             viewBox="0 0 448 512"
-                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                            /></svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1.125em"
+                            ><path
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                          />
+                          </svg
                           >
                         </a>
                       </div>
@@ -176,23 +177,24 @@
                   individuell auf Ihre Bedürfnisse zugeschnittene digitale Lösung bereitstellen können. Zögern Sie
                   nicht, mich zu kontaktieren.
                 </p>
-                <ul role="list" class="mt-6 flex gap-x-6">
+                <ul class="mt-6 flex gap-x-6">
                   <li>
                     <div class="flex">
-                      <div class="flex-shrink-0 items-start flex w-6 ">
+                      <div class="flex-shrink-0 items-center justify-start flex w-6">
                         <a
                           aria-label="Linkedin"
                           class="text-base text-gray-500"
                           href="https://www.linkedin.com/in/dave-haug-442064a5/"
                         >
                           <svg
-                            class="mt-1 fill-gray-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="1em"
+                            class="self-center"
                             viewBox="0 0 448 512"
-                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                            /></svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1.125em"
+                          ><path
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                          />
+                          </svg
                           >
                         </a>
                       </div>
@@ -220,23 +222,24 @@
                   den Betrieb. Lassen Sie uns die digitalen Möglichkeiten Ihres Unternehmens entfalten und gemeinsam
                   innovative Wege gehen. Melden Sie sich bei mir.
                 </p>
-                <ul role="list" class="mt-6 flex gap-x-6">
+                <ul class="mt-6 flex gap-x-6">
                   <li>
                     <div class="flex">
-                      <div class="flex-shrink-0 items-start flex w-6 ">
+                      <div class="flex-shrink-0 items-center justify-start flex w-6">
                         <a
                           aria-label="Linkedin"
-                          class="text-base text-gray-500"
+                          class="text-base text-gray-500 justify-self-center self-center"
                           href="https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/"
                         >
                           <svg
-                            class="mt-1 fill-gray-400"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="1em"
+                            class=""
                             viewBox="0 0 448 512"
-                            ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                              d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                            /></svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1.125em"
+                          ><path
+                            d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
+                          />
+                          </svg
                           >
                         </a>
                       </div>

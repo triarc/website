@@ -33,30 +33,6 @@
     console.log(items)
   })
 
-  // async function scrollCheck() {
-  // if (reachedEnd || loading) {
-  //   return
-  // }
-  // if (scrollbarYPos / pageBodyHeight >= 0.6) {
-  //   try {
-  //     loading = true
-  //     console.log(scrollbarYPos)
-  //     console.log(pageBodyHeight)
-  //     pageBodyHeight = document.body.scrollHeight
-  //     const additionalData = await loadMoreStories()
-  //     console.log(additionalData)
-  //     items.push(...additionalData)
-  //     //posts = posts;  //looks stupid, is necessary to trigger reactivity
-  //     reachedEnd = additionalData.posts.length === 0
-  //     pageNumber++
-  //     console.log(items)
-  //   } catch (error) {
-  //     console.error('scrollFunctionError', error)
-  //   } finally {
-  //     loading = false
-  //   }
-  // }
-  //}
   async function loadMoreStories() {
     const tagSlug = $page.url.searchParams.get('tag') ?? ''
     const postFilter = tagSlug ? `%2Btag:${tagSlug}` : ''
@@ -115,7 +91,7 @@
         <a
           href="/stories"
           target="_self"
-          class="bg-white rounded-md h-10 flex {data.selectedTag === '' ? 'active' : ''} "
+          class="bg-white rounded-md shadow-md h-10 flex {data.selectedTag === '' ? 'active' : ''} "
         >
           <div class="badge">{data.totalPosts}</div>
           <div class="px-4 py-2 ">Alle</div>
@@ -124,7 +100,7 @@
           <a
             href="/stories?tag={tag.slug}"
             target="_self"
-            class="bg-white h-10 rounded-md flex {data.selectedTag === tag.slug ? 'active' : ''}"
+            class="bg-white h-10 rounded-md shadow-md flex {data.selectedTag === tag.slug ? 'active' : ''}"
           >
             <div class="badge">{tag.count.posts}</div>
             <div class="px-4 py-2">{tag.name}</div>
@@ -133,7 +109,7 @@
       </div>
       <div class="modal-action ">
         <form class="flex" method="dialog">
-          <button class="btn bg-white rounded-md h-10 flex-grow px-4 py-2">Abbrechen</button>
+          <button class="btn bg-white rounded-md h-10 shadow-md flex-grow px-4 py-2">Abbrechen</button>
         </form>
       </div>
     </div>
@@ -142,25 +118,22 @@
   <div class="filter-bar bg-gray-200 sticky md:relative top-16 md:top-0  will-change-transform z-50">
     <Container>
       <div class="flex items-start md:flex-row my-6 gap-3">
-        <button class="btn bg-white rounded-md h-10 md:hidden flex-shrink px-4 py-2" on:click={() => filter.showModal()}
-          >Filter</button
-        >
-        <div class="pr-0 py-2 flex flex-grow rounded-md items-center bg-white h-10 md:hidden">
-          <div class="px-4 py-2 bg-blue-triarc text-white shadow-lg rounded-md justify-self-start">Aktiv</div>
-          {#if data.selectedTag.startsWith('beratung')}
-            <div class="flex-grow inline-flex justify-center items-center px-4 py-2">Beratung</div>
-          {:else if data.selectedTag.startsWith('custom')}
-            <div class="flex-grow inline-flex justify-center items-center px-4 py-2">Custom Software</div>
-          {:else if data.selectedTag.startsWith('triarc')}
-            <div class="flex-grow inline-flex justify-center items-center px-4 py-2">Triarc</div>
-          {:else}
-            <div class="flex-grow inline-flex justify-center  px-4 py-2">Keine</div>
-          {/if}
-        </div>
+          <button class="btn flex flex-grow bg-white items-center rounded-md h-10 shadow-md md:hidden px-0 py-2 {data.selectedTag === '' ? '' : 'active'}" on:click={() => filter.showModal()}>
+              <span class="badge flex-shrink">Filter</span>
+            {#if data.selectedTag.startsWith('beratung')}
+              <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Beratung</span>
+            {:else if data.selectedTag.startsWith('custom')}
+              <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Custom Software</span>
+            {:else if data.selectedTag.startsWith('triarc')}
+              <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Triarc</span>
+            {:else}
+              <span class="flex-grow inline-flex justify-center px-4 py-2">Keine</span>
+            {/if}
+          </button>
         <a
           href="/stories"
           target="_self"
-          class="bg-white rounded-md h-10 hidden md:flex {data.selectedTag === '' ? 'active' : ''} "
+          class="bg-white rounded-md h-10 shadow-md hidden md:flex {data.selectedTag === '' ? 'active' : ''} "
         >
           <div class="badge">{data.totalPosts}</div>
           <div class="px-4 py-2 ">Alle</div>
@@ -169,7 +142,7 @@
           <a
             href="/stories?tag={tag.slug}"
             target="_self"
-            class="bg-white h-10 rounded-md md:flex hidden {data.selectedTag === tag.slug ? 'active' : ''}"
+            class="bg-white h-10 rounded-md shadow-md md:flex hidden {data.selectedTag === tag.slug ? 'active' : ''}"
           >
             <div class="badge">{tag.count.posts}</div>
             <div class="px-4 py-2 rounded-md">{tag.name}</div>
@@ -200,7 +173,7 @@
         let:visibleItems
       >
         {#each visibleItems as item}
-          <div class="item max-w-xs md:max-w-md">
+          <div class="item max-w-full md:max-w-md">
             <a href="/stories/{item.data.slug}" class=" break-inside-avoid shadow flex flex-col group rounded-md">
               {#if item.data.image.src !== ''}
                 <div class="relative rounded-md shadow">
@@ -252,7 +225,7 @@
 
 <style>
   .badge {
-    @apply bg-gray-300 shadow-lg rounded-md px-4 py-2;
+    @apply bg-gray-300 shadow-md rounded-md px-4 py-2;
   }
   .active {
     @apply bg-white ;
