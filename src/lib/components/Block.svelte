@@ -2,6 +2,7 @@
   import Picture from '$lib/index/Picture.svelte'
   import type { GhostPost } from '../../routes/stories/utils'
   import Slideshow from '$lib/components/Slideshow.svelte'
+  import Button from '$lib/components/Button.svelte'
 
   export interface BlockContent {
     slides?: GhostPost[]
@@ -130,13 +131,12 @@
           <p class="text-sm text-gray-500">{content.footer}</p>
         {/if}
         {#if content.link}
-          <a
-            href={content.link.href}
-            class="rounded bg-blue-triarc text-white px-3 py-1 inline-block mt-2"
+          <Button
+            buttonSize="Small"
+            reference={content.link.href}
+            label={content.link.text}
             target={content.link.target ?? ''}
-          >
-            {content.link.text}
-          </a>
+          />
         {/if}
         {#if content.bulletPoints}
           <ul class="mt-8">

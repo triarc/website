@@ -38,6 +38,7 @@ export const load: PageLoad = ({ params, url }) => {
             slug: tag.slug,
             count: tag.count,
           })),
+        totalPosts: tagData.tags.reduce((sum: number, tag: any) => sum + tag.count.posts, 0),
       }
     }
   )

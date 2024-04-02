@@ -7,18 +7,23 @@
   import { getSizes, getSource, getSourceSet } from './utils'
   import type { GhostPost } from './utils'
   import { onMount } from 'svelte'
-  import heroImage from '/src/lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '$lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata'
   import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
+  import type { MappedPost } from '../consulting/+page'
 
   export let data: PageData
   let pageNumber = 2 //
   let reachedEnd = false
   let loading = false
   let pageBodyHeight = 0
-
-  let items = []
+  let element: HTMLElement | null = null
+  let filter!: HTMLDialogElement
+  let items: MappedPost[] = []
 
   onMount(() => {
+    element = document.querySelector('.filter-bar') as HTMLElement
+    filter = document.getElementById('filter') as HTMLDialogElement
+
     const observer = new ResizeObserver(() => {
       pageBodyHeight = document.body.scrollHeight
       console.log('size changed')
@@ -27,30 +32,7 @@
     items = [...data.posts]
     console.log(items)
   })
-  // async function scrollCheck() {
-  // if (reachedEnd || loading) {
-  //   return
-  // }
-  // if (scrollbarYPos / pageBodyHeight >= 0.6) {
-  //   try {
-  //     loading = true
-  //     console.log(scrollbarYPos)
-  //     console.log(pageBodyHeight)
-  //     pageBodyHeight = document.body.scrollHeight
-  //     const additionalData = await loadMoreStories()
-  //     console.log(additionalData)
-  //     items.push(...additionalData)
-  //     //posts = posts;  //looks stupid, is necessary to trigger reactivity
-  //     reachedEnd = additionalData.posts.length === 0
-  //     pageNumber++
-  //     console.log(items)
-  //   } catch (error) {
-  //     console.error('scrollFunctionError', error)
-  //   } finally {
-  //     loading = false
-  //   }
-  // }
-  //}
+
   async function loadMoreStories() {
     const tagSlug = $page.url.searchParams.get('tag') ?? ''
     const postFilter = tagSlug ? `%2Btag:${tagSlug}` : ''
@@ -84,7 +66,7 @@
     if (newPosts == 0) {
       reachedEnd = true
     }
-    console.log(items, newPosts)
+    // console.log(items, newPosts)
     return [...items, ...newPosts]
   }
 </script>
@@ -101,23 +83,24 @@
   image={heroImage}
 />
 
-<div class="bg-gray-100 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">
-  <dialog id="filter" class="modal rounded-md w-full">
+<div class="bg-gray-50 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">
+  <dialog id="filter" class="modal rounded-md w-full bg-gray-100 shadow-xl">
     <div class="modal-box ">
       <div class="flex mb-6 flex-col gap-3">
-        <p class="font-bold ">Posts auswählen</p>
+        <p class="font-bold text-gray-700">Posts auswählen</p>
         <a
           href="/stories"
           target="_self"
-          class="bg-gray-200 rounded-md h-10 flex {data.selectedTag === '' ? 'active' : ''} "
+          class="bg-white rounded-md border border-gray-300 h-10 flex {data.selectedTag === '' ? 'active' : ''} "
         >
+          <div class="badge">{data.totalPosts}</div>
           <div class="px-4 py-2 ">Alle</div>
         </a>
         {#each data.tags as tag}
           <a
             href="/stories?tag={tag.slug}"
             target="_self"
-            class="bg-gray-200 h-10 rounded-md flex {data.selectedTag === tag.slug ? 'active' : ''}"
+            class="bg-white border border-gray-300 h-10 rounded-md flex {data.selectedTag === tag.slug ? 'active' : ''}"
           >
             <div class="badge">{tag.count.posts}</div>
             <div class="px-4 py-2">{tag.name}</div>
@@ -126,45 +109,51 @@
       </div>
       <div class="modal-action ">
         <form class="flex" method="dialog">
-          <button class="btn bg-gray-200 rounded-md h-10 flex-grow px-4 py-2">Abbrechen</button>
+          <button class="btn bg-white rounded-md h-10 border-gray-300 border flex-grow px-4 py-2">Abbrechen</button>
         </form>
       </div>
     </div>
   </dialog>
 
-  <div class="bg-white sticky top-0 will-change-transform z-50">
+  <div
+    class="filter-bar bg-[#E5E7EB] shadow  border-t border-b border-gray-200 sticky md:relative top-16 md:top-0  will-change-transform z-50"
+  >
     <Container>
       <div class="flex items-start md:flex-row my-6 gap-3">
-        <button class="btn bg-gray-200 rounded-md h-10 md:hidden flex-grow px-4 py-2" onclick="filter.showModal()"
-          >Filter</button
+        <button
+          class="btn flex flex-grow bg-white items-center rounded-md h-10 shadow md:hidden px-0 py-2 {data.selectedTag ===
+          ''
+            ? ''
+            : 'active'}"
+          on:click={() => filter.showModal()}
         >
-        <div class="px-4 py-2 bg-gray-200 rounded-md h-10 md:hidden">
-          Aktiv:
-          {#if data.selectedTag.startsWith('news')}
-            News
-          {:else if data.selectedTag.startsWith('success')}
-            Success Story
-          {:else if data.selectedTag.startsWith('tech')}
-            Tech
+          <span class="badge flex-shrink">Filter</span>
+          {#if data.selectedTag.startsWith('beratung')}
+            <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Beratung</span>
+          {:else if data.selectedTag.startsWith('custom')}
+            <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Custom Software</span>
+          {:else if data.selectedTag.startsWith('triarc')}
+            <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Triarc</span>
           {:else}
-            Alle
+            <span class="flex-grow inline-flex justify-center px-4 py-2">Alle</span>
           {/if}
-        </div>
+        </button>
         <a
           href="/stories"
           target="_self"
-          class="bg-gray-200 rounded-md h-10 hidden md:flex {data.selectedTag === '' ? 'active' : ''} "
+          class="bg-white rounded-md h-10 hidden md:flex {data.selectedTag === '' ? 'active' : ''} "
         >
+          <div class="badge">{data.totalPosts}</div>
           <div class="px-4 py-2 ">Alle</div>
         </a>
         {#each data.tags as tag}
           <a
             href="/stories?tag={tag.slug}"
             target="_self"
-            class="bg-gray-200 h-10 rounded-md md:flex hidden {data.selectedTag === tag.slug ? 'active' : ''}"
+            class="bg-white h-10 rounded-md md:flex hidden {data.selectedTag === tag.slug ? 'active' : ''}"
           >
             <div class="badge">{tag.count.posts}</div>
-            <div class="px-4 py-2">{tag.name}</div>
+            <div class="px-4 py-2 rounded-md">{tag.name}</div>
           </a>
         {/each}
       </div>
@@ -173,7 +162,7 @@
   <hr />
 
   <div class="flex-grow ">
-    <div class="px-6 py-4">
+    <div class="px-8 lg:px-16 py-4">
       <MasonryInfiniteGrid
         gap={40}
         align="center"
@@ -192,7 +181,7 @@
         let:visibleItems
       >
         {#each visibleItems as item}
-          <div class="item max-w-xs md:max-w-md">
+          <div class="item max-w-full md:max-w-md">
             <a href="/stories/{item.data.slug}" class=" break-inside-avoid shadow flex flex-col group rounded-md">
               {#if item.data.image.src !== ''}
                 <div class="relative rounded-md shadow">
@@ -244,13 +233,13 @@
 
 <style>
   .badge {
-    @apply bg-gray-300 rounded-md px-4 py-2;
+    @apply bg-white border-r-2 border-gray-100 rounded rounded-r-none  px-4 py-2;
   }
   .active {
-    @apply bg-blue-triarc text-white;
+    @apply bg-white;
   }
   .active .badge {
-    @apply bg-white bg-opacity-20;
+    @apply bg-blue-triarc text-white z-10;
   }
   .item {
     transition: all ease 0.2s;

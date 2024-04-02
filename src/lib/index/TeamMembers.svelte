@@ -14,6 +14,8 @@
   import bammbamm from '/src/team/bambam.jpg?width=500&format=webp;png&metadata'
   import simon from '/src/team/simon.jpg?width=500&format=webp;png&metadata'
   import lukas from '/src/team/lukas.jpg?width=500&format=webp;png&metadata'
+  import alexa from '/src/team/alexa.jpg?width=500&format=webp;png&metadata'
+  import sakima from '/src/team/sakima.jpg?width=500&format=webp;png&metadata'
   import Picture from '$lib/index/Picture.svelte'
 
   let teamMember = [
@@ -144,12 +146,30 @@
       linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
     },
     {
+      name: 'Alexa Weich',
+      job: 'UI/UX Designerin',
+      nerdJob: 'UI/UX Designerin',
+      images: alexa,
+      special: false,
+      email: 'alexa@triarc-labs.com',
+      linkedIn: 'https://ch.linkedin.com/in/alexandra-weich-a13229140',
+    },
+    {
       name: 'Bamm Bamm',
       job: 'Head of Happiness',
       nerdJob: 'Sicherheitsinspektor',
       images: bammbamm,
       special: true,
       email: 'bammbamm@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
+    },
+    {
+      name: 'Sakima',
+      job: 'Head of Security',
+      nerdJob: '',
+      images: sakima,
+      special: false,
+      email: 'sakima@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
     },
   ]

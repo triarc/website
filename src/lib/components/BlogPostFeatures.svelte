@@ -4,6 +4,7 @@
   import ConsultationCustomers from '$lib/index/ConsultationCustomers.svelte'
   import Testimonials from '$lib/index/Testimonials.svelte'
   import Container from '$lib/components/Container.svelte'
+  import Button from '$lib/components/Button.svelte'
 
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
@@ -13,7 +14,7 @@
   <div class="bg-white">
     <div class="flex flex-col lg:flex-row">
       <div
-        class="{content.quote.highlight
+        class="{content?.quote?.highlight
           ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
           : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 "
       >
@@ -24,9 +25,9 @@
                 <Picture
                   height="280"
                   width="373"
-                  alt={content.quote.person}
-                  images={content.quote.images}
-                  cssClass={content.quote.imageCss
+                  alt={content?.quote?.person}
+                  images={content?.quote?.images}
+                  cssClass={content?.quote?.imageCss
                     ? content.quote.imageCss
                     : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
                 />
@@ -47,15 +48,19 @@
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
                 </svg>
                 <blockquote
-                  class="text-xl font-semibold {content.quote.highlight ? 'text-gray-900' : 'text-gray-600'} leading-9"
+                  class="text-xl font-semibold {content?.quote?.highlight
+                    ? 'text-gray-900'
+                    : 'text-gray-600'} leading-9"
                 >
-                  <p>{@html content.quote.content}</p>
+                  <p>{@html content?.quote?.content}</p>
                 </blockquote>
-                <figcaption class="mt-8 text-base {content.quote.highlight ? 'text-gray-900' : 'text-gray-600'}">
-                  <div class="font-semibold">{content.quote.person}</div>
-                  <div class="mt-1">{@html content.quote.personTitle}</div>
-                  <div class="flex flex-row gap-x-4 mt-4 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
-                    {#if content.quote.linkedin}
+                <figcaption class="mt-8 text-base {content?.quote?.highlight ? 'text-gray-900' : 'text-gray-600'}">
+                  <div class="font-semibold">{content?.quote?.person}</div>
+                  <div class="mt-1">{@html content?.quote?.personTitle}</div>
+                  <div
+                    class="flex flex-row gap-x-4 mt-4 {content?.quote?.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                  >
+                    {#if content?.quote?.linkedin}
                       <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                         <svg
                           class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
@@ -68,7 +73,7 @@
                         >
                       </a>
                     {/if}
-                    {#if content.quote.email}
+                    {#if content?.quote?.email}
                       <a href="mailto:{content.quote.email}" aria-label="Email">
                         <svg class="h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                           <path
@@ -79,14 +84,12 @@
                     {/if}
                   </div>
                   <div class="flex justify-center my-8">
-                    <a class="rounded bg-blue-triarc text-white px-6 py-2 inline-block" href="#contactform"
-                      >{content.quote.contactButton}</a
-                    >
+                    <Button buttonSize="Standard" reference="#contactform" label={content?.quote?.contactButton} />
                   </div>
                 </figcaption>
               </figure>
               <div class="flex flex-col gap-y-8 my-8">
-                {#each content.quote.customLogos as customLogo}
+                {#each content?.quote?.customLogos as customLogo}
                   <img src={customLogo} alt="{customLogo} image" />
                 {/each}
               </div>
@@ -110,13 +113,7 @@
                   </p>
                 {/if}
                 {#if category.link}
-                  <a
-                    href={category.link}
-                    class="rounded bg-blue-triarc text-white px-3 py-1 inline-block mt-2"
-                    target="_blank"
-                  >
-                    Mehr dazu
-                  </a>
+                  <Button buttonSize="Small" reference={category.link} label="Mehr dazu" target="_blank" />
                 {/if}
                 {#if category.quote}
                   <blockquote
