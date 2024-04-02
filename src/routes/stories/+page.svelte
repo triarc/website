@@ -135,7 +135,7 @@
           {:else if data.selectedTag.startsWith('triarc')}
             <span class="flex-grow inline-flex justify-center items-center px-4 py-2">Triarc</span>
           {:else}
-            <span class="flex-grow inline-flex justify-center px-4 py-2">Keine</span>
+            <span class="flex-grow inline-flex justify-center px-4 py-2">Alle</span>
           {/if}
         </button>
         <a
