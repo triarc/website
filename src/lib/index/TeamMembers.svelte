@@ -10,7 +10,7 @@
   import luka from '$lib/assets/team/luka.jpg?format=webp;png&w=500&enhanced'
   import chris from '$lib/assets/team/chris.jpg?format=webp;png&w=500&enhanced'
   import till from '$lib/assets/team/till.jpg?format=webp;png&w=500&enhanced'
-  import david from '$lib/assets/team/david.jpg?format=webp;png&w=&enhanced'
+  import david from '$lib/assets/team/david.jpg?format=webp;png&w=500&enhanced'
   import bammbamm from '$lib/assets/team/bambam.jpg?format=webp;png&w=500&enhanced'
   import simon from '$lib/assets/team/simon.jpg?format=webp;png&w=500&enhanced'
   import lukas from '$lib/assets/team/lukas.jpg?format=webp;png&w=500&enhanced'
