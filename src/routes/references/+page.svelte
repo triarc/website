@@ -3,16 +3,16 @@
   import References from '$lib/index/References.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
-  import dave from '../../../static/team/dave.jpg?width=500&format=webp;png&metadata'
-  import heroImage from '/src/lib/assets/hero/Projekte.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import dave from '$lib/assets/team/dave.jpg?width=500&format=webp;png&metadata&enhanced'
+  import heroImage from '$lib/assets/hero/Projekte.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import Partners from '$lib/index/Partners.svelte'
   import NavJump from '$lib/components/NavJump.svelte'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
 
   let content: BlockContent = {
     quote: {
-      images: dave,
+      image: dave,
       content: 'Gewinnen Sie durch maßgeschneiderte Software einen entscheidenden Wettbewerbsvorteil!',
       person: 'Dave Haug',
       personTitle: 'Business Development',
@@ -30,9 +30,8 @@
 <Hero
   title="Lösungen"
   content="Was haben wir vollbracht und woraus ist es entstanden"
-  imageSrc="Projekte"
+  imageSrc={heroImage}
   imageAlt="Triarc Reference Projects Header"
-  image={heroImage}
 />
 
 <div class="bg-white">

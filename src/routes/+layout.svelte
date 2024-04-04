@@ -5,24 +5,12 @@
   import logo from '../lib/assets/triarc-labs-black.svg'
   import NavDropDown from '$lib/components/NavDropDown.svelte'
   import NavDropDownItem from '$lib/components/NavDropDownItem.svelte'
+  import type { MetaInfo, NavItem } from '$lib/components/TypeDefinitions'
 
   export let menuOpen = false
 
   export let mobileTitle = ''
   export let mobileSubTitle = ''
-
-  export interface NavItemHeading {
-    type: 'heading'
-    title: string
-    items: NavItemLink[]
-  }
-  export interface NavItemLink {
-    type: 'link'
-    title: string
-    description: string
-    path: string
-  }
-  export type NavItem = NavItemHeading | NavItemLink
 
   export let data: { pathname: string }
 
@@ -121,7 +109,7 @@
     },
   ]
 
-  const linkMetaInfo = navItems.reduce((map, item) => {
+  const linkMetaInfo = navItems.reduce<Record<string, MetaInfo>>((map, item) => {
     if (item.type === 'heading') {
       for (const subItem of item.items) {
         map[subItem.path] = { title: subItem.title, description: subItem.description }
@@ -142,7 +130,7 @@
   }
 
   onMount(() => {
-    const messages = {
+    const messages: { [key: string]: string } = {
       en: "%c We're hiring! Checkout https://triarc-labs.com/jobs",
       de: '%c Wir suchen dich! https://triarc-labs.com/jobs',
       'de-DE': '%c Wir suchen dich! https://triarc-labs.com/jobs',
@@ -184,7 +172,7 @@
       <ul class="nav-links">
         {#each navItems as navItem}
           <li
-            class="my-4 last:mb-4 first:mt-4 py-2 px-4 {navItem.path == data.pathname
+            class="my-4 last:mb-4 first:mt-4 py-2 px-4 {navItem.type === 'link' && navItem.path === data.pathname
               ? 'rounded-md bg-gray-100 bg-opacity-10'
               : ''}"
           >

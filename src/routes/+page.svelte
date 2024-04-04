@@ -1,10 +1,21 @@
 <script lang="ts">
+
+  import { onMount } from 'svelte'
+
+  let navMenuElement: HTMLElement | null
+
   function scrollToMenu() {
-    document.scrollingElement.scrollTo({
-      behavior: 'smooth',
-      top: document.getElementById('nav-menu').offsetTop,
-    })
+    if (document.scrollingElement && navMenuElement) {
+      document.scrollingElement.scrollTo({
+        behavior: 'smooth',
+        top: navMenuElement.offsetTop,
+      })
+    }
   }
+
+  onMount(() => {
+    navMenuElement = document.getElementById('nav-menu')
+  })
 </script>
 
 <svelte:head>
@@ -12,7 +23,7 @@
 </svelte:head>
 
 <div
-  class="bg-gray-100 relative bg-opacity-20 flex flex-col flex items-center min-h-screen w-full flex-grow justify-center intro"
+  class="bg-gray-100 relative bg-opacity-20 flex-col flex items-center min-h-screen w-full flex-grow justify-center intro"
 >
   <!--  <img src={logo} alt="triarc laboratories ltd" class="absolute top-8 left-8 right-8 z-20" width="242" height="42" />-->
   <!--  <div class="absolute top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-10" />-->

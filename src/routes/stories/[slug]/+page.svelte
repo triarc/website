@@ -1,10 +1,8 @@
 <script lang="ts">
-  import Footer from '$lib/components/Footer.svelte'
   import ContactForm from '$lib/components/ContactForm.svelte'
   import type { PageData } from './$types'
   export let data: PageData
   export let contactString: string = data.title
-  import { onMount } from 'svelte'
   import Container from '$lib/components/Container.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   export function nav_back() {

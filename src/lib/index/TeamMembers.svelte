@@ -1,29 +1,30 @@
 <script lang="ts">
-  import serge from '/src/team/serge.jpg?width=500&format=webp;png&metadata'
-  import marco from '/src/team/marco.jpg?width=500&format=webp;png&metadata'
-  import pascal from '/src/team/pascal.jpg?width=500&format=webp;png&metadata'
-  import elke from '/src/team/elke.jpg?width=500&format=webp;png&metadata'
-  import max from '/src/team/max.jpg?width=500&format=webp;png&metadata'
-  import iris from '/src/team/iris.jpg?width=500&format=webp;png&metadata'
-  import dave from '/src/team/dave.jpg?width=500&format=webp;png&metadata'
-  import michel from '/src/team/michel.jpg?width=500&format=webp;png&metadata'
-  import luka from '/src/team/luka.jpg?width=500&format=webp;png&metadata'
-  import chris from '/src/team/chris.jpg?width=500&format=webp;png&metadata'
-  import till from '/src/team/till.jpg?width=500&format=webp;png&metadata'
-  import david from '/src/team/david.jpg?width=500&format=webp;png&metadata'
-  import bammbamm from '/src/team/bambam.jpg?width=500&format=webp;png&metadata'
-  import simon from '/src/team/simon.jpg?width=500&format=webp;png&metadata'
-  import lukas from '/src/team/lukas.jpg?width=500&format=webp;png&metadata'
-  import alexa from '/src/team/alexa.jpg?width=500&format=webp;png&metadata'
-  import sakima from '/src/team/sakima.jpg?width=500&format=webp;png&metadata'
-  import Picture from '$lib/index/Picture.svelte'
+  import serge from '$lib/assets/team/serge.jpg?format=webp;png&w=500&enhanced'
+  import marco from '$lib/assets/team/marco.jpg?format=webp;png&w=500&enhanced'
+  import pascal from '$lib/assets//team/pascal.jpg?format=webp;png&w=500&enhanced'
+  import elke from '$lib/assets/team/elke.jpg?format=webp;png&w=500&enhanced'
+  import max from '$lib/assets/team/max.jpg?format=webp;png&w=500&enhanced'
+  import iris from '$lib/assets/team/iris.jpg?format=webp;png&w=500&enhanced'
+  import dave from '$lib/assets/team/dave.jpg?format=webp;png&w=500&enhanced'
+  import michel from '$lib/assets/team/michel.jpg?format=webp;png&w=500&enhanced'
+  import luka from '$lib/assets/team/luka.jpg?format=webp;png&w=500&enhanced'
+  import chris from '$lib/assets/team/chris.jpg?format=webp;png&w=500&enhanced'
+  import till from '$lib/assets/team/till.jpg?format=webp;png&w=500&enhanced'
+  import david from '$lib/assets/team/david.jpg?format=webp;png&w=&enhanced'
+  import bammbamm from '$lib/assets/team/bambam.jpg?format=webp;png&w=500&enhanced'
+  import simon from '$lib/assets/team/simon.jpg?format=webp;png&w=500&enhanced'
+  import lukas from '$lib/assets/team/lukas.jpg?format=webp;png&w=500&enhanced'
+  import alexa from '$lib/assets/team/alexa.jpg?format=webp;png&w=500&enhanced'
+  import sakima from '$lib/assets/team/sakima.jpg?format=webp;png&w=500&enhanced'
+
+
 
   let teamMember = [
     {
       name: 'Serge Müller',
       job: 'CEO / Partner',
       nerdJob: 'CEO / Partner',
-      images: serge,
+      image: serge,
       special: false,
       email: 'serge@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
@@ -32,7 +33,7 @@
       name: 'Marco Schmidlin',
       job: 'CTO / Partner',
       nerdJob: 'CTO / Partner',
-      images: marco,
+      image: marco,
       special: false,
       email: 'marco@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/marco-schmidlin-1444ab2a/',
@@ -41,7 +42,7 @@
       name: 'Elke Engel',
       job: 'CFO / Partner',
       nerdJob: 'CFO / Partner',
-      images: elke,
+      image: elke,
       special: false,
       email: 'elke@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/elke-engel-6761998/',
@@ -50,7 +51,7 @@
       name: 'Pascal Bertschi',
       job: 'CCO / Partner',
       nerdJob: 'Typescript maniac',
-      images: pascal,
+      image: pascal,
       special: false,
       email: 'pascal@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/pascal-bertschi-9b00b480/',
@@ -59,7 +60,7 @@
       name: 'Max Lüthi',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      images: max,
+      image: max,
       special: false,
       email: 'max@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/max-l%C3%BCthi-864848214/',
@@ -68,7 +69,7 @@
       name: 'Iris Zenegaglia',
       job: 'Beratung / Partner',
       nerdJob: 'Management-, Strategie- und Digitalisierungsberatung / Partner',
-      images: iris,
+      image: iris,
       special: false,
       email: 'iris@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/iriszenegagliagloor/',
@@ -77,7 +78,7 @@
       name: 'Dave Haug',
       job: 'Business Development',
       nerdJob: 'Business Development',
-      images: dave,
+      image: dave,
       special: false,
       email: 'dave@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/dave-haug-442064a5/',
@@ -86,7 +87,7 @@
       name: 'Simon Hasler',
       job: 'Project Lead',
       nerdJob: 'Project Lead',
-      images: simon,
+      image: simon,
       special: false,
       email: 'simon@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/simon-hasler-82069083/',
@@ -95,7 +96,7 @@
       name: 'Michel Gabriel',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      images: michel,
+      image: michel,
       special: false,
       email: 'michel@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/michel-gabriel/',
@@ -104,7 +105,7 @@
       name: 'Luka Kramer',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      images: luka,
+      image: luka,
       special: false,
       email: 'luka@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/luka-kramer/',
@@ -113,7 +114,7 @@
       name: 'Chris Thonfeld',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      images: chris,
+      image: chris,
       special: false,
       email: 'chris@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/christopher-thonfeld-guckes-452b771b7/',
@@ -122,7 +123,7 @@
       name: 'Till Wegmüller',
       job: 'Operation Engineer',
       nerdJob: 'Operation Engineer',
-      images: till,
+      image: till,
       special: false,
       email: 'till@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/till-wegm%C3%BCller-825ba3131/',
@@ -131,7 +132,7 @@
       name: 'David Jahn',
       job: 'Software Developer',
       nerdJob: 'Software Developer',
-      images: david,
+      image: david,
       special: false,
       email: 'david@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/david-jahn-b32940197/',
@@ -140,7 +141,7 @@
       name: 'Lukas Hartmann',
       job: 'Praktikant',
       nerdJob: 'Praktikant',
-      images: lukas,
+      image: lukas,
       special: false,
       email: 'lukas@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
@@ -149,7 +150,7 @@
       name: 'Alexa Weich',
       job: 'UI/UX Designerin',
       nerdJob: 'UI/UX Designerin',
-      images: alexa,
+      image: alexa,
       special: false,
       email: 'alexa@triarc-labs.com',
       linkedIn: 'https://ch.linkedin.com/in/alexandra-weich-a13229140',
@@ -158,7 +159,7 @@
       name: 'Bamm Bamm',
       job: 'Head of Happiness',
       nerdJob: 'Sicherheitsinspektor',
-      images: bammbamm,
+      image: bammbamm,
       special: true,
       email: 'bammbamm@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
@@ -167,7 +168,7 @@
       name: 'Sakima',
       job: 'Head of Security',
       nerdJob: '',
-      images: sakima,
+      image: sakima,
       special: false,
       email: 'sakima@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
@@ -191,12 +192,11 @@
     >
       {#each teamMember as member}
         <li>
-          <Picture
-            height="280"
-            width="373"
-            alt={member.name}
-            images={member.images}
-            cssClass="aspect-[3/4] w-full drop-shadow filter rounded-2xl object-cover"
+          <enhanced:img
+            class="aspect-[3/4] w-full drop-shadow rounded-2xl object-cover"
+            loading="lazy"
+            alt="{member.name}"
+            src="{member.image}"
           />
           <h3
             class="mt-6 text-lg inline-flex font-semibold leading-8 tracking-tight text-gray-800 justify-center align-middle"

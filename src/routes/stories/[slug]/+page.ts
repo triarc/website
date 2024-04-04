@@ -9,6 +9,6 @@ export const load: PageLoad = ({ params }) => {
       return data.posts[0]
     })
     .catch(() => {
-      throw error(404, 'Not found')
+      error(404, 'Not found');
     })
 }

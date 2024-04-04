@@ -14,7 +14,7 @@
   <div class="bg-white">
     <div class="flex flex-col lg:flex-row">
       <div
-        class="{content?.quote?.highlight
+        class="{content.quote?.highlight
           ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
           : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 "
       >
@@ -22,12 +22,10 @@
           <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center px-8 gap-x-8 lg:ml-auto">
             <div class="-mt-8 w-full">
               <div class="relative aspect-[3/4] h-full flex justify-center items-center">
-                <Picture
-                  height="280"
-                  width="373"
-                  alt={content?.quote?.person}
-                  images={content?.quote?.images}
-                  cssClass={content?.quote?.imageCss
+                <enhanced:img
+                  alt={content.quote?.person}
+                  src={content.quote?.image}
+                  class={content?.quote?.imageCss
                     ? content.quote.imageCss
                     : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
                 />
@@ -48,11 +46,11 @@
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
                 </svg>
                 <blockquote
-                  class="text-xl font-semibold {content?.quote?.highlight
+                  class="text-xl font-semibold {content.quote?.highlight
                     ? 'text-gray-900'
                     : 'text-gray-600'} leading-9"
                 >
-                  <p>{@html content?.quote?.content}</p>
+                  <p>{@html content.quote?.content}</p>
                 </blockquote>
                 <figcaption class="mt-8 text-base {content?.quote?.highlight ? 'text-gray-900' : 'text-gray-600'}">
                   <div class="font-semibold">{content?.quote?.person}</div>
@@ -60,7 +58,7 @@
                   <div
                     class="flex flex-row gap-x-4 mt-4 {content?.quote?.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                   >
-                    {#if content?.quote?.linkedin}
+                    {#if content.quote?.linkedin}
                       <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                         <svg
                           class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
@@ -73,7 +71,7 @@
                         >
                       </a>
                     {/if}
-                    {#if content?.quote?.email}
+                    {#if content.quote?.email}
                       <a href="mailto:{content.quote.email}" aria-label="Email">
                         <svg class="h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                           <path
@@ -89,9 +87,11 @@
                 </figcaption>
               </figure>
               <div class="flex flex-col gap-y-8 my-8">
-                {#each content?.quote?.customLogos as customLogo}
+                {#if content.quote && content.quote.customLogos}
+                {#each content.quote.customLogos as customLogo}
                   <img src={customLogo} alt="{customLogo} image" />
                 {/each}
+                {/if}
               </div>
             </div>
           </div>
@@ -165,8 +165,6 @@
                               sizes={post.image.sizes}
                               loading="lazy"
                               alt={post.image.alt}
-                              data-width={post.image.width}
-                              data-height={post.image.height}
                               class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top"
                             />
                             <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
@@ -203,8 +201,6 @@
                               sizes={post.image.sizes}
                               loading="lazy"
                               alt={post.image.alt}
-                              data-width={post.image.width}
-                              data-height={post.image.height}
                               class="object-cover rounded-xl {index % 2 === 1
                                 ? 'rounded-l-none'
                                 : 'rounded-r-none'} overflow-hidden block h-60 max-w-auto w-full object-left-top"
@@ -241,8 +237,6 @@
                               sizes={post.image.sizes}
                               loading="lazy"
                               alt={post.image.alt}
-                              data-width={post.image.width}
-                              data-height={post.image.height}
                               class="object-cover rounded-xl lg:rounded-r-none lg:rounded-xl rounded-b-none overflow-hidden block h-60 max-w-auto w-full object-left-top"
                             />
                             <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />

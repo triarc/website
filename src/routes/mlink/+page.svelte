@@ -1,9 +1,9 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
   import Video from '$lib/components/Video.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Container from '$lib/components/Container.svelte'
   import Footer from '$lib/components/Footer.svelte'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
 
   let contents: BlockContent[] = [
     {
@@ -96,12 +96,7 @@
     {
       left: {
         quote: {
-          images: [
-            {
-              src: 'img/customer/ebl-logo.svg',
-              format: 'svg',
-            },
-          ],
+          image: 'img/customer/ebl-logo.svg',
           imageCss: 'h-24',
           content:
             'μLink ist die Datendrehscheibe, welche Microsoft Dynamics AX und das Data Warehouse mit unseren Applikationen in Echtzeit vernetzt',
@@ -111,12 +106,7 @@
       },
       right: {
         quote: {
-          images: [
-            {
-              src: 'img/customer/glb-logo.svg',
-              format: 'svg',
-            },
-          ],
+          image: 'img/customer/glb-logo.svg',
           imageCss: 'h-24',
           content: 'Mit μLink erweitern wir ABACUS nach Belieben',
           person: 'Ueli Grossen',
@@ -127,12 +117,7 @@
     {
       left: {
         quote: {
-          images: [
-            {
-              src: 'img/customer/riwax-logo.svg',
-              format: 'svg',
-            },
-          ],
+          image: 'img/customer/riwax-logo.svg',
           imageCss: 'h-12',
           content: 'μLink bindet unseren Aussendienst eng in unseren Betrieb ein',
           person: 'Michel Scherz',
@@ -141,12 +126,7 @@
       },
       right: {
         quote: {
-          images: [
-            {
-              src: 'img/customer/ortho-team-logo.svg',
-              format: 'svg',
-            },
-          ],
+          image: 'img/customer/ortho-team-logo.svg',
           imageCss: 'h-12',
           content: 'μLink verbindet unsere Mitarbeiter von der Kundenberatung ohne Zeitverlust direkt zum Techniker',
           person: 'Patrick Rohrer',
@@ -157,12 +137,7 @@
     {
       left: {
         quote: {
-          images: [
-            {
-              src: 'img/customer/kibag-logo.svg',
-              format: 'svg',
-            },
-          ],
+          image: 'img/customer/kibag-logo.svg',
           imageCss: 'h-24 w-24',
           content: 'μLink liefert uns die Grundlage für die digitale Bauakte',
           person: 'Yves Stucki',
@@ -171,12 +146,7 @@
       },
       right: {
         quote: {
-          images: [
-            {
-              src: 'img/customer/walo-logo.svg',
-              format: 'svg',
-            },
-          ],
+          image: 'img/customer/walo-logo.svg',
           imageCss: 'h-24',
           content: 'μLink ist die zentrale Datendrehscheibe in unserem Ökosystem',
           person: 'Roger Bühlmann',
@@ -209,15 +179,15 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8  py-24 sm:py-16">
         <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
-            <img class="{quote.left.quote.imageCss} self-start" src={quote.left.quote.images[0].src} alt="" />
+            <img class="{quote.left.quote?.imageCss} self-start" src={quote.left.quote?.image} alt="" />
             <figure class="mt-10 flex flex-auto flex-col justify-between">
               <blockquote class="text-lg leading-8 text-gray-900">
-                <p>“{quote.left.quote.content}”</p>
+                <p>“{quote.left.quote?.content}”</p>
               </blockquote>
               <figcaption class="mt-10 flex items-center gap-x-6">
                 <div class="text-base">
-                  <div class="font-semibold text-gray-900">{quote.left.quote.person}</div>
-                  <div class="mt-1 text-gray-500">{quote.left.quote.personTitle}</div>
+                  <div class="font-semibold text-gray-900">{quote.left.quote?.person}</div>
+                  <div class="mt-1 text-gray-500">{quote.left.quote?.personTitle}</div>
                 </div>
               </figcaption>
             </figure>
@@ -225,15 +195,15 @@
           <div
             class="flex flex-col border-t border-gray-900/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20"
           >
-            <img class="{quote.right.quote.imageCss} self-start" src={quote.right.quote.images[0].src} alt="" />
+            <img class="{quote.right.quote?.imageCss} self-start" src={quote.right.quote?.image} alt="" />
             <figure class="mt-10 flex flex-auto flex-col justify-between">
               <blockquote class="text-lg leading-8 text-gray-900">
-                <p>“{quote.right.quote.content}”</p>
+                <p>“{quote.right.quote?.content}”</p>
               </blockquote>
               <figcaption class="mt-10 flex items-center gap-x-6">
                 <div class="text-base">
-                  <div class="font-semibold text-gray-900">{quote.right.quote.person}</div>
-                  <div class="mt-1 text-gray-500">{quote.right.quote.personTitle}</div>
+                  <div class="font-semibold text-gray-900">{quote.right.quote?.person}</div>
+                  <div class="mt-1 text-gray-500">{quote.right.quote?.personTitle}</div>
                 </div>
               </figcaption>
             </figure>

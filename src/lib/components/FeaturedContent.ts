@@ -4,7 +4,7 @@ export interface FeaturedContent {
   quote?: {
     content: string
     person: string
-    images: any
+    image: any
     imageCss?: string
     personTitle: string
     linkedin: string
@@ -16,11 +16,12 @@ export interface FeaturedContent {
   categories: [
     {
       title: string
+      link?: string
       content?: string
       quote?: { source: string; content: string }
-      steps?: { title: string; content: string }
+      steps?: { title: string; content: string }[]
       posts?: MappedPost[]
-    }
+    },
   ]
   testimonials: Testimonial[]
 }

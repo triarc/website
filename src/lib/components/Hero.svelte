@@ -6,18 +6,17 @@
   export let content: string
   export let imageSrc: string
   export let imageAlt: string
-  export let image
+  // export let image
 
-  const srcset = image.map((i) => `${i.src} ${i.width}w`).join(', ')
+  // const srcset = image.map((i) => `${i.src} ${i.width}w`).join(', ')
 </script>
 
 <div class="relative bg-blue-triarc">
   <div class="absolute inset-0">
-    <img
+    <enhanced:img
       class="h-full w-full object-cover"
       sizes="(max-width: 1000px) 400px, 800px"
-      {srcset}
-      src="{imageSrc}.webp"
+      src="{imageSrc}"
       alt={imageAlt}
     />
     <div class="absolute inset-0 bg-green-triarc mix-blend-multiply" aria-hidden="true" />

@@ -7,7 +7,7 @@
   import { getSizes, getSource, getSourceSet } from './utils'
   import type { GhostPost } from './utils'
   import { onMount } from 'svelte'
-  import heroImage from '$lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '$lib/assets/hero/Stories.jpg?enhanced'
   import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
   import type { MappedPost } from '../consulting/+page'
 
@@ -78,9 +78,8 @@
 <Hero
   title="Stories"
   content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!"
-  imageSrc="Stories"
+  imageSrc={heroImage}
   imageAlt="Triarc Stories Header"
-  image={heroImage}
 />
 
 <div class="bg-gray-50 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">

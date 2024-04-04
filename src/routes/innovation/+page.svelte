@@ -1,15 +1,15 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import Block from '$lib/components/Block.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import pascal from '../../../static/team/pascal.jpg?width=500&format=webp;png&metadata'
-  import heroImage from '/src/lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import pascal from '$lib/assets/team/pascal.jpg?width=500&format=webp;png&metadata&enhanced'
+  import heroImage from '$lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
 
   let contents: BlockContent[] = [
     {
       quote: {
-        images: pascal,
+        image: pascal,
         content:
           'Wir investieren gezielt in Innovation, um sicherzustellen, dass wir unseren Kunden Zugang zu den neuesten und besten Technologien bieten können. In unserer Kernkompetenz als technologischer Partner beteiligen wir uns an Startups und bringen Produkte zur Marktreife.',
         person: 'Pascal Bertschi',
@@ -20,7 +20,7 @@
       },
     },
     {
-      title: 'μLink Datahub',
+      title: 'μLink Data-hub',
       content:
         'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
       image: { src: 'img/mlink/tree.svg', alt: 'mlink logo' },
@@ -66,9 +66,8 @@
 <Hero
   title="Innovation Lab"
   content="Innovationen sind der Schlüssel zu Wachstum und Erfolg. In unserem Lab fördern wir innovative und wettbewerbsfähige Businessideen, erstellen Machbarkeitsanalysen und entwickeln MVPs (Minimal Viable Products). "
-  imageSrc="InnovationLab"
+  imageSrc={heroImage}
   imageAlt="Triarc InnovationLab Header"
-  image={heroImage}
 />
 
 <div class="bg-white min-h-screen">
