@@ -47,7 +47,6 @@
     "tslib": "^2.6.2",
     "typescript": "^5.4.3",
     "vite": "^5.2.7",
-    "@rollup/rollup-darwin-x64": "^4.14.0",
     "vite-imagetools": "^7.0.1"
   },
   "type": "module"
