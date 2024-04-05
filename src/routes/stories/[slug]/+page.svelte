@@ -5,6 +5,7 @@
   export let contactString: string = data.title
   import Container from '$lib/components/Container.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
+  import { onMount } from 'svelte'
   export function nav_back() {
     if (window.history.length > 1) {
       window.history.back()
@@ -12,11 +13,34 @@
       window.location.href = '/stories'
     }
   }
+  onMount(() => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.tailwindcss.com';
+    document.head.appendChild(script);
+    const tailwindConfigExtensionScript = document.createElement('script');
+    tailwindConfigExtensionScript.text = `tailwind.config = {
+     theme: {
+      extend: {
+       colors: {
+        'red-triarc': '#C8102E',
+        'green-triarc': '#009639',
+        'blue-triarc': '#0077c8',
+        'yellow-triarc': '#FFE74C',
+        'wood': '#D0AE84',
+        'orange-ebl-base': 'rgba(254, 107, 21, 1)',
+        'orange-ebl-medium': 'rgba(254, 107, 21, 0.6)',
+        'orange-ebl-weak': 'rgba(254, 107, 21, 0.1)',
+        'blue-ideesport-weak': 'rgba(30, 170, 230, 0.1)',
+          },
+        },
+      },
+    }`
+    document.head.appendChild(tailwindConfigExtensionScript);
+  })
 </script>
 
 <svelte:head>
   <title>{data.title} - triarc-labs</title>
-  <script src="https://cdn.tailwindcss.com"></script>
   <script lang="js">
     tailwind.config = {
       theme: {
