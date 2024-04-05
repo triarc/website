@@ -105,7 +105,7 @@
         '<br/><br/>' +
         'Regelmässige Wartung der Software sowie das Einspielen von sicherheitsrelevanten Patches ist für uns ein Routine-Job und läst uns Nachts besser schlafen.',
       image: { src: 'img/custom-software/maintenance.svg', alt: 'Wartung' },
-    }
+    },
   ]
 </script>
 

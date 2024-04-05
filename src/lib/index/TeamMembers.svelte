@@ -17,8 +17,6 @@
   import alexa from '$lib/assets/team/alexa.jpg?format=webp;png&w=500&enhanced'
   import sakima from '$lib/assets/team/sakima.jpg?format=webp;png&w=500&enhanced'
 
-
-
   let teamMember = [
     {
       name: 'Serge Müller',
@@ -195,8 +193,8 @@
           <enhanced:img
             class="aspect-[3/4] w-full drop-shadow rounded-2xl object-cover"
             loading="lazy"
-            alt="{member.name}"
-            src="{member.image}"
+            alt={member.name}
+            src={member.image}
           />
           <h3
             class="mt-6 text-lg inline-flex font-semibold leading-8 tracking-tight text-gray-800 justify-center align-middle"

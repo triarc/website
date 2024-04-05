@@ -16,7 +16,7 @@
     <enhanced:img
       class="h-full w-full object-cover"
       sizes="(max-width: 1000px) 400px, 800px"
-      src="{imageSrc}"
+      src={imageSrc}
       alt={imageAlt}
     />
     <div class="absolute inset-0 bg-green-triarc mix-blend-multiply" aria-hidden="true" />

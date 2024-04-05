@@ -63,7 +63,7 @@
                 {#if content.quote.linkedin}
                   <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                     <svg
-                      class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                      class="h-5 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >
@@ -86,7 +86,7 @@
 {#if content.title}
   <div class="md:min-h-0 even:bg-gray-100 group">
     <div
-      class="flex items-center relative px-8 md:px-16 pb-16 pt-8  md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
+      class="flex items-center relative px-8 md:px-16 pb-16 pt-8 md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
     >
       {#if content.slides}
         <Slideshow posts={content.slides} />
@@ -189,11 +189,11 @@
       <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
       {#if content.image}
         <img
-        src={content.image.src}
-        class="mt-8 mx-12"
-        width={content.image.width ?? 320}
-        height={content.image.height}
-        alt={content.image.alt}
+          src={content.image.src}
+          class="mt-8 mx-12"
+          width={content.image.width ?? 320}
+          height={content.image.height}
+          alt={content.image.alt}
         />
       {/if}
     </div>

@@ -16,7 +16,7 @@
       <div
         class="{content.quote?.highlight
           ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
-          : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 "
+          : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0"
       >
         <div class="lg:sticky lg:top-20">
           <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center px-8 gap-x-8 lg:ml-auto">
@@ -31,7 +31,7 @@
                 />
               </div>
             </div>
-            <div class="w-full max-w-full lg:max-w-sm lg:pl-8 ">
+            <div class="w-full max-w-full lg:max-w-sm lg:pl-8">
               <figure class="relative isolate pt-12">
                 <svg
                   viewBox="0 0 162 128"
@@ -46,9 +46,7 @@
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
                 </svg>
                 <blockquote
-                  class="text-xl font-semibold {content.quote?.highlight
-                    ? 'text-gray-900'
-                    : 'text-gray-600'} leading-9"
+                  class="text-xl font-semibold {content.quote?.highlight ? 'text-gray-900' : 'text-gray-600'} leading-9"
                 >
                   <p>{@html content.quote?.content}</p>
                 </blockquote>
@@ -61,7 +59,7 @@
                     {#if content.quote?.linkedin}
                       <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                         <svg
-                          class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                          class="h-5 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 448 512"
                         >
@@ -88,18 +86,18 @@
               </figure>
               <div class="flex flex-col gap-y-8 my-8">
                 {#if content.quote && content.quote.customLogos}
-                {#each content.quote.customLogos as customLogo}
-                  <img src={customLogo} alt="{customLogo} image" />
-                {/each}
+                  {#each content.quote.customLogos as customLogo}
+                    <img src={customLogo} alt="{customLogo} image" />
+                  {/each}
                 {/if}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex-grow group ">
+      <div class="flex-grow group">
         {#each content.categories as category}
-          <div class="bg-gray-100 even:bg-white ">
+          <div class="bg-gray-100 even:bg-white">
             <Container class="ml-0" size="small">
               <div class="py-8 lg:mr-auto">
                 {#if category.title}
@@ -172,8 +170,8 @@
                           <div
                             class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-t-none h-60 rounded-xl shadow"
                           >
-                            <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
+                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
                           </div>
                         </a>
                       </div>
@@ -212,8 +210,8 @@
                               ? 'lg:rounded-r-none'
                               : 'lg:rounded-l-none'} h-60 rounded-xl lg:rounded-xl rounded-t-none shadow lg:max-w-[66%]"
                           >
-                            <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
+                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
                           </div>
                         </a>
                       </div>
@@ -221,7 +219,7 @@
                   </div>
                 {/if}
                 {#if category.posts && category.posts.length === 1}
-                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-16 mt-16 lg:mt-8 ">
+                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-16 mt-16 lg:mt-8">
                     {#each category.posts as post}
                       <div class="flex flex-row mt-2">
                         <a
@@ -244,8 +242,8 @@
                           <div
                             class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-xl rounded-t-none lg:rounded-l-none h-60 lg:rounded-xl shadow lg:max-w-[66%]"
                           >
-                            <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
+                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
                           </div>
                         </a>
                       </div>

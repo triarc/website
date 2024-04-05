@@ -13,7 +13,7 @@
 
 <div class="embla">
   <div class="embla__viewport" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
-    <div class="embla__container ">
+    <div class="embla__container">
       {#each posts as post}
         <div class="embla__slide">
           <div class="embla__slide__inner">
