@@ -50,7 +50,8 @@
     "vite-imagetools": "^7.0.1"
   },
   "optionalDependencies": {
-    "@rollup/rollup-linux-x64-gnu": "4.6.1"
+    "@rollup/rollup-linux-x64-gnu": "4.6.1",
+    "sharp": "^0.33.3"
   },
   "type": "module"
 }
