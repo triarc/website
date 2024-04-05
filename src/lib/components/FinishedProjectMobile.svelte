@@ -19,7 +19,7 @@
   }
 </script>
 
-<div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10 ">
+<div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10">
   <Container>
     <div class="mx-auto">
       <div class="sm:text-center">
@@ -31,7 +31,7 @@
       <div class="">
         <div class="embla">
           <div class="embla__viewport px-10" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
-            <div class="embla__container ">
+            <div class="embla__container">
               {#each imageSources as imageSource}
                 <div class="embla__slide">
                   <div class="embla__slide__inner">
@@ -110,7 +110,7 @@
             </dt>
             <dd class="inline-block pt-3 whitespace-pre-line">{situation}</dd>
           </div>
-          <div class="relative max-w-[75ch] lg: w-[75ch] lg:self-end ">
+          <div class="relative max-w-[75ch] lg: w-[75ch] lg:self-end">
             <dt class="inline font-semibold text-gray-900 pl-9">
               <svg
                 class="absolute left-1 top-1 h-6 w-6"

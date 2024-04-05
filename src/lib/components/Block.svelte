@@ -1,32 +1,7 @@
 <script lang="ts">
-  import Picture from '$lib/index/Picture.svelte'
-  import type { GhostPost } from '../../routes/stories/utils'
   import Slideshow from '$lib/components/Slideshow.svelte'
   import Button from '$lib/components/Button.svelte'
-
-  export interface BlockContent {
-    slides?: GhostPost[]
-    title?: string
-    content?: string
-    footer?: string
-    link?: { href: string; text: string; target?: string }
-    image?: { src: string; alt: string; height?: number }
-    bulletPoints?: string[]
-    cards?: { title: string; content: string }
-    steps?: { title: string; content: string }
-    items?: { title: string; content: string }
-    quote?: {
-      content: string
-      person: string
-      images: File
-      imageCss?: string
-      personTitle: string
-      linkedin: string
-      email: string
-      highlight?: 'green' | 'blue'
-    }
-  }
-
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
   export let content: BlockContent
 </script>
 
@@ -42,12 +17,10 @@
       >
         <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
           <div class="relative aspect-[3/4] h-full md:-mx-8 xl:mx-0 xl:aspect-auto flex justify-center items-center">
-            <Picture
-              height="280"
-              width="373"
+            <enhanced:img
               alt={content.quote.person}
-              images={content.quote.images}
-              cssClass={content.quote.imageCss
+              src={content.quote.image}
+              class={content.quote.imageCss
                 ? content.quote.imageCss
                 : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
             />
@@ -90,7 +63,7 @@
                 {#if content.quote.linkedin}
                   <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                     <svg
-                      class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                      class="h-5 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >
@@ -113,7 +86,7 @@
 {#if content.title}
   <div class="md:min-h-0 even:bg-gray-100 group">
     <div
-      class="flex items-center relative px-8 md:px-16 pb-16 pt-8  md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
+      class="flex items-center relative px-8 md:px-16 pb-16 pt-8 md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
     >
       {#if content.slides}
         <Slideshow posts={content.slides} />
@@ -213,7 +186,8 @@
         {/if}
       </div>
 
-      {#if content.image && !content.slides}
+      <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
+      {#if content.image}
         <img
           src={content.image.src}
           class="mt-8 mx-12"

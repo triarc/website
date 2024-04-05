@@ -9,7 +9,7 @@
   export let imageSource: string
 </script>
 
-<div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10 ">
+<div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10">
   <Container>
     <div class="mx-auto">
       <div class="sm:text-center">
@@ -21,7 +21,7 @@
       <img
         src={imageSource}
         alt="{appName} App screenshot"
-        class=" rounded-md lg:h-[600px] w-auto shadow-xl ring-1 ring-gray-900/10 "
+        class=" rounded-md lg:h-[600px] w-auto shadow-xl ring-1 ring-gray-900/10"
         width="2432"
         height="1442"
       />

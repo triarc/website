@@ -24,7 +24,7 @@
           <div class="mt-12 sm:mt-16 lg:mt-0 {i % 2 === 1 ? 'lg:col-start-1' : ''}">
             <div class="pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full">
               <img
-                class="w-full lg:absolute  lg:h-full lg:w-auto lg:max-w-none {i % 2 === 1 ? 'lg:right-0' : 'lg:left-0'}"
+                class="w-full lg:absolute lg:h-full lg:w-auto lg:max-w-none {i % 2 === 1 ? 'lg:right-0' : 'lg:left-0'}"
                 src={section.image}
                 alt={section.imageAlt}
               />

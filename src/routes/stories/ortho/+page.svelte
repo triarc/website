@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ortho-Order</p>
       </div>
       <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
@@ -135,7 +135,7 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ortho-Client</p>
       </div>
       <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
@@ -188,12 +188,12 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">
           Die Zusammenarbeit
         </p>
       </div>
-      <div class="relative  text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
+      <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg text-gray-500">
           «Dabei haben wir 1:1 mitbekommen, wieviel Kreativität, Erfahrung und Engagement bei der Umsetzung
           unterschiedlichster Anforderungen eingeflossen sind. Mit ein Grund dafür ist sicherlich, dass triarc-labs
@@ -201,7 +201,7 @@
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative ">
+        <div class="relative">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <blockquote class="py-8 max-w-sm">
               <p class="text-gray-900 font-semibold">
@@ -246,13 +246,13 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">
           Die Kundin: ORTHO-TEAM GRUPPE
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative  flex py-4 ">
+        <div class="relative flex py-4">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <figure class="relative bg-white overflow-hidden">
               <img
@@ -269,7 +269,7 @@
             </figure>
           </div>
         </div>
-        <div class="relative  py-4 text-gray-500">
+        <div class="relative py-4 text-gray-500">
           <p>
             Mit 15 Standorten und rund 300 Mitarbeitenden in der ganzen Schweiz ist die ORTHO-TEAM Gruppe Innovations-
             und Marktführerin in der Herstellung von Hilfsmitteln der Orthopädie- und Rehatechnik.

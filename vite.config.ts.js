@@ -1,8 +1,9 @@
 // vite.config.ts
 import { sveltekit } from '@sveltejs/kit/vite'
+import { enhancedImages } from '@sveltejs/enhanced-img'
 import { imagetools } from 'vite-imagetools'
 var config = {
-  plugins: [sveltekit(), imagetools()],
+  plugins: [enhancedImages(), imagetools(), sveltekit()],
   ssr: {
     noExternal: Object.keys({}),
   },

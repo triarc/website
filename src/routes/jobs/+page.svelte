@@ -3,11 +3,11 @@
   import Footer from '$lib/components/Footer.svelte'
   import DeveloperListing from './developer-listing.svelte'
   import JobIntro from './job-intro.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
-  import heroImage from '/src/lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '$lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import type { BlockContent, JobPosting } from '$lib/components/TypeDefinitions'
 
-  function serializeSchema(jobPosting) {
+  function serializeSchema(jobPosting: JobPosting) {
     return (
       '<script type="application/ld+json">' +
       JSON.stringify(
@@ -83,7 +83,7 @@
       claim: 'Senior Software Engineer',
       img: 'img/jobs/super_woman.svg',
       open: false,
-      responsiblities:
+      responsibilities:
         'sind so breit gefächert und abwechslungsreich wie die Arbeit, die dich bei uns erwartet: vom Design bis zur Lösungsfindung ist alles dabei, individuell angepasst auf unsere branchenübergreifenden Kunden. In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung, und wir von deiner. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobile-Anwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
       skills: [
         'Leidenschaft für die Software Entwicklung',
@@ -199,9 +199,8 @@
 <Hero
   title="Jobs"
   content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte."
-  imageSrc="Jobs"
+  imageSrc={heroImage}
   imageAlt="Triarc Jobs Header"
-  image={heroImage}
 />
 <JobIntro />
 

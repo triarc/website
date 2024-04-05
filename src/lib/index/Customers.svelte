@@ -25,7 +25,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-12 " src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
+          <img height="80" class="max-h-12" src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
         </a>
       </div>
 
@@ -62,7 +62,7 @@
           href="https://www.tanne.ch/"
           rel="noreferrer"
           target="_blank"
-          class="col-span-1 flex items-center justify-center py-8 px-8 "
+          class="col-span-1 flex items-center justify-center py-8 px-8"
         >
           <picture class="max-h-12 filter">
             <source type="image/png" srcset="/img/customer/Tanne_Logo_4sprachig.png" alt="tanne" />
@@ -73,7 +73,7 @@
           href="https://www.ideesport.ch/"
           rel="noreferrer"
           target="_blank"
-          class="col-span-1 flex items-center justify-center py-8 px-8 "
+          class="col-span-1 flex items-center justify-center py-8 px-8"
         >
           <picture class="max-h-12 filter">
             <source type="image/webp" srcset="/img/customer/idee-sport-logo.webp" alt="idee-sport" />

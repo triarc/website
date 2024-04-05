@@ -2,16 +2,20 @@
   import { onMount } from 'svelte'
 
   let button: HTMLElement | null
+  let navMenuElement: HTMLElement | null
+
   function scrollToMenu() {
-    document.scrollingElement.scrollTo({
-      behavior: 'smooth',
-      top: document.getElementById('nav-menu').offsetTop,
-    })
+    if (document.scrollingElement && navMenuElement) {
+      document.scrollingElement.scrollTo({
+        behavior: 'smooth',
+        top: navMenuElement.offsetTop,
+      })
+    }
   }
 
   onMount(() => {
     button = document.getElementById('nav-jump-button')
-
+    navMenuElement = document.getElementById('nav-menu')
     window.addEventListener('scroll', function () {
       console.log(button)
       if (button) {

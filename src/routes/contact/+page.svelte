@@ -1,15 +1,15 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import Container from '$lib/components/Container.svelte'
-  import heroImage from '/src/lib/assets/hero/Contact.jpg?width=300;600;1000;2000&format=webp&metadata'
-  import iris from '/src/team/iris.jpg?width=500&format=webp;png&metadata'
-  import serge from '/src/team/serge.jpg?width=500&format=webp;png&metadata'
-  import dave from '/src/team/dave.jpg?width=500&format=webp;png&metadata'
+  import heroImage from '$lib/assets/hero/Contact.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import iris from '$lib/assets/team/iris.jpg?width=500&format=webp;png&metadata&enhanced'
+  import serge from '$lib/assets/team/serge.jpg?width=500&format=webp;png&metadata&enhanced'
+  import dave from '$lib/assets/team/dave.jpg?width=500&format=webp;png&metadata&enhanced'
   import Picture from '$lib/index/Picture.svelte'
 
   let firstName = '',
     lastName = '',
-    phone,
+    phone = '',
     email = '',
     subject = '',
     message = ''
@@ -40,14 +40,7 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">
-  <Hero
-    title="Kontaktinfos"
-    class="flex-shrink-0"
-    content=""
-    imageSrc="Contact"
-    imageAlt="Triarc Contact Header"
-    image={heroImage}
-  />
+  <Hero title="Kontaktinfos" class="flex-shrink-0" content="" imageSrc={heroImage} imageAlt="Triarc Contact Header" />
 
   <div class="bg-white flex-shrink-0">
     <Container>
@@ -101,7 +94,7 @@
                 </div>
               </div>
               <div class="flex">
-                <div class="flex-shrink-0 items-start flex justify-center w-6 ">
+                <div class="flex-shrink-0 items-start flex justify-center w-6">
                   <svg class="mt-1 fill-gray-400" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
                     ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
                       d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
@@ -120,10 +113,10 @@
           </div>
           <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
             <li class="flex flex-col gap-10 pt-12 border-t border-gray-200 md:border-none sm:flex-row">
-              <Picture
+              <enhanced:img
                 alt="Photo Iris Zenegaglia"
-                images={iris}
-                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                src={iris}
+                class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
               />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Iris Zenegaglia</h3>
@@ -155,7 +148,7 @@
                       </div>
                       <a
                         href="mailto:iris@triarc-labs.com&subject=Kontakt"
-                        class="decoration-red-triarc underline text-base text-gray-500 ">iris@triarc-labs.com</a
+                        class="decoration-red-triarc underline text-base text-gray-500">iris@triarc-labs.com</a
                       >
                     </div>
                   </li>
@@ -163,10 +156,10 @@
               </div>
             </li>
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <Picture
+              <enhanced:img
                 alt="Photo Dave Haug"
-                images={dave}
-                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                src={dave}
+                class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
               />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>
@@ -198,7 +191,7 @@
                       </div>
                       <a
                         href="mailto:dave@triarc-labs.com&subject=Kontakt"
-                        class="decoration-red-triarc underline text-base text-gray-500 ">dave@triarc-labs.com</a
+                        class="decoration-red-triarc underline text-base text-gray-500">dave@triarc-labs.com</a
                       >
                     </div>
                   </li>
@@ -206,10 +199,10 @@
               </div>
             </li>
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <Picture
+              <enhanced:img
                 alt="Photo Serge Müller"
-                images={serge}
-                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
+                src={serge}
+                class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
               />
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Serge Müller</h3>
@@ -238,7 +231,7 @@
                       </div>
                       <a
                         href="mailto:serge@triarc-labs.com&subject=Kontakt"
-                        class="decoration-red-triarc underline text-base text-gray-500 ">serge@triarc-labs.com</a
+                        class="decoration-red-triarc underline text-base text-gray-500">serge@triarc-labs.com</a
                       >
                     </div>
                   </li>

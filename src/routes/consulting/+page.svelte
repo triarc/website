@@ -1,9 +1,9 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
-  import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
+  import iris from '$lib/assets/team/iris.jpg?width=500&format=webp;png&metadata&enhanced'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
-  import heroImage from '/src/lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '$lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { MappedPost } from './+page'
   import ContactForm from '$lib/components/ContactForm.svelte'
 
@@ -14,7 +14,7 @@
       content:
         'Der Mensch digitalisiert für die Menschen - wir stellen den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
       person: 'Iris Zenegaglia',
-      images: iris,
+      image: iris,
       personTitle: 'Digitalisierungs/Organisationsberaterin <br> ' + 'Coach (bso i.A) <br> Partnerin',
       linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
       email: 'iris@triarc-labs.com',
@@ -93,9 +93,8 @@
   <Hero
     title="Beratung"
     content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken."
-    imageSrc="Beratung"
+    imageSrc={heroImage}
     imageAlt="Triarc Consulting Header"
-    image={heroImage}
   />
   <BlogPostFeatures bind:content />
   <!--  <Partners />-->

@@ -17,7 +17,7 @@ export interface GhostPost {
       id: string
       slug: string
       name: string
-    }
+    },
   ]
 }
 
