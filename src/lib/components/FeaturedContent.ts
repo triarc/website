@@ -4,7 +4,7 @@ export interface FeaturedContent {
   quote?: {
     content: string
     person: string
-    image: any
+    image: unknown
     imageCss?: string
     personTitle: string
     linkedin: string

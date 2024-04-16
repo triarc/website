@@ -78,6 +78,7 @@
         >
           <div class="md:max-w-2xl {i % 2 ? 'md:text-right' : 'md:text-left'}">
             <p class="mt-3 text-2xl font-bold text-gray-600">
+              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
               {@html slogan.claim}
             </p>
             <p class="mt-2 text-base leading-6 text-gray-600">

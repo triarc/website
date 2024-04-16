@@ -193,6 +193,7 @@
 </svelte:head>
 
 {#each jobPostings as jobPosting, i}
+  <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
   {@html serializeSchema(jobPosting)}
 {/each}
 

@@ -1,7 +1,5 @@
 <script lang="ts">
-  import Picture from '$lib/index/Picture.svelte'
   import type { FeaturedContent } from '$lib/components/FeaturedContent'
-  import ConsultationCustomers from '$lib/index/ConsultationCustomers.svelte'
   import Testimonials from '$lib/index/Testimonials.svelte'
   import Container from '$lib/components/Container.svelte'
   import Button from '$lib/components/Button.svelte'
@@ -48,10 +46,12 @@
                 <blockquote
                   class="text-xl font-semibold {content.quote?.highlight ? 'text-gray-900' : 'text-gray-600'} leading-9"
                 >
+                  <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                   <p>{@html content.quote?.content}</p>
                 </blockquote>
                 <figcaption class="mt-8 text-base {content?.quote?.highlight ? 'text-gray-900' : 'text-gray-600'}">
                   <div class="font-semibold">{content?.quote?.person}</div>
+                  <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                   <div class="mt-1">{@html content?.quote?.personTitle}</div>
                   <div
                     class="flex flex-row gap-x-4 mt-4 {content?.quote?.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
@@ -102,11 +102,13 @@
               <div class="py-8 lg:mr-auto">
                 {#if category.title}
                   <h2 class="mt-3 text-2xl font-bold text-gray-600">
+                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                     {@html category.title}
                   </h2>
                 {/if}
                 {#if category.content}
                   <p class="mt-2 text-base leading-6 text-gray-600">
+                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                     {@html category.content}
                   </p>
                 {/if}
@@ -117,6 +119,7 @@
                   <blockquote
                     class="bg-transparent border-l-4 border-l-gray-500 mx-8 p-4 rounded-xl my-6 text-gray-500"
                   >
+                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                     {@html category.quote}
                   </blockquote>
                 {/if}
@@ -138,6 +141,7 @@
                               <h3 class="font-semibold text-sm text-gray-700">
                                 {step.title}
                               </h3>
+                              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                               <p class="text-gray-600">{@html step.content}</p>
                             </div>
                           </div>

@@ -140,6 +140,7 @@
               </svg>
               Lösungen und Mehrwerte <br />
             </dt>
+            <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
             <dd class="inline-block pt-3 whitespace-pre-line">{@html solutions}</dd>
           </div>
         </dl>

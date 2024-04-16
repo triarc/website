@@ -14,7 +14,6 @@
     }
   }
 
-
   // onMount(() => {
   //   const script = document.createElement('script');
   //   script.src = 'https://cdn.tailwindcss.com';
@@ -24,26 +23,26 @@
 
 <svelte:head>
   <title>{data.title} - triarc-labs</title>
-<!--  <script src="https://cdn.tailwindcss.com"></script>-->
-<!--  <script lang="js">-->
-<!--    tailwind.config = {-->
-<!--      theme: {-->
-<!--        extend: {-->
-<!--          colors: {-->
-<!--            'red-triarc': '#C8102E',-->
-<!--            'green-triarc': '#009639',-->
-<!--            'blue-triarc': '#0077c8',-->
-<!--            'yellow-triarc': '#FFE74C',-->
-<!--            wood: '#D0AE84',-->
-<!--            'orange-ebl-base': 'rgba(254, 107, 21, 1)',-->
-<!--            'orange-ebl-medium': 'rgba(254, 107, 21, 0.6)',-->
-<!--            'orange-ebl-weak': 'rgba(254, 107, 21, 0.1)',-->
-<!--            'blue-ideesport-weak': 'rgba(30, 170, 230, 0.1)',-->
-<!--          },-->
-<!--        },-->
-<!--      },-->
-<!--    }-->
-<!--  </script>-->
+  <!--  <script src="https://cdn.tailwindcss.com"></script>-->
+  <!--  <script lang="js">-->
+  <!--    tailwind.config = {-->
+  <!--      theme: {-->
+  <!--        extend: {-->
+  <!--          colors: {-->
+  <!--            'red-triarc': '#C8102E',-->
+  <!--            'green-triarc': '#009639',-->
+  <!--            'blue-triarc': '#0077c8',-->
+  <!--            'yellow-triarc': '#FFE74C',-->
+  <!--            wood: '#D0AE84',-->
+  <!--            'orange-ebl-base': 'rgba(254, 107, 21, 1)',-->
+  <!--            'orange-ebl-medium': 'rgba(254, 107, 21, 0.6)',-->
+  <!--            'orange-ebl-weak': 'rgba(254, 107, 21, 0.1)',-->
+  <!--            'blue-ideesport-weak': 'rgba(30, 170, 230, 0.1)',-->
+  <!--          },-->
+  <!--        },-->
+  <!--      },-->
+  <!--    }-->
+  <!--  </script>-->
 </svelte:head>
 
 <div class="bg-white min-h-screen pt-16 md:pt-24 w-full">
@@ -65,6 +64,7 @@
         class="object-cover rounded-md overflow-hidden shadow-inner mb-6 mt-0 mx-auto object-center group-hover:opacity-75"
       />
       <h1 class="text-4xl mb-3 font-bold">{data.title}</h1>
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is from trusted source -->
       <div>{@html data.html}</div>
     </div>
   </Container>

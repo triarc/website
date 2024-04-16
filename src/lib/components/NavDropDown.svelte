@@ -5,7 +5,7 @@
   export let open = false
   export let inline = false
 
-  let dropdown
+  let dropdown: HTMLElement
 
   function toggle() {
     open = !open
@@ -73,8 +73,10 @@
 
   <MediaQuery query="(max-width: 1024px)" let:matches>
     {#if open || inline || matches}
-      <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}">
-        <div class="container" on:click={open ? close() : {}}>
+      <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}" >
+        <div class="container" role="link"
+             on:click={open ? close() : {}}
+        >
           <slot />
         </div>
       </div>
