@@ -18,6 +18,7 @@
   })
 </script>
 
+<!-- svelte-ignore a11y-media-has-caption -->
 <video
   id="player"
   playsinline
