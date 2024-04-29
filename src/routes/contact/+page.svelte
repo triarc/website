@@ -2,10 +2,9 @@
   import Hero from '$lib/components/Hero.svelte'
   import Container from '$lib/components/Container.svelte'
   import heroImage from '$lib/assets/hero/Contact.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
-  import iris from '$lib/assets/team/iris.jpg?width=500&format=webp;png&metadata&enhanced'
-  import serge from '$lib/assets/team/serge.jpg?width=500&format=webp;png&metadata&enhanced'
-  import dave from '$lib/assets/team/dave.jpg?width=500&format=webp;png&metadata&enhanced'
-  import Picture from '$lib/index/Picture.svelte'
+  import iris from '$lib/assets/team/iris.jpg?format=webp;png&w=500&enhanced'
+  import serge from '$lib/assets/team/serge.jpg?format=webp;png&w=1024&enhanced'
+  import dave from '$lib/assets/team/dave.jpg?format=webp;png&w=500&enhanced'
 
   let firstName = '',
     lastName = '',
@@ -40,7 +39,7 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">
-  <Hero title="Kontaktinfos" class="flex-shrink-0" content="" imageSrc={heroImage} imageAlt="Triarc Contact Header" />
+  <Hero title="Kontaktinfos" content="" imageSrc={heroImage} imageAlt="Triarc Contact Header" />
 
   <div class="bg-white flex-shrink-0">
     <Container>
@@ -113,11 +112,13 @@
           </div>
           <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
             <li class="flex flex-col gap-10 pt-12 border-t border-gray-200 md:border-none sm:flex-row">
-              <enhanced:img
-                alt="Photo Iris Zenegaglia"
-                src={iris}
-                class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-              />
+              <div class="w-52 flex-none">
+                <enhanced:img
+                  alt="Photo Iris Zenegaglia"
+                  src={iris}
+                  class="flex-none w-full rounded-2xl object-cover"
+                />
+              </div>
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Iris Zenegaglia</h3>
                 <p class="text-base leading-7 text-gray-500">Beratung Digitalisierung / Partner</p>
@@ -156,18 +157,16 @@
               </div>
             </li>
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <enhanced:img
-                alt="Photo Dave Haug"
-                src={dave}
-                class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-              />
+              <div class="w-52 flex-none">
+                <enhanced:img alt="Photo Dave Haug" src={dave} class="flex-none w-full rounded-2xl object-cover" />
+              </div>
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>
                 <p class="text-base leading-7 text-gray-500">Business Development</p>
                 <p class="mt-6 text-base leading-7 text-gray-500">
-                  Wollen Sie mehr über unsere Projekte und Schnittstellenlösungen, sowie darüber, wie wir eine
-                  individuell auf Ihre Bedürfnisse zugeschnittene digitale Lösung bereitstellen können. Zögern Sie
-                  nicht, mich zu kontaktieren.
+                  Wollen Sie mehr über unsere Projekte und Lösungen, sowie darüber, wie wir eine individuell auf Ihre
+                  Bedürfnisse zugeschnittene digitale Lösung bereitstellen können erfahren? Zögern Sie nicht, mich zu
+                  kontaktieren.
                 </p>
                 <ul class="mt-6 flex gap-x-6">
                   <li>
@@ -198,13 +197,11 @@
                 </ul>
               </div>
             </li>
-            <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <enhanced:img
-                alt="Photo Serge Müller"
-                src={serge}
-                class="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-              />
-              <div class="max-w-xl flex-auto">
+            <li class="flex flex-col gap-10 pt-12 md:flex-row">
+              <div class="w-52 flex-none">
+                <enhanced:img class="aspect-[4/5] rounded-2xl object-cover" alt="Photo Serge Müller" src={serge} />
+              </div>
+              <div class="max-w-fit flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Serge Müller</h3>
                 <p class="text-base leading-7 text-gray-500">CEO</p>
                 <p class="mt-6 text-base leading-7 text-gray-500">

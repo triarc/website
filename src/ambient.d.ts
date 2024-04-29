@@ -21,7 +21,9 @@ declare module '*.avif' {
 }
 
 // If typescript ever does multi-wildcards can be replaced by *.jpg?*
+
 declare module '*&enhanced' {
-  const value: unknown
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const value: any
   export = value
 }

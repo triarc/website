@@ -192,7 +192,7 @@
   <title>Jobs - triarc-labs</title>
 </svelte:head>
 
-{#each jobPostings as jobPosting, i}
+{#each jobPostings as jobPosting}
   <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
   {@html serializeSchema(jobPosting)}
 {/each}

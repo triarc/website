@@ -140,7 +140,7 @@
       </div>
       <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg text-gray-500">
-          Sämtliche auftragsbezogenen Daten wie die ärztliche Verordnung, Bilder oder erbrachte Leistungen (mobil und
+          Sämtliche auftragsbezogenen Daten wie die ärztliche Verordnung, Bilder oder erbrachte Leistungen (mobil und
           digital) können mit der Client App zugeordnet werden. So wurden u.a. die Durchlaufzeiten bei der
           Leistungsverrechnung wesentlich verkürzt und der Aufwand in Backoffice und Administration reduziert.
         </p>

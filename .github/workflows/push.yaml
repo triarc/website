@@ -40,11 +40,3 @@ jobs:
         env:
           TAG: ${{ env.GITHUB_REF_SLUG }}
           GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
-      - name: Send keel Notification
-        uses: Toasterson/keel-webhook-action@master
-        with: 
-          image: eu.gcr.io/triarc/website
-          keel-username: ${{ secrets.KEEL_USERNAME }}
-          keel-password: ${{ secrets.KEEL_PASSWORD }}
-          image-tag: ${{ env.GITHUB_REF_SLUG }}
-          keel-url: "https://keel.cloud.triarc-labs.com/"

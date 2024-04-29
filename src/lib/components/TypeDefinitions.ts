@@ -43,12 +43,22 @@ export interface JobPosting {
   open: boolean
   responsibilities: string
   skills: Array<string>
-  experienceRequirements: String
+  experienceRequirements: string
 }
 
 export interface MetaInfo {
   title: string
   description: string
+}
+
+export interface Tag {
+  name: string
+  slug: string
+  count: TagCount
+}
+
+export interface TagCount {
+  posts: number
 }
 
 export interface NavItemHeading {

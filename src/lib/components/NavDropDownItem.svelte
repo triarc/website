@@ -20,7 +20,7 @@
   <p class="text-gray-600">{description}</p>
 </a>
 
-<style>
+<style lang="postcss">
   .dialog-link {
     @apply px-6 py-4;
   }

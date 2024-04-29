@@ -22,8 +22,8 @@ export interface GhostPost {
 }
 
 export const imageRegex = /^https:\/\/(?<domain>.+)\/content\/images\/(?<path>.+)$/
-export function getSizeUrl(match: any, size: string): string {
-  return `https://${match.groups.domain}/content/images/size/w${size}/${match.groups.path} ${size}w`
+export function getSizeUrl(match: RegExpMatchArray, size: string): string {
+  return `https://${match.groups?.domain}/content/images/size/w${size}/${match.groups?.path} ${size}w`
 }
 export function getSourceSet(url: string): string {
   if (!url) {
@@ -50,7 +50,7 @@ export function getSource(url: string): string {
   return `https://${match.groups.domain}/content/images/size/w600/${match.groups.path}`
 }
 
-export function getSizes(url: string): string {
+export function getSizes(): string {
   return '(max-width: 1000px) 400px, 800px'
 }
 
@@ -65,7 +65,7 @@ export function mapPosts(postData: { posts: GhostPost[] }) {
         content: post.excerpt.length === 500 ? post.excerpt + '...' : post.excerpt,
         image: {
           srcset: getSourceSet(post.feature_image),
-          sizes: getSizes(post.feature_image),
+          sizes: getSizes(),
           src: getSource(post.feature_image),
           alt: post.feature_image_alt ?? 'post feature image',
         },

@@ -1,6 +1,4 @@
 <script lang="ts">
-  import MediaQuery from '$lib/components/MediaQuery.svelte'
-
   export let title: string
   export let open = false
   export let inline = false
@@ -70,27 +68,36 @@
       </svg>
     {/if}
   </button>
+  <!-- TODO Try to make work with ally, either mobile or desktop and open -> Dialog is only ever desktop, use display:hidden and remove display flex from the class -->
+  <!--  <MediaQuery query="(max-width: 1024px)" let:matches>-->
+  <!--    {#if open || inline || matches}-->
+  <!--      <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}">-->
+  <!--        <div class="container">-->
+  <!--          <slot />-->
+  <!--        </div>-->
+  <!--      </div>-->
+  <!--    {/if}-->
+  <!--  </MediaQuery>-->
 
-  <MediaQuery query="(max-width: 1024px)" let:matches>
-    {#if open || inline || matches}
-      <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}" >
-        <div class="container" role="link"
-             on:click={open ? close() : {}}
-        >
-          <slot />
-        </div>
-      </div>
-    {/if}
-  </MediaQuery>
+  <div class="{inline ? 'flex flex-col' : 'lg:hidden'} {open ? 'open' : 'closed'}">
+    <div on:click={close} class="container" role="none">
+      <slot />
+    </div>
+  </div>
+  <div class=" {inline ? 'hidden' : 'dialog hidden lg:flex'} {open ? 'open' : 'closed'}">
+    <div on:click={close} class="container" role="none">
+      <slot />
+    </div>
+  </div>
 </div>
 
-<style>
-  .inline {
-    @apply flex flex-col;
-  }
+<style lang="postcss">
+  /*.inline {*/
+  /*  @apply flex flex-col;*/
+  /*}*/
 
   .dialog {
-    @apply absolute left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4;
+    @apply absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4;
   }
 
   .dialog.open {

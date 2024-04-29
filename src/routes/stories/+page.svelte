@@ -15,19 +15,13 @@
   let pageNumber = 2 //
   let reachedEnd = false
   let loading = false
-  let pageBodyHeight = 0
-  let element: HTMLElement | null = null
   let filter!: HTMLDialogElement
   let items: MappedPost[] = []
 
   onMount(() => {
-    element = document.querySelector('.filter-bar') as HTMLElement
     filter = document.getElementById('filter') as HTMLDialogElement
 
-    const observer = new ResizeObserver(() => {
-      pageBodyHeight = document.body.scrollHeight
-      console.log('size changed')
-    })
+    const observer = new ResizeObserver(() => {})
     observer.observe(document.body)
     items = [...data.posts]
     console.log(items)
@@ -51,7 +45,7 @@
           content: post.excerpt.length === 500 ? post.excerpt + '...' : post.excerpt,
           image: {
             srcset: getSourceSet(post.feature_image),
-            sizes: getSizes(post.feature_image),
+            sizes: getSizes(),
             src: getSource(post.feature_image),
             alt: post.feature_image_alt ?? 'post feature image',
           },
@@ -166,7 +160,7 @@
         gap={40}
         align="center"
         {items}
-        on:requestAppend={({ detail: e }) => {
+        on:requestAppend={() => {
           if (reachedEnd || loading) {
             return
           }
