@@ -20,11 +20,7 @@
 
   onMount(() => {
     filter = document.getElementById('filter') as HTMLDialogElement
-
-    const observer = new ResizeObserver(() => {})
-    observer.observe(document.body)
     items = [...data.posts]
-    console.log(items)
   })
 
   async function loadMoreStories() {
@@ -60,7 +56,6 @@
     if (newPosts == 0) {
       reachedEnd = true
     }
-    // console.log(items, newPosts)
     return [...items, ...newPosts]
   }
 </script>
@@ -224,7 +219,7 @@
   <Footer />
 </div>
 
-<style>
+<style lang="postcss">
   .badge {
     @apply bg-white border-r-2 border-gray-100 rounded rounded-r-none  px-4 py-2;
   }

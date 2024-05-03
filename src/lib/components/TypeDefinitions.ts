@@ -1,7 +1,4 @@
-import type { GhostPost } from '../../routes/stories/utils'
-
 export interface BlockContent {
-  slides?: GhostPost[]
   title?: string
   content?: string
   footer?: string

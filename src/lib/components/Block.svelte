@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Slideshow from '$lib/components/Slideshow.svelte'
   import Button from '$lib/components/Button.svelte'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
   export let content: BlockContent
@@ -89,9 +88,6 @@
     <div
       class="flex items-center relative px-8 md:px-16 pb-16 pt-8 md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
     >
-      {#if content.slides}
-        <Slideshow posts={content.slides} />
-      {/if}
       <div class="">
         <h2 class="mt-3 text-2xl font-bold text-gray-600">
           <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
