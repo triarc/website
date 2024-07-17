@@ -162,49 +162,50 @@
                 </ul>
               </div>
             </li>
-            <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <Picture
-                alt="Photo Dave Haug"
-                images={dave}
-                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-              />
-              <div class="max-w-xl flex-auto">
-                <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>
-                <p class="text-base leading-7 text-gray-500">Business Development</p>
-                <p class="mt-6 text-base leading-7 text-gray-500">
-                  Wollen Sie mehr über unsere Projekte und Schnittstellenlösungen, sowie darüber, wie wir eine
-                  individuell auf Ihre Bedürfnisse zugeschnittene digitale Lösung bereitstellen können. Zögern Sie
-                  nicht, mich zu kontaktieren.
-                </p>
-                <ul class="mt-6 flex gap-x-6">
-                  <li>
-                    <div class="flex">
-                      <div class="flex-shrink-0 items-center justify-start flex w-6">
-                        <a
-                          aria-label="Linkedin"
-                          class="text-base text-gray-500"
-                          href="https://www.linkedin.com/in/dave-haug-442064a5/"
-                        >
-                          <svg
-                            class="self-center"
-                            viewBox="0 0 448 512"
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="1.125em"
-                            ><path
-                              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"
-                            />
-                          </svg>
-                        </a>
-                      </div>
-                      <a
-                        href="mailto:dave@triarc-labs.com&subject=Kontakt"
-                        class="decoration-red-triarc underline text-base text-gray-500 ">dave@triarc-labs.com</a
-                      >
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
+            <!-- Todo: Replace contact when new sales person is hired -->
+            <!--            <li class="flex flex-col gap-10 pt-12 sm:flex-row">-->
+            <!--              <Picture-->
+            <!--                alt="Photo Dave Haug"-->
+            <!--                images={dave}-->
+            <!--                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"-->
+            <!--              />-->
+            <!--              <div class="max-w-xl flex-auto">-->
+            <!--                <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>-->
+            <!--                <p class="text-base leading-7 text-gray-500">Business Development</p>-->
+            <!--                <p class="mt-6 text-base leading-7 text-gray-500">-->
+            <!--                  Wollen Sie mehr über unsere Projekte und Schnittstellenlösungen, sowie darüber, wie wir eine-->
+            <!--                  individuell auf Ihre Bedürfnisse zugeschnittene digitale Lösung bereitstellen können. Zögern Sie-->
+            <!--                  nicht, mich zu kontaktieren.-->
+            <!--                </p>-->
+            <!--                <ul class="mt-6 flex gap-x-6">-->
+            <!--                  <li>-->
+            <!--                    <div class="flex">-->
+            <!--                      <div class="flex-shrink-0 items-center justify-start flex w-6">-->
+            <!--                        <a-->
+            <!--                          aria-label="Linkedin"-->
+            <!--                          class="text-base text-gray-500"-->
+            <!--                          href="https://www.linkedin.com/in/dave-haug-442064a5/"-->
+            <!--                        >-->
+            <!--                          <svg-->
+            <!--                            class="self-center"-->
+            <!--                            viewBox="0 0 448 512"-->
+            <!--                            xmlns="http://www.w3.org/2000/svg"-->
+            <!--                            height="1.125em"-->
+            <!--                            ><path-->
+            <!--                              d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"-->
+            <!--                            />-->
+            <!--                          </svg>-->
+            <!--                        </a>-->
+            <!--                      </div>-->
+            <!--                      <a-->
+            <!--                        href="mailto:dave@triarc-labs.com&subject=Kontakt"-->
+            <!--                        class="decoration-red-triarc underline text-base text-gray-500 ">dave@triarc-labs.com</a-->
+            <!--                      >-->
+            <!--                    </div>-->
+            <!--                  </li>-->
+            <!--                </ul>-->
+            <!--              </div>-->
+            <!--            </li>-->
             <li class="flex flex-col gap-10 pt-12 sm:flex-row">
               <Picture
                 alt="Photo Serge Müller"
