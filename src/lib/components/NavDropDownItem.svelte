@@ -2,13 +2,13 @@
   export let title: string
   export let description: string
   export let path: string
-  export let close: Function
+  export let close: () => void;
   export let inline = false
 </script>
 
 <a
   href={path}
-  on:click={close()}
+  on:click={close}
   class="relative {inline
     ? 'inline-link'
     : 'lg:dialog-link inline-link'} block group hover:bg-blue-triarc rounded hover:bg-opacity-10"
