@@ -77,32 +77,4 @@ export const load: PageLoad = () => {
       }
     }
   )
-
-  // return Promise.all([ postsBeratung, postsVision, postsChangeManagement, postsStrukturen, postsCoaching]).then(
-  //     async ([beratungResponse, visionResponse, changeManagementResponse, strukturenResponse, coachingResponse]) => {
-  //
-  //         const beratungData = await beratungResponse.json()
-  //         const visionData = await visionResponse.json()
-  //         const changeManagementData = await changeManagementResponse.json()
-  //         const strukturenData = await strukturenResponse.json()
-  //         const coachingData = await coachingResponse.json()
-  //
-  //         const beratung = mapPosts(beratungData)
-  //         const vision = mapPosts(visionData)
-  //         const changeManagement = mapPosts(changeManagementData)
-  //         const strukturen = mapPosts(strukturenData)
-  //         const coaching = mapPosts(coachingData)
-  //
-  //         const posts: ConsultingPosts = {
-  //             beratung: beratung,
-  //             vision: vision,
-  //             changeManagement: changeManagement,
-  //             strukturen: strukturen,
-  //             coaching: coaching
-  //         }
-  //         return {
-  //             posts
-  //         };
-  //     }
-  // )
 }

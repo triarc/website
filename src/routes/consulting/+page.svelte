@@ -6,10 +6,11 @@
   import heroImage from '$lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { MappedPost } from './+page'
   import ContactForm from '$lib/components/ContactForm.svelte'
+  import type { FeaturedContent } from '$lib/components/FeaturedContent'
 
   export let data
   export let contactString = 'Iris direkt kontaktieren'
-  let content = {
+  let content: FeaturedContent = {
     quote: {
       content:
         'Der Mensch digitalisiert für die Menschen - wir stellen den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
