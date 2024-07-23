@@ -3,11 +3,10 @@
   import Testimonials from '$lib/index/Testimonials.svelte'
   import Container from '$lib/components/Container.svelte'
   import Button from '$lib/components/Button.svelte'
-
+  import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
 </script>
-
 {#if content}
   <div class="bg-white">
     <div class="flex flex-col lg:flex-row">
@@ -20,13 +19,21 @@
           <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center px-8 gap-x-8 lg:ml-auto">
             <div class="-mt-8 w-full">
               <div class="relative aspect-[3/4] h-full flex justify-center items-center">
-                <enhanced:img
+                <EnhancedImage
                   alt={content.quote?.person}
-                  src={content.quote?.image}
-                  class={content?.quote?.imageCss
+                  image={content.quote?.image}
+                  imgClass={content?.quote?.imageCss
                     ? content.quote.imageCss
                     : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
-                />
+
+                ></EnhancedImage>
+<!--                <enhanced:img-->
+<!--                  alt={content.quote?.person}-->
+<!--                  src={content.quote?.image}-->
+<!--                  class={content?.quote?.imageCss-->
+<!--                    ? content.quote.imageCss-->
+<!--                    : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}-->
+<!--                />-->
               </div>
             </div>
             <div class="w-full max-w-full lg:max-w-sm lg:pl-8">

@@ -1,10 +1,11 @@
 import type { MappedPost } from '../../routes/consulting/+page'
+import type { Picture } from 'imagetools-core'
 
 export interface FeaturedContent {
-  quote?: {
+  quote: {
     content: string
     person: string
-    image: unknown
+    image: Picture
     imageCss?: string
     personTitle: string
     linkedin: string
