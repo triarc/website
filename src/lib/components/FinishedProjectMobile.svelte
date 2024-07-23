@@ -28,9 +28,9 @@
       </div>
     </div>
     <div class="relative overflow-hidden pt-8">
-      <div class="">
+      <div class="px-10">
         <div class="embla">
-          <div class="embla__viewport px-10" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
+          <div class="embla__viewport" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
             <div class="embla__container">
               {#each imageSources as imageSource}
                 <div class="embla__slide">
@@ -231,7 +231,7 @@
   }
 
   .embla__button--prev {
-    left: 0;
+    left: -30px;
     z-index: 10;
   }
   /* Desktop */
@@ -241,7 +241,7 @@
   }
 
   .embla__button--next {
-    right: 0;
+    right: -30px;
     z-index: 10;
   }
 
