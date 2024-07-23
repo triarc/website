@@ -27,7 +27,7 @@
       title: 'Software passend für Sie.',
       content:
         'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.',
-      image: { src: 'img/custom-software/product_teardown.svg', height: 281, alt: 'Projektportfolio' },
+      image: { src: 'src/lib/assets/img/custom-software/product_teardown.svg', height: 281, alt: 'Projektportfolio' },
       link: { href: '/custom-software', text: 'Custom Software' },
     },
     {
@@ -47,7 +47,7 @@
       title: 'Digitale Transformation ist menschlich ',
       content:
         'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.',
-      image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
+      image: { src: 'src/lib/assets/img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
       link: { href: '/consulting', text: 'Beratung' },
     },
 

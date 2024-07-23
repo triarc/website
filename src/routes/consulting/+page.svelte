@@ -21,7 +21,7 @@
       email: 'iris@triarc-labs.com',
       highlight: 'green',
       contactButton: 'Kontaktiere mich',
-      customLogos: ['/img/partners/bso_logo_desktop.svg'],
+      customLogos: ['src/lib/assets/img/partners/bso_logo_desktop.svg'],
     },
     categories: [
       {
@@ -62,7 +62,7 @@
     ],
     testimonials: [
       {
-        logo: '/img/customer/analytica-logo-main.svg',
+        logo: 'src/lib/assets/img/customer/analytica-logo-main.svg',
         quote: {
           source: 'Andrea Isler von Analytica',
           content:
@@ -72,7 +72,7 @@
         },
       },
       {
-        logo: '/img/customer/helvetas.gif',
+        logo: 'src/lib/assets/img/customer/helvetas.gif',
         quote: {
           source: 'Patric Masar von Helvetas',
           content:

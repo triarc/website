@@ -10,7 +10,7 @@
     content:
       'Zusammen können wir alles erreichen. <br/><br/>' +
       'Werde Teil des Teams und bewirb dich, wenn du Leidenschaft, Elan und Tatendrang hast und du dich mit unseren Werten identifizieren kannst. ',
-    image: { src: 'img/custom-software/triarc-adventure.svg', alt: 'Triarc Career' },
+    image: { src: 'src/lib/assets/img/custom-software/triarc-adventure.svg', alt: 'Triarc Career' },
     link: { href: '/jobs', text: 'Unsere Jobs' },
   }
 </script>
@@ -23,7 +23,7 @@
   content="Wir lieben was wir tun, und dass wir das gemeinsam tun.
         Von der Vision bis zur Anwendung können Sie sich auf unsere Kompetenz und Konstanz verlassen.
         Sie werden von erfahrenen, engagierten Spezialisten persönlich begleitet."
-  imageSrc={heroImage}
+  image={heroImage}
   imageAlt="triarc-Team Header Image"
 />
 

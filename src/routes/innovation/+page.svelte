@@ -23,7 +23,7 @@
       title: 'μLink Data-hub',
       content:
         'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
-      image: { src: 'img/mlink/tree.svg', alt: 'mlink logo' },
+      image: { src: 'src/lib/assets/img/mlink/tree.svg', alt: 'mlink logo' },
       link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' },
     },
     {
@@ -31,7 +31,7 @@
       content:
         'Die digitale Verbindung von der Baustelle bis zum Lieferanten. Erlaube deinen Kunden bequem Mulde, Kies oder Transport über die M3Express-App zu bestellen. Behalte als Lieferant jederzeit den Überblick und optimiere die Kommunikation zwischen Fahrer, Kunde und dir.',
 
-      image: { src: 'img/lab/m3express-icon.svg', width: 200, alt: 'm3express' },
+      image: { src: 'src/lib/assets/img/lab/m3express-icon.svg', width: 200, alt: 'm3express' },
       link: { href: 'https://m3express.ch', text: 'Mehr dazu', target: '_blank' },
     },
     {
@@ -41,7 +41,7 @@
         '              verkaufen. Die Whitelabel Lösung bietet eine Vielzahl von Konfigurationsmöglichkeiten inklusive einem\n' +
         '              Pizzabuilder. Mit Stripe lassen sich die Zahlungen bequem online abwickeln.',
 
-      image: { src: 'img/lab/fairpizza-icon-512.png', width: 220, alt: 'slothi' },
+      image: { src: 'src/lib/assets/img/lab/fairpizza-icon-512.png', width: 220, alt: 'slothi' },
       link: { href: 'https://fairpizza.ch', text: 'Mehr dazu', target: '_blank' },
     },
     {
@@ -53,7 +53,7 @@
         '              übernimmt Slothi für dich und prüft die Verfügbarkeiten aller Teilnehmer. Du erhältst eine Auswahl an\n' +
         '              möglichen Terminvorschlägen und kannst einen fixen Termin einplanen.',
 
-      image: { src: 'img/lab/slothi.svg', width: 200, alt: 'slothi' },
+      image: { src: 'src/lib/assets/img/lab/slothi.svg', width: 200, alt: 'slothi' },
       link: { href: 'https://slothi.ch', text: 'Mehr dazu', target: '_blank' },
     },
   ]

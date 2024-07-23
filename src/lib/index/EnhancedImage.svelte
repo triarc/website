@@ -6,9 +6,4 @@
   export let loading: 'eager' | 'lazy' = 'lazy'
 </script>
 
-<enhanced:img
-  src={image}
-  alt={alt}
-  class={imgClass}
-  loading="{loading}"
-/>
+<enhanced:img src={image} {alt} class={imgClass} {loading} />

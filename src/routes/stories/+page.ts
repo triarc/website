@@ -24,7 +24,6 @@ export const load: PageLoad = ({ url }) => {
       const tagData = await tagResponse.json()
       const featuredData = await featuredResponse.json()
       const nonFeaturedData = await nonFeaturedResponse.json()
-      console.log(featuredData)
       const featuredPosts = mapPosts(featuredData)
       const nonFeaturedPosts = mapPosts(nonFeaturedData)
       const posts = featuredPosts.concat(nonFeaturedPosts)

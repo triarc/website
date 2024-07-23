@@ -6,7 +6,7 @@
   import { page } from '$app/stores'
   import { getSizes, getSource, getSourceSet } from './utils'
   import type { GhostPost } from './utils'
-  import { type ComponentType, onMount } from 'svelte'
+  import { onMount } from 'svelte'
   import heroImage from '$lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { MappedPost } from '../consulting/+page'
   import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'

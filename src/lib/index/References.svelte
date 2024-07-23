@@ -1,8 +1,8 @@
 <script lang="ts">
   import FinishedProject2 from '$lib/components/ReferenceProjectDesktop.svelte'
   import FinishedProjectMobile from '$lib/components/ReferenceProjectMobile.svelte'
-  import CAL from '$lib/assets/references/cal.png?enhanced'
-  import OrthoClient from '$lib/assets/references/wunder-app.png?enhanced'
+  import CAL from '$lib/assets/references/cal.png?format=webp;png&enhanced'
+  import OrthoClient from '$lib/assets/references/wunder-app.png?format=webp;png&enhanced'
   import OrthoOrder from '$lib/assets/references/ortho-order.png?format=webp;png&enhanced'
   import Riwaxique from '$lib/assets/references/riwax.png?format=webp;png&enhanced'
   import Chauffeur from '$lib/assets/references/chauffeur.png?format=webp;png&enhanced'

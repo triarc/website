@@ -104,7 +104,7 @@
         'Der Betrieb sowie die Wartung unserer Software ist uns ein wichtiges Anliegen. Wir betreiben unsere Software flexibel in unserem Cloud Angebot oder auf deinen vorhandenen Servern.' +
         '<br/><br/>' +
         'Regelmässige Wartung der Software sowie das Einspielen von sicherheitsrelevanten Patches ist für uns ein Routine-Job und läst uns Nachts besser schlafen.',
-      image: { src: 'img/custom-software/maintenance.svg', alt: 'Wartung' },
+      image: { src: 'src/lib/assets/img/custom-software/maintenance.svg', alt: 'Wartung' },
     },
   ]
 </script>

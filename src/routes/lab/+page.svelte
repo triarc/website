@@ -1,7 +1,7 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte'
-  import FairPizza from 'img/lab/fairpizza-dashboard.png?format=webp;png&w=500&enhanced'
-  import Slothi from 'img/lab/slothi.png?format=webp;png&w=500&enhanced'
+  import FairPizza from '$lib/assets/img/lab/fairpizza-dashboard.png?format=webp;png&w=500&enhanced'
+  import Slothi from '$lib/assets/img/lab/slothi.png?format=webp;png&w=500&enhanced'
   let email = ''
   let submitted = false
 
@@ -42,7 +42,7 @@
         </div>
 
         <div class="flex items-end justify-center my-16 lg:my-0">
-          <enhanced:img src="img/lab/lab.svg" class="flex-grow" alt="triarc innovation lab" />
+          <img src="src/lib/assets/img/lab/lab.svg" class="flex-grow" alt="triarc innovation lab" />
         </div>
       </div>
     </div>
