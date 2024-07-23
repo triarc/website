@@ -1,6 +1,6 @@
 <script lang="ts">
-  import FinishedProject2 from '$lib/components/FinishedProject2.svelte'
-  import FinishedProjectMobile from '$lib/components/FinishedProjectMobile.svelte'
+  import FinishedProject2 from '$lib/components/ReferenceProjectDesktop.svelte'
+  import FinishedProjectMobile from '$lib/components/ReferenceProjectMobile.svelte'
   import CAL from '$lib/assets/references/cal.png?enhanced'
   import OrthoClient from '$lib/assets/references/wunder-app.png?enhanced'
   import OrthoOrder from '$lib/assets/references/ortho-order.png?format=webp;png&enhanced'
@@ -221,14 +221,7 @@
         'Die Mitarbeiter im Feld, sollen eine möglichst einfach bedienbare Lösung erhalten. Die Applikation soll durchlässig sein, um einen flexiblen Einsatz zu ermöglichen. Die Auswahl der Projekte, Mitarbeiter, Maschinen und Produkte soll aufgrund der Planung oder Konfiguration vereinfacht resp. unterstützt werden. Keine Maschinenstunden sollen mehr vergessen gehen!',
       solutions:
         'Die Erfassung von Tagesrapporten auf den Baustellen wurde durch die gemeinsam entwickelte Applikation «SutterApp» um ein Vielfaches übersichtlicher und effizienter. Mitarbeiter werden im Rapportierungsprozess unterstützt, da die SutterApp Plandaten aus dem ERP-System ABACUS für Rollen, Inventar, Material und Fremdleistungen vorschlägt. Zusätzlich können Schnellbausteine und die Historie-Funktion genutzt werden.',
-      imageSources: [
-        Sutter1,
-        Sutter2,
-        Sutter3,
-        Sutter1,
-        Sutter2,
-        Sutter3,
-      ],
+      imageSources: [Sutter1, Sutter2, Sutter3, Sutter1, Sutter2, Sutter3],
     },
     {
       appName: 'My Business',
@@ -255,15 +248,7 @@
         ' an einem Ort für alle Mitglieder verfügbar. Zudem können alle Arbeiten digital dokumentiert und geplant werden.' +
         ' Es ist jederzeit ersichtlich, wer, was bis wann zu erledigen hat. In der zweiten Phase wurde die Kommunikationsplattform' +
         ' um Funktionen wie Kontexträume, Todos und den Ressourcenplaner erweitert.',
-      imageSources: [
-        GLB1,
-        GLB2,
-        GLB3,
-        GLB4,
-        GLB5,
-        GLB6,
-        GLB7,
-      ],
+      imageSources: [GLB1, GLB2, GLB3, GLB4, GLB5, GLB6, GLB7],
     },
     {
       appName: 'Porta',
@@ -276,15 +261,7 @@
         'Die Usergruppe erstreckt sich von Bezugspersonen bis in die Betreuung. Die Herausforderungen umfassten die Umsetzung einer möglichst einfachen Bedienung und die Realisierung der App zu kostengünstigen Konditionen.',
       solutions:
         'Die PORTA App wurde als umfangreiche Lernsoftware konzipiert, die nicht nur das Erlernen der Portagebärden ermöglicht, sondern auch das Erfassen und Teilen bedürfnisspezifischer Gebärden, benutzerdefinierter Kataloge und Arbeitsblätter. Die App bietet eine einfache Navigation im Gebärdenkatalog, die Möglichkeit zur Erfassung eigener Gebärden mit Video und die Zusammenstellung eigener Kataloge, die mit anderen geteilt werden können. Spielerisch kann das erworbene Wissen mit einem Lernspiel getestet und vertieft werden, und die Gamifikation trägt dazu bei, dass das Lernen Spaß macht. Das Ziel war eine kostenbewusste Lösung mit einer intuitiven App, die von jeder Person, idealerweise auch von Menschen mit leichten Behinderungen, bedient werden kann. Die Applikation findet weiter Verbreitung in betreuenden Institutionen, wie auch in heilpädagogischen Schulen.',
-      imageSources: [
-        Porta1,
-        Porta2,
-        Porta3,
-        Porta4,
-        Porta5,
-        Porta6,
-        Porta7,
-      ],
+      imageSources: [Porta1, Porta2, Porta3, Porta4, Porta5, Porta6, Porta7],
     },
     {
       appName: 'CondAct',
@@ -321,15 +298,7 @@
         'Die Übermittlung der Eventdaten an die ERP-Lösung von ABACUS. Offlinenutzung in den Eventhallen mit unzureichender Netzverbindung.',
       solutions:
         'Einfach, bedienbare, intuitive Event-App. Wichtige Teilnehmerdaten in Echtzeit verfügbar. Zb Notfallkontakt, Alter, Schulhaus, usw. Verbesserte Teilnehmer Eingangskontrolle. (Lange Warteschlange werden verhindert Teilnehmer müssen nur noch einmalig erfasst werden, Stammdaten sind hinterlegt und können für zukünftige Events schnell und einfach gesucht werden.',
-      imageSources: [
-        Bienvenu1,
-        Bienvenu2,
-        Bienvenu3,
-        Bienvenu4,
-        Bienvenu5,
-        Bienvenu6,
-        Bienvenu7,
-      ],
+      imageSources: [Bienvenu1, Bienvenu2, Bienvenu3, Bienvenu4, Bienvenu5, Bienvenu6, Bienvenu7],
     },
     {
       appName: 'myWalo',
@@ -354,16 +323,7 @@
         ' können direkt eröffnet werden und die Mitarbeitenden haben Zugriff auf persönliche HR-Daten. Jeder Walo Mitarbeiter' +
         ' kann den gesamten Inventarstamm der Walo Bertschinger AG einsehen, wichtige Dokumente jeder Anlage sind jederzeit verfügbar,' +
         ' und bei Anlagen mit Kyburz GPS kann die aktuelle Position sowie die Nutzung bestimmt werden.',
-      imageSources: [
-        MyWalo1,
-        MyWalo2,
-        MyWalo3,
-        MyWalo4,
-        MyWalo1,
-        MyWalo2,
-        MyWalo3,
-        MyWalo4,
-      ],
+      imageSources: [MyWalo1, MyWalo2, MyWalo3, MyWalo4, MyWalo1, MyWalo2, MyWalo3, MyWalo4],
     },
     {
       appName: 'Vademecum',

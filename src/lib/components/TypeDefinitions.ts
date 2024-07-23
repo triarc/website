@@ -1,3 +1,5 @@
+import type { Picture } from 'imagetools-core'
+
 export interface BlockContent {
   title?: string
   content?: string
@@ -11,7 +13,8 @@ export interface BlockContent {
   quote?: {
     content: string
     person: string
-    image: string
+    // string is needed for svgs
+    image: Picture | string
     imageCss?: string
     personTitle: string
     linkedin?: string

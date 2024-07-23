@@ -41,9 +41,10 @@
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
             <figure>
               <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                <!--suppress CheckImageSize -->
                 <img
                   class="rounded-lg shadow-lg object-cover object-center"
-                  src="/img/office/teamcall.png"
+                  src="/src/lib/assets/img/office/teamcall.png"
                   alt=""
                   width="1184"
                   height="1376"
@@ -100,8 +101,8 @@
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none flex items-center justify-center">
             <figure class="">
               <img
-                class="rounded-lg shadow-lg object-cover w-96 object-center rounded-3xl"
-                src="/img/office/office_view.jpg"
+                class="rounded-lg shadow-lg object-cover w-96 object-center"
+                src="/src/lib/assets/img/office/office_view.jpg"
                 alt="office view"
               />
               <figcaption class="mt-3 flex text-sm text-gray-500">

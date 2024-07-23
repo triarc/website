@@ -163,7 +163,7 @@
   <Hero
     title="together we succeed"
     content="Für Ihren Fortschritt. Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie."
-    imageSrc={heroImage}
+    image={heroImage}
     imageAlt="Triarc Mission Header"
   />
 

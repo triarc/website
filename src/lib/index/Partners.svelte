@@ -9,10 +9,11 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
+          <!--suppress CheckImageSize -->
           <img
             height="80"
             class="max-h-20"
-            src="/img/partners/SwissMadeSoftware.png"
+            src="/src/lib/assets/img/partners/SwissMadeSoftware.png"
             loading="lazy"
             alt="partner-swissmadesoftware"
           />
@@ -23,7 +24,14 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/partners/SBV.png" loading="lazy" alt="partner-sbv" />
+          <!--suppress CheckImageSize -->
+          <img
+            height="80"
+            class="max-h-20"
+            src="/src/lib/assets/img/partners/SBV.png"
+            loading="lazy"
+            alt="partner-sbv"
+          />
         </a>
         <a
           href="https://www.swissict.ch"
@@ -31,7 +39,14 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/partners/SwissICT.png" loading="lazy" alt="partner-SwissICT" />
+          <!--suppress CheckImageSize -->
+          <img
+            height="80"
+            class="max-h-20"
+            src="/src/lib/assets/img/partners/SwissICT.png"
+            loading="lazy"
+            alt="partner-SwissICT"
+          />
         </a>
       </div>
     </div>

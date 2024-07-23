@@ -179,34 +179,39 @@
       <div class="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-16">
         <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">
-            <img class="{quote.left.quote?.imageCss} self-start" src={quote.left.quote?.image} alt="" />
-            <figure class="mt-10 flex flex-auto flex-col justify-between">
-              <blockquote class="text-lg leading-8 text-gray-900">
-                <p>“{quote.left.quote?.content}”</p>
-              </blockquote>
-              <figcaption class="mt-10 flex items-center gap-x-6">
-                <div class="text-base">
-                  <div class="font-semibold text-gray-900">{quote.left.quote?.person}</div>
-                  <div class="mt-1 text-gray-500">{quote.left.quote?.personTitle}</div>
-                </div>
-              </figcaption>
-            </figure>
+            <!-- TODO: When reworking page do a proper fix instead of a stopgap fix -->
+            {#if typeof quote.left.quote?.image === 'string'}
+              <img class="{quote.left.quote?.imageCss} self-start" src={quote.left.quote?.image} alt="" />
+              <figure class="mt-10 flex flex-auto flex-col justify-between">
+                <blockquote class="text-lg leading-8 text-gray-900">
+                  <p>“{quote.left.quote?.content}”</p>
+                </blockquote>
+                <figcaption class="mt-10 flex items-center gap-x-6">
+                  <div class="text-base">
+                    <div class="font-semibold text-gray-900">{quote.left.quote?.person}</div>
+                    <div class="mt-1 text-gray-500">{quote.left.quote?.personTitle}</div>
+                  </div>
+                </figcaption>
+              </figure>
+            {/if}
           </div>
           <div
             class="flex flex-col border-t border-gray-900/10 pt-10 sm:pt-16 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0 xl:pl-20"
           >
-            <img class="{quote.right.quote?.imageCss} self-start" src={quote.right.quote?.image} alt="" />
-            <figure class="mt-10 flex flex-auto flex-col justify-between">
-              <blockquote class="text-lg leading-8 text-gray-900">
-                <p>“{quote.right.quote?.content}”</p>
-              </blockquote>
-              <figcaption class="mt-10 flex items-center gap-x-6">
-                <div class="text-base">
-                  <div class="font-semibold text-gray-900">{quote.right.quote?.person}</div>
-                  <div class="mt-1 text-gray-500">{quote.right.quote?.personTitle}</div>
-                </div>
-              </figcaption>
-            </figure>
+            {#if typeof quote.right.quote?.image === 'string'}
+              <img class="{quote.right.quote?.imageCss} self-start" src={quote.right.quote?.image} alt="" />
+              <figure class="mt-10 flex flex-auto flex-col justify-between">
+                <blockquote class="text-lg leading-8 text-gray-900">
+                  <p>“{quote.right.quote?.content}”</p>
+                </blockquote>
+                <figcaption class="mt-10 flex items-center gap-x-6">
+                  <div class="text-base">
+                    <div class="font-semibold text-gray-900">{quote.right.quote?.person}</div>
+                    <div class="mt-1 text-gray-500">{quote.right.quote?.personTitle}</div>
+                  </div>
+                </figcaption>
+              </figure>
+            {/if}
           </div>
         </div>
       </div>

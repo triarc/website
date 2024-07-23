@@ -2,6 +2,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import DeveloperListing from '../developer-listing.svelte'
+  import heroImage from '$lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
 </script>
 
 <svelte:head>
@@ -10,6 +11,8 @@
 
 <Hero
   title="Developer Job"
+  image={heroImage}
+  imageAlt="triarc developer job hero"
   content="Erfahre mehr über unsere offene Entwickler Stelle und was dich sonst noch dazu interessieren könnte."
 />
 

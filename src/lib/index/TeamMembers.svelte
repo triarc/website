@@ -16,6 +16,7 @@
   import lukas from '$lib/assets/team/lukas.jpg?format=webp;png&w=500&enhanced'
   import alexa from '$lib/assets/team/alexa.jpg?format=webp;png&w=500&enhanced'
   import sakima from '$lib/assets/team/sakima.jpg?format=webp;png&w=500&enhanced'
+  import EnhancedImage from '$lib/index/EnhancedImage.svelte'
 
   let teamMember = [
     {
@@ -190,11 +191,11 @@
     >
       {#each teamMember as member}
         <li>
-          <enhanced:img
-            class="aspect-[3/4] w-full drop-shadow rounded-2xl object-cover"
+          <EnhancedImage
+            imgClass="aspect-[3/4] w-full drop-shadow rounded-2xl object-cover"
             loading="lazy"
             alt={member.name}
-            src={member.image}
+            image={member.image}
           />
           <h3
             class="mt-6 text-lg inline-flex font-semibold leading-8 tracking-tight text-gray-800 justify-center align-middle"
@@ -218,32 +219,4 @@
 </div>
 
 <style style lang="postcss">
-  .card {
-    width: 100%;
-    height: 144px;
-    text-align: center;
-    perspective: 600px;
-  }
-  .card-content {
-    width: 144px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.4s;
-    transform-style: preserve-3d;
-  }
-  .nerd .card-content {
-    transform: rotateY(180deg);
-    transition: transform 0.3s;
-  }
-  .front-card {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    height: 100%;
-    width: 100%;
-    backface-visibility: hidden;
-  }
 </style>

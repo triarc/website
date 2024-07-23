@@ -41,7 +41,7 @@
     if (dropdown && evt.target && evt.target instanceof HTMLElement && dropdown.contains(evt.target)) {
       return
     }
-    if (this.open) {
+    if (open) {
       open = false
       evt.stopPropagation()
     }
@@ -68,16 +68,6 @@
       </svg>
     {/if}
   </button>
-  <!-- TODO Try to make work with ally, either mobile or desktop and open -> Dialog is only ever desktop, use display:hidden and remove display flex from the class -->
-  <!--  <MediaQuery query="(max-width: 1024px)" let:matches>-->
-  <!--    {#if open || inline || matches}-->
-  <!--      <div class="{inline || matches ? 'inline' : 'dialog'} {open ? 'open' : 'closed'}">-->
-  <!--        <div class="container">-->
-  <!--          <slot />-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--    {/if}-->
-  <!--  </MediaQuery>-->
 
   <div class="{inline ? 'flex flex-col' : 'lg:hidden'} {open ? 'open' : 'closed'}">
     <div on:click={close} class="container" role="none">
@@ -92,20 +82,19 @@
 </div>
 
 <style lang="postcss">
-  /*.inline {*/
-  /*  @apply flex flex-col;*/
-  /*}*/
-
+  /* noinspection CssUnusedSymbol*/
   .dialog {
     @apply absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4;
   }
-
+  /* noinspection CssUnusedSymbol*/
   .dialog.open {
     @apply transition ease-out duration-200 opacity-100 translate-y-0 z-30;
   }
+  /* noinspection CssUnusedSymbol*/
   .dialog.closed {
     @apply transition ease-in duration-150 opacity-0 translate-y-1;
   }
+  /* noinspection CssUnusedSymbol*/
   .dialog .container {
     @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4 rounded;
   }

@@ -6,10 +6,10 @@
   import { page } from '$app/stores'
   import { getSizes, getSource, getSourceSet } from './utils'
   import type { GhostPost } from './utils'
-  import { onMount } from 'svelte'
-  import heroImage from '$lib/assets/hero/Stories.jpg?enhanced'
-  import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
+  import { type ComponentType, onMount } from 'svelte'
+  import heroImage from '$lib/assets/hero/Stories.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { MappedPost } from '../consulting/+page'
+  import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
 
   export let data: PageData
   let pageNumber = 2 //
@@ -67,7 +67,7 @@
 <Hero
   title="Stories"
   content="Erfahre mehr über uns, lese was uns beschäftigt und wir gerade tun!"
-  imageSrc={heroImage}
+  image={heroImage}
   imageAlt="Triarc Stories Header"
 />
 
@@ -223,6 +223,7 @@
   .badge {
     @apply bg-white border-r-2 border-gray-100 rounded rounded-r-none  px-4 py-2;
   }
+  /*noinspection CssUnusedSymbol*/
   .active {
     @apply bg-white;
   }

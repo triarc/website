@@ -117,7 +117,7 @@
   <Hero
     title="Custom Software"
     content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln massgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind."
-    imageSrc={heroImage}
+    image={heroImage}
     imageAlt="Triarc Custom Software Header"
   />
 

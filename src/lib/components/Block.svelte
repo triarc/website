@@ -1,6 +1,7 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
+  import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   export let content: BlockContent
 </script>
 
@@ -16,13 +17,24 @@
       >
         <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
           <div class="relative aspect-[3/4] h-full md:-mx-8 xl:mx-0 xl:aspect-auto flex justify-center items-center">
-            <enhanced:img
-              alt={content.quote.person}
-              src={content.quote.image}
-              class={content.quote.imageCss
-                ? content.quote.imageCss
-                : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
-            />
+            <!-- Needed as safeguard if images in use are svgs -->
+            {#if typeof content.quote.image === 'string'}
+              <img
+                src={content.quote.image}
+                alt={content.quote.person}
+                class={content.quote.imageCss
+                  ? content.quote.imageCss
+                  : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
+              />
+            {:else}
+              <EnhancedImage
+                alt={content.quote.person}
+                image={content.quote.image}
+                imgClass={content.quote.imageCss
+                  ? content.quote.imageCss
+                  : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
+              />
+            {/if}
           </div>
         </div>
         <div class="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:py-24 xl:px-8">

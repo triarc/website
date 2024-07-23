@@ -200,7 +200,7 @@
 <Hero
   title="Jobs"
   content="Erfahre mehr über unsere offene Stellen und was dich sonst noch dazu interessieren könnte."
-  imageSrc={heroImage}
+  image={heroImage}
   imageAlt="Triarc Jobs Header"
 />
 <JobIntro />

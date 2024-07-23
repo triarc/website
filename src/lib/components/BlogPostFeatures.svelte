@@ -7,6 +7,7 @@
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
 </script>
+
 {#if content}
   <div class="bg-white">
     <div class="flex flex-col lg:flex-row">
@@ -25,15 +26,7 @@
                   imgClass={content?.quote?.imageCss
                     ? content.quote.imageCss
                     : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
-
                 ></EnhancedImage>
-<!--                <enhanced:img-->
-<!--                  alt={content.quote?.person}-->
-<!--                  src={content.quote?.image}-->
-<!--                  class={content?.quote?.imageCss-->
-<!--                    ? content.quote.imageCss-->
-<!--                    : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}-->
-<!--                />-->
               </div>
             </div>
             <div class="w-full max-w-full lg:max-w-sm lg:pl-8">

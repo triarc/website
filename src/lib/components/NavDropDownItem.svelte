@@ -1,8 +1,8 @@
 <script lang="ts">
-  export let title
-  export let description
-  export let path
-  export let close
+  export let title: string
+  export let description: string
+  export let path: string
+  export let close: Function
   export let inline = false
 </script>
 
@@ -20,11 +20,13 @@
   <p class="text-gray-600">{description}</p>
 </a>
 
+<!-- svelte-ignore css-unused-selector -->
 <style lang="postcss">
+  /*noinspection CssUnusedSymbol*/
   .dialog-link {
     @apply px-6 py-4;
   }
-
+  /* noinspection CssUnusedSymbol*/
   .inline-link {
     @apply -mx-4 px-4 py-2;
   }

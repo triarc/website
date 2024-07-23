@@ -94,7 +94,7 @@
   <Hero
     title="Beratung"
     content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken."
-    imageSrc={heroImage}
+    image={heroImage}
     imageAlt="Triarc Consulting Header"
   />
   <BlogPostFeatures bind:content />
