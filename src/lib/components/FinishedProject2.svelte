@@ -18,12 +18,11 @@
       </div>
     </div>
     <div class="relative flex items-center justify-center pt-8">
-      <img
+      <enhanced:img
         src={imageSource}
+        loading="lazy"
         alt="{appName} App screenshot"
         class=" rounded-md lg:h-[600px] w-auto shadow-xl ring-1 ring-gray-900/10"
-        width="2432"
-        height="1442"
       />
     </div>
     <div class="mt-16 sm:mt-5 md:mt-10">

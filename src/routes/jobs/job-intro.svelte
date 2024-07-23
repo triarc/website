@@ -1,12 +1,12 @@
 <script lang="ts">
-  import type { BlockContent } from '$lib/components/Block.svelte'
-  import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
+  import elke from '$lib/assets/team/elke.jpg?format=webp;png&w=500&enhanced'
   import Block from '$lib/components/Block.svelte'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
 
   let contents: BlockContent[] = [
     {
       quote: {
-        images: elke,
+        image: elke,
         content:
           'Unsere Firmenkultur beruht auf den Grundsätzen der Gleichberechtigung, Mitbestimmung und Partizipation. Denn zusammen sind wir innovativer, kreativer und finden die besten Lösungen für unsere Kunden.',
         person: 'Elke Engel',

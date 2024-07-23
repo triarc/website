@@ -1,6 +1,6 @@
 <script lang="ts">
   import emblaCarouselSvelte from 'embla-carousel-svelte'
-  import type { EmblaCarouselType } from 'embla-carousel'
+  import type { EmblaCarouselType, EmblaOptionsType, EmblaPluginType } from 'embla-carousel'
   import Container from '$lib/components/Container.svelte'
   export let appName: string
   export let companyDescription: string
@@ -11,9 +11,11 @@
   //export let id: string
 
   let emblaCarousel: EmblaCarouselType
-  let options = { loop: true }
+  let options: EmblaOptionsType = { loop: true }
+  let plugins: EmblaPluginType[] = []
 
-  const onInit = (event) => {
+
+  const onInit = (event: CustomEvent<EmblaCarouselType>) => {
     emblaCarousel = event.detail
     console.log(emblaCarousel.slideNodes()) // Access API
   }
@@ -30,16 +32,16 @@
     <div class="relative overflow-hidden pt-8">
       <div class="px-10">
         <div class="embla">
-          <div class="embla__viewport" use:emblaCarouselSvelte={{ options }} on:emblaInit={onInit}>
+          <div class="embla__viewport" use:emblaCarouselSvelte="{{options, plugins}}" on:emblaInit={onInit}>
             <div class="embla__container">
               {#each imageSources as imageSource}
                 <div class="embla__slide">
                   <div class="embla__slide__inner">
-                    <img
-                      class="embla__slide__img max-h-[450px] lg:max-h-[600px]"
+                    <enhanced:img
+                      class="embla__slide__img object-contain max-h-[450px] lg:max-h-[600px]"
                       src={imageSource}
-                      alt="Screenshot of "
-                      {appName}
+                      loading="lazy"
+                      alt="Screenshot of {appName}"
                     />
                   </div>
                 </div>
@@ -149,7 +151,7 @@
   </Container>
 </div>
 
-<style>
+<style lang="postcss">
   .embla {
     position: relative;
   }
@@ -198,8 +200,10 @@
     align-items: center;
     justify-content: center;
   }
+
   .embla__slide__img {
   }
+
   .embla__button {
     background-color: transparent;
     position: absolute;

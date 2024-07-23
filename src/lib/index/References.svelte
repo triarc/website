@@ -1,6 +1,72 @@
 <script lang="ts">
   import FinishedProject2 from '$lib/components/FinishedProject2.svelte'
   import FinishedProjectMobile from '$lib/components/FinishedProjectMobile.svelte'
+  import CAL from '$lib/assets/references/cal.png?enhanced'
+  import OrthoClient from '$lib/assets/references/wunder-app.png?enhanced'
+  import OrthoOrder from '$lib/assets/references/ortho-order.png?format=webp;png&enhanced'
+  import Riwaxique from '$lib/assets/references/riwax.png?format=webp;png&enhanced'
+  import Chauffeur from '$lib/assets/references/chauffeur.png?format=webp;png&enhanced'
+  import Fastspace from '$lib/assets/references/fastspace.png?format=webp;png&enhanced'
+  import M3Express from '$lib/assets/references/m3express.png?format=webp;png&enhanced'
+
+  import Sutter1 from '$lib/assets/references/sutter1.png?format=webp;png&enhanced'
+  import Sutter2 from '$lib/assets/references/sutter2.png?format=webp;png&enhanced'
+  import Sutter3 from '$lib/assets/references/sutter3.png?format=webp;png&enhanced'
+
+  import GLB1 from '$lib/assets/references/glb1.png?format=webp;png&enhanced'
+  import GLB2 from '$lib/assets/references/glb2.png?format=webp;png&enhanced'
+  import GLB3 from '$lib/assets/references/glb3.png?format=webp;png&enhanced'
+  import GLB4 from '$lib/assets/references/glb4.png?format=webp;png&enhanced'
+  import GLB5 from '$lib/assets/references/glb5.png?format=webp;png&enhanced'
+  import GLB6 from '$lib/assets/references/glb6.png?format=webp;png&enhanced'
+  import GLB7 from '$lib/assets/references/glb7.png?format=webp;png&enhanced'
+
+  import Porta1 from '$lib/assets/references/porta1.png?format=webp;png&enhanced'
+  import Porta2 from '$lib/assets/references/porta2.png?format=webp;png&enhanced'
+  import Porta3 from '$lib/assets/references/porta3.png?format=webp;png&enhanced'
+  import Porta4 from '$lib/assets/references/porta4.png?format=webp;png&enhanced'
+  import Porta5 from '$lib/assets/references/porta5.png?format=webp;png&enhanced'
+  import Porta6 from '$lib/assets/references/porta6.png?format=webp;png&enhanced'
+  import Porta7 from '$lib/assets/references/porta7.png?format=webp;png&enhanced'
+
+  import CondAct1 from '$lib/assets/references/cond-act1.png?format=webp;png&enhanced'
+  import CondAct2 from '$lib/assets/references/cond-act2.png?format=webp;png&enhanced'
+  import CondAct3 from '$lib/assets/references/cond-act3.png?format=webp;png&enhanced'
+  import CondAct4 from '$lib/assets/references/cond-act4.png?format=webp;png&enhanced'
+  import CondAct5 from '$lib/assets/references/cond-act5.png?format=webp;png&enhanced'
+  import CondAct6 from '$lib/assets/references/cond-act6.png?format=webp;png&enhanced'
+  import CondAct7 from '$lib/assets/references/cond-act7.png?format=webp;png&enhanced'
+  import CondAct8 from '$lib/assets/references/cond-act8.png?format=webp;png&enhanced'
+  import CondAct9 from '$lib/assets/references/cond-act9.png?format=webp;png&enhanced'
+  import CondAct10 from '$lib/assets/references/cond-act10.png?format=webp;png&enhanced'
+  import CondAct11 from '$lib/assets/references/cond-act11.png?format=webp;png&enhanced'
+  import CondAct12 from '$lib/assets/references/cond-act12.png?format=webp;png&enhanced'
+
+  import Bienvenu1 from '$lib/assets/references/bienvenu1.png?format=webp;png&enhanced'
+  import Bienvenu2 from '$lib/assets/references/bienvenu2.png?format=webp;png&enhanced'
+  import Bienvenu3 from '$lib/assets/references/bienvenu3.png?format=webp;png&enhanced'
+  import Bienvenu4 from '$lib/assets/references/bienvenu4.png?format=webp;png&enhanced'
+  import Bienvenu5 from '$lib/assets/references/bienvenu5.png?format=webp;png&enhanced'
+  import Bienvenu6 from '$lib/assets/references/bienvenu6.png?format=webp;png&enhanced'
+  import Bienvenu7 from '$lib/assets/references/bienvenu6.png?format=webp;png&enhanced'
+
+  import MyWalo1 from '$lib/assets/references/my-walo1.png?format=webp;png&enhanced'
+  import MyWalo2 from '$lib/assets/references/my-walo2.png?format=webp;png&enhanced'
+  import MyWalo3 from '$lib/assets/references/my-walo3.png?format=webp;png&enhanced'
+  import MyWalo4 from '$lib/assets/references/my-walo4.png?format=webp;png&enhanced'
+
+  import Vademecum1 from '$lib/assets/references/vademecum1.png?format=webp;png&enhanced'
+  import Vademecum2 from '$lib/assets/references/vademecum2.png?format=webp;png&enhanced'
+  import Vademecum3 from '$lib/assets/references/vademecum3.png?format=webp;png&enhanced'
+  import Vademecum4 from '$lib/assets/references/vademecum4.png?format=webp;png&enhanced'
+  import Vademecum5 from '$lib/assets/references/vademecum5.png?format=webp;png&enhanced'
+  import Vademecum6 from '$lib/assets/references/vademecum6.png?format=webp;png&enhanced'
+  import Vademecum7 from '$lib/assets/references/vademecum7.png?format=webp;png&enhanced'
+  import Vademecum8 from '$lib/assets/references/vademecum8.png?format=webp;png&enhanced'
+  import Vademecum9 from '$lib/assets/references/vademecum9.png?format=webp;png&enhanced'
+  import Vademecum10 from '$lib/assets/references/vademecum10.png?format=webp;png&enhanced'
+  import Vademecum11 from '$lib/assets/references/vademecum11.png?format=webp;png&enhanced'
+
   let finishedProject = [
     // {
     //   appName: 'µLink',
@@ -29,7 +95,7 @@
         'Der gesamte Fahrzeugpark musste integriert werden. Der sehr komplexe analoge Prozess umfasste viele verschiedene Ausnahmen im Bereich der Anforderungen und Wünsche auf der Userseite.  Ausserdem wurde eine Schnittstelle zwischen ABACUS und der Applikation benötigt, um Daten wie Kundenstamm, Abrechnungsprozess, Auftragsverwaltungen in der Applikation anzubieten.',
       solutions:
         'Verbesserte und transparentere Kommunikation zwischen Dispo und Chauffeuren. Auftragserteilung erfolgt nun direkt von CAL aus nach TomTom. Eine Echtzeit-Routenberechnung wurde ebenfalls integriert, dies hilft der Dispo die Planung effizienter zu gestalten und Leerfahrten zu vermeiden. Die automatische Rapportierung und Verrechnung erbrachten Leistungen, minimiert den Administrationsaufwand und beugt Missverständnissen vor.',
-      imageSource: 'img/references/cal.png',
+      imageSource: CAL,
     },
     {
       appName: 'Ortho-Client',
@@ -41,7 +107,7 @@
         'Die Vielfalt der Prozesse und Prozessvarianten in verschiedenen Bereichen wie Rollstühle, Schuhe, Orthesen, Prothesen, und in verschiedenen Regionen, ergab ein hohes Mass an Komplexität. Die Abstimmung der Auftragsabwicklung mit der Einreichung von Kostenvoranschlägen bei Krankenkassen oder der IV war ebenfalls herausfordernd.',
       solutions:
         'OrthoClient deckt den gesamten Prozess von der Anamnese bis zur interdisziplinären Kommunikation ab. Diese App ermöglicht eine effiziente Auftragsabwicklung und gewährleistet exzellenten Kundenservice. Nach erfolgreicher Einführung wurden weitere Funktionen implementiert, darunter eine zentrale Ansicht aller Informationen und Kommunikation, ein Statusmodell in Abstimmung mit der ERP Lösung ABACUS, ein Chatmodul mit Mentions- und Notifikationen, ein Formulargenerator für die flexible Erstellung von Formularen, sowie die Integration von Trello für die Kommunikation mit der Produktion. Die Kundenerfassung ist direkt ins ERP integriert. Die Bestellung von Artikeln erfolgt nun direkt über die Order App. Diese Massnahmen führen zu verkürzten Durchlaufzeiten bei der Leistungsverrechnung und einer erheblichen Reduzierung des Aufwands in Backoffice und Administration',
-      imageSource: 'img/references/wunder-app.png',
+      imageSource: OrthoClient,
     },
     {
       appName: 'Ortho-Order',
@@ -67,7 +133,7 @@
         ' wobei die Interessen des Einkaufs gewahrt sind. Das System teilt die Bestellungen auf die Lieferanten auf, ermöglicht die präzise' +
         ' Dokumentation des Wareneingangs und die direkte Erfassung von Retouren. Die Möglichkeit, Bestellung und Rechnung des Lieferanten' +
         ' side-by-side zu prüfen und freizugeben, trägt weiter zur Effizienzsteigerung bei.',
-      imageSource: 'img/references/ortho-order.png',
+      imageSource: OrthoOrder,
     },
     {
       appName: 'Riwaxique',
@@ -79,7 +145,7 @@
         'Die Herausforderung bestand darin, den Aussendienst effizient zu leiten, um sicherzustellen, dass die richtigen Kunden zum optimalen Zeitpunkt besucht werden. Dies erforderte die Bereitstellung aktueller und relevanter Daten über Kunden sowie die Stärkung der Selbstorganisation der Mitarbeiter.',
       solutions:
         'Die intergierte Kontakt- und Routenplanung schlägt dem Mitarbeiter automatisch Kunden vor, die sie lange nicht mehr besucht haben, in ihrem Bestellverhalten abweichen oder welche sich ebenfalls auf der jeweiligen Arbeitsroute befinden. Ausserdem können Bestellungen direkt via der App mittels integriertem Bestellwesen und Produktekatalog aufgenommen und ausgelöst werden. Alle benötigten Kundendaten (CRM) sind ebenfalls jederzeit verfügbar. Der Aussendienst setzt seine Zeit nun strategisch im Sinne der Unternehmung ein.',
-      imageSource: 'img/references/riwax.png',
+      imageSource: Riwaxique,
     },
     {
       appName: 'Chauffeur App',
@@ -91,7 +157,7 @@
         'Die analogen Prozesse in der Logistik/Disposition wurden soweit wie möglich digitalisiert, optimiert und standardisiert, gleichzeitig müssen sie aber einen hohen Grad an Flexibilität offen lassen, der den LKW-Chauffeuren erlaubt, manuelle Anpassungen vorzunehmen: Dazu gehören u.a. Punkte wie individuelle Routengestaltung, Anpassung der Routen, Zusammenfassen und Abändern von Lieferpunkten. Im Hinterkopf steht die Wirtschaftlichkeit der Lösung punkto Komplexität und Lizenzkosten. Die Digitalisierung einer Logistiklösung verlangt zudem, dass die (Gefahrengut)-Dokumente nach gesetzlichen Vorgaben digital im Feld zur Verfügung stehen.',
       solutions:
         'Effizienz im Ablauf, umfassende Rückverfolgbarkeit des gesamten Prozesses (einschliesslich sofortiger Integration von unterzeichneten Lieferscheinen durch Kunden in das ERP), digitale Verfügbarkeit von Transportpapieren und ADR-Papieren, jeweils angepasst an die spezifische Tour. Die Ladeliste für Lastwagen wird automatisch für den Fahrer generiert, und die Tourenoptimierung basiert auf automatisierten Fahrzeiten. Neue Mitarbeiter in der Disposition und Fahrer können ohne umfassende Kenntnisse der Anwendung direkt mit ihrer Arbeit beginnen.',
-      imageSource: 'img/references/chauffeur.png',
+      imageSource: Chauffeur,
     },
     {
       appName: 'Fastspace',
@@ -106,7 +172,7 @@
         ' ohne grosse Erfahrungswerte.',
       solutions:
         'Mehr Flexibilität auf beiden Seiten (Mieter wie auch Vermieter) und schnellere Abwicklungen der Mietprozesse. Die Lösung bietet ausserdem die Möglichkeit kurzfristige Mietverhältnisse abschliessen zu können.',
-      imageSource: 'img/references/fastspace.png',
+      imageSource: Fastspace,
     },
     {
       appName: 'M3 Express',
@@ -126,7 +192,7 @@
         ' Lieferanten zu gewährleisten. Mehr Transparenz. \n' +
         'Auf Kundenseite:\n Digital und in Echtzeit alle Information zur Bestellung überwachen können und alle Informationen zugänglich zu haben.' +
         'M3 Express vereinfacht den digitalen Zugang zu Schüttgut, Transport und Mulden auch für kleine Unternehmungen.',
-      imageSource: 'img/references/m3express.png',
+      imageSource: M3Express,
     },
     // {
     //   appName: 'Verba',
@@ -156,12 +222,12 @@
       solutions:
         'Die Erfassung von Tagesrapporten auf den Baustellen wurde durch die gemeinsam entwickelte Applikation «SutterApp» um ein Vielfaches übersichtlicher und effizienter. Mitarbeiter werden im Rapportierungsprozess unterstützt, da die SutterApp Plandaten aus dem ERP-System ABACUS für Rollen, Inventar, Material und Fremdleistungen vorschlägt. Zusätzlich können Schnellbausteine und die Historie-Funktion genutzt werden.',
       imageSources: [
-        'img/references/sutter1.png',
-        'img/references/sutter2.png',
-        'img/references/sutter3.png',
-        'img/references/sutter1.png',
-        'img/references/sutter2.png',
-        'img/references/sutter3.png',
+        Sutter1,
+        Sutter2,
+        Sutter3,
+        Sutter1,
+        Sutter2,
+        Sutter3,
       ],
     },
     {
@@ -190,13 +256,13 @@
         ' Es ist jederzeit ersichtlich, wer, was bis wann zu erledigen hat. In der zweiten Phase wurde die Kommunikationsplattform' +
         ' um Funktionen wie Kontexträume, Todos und den Ressourcenplaner erweitert.',
       imageSources: [
-        'img/references/glb1.png',
-        'img/references/glb2.png',
-        'img/references/glb3.png',
-        'img/references/glb4.png',
-        'img/references/glb5.png',
-        'img/references/glb6.png',
-        'img/references/glb7.png',
+        GLB1,
+        GLB2,
+        GLB3,
+        GLB4,
+        GLB5,
+        GLB6,
+        GLB7,
       ],
     },
     {
@@ -211,13 +277,13 @@
       solutions:
         'Die PORTA App wurde als umfangreiche Lernsoftware konzipiert, die nicht nur das Erlernen der Portagebärden ermöglicht, sondern auch das Erfassen und Teilen bedürfnisspezifischer Gebärden, benutzerdefinierter Kataloge und Arbeitsblätter. Die App bietet eine einfache Navigation im Gebärdenkatalog, die Möglichkeit zur Erfassung eigener Gebärden mit Video und die Zusammenstellung eigener Kataloge, die mit anderen geteilt werden können. Spielerisch kann das erworbene Wissen mit einem Lernspiel getestet und vertieft werden, und die Gamifikation trägt dazu bei, dass das Lernen Spaß macht. Das Ziel war eine kostenbewusste Lösung mit einer intuitiven App, die von jeder Person, idealerweise auch von Menschen mit leichten Behinderungen, bedient werden kann. Die Applikation findet weiter Verbreitung in betreuenden Institutionen, wie auch in heilpädagogischen Schulen.',
       imageSources: [
-        'img/references/porta1.png',
-        'img/references/porta2.png',
-        'img/references/porta3.png',
-        'img/references/porta4.png',
-        'img/references/porta5.png',
-        'img/references/porta6.png',
-        'img/references/porta7.png',
+        Porta1,
+        Porta2,
+        Porta3,
+        Porta4,
+        Porta5,
+        Porta6,
+        Porta7,
       ],
     },
     {
@@ -231,18 +297,18 @@
       solutions:
         'Die App bietet eine Vielzahl von Lernvideos zum Thema Verhaltenskodex und Risikosituationen für Coaches (Jugendliche) die mit Kindern arbeiten. Nach der Wissensvermittlung gibt es Kontrollfragen. Um das Ganze spielerischer zu gestalten, stehen verschiedene Level zur Verfügung, ein persönlicher Avatar kann erstellt werden, und ein Buddy steht mit hilfreichen Tipps und Tricks zur Seite.',
       imageSources: [
-        'img/references/cond-act1.png',
-        'img/references/cond-act2.png',
-        'img/references/cond-act3.png',
-        'img/references/cond-act4.png',
-        'img/references/cond-act5.png',
-        'img/references/cond-act6.png',
-        'img/references/cond-act7.png',
-        'img/references/cond-act8.png',
-        'img/references/cond-act9.png',
-        'img/references/cond-act10.png',
-        'img/references/cond-act11.png',
-        'img/references/cond-act12.png',
+        CondAct1,
+        CondAct2,
+        CondAct3,
+        CondAct4,
+        CondAct5,
+        CondAct6,
+        CondAct7,
+        CondAct8,
+        CondAct9,
+        CondAct10,
+        CondAct11,
+        CondAct12,
       ],
     },
     {
@@ -256,13 +322,13 @@
       solutions:
         'Einfach, bedienbare, intuitive Event-App. Wichtige Teilnehmerdaten in Echtzeit verfügbar. Zb Notfallkontakt, Alter, Schulhaus, usw. Verbesserte Teilnehmer Eingangskontrolle. (Lange Warteschlange werden verhindert Teilnehmer müssen nur noch einmalig erfasst werden, Stammdaten sind hinterlegt und können für zukünftige Events schnell und einfach gesucht werden.',
       imageSources: [
-        'img/references/bienvenu1.png',
-        'img/references/bienvenu2.png',
-        'img/references/bienvenu3.png',
-        'img/references/bienvenu4.png',
-        'img/references/bienvenu5.png',
-        'img/references/bienvenu6.png',
-        'img/references/bienvenu7.png',
+        Bienvenu1,
+        Bienvenu2,
+        Bienvenu3,
+        Bienvenu4,
+        Bienvenu5,
+        Bienvenu6,
+        Bienvenu7,
       ],
     },
     {
@@ -289,14 +355,14 @@
         ' kann den gesamten Inventarstamm der Walo Bertschinger AG einsehen, wichtige Dokumente jeder Anlage sind jederzeit verfügbar,' +
         ' und bei Anlagen mit Kyburz GPS kann die aktuelle Position sowie die Nutzung bestimmt werden.',
       imageSources: [
-        'img/references/my-walo1.png',
-        'img/references/my-walo2.png',
-        'img/references/my-walo3.png',
-        'img/references/my-walo4.png',
-        'img/references/my-walo1.png',
-        'img/references/my-walo2.png',
-        'img/references/my-walo3.png',
-        'img/references/my-walo4.png',
+        MyWalo1,
+        MyWalo2,
+        MyWalo3,
+        MyWalo4,
+        MyWalo1,
+        MyWalo2,
+        MyWalo3,
+        MyWalo4,
       ],
     },
     {
@@ -309,17 +375,17 @@
       solutions:
         'Die VADEMECUM Mobilapplikation bietet eine einfache Erfassung des Beobachtungskatalogs zu einem bestimmten Zeitpunkt, einschließlich der Möglichkeit zur Zusatzdokumentation durch Kommentare und Bilder. Die Webapplikation ermöglicht eine umfassende Übersicht über alle Klienten und Beobachtungszeitpunkte. Die einfache Vergleichbarkeit mit verschiedenen Verhaltensmatrizen erleichtert Therapeuten die Identifikation möglicher Entwicklungsschwächen. Insgesamt bietet die Digitalisierung von VADEMECUM eine zeitgemäße Lösung, die den Informationsaustausch zwischen allen Beteiligten verbessert und den Diagnoseprozess bis zum Alter von vier Jahren unterstützt. Aktuell kommt VADEMECUM weltweit, wie beispielsweise in der Mongolei, zum Einsatz.',
       imageSources: [
-        'img/references/vademecum1.png',
-        'img/references/vademecum2.png',
-        'img/references/vademecum3.png',
-        'img/references/vademecum4.png',
-        'img/references/vademecum5.png',
-        'img/references/vademecum6.png',
-        'img/references/vademecum7.png',
-        'img/references/vademecum8.png',
-        'img/references/vademecum9.png',
-        'img/references/vademecum10.png',
-        'img/references/vademecum11.png',
+        Vademecum1,
+        Vademecum2,
+        Vademecum3,
+        Vademecum4,
+        Vademecum5,
+        Vademecum6,
+        Vademecum7,
+        Vademecum8,
+        Vademecum9,
+        Vademecum10,
+        Vademecum11,
       ],
     },
   ]
