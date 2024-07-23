@@ -5,14 +5,12 @@
   import elke from '$lib/assets/team/elke.jpg?format=webp;png&w=500&enhanced'
   import max from '$lib/assets/team/max.jpg?format=webp;png&w=500&enhanced'
   import iris from '$lib/assets/team/iris.jpg?format=webp;png&w=500&enhanced'
-  import dave from '$lib/assets/team/dave.jpg?format=webp;png&w=500&enhanced'
   import michel from '$lib/assets/team/michel.jpg?format=webp;png&w=500&enhanced'
   import luka from '$lib/assets/team/luka.jpg?format=webp;png&w=500&enhanced'
   import chris from '$lib/assets/team/chris.jpg?format=webp;png&w=500&enhanced'
   import till from '$lib/assets/team/till.jpg?format=webp;png&w=500&enhanced'
   import david from '$lib/assets/team/david.jpg?format=webp;png&w=500&enhanced'
   import bammbamm from '$lib/assets/team/bambam.jpg?format=webp;png&w=500&enhanced'
-  import simon from '$lib/assets/team/simon.jpg?format=webp;png&w=500&enhanced'
   import lukas from '$lib/assets/team/lukas.jpg?format=webp;png&w=500&enhanced'
   import alexa from '$lib/assets/team/alexa.jpg?format=webp;png&w=500&enhanced'
   import sakima from '$lib/assets/team/sakima.jpg?format=webp;png&w=500&enhanced'
@@ -72,24 +70,6 @@
       special: false,
       email: 'iris@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/iriszenegagliagloor/',
-    },
-    {
-      name: 'Dave Haug',
-      job: 'Business Development',
-      nerdJob: 'Business Development',
-      image: dave,
-      special: false,
-      email: 'dave@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/dave-haug-442064a5/',
-    },
-    {
-      name: 'Simon Hasler',
-      job: 'Project Lead',
-      nerdJob: 'Project Lead',
-      image: simon,
-      special: false,
-      email: 'simon@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/simon-hasler-82069083/',
     },
     {
       name: 'Michel Gabriel',

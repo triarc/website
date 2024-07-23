@@ -4,7 +4,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import Block from '$lib/components/Block.svelte'
-  import dave from '$lib/assets/team/dave.jpg?width=500&format=webp;png&metadata&enhanced'
+
   import heroImage from '$lib/assets/hero/Projekte.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import Partners from '$lib/index/Partners.svelte'
   import NavJump from '$lib/components/NavJump.svelte'
@@ -12,13 +12,13 @@
 
   let content: BlockContent = {
     quote: {
-      image: dave,
+      image: serge,
       content: 'Gewinnen Sie durch maßgeschneiderte Software einen entscheidenden Wettbewerbsvorteil!',
-      person: 'Dave Haug',
-      personTitle: 'Business Development',
-      email: 'dave@triarc-labs.com',
+      person: 'Serge Müller',
+      personTitle: 'CEO Triarc Laboratories',
+      email: 'serge@triarc-labs.com',
       highlight: 'green',
-      linkedin: 'https://www.linkedin.com/in/dave-haug-442064a5/',
+      linkedin: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
     },
   }
 </script>
