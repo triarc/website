@@ -3,6 +3,7 @@
   import Footer from '$lib/components/Footer.svelte'
   import DeveloperListing from './developer-listing.svelte'
   import JobIntro from './job-intro.svelte'
+  import jobListingImage from '$lib/assets/img/jobs/super_woman.svg'
   import Block from '$lib/components/Block.svelte'
   import heroImage from '$lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent, JobPosting } from '$lib/components/TypeDefinitions'
@@ -81,7 +82,7 @@
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. ',
       claim: 'Senior Software Engineer',
-      img: 'src/lib/assets/img/jobs/super_woman.svg',
+      img: jobListingImage,
       open: false,
       responsibilities:
         'sind so breit gefächert und abwechslungsreich wie die Arbeit, die dich bei uns erwartet: vom Design bis zur Lösungsfindung ist alles dabei, individuell angepasst auf unsere branchenübergreifenden Kunden. In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung, und wir von deiner. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobile-Anwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
@@ -165,7 +166,7 @@
       title: '<span class="text-sm">wir suchen</span><br/>Senior Software Engineer',
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
-      image: { src: 'src/lib/assets/img/jobs/super_woman.svg', alt: 'Senior Software Engineer' },
+      image: { src: jobListingImage, alt: 'Senior Software Engineer' },
       bulletPoints: [
         "Erfahrungen mit C# in der Entwicklung von API's",
         'Erfahrungen im Bereich Web und Angular',

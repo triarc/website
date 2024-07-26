@@ -2,13 +2,16 @@
   import Block from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import serge from '$lib/assets/team/serge.jpg?width=500&format=webp;png&metadata&enhanced'
-  import marco from '$lib/assets/team/marco.jpg?width=500&format=webp;png&metadata&enhanced'
-  import elke from '$lib/assets/team/elke.jpg?width=500&format=webp;png&metadata&enhanced'
-  import iris from '$lib/assets/team/iris.jpg?width=500&format=webp;png&metadata&enhanced'
-  import bammbamm from '$lib/assets/team/bambam.jpg?width=500&format=webp;png&metadata&enhanced'
+  import serge from '$lib/assets/team/serge.jpg?format=webp;png&metadata&enhanced'
+  import marco from '$lib/assets/team/marco.jpg?format=webp;png&metadata&enhanced'
+  import elke from '$lib/assets/team/elke.jpg?format=webp;png&metadata&enhanced'
+  import iris from '$lib/assets/team/iris.jpg?format=webp;png&metadata&enhanced'
+  import bammbamm from '$lib/assets/team/bambam.jpg?format=webp;png&metadata&enhanced'
   import heroImage from '$lib/assets/hero/Mission.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
+
+  import teardown from '$lib/assets/img/custom-software/product_teardown.svg'
+  import goals from '$lib/assets/img/intro/shared_goals.svg'
 
   let contents: BlockContent[] = [
     {
@@ -27,7 +30,7 @@
       title: 'Software passend für Sie.',
       content:
         'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.',
-      image: { src: 'src/lib/assets/img/custom-software/product_teardown.svg', height: 281, alt: 'Projektportfolio' },
+      image: { src: teardown, height: 281, alt: 'Projektportfolio' },
       link: { href: '/custom-software', text: 'Custom Software' },
     },
     {
@@ -47,7 +50,7 @@
       title: 'Digitale Transformation ist menschlich ',
       content:
         'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.',
-      image: { src: 'src/lib/assets/img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
+      image: { src: goals, height: 271, alt: 'Gemeinsame Ziele' },
       link: { href: '/consulting', text: 'Beratung' },
     },
 

@@ -5,6 +5,18 @@
   import Footer from '$lib/components/Footer.svelte'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
 
+  import mLinkTree from '$lib/assets/img/mlink/mLink_tree.svg'
+  import mLinkPoster from '$lib/assets/img/thumbnail/mlink-1080-poster.png'
+  import mLinkDatenfluss from '$lib/assets/img/mlink/mLink_Datenfluss.svg'
+  import monitoring from '$lib/assets/img/mlink/Monitoring.svg'
+  import businessIntelligence from '$lib/assets/img/mlink/BusinessIntelligence.svg'
+  import eblLogo from '$lib/assets/img/customer/ebl-logo.svg'
+  import glbLogo from '$lib/assets/img/customer/glb-logo.svg'
+  import riwaxLogo from '$lib/assets/img/customer/riwax-logo.svg'
+  import orthoTeamLogo from '$lib/assets/img/customer/ortho-team-logo.svg'
+  import kibagLogo from '$lib/assets/img/customer/kibag-logo.svg'
+  import waloLogo from '$lib/assets/img/customer/walo-logo.svg'
+
   let contents: BlockContent[] = [
     {
       title: 'μLink Datahub',
@@ -12,12 +24,12 @@
         'Die Schnittstellenlösung, welche ihre komplette Software-Infrastruktur unter einen Hut bringt! ERP, CRM, Disposition, Zeiterfassung, Projektsoftware, HR Suite, Lagerbewirtschaftung usw. sind mit µLink in einem einzigen digitalen Ökosystem vereint. <br/><br/>' +
         'Unternehmen, die konsequent auf digitale Lösungen setzen, haben einen klaren Wettbewerbsvorteil. Dabei wird mithilfe unterschiedlicher Softwarelösungen ein Prozess nach dem anderen digitalisiert. Durch diese stetig wachsende und sich verändernde Ökosystem entsteht das Bedürfnis die Datenflüsse zu managen. <br/><br/>' +
         'Essenziell sind dabei Bedürfnisse wie das Verhindern manueller Arbeitsschritte, die direkte Zusammenarbeit von Mitarbeitern über Systemgrenzen hinweg, sowie das schnelle Finden aller massgebenden Informationen in den angebundenen Softwarelösungen. µLink liefert dafür die hochmoderne und effiziente Lösung mit dem Fokus auf Echtzeitkommunikation und Sicherheit.',
-      image: { src: 'src/lib/assets/img/mlink/mLink_tree.svg', alt: 'mlink logo' },
+      image: { src: mLinkTree, alt: 'mlink logo' },
     },
     {
       title: 'μLink der Kommunikationshub',
       video: {
-        poster: 'src/lib/assets/img/thumbnail/mlink-1080-poster.png',
+        poster: mLinkPoster,
         sources: [
           {
             src: 'https://storage.googleapis.com/triarc-website/mlink-1080-v2.webm',
@@ -32,7 +44,7 @@
     },
     {
       title: 'Softwareökosystem',
-      image: { src: 'src/lib/assets/img/mlink/mLink_Datenfluss.svg', alt: 'mlink ecosystem' },
+      image: { src: mLinkDatenfluss, alt: 'mlink ecosystem' },
       content:
         'Schritt um Schritt zur perfekten Schnittstelle. Bei der Digitalisierung von Geschäftsprozessen kommen meist mehrere Software Systeme zum Einsatz. Die Schnittstellen zwischen den verschiedenen Systemen mit unterschiedlichen Technologien stellt Unternehmen vor grosse Herausforderungen. µLink vereinfacht als zentrale Instanz die Schnittstellenproblematik, vernetzt die verschiedenen Systeme und ermöglicht damit die ' +
         'zentrale Bewirtschaftung der Schnittstellen. So kann mit minimalem Aufwand neue ' +
@@ -42,14 +54,14 @@
       title: 'Monitoring',
       content:
         'Mit µLink lassen sich die Datenflüsse zwischen Softwaresystemen zentral observieren. Bei einem Ausfall, einer Abnahme der Leistung oder weiterer konfigurierbarer Parameter kann proaktiv alarmiert werden. Über das Grafana-Dashboard lassen sich alle systemrelevanten Komponenten in Echtzeit über-wachen und visualisieren.',
-      image: { src: 'src/lib/assets/img/mlink/Monitoring.svg', alt: 'borders' },
+      image: { src: monitoring, alt: 'borders' },
     },
     {
       title: 'Business Intelligence',
       content:
         'In der heutigen Zeit werden Erkenntnisse aufgrund von Daten immer wertvoller. Somit nehmen Systeme, die es ermöglichen aktuelle Daten zu sammeln, kombiniert bereitzustellen und diese zu interpretieren, eine immer wichtigere Rolle für erfolgreiche Unternehmen ein.' +
         'Eine zentrale Funktionalität von µLink ist der Zugriff auf komplexe Daten in Echtzeit. Die Kombination der Daten (wie Stammdaten, Betriebsdaten, temp. Daten) aus verschiedenen Systemen erlauben eine umfassende Einsicht und eröffnen neue Möglichkeiten, um basierend auf Algorithmen oder künstlicher Intelligenz überzeugende Entscheidungen zu treffen. Beispielsweise ermöglicht µLink die einfache Echtzeit-Integration ins Power BI von Microsoft.',
-      image: { src: 'src/lib/assets/img/mlink/BusinessIntelligence.svg', alt: 'scale' },
+      image: { src: businessIntelligence, alt: 'scale' },
     },
     {
       title: 'Die Vorteile von µlink im Überblick',
@@ -96,7 +108,7 @@
     {
       left: {
         quote: {
-          image: 'src/lib/assets/img/customer/ebl-logo.svg',
+          image: eblLogo,
           imageCss: 'h-24',
           content:
             'μLink ist die Datendrehscheibe, welche Microsoft Dynamics AX und das Data Warehouse mit unseren Applikationen in Echtzeit vernetzt',
@@ -106,7 +118,7 @@
       },
       right: {
         quote: {
-          image: 'src/lib/assets/img/customer/glb-logo.svg',
+          image: glbLogo,
           imageCss: 'h-24',
           content: 'Mit μLink erweitern wir ABACUS nach Belieben',
           person: 'Ueli Grossen',
@@ -117,7 +129,7 @@
     {
       left: {
         quote: {
-          image: 'src/lib/assets/img/customer/riwax-logo.svg',
+          image: riwaxLogo,
           imageCss: 'h-12',
           content: 'μLink bindet unseren Aussendienst eng in unseren Betrieb ein',
           person: 'Michel Scherz',
@@ -126,7 +138,7 @@
       },
       right: {
         quote: {
-          image: 'src/lib/assets/img/customer/ortho-team-logo.svg',
+          image: orthoTeamLogo,
           imageCss: 'h-12',
           content: 'μLink verbindet unsere Mitarbeiter von der Kundenberatung ohne Zeitverlust direkt zum Techniker',
           person: 'Patrick Rohrer',
@@ -137,7 +149,7 @@
     {
       left: {
         quote: {
-          image: 'src/lib/assets/img/customer/kibag-logo.svg',
+          image: kibagLogo,
           imageCss: 'h-24 w-24',
           content: 'μLink liefert uns die Grundlage für die digitale Bauakte',
           person: 'Yves Stucki',
@@ -146,7 +158,7 @@
       },
       right: {
         quote: {
-          image: 'src/lib/assets/img/customer/walo-logo.svg',
+          image: waloLogo,
           imageCss: 'h-24',
           content: 'μLink ist die zentrale Datendrehscheibe in unserem Ökosystem',
           person: 'Roger Bühlmann',

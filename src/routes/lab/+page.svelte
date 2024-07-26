@@ -2,6 +2,7 @@
   import Footer from '$lib/components/Footer.svelte'
   import FairPizza from '$lib/assets/img/lab/fairpizza-dashboard.png?format=webp;png&w=500&enhanced'
   import Slothi from '$lib/assets/img/lab/slothi.png?format=webp;png&w=500&enhanced'
+  import labImage from '$lib/assets/img/lab/lab.svg'
   let email = ''
   let submitted = false
 
@@ -42,7 +43,7 @@
         </div>
 
         <div class="flex items-end justify-center my-16 lg:my-0">
-          <img src="src/lib/assets/img/lab/lab.svg" class="flex-grow" alt="triarc innovation lab" />
+          <img src={labImage} class="flex-grow" alt="triarc innovation lab" />
         </div>
       </div>
     </div>

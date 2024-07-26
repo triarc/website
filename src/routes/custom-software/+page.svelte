@@ -1,7 +1,8 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import elke from '$lib/assets/team/elke.jpg?width=500&format=webp;png&metadata&enhanced'
+  import elke from '$lib/assets/team/elke.jpg?format=webp;png&metadata&enhanced'
+  import maintenance from '$lib/assets/img/custom-software/maintenance.svg'
   import Footer from '$lib/components/Footer.svelte'
   import heroImage from '$lib/assets/hero/CustomSoftware.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
@@ -104,7 +105,7 @@
         'Der Betrieb sowie die Wartung unserer Software ist uns ein wichtiges Anliegen. Wir betreiben unsere Software flexibel in unserem Cloud Angebot oder auf deinen vorhandenen Servern.' +
         '<br/><br/>' +
         'Regelmässige Wartung der Software sowie das Einspielen von sicherheitsrelevanten Patches ist für uns ein Routine-Job und läst uns Nachts besser schlafen.',
-      image: { src: 'src/lib/assets/img/custom-software/maintenance.svg', alt: 'Wartung' },
+      image: { src: maintenance, alt: 'Wartung' },
     },
   ]
 </script>

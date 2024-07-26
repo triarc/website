@@ -1,17 +1,17 @@
 // Used to make the svelte lint shut up about not recognizing imported images
 
 declare module '*.jpg' {
-  const value: unknown
+  const value: any
   export = value
 }
 
 declare module '*.png' {
-  const value: unknown
+  const value: any
   export = value
 }
 
 declare module '*.webp' {
-  const value: unknown
+  const value: any
   export = value
 }
 

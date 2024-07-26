@@ -1,9 +1,11 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
-  import iris from '$lib/assets/team/iris.jpg?width=500&format=webp;png&metadata&enhanced'
+  import iris from '$lib/assets/team/iris.jpg?format=webp;png&metadata&enhanced'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import heroImage from '$lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import helvetas from '$lib/assets/img/customer/helvetas.gif'
+  import analytica from '$lib/assets/img/customer/analytica-logo-main.svg'
   import type { MappedPost } from './+page'
   import ContactForm from '$lib/components/ContactForm.svelte'
   import type { FeaturedContent } from '$lib/components/FeaturedContent'
@@ -62,7 +64,7 @@
     ],
     testimonials: [
       {
-        logo: 'src/lib/assets/img/customer/analytica-logo-main.svg',
+        logo: analytica,
         quote: {
           source: 'Andrea Isler von Analytica',
           content:
@@ -72,7 +74,7 @@
         },
       },
       {
-        logo: 'src/lib/assets/img/customer/helvetas.gif',
+        logo: helvetas,
         quote: {
           source: 'Patric Masar von Helvetas',
           content:

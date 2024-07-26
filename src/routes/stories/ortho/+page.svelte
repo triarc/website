@@ -1,18 +1,24 @@
 <script lang="ts">
+  import scanBoxesImage from '$lib/assets/img/stories/ortho/scan-boxes-1080.webp'
+  import iPadRightViewImage from '$lib/assets/img/stories/ortho/iPad-right-view-1080.webp'
+  import deskSmileImage from '$lib/assets/img/stories/ortho/desk-smile-1080.webp'
+  import applicationIPadViewImage from '$lib/assets/img/stories/ortho/application-iPad-view-1080.webp'
+  import orthoLogo from '$lib/assets/img/stories/ortho/ortho-logo.png'
+  import orthoTeamImage from '$lib/assets/img/stories/ortho/ortho-team.jpg'
   let scanBoxes = {
-    image: 'img/stories/ortho/scan-boxes',
+    image: scanBoxesImage,
     imageAlt: 'scan boxes',
   }
   let iPadRightView = {
-    image: 'img/stories/ortho/iPad-right-view',
+    image: iPadRightViewImage,
     imageAlt: 'iPad view with application',
   }
   let deskSmile = {
-    image: 'img/stories/ortho/desk-smile',
+    image: deskSmileImage,
     imageAlt: 'two persons happy with application',
   }
   let applicationIPadView = {
-    image: 'img/stories/ortho/application-iPad-view',
+    image: applicationIPadViewImage,
     imageAlt: 'application close up view',
   }
 </script>
@@ -58,13 +64,7 @@
           </svg>
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
             <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-              <img
-                class="object-cover overflow-hidden"
-                alt="Ortho-Logo"
-                src="img/stories/ortho/ortho-logo.png"
-                height="100"
-                width="400"
-              />
+              <img class="object-cover overflow-hidden" alt="Ortho-Logo" src={orthoLogo} height="100" width="400" />
             </div>
           </div>
         </div>
@@ -255,11 +255,7 @@
         <div class="relative flex py-4">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <figure class="relative bg-white overflow-hidden">
-              <img
-                class="object-cover overflow-hidden rounded-lg shadow-lg"
-                alt="Ortho-Team"
-                src="img/stories/ortho/ortho-team.jpg"
-              />
+              <img class="object-cover overflow-hidden rounded-lg shadow-lg" alt="Ortho-Team" src={orthoTeamImage} />
               <figcaption class="mt-3 flex flex-col text-sm text-gray-500 ml-2">
                 <div class="text-black">Bei der Übergabe des Dankeschöns</div>
                 <div class="italic pt-2">
