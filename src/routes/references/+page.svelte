@@ -4,7 +4,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import Block from '$lib/components/Block.svelte'
-  import serge from '$lib/assets/team/serge.jpg?format=webp;png&enhanced'
+  import serge from '$lib/assets/team/serge.jpg?w=768&format=webp;png&enhanced'
 
   import heroImage from '$lib/assets/hero/Projekte.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import Partners from '$lib/index/Partners.svelte'

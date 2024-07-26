@@ -1,6 +1,6 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
-  import iris from '$lib/assets/team/iris.jpg?format=webp;png&metadata&enhanced'
+  import iris from '$lib/assets/team/iris.jpg?w=768&format=webp;png&metadata&enhanced'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import heroImage from '$lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'

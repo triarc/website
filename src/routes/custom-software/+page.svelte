@@ -1,7 +1,7 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import elke from '$lib/assets/team/elke.jpg?format=webp;png&metadata&enhanced'
+  import elke from '$lib/assets/team/elke.jpg?w=768&format=webp;png&metadata&enhanced'
   import maintenance from '$lib/assets/img/custom-software/maintenance.svg'
   import Footer from '$lib/components/Footer.svelte'
   import heroImage from '$lib/assets/hero/CustomSoftware.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'

@@ -2,7 +2,7 @@
   import Hero from '$lib/components/Hero.svelte'
   import Block from '$lib/components/Block.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import pascal from '$lib/assets/team/pascal.jpg?format=webp;png&metadata&enhanced'
+  import pascal from '$lib/assets/team/pascal.jpg?w=768&format=webp;png&metadata&enhanced'
   import mlinkLogo from '$lib/assets/img/mlink/tree.svg'
   import m3expressIcon from '$lib/assets/img/lab/m3express-icon.svg'
   import fairpizzaIcon from '$lib/assets/img/lab/fairpizza-icon-512.png'
