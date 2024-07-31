@@ -81,33 +81,26 @@
   async function sendMail(event: SubmitEvent) {
     const form = event.target as HTMLFormElement
     const mail = new FormData(form)
-    // mail.append('jobListing', jobListing)
-    //   firstName: firstName,
-    //   lastName: lastName,
-    //   email: email,
-    //   phone: phone,
-    //   message: message
-    // })
-    // mail.append(
-    //   'text',
-    //   `Neue Bewerbung:\n
-    //    Bewerber: ${firstName} ${lastName}\n
-    //    Email: ${email}\n
-    //    Telefon: ${phone ?? '-'}\n
-    //    Nachricht: ${message ?? '-'}`
-    // )
-    // mail.append('subject', `Bewerbung für ${jobListing}`)
     for (let file of appFiles) {
       mail.append('attachments', file)
     }
     sending = true;
-    await fetch(`${baseUrl}/email/application`, {
+    const response = await fetch(`${baseUrl}/email/application`, {
         body: mail,
         method: 'POST',
-    }).then(() => {
-          sending = false
-          sent = true
     })
+
+    if (response.ok) {
+      sending = false;
+      error = false;
+      sent = true;
+      form.reset();
+      appFiles = []
+    }
+    else {
+      sending = false;
+      error = true;
+    }
   }
   // async function send() {
   //   const baseUrl = 'https://chatbot.triarc-labs.com'
@@ -280,7 +273,7 @@
           </div>
         </div>
         <div class="sm:col-span-2 flex flex-col justify-end md:flex-row md:gap-x-6">
-          {#if errorMessages.length}
+          {#if errorMessages.length && !sent}
             <div class="rounded-md bg-red-triarc bg-opacity-10 p-4 mt-2 flex-grow">
               <div class="flex">
                 <div class="ml-3">
@@ -310,7 +303,7 @@
             <div class="rounded-md bg-red-triarc bg-opacity-10 p-4 mt-2 flex-grow">
               <div class="flex">
                 <div class="ml-3">
-                  <p class="text-sm font-medium text-green-800">
+                  <p class="text-sm font-medium text-grey-900">
                     Beim Übermitteln der Bewerbung ist ein Fehler aufgetreten, bitte versuche es erneut.
                   </p>
                 </div>
