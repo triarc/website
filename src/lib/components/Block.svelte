@@ -1,9 +1,11 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte'
-  import type { BlockContent } from '$lib/components/TypeDefinitions'
+  import type { BlockContent} from '$lib/components/TypeDefinitions'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
+  import Container from '$lib/components/Container.svelte'
   export let content: BlockContent
 </script>
+
 
 {#if content.quote}
   <div class="bg-white group">
@@ -97,8 +99,9 @@
 
 {#if content.title}
   <div class="md:min-h-0 even:bg-gray-100 group">
+    <Container>
     <div
-      class="flex items-center relative px-8 md:px-16 pb-16 pt-8 md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
+      class="flex items-center relative pb-16 pt-8 md:py-32 flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
     >
       <div class="">
         <h2 class="mt-3 text-2xl font-bold text-gray-600">
@@ -123,22 +126,25 @@
           />
         {/if}
         {#if content.bulletPoints}
-          <ul class="mt-8">
-            {#each content.bulletPoints as bulletPoint}
-              <li class="flex my-1 items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="flex-shrink-0 h-2 w-2"
-                  ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                    d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
-                  /></svg
-                >
-                <div class="ml-3">
-                  <span class="text-base text-gray-600">
-                    {bulletPoint}
-                  </span>
-                </div>
-              </li>
-            {/each}
-          </ul>
+          <div class="mt-8 flex flex-col">
+            <ul class="">
+              {#each content.bulletPoints as bulletPoint}
+                <li class="flex my-1 items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="flex-shrink-0 h-2 w-2"
+                    ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                      d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+                    /></svg
+                  >
+                  <div class="ml-3">
+                    <span class="text-base text-gray-600">
+                      {bulletPoint}
+                    </span>
+                  </div>
+                </li>
+              {/each}
+            </ul>
+            <slot />
+          </div>
         {/if}
         {#if content.cards}
           <ul
@@ -208,8 +214,11 @@
           alt={content.image.alt}
         />
       {/if}
+
     </div>
+    <slot />
 
     <hr />
+    </Container>
   </div>
 {/if}
