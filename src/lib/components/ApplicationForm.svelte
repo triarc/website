@@ -5,22 +5,33 @@
   import { goto } from '$app/navigation'
   import { enhance } from '$app/forms';
 
-  export let jobString: string
-
+  export let availableJobs: string[] = [];
+  export let jobString: string = '';
+  const baseUrl = 'http://localhost:3000'
   const maxFileSize = 10485760
-  let jobListing = '',
-      firstName = '',
+
+  let jobListing = '';
+  $: jobListing = jobString || 'Initiativbewerbung';
+  let firstName = '',
       lastName = '',
       phone = '',
       email = '',
+      message = '',
       appFiles: File[] = []
   let sent = false
   let error = false
   let sending = false
+  let conditionsAccepted = false
 
-  onMount(() => {
-    jobListing = jobString
-  })
+  let errorMessages: string[] = [];
+
+  $: {
+    errorMessages = [];
+    if (!firstName || !lastName || !email) errorMessages.push("Bitte fülle alle Pflichtfelder aus.");
+    if (!appFiles.length) errorMessages.push("Bitte lade mindestens ein Dokument hoch.");
+    if (!conditionsAccepted) errorMessages.push("Bitte bestätige, dass du die Bedingungen gelesen hast");
+    if (appFiles.reduce((sum, current) => sum + current.size, 0) > maxFileSize) errorMessages.push("Die Gesamtgröße der Dateien überschreitet das Maximum von 10 MB.");
+  }
 
   function bytesToMB(bytes: number): string {
     return (bytes / (1024 * 1024)).toFixed(2) + " MB";
@@ -67,6 +78,37 @@
     goto(fileLink)
   }
 
+  async function sendMail(event: SubmitEvent) {
+    const form = event.target as HTMLFormElement
+    const mail = new FormData(form)
+    // mail.append('jobListing', jobListing)
+    //   firstName: firstName,
+    //   lastName: lastName,
+    //   email: email,
+    //   phone: phone,
+    //   message: message
+    // })
+    // mail.append(
+    //   'text',
+    //   `Neue Bewerbung:\n
+    //    Bewerber: ${firstName} ${lastName}\n
+    //    Email: ${email}\n
+    //    Telefon: ${phone ?? '-'}\n
+    //    Nachricht: ${message ?? '-'}`
+    // )
+    // mail.append('subject', `Bewerbung für ${jobListing}`)
+    for (let file of appFiles) {
+      mail.append('attachments', file)
+    }
+    sending = true;
+    await fetch(`${baseUrl}/email/application`, {
+        body: mail,
+        method: 'POST',
+    }).then(() => {
+          sending = false
+          sent = true
+    })
+  }
   // async function send() {
   //   const baseUrl = 'https://chatbot.triarc-labs.com'
   //   const chatMessage = `Person: ${firstName} ${lastName}\nBetreff: ${subject}\nNachricht: ${message}\nEmail: ${email}\nTelefon: ${
@@ -91,39 +133,34 @@
     <div class="py-16">
       <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Bewerbungsformular</h2>
       <h3 class="text-lg mt-3 font-medium text-gray-500">Interessiert? Bewirb dich direkt über das Formular</h3>
-      <form action="?/submitApplication" method="POST"
-            use:enhance={() =>{
-              sending = true;
-              return async ({ result }) => {
-                sending = false;
-                if(result.type === 'success') {
-                  sent = true;
-                } else if (result.type === 'failure'){
-                  error = true;
-                }
-              }
-              }
-            }
+      <form id="application-form" on:submit|preventDefault={sendMail} action="#" method="POST"
             class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
         <div class="sm:col-span-2">
-          <label for="subject" class="block text-sm font-medium text-gray-900">Stelle</label>
+          <label for="jobListing" class="block text-sm font-medium text-gray-900">Stelle</label>
           <div class="mt-1">
-            <input
-              type="text"
-              name="subject"
-              id="subject"
+            <select
+              name="jobListing"
+              id="jobListing"
               bind:value={jobListing}
               class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-            />
+            >
+            <option  selected="{jobListing === 'Initiativbewerbung'}">Initiativbewerbung</option>
+            {#each availableJobs as job}
+              <option selected="{jobListing === job}">{job}</option>
+            {/each}
+            </select>
           </div>
         </div>
         <div>
-          <label for="first-name" class="block text-sm font-medium text-gray-900">Vorname</label>
+          <div class="flex justify-between">
+          <label for="firstName" class="block text-sm font-medium text-gray-900">Vorname</label>
+          <span id="first-name-required" class="text-sm text-gray-500">Pflichtfeld</span>
+          </div>
           <div class="mt-1">
             <input
               type="text"
-              name="first-name"
-              id="first-name"
+              name="firstName"
+              id="firstName"
               required
               autocomplete="given-name"
               bind:value={firstName}
@@ -132,12 +169,15 @@
           </div>
         </div>
         <div>
-          <label for="last-name" class="block text-sm font-medium text-gray-900">Nachname</label>
+          <div class="flex justify-between">
+            <label for="lastName" class="block text-sm font-medium text-gray-900">Nachname</label>
+            <span id="last-name-required" class="text-sm text-gray-500">Pflichtfeld</span>
+          </div>
           <div class="mt-1">
             <input
               type="text"
-              name="last-name"
-              id="last-name"
+              name="lastName"
+              id="lastName"
               required
               autocomplete="family-name"
               bind:value={lastName}
@@ -146,7 +186,10 @@
           </div>
         </div>
         <div>
-          <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
+          <div class="flex justify-between">
+            <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
+            <span id="email-required" class="text-sm text-gray-500">Pflichtfeld</span>
+          </div>
           <div class="mt-1">
             <input
               id="email"
@@ -176,9 +219,28 @@
             />
           </div>
         </div>
-        <input id="documents" bind:value={appFiles} class="hidden"/>
+        <div class="sm:col-span-2">
+          <div class="flex justify-between">
+            <label for="message" class="block text-sm font-medium text-gray-900">Nachricht</label>
+            <span id="message-optional" class="text-sm text-gray-500">Optional</span>
+          </div>
+          <div class="mt-1">
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              bind:value={message}
+              class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+              aria-describedby="message-max"
+            />
+          </div>
+        </div>
+<!--        <input name="documents" id="documents" bind:value={appFiles} class="hidden"/>-->
         <div class="sm:col-span-2 flex flex-col">
-          <label for="dropzone" class="block text-sm font-medium text-gray-900">Unterlagen (Lebenslauf, Motivationsschreiben, Zeugnisse etc.)</label>
+          <div class="flex justify-between">
+            <label for="dropzone" class="block text-sm font-medium text-gray-900">Unterlagen (Lebenslauf, Motivationsschreiben, Zeugnisse etc.)</label>
+            <span id="message-optional" class="text-sm text-gray-500">Mindestens ein Dokument</span>
+          </div>
           <Dropzone
             id="dropzone"
             on:drop={dropHandle}
@@ -209,23 +271,60 @@
           {/if}
           </div>
         </div>
-        <div class="sm:col-span-2 sm:flex sm:justify-end space-between gap-x-6">
+        <div class="sm:col-span-2 flex flex-col">
+          <div class="flex justify-between">
+            <input class="focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-300" bind:checked={conditionsAccepted} type="checkbox" id="location-checkbox" />
+            <label for="location-checkbox" class=" pl-4 text-wrap text-xs font-medium text-gray-900">
+              Aus organisatorischen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der Schweiz oder Deutschland haben.
+              Ich bestätige, diese Bedingung gelesen zu haben und dass mein Wohnsitz in der Schweiz oder Deutschland liegt. </label>
+          </div>
+        </div>
+        <div class="sm:col-span-2 flex flex-col justify-end md:flex-row md:gap-x-6">
+          {#if errorMessages.length}
+            <div class="rounded-md bg-red-triarc bg-opacity-10 p-4 mt-2 flex-grow">
+              <div class="flex">
+                <div class="ml-3">
+                  {#each errorMessages as message}
+                    <p class="text-sm font-medium text-grey-900">
+                      {message}
+                    </p>
+                  {/each}
+                </div>
+              </div>
+            </div>
+          {/if}
           {#if sent}
             <div class="rounded-md bg-green-triarc bg-opacity-10 p-4 mt-2 flex-grow">
               <div class="flex">
                 <div class="ml-3">
                   <p class="text-sm font-medium text-green-800">
-                    Deine Nachricht wurde übermittelt, wir melden uns so rasch wie möglich
+                    Deine Bewerbung wurde erfolgreich übermittelt.
+                    Du solltest in Kürze eine Bestätigungs-E-Mail erhalten.
+                    Wir melden uns so rasch wie möglich bei dir.
                   </p>
                 </div>
               </div>
             </div>
           {/if}
-
+          {#if error}
+            <div class="rounded-md bg-red-triarc bg-opacity-10 p-4 mt-2 flex-grow">
+              <div class="flex">
+                <div class="ml-3">
+                  <p class="text-sm font-medium text-green-800">
+                    Beim Übermitteln der Bewerbung ist ein Fehler aufgetreten, bitte versuche es erneut.
+                  </p>
+                </div>
+              </div>
+            </div>
+          {/if}
           <button
-            disabled={sending || !firstName || !lastName || !email || !appFiles || appFiles.some((file) => file.size > maxFileSize)}
-            type="button"
-            class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-gray-500 px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
+            disabled={
+            sending ||
+            !firstName || !lastName || !email || !appFiles || !conditionsAccepted ||
+            appFiles.reduce((sum, current) => sum + current.size, 0) > maxFileSize
+            }
+            type="submit"
+            class="max-h-[50px] mt-2 w-full items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-gray-500 px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
           >
             {#if sending}
               <svg

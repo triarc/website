@@ -80,7 +80,7 @@
                     {/if}
                   </div>
                   <div class="flex justify-center my-8">
-                    <Button buttonSize="Standard" reference="#contactform" label={content?.quote?.contactButton} />
+                    <Button clicked={() => {}} buttonSize="Standard" reference="#contactform" label={content?.quote?.contactButton} />
                   </div>
                 </figcaption>
               </figure>

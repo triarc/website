@@ -1,40 +1,82 @@
-import { Injectable } from '@nestjs/common'
+import { Injectable, Optional } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
-import nodemailer from 'nodemailer'
-import { SentMessageInfo } from 'nodemailer/lib/smtp-transport'
+import * as nodemailer from 'nodemailer'
+import { IsEmail, IsNotEmpty, IsString } from 'class-validator'
+import { ChatService } from './chat.service'
 
-export interface Email {
-  from: string
-  to: string
-  cc?: string
-  subject: string
-  text?: string
+export class ApplicationFormDto {
+  @IsString()
+  @IsNotEmpty()
+  jobListing: string
+  @IsString()
+  @IsNotEmpty()
+  firstName: string
+  @IsString()
+  @IsNotEmpty()
+  lastName: string
+  @IsEmail()
+  @IsNotEmpty()
+  email: string
+  @Optional()
+  phone?: string
+  @Optional()
+  message?: string
 }
 
 @Injectable()
 export class EmailService {
-  transporter: nodemailer.Transporter<SentMessageInfo>
+  transporter: nodemailer.Transporter
 
-  constructor(private config: ConfigService) {
+  constructor(
+    private config: ConfigService,
+    private chat: ChatService
+  ) {
     this.transporter = nodemailer.createTransport({
-      host: 'smtp...',
-      port: 587,
-      secure: false,
+      host: this.config.get('SMTP_HOST'),
+      port: this.config.get('SMTP_PORT'),
       auth: {
-        user: process.env.MAIL_USERNAME,
-        pass: process.env.MAIL_PASSWORD,
+        user: this.config.get('MAIL_USER'),
+        pass: this.config.get('MAIL_PASSWORD'),
       },
     })
   }
 
-  async sendMail(mail: Email, attachments: Array<Express.Multer.File>) {
-    const mailOptions = {
-      from: mail.from,
-      to: mail.to,
-      cc: mail.cc,
-      subject: mail.subject,
-      text: mail.text,
+  async sendMail(data: ApplicationFormDto, attachments: Array<Express.Multer.File>) {
+    // Gitlab Issue by Email seems to need double \n for Newlines for some reason
+    let issueText =
+      `Neue Bewerbung für ${data.jobListing}\n\n` +
+      `- Bewerber: ${data.firstName} ${data.lastName}\n\n` +
+      `- Email: ${data.email}\n\n` +
+      `- Telefon: ${data.phone ?? '-'}\n\n` +
+      `- Nachricht: ${data.message ?? '-'}`
+    let issueSubject = `Bewerbung für ${data.jobListing}`
+
+    let filenames = attachments.map((file) => file.originalname).join('\n')
+    let replyText =
+      `Wir haben ihre Bewerbung mit den folgenden Informationen erhalten:\n\n` +
+      `Vorname: ${data.firstName}\n` +
+      `Nachname: ${data.lastName}\n` +
+      `Email: ${data.email}\nTelefon: ${data.phone ?? '-'}\n` +
+      `Nachricht: ${data.message ?? '-'}\n\n` +
+      `Anhang:\n` +
+      `${filenames}\n\n` +
+      `Vielen Dank für Ihre Bewerbung, wir melden uns so schnell wie möglich bei Ihnen.`
+
+    let replySubject = `Ihre Bewerbung für ${data.jobListing}`
+
+    let issueEmail = {
+      from: this.config.get('MAIL_USER'),
+      to: this.config.get('GITLAB_TARGET_MAIL'),
+      subject: issueSubject,
+      text: issueText,
       attachments: [],
+    }
+
+    let confirmationEmail = {
+      from: this.config.get('MAIL_USER'),
+      to: data.email,
+      subject: replySubject,
+      text: replyText,
     }
 
     for (let file of attachments) {
@@ -43,11 +85,18 @@ export class EmailService {
         contentType: file.mimetype,
         content: file.buffer,
       }
-
-      mailOptions.attachments.push(attachment)
+      issueEmail.attachments.push(attachment)
     }
 
-    this.transporter.sendMail(mailOptions, (error, info) => {
+    this.transporter.sendMail(issueEmail, (error, info) => {
+      if (error) {
+        console.log(error)
+      } else {
+        console.log('Email sent: ' + info.response)
+      }
+    })
+
+    this.transporter.sendMail(confirmationEmail, (error, info) => {
       if (error) {
         console.log(error)
       } else {
@@ -55,18 +104,4 @@ export class EmailService {
       }
     })
   }
-  //
-  // async postMessage(thread: string, message: string) {
-  //   const result = (await this.web.chat.postMessage({
-  //     text: message,
-  //     channel: this.channel,
-  //     thread_ts: thread,
-  //   })) as any
-  //   if (result.ok) {
-  //     if (thread) {
-  //       return { thread }
-  //     }
-  //     return { thread: result.message.ts }
-  //   }
-  // }
 }
