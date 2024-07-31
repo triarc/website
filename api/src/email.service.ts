@@ -56,13 +56,22 @@ export class EmailService {
       `Wir haben ihre Bewerbung mit den folgenden Informationen erhalten:\n\n` +
       `Vorname: ${data.firstName}\n` +
       `Nachname: ${data.lastName}\n` +
-      `Email: ${data.email}\nTelefon: ${data.phone ?? '-'}\n` +
+      `Email: ${data.email}\n` +
+      `Telefon: ${data.phone ?? '-'}\n` +
       `Nachricht: ${data.message ?? '-'}\n\n` +
       `Anhang:\n` +
       `${filenames}\n\n` +
       `Vielen Dank für Ihre Bewerbung, wir melden uns so schnell wie möglich bei Ihnen.`
 
     let replySubject = `Ihre Bewerbung für ${data.jobListing}`
+
+    let slackMessage =
+      `Neue Bewerbung über die Website:\n` +
+      `Stelle: ${data.jobListing}\n` +
+      `Kandidat: ${data.firstName} ${data.lastName}\n` +
+      `Email: ${data.email}\n` +
+      `Telefon: ${data.phone ?? '-'}\n` +
+      `Nachricht: ${data.message ?? '-'}\n\n`
 
     let issueEmail = {
       from: this.config.get('MAIL_USER'),
@@ -103,5 +112,7 @@ export class EmailService {
         console.log('Email sent: ' + info.response)
       }
     })
+
+    await this.chat.postMessage('', slackMessage)
   }
 }
