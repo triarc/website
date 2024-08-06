@@ -73,7 +73,7 @@
 
 <div class="bg-gray-50 min-h-[calc(100vh_-_432px)] flex-grow flex flex-col">
   <dialog id="filter" class="modal rounded-md w-full bg-gray-100 shadow-xl">
-    <div class="modal-box">
+    <div class="modal-box p-8">
       <div class="flex mb-6 flex-col gap-3">
         <p class="font-bold text-gray-700">Posts auswählen</p>
         <a
