@@ -3,6 +3,7 @@ import { ConfigService } from '@nestjs/config'
 import * as nodemailer from 'nodemailer'
 import { IsEmail, IsNotEmpty, IsString } from 'class-validator'
 import { ChatService } from './chat.service'
+import { Block, KnownBlock } from '@slack/web-api'
 
 export class ApplicationFormDto {
   @IsString()
@@ -44,16 +45,19 @@ export class EmailService {
   async sendMail(data: ApplicationFormDto, attachments: Array<Express.Multer.File>) {
     // Gitlab Issue by Email seems to need double \n for Newlines for some reason
     let issueText =
-      `Neue Bewerbung für ${data.jobListing}\n\n` +
-      `- Bewerber: ${data.firstName} ${data.lastName}\n\n` +
-      `- Email: ${data.email}\n\n` +
-      `- Telefon: ${data.phone ?? '-'}\n\n` +
-      `- Nachricht: ${data.message ?? '-'}`
-    let issueSubject = `Bewerbung für ${data.jobListing}`
+      `${
+        data.jobListing === 'Initiativbewerbung'
+          ? `#### Initiativbewerbung von ${data.firstName} ${data.lastName}\n\n`
+          : `#### Bewerbung von ${data.firstName} ${data.lastName} als ${data.jobListing}\n\n`
+      }` +
+      `Email: ${data.email}\n\n` +
+      `Telefon: ${data.phone ?? '-'}\n\n` +
+      `Nachricht: ${data.message ?? '-'}`
+    let issueSubject = `${data.jobListing} - ${data.firstName} ${data.lastName}`
 
     let filenames = attachments.map((file) => file.originalname).join('\n')
     let replyText =
-      `Wir haben ihre Bewerbung mit den folgenden Informationen erhalten:\n\n` +
+      `Wir haben Deine Bewerbung mit den folgenden Informationen erhalten:\n\n` +
       `Vorname: ${data.firstName}\n` +
       `Nachname: ${data.lastName}\n` +
       `Email: ${data.email}\n` +
@@ -61,9 +65,11 @@ export class EmailService {
       `Nachricht: ${data.message ?? '-'}\n\n` +
       `Anhang:\n` +
       `${filenames}\n\n` +
-      `Vielen Dank für Ihre Bewerbung, wir melden uns so schnell wie möglich bei Ihnen.`
+      `Vielen Dank für Ihre Bewerbung, wir melden uns so schnell wie möglich bei Dir.`
 
-    let replySubject = `Ihre Bewerbung für ${data.jobListing}`
+    let replySubject =
+      `${data.jobListing === 'Initiativbewerbung' ? 'Deine Initiativbewerbung' : `Deine Bewerbung als ${data.jobListing}`}` +
+      `bei Triarc Laboratories`
 
     let slackMessage =
       `Neue Bewerbung über die Website:\n` +
@@ -72,6 +78,46 @@ export class EmailService {
       `Email: ${data.email}\n` +
       `Telefon: ${data.phone ?? '-'}\n` +
       `Nachricht: ${data.message ?? '-'}\n\n`
+
+    let slackBlocks: Block[] | KnownBlock[] = [
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text: '*Neue Bewerbung über die Website*',
+        },
+      },
+      {
+        type: 'divider',
+      },
+      {
+        type: 'section',
+        text: {
+          type: 'mrkdwn',
+          text:
+            `${data.jobListing} - ${data.firstName} ${data.lastName}\n` +
+            `Email: ${data.email}\n` +
+            `Telefon: ${data.phone ?? '-'}\n` +
+            `Nachricht: ${data.message ?? '-'}\n\n`,
+        },
+      },
+      {
+        type: 'divider',
+      },
+      {
+        type: 'actions',
+        elements: [
+          {
+            type: 'button',
+            text: {
+              type: 'plain_text',
+              text: 'Zum Board',
+            },
+            value: this.config.get('GITLAB_APPLICATION_BOARD'),
+          },
+        ],
+      },
+    ]
 
     let issueEmail = {
       from: this.config.get('MAIL_USER'),
@@ -113,6 +159,6 @@ export class EmailService {
       }
     })
 
-    await this.chat.postMessage('', slackMessage)
+    await this.chat.postMessage('', slackMessage, slackBlocks)
   }
 }

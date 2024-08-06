@@ -143,7 +143,6 @@
                 </li>
               {/each}
             </ul>
-            <slot />
           </div>
         {/if}
         {#if content.cards}

@@ -1,20 +1,16 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import DeveloperListing from './developer-listing.svelte'
   import JobIntro from './job-intro.svelte'
   import Block from '$lib/components/Block.svelte'
   import heroImage from '$lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent, JobPosting } from '$lib/components/TypeDefinitions'
   import ApplicationForm from '$lib/components/ApplicationForm.svelte'
   import Button from '$lib/components/Button.svelte'
-  import Container from '$lib/components/Container.svelte'
 
 
   const openJobListings = ['Senior Software Engineer']
   let selectedListing = 'Initiativbewerbung'
-
-  $: console.log(selectedListing); // This will log the updated value of selectedListing whenever it changes
 
   function chooseListing(job: string | undefined){
     if (job) {
@@ -345,18 +341,26 @@
   <div class="bg-gray-100 even:bg-white">
       <Block bind:content={listing}>
         {#if listing.formReference}
-            <div class="flex items-center justify-center">
-              <Button clicked={() => chooseListing(listing.formReference)} buttonSize="Small" reference="#applicationForm" label="Jetzt bewerben" />
+            <div class="flex items-center justify-center mb-8">
+              <Button clicked={() => chooseListing(listing.formReference)}
+                      buttonSize="Standard"
+                      buttonMargin="None"
+                      reference="#applicationForm"
+                      label="Jetzt bewerben"
+              />
             </div>
         {/if}
       </Block>
   </div>
 {/each}
+  <div class="bg-gray-100 even:bg-white">
+    <ApplicationForm
+      availableJobs="{openJobListings}"
+      jobString="{selectedListing}"
+    />
+  </div>
 <!--<DeveloperListing />-->
-<ApplicationForm
-  availableJobs="{openJobListings}"
-  jobString="{selectedListing}"
-/>
+
 
 <!--<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">-->
 <!--  <div class="text-white bg-opacity-20">-->
