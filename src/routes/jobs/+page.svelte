@@ -14,8 +14,6 @@
   const openJobListings = ['Senior Software Engineer']
   let selectedListing = 'Initiativbewerbung'
 
-  $: console.log(selectedListing); // This will log the updated value of selectedListing whenever it changes
-
   function chooseListing(job: string | undefined){
     if (job) {
       selectedListing = job
@@ -242,8 +240,13 @@
   <div class="bg-gray-100 even:bg-white">
       <Block bind:content={listing}>
         {#if listing.formReference}
-            <div class="flex items-center justify-center">
-              <Button clicked={() => chooseListing(listing.formReference)} buttonSize="Small" reference="#applicationForm" label="Jetzt bewerben" />
+            <div class="flex items-center justify-center mb-8">
+              <Button clicked={() => chooseListing(listing.formReference)}
+                      buttonSize="Standard"
+                      buttonMargin="None"
+                      reference="#applicationForm"
+                      label="Jetzt bewerben"
+              />
             </div>
         {/if}
       </Block>
