@@ -1,10 +1,14 @@
+<script lang="ts">
+  import jobSvg from '$lib/assets/img/jobs/powerful.svg'
+</script>
+
 <div class="bg-red-triarc">
   <div class="max-w-md mx-auto text-center py-16 px-4 sm:max-w-2xl sm:py-24 sm:px-6 lg:px-8 lg:py-32">
     <h2 class="text-3xl font-extrabold sm:text-4xl">
       <span class="block text-gray-200">Wir suchen dich!</span>
       <span class="block text-white text-xl">Auf der Suche nach einer neuen Herausforderung?</span>
     </h2>
-    <img src="img/jobs/powerful.svg" class="mt-8" alt="triarc superhero" />
+    <img src={jobSvg} class="mt-8" alt="triarc superhero" />
     <p class="text-white mt-4 text-sm">Schliesse dich jetzt der digitalen Revolution an.</p>
     <a
       href="/jobs"

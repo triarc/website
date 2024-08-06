@@ -1,15 +1,13 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import Container from '$lib/components/Container.svelte'
-  import heroImage from '/src/lib/assets/hero/Contact.jpg?width=300;600;1000;2000&format=webp&metadata'
-  import iris from '/src/team/iris.jpg?width=500&format=webp;png&metadata'
-  import serge from '/src/team/serge.jpg?width=500&format=webp;png&metadata'
-  import dave from '/src/team/dave.jpg?width=500&format=webp;png&metadata'
-  import Picture from '$lib/index/Picture.svelte'
+  import heroImage from '$lib/assets/hero/Contact.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import iris from '$lib/assets/team/iris.jpg?format=webp;png&w=500&enhanced'
+  import serge from '$lib/assets/team/serge.jpg?format=webp;png&w=1024&enhanced'
 
   let firstName = '',
     lastName = '',
-    phone,
+    phone = '',
     email = '',
     subject = '',
     message = ''
@@ -40,14 +38,7 @@
 </svelte:head>
 
 <div class="min-h-screen flex flex-col">
-  <Hero
-    title="Kontaktinfos"
-    class="flex-shrink-0"
-    content=""
-    imageSrc="Contact"
-    imageAlt="Triarc Contact Header"
-    image={heroImage}
-  />
+  <Hero title="Kontaktinfos" content="" image={heroImage} imageAlt="Triarc Contact Header" />
 
   <div class="bg-white flex-shrink-0">
     <Container>
@@ -101,7 +92,7 @@
                 </div>
               </div>
               <div class="flex">
-                <div class="flex-shrink-0 items-start flex justify-center w-6 ">
+                <div class="flex-shrink-0 items-start flex justify-center w-6">
                   <svg class="mt-1 fill-gray-400" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"
                     ><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
                       d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
@@ -120,11 +111,13 @@
           </div>
           <ul role="list" class="-mt-12 space-y-12 divide-y divide-gray-200 xl:col-span-3">
             <li class="flex flex-col gap-10 pt-12 border-t border-gray-200 md:border-none sm:flex-row">
-              <Picture
-                alt="Photo Iris Zenegaglia"
-                images={iris}
-                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-              />
+              <div class="w-52 flex-none">
+                <enhanced:img
+                  alt="Photo Iris Zenegaglia"
+                  src={iris}
+                  class="flex-none w-full rounded-2xl object-cover"
+                />
+              </div>
               <div class="max-w-xl flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Iris Zenegaglia</h3>
                 <p class="text-base leading-7 text-gray-500">Beratung Digitalisierung / Partner</p>
@@ -155,27 +148,25 @@
                       </div>
                       <a
                         href="mailto:iris@triarc-labs.com&subject=Kontakt"
-                        class="decoration-red-triarc underline text-base text-gray-500 ">iris@triarc-labs.com</a
+                        class="decoration-red-triarc underline text-base text-gray-500">iris@triarc-labs.com</a
                       >
                     </div>
                   </li>
                 </ul>
               </div>
             </li>
-            <!-- Todo: Replace contact when new sales person is hired -->
+            <!--            Todo: Replace contact when new sales person is hired -->
             <!--            <li class="flex flex-col gap-10 pt-12 sm:flex-row">-->
-            <!--              <Picture-->
-            <!--                alt="Photo Dave Haug"-->
-            <!--                images={dave}-->
-            <!--                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"-->
-            <!--              />-->
+            <!--              <div class="w-52 flex-none">-->
+            <!--                <enhanced:img alt="Photo Dave Haug" src={dave} class="flex-none w-full rounded-2xl object-cover" />-->
+            <!--              </div>-->
             <!--              <div class="max-w-xl flex-auto">-->
             <!--                <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Dave Haug</h3>-->
             <!--                <p class="text-base leading-7 text-gray-500">Business Development</p>-->
             <!--                <p class="mt-6 text-base leading-7 text-gray-500">-->
-            <!--                  Wollen Sie mehr über unsere Projekte und Schnittstellenlösungen, sowie darüber, wie wir eine-->
-            <!--                  individuell auf Ihre Bedürfnisse zugeschnittene digitale Lösung bereitstellen können. Zögern Sie-->
-            <!--                  nicht, mich zu kontaktieren.-->
+            <!--                  Wollen Sie mehr über unsere Projekte und Lösungen, sowie darüber, wie wir eine individuell auf Ihre-->
+            <!--                  Bedürfnisse zugeschnittene digitale Lösung bereitstellen können erfahren? Zögern Sie nicht, mich zu-->
+            <!--                  kontaktieren.-->
             <!--                </p>-->
             <!--                <ul class="mt-6 flex gap-x-6">-->
             <!--                  <li>-->
@@ -199,20 +190,18 @@
             <!--                      </div>-->
             <!--                      <a-->
             <!--                        href="mailto:dave@triarc-labs.com&subject=Kontakt"-->
-            <!--                        class="decoration-red-triarc underline text-base text-gray-500 ">dave@triarc-labs.com</a-->
+            <!--                        class="decoration-red-triarc underline text-base text-gray-500">dave@triarc-labs.com</a-->
             <!--                      >-->
             <!--                    </div>-->
             <!--                  </li>-->
             <!--                </ul>-->
             <!--              </div>-->
             <!--            </li>-->
-            <li class="flex flex-col gap-10 pt-12 sm:flex-row">
-              <Picture
-                alt="Photo Serge Müller"
-                images={serge}
-                cssClass="aspect-[4/5] w-52 flex-none rounded-2xl object-cover"
-              />
-              <div class="max-w-xl flex-auto">
+            <li class="flex flex-col gap-10 pt-12 md:flex-row">
+              <div class="w-52 flex-none">
+                <enhanced:img class="aspect-[4/5] rounded-2xl object-cover" alt="Photo Serge Müller" src={serge} />
+              </div>
+              <div class="max-w-fit flex-auto">
                 <h3 class="text-lg font-semibold leading-8 tracking-tight text-gray-700">Serge Müller</h3>
                 <p class="text-base leading-7 text-gray-500">CEO</p>
                 <p class="mt-6 text-base leading-7 text-gray-500">
@@ -239,7 +228,7 @@
                       </div>
                       <a
                         href="mailto:serge@triarc-labs.com&subject=Kontakt"
-                        class="decoration-red-triarc underline text-base text-gray-500 ">serge@triarc-labs.com</a
+                        class="decoration-red-triarc underline text-base text-gray-500">serge@triarc-labs.com</a
                       >
                     </div>
                   </li>
@@ -258,7 +247,6 @@
     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2701.2671823979445!2d8.517355577834325!3d47.387219571170775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47900b957b32cc15%3A0xe780cae32dc86415!2striarc%20laboratories%20Ltd.!5e0!3m2!1sen!2sch!4v1685088338553!5m2!1sen!2sch"
     height="450"
     style="border:0;"
-    allowfullscreen=""
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"
   />

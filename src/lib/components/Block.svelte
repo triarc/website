@@ -1,32 +1,7 @@
 <script lang="ts">
-  import Picture from '$lib/index/Picture.svelte'
-  import type { GhostPost } from '../../routes/stories/utils'
-  import Slideshow from '$lib/components/Slideshow.svelte'
   import Button from '$lib/components/Button.svelte'
-
-  export interface BlockContent {
-    slides?: GhostPost[]
-    title?: string
-    content?: string
-    footer?: string
-    link?: { href: string; text: string; target?: string }
-    image?: { src: string; alt: string; height?: number }
-    bulletPoints?: string[]
-    cards?: { title: string; content: string }
-    steps?: { title: string; content: string }
-    items?: { title: string; content: string }
-    quote?: {
-      content: string
-      person: string
-      images: File
-      imageCss?: string
-      personTitle: string
-      linkedin: string
-      email: string
-      highlight?: 'green' | 'blue'
-    }
-  }
-
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
+  import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   export let content: BlockContent
 </script>
 
@@ -42,15 +17,24 @@
       >
         <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
           <div class="relative aspect-[3/4] h-full md:-mx-8 xl:mx-0 xl:aspect-auto flex justify-center items-center">
-            <Picture
-              height="280"
-              width="373"
-              alt={content.quote.person}
-              images={content.quote.images}
-              cssClass={content.quote.imageCss
-                ? content.quote.imageCss
-                : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
-            />
+            <!-- Needed as safeguard if images in use are svgs -->
+            {#if typeof content.quote.image === 'string'}
+              <img
+                src={content.quote.image}
+                alt={content.quote.person}
+                class={content.quote.imageCss
+                  ? content.quote.imageCss
+                  : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
+              />
+            {:else}
+              <EnhancedImage
+                alt={content.quote.person}
+                image={content.quote.image}
+                imgClass={content.quote.imageCss
+                  ? content.quote.imageCss
+                  : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
+              />
+            {/if}
           </div>
         </div>
         <div class="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:py-24 xl:px-8">
@@ -72,6 +56,7 @@
                 ? 'text-gray-900'
                 : 'text-gray-600'} sm:text-2xl sm:leading-9"
             >
+              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
               <p>{@html content.quote.content}</p>
             </blockquote>
             <figcaption class="mt-8 text-base {content.quote.highlight ? 'text-gray-900' : 'text-gray-600'}">
@@ -90,7 +75,7 @@
                 {#if content.quote.linkedin}
                   <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                     <svg
-                      class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                      class="h-5 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 448 512"
                     >
@@ -113,17 +98,16 @@
 {#if content.title}
   <div class="md:min-h-0 even:bg-gray-100 group">
     <div
-      class="flex items-center relative px-8 md:px-16 pb-16 pt-8  md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
+      class="flex items-center relative px-8 md:px-16 pb-16 pt-8 md:py-32 max-w-screen-xl mx-auto flex-col group-odd:xl:flex-row group-even:xl:flex-row-reverse"
     >
-      {#if content.slides}
-        <Slideshow posts={content.slides} />
-      {/if}
       <div class="">
         <h2 class="mt-3 text-2xl font-bold text-gray-600">
+          <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
           {@html content.title}
         </h2>
         {#if content.content}
           <p class="mt-2 text-base leading-6 text-gray-600">
+            <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
             {@html content.content}
           </p>
         {/if}
@@ -189,6 +173,7 @@
                       <h3 class="font-semibold text-sm text-gray-700">
                         {step.title}
                       </h3>
+                      <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                       <p class="text-gray-600">{@html step.content}</p>
                     </div>
                   </div>
@@ -213,7 +198,8 @@
         {/if}
       </div>
 
-      {#if content.image && !content.slides}
+      <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
+      {#if content.image}
         <img
           src={content.image.src}
           class="mt-8 mx-12"

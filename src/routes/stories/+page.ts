@@ -1,8 +1,9 @@
 import type { PageLoad } from './$types'
 
 import { mapPosts } from './utils'
+import type { Tag } from '$lib/components/TypeDefinitions'
 
-export const load: PageLoad = ({ params, url }) => {
+export const load: PageLoad = ({ url }) => {
   const tagSlug = url.searchParams.get('tag') ?? ''
   const postFilter = tagSlug ? `%2Btag:${tagSlug}` : ''
   console.log(postFilter)
@@ -23,7 +24,6 @@ export const load: PageLoad = ({ params, url }) => {
       const tagData = await tagResponse.json()
       const featuredData = await featuredResponse.json()
       const nonFeaturedData = await nonFeaturedResponse.json()
-      console.log(featuredData)
       const featuredPosts = mapPosts(featuredData)
       const nonFeaturedPosts = mapPosts(nonFeaturedData)
       const posts = featuredPosts.concat(nonFeaturedPosts)
@@ -33,12 +33,12 @@ export const load: PageLoad = ({ params, url }) => {
         selectedTag: tagSlug,
         tags: tagData.tags
           //.filter((t: any) => t.count.posts > 0)
-          .map((tag: any) => ({
+          .map((tag: Tag) => ({
             name: tag.name,
             slug: tag.slug,
             count: tag.count,
           })),
-        totalPosts: tagData.tags.reduce((sum: number, tag: any) => sum + tag.count.posts, 0),
+        totalPosts: tagData.tags.reduce((sum: number, tag: Tag) => sum + tag.count.posts, 0),
       }
     }
   )

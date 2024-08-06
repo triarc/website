@@ -6,7 +6,7 @@
 
   let firstName = '',
     lastName = '',
-    phone,
+    phone = '',
     email = '',
     subject = '',
     message = ''

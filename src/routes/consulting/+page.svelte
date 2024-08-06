@@ -1,26 +1,29 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
-  import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
+  import iris from '$lib/assets/team/iris.jpg?w=768&format=webp;png&metadata&enhanced'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
-  import heroImage from '/src/lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '$lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import helvetas from '$lib/assets/img/customer/helvetas.gif'
+  import analytica from '$lib/assets/img/customer/analytica-logo-main.svg'
   import type { MappedPost } from './+page'
   import ContactForm from '$lib/components/ContactForm.svelte'
+  import type { FeaturedContent } from '$lib/components/FeaturedContent'
 
   export let data
   export let contactString = 'Iris direkt kontaktieren'
-  let content = {
+  let content: FeaturedContent = {
     quote: {
       content:
         'Der Mensch digitalisiert für die Menschen - wir stellen den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
       person: 'Iris Zenegaglia',
-      images: iris,
+      image: iris,
       personTitle: 'Digitalisierungs/Organisationsberaterin <br> ' + 'Coach (bso i.A) <br> Partnerin',
       linkedin: 'https://www.linkedin.com/in/iriszenegagliagloor/',
       email: 'iris@triarc-labs.com',
       highlight: 'green',
       contactButton: 'Kontaktiere mich',
-      customLogos: ['/img/partners/bso_logo_desktop.svg'],
+      customLogos: ['src/lib/assets/img/partners/bso_logo_desktop.svg'],
     },
     categories: [
       {
@@ -61,7 +64,7 @@
     ],
     testimonials: [
       {
-        logo: '/img/customer/analytica-logo-main.svg',
+        logo: analytica,
         quote: {
           source: 'Andrea Isler von Analytica',
           content:
@@ -71,7 +74,7 @@
         },
       },
       {
-        logo: '/img/customer/helvetas.gif',
+        logo: helvetas,
         quote: {
           source: 'Patric Masar von Helvetas',
           content:
@@ -93,9 +96,8 @@
   <Hero
     title="Beratung"
     content="Erfolgreiche Digitalisierung braucht das Miteinander. Wir bauen Brücken."
-    imageSrc="Beratung"
-    imageAlt="Triarc Consulting Header"
     image={heroImage}
+    imageAlt="Triarc Consulting Header"
   />
   <BlogPostFeatures bind:content />
   <!--  <Partners />-->

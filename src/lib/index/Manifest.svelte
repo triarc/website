@@ -29,7 +29,7 @@
     <div class="mx-auto">
       <h2 class="text-center text-xl font-extrabold text-gray-800 sm:text-2xl">Manifest</h2>
       <dl class="mt-6 space-y-6 divide-y divide-green-triarc text-gray-800">
-        {#each values as { id, title, content }}
+        {#each values as { title, content }}
           <div class="pt-6">
             <dt class="text-lg">
               <button class="text-left w-full flex justify-between items-start focus:outline-none cursor-pointer">

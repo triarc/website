@@ -5,24 +5,12 @@
   import logo from '../lib/assets/triarc-labs-black.svg'
   import NavDropDown from '$lib/components/NavDropDown.svelte'
   import NavDropDownItem from '$lib/components/NavDropDownItem.svelte'
+  import type { MetaInfo, NavItem } from '$lib/components/TypeDefinitions'
 
   export let menuOpen = false
 
   export let mobileTitle = ''
   export let mobileSubTitle = ''
-
-  export interface NavItemHeading {
-    type: 'heading'
-    title: string
-    items: NavItemLink[]
-  }
-  export interface NavItemLink {
-    type: 'link'
-    title: string
-    description: string
-    path: string
-  }
-  export type NavItem = NavItemHeading | NavItemLink
 
   export let data: { pathname: string }
 
@@ -121,7 +109,7 @@
     },
   ]
 
-  const linkMetaInfo = navItems.reduce((map, item) => {
+  const linkMetaInfo = navItems.reduce<Record<string, MetaInfo>>((map, item) => {
     if (item.type === 'heading') {
       for (const subItem of item.items) {
         map[subItem.path] = { title: subItem.title, description: subItem.description }
@@ -142,7 +130,7 @@
   }
 
   onMount(() => {
-    const messages = {
+    const messages: { [key: string]: string } = {
       en: "%c We're hiring! Checkout https://triarc-labs.com/jobs",
       de: '%c Wir suchen dich! https://triarc-labs.com/jobs',
       'de-DE': '%c Wir suchen dich! https://triarc-labs.com/jobs',
@@ -184,7 +172,7 @@
       <ul class="nav-links">
         {#each navItems as navItem}
           <li
-            class="my-4 last:mb-4 first:mt-4 py-2 px-4 {navItem.path == data.pathname
+            class="my-4 last:mb-4 first:mt-4 py-2 px-4 {navItem.type === 'link' && navItem.path === data.pathname
               ? 'rounded-md bg-gray-100 bg-opacity-10'
               : ''}"
           >
@@ -234,20 +222,23 @@
   </div>
 </div>
 
+<!-- svelte-ignore css-unused-selector -->
 <style style lang="postcss">
   #page {
     @apply bg-white flex flex-col min-h-screen;
   }
 
+  /*noinspection CssUnusedSymbol*/
   #page.landing {
     @apply flex-col-reverse lg:flex-row;
   }
+  /*noinspection CssUnusedSymbol*/
   #page.content {
     @apply flex flex-col;
   }
 
   #page .navbar {
-    @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col lg:flex-row h-screen h-auto lg:h-16
+    @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col lg:flex-row h-auto lg:h-16
       group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all flex-grow;
   }
 
@@ -269,8 +260,9 @@
     @apply bottom-0;
   }
   #page.content.open .main-container {
-    @apply h-16 overflow-hidden sticky bottom-0 z-20 lg:h-auto lg:relative lg:overflow-visible lg:h-auto lg:z-auto;
+    @apply h-16 overflow-hidden sticky bottom-0 z-20 lg:h-auto lg:relative lg:overflow-visible lg:z-auto;
   }
+  /*noinspection CssUnusedSymbol*/
   #page.content.open .page-content {
     @apply max-h-0 lg:max-h-max;
   }
@@ -288,14 +280,14 @@
   #page .main-container {
     @apply transition-transform;
   }
-
+  /*noinspection CssUnusedSymbol*/
   #page .navbar.open,
   #page.landing .navbar {
     @apply h-screen;
   }
 
   #page.content .navbar {
-    @apply items-center flex items-center;
+    @apply flex items-center;
   }
 
   #page .navbar .nav-links {

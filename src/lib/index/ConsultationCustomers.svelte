@@ -1,3 +1,12 @@
+<script lang="ts">
+  import ebl from '$lib/assets/img/customer/ebl-logo.svg'
+  import enzler from '$lib/assets/img/customer/enzler-logo.png'
+  import analytica from '$lib/assets/img/customer/analytica-logo-main.svg'
+  import iwb from '$lib/assets/img/customer/iwbLogo.svg'
+  import helvetas from '$lib/assets/img/customer/helvetas.gif'
+  import christen from '$lib/assets/img/customer/christen.svg'
+</script>
+
 <div class="bg-white">
   <div class="text-center px-16 lg:px-8 py-8 max-w-4xl lg:mr-auto md:py-16 sm:px-6" id="partners">
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Bereits Beratene Kunden</h2>
@@ -9,7 +18,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/ebl-logo.svg" loading="lazy" alt="customer-ebl" />
+          <img height="80" class="max-h-20" src={ebl} loading="lazy" alt="customer-ebl" />
         </a>
         <a
           href="https://www.enzler.com/de/"
@@ -17,7 +26,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/enzler-logo.png" loading="lazy" alt="customer-enzler" />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-20" src={enzler} loading="lazy" alt="customer-enzler" />
         </a>
         <a
           href="https://www.analytica.ch/"
@@ -25,13 +35,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img
-            height="80"
-            class="max-h-20"
-            src="/img/customer/analytica-logo-main.svg"
-            loading="lazy"
-            alt="customer-analytica"
-          />
+          <img height="80" class="max-h-20" src={analytica} loading="lazy" alt="customer-analytica" />
         </a>
       </div>
 
@@ -42,7 +46,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/iwbLogo.svg" loading="lazy" alt="customer-iwb" />
+          <img height="80" class="max-h-20" src={iwb} loading="lazy" alt="customer-iwb" />
         </a>
         <a
           href="https://www.helvetas.org/en/switzerland"
@@ -50,7 +54,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/helvetas.gif" loading="lazy" alt="customer-helvetas" />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-20" src={helvetas} loading="lazy" alt="customer-helvetas" />
         </a>
         <a
           href="https://www.christen-ag.ch/"
@@ -58,7 +63,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/christen.svg" loading="lazy" alt="customer-analytica" />
+          <img height="80" class="max-h-20" src={christen} loading="lazy" alt="customer-analytica" />
         </a>
       </div>
     </div>

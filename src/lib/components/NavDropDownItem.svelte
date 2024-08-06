@@ -1,17 +1,17 @@
 <script lang="ts">
-  export let title
-  export let description
-  export let path
-  export let close
+  export let title: string
+  export let description: string
+  export let path: string
+  export let close: () => void
   export let inline = false
 </script>
 
 <a
   href={path}
-  on:click={close()}
+  on:click={close}
   class="relative {inline
     ? 'inline-link'
-    : 'lg:dialog-link inline-link'} block hover:bg-gray-50 group hover:bg-blue-triarc rounded hover:bg-opacity-10"
+    : 'lg:dialog-link inline-link'} block group hover:bg-blue-triarc rounded hover:bg-opacity-10"
 >
   <div class="font-semibold text-gray-900 group-hover:text-blue-triarc">
     {title}
@@ -20,11 +20,13 @@
   <p class="text-gray-600">{description}</p>
 </a>
 
-<style>
+<!-- svelte-ignore css-unused-selector -->
+<style lang="postcss">
+  /*noinspection CssUnusedSymbol*/
   .dialog-link {
     @apply px-6 py-4;
   }
-
+  /* noinspection CssUnusedSymbol*/
   .inline-link {
     @apply -mx-4 px-4 py-2;
   }
