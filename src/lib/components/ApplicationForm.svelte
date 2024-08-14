@@ -91,7 +91,6 @@
     if (sending) {
       valid = false
     }
-    console.log(valid)
   }
 
   function bytesToMB(bytes: number): string {
@@ -225,7 +224,7 @@
               bind:value={firstName}
               class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
             />
-            <span class="hidden text-red-triarc py-1 validation-message">Bitte Vornamen eingeben</span>
+<!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte Vornamen eingeben</span>-->
           </div>
         </div>
         <div>
@@ -243,7 +242,7 @@
               bind:value={lastName}
               class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
             />
-            <span class="hidden text-red-triarc py-1 validation-message">Bitte Nachnamen eingeben</span>
+<!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte Nachnamen eingeben</span>-->
           </div>
         </div>
         <div>
@@ -261,7 +260,7 @@
               bind:value={email}
               class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
             />
-            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>
+<!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>-->
           </div>
         </div>
         <div>
@@ -317,11 +316,11 @@
               <p class="mb-2 text-sm text-gray-500 dark:text-gray-400"><span class="font-semibold">Zum hochladen klicken</span> oder Files ziehen</p>
               <p class="text-xs text-gray-500 dark:text-gray-400">PDF (Max. 10Mb)</p>
           </Dropzone>
-          {#if (!filesValid)}
-            {#each Object.values(fileValidationState) as value}
-              <span class="text-red-triarc py-1 validation-message">{value}</span>
-            {/each}
-          {/if}
+          <!--{#if (!filesValid)}-->
+          <!--  {#each Object.values(fileValidationState) as value}-->
+          <!--    <span class="text-red-triarc py-1 validation-message">{value}</span>-->
+          <!--  {/each}-->
+          <!--{/if}-->
           <div class="pt-8">
           {#if appFiles}
             {#each appFiles as file}
@@ -343,24 +342,25 @@
         <div class="sm:col-span-2 flex flex-col">
           <div class="flex flex-col md:flex-row md:justify-between">
             <div class="flex flex-col">
-              <div class="flex">
+              <div class="flex pr-8">
                 <input class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-300"
                        required
                        on:blur={() => checkboxTouched = true}
                        bind:checked={conditionAccepted}
                        type="checkbox"
                        id="condition-checkbox" />
-                <label for="condition-checkbox" class="inline pl-4 text-wrap text-xs font-medium text-gray-900">
+                <label for="condition-checkbox" class="inline pl-4 text-wrap text-s font-medium text-gray-900">
                   Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der Schweiz oder Deutschland haben.
                   Ich bestätige, diese Bedingung zu erfüllen. </label>
               </div>
-              {#if checkboxTouched && !conditionAccepted}
-              <span class="text-red-triarc py-1 validation-message">Bitte akzeptiere die Bedingung.</span>
-              {/if}
+              <!--{#if checkboxTouched && !conditionAccepted}-->
+              <!--<span class="text-red-triarc py-1 validation-message">Bitte akzeptiere die Bedingung.</span>-->
+              <!--{/if}-->
             </div>
           <button
             type="submit"
-            class="max-h-[50px] w-full items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-gray-500 px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
+            disabled={sent}
+            class="max-h-[50px] min-w-40 w-full items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-green-triarc px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
           >
             {#if sending}
               <svg

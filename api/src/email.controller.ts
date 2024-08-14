@@ -2,6 +2,7 @@ import {
   Body,
   Controller,
   FileTypeValidator,
+  MaxFileSizeValidator,
   ParseFilePipe,
   Post,
   UploadedFiles,
@@ -10,7 +11,7 @@ import {
 
 import { ApplicationFormDto, EmailService } from './email.service'
 import { FilesInterceptor } from '@nestjs/platform-express'
-import { ChatService } from './chat.service'
+import { ValidateAttachmentsPipe } from './attachmentValidator'
 
 @Controller('email')
 export class EmailController {
@@ -20,9 +21,13 @@ export class EmailController {
   @UseInterceptors(FilesInterceptor('attachments'))
   async send(
     @UploadedFiles(
-      new ParseFilePipe({
-        validators: [new FileTypeValidator({ fileType: 'application/pdf' })],
-      })
+      new ValidateAttachmentsPipe()
+      // new ParseFilePipe({
+      //   validators: [
+      //     new FileTypeValidator({ fileType: 'application/pdf' }),
+      //     new MaxFileSizeValidator({ maxSize: 10 * 1024 * 1024 }),
+      //   ],
+      // })
     )
     attachments: Array<Express.Multer.File>,
     @Body() body: ApplicationFormDto

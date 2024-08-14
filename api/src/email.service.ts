@@ -4,6 +4,7 @@ import * as nodemailer from 'nodemailer'
 import { IsEmail, IsNotEmpty, IsString } from 'class-validator'
 import { ChatService } from './chat.service'
 import { Block, KnownBlock } from '@slack/web-api'
+import { GStorageService } from './gStorage.service'
 
 export class ApplicationFormDto {
   @IsString()
@@ -24,13 +25,21 @@ export class ApplicationFormDto {
   message?: string
 }
 
+export interface GitlabLink {
+  title: string
+  url: string
+}
+
+const gCloudBaseURL = 'https://storage.cloud.google.com/'
+
 @Injectable()
 export class EmailService {
   transporter: nodemailer.Transporter
 
   constructor(
     private config: ConfigService,
-    private chat: ChatService
+    private chat: ChatService,
+    private gStorage: GStorageService
   ) {
     this.transporter = nodemailer.createTransport({
       host: this.config.get('SMTP_HOST'),
@@ -43,8 +52,24 @@ export class EmailService {
   }
 
   async sendMail(data: ApplicationFormDto, attachments: Array<Express.Multer.File>) {
-    // Gitlab Issue by Email seems to need double \n for Newlines for some reason
-    let issueText =
+    // Gitlab Markdown needs double \n for proper Newlines
+    const today = new Date()
+    const bucketFolder = `${data.firstName}_${data.lastName}_${today.getDate().toString().padStart(2, '0')}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getFullYear()}_${today.getHours().toString().padStart(2, '0')}-${today.getMinutes().toString().padStart(2, '0')}-${today.getSeconds().toString().padStart(2, '0')}}`
+    const filenames = attachments.map((file) => file.originalname).join('\n')
+    const attachmentLinks: GitlabLink[] = []
+
+    for (let file of attachments) {
+      await this.gStorage.uploadFile(this.gStorage.getDefaultBucket(), file.originalname, file.buffer, bucketFolder)
+      const fileLink: GitlabLink = {
+        title: file.originalname,
+        url: `${gCloudBaseURL}${this.gStorage.getDefaultBucket()}/${bucketFolder}/${file.originalname}`,
+      }
+      attachmentLinks.push(fileLink)
+    }
+
+    const issueSubject = `${data.jobListing} - ${data.firstName} ${data.lastName}`
+
+    const issueText =
       `${
         data.jobListing === 'Initiativbewerbung'
           ? `#### Initiativbewerbung von ${data.firstName} ${data.lastName}\n\n`
@@ -52,11 +77,15 @@ export class EmailService {
       }` +
       `Email: ${data.email}\n\n` +
       `Telefon: ${data.phone ?? '-'}\n\n` +
-      `Nachricht: ${data.message ?? '-'}`
-    let issueSubject = `${data.jobListing} - ${data.firstName} ${data.lastName}`
+      `Nachricht: ${data.message ?? '-'}\n\n` +
+      `Anhang:\n` +
+      attachmentLinks.map((link) => `- [${link.title}](${link.url})`).join('\n\n')
 
-    let filenames = attachments.map((file) => file.originalname).join('\n')
-    let replyText =
+    const replySubject =
+      `${data.jobListing === 'Initiativbewerbung' ? 'Deine Initiativbewerbung' : `Deine Bewerbung als ${data.jobListing}`}` +
+      `bei Triarc Laboratories`
+
+    const replyText =
       `Wir haben Deine Bewerbung mit den folgenden Informationen erhalten:\n\n` +
       `Vorname: ${data.firstName}\n` +
       `Nachname: ${data.lastName}\n` +
@@ -65,13 +94,9 @@ export class EmailService {
       `Nachricht: ${data.message ?? '-'}\n\n` +
       `Anhang:\n` +
       `${filenames}\n\n` +
-      `Vielen Dank für Ihre Bewerbung, wir melden uns so schnell wie möglich bei Dir.`
+      `Vielen Dank für Deine Bewerbung, wir melden uns so schnell wie möglich bei Dir.`
 
-    let replySubject =
-      `${data.jobListing === 'Initiativbewerbung' ? 'Deine Initiativbewerbung' : `Deine Bewerbung als ${data.jobListing}`}` +
-      `bei Triarc Laboratories`
-
-    let slackMessage =
+    const slackMessage =
       `Neue Bewerbung über die Website:\n` +
       `Stelle: ${data.jobListing}\n` +
       `Kandidat: ${data.firstName} ${data.lastName}\n` +
@@ -79,7 +104,7 @@ export class EmailService {
       `Telefon: ${data.phone ?? '-'}\n` +
       `Nachricht: ${data.message ?? '-'}\n\n`
 
-    let slackBlocks: Block[] | KnownBlock[] = [
+    const slackBlocks: Block[] | KnownBlock[] = [
       {
         type: 'section',
         text: {
@@ -120,7 +145,7 @@ export class EmailService {
       },
     ]
 
-    let issueEmail = {
+    const issueEmail = {
       from: this.config.get('MAIL_USER'),
       to: this.config.get('GITLAB_TARGET_MAIL'),
       subject: issueSubject,
@@ -128,20 +153,20 @@ export class EmailService {
       attachments: [],
     }
 
-    let confirmationEmail = {
+    // for (let file of attachments) {
+    //   let attachment = {
+    //     filename: file.originalname,
+    //     contentType: file.mimetype,
+    //     content: file.buffer,
+    //   }
+    //   issueEmail.attachments.push(attachment)
+    // }
+
+    const confirmationEmail = {
       from: this.config.get('MAIL_USER'),
       to: data.email,
       subject: replySubject,
       text: replyText,
-    }
-
-    for (let file of attachments) {
-      let attachment = {
-        filename: file.originalname,
-        contentType: file.mimetype,
-        content: file.buffer,
-      }
-      issueEmail.attachments.push(attachment)
     }
 
     this.transporter.sendMail(issueEmail, (error, info) => {
