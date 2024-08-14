@@ -1,11 +1,10 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte'
-  import type { BlockContent} from '$lib/components/TypeDefinitions'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   import Container from '$lib/components/Container.svelte'
   export let content: BlockContent
 </script>
-
 
 {#if content.quote}
   <div class="bg-white group">
@@ -100,124 +99,127 @@
 {#if content.title}
   <div class="md:min-h-0 even:bg-gray-100 group">
     <Container>
-    <div
-      class="flex items-center relative pb-16 pt-8 md:py-32 flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
-    >
-      <div class="">
-        <h2 class="mt-3 text-2xl font-bold text-gray-600">
-          <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-          {@html content.title}
-        </h2>
-        {#if content.content}
-          <p class="mt-2 text-base leading-6 text-gray-600">
+      <div
+        class="flex items-center relative pb-16 pt-8 md:py-32 flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
+      >
+        <div class="">
+          <h2 class="mt-3 text-2xl font-bold text-gray-600">
             <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-            {@html content.content}
-          </p>
-        {/if}
-        {#if content.footer}
-          <p class="text-sm text-gray-500">{content.footer}</p>
-        {/if}
-        {#if content.link}
-          <Button
-            buttonSize="Small"
-            reference={content.link.href}
-            label={content.link.text}
-            target={content.link.target ?? ''}
-          />
-        {/if}
-        {#if content.bulletPoints}
-          <div class="mt-8 flex flex-col">
-            <ul class="">
-              {#each content.bulletPoints as bulletPoint}
-                <li class="flex my-1 items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512" class="flex-shrink-0 h-2 w-2"
-                    ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                      d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
-                    /></svg
-                  >
-                  <div class="ml-3">
-                    <span class="text-base text-gray-600">
-                      {bulletPoint}
-                    </span>
+            {@html content.title}
+          </h2>
+          {#if content.content}
+            <p class="mt-2 text-base leading-6 text-gray-600">
+              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+              {@html content.content}
+            </p>
+          {/if}
+          {#if content.footer}
+            <p class="text-sm text-gray-500">{content.footer}</p>
+          {/if}
+          {#if content.link}
+            <Button
+              buttonSize="Small"
+              reference={content.link.href}
+              label={content.link.text}
+              target={content.link.target ?? ''}
+            />
+          {/if}
+          {#if content.bulletPoints}
+            <div class="mt-8 flex flex-col">
+              <ul class="">
+                {#each content.bulletPoints as bulletPoint}
+                  <li class="flex my-1 items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1em"
+                      viewBox="0 0 512 512"
+                      class="flex-shrink-0 h-2 w-2"
+                      ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+                      /></svg
+                    >
+                    <div class="ml-3">
+                      <span class="text-base text-gray-600">
+                        {bulletPoint}
+                      </span>
+                    </div>
+                  </li>
+                {/each}
+              </ul>
+            </div>
+          {/if}
+          {#if content.cards}
+            <ul
+              class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+            >
+              {#each content.cards as card}
+                <li class="rounded-2xl group-odd:bg-gray-100 group-even:bg-white p-8">
+                  <!--					<feature.icon class="h-8 w-8" />-->
+                  <h3 class="font-semibold text-gray-700">
+                    {card.title}
+                  </h3>
+                  <p class="mt-2 text-gray-600">{card.content}</p>
+                </li>
+              {/each}
+            </ul>
+          {/if}
+          {#if content.steps}
+            <ul class="-mb-8 mt-6">
+              {#each content.steps as step, i}
+                <li>
+                  <div class="relative pb-8">
+                    {#if i < content.steps.length - 1}
+                      <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
+                    {/if}
+                    <div class="relative flex space-x-3">
+                      <div>
+                        <span class="h-8 w-8 text-sm rounded-full bg-gray-200 flex items-center justify-center">
+                          {i + 1}
+                        </span>
+                      </div>
+                      <div class="min-w-0 flex-1 pt-1.5">
+                        <h3 class="font-semibold text-sm text-gray-700">
+                          {step.title}
+                        </h3>
+                        <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+                        <p class="text-gray-600">{@html step.content}</p>
+                      </div>
+                    </div>
                   </div>
                 </li>
               {/each}
             </ul>
-          </div>
-        {/if}
-        {#if content.cards}
-          <ul
-            class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-          >
-            {#each content.cards as card}
-              <li class="rounded-2xl group-odd:bg-gray-100 group-even:bg-white p-8">
-                <!--					<feature.icon class="h-8 w-8" />-->
-                <h3 class="font-semibold text-gray-700">
-                  {card.title}
-                </h3>
-                <p class="mt-2 text-gray-600">{card.content}</p>
-              </li>
-            {/each}
-          </ul>
-        {/if}
-        {#if content.steps}
-          <ul class="-mb-8 mt-6">
-            {#each content.steps as step, i}
-              <li>
-                <div class="relative pb-8">
-                  {#if i < content.steps.length - 1}
-                    <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
-                  {/if}
-                  <div class="relative flex space-x-3">
-                    <div>
-                      <span class="h-8 w-8 text-sm rounded-full bg-gray-200 flex items-center justify-center">
-                        {i + 1}
-                      </span>
-                    </div>
-                    <div class="min-w-0 flex-1 pt-1.5">
-                      <h3 class="font-semibold text-sm text-gray-700">
-                        {step.title}
-                      </h3>
-                      <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-                      <p class="text-gray-600">{@html step.content}</p>
-                    </div>
+          {/if}
+          {#if content.items}
+            <ul class="-mb-8 mt-6">
+              {#each content.items as item}
+                <li>
+                  <div class="min-w-0 pb-8 flex-1 pt-1.5">
+                    <h3 class="font-semibold text-sm underline decoration-red-triarc text-gray-700">
+                      {item.title}
+                    </h3>
+                    <p class="text-gray-600">{item.content}</p>
                   </div>
-                </div>
-              </li>
-            {/each}
-          </ul>
-        {/if}
-        {#if content.items}
-          <ul class="-mb-8 mt-6">
-            {#each content.items as item}
-              <li>
-                <div class="min-w-0 pb-8 flex-1 pt-1.5">
-                  <h3 class="font-semibold text-sm underline decoration-red-triarc text-gray-700">
-                    {item.title}
-                  </h3>
-                  <p class="text-gray-600">{item.content}</p>
-                </div>
-              </li>
-            {/each}
-          </ul>
+                </li>
+              {/each}
+            </ul>
+          {/if}
+        </div>
+
+        <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
+        {#if content.image}
+          <img
+            src={content.image.src}
+            class="mt-8 mx-12"
+            width={content.image.width ?? 320}
+            height={content.image.height}
+            alt={content.image.alt}
+          />
         {/if}
       </div>
+      <slot />
 
-      <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
-      {#if content.image}
-        <img
-          src={content.image.src}
-          class="mt-8 mx-12"
-          width={content.image.width ?? 320}
-          height={content.image.height}
-          alt={content.image.alt}
-        />
-      {/if}
-
-    </div>
-    <slot />
-
-    <hr />
+      <hr />
     </Container>
   </div>
 {/if}

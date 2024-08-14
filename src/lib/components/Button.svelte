@@ -4,7 +4,7 @@
   export let reference = ''
   export let label = ''
   export let target = ''
-  export let clicked: () => void =  () => {};
+  export let clicked: () => void = () => {}
 </script>
 
 <a
