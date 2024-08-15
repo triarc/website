@@ -282,8 +282,7 @@
       steps: [
         {
           title: 'Bewerbung einreichen',
-          content:
-            'Nimm den Mut zusammen und bewirb dich mit deinen Unterlagen direkt über unser Bewerbungsformular.',
+          content: 'Nimm den Mut zusammen und bewirb dich mit deinen Unterlagen direkt über unser Bewerbungsformular.',
         },
         {
           title: 'Persönliches Interview',
