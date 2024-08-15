@@ -1,13 +1,4 @@
-import {
-  Body,
-  Controller,
-  FileTypeValidator,
-  MaxFileSizeValidator,
-  ParseFilePipe,
-  Post,
-  UploadedFiles,
-  UseInterceptors,
-} from '@nestjs/common'
+import { Body, Controller, Post, UploadedFiles, UseInterceptors } from '@nestjs/common'
 
 import { ApplicationFormDto, EmailService } from './email.service'
 import { FilesInterceptor } from '@nestjs/platform-express'
@@ -20,15 +11,7 @@ export class EmailController {
   @Post('/application')
   @UseInterceptors(FilesInterceptor('attachments'))
   async send(
-    @UploadedFiles(
-      new ValidateAttachmentsPipe()
-      // new ParseFilePipe({
-      //   validators: [
-      //     new FileTypeValidator({ fileType: 'application/pdf' }),
-      //     new MaxFileSizeValidator({ maxSize: 10 * 1024 * 1024 }),
-      //   ],
-      // })
-    )
+    @UploadedFiles(new ValidateAttachmentsPipe())
     attachments: Array<Express.Multer.File>,
     @Body() body: ApplicationFormDto
   ): Promise<void> {

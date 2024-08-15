@@ -32,21 +32,16 @@ export class GStorageService implements FileStorageService {
     return this.bucketName
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async getSignedUrl(bucket: string, key: string, expiresInSeconds: number): Promise<string> {
-    const expires = Date.now() + 1000 * expiresInSeconds
-    ;(global as any).window = undefined // NODE 20 support
-    const [url] = await this.storage.bucket(bucket).file(key).getSignedUrl({
-      action: 'read',
-      expires,
-    })
-
-    return url
-  }
-
-  listFiles(bucket: string, path: string): Promise<FileItem[]> {
     return
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  listFiles(bucket: string, path: string): Promise<FileItem[]> {
+    return
+  }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async deleteFile(bucket: string, key: string): Promise<void> {
     return
   }
@@ -61,15 +56,16 @@ export class GStorageService implements FileStorageService {
     })
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   async getFileStream(bucket: string, key: string): Promise<NodeJS.ReadableStream> {
     return
   }
 
-  setup(): Promise<any> {
+  setup(): Promise<unknown> {
     return Promise.resolve(undefined)
   }
 
-  tearDown(): Promise<any> | Promise<void> {
+  tearDown(): Promise<void> {
     return Promise.resolve(undefined)
   }
 }

@@ -5,7 +5,7 @@ export interface FileStorageService {
   uploadFile(bucket: string, key: string, data: Buffer, folder?: string): Promise<void>
   getFileStream(bucket: string, key: string): Promise<NodeJS.ReadableStream>
   getSignedUrl(bucket: string, key: string, expiresInSeconds: number): Promise<string>
-  setup(): Promise<any>
+  setup(): Promise<unknown>
   tearDown(): Promise<void>
 }
 
