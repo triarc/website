@@ -1,9 +1,7 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte'
-  import { onMount } from 'svelte'
   import Dropzone from '$lib/components/Dropzone.svelte'
   import { goto } from '$app/navigation'
-  import { enhance } from '$app/forms'
 
   export let availableJobs: string[] = []
   export let jobString: string = ''
@@ -22,7 +20,6 @@
   let error = false
   let sending = false
   let valid = true
-  let checkboxTouched = false
   let filesValid = true
   let conditionAccepted = false
 
@@ -97,8 +94,9 @@
 
   const dropHandle = (event: DragEvent) => {
     event.preventDefault()
-    if (event.dataTransfer?.items) {
-      ;[...event.dataTransfer.items].forEach((item, i) => {
+    const dataTransfer = event.dataTransfer;
+    if (dataTransfer?.items) {
+      ;[...dataTransfer.items].forEach((item) => {
         if (item.kind === 'file') {
           const file = item.getAsFile()
           if (file && file.type === 'application/pdf') {
@@ -106,8 +104,8 @@
           }
         }
       })
-    } else if (event.dataTransfer?.files) {
-      ;[...event.dataTransfer?.files].forEach((file, i) => {
+    } else if (dataTransfer?.files) {
+      ;[...dataTransfer?.files].forEach((file) => {
         if (file.type === 'application/pdf') {
           appFiles = [...appFiles, file]
         }
@@ -343,16 +341,16 @@
           <div class="pt-8">
             {#if appFiles}
               {#each appFiles as file}
-                <div class="flex flex-row gap-x-4 items-center">
+                <div class="py-1 flex flex-row gap-x-4 items-center">
                   <button type="button" on:click={() => checkPDF(file)}>
-                    <img class="min-w-4 min-h-4" src="/src/lib/assets/icons/PDF_icon.svg" alt="pdf icon" />
+                    <img class="min-w-4 min-h-4" src="/src/lib/assets/icons/paperclip-solid.svg" alt="attachment icon" />
                   </button>
-                  <p>{file.name}</p>
-                  <p>{bytesToMB(file.size)}</p>
+                  <p class="w-96 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</p>
+                  <p class="w-16">{bytesToMB(file.size)}</p>
+                  <button class="rounded-md px-2 text-white bg-red-triarc" type="button" on:click={() => deleteFile(file)}>Delete</button>
                   {#if file.size > maxFileSize}
                     <p class="text-red-500">Dateigrösse überschritten</p>
                   {/if}
-                  <button type="button" on:click={() => deleteFile(file)}>Delete</button>
                 </div>
               {/each}
             {/if}
@@ -365,7 +363,6 @@
                 <input
                   class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-300"
                   required
-                  on:blur={() => (checkboxTouched = true)}
                   bind:checked={conditionAccepted}
                   type="checkbox"
                   id="condition-checkbox"
