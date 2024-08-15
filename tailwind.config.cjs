@@ -240,7 +240,6 @@ module.exports = {
   plugins: [
     require('tailwind-scrollbar'),
     require('@tailwindcss/forms'),
-    require('@tailwindcss/line-clamp'),
     require('@tailwindcss/typography'),
     // require('@tailwindcss/ui')(),
     // require('@tailwindcss/aspect-ratio')

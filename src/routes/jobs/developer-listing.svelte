@@ -1,6 +1,6 @@
 <script lang="ts">
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Block from '$lib/components/Block.svelte'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
 
   let contents: BlockContent[] = [
     {

@@ -1,6 +1,8 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte'
-
+  import FairPizza from '$lib/assets/img/lab/fairpizza-dashboard.png?format=webp;png&w=500&enhanced'
+  import Slothi from '$lib/assets/img/lab/slothi.png?format=webp;png&w=500&enhanced'
+  import labImage from '$lib/assets/img/lab/lab.svg'
   let email = ''
   let submitted = false
 
@@ -41,7 +43,7 @@
         </div>
 
         <div class="flex items-end justify-center my-16 lg:my-0">
-          <img src="img/lab/lab.svg" class="flex-grow" alt="triarc innovation lab" />
+          <img src={labImage} class="flex-grow" alt="triarc innovation lab" />
         </div>
       </div>
     </div>
@@ -80,7 +82,7 @@
         </div>
 
         <div class="flex items-end justify-center mt-16 lg:my-0">
-          <img src="img/lab/slothi.png" class="lg:border-b-2 border-indigo-900" alt="slothi" />
+          <enhanced:img src={Slothi} class="lg:border-b-2 border-indigo-900" alt="slothi" />
         </div>
       </div>
     </div>
@@ -125,7 +127,7 @@
         </div>
 
         <div class="flex items-end justify-center mt-16 lg:my-0">
-          <img src="img/lab/fairpizza-dashboard.png" class="shadow-lg border rounded-md" alt="fairpizza dashboard" />
+          <enhanced:img src={FairPizza} class="shadow-lg border rounded-md" alt="fairpizza dashboard" />
         </div>
       </div>
     </div>

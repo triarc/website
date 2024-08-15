@@ -1,15 +1,16 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
-  import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
+  import elke from '$lib/assets/team/elke.jpg?w=768&format=webp;png&metadata&enhanced'
+  import maintenance from '$lib/assets/img/custom-software/maintenance.svg'
   import Footer from '$lib/components/Footer.svelte'
-  import heroImage from '/src/lib/assets/hero/CustomSoftware.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import heroImage from '$lib/assets/hero/CustomSoftware.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
 
   let contents: BlockContent[] = [
     {
       quote: {
-        images: elke,
+        image: elke,
         content:
           'Die Software muss zum Kunden passen. Nicht umgekehrt. Die Vorteile der Digitalisierung lassen sich nur dann voll ausschöpfen, wenn die Software-Lösung exakt den Bedürfnissen entspricht.',
         person: 'Elke Engel',
@@ -104,7 +105,7 @@
         'Der Betrieb sowie die Wartung unserer Software ist uns ein wichtiges Anliegen. Wir betreiben unsere Software flexibel in unserem Cloud Angebot oder auf deinen vorhandenen Servern.' +
         '<br/><br/>' +
         'Regelmässige Wartung der Software sowie das Einspielen von sicherheitsrelevanten Patches ist für uns ein Routine-Job und läst uns Nachts besser schlafen.',
-      image: { src: 'img/custom-software/maintenance.svg', alt: 'Wartung' },
+      image: { src: maintenance, alt: 'Wartung' },
     },
   ]
 </script>
@@ -117,9 +118,8 @@
   <Hero
     title="Custom Software"
     content="Als Custom Software Firma sind wir der ideale Partner für Unternehmen, die nach individuellen Softwarelösungen suchen. Wir arbeiten eng mit unseren Kunden zusammen und entwickeln massgeschneiderte Lösungen, die genau auf ihre Bedürfnisse zugeschnitten sind."
-    imageSrc="CustomSoftware"
-    imageAlt="Triarc Custom Software Header"
     image={heroImage}
+    imageAlt="Triarc Custom Software Header"
   />
 
   {#each contents as content}

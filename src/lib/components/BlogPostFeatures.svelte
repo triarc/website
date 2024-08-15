@@ -1,11 +1,9 @@
 <script lang="ts">
-  import Picture from '$lib/index/Picture.svelte'
   import type { FeaturedContent } from '$lib/components/FeaturedContent'
-  import ConsultationCustomers from '$lib/index/ConsultationCustomers.svelte'
   import Testimonials from '$lib/index/Testimonials.svelte'
   import Container from '$lib/components/Container.svelte'
   import Button from '$lib/components/Button.svelte'
-
+  import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
 </script>
@@ -14,26 +12,24 @@
   <div class="bg-white">
     <div class="flex flex-col lg:flex-row">
       <div
-        class="{content?.quote?.highlight
+        class="{content.quote?.highlight
           ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
-          : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0 "
+          : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0"
       >
         <div class="lg:sticky lg:top-20">
           <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center px-8 gap-x-8 lg:ml-auto">
             <div class="-mt-8 w-full">
               <div class="relative aspect-[3/4] h-full flex justify-center items-center">
-                <Picture
-                  height="280"
-                  width="373"
-                  alt={content?.quote?.person}
-                  images={content?.quote?.images}
-                  cssClass={content?.quote?.imageCss
+                <EnhancedImage
+                  alt={content.quote?.person}
+                  image={content.quote?.image}
+                  imgClass={content?.quote?.imageCss
                     ? content.quote.imageCss
                     : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
-                />
+                ></EnhancedImage>
               </div>
             </div>
-            <div class="w-full max-w-full lg:max-w-sm lg:pl-8 ">
+            <div class="w-full max-w-full lg:max-w-sm lg:pl-8">
               <figure class="relative isolate pt-12">
                 <svg
                   viewBox="0 0 162 128"
@@ -48,22 +44,22 @@
                   <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
                 </svg>
                 <blockquote
-                  class="text-xl font-semibold {content?.quote?.highlight
-                    ? 'text-gray-900'
-                    : 'text-gray-600'} leading-9"
+                  class="text-xl font-semibold {content.quote?.highlight ? 'text-gray-900' : 'text-gray-600'} leading-9"
                 >
-                  <p>{@html content?.quote?.content}</p>
+                  <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+                  <p>{@html content.quote?.content}</p>
                 </blockquote>
                 <figcaption class="mt-8 text-base {content?.quote?.highlight ? 'text-gray-900' : 'text-gray-600'}">
                   <div class="font-semibold">{content?.quote?.person}</div>
+                  <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                   <div class="mt-1">{@html content?.quote?.personTitle}</div>
                   <div
                     class="flex flex-row gap-x-4 mt-4 {content?.quote?.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                   >
-                    {#if content?.quote?.linkedin}
+                    {#if content.quote?.linkedin}
                       <a href={content.quote.linkedin} target="_blank" rel="noreferrer" aria-label="Linkedin">
                         <svg
-                          class="h-5  {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
+                          class="h-5 {content.quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}"
                           xmlns="http://www.w3.org/2000/svg"
                           viewBox="0 0 448 512"
                         >
@@ -73,7 +69,7 @@
                         >
                       </a>
                     {/if}
-                    {#if content?.quote?.email}
+                    {#if content.quote?.email}
                       <a href="mailto:{content.quote.email}" aria-label="Email">
                         <svg class="h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                           <path
@@ -89,26 +85,30 @@
                 </figcaption>
               </figure>
               <div class="flex flex-col gap-y-8 my-8">
-                {#each content?.quote?.customLogos as customLogo}
-                  <img src={customLogo} alt="{customLogo} image" />
-                {/each}
+                {#if content.quote && content.quote.customLogos}
+                  {#each content.quote.customLogos as customLogo}
+                    <img src={customLogo} alt="{customLogo} image" />
+                  {/each}
+                {/if}
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="flex-grow group ">
+      <div class="flex-grow group">
         {#each content.categories as category}
-          <div class="bg-gray-100 even:bg-white ">
+          <div class="bg-gray-100 even:bg-white">
             <Container class="ml-0" size="small">
               <div class="py-8 lg:mr-auto">
                 {#if category.title}
                   <h2 class="mt-3 text-2xl font-bold text-gray-600">
+                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                     {@html category.title}
                   </h2>
                 {/if}
                 {#if category.content}
                   <p class="mt-2 text-base leading-6 text-gray-600">
+                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                     {@html category.content}
                   </p>
                 {/if}
@@ -119,6 +119,7 @@
                   <blockquote
                     class="bg-transparent border-l-4 border-l-gray-500 mx-8 p-4 rounded-xl my-6 text-gray-500"
                   >
+                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                     {@html category.quote}
                   </blockquote>
                 {/if}
@@ -140,6 +141,7 @@
                               <h3 class="font-semibold text-sm text-gray-700">
                                 {step.title}
                               </h3>
+                              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
                               <p class="text-gray-600">{@html step.content}</p>
                             </div>
                           </div>
@@ -165,8 +167,6 @@
                               sizes={post.image.sizes}
                               loading="lazy"
                               alt={post.image.alt}
-                              data-width={post.image.width}
-                              data-height={post.image.height}
                               class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top"
                             />
                             <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
@@ -174,8 +174,8 @@
                           <div
                             class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-t-none h-60 rounded-xl shadow"
                           >
-                            <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
+                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
                           </div>
                         </a>
                       </div>
@@ -203,8 +203,6 @@
                               sizes={post.image.sizes}
                               loading="lazy"
                               alt={post.image.alt}
-                              data-width={post.image.width}
-                              data-height={post.image.height}
                               class="object-cover rounded-xl {index % 2 === 1
                                 ? 'rounded-l-none'
                                 : 'rounded-r-none'} overflow-hidden block h-60 max-w-auto w-full object-left-top"
@@ -216,8 +214,8 @@
                               ? 'lg:rounded-r-none'
                               : 'lg:rounded-l-none'} h-60 rounded-xl lg:rounded-xl rounded-t-none shadow lg:max-w-[66%]"
                           >
-                            <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
+                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
                           </div>
                         </a>
                       </div>
@@ -225,7 +223,7 @@
                   </div>
                 {/if}
                 {#if category.posts && category.posts.length === 1}
-                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-16 mt-16 lg:mt-8 ">
+                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-16 mt-16 lg:mt-8">
                     {#each category.posts as post}
                       <div class="flex flex-row mt-2">
                         <a
@@ -241,8 +239,6 @@
                               sizes={post.image.sizes}
                               loading="lazy"
                               alt={post.image.alt}
-                              data-width={post.image.width}
-                              data-height={post.image.height}
                               class="object-cover rounded-xl lg:rounded-r-none lg:rounded-xl rounded-b-none overflow-hidden block h-60 max-w-auto w-full object-left-top"
                             />
                             <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
@@ -250,8 +246,8 @@
                           <div
                             class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-xl rounded-t-none lg:rounded-l-none h-60 lg:rounded-xl shadow lg:max-w-[66%]"
                           >
-                            <h3 class="font-bold text-xl line-clamp-3 ">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500 ">{post.content}</p>
+                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
+                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
                           </div>
                         </a>
                       </div>

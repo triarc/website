@@ -1,3 +1,33 @@
+<script lang="ts">
+  import waloLogo from '$lib/assets/img/customer/walo-logo.svg'
+  import kibagLogo from '$lib/assets/img/customer/kibag-logo.svg'
+  import riwaxLogo from '$lib/assets/img/customer/riwax-logo.svg'
+  import sersaLogo from '$lib/assets/img/customer/sersa-logo.svg'
+  import enzlerLogo from '$lib/assets/img/customer/enzler-logo.png'
+  import orthoTeamLogo from '$lib/assets/img/customer/ortho-team-logo.svg'
+  import tanneLogo4sprachig from '$lib/assets/img/customer/Tanne_Logo_4sprachig.png'
+  import ideeSportLogoWebp from '$lib/assets/img/customer/idee-sport-logo.webp'
+  import svmbLogo from '$lib/assets/img/customer/svmb-logo.svg'
+  import srfLogo from '$lib/assets/img/customer/srf-logo.svg'
+  import helsanaLogo from '$lib/assets/img/customer/helsana-logo.svg'
+  import wettsteinLogo from '$lib/assets/img/customer/wettstein-logo.png'
+  import glbLogo from '$lib/assets/img/customer/glb-logo.svg'
+  import eblLogo from '$lib/assets/img/customer/ebl-logo.svg'
+  import doreanLogo from '$lib/assets/img/customer/dorean-logo.svg'
+  import christenLogo from '$lib/assets/img/customer/christen.svg'
+  import burkhalterLogo from '$lib/assets/img/customer/burkhalter_holding_logo.svg'
+  import renggliLogo from '$lib/assets/img/customer/renggli-logo.svg'
+  import volvoLogo from '$lib/assets/img/customer/volvo-logo.png'
+  import espaceLogo from '$lib/assets/img/customer/espace-logo.svg'
+  import schindlerLogo from '$lib/assets/img/customer/schindler-logo.png'
+  import sutterLogo from '$lib/assets/img/customer/sutter.svg'
+  import helvetasLogo from '$lib/assets/img/customer/helvetas.gif'
+  import fidigitLogo from '$lib/assets/img/customer/fidigit.jpeg'
+  import helfensteinLogo from '$lib/assets/img/customer/Header.svg'
+  import iwbLogo from '$lib/assets/img/customer/iwbLogo.svg'
+  import analyticaLogo from '$lib/assets/img/customer/analytica-logo-main.svg'
+</script>
+
 <div class="bg-white">
   <div class="text-center max-w-screen-xl mx-auto py-24 md:py-32 px-4 sm:px-6 lg:px-8" id="customers">
     <h2 class="text-3xl leading-9 font-extrabold tracking-tight sm:text-4xl">Auszug aus unserem Kundenportfolio</h2>
@@ -9,7 +39,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/walo-logo.svg" loading="lazy" alt="walo" />
+          <img height="80" class="max-h-20" src={waloLogo} loading="lazy" alt="walo" />
         </a>
         <a
           href="https://www.kibag.ch"
@@ -17,7 +47,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-20" src="/img/customer/kibag-logo.svg" loading="lazy" alt="kibag" />
+          <img height="80" class="max-h-20" src={kibagLogo} loading="lazy" alt="kibag" />
         </a>
         <a
           href="https://riwax.ch/"
@@ -25,7 +55,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-12 " src="/img/customer/riwax-logo.svg" loading="lazy" alt="riwax" />
+          <img height="80" class="max-h-12" src={riwaxLogo} loading="lazy" alt="riwax" />
         </a>
       </div>
 
@@ -36,7 +66,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-14" src="/img/customer/sersa-logo.svg" loading="lazy" alt="sersa" />
+          <img height="80" class="max-h-14" src={sersaLogo} loading="lazy" alt="sersa" />
         </a>
         <a
           href="https://www.enzler.com/"
@@ -44,7 +74,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-10" src="/img/customer/enzler-logo.png" loading="lazy" alt="enzler" />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-10" src={enzlerLogo} loading="lazy" alt="enzler" />
         </a>
         <a
           href="https://www.ortho-team.ch/"
@@ -52,7 +83,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-10" src="/img/customer/ortho-team-logo.svg" loading="lazy" alt="ortho-team" />
+          <img height="80" class="max-h-10" src={orthoTeamLogo} loading="lazy" alt="ortho-team" />
         </a>
       </div>
       <!--            volvo, schindler, espace, srf, helsana  -->
@@ -62,22 +93,24 @@
           href="https://www.tanne.ch/"
           rel="noreferrer"
           target="_blank"
-          class="col-span-1 flex items-center justify-center py-8 px-8 "
+          class="col-span-1 flex items-center justify-center py-8 px-8"
         >
           <picture class="max-h-12 filter">
-            <source type="image/png" srcset="/img/customer/Tanne_Logo_4sprachig.png" alt="tanne" />
-            <img height="80" class="max-h-20" src="/img/customer/tanne-logo.png" loading="lazy" alt="tanne" />
+            <source type="image/png" srcset={tanneLogo4sprachig} />
+            <!--suppress CheckImageSize -->
+            <img height="80" class="max-h-20" src={tanneLogo4sprachig} loading="lazy" alt="tanne" />
           </picture>
         </a>
         <a
           href="https://www.ideesport.ch/"
           rel="noreferrer"
           target="_blank"
-          class="col-span-1 flex items-center justify-center py-8 px-8 "
+          class="col-span-1 flex items-center justify-center py-8 px-8"
         >
           <picture class="max-h-12 filter">
-            <source type="image/webp" srcset="/img/customer/idee-sport-logo.webp" alt="idee-sport" />
-            <img height="80" class="max-h-14" src="/img/customer/idee-sport-logo.jpg" loading="lazy" alt="idee-sport" />
+            <source type="image/webp" srcset={ideeSportLogoWebp} />
+            <!--suppress CheckImageSize -->
+            <img height="80" class="max-h-14" src={ideeSportLogoWebp} loading="lazy" alt="idee-sport" />
           </picture>
         </a>
         <a
@@ -86,7 +119,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-10" src="/img/customer/svmb-logo.svg" loading="lazy" alt="svmb" />
+          <img height="80" class="max-h-10" src={svmbLogo} loading="lazy" alt="svmb" />
         </a>
       </div>
 
@@ -97,7 +130,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-10" src="/img/customer/srf-logo.svg" loading="lazy" alt="srf" />
+          <img height="80" class="max-h-10" src={srfLogo} loading="lazy" alt="srf" />
         </a>
         <a
           href="https://www.helsana.ch/"
@@ -105,7 +138,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-6" src="/img/customer/helsana-logo.svg" loading="lazy" alt="helsana" />
+          <img height="80" class="max-h-6" src={helsanaLogo} loading="lazy" alt="helsana" />
         </a>
         <a
           href="http://www.wwag.ch/"
@@ -113,13 +146,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img
-            height="80"
-            class="max-h-16 filter invert"
-            src="/img/customer/wettstein-logo.png"
-            loading="lazy"
-            alt="wettstein"
-          />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-16 filter invert" src={wettsteinLogo} loading="lazy" alt="wettstein" />
         </a>
       </div>
 
@@ -130,7 +158,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-16" src="/img/customer/glb-logo.svg" loading="lazy" alt="glb" />
+          <img height="80" class="max-h-16" src={glbLogo} loading="lazy" alt="glb" />
         </a>
         <a
           href="http://www.ebl.ch/"
@@ -138,7 +166,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-16" src="/img/customer/ebl-logo.svg" loading="lazy" alt="ebl" />
+          <img height="80" class="max-h-16" src={eblLogo} loading="lazy" alt="ebl" />
         </a>
         <a
           href="https://www.dorean.ch/"
@@ -146,7 +174,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-10" src="/img/customer/dorean-logo.svg" loading="lazy" alt="dorean" />
+          <img height="80" class="max-h-10" src={doreanLogo} loading="lazy" alt="dorean" />
         </a>
       </div>
 
@@ -157,7 +185,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-12" src="/img/customer/christen.svg" loading="lazy" alt="christen ag" />
+          <img height="80" class="max-h-12" src={christenLogo} loading="lazy" alt="christen ag" />
         </a>
         <a
           href="https://www.burkhalter.ch/"
@@ -165,13 +193,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img
-            height="80"
-            class="max-h-12"
-            src="/img/customer/burkhalter_holding_logo.svg"
-            loading="lazy"
-            alt="burkhalter holding group"
-          />
+          <img height="80" class="max-h-12" src={burkhalterLogo} loading="lazy" alt="burkhalter holding group" />
         </a>
         <a
           href="https://www.renggli.swiss"
@@ -179,7 +201,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-24" src="/img/customer/renggli-logo.svg" loading="lazy" alt="renggli" />
+          <img height="80" class="max-h-24" src={renggliLogo} loading="lazy" alt="renggli" />
         </a>
       </div>
 
@@ -190,7 +212,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-24" src="/img/customer/volvo-logo.png" loading="lazy" alt="volvo" />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-24" src={volvoLogo} loading="lazy" alt="volvo" />
         </a>
         <a
           href="https://espacereal.ch/"
@@ -198,7 +221,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-10" src="/img/customer/espace-logo.svg" loading="lazy" alt="espace" />
+          <img height="80" class="max-h-10" src={espaceLogo} loading="lazy" alt="espace" />
         </a>
         <a
           href="https://www.schindler.com/"
@@ -206,7 +229,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-28" src="/img/customer/schindler-logo.png" loading="lazy" alt="schindler" />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-28" src={schindlerLogo} loading="lazy" alt="schindler" />
         </a>
       </div>
 
@@ -217,7 +241,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-24" src="/img/customer/sutter.svg" loading="lazy" alt="sutter" />
+          <img height="80" class="max-h-24" src={sutterLogo} loading="lazy" alt="sutter" />
         </a>
         <a
           href="https://www.helvetas.org/en/switzerland"
@@ -225,7 +249,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-10" src="/img/customer/helvetas.gif" loading="lazy" alt="helvetas" />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-10" src={helvetasLogo} loading="lazy" alt="helvetas" />
         </a>
         <a
           href="https://www.fidinam.com/"
@@ -233,7 +258,8 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-28" src="/img/customer/fidigit.jpeg" loading="lazy" alt="afry" />
+          <!--suppress CheckImageSize -->
+          <img height="80" class="max-h-28" src={fidigitLogo} loading="lazy" alt="afry" />
         </a>
       </div>
 
@@ -244,7 +270,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-13" src="/img/customer/Header.svg" loading="lazy" alt="customer-h&b" />
+          <img height="80" class="max-h-13" src={helfensteinLogo} loading="lazy" alt="customer-h&b" />
         </a>
         <a
           href="https://www.iwb.ch/"
@@ -252,7 +278,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img height="80" class="max-h-12" src="/img/customer/iwbLogo.svg" loading="lazy" alt="customer-iwb" />
+          <img height="80" class="max-h-12" src={iwbLogo} loading="lazy" alt="customer-iwb" />
         </a>
         <a
           href="https://www.analytica.ch/"
@@ -260,13 +286,7 @@
           target="_blank"
           class="col-span-1 flex items-center justify-center py-8 px-8 filter"
         >
-          <img
-            height="80"
-            class="max-h-12"
-            src="/img/customer/analytica-logo-main.svg"
-            loading="lazy"
-            alt="customer-analytica"
-          />
+          <img height="80" class="max-h-12" src={analyticaLogo} loading="lazy" alt="customer-analytica" />
         </a>
       </div>
     </div>

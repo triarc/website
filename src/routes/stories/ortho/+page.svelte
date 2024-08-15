@@ -1,18 +1,24 @@
 <script lang="ts">
+  import scanBoxesImage from '$lib/assets/img/stories/ortho/scan-boxes-1080.webp'
+  import iPadRightViewImage from '$lib/assets/img/stories/ortho/iPad-right-view-1080.webp'
+  import deskSmileImage from '$lib/assets/img/stories/ortho/desk-smile-1080.webp'
+  import applicationIPadViewImage from '$lib/assets/img/stories/ortho/application-iPad-view-1080.webp'
+  import orthoLogo from '$lib/assets/img/stories/ortho/ortho-logo.png'
+  import orthoTeamImage from '$lib/assets/img/stories/ortho/ortho-team.jpg'
   let scanBoxes = {
-    image: 'img/stories/ortho/scan-boxes',
+    image: scanBoxesImage,
     imageAlt: 'scan boxes',
   }
   let iPadRightView = {
-    image: 'img/stories/ortho/iPad-right-view',
+    image: iPadRightViewImage,
     imageAlt: 'iPad view with application',
   }
   let deskSmile = {
-    image: 'img/stories/ortho/desk-smile',
+    image: deskSmileImage,
     imageAlt: 'two persons happy with application',
   }
   let applicationIPadView = {
-    image: 'img/stories/ortho/application-iPad-view',
+    image: applicationIPadViewImage,
     imageAlt: 'application close up view',
   }
 </script>
@@ -58,13 +64,7 @@
           </svg>
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
             <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-              <img
-                class="object-cover overflow-hidden"
-                alt="Ortho-Logo"
-                src="img/stories/ortho/ortho-logo.png"
-                height="100"
-                width="400"
-              />
+              <img class="object-cover overflow-hidden" alt="Ortho-Logo" src={orthoLogo} height="100" width="400" />
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ortho-Order</p>
       </div>
       <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
@@ -135,12 +135,12 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">Ortho-Client</p>
       </div>
       <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg text-gray-500">
-          Sämtliche auftragsbezogenen Daten wie die ärztliche Verordnung, Bilder oder erbrachte Leistungen (mobil und
+          Sämtliche auftragsbezogenen Daten wie die ärztliche Verordnung, Bilder oder erbrachte Leistungen (mobil und
           digital) können mit der Client App zugeordnet werden. So wurden u.a. die Durchlaufzeiten bei der
           Leistungsverrechnung wesentlich verkürzt und der Aufwand in Backoffice und Administration reduziert.
         </p>
@@ -188,12 +188,12 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">
           Die Zusammenarbeit
         </p>
       </div>
-      <div class="relative  text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
+      <div class="relative text-base py-4 max-w-prose mx-auto lg:max-w-5xl lg:mx-0 lg:pr-72">
         <p class="text-lg text-gray-500">
           «Dabei haben wir 1:1 mitbekommen, wieviel Kreativität, Erfahrung und Engagement bei der Umsetzung
           unterschiedlichster Anforderungen eingeflossen sind. Mit ein Grund dafür ist sicherlich, dass triarc-labs
@@ -201,7 +201,7 @@
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative ">
+        <div class="relative">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <blockquote class="py-8 max-w-sm">
               <p class="text-gray-900 font-semibold">
@@ -246,20 +246,16 @@
         </div>
       </div>
 
-      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none  mt-16 md:mt-32">
+      <div class="text-base max-w-prose mx-auto py-4 lg:max-w-none mt-16 md:mt-32">
         <p class="mt-2 text-2xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-3xl">
           Die Kundin: ORTHO-TEAM GRUPPE
         </p>
       </div>
       <div class="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-start max-w-prose mx-auto lg:max-w-5xl lg:mx-0">
-        <div class="relative  flex py-4 ">
+        <div class="relative flex py-4">
           <div class="prose text-gray-500 mx-auto lg:max-w-none">
             <figure class="relative bg-white overflow-hidden">
-              <img
-                class="object-cover overflow-hidden rounded-lg shadow-lg"
-                alt="Ortho-Team"
-                src="img/stories/ortho/ortho-team.jpg"
-              />
+              <img class="object-cover overflow-hidden rounded-lg shadow-lg" alt="Ortho-Team" src={orthoTeamImage} />
               <figcaption class="mt-3 flex flex-col text-sm text-gray-500 ml-2">
                 <div class="text-black">Bei der Übergabe des Dankeschöns</div>
                 <div class="italic pt-2">
@@ -269,7 +265,7 @@
             </figure>
           </div>
         </div>
-        <div class="relative  py-4 text-gray-500">
+        <div class="relative py-4 text-gray-500">
           <p>
             Mit 15 Standorten und rund 300 Mitarbeitenden in der ganzen Schweiz ist die ORTHO-TEAM Gruppe Innovations-
             und Marktführerin in der Herstellung von Hilfsmitteln der Orthopädie- und Rehatechnik.

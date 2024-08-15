@@ -1,19 +1,22 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
-  import type { BlockContent } from '$lib/components/Block.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import serge from '../../../static/team/serge.jpg?width=500&format=webp;png&metadata'
-  import marco from '../../../static/team/marco.jpg?width=500&format=webp;png&metadata'
-  import elke from '../../../static/team/elke.jpg?width=500&format=webp;png&metadata'
-  import iris from '../../../static/team/iris.jpg?width=500&format=webp;png&metadata'
-  import bammbamm from '../../../static/team/bambam.jpg?width=500&format=webp;png&metadata'
-  import heroImage from '/src/lib/assets/hero/Mission.jpg?width=300;600;1000;2000&format=webp&metadata'
+  import serge from '$lib/assets/team/serge.jpg?w=768&format=webp;png&metadata&enhanced'
+  import marco from '$lib/assets/team/marco.jpg?w=768&format=webp;png&metadata&enhanced'
+  import elke from '$lib/assets/team/elke.jpg?w=768&format=webp;png&metadata&enhanced'
+  import iris from '$lib/assets/team/iris.jpg?w=768&format=webp;png&metadata&enhanced'
+  import bammbamm from '$lib/assets/team/bambam.jpg?w=768&format=webp;png&metadata&enhanced'
+  import heroImage from '$lib/assets/hero/Mission.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
+  import type { BlockContent } from '$lib/components/TypeDefinitions'
+
+  import teardown from '$lib/assets/img/custom-software/product_teardown.svg'
+  import goals from '$lib/assets/img/intro/shared_goals.svg'
 
   let contents: BlockContent[] = [
     {
       quote: {
-        images: serge,
+        image: serge,
         content:
           'Für Ihren Erfolg zögern wir nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern und Schwerfälliges zu beschleunigen.',
         person: 'Serge Müller',
@@ -27,12 +30,12 @@
       title: 'Software passend für Sie.',
       content:
         'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.',
-      image: { src: 'img/custom-software/product_teardown.svg', height: 281, alt: 'Projektportfolio' },
+      image: { src: teardown, height: 281, alt: 'Projektportfolio' },
       link: { href: '/custom-software', text: 'Custom Software' },
     },
     {
       quote: {
-        images: marco,
+        image: marco,
         content:
           'Als Spezialisten konzipieren und entwickeln wir massgeschneiderte Software, ausschliesslich inhouse. Für uns steht es ausser Frage, dass die Lösung Ihren spezifischen Anforderungen entsprechen muss und nicht umgekehrt.',
         person: 'Marco Schmidlin',
@@ -47,13 +50,13 @@
       title: 'Digitale Transformation ist menschlich ',
       content:
         'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.',
-      image: { src: 'img/intro/shared_goals.svg', height: 271, alt: 'Gemeinsame Ziele' },
+      image: { src: goals, height: 271, alt: 'Gemeinsame Ziele' },
       link: { href: '/consulting', text: 'Beratung' },
     },
 
     {
       quote: {
-        images: iris,
+        image: iris,
         content:
           'Zusammen mit Ihnen stellen wir sicher, dass das Team die Veränderungen mitträgt und die neuen Prozesse gelebt werden. ',
         person: 'Iris Zenegaglia',
@@ -71,7 +74,7 @@
     },
     {
       quote: {
-        images: elke,
+        image: elke,
         person: 'Elke Engel',
         personTitle: 'Project Lead / Partner',
         email: 'elke@triarc-labs.com',
@@ -90,13 +93,14 @@
     },
     {
       quote: {
-        images: bammbamm,
-        content:
-          'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
+        image: bammbamm,
         person: 'Bamm Bamm',
-        highlight: 'red',
         personTitle: 'Head of Happiness',
         email: 'bammbamm@triarc-labs.com',
+        highlight: 'red',
+        linkedin: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
+        content:
+          'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
       },
     },
 
@@ -162,9 +166,8 @@
   <Hero
     title="together we succeed"
     content="Für Ihren Fortschritt. Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie."
-    imageSrc="Mission"
-    imageAlt="Triarc Mission Header"
     image={heroImage}
+    imageAlt="Triarc Mission Header"
   />
 
   {#each contents as content}

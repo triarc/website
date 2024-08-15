@@ -12,7 +12,6 @@
         <div class="mt-9">
           <div class="flex">
             <div class="flex-shrink-0">
-              <!-- Heroicon name: phone -->
               <svg
                 class="h-6 w-6 text-gray-400"
                 xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +35,6 @@
           </div>
           <div class="mt-6 flex">
             <div class="flex-shrink-0">
-              <!-- Heroicon name: mail -->
               <svg
                 class="h-6 w-6 text-gray-400"
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,7 +68,6 @@
         <div class="mt-9">
           <div class="flex">
             <div class="flex-shrink-0">
-              <!-- Heroicon name: phone -->
               <svg
                 class="h-6 w-6 text-gray-400"
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +91,6 @@
           </div>
           <div class="mt-6 flex">
             <div class="flex-shrink-0">
-              <!-- Heroicon name: mail -->
               <svg
                 class="h-6 w-6 text-gray-400"
                 xmlns="http://www.w3.org/2000/svg"

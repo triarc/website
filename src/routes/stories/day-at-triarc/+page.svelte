@@ -1,3 +1,8 @@
+<script lang="ts">
+  import teamCall from '$lib/assets/img/office/teamcall.png'
+  import officeView from '$lib/assets/img/office/office_view.jpg'
+</script>
+
 <svelte:head>
   <title>Day at triarc - triarc-labs</title>
 </svelte:head>
@@ -41,9 +46,10 @@
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
             <figure>
               <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                <!--suppress CheckImageSize -->
                 <img
                   class="rounded-lg shadow-lg object-cover object-center"
-                  src="/img/office/teamcall.png"
+                  src={teamCall}
                   alt=""
                   width="1184"
                   height="1376"
@@ -99,11 +105,7 @@
         <div class="mb-8">
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none flex items-center justify-center">
             <figure class="">
-              <img
-                class="rounded-lg shadow-lg object-cover w-96 object-center rounded-3xl"
-                src="/img/office/office_view.jpg"
-                alt="office view"
-              />
+              <img class="rounded-lg shadow-lg object-cover w-96 object-center" src={officeView} alt="office view" />
               <figcaption class="mt-3 flex text-sm text-gray-500">
                 <span class="ml-2">Alternative Officeaussicht</span>
               </figcaption>
