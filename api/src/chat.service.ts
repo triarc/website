@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common'
 import { Subject } from 'rxjs'
-import { Block, KnownBlock, WebClient } from '@slack/web-api'
+import { Block, ChatPostMessageResponse, KnownBlock, UsersInfoResponse, WebClient } from '@slack/web-api'
 import { ConfigService } from '@nestjs/config'
 
 export interface ChatMessage {
@@ -26,7 +26,7 @@ export class ChatService {
     if (this.users[userId]) {
       return this.users[userId]
     }
-    const info = (await this.web.users.info({ user: userId })) as any
+    const info: UsersInfoResponse = await this.web.users.info({ user: userId })
     if (info.ok) {
       this.users[userId] = info.user.real_name
       return this.users[userId]
@@ -36,12 +36,12 @@ export class ChatService {
   }
 
   async postMessage(thread: string, message: string, blocks?: Block[] | KnownBlock[]) {
-    const result = (await this.web.chat.postMessage({
+    const result: ChatPostMessageResponse = await this.web.chat.postMessage({
       text: message,
       blocks: blocks,
       channel: this.channel,
       thread_ts: thread,
-    })) as any
+    })
     if (result.ok) {
       if (thread) {
         return { thread }

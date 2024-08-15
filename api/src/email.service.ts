@@ -58,7 +58,7 @@ export class EmailService {
     const filenames = attachments.map((file) => file.originalname).join('\n')
     const attachmentLinks: GitlabLink[] = []
 
-    for (let file of attachments) {
+    for (const file of attachments) {
       await this.gStorage.uploadFile(this.gStorage.getDefaultBucket(), file.originalname, file.buffer, bucketFolder)
       const fileLink: GitlabLink = {
         title: file.originalname,

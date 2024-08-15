@@ -94,7 +94,7 @@
 
   const dropHandle = (event: DragEvent) => {
     event.preventDefault()
-    const dataTransfer = event.dataTransfer;
+    const dataTransfer = event.dataTransfer
     if (dataTransfer?.items) {
       ;[...dataTransfer.items].forEach((item) => {
         if (item.kind === 'file') {
@@ -105,7 +105,7 @@
         }
       })
     } else if (dataTransfer?.files) {
-      ;[...dataTransfer?.files].forEach((file) => {
+      ;[...dataTransfer.files].forEach((file) => {
         if (file.type === 'application/pdf') {
           appFiles = [...appFiles, file]
         }
@@ -118,7 +118,7 @@
     const target = event.target as HTMLInputElement
     const files = target.files
     if (files && files.length > 0) {
-      ;[...files].forEach((file, i) => {
+      ;[...files].forEach((file) => {
         if (file.type === 'application/pdf') {
           appFiles = [...appFiles, file]
         }
@@ -343,11 +343,19 @@
               {#each appFiles as file}
                 <div class="py-1 flex flex-row gap-x-4 items-center">
                   <button type="button" on:click={() => checkPDF(file)}>
-                    <img class="min-w-4 min-h-4" src="/src/lib/assets/icons/paperclip-solid.svg" alt="attachment icon" />
+                    <img
+                      class="min-w-4 min-h-4"
+                      src="/src/lib/assets/icons/paperclip-solid.svg"
+                      alt="attachment icon"
+                    />
                   </button>
                   <p class="w-96 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</p>
                   <p class="w-16">{bytesToMB(file.size)}</p>
-                  <button class="rounded-md px-2 text-white bg-red-triarc" type="button" on:click={() => deleteFile(file)}>Delete</button>
+                  <button
+                    class="rounded-md px-2 text-white bg-red-triarc"
+                    type="button"
+                    on:click={() => deleteFile(file)}>Delete</button
+                  >
                   {#if file.size > maxFileSize}
                     <p class="text-red-500">Dateigrösse überschritten</p>
                   {/if}
@@ -461,9 +469,5 @@
 <style lang="postcss">
   input:user-invalid {
     @apply border-red-triarc focus:border-red-triarc focus:ring-red-triarc;
-  }
-
-  input:user-invalid ~ .validation-message {
-    @apply block;
   }
 </style>
