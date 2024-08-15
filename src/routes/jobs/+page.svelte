@@ -283,7 +283,7 @@
         {
           title: 'Bewerbung einreichen',
           content:
-            'Nimm den Mut zusammen und schicke uns eine Mail an <a class="underline decoration-red-triarc" href="mailto:development@triarc-labs.com">development@triarc-labs.com</a> mit deinen Unterlagen.',
+            'Nimm den Mut zusammen und bewirb dich mit deinen Unterlagen direkt über unser Bewerbungsformular.',
         },
         {
           title: 'Persönliches Interview',
