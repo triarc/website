@@ -12,6 +12,11 @@ node_modules
 .vercel
 .vercel_build_output
 .svelte
+.fleet
+
+*.jpg
+*.png
+*.svg
 
 # Ignore files for PNPM, NPM and YARN
 pnpm-lock.yaml
@@ -20,3 +25,5 @@ yarn.lock
 
 # Ignore github yaml workflows
 .github
+
+
