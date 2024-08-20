@@ -28,8 +28,6 @@
   ]
 </script>
 
-<div class="bg-white">
-  {#each contents as content}
-    <Block bind:content />
-  {/each}
-</div>
+{#each contents as content}
+  <Block bind:content />
+{/each}

@@ -32,20 +32,6 @@ export class GStorageService implements FileStorageService {
     return this.bucketName
   }
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async getSignedUrl(bucket: string, key: string, expiresInSeconds: number): Promise<string> {
-    return
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  listFiles(bucket: string, path: string): Promise<FileItem[]> {
-    return
-  }
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async deleteFile(bucket: string, key: string): Promise<void> {
-    return
-  }
-
   uploadFile(bucket: string, key: string, data: Buffer, folder?: string): Promise<void> {
     if (folder) {
       key = `${folder}/${key}`
@@ -54,11 +40,6 @@ export class GStorageService implements FileStorageService {
       resumable: false,
       gzip: false,
     })
-  }
-
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  async getFileStream(bucket: string, key: string): Promise<NodeJS.ReadableStream> {
-    return
   }
 
   setup(): Promise<unknown> {
