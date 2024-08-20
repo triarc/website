@@ -1,5 +1,5 @@
 import { ConfigService } from '@nestjs/config'
-import { FileItem, FileStorageService } from './fileStorage.service'
+import { FileStorageService } from './fileStorage.service'
 import { Storage } from '@google-cloud/storage'
 import { Injectable } from '@nestjs/common'
 
