@@ -7,8 +7,6 @@
   import ApplicationForm from '$lib/components/ApplicationForm.svelte'
   import Button from '$lib/components/Button.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
-  import { ourBenefits } from '$lib/content/benefits'
-  import { ourApplicationProcess } from '$lib/content/application-process'
   import CompanyAbout from '$lib/components/CompanyAbout.svelte'
 
   const openJobListings = ['Senior Software Engineer']
