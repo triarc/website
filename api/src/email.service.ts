@@ -83,9 +83,10 @@ export class EmailService {
 
     const replySubject =
       `${data.jobListing === 'Initiativbewerbung' ? 'Deine Initiativbewerbung' : `Deine Bewerbung als ${data.jobListing}`}` +
-      `bei Triarc Laboratories`
+      ` bei Triarc Laboratories`
 
     const replyText =
+      `Hallo ${data.firstName}, \n\n` +
       `Wir haben Deine Bewerbung mit den folgenden Informationen erhalten:\n\n` +
       `Vorname: ${data.firstName}\n` +
       `Nachname: ${data.lastName}\n` +
