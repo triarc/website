@@ -40,11 +40,7 @@
 <!--  content="Erfahre mehr über unsere offene Entwickler Stelle und was dich sonst noch dazu interessieren könnte."-->
 <!--/>-->
 <CompanyAbout />
-<ApplicationForm
-    availableJobs={[listedJob]}
-    jobString={listedJob}
-    isDefinedListing={true}
-/>
+<ApplicationForm availableJobs={[listedJob]} jobString={listedJob} isDefinedListing={true} />
 
 <!--<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">-->
 <!--  <div class="text-white bg-opacity-20">-->

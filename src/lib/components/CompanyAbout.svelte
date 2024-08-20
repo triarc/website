@@ -8,6 +8,5 @@
 </script>
 
 {#each contents as content}
-    <Block bind:content />
+  <Block bind:content />
 {/each}
-
