@@ -204,8 +204,6 @@
       ],
     },
   ]
-
-  let companyInfo: BlockContent[] = [ourBenefits, ourApplicationProcess]
 </script>
 
 <svelte:head>
@@ -238,7 +236,7 @@
   </div>
 </div>
 
-{#each [...listings.filter((listing) => listing.formReference && openJobListings.includes(listing.formReference)), ...companyInfo] as listing}
+{#each [...listings.filter((listing) => listing.formReference && openJobListings.includes(listing.formReference))] as listing}
   <Block bind:content={listing}>
     {#if listing.formReference}
       <div class="flex items-center justify-center mb-8">
