@@ -1,7 +1,5 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
-  import Footer from '$lib/components/Footer.svelte'
-  import DeveloperListing from './developer-listing.svelte'
   import JobIntro from './job-intro.svelte'
   import jobListingImage from '$lib/assets/img/jobs/super_woman.svg'
   import Block from '$lib/components/Block.svelte'
@@ -9,6 +7,10 @@
   import type { BlockContent, JobPosting } from '$lib/components/TypeDefinitions'
   import ApplicationForm from '$lib/components/ApplicationForm.svelte'
   import Button from '$lib/components/Button.svelte'
+  import FooterNoContact from '$lib/components/FooterNoContact.svelte'
+  import { ourBenefits } from '$lib/content/benefits'
+  import { ourApplicationProcess } from '$lib/content/application-process'
+  import CompanyAbout from '$lib/components/CompanyAbout.svelte'
 
   const openJobListings = ['Senior Software Engineer']
   let selectedListing = 'Initiativbewerbung'
@@ -203,6 +205,7 @@
     },
   ]
 
+  let companyInfo: BlockContent[] = [ourBenefits, ourApplicationProcess]
 </script>
 
 <svelte:head>
@@ -235,28 +238,24 @@
   </div>
 </div>
 
-{#each [...listings.filter((listing) => listing.formReference && openJobListings.includes(listing.formReference))] as listing}
-  <div class="bg-gray-100 even:bg-white">
-    <Block bind:content={listing}>
-      {#if listing.formReference}
-        <div class="flex items-center justify-center mb-8">
-          <Button
-            clicked={() => chooseListing(listing.formReference)}
-            buttonSize="Standard"
-            buttonMargin="None"
-            reference="#applicationForm"
-            label="Jetzt bewerben"
-          />
-        </div>
-      {/if}
-    </Block>
-  </div>
+{#each [...listings.filter((listing) => listing.formReference && openJobListings.includes(listing.formReference)), ...companyInfo] as listing}
+  <Block bind:content={listing}>
+    {#if listing.formReference}
+      <div class="flex items-center justify-center mb-8">
+        <Button
+          clicked={() => chooseListing(listing.formReference)}
+          buttonSize="Standard"
+          buttonMargin="None"
+          reference="#applicationForm"
+          label="Jetzt bewerben"
+        />
+      </div>
+    {/if}
+  </Block>
 {/each}
-<DeveloperListing />
-<ApplicationForm
-  availableJobs="{openJobListings}"
-  jobString="{selectedListing}"
-/>
+<CompanyAbout />
+<ApplicationForm availableJobs={openJobListings} jobString={selectedListing} />
+
 
 <!--<div class="bg-[#0D1214] min-h-[calc(100vh-64px)] flex flex-col lg:min-h-screen">-->
 <!--  <div class="text-white bg-opacity-20">-->
@@ -273,4 +272,4 @@
 <!--  <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />-->
 <!--</div>-->
 
-<Footer />
+<FooterNoContact />
