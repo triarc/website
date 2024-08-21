@@ -2,6 +2,9 @@
   import Hero from '$lib/components/Hero.svelte'
   import JobIntro from './job-intro.svelte'
   import jobListingImage from '$lib/assets/img/jobs/super_woman.svg'
+  import juniorDev from '$lib/assets/img/jobs/junior-dev.svg'
+  import cloud from '$lib/assets/img/jobs/cloud_hosting.svg'
+  import beHero from '$lib/assets/img/jobs/be_the_hero.svg'
   import Block from '$lib/components/Block.svelte'
   import heroImage from '$lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent, JobPosting } from '$lib/components/TypeDefinitions'
@@ -157,7 +160,7 @@
       formReference: 'Junior Software Engineer',
       content:
         'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
-      image: { src: '/img/jobs/junior-dev.svg', alt: 'Junior Software Engineer' },
+      image: { src: juniorDev, alt: 'Junior Software Engineer' },
       bulletPoints: [
         'Erste Erfahrungen mit C# oder Java',
         'Erste Erfahrungen im Bereich Web / Single Page Applications',
@@ -168,7 +171,7 @@
       title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
       content:
         'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
-      image: { src: '/img/jobs/be_the_hero.svg', alt: 'Professional Software Engineer' },
+      image: { src: beHero, alt: 'Professional Software Engineer' },
       bulletPoints: [
         "Erfahrungen mit C# in der Entwicklung von API's",
         'Erfahrungen im Bereich Web und Angular',
@@ -180,7 +183,7 @@
       title: '<span class="text-sm">wir suchen</span><br/>Senior Software Engineer',
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
-      image: { src: 'src/lib/assets/img/jobs/super_woman.svg', alt: 'Senior Software Engineer' },
+      image: { src: jobListingImage, alt: 'Senior Software Engineer' },
       bulletPoints: [
         "Erfahrungen mit C# in der Entwicklung von API's",
         'Erfahrungen im Bereich Web und Angular',
@@ -194,7 +197,7 @@
       content:
         'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
 
-      image: { src: 'img/jobs/cloud_hosting.svg', alt: 'Dev/Ops Engineer' },
+      image: { src: cloud, alt: 'Dev/Ops Engineer' },
       bulletPoints: [
         'Erfahrungen Docker / Kubernetes / Gitlab CI',
         'Erfahrungen mit Google Cloud / Azure von Vorteil',
