@@ -112,7 +112,7 @@
             </dt>
             <dd class="inline-block pt-3 whitespace-pre-line">{situation}</dd>
           </div>
-          <div class="relative max-w-[75ch] lg: w-[75ch] lg:self-end">
+          <div class="relative max-w-[75ch] lg:w-[75ch] lg:self-end">
             <dt class="inline font-semibold text-gray-900 pl-9">
               <svg
                 class="absolute left-1 top-1 h-6 w-6"
