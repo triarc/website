@@ -237,7 +237,7 @@
 <!--      </p>-->
 <!--    </div>-->
 <!--  </div>-->
-<!--  <img src="img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />-->
+<!--  <img src="/src/lib/assets/img/jobs/jungle.svg" class="w-full h-full" alt="triarc jungle" id="jungle" />-->
 <!--</div>-->
 
 <Footer />
