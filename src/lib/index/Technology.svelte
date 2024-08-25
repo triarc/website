@@ -1,91 +1,107 @@
 <script lang="ts">
+  import angularIcon from '$lib/assets/img/technology/angular.svg';
+  import netcoreIcon from '$lib/assets/img/technology/netcore.svg';
+  import nodejsIcon from '$lib/assets/img/technology/nodejs.svg';
+  import postgresqlIcon from '$lib/assets/img/technology/postgresql.svg';
+  import mongodbIcon from '$lib/assets/img/technology/mongodb.svg';
+  import elasticsearchIcon from '$lib/assets/img/technology/elasticsearch.svg';
+  import dockerIcon from '$lib/assets/img/technology/docker.svg';
+  import kubernetesIcon from '$lib/assets/img/technology/kubernetes.svg';
+  import gitlabIcon from '$lib/assets/img/technology/gitlab.svg';
+  import prometheusIcon from '$lib/assets/img/technology/prometheus.svg';
+  import kibanaIcon from '$lib/assets/img/technology/kibana.svg';
+  import sentryIcon from '$lib/assets/img/technology/sentry.svg';
+  import digitaloceanIcon from '$lib/assets/img/technology/digitalocean.svg';
+  import gcloudIcon from '$lib/assets/img/technology/gcloud.svg';
+  import azureIcon from '$lib/assets/img/technology/azure.svg';
+
   let technologies = [
     {
-      icon: '/src/lib/assets/img/technology/angular.svg',
+      icon: angularIcon,
       iconAlt: 'angular',
       title: 'Angular',
       text: 'Unser treuer Begleiter seit 10 Jahren. Hilft uns unsere Software für alle Geräte einheitlich anzubieten.',
     },
     {
-      icon: '/src/lib/assets/img/technology/netcore.svg',
+      icon: netcoreIcon,
       iconAlt: 'dotnet core',
       title: 'dotnet core',
       text: 'Damit es auch hinter der Bühne rund läuft, arbeiten unsere Server mit dotnet 24/7 für unsere Kunden.',
     },
     {
-      icon: '/src/lib/assets/img/technology/nodejs.svg',
+      icon: nodejsIcon,
       iconAlt: 'node.js',
       title: 'node.js',
       text: 'Kundenideen blitzschnell umsetzen und flexibel bleiben, auch für die kleinen Features im Leben.',
     },
     {
-      icon: '/src/lib/assets/img/technology/postgresql.svg',
+      icon: postgresqlIcon,
       iconAlt: 'postgresql',
       title: 'PostgreSQL',
       text: 'Daten hält PostgreSQL für uns in Struktur und Ordnung. Beziehungen sind der Datenbank dabei sehr wichtig.',
     },
     {
-      icon: '/src/lib/assets/img/technology/mongodb.svg',
+      icon: mongodbIcon,
       iconAlt: 'mongodb',
       title: 'MongoDB',
       text: 'Damit auch unstrukturierte Informationen ihren Platz finden. MongoDB ist nicht wählerisch und speichert alles!',
     },
     {
-      icon: '/src/lib/assets/img/technology/elasticsearch.svg',
+      icon: elasticsearchIcon,
       iconAlt: 'elasticsearch',
       title: 'Elasticsearch',
       text: 'Elasticsearch findet in noch so grossen Datenmengen die relevanten Resultate. Datenmessies können wieder aufatmen.',
     },
     {
-      icon: '/src/lib/assets/img/technology/docker.svg',
+      icon: dockerIcon,
       iconAlt: 'docker',
       title: 'Docker',
       text: 'Jede Anwendung braucht klare Grenzen. Docker hilft uns dabei und regelt die Softwareverteilung.',
     },
     {
-      icon: '/src/lib/assets/img/technology/kubernetes.svg',
+      icon: kubernetesIcon,
       iconAlt: 'kubernetes',
       title: 'Kubernetes',
       text: 'Der Chef in unserer IT Infrastruktur, welcher den Laden schmeisst und sagt, wo es lang geht. In der Cloud sowie bei unsere Kunden Vorort.',
     },
     {
-      icon: '/src/lib/assets/img/technology/gitlab.svg',
+      icon: gitlabIcon,
       iconAlt: 'gitlab',
       title: 'Gitlab',
       text: 'Verwaltet unseren Sourcecode und produziert daraus Software. Die Landkarte und der Compass in unseren Projekten, zeigt uns, wohin es geht.',
     },
     {
-      icon: '/src/lib/assets/img/technology/prometheus.svg',
+      icon: prometheusIcon,
       iconAlt: 'prometheus',
       title: 'Prometheus',
       text: 'Jemand der uns erinnert, wann es mal nicht rund läuft. Hält stets Kontakt mit den Entwicklern und ist (fast) Teil der Familie.',
     },
     {
-      icon: '/src/lib/assets/img/technology/kibana.svg',
+      icon: kibanaIcon,
       iconAlt: 'kibana',
       title: 'Kibana',
       text: 'Unser Verbündeter im Kampf gegen die kniffligen Bugs. Zeichnet die Lebenszeichen aller Anwendungen auf.',
     },
     {
-      icon: '/src/lib/assets/img/technology/sentry.svg',
+      icon: sentryIcon,
       iconAlt: 'sentry',
       title: 'Sentry',
       text: 'Ein Insider, welcher die Probleme unserer Anwendungen vor den Anwendern erkennt.',
     },
     {
-      icon: '/src/lib/assets/img/technology/digitalocean.svg',
+      icon: digitaloceanIcon,
       iconAlt: 'digitalocean',
       title: 'Digitalocean',
       text: 'Die Plattform für Infrastruktur in der Cloud mit kleinem Budget und viel Herz. ',
     },
     {
-      icon: '/src/lib/assets/img/technology/gcloud.svg',
+      icon: gcloudIcon,
       iconAlt: 'google cloud',
       title: 'Google Cloud',
       text: 'Die Plattform für Infrastruktur in der Cloud mit Standorten in der Schweiz.',
     },
     {
-      icon: '/src/lib/assets/img/technology/azure.svg',
+      icon: azureIcon,
       iconAlt: 'azure',
       title: 'Azure Cloud',
       text: 'Die Plattform für Infrastruktur in der Cloud verknüpft mit ihrem Office Paket.',
