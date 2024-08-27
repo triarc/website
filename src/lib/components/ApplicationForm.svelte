@@ -6,7 +6,7 @@
   export let availableJobs: string[] = []
   export let jobString: string = ''
   export let isDefinedListing: boolean = false
-  const baseUrl = 'http://localhost:3000'
+  const baseUrl = 'https://chatbot.triarc-labs.com'
   const maxFileSize = 10485760
 
   let jobListing = ''
