@@ -2,6 +2,7 @@
   import Container from '$lib/components/Container.svelte'
   import Dropzone from '$lib/components/Dropzone.svelte'
   import { goto } from '$app/navigation'
+  import paperclip from '$lib/assets/icons/paperclip-solid.svg'
 
   export let availableJobs: string[] = []
   export let jobString: string = ''
@@ -350,7 +351,7 @@
                     <button type="button" on:click={() => checkPDF(file)}>
                       <img
                         class="min-w-4 min-h-4"
-                        src="/src/lib/assets/icons/paperclip-solid.svg"
+                        src={paperclip}
                         alt="attachment icon"
                       />
                     </button>

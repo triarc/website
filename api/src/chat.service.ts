@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common'
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
 import { Subject } from 'rxjs'
 import { Block, ChatPostMessageResponse, KnownBlock, UsersInfoResponse, WebClient } from '@slack/web-api'
 import { ConfigService } from '@nestjs/config'
@@ -47,6 +47,8 @@ export class ChatService {
         return { thread }
       }
       return { thread: result.message.ts }
+    } else if (result.error) {
+      throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR)
     }
   }
 

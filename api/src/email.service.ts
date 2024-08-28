@@ -1,4 +1,4 @@
-import { Injectable, Optional } from '@nestjs/common'
+import { HttpException, HttpStatus, Injectable, Optional } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import * as nodemailer from 'nodemailer'
 import { IsEmail, IsNotEmpty, IsString } from 'class-validator'
@@ -172,7 +172,7 @@ export class EmailService {
 
     this.transporter.sendMail(issueEmail, (error, info) => {
       if (error) {
-        console.log(error)
+        throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR)
       } else {
         console.log('Email sent: ' + info.response)
       }
@@ -180,7 +180,7 @@ export class EmailService {
 
     this.transporter.sendMail(confirmationEmail, (error, info) => {
       if (error) {
-        console.log(error)
+        throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR)
       } else {
         console.log('Email sent: ' + info.response)
       }
