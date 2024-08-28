@@ -29,8 +29,6 @@
 
 <TeamMembers />
 
-<div class="bg-gray-100">
-  <Block bind:content />
-</div>
+<Block bind:content />
 
 <Footer />

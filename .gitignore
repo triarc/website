@@ -74,3 +74,4 @@ api/dist
 .vercel_build_output
 .DS_Store
 .vercel
+.fleet

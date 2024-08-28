@@ -3,6 +3,7 @@ import type { Picture } from 'imagetools-core'
 export interface BlockContent {
   title?: string
   content?: string
+  formReference?: string
   footer?: string
   link?: { href: string; text: string; target?: string }
   image?: { src: string; alt: string; height?: number; width?: number }

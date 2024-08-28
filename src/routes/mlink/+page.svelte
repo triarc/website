@@ -187,7 +187,7 @@
   {/each}
 
   {#each quotes as quote}
-    <section class="bg-white even:bg-gray-100">
+    <section class="alternating">
       <div class="mx-auto max-w-7xl px-6 lg:px-8 py-24 sm:py-16">
         <div class="mx-auto grid max-w-2xl grid-cols-1 lg:mx-0 lg:max-w-none lg:grid-cols-2">
           <div class="flex flex-col pb-10 sm:pb-16 lg:pb-0 lg:pr-8 xl:pr-20">

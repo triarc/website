@@ -319,4 +319,21 @@
   #nav-menu {
     transition: max-height 200ms;
   }
+
+  /* Styles für die alternierenden Contentblöcke um nicht jedes mal eine Spezifische Implementation notwendig zu machen. */
+  :global:nth-child(odd of .alternating) {
+    @apply bg-white;
+  }
+
+  :global:nth-child(even of .alternating) {
+    @apply bg-gray-100;
+  }
+
+  :global:nth-child(odd of .alternating) .block-card {
+    @apply bg-gray-100;
+  }
+
+  :global:nth-child(even of .alternating) .block-card {
+    @apply bg-white;
+  }
 </style>

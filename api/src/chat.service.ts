@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common'
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
 import { Subject } from 'rxjs'
-import { WebClient } from '@slack/web-api'
+import { Block, ChatPostMessageResponse, KnownBlock, UsersInfoResponse, WebClient } from '@slack/web-api'
 import { ConfigService } from '@nestjs/config'
 
 export interface ChatMessage {
@@ -26,7 +26,7 @@ export class ChatService {
     if (this.users[userId]) {
       return this.users[userId]
     }
-    const info = (await this.web.users.info({ user: userId })) as any
+    const info: UsersInfoResponse = await this.web.users.info({ user: userId })
     if (info.ok) {
       this.users[userId] = info.user.real_name
       return this.users[userId]
@@ -35,17 +35,20 @@ export class ChatService {
     return userId
   }
 
-  async postMessage(thread: string, message: string) {
-    const result = (await this.web.chat.postMessage({
+  async postMessage(thread: string, message: string, blocks?: Block[] | KnownBlock[]) {
+    const result: ChatPostMessageResponse = await this.web.chat.postMessage({
       text: message,
+      blocks: blocks,
       channel: this.channel,
       thread_ts: thread,
-    })) as any
+    })
     if (result.ok) {
       if (thread) {
         return { thread }
       }
       return { thread: result.message.ts }
+    } else if (result.error) {
+      throw new HttpException('Internal Server Error', HttpStatus.INTERNAL_SERVER_ERROR)
     }
   }
 

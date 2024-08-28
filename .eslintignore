@@ -2,7 +2,7 @@
 node_modules
 /build
 /.svelte-kit
-/api
+/api/dist
 /package
 .env
 .env.*
@@ -13,3 +13,4 @@ pnpm-lock.yaml
 package-lock.json
 yarn.lock
 .github
+.fleet
