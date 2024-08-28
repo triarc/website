@@ -370,7 +370,7 @@
           <div class="sm:col-span-2 flex flex-col">
             <div class="flex flex-col md:flex-row md:justify-between">
               <div class="flex flex-col">
-                <div class="flex pr-8">
+                <div class="flex md:pr-8">
                   <input
                     class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-300"
                     required
@@ -390,7 +390,7 @@
               <button
                 type="submit"
                 disabled={sent}
-                class="max-h-[50px] min-w-40 w-full items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-green-triarc px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
+                class="mt-4 md:mt-0 max-h-[50px] min-w-40 w-full items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-green-triarc px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
               >
                 {#if sending}
                   <svg
