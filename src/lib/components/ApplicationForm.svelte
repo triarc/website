@@ -349,11 +349,7 @@
                 {#each appFiles as file}
                   <div class="py-1 flex flex-row gap-x-4 items-center">
                     <button type="button" on:click={() => checkPDF(file)}>
-                      <img
-                        class="min-w-4 min-h-4"
-                        src={paperclip}
-                        alt="attachment icon"
-                      />
+                      <img class="min-w-4 min-h-4" src={paperclip} alt="attachment icon" />
                     </button>
                     <p class="w-96 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</p>
                     <p class="w-16">{bytesToMB(file.size)}</p>
