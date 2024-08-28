@@ -1,7 +1,7 @@
-import { HttpException, HttpStatus, Injectable, Optional } from '@nestjs/common'
+import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import * as nodemailer from 'nodemailer'
-import { IsEmail, IsNotEmpty, IsString } from 'class-validator'
+import { IsEmail, IsNotEmpty, IsOptional, IsString } from 'class-validator'
 import { ChatService } from './chat.service'
 import { Block, KnownBlock } from '@slack/web-api'
 import { GStorageService } from './gStorage.service'
@@ -19,9 +19,11 @@ export class ApplicationFormDto {
   @IsEmail()
   @IsNotEmpty()
   email: string
-  @Optional()
+  @IsOptional()
+  @IsString()
   phone?: string
-  @Optional()
+  @IsOptional()
+  @IsString()
   message?: string
 }
 
