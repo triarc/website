@@ -62,10 +62,12 @@ export class EmailService {
 
     for (const file of attachments) {
       await this.gStorage.uploadFile(this.gStorage.getDefaultBucket(), file.originalname, file.buffer, bucketFolder)
+      const fileUrl = `${gCloudBaseURL}${this.gStorage.getDefaultBucket()}/${bucketFolder}/${file.originalname}`
       const fileLink: GitlabLink = {
         title: file.originalname,
-        url: `${gCloudBaseURL}${this.gStorage.getDefaultBucket()}/${bucketFolder}/${file.originalname}`,
+        url: encodeURIComponent(fileUrl),
       }
+
       attachmentLinks.push(fileLink)
     }
 
