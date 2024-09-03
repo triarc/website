@@ -3,6 +3,8 @@
   import type { BlockContent } from '$lib/components/TypeDefinitions'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   import Container from '$lib/components/Container.svelte'
+  import Video from '$lib/components/Video.svelte'
+  import VideoSmall from '$lib/components/VideoSmall.svelte'
   export let content: BlockContent
 </script>
 
@@ -94,7 +96,7 @@
   <hr />
 {/if}
 
-{#if content.title}
+{#if content.title }
   <div class="alternating md:min-h-0 group">
     <Container>
       <div
@@ -214,6 +216,11 @@
             alt={content.image.alt}
           />
         {/if}
+        {#if content.smallVideo}
+          <div class="h-full w-full mt-8 group-even:mr-12 group-odd:ml-12">
+          <VideoSmall bind:content={content.smallVideo} />
+          </div>
+        {/if}
       </div>
       <slot />
 
@@ -222,6 +229,13 @@
   </div>
 {/if}
 
+{#if content.video}
+  <div class="bg-blue-triarc py-8">
+    <Container>
+      <Video bind:content={content.video} />
+    </Container>
+  </div>
+{/if}
 <style lang="postcss">
   /*  .block-background:nth-child(odd) {*/
   /*      @apply bg-white;*/

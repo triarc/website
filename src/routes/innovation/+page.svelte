@@ -6,6 +6,8 @@
   import mlinkLogo from '$lib/assets/img/mlink/tree.svg'
   import m3expressIcon from '$lib/assets/img/lab/m3express-icon.svg'
   import fairpizzaIcon from '$lib/assets/img/lab/fairpizza-icon-512.png'
+  import aiPoc from '$lib/assets/img/thumbnail/ai-poc-poster.png'
+  import baustelle from '$lib/assets/img/thumbnail/baustelle-poster.png'
   import slothiIcon from '$lib/assets/img/lab/slothi.svg'
   import heroImage from '$lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
@@ -22,6 +24,44 @@
         highlight: 'green',
         linkedin: 'https://www.linkedin.com/in/pascal-bertschi-9b00b480/',
       },
+    },
+    {
+      title: 'AI Proof of Concept',
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      smallVideo: {
+        videoTitle: 'AI Proof of Concept',
+        videoId: 'ai',
+        poster: aiPoc,
+        sources: [
+          {
+            src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p.webm',
+            type: 'video/webm',
+          },
+          {
+            src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p.mp4',
+            type: 'video/mp4',
+          },
+        ]
+      }
+    },
+    {
+      title: 'AI Proof of Concept',
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      smallVideo: {
+        videoTitle: 'AI Proof of Concept',
+        videoId: 'baustelle',
+        poster: baustelle,
+        sources: [
+          {
+            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p.mp4',
+            type: 'video/mp4',
+          },
+          {
+            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p.webm',
+            type: 'video/webm',
+          },
+        ]
+      }
     },
     {
       title: 'μLink Data-hub',

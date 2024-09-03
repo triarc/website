@@ -1,4 +1,5 @@
 <script lang="ts">
+  // Not in one component because having an if for the video slowed down the display an insane amount
   import 'plyr/dist/plyr.css'
 
   export let content: VideoContent
@@ -15,22 +16,18 @@
 </script>
 
 <!-- svelte-ignore a11y-media-has-caption -->
-
-<video
+  <video
     id={`${content.videoId}-player`}
     playsinline
     controls
     style="height: 100%; width: 100%;"
-    class="rounded overflow-hidden aspect-video"
-    data-poster={content.poster}
+    class="overflow-hidden md:min-w-[400px] lg:min-w-[600px] aspect-video"
     title={content.videoTitle ?? ''}
->
-  {#each content.sources as source}
-    <source src={source.src} type={source.type} />
-  {/each}
-</video>
+    data-poster={content.poster}
+  >
+    {#each content.sources as source}
+      <source src={source.src} type={source.type} />
+    {/each}
+  </video>
 
-<style lang="postcss">
-    .plyr.plyr--stopped .plyr__controls { display: none }
-</style>
 

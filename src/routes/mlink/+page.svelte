@@ -27,8 +27,10 @@
       image: { src: mLinkTree, alt: 'mlink logo' },
     },
     {
-      title: 'μLink der Kommunikationshub',
+
       video: {
+        videoTitle: 'μLink der Kommunikationshub',
+        videoId: 'mlink',
         poster: mLinkPoster,
         sources: [
           {
@@ -175,15 +177,7 @@
 
 <div class="bg-white">
   {#each contents as content}
-    {#if content.video}
-      <div class="bg-blue-triarc py-8">
-        <Container>
-          <Video bind:content={content.video} />
-        </Container>
-      </div>
-    {:else}
       <Block bind:content />
-    {/if}
   {/each}
 
   {#each quotes as quote}
