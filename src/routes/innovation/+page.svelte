@@ -7,7 +7,6 @@
   import m3expressIcon from '$lib/assets/img/lab/m3express-icon.svg'
   import fairpizzaIcon from '$lib/assets/img/lab/fairpizza-icon-512.png'
   import aiPoc from '$lib/assets/img/thumbnail/ai-poc-poster.png'
-  import baustelle from '$lib/assets/img/thumbnail/baustelle-poster.png'
   import slothiIcon from '$lib/assets/img/lab/slothi.svg'
   import heroImage from '$lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent } from '$lib/components/TypeDefinitions'

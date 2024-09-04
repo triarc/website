@@ -30,8 +30,3 @@
   {/each}
 </video>
 
-<style lang="postcss">
-  .plyr.plyr--stopped .plyr__controls {
-    display: none;
-  }
-</style>

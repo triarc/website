@@ -1,7 +1,5 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
-  import Video from '$lib/components/Video.svelte'
-  import Container from '$lib/components/Container.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
 
