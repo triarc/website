@@ -16,7 +16,9 @@
     lastName = '',
     phone = '',
     email = '',
+    lohn = '',
     message = '',
+    arbeitgeber = '',
     appFiles: File[] = []
   let sent = false
   let error = false
@@ -74,6 +76,9 @@
       valid = false
     }
     if (!email) {
+      valid = false
+    }
+    if (!lohn) {
       valid = false
     }
     if (!appFiles.length) {
@@ -289,6 +294,24 @@
           </div>
           <div class="sm:col-span-2">
             <div class="flex justify-between">
+              <label for="lohn" class="block text-sm font-medium text-gray-900">Deine Lohnvorstellung</label>
+              <span id="lohn-required" class="text-sm text-gray-500">Pflichtfeld</span>
+            </div>
+            <div class="mt-1">
+              <input
+                id="lohn"
+                name="lohn"
+                type="text"
+                required
+                placeholder="90'000"
+                bind:value={lohn}
+                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+              />
+              <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>-->
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="flex justify-between">
               <label for="message" class="block text-sm font-medium text-gray-900">Nachricht</label>
               <span id="message-optional" class="text-sm text-gray-500">Optional</span>
             </div>
@@ -298,6 +321,22 @@
                 name="message"
                 rows="4"
                 bind:value={message}
+                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                aria-describedby="message-max"
+              />
+            </div>
+          </div>
+          <div class="sm:col-span-2">
+            <div class="flex justify-between">
+              <label for="arbeitgeber" class="block text-sm font-medium text-gray-900">Was liegt dir bei einem Arbeitgeber besonders am Herzen?</label>
+              <span id="arbeitgeber-optional" class="text-sm text-gray-500">Optional</span>
+            </div>
+            <div class="mt-1">
+              <textarea
+                id="arbeitgeber"
+                name="arbeitgeber"
+                rows="4"
+                bind:value={arbeitgeber}
                 class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                 aria-describedby="message-max"
               />
@@ -378,9 +417,9 @@
                     type="checkbox"
                     id="condition-checkbox"
                   />
-                  <label for="condition-checkbox" class="inline pl-4 text-wrap text-s font-medium text-gray-900">
-                    Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der Schweiz
-                    oder Deutschland haben. Ich bestätige, diese Bedingung zu erfüllen.
+                  <label for="condition-checkbox" class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc">
+                    Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span class="decoration-red-triarc underline">Schweiz</span>
+                    oder <span class="decoration-red-triarc underline">Deutschland</span> haben. Ich bestätige, diese Bedingung zu erfüllen.
                   </label>
                 </div>
                 <!--{#if checkboxTouched && !conditionAccepted}-->
