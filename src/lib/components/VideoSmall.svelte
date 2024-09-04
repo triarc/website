@@ -16,18 +16,16 @@
 </script>
 
 <!-- svelte-ignore a11y-media-has-caption -->
-  <video
-    id={`${content.videoId}-player`}
-    playsinline
-    controls
-    style="height: 100%; width: 100%;"
-    class="overflow-hidden md:min-w-[400px] lg:min-w-[600px] aspect-video"
-    title={content.videoTitle ?? ''}
-    data-poster={content.poster}
-  >
-    {#each content.sources as source}
-      <source src={source.src} type={source.type} />
-    {/each}
-  </video>
-
-
+<video
+  id={`${content.videoId}-player`}
+  playsinline
+  controls
+  style="height: 100%; width: 100%;"
+  class="overflow-hidden md:min-w-[400px] lg:min-w-[600px] aspect-video"
+  title={content.videoTitle ?? ''}
+  data-poster={content.poster}
+>
+  {#each content.sources as source}
+    <source src={source.src} type={source.type} />
+  {/each}
+</video>

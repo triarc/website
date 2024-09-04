@@ -27,7 +27,6 @@
       image: { src: mLinkTree, alt: 'mlink logo' },
     },
     {
-
       video: {
         videoTitle: 'μLink der Kommunikationshub',
         videoId: 'mlink',
@@ -177,7 +176,7 @@
 
 <div class="bg-white">
   {#each contents as content}
-      <Block bind:content />
+    <Block bind:content />
   {/each}
 
   {#each quotes as quote}

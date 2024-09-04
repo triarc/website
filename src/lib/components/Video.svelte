@@ -17,13 +17,13 @@
 <!-- svelte-ignore a11y-media-has-caption -->
 
 <video
-    id={`${content.videoId}-player`}
-    playsinline
-    controls
-    style="height: 100%; width: 100%;"
-    class="rounded overflow-hidden aspect-video"
-    data-poster={content.poster}
-    title={content.videoTitle ?? ''}
+  id={`${content.videoId}-player`}
+  playsinline
+  controls
+  style="height: 100%; width: 100%;"
+  class="rounded overflow-hidden aspect-video"
+  data-poster={content.poster}
+  title={content.videoTitle ?? ''}
 >
   {#each content.sources as source}
     <source src={source.src} type={source.type} />
@@ -31,6 +31,7 @@
 </video>
 
 <style lang="postcss">
-    .plyr.plyr--stopped .plyr__controls { display: none }
+  .plyr.plyr--stopped .plyr__controls {
+    display: none;
+  }
 </style>
-

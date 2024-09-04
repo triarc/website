@@ -26,42 +26,24 @@
       },
     },
     {
-      title: 'AI Proof of Concept',
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      title: 'Voice Reporting',
+      content:
+        'Das AI-unterstützte Voice Reporting lässt Menschen mit Arbeitsgeräten sprechen. Das Rapportieren von Zeit, Aufwänden, Leistungen, Materialien, usw. kann vor Ort, sei es auf der Baustelle, im Sportzentrum, in der Produktionshalle, bei Kunden, usw. durch Spracheingabe erfasst werden. Ein AI-Assistenz stellt sicher, dass alle benötigten Informationen abgefragt werden, um den Rapport abzuschliessen. Danach übermittelt das Voice Reporting Tool die Spracheingaben mittels Text an die Schnittstelle ins ERP und/oder in die Reporting-Applikation, je nach Bedürfnis. Der Verwendungszweck des Voice Reporting Tool kann individuell vom Kunden definiert und entsprechend angepasst werden.',
       smallVideo: {
         videoTitle: 'AI Proof of Concept',
         videoId: 'ai',
         poster: aiPoc,
         sources: [
           {
-            src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p.webm',
+            src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p_h264.webm',
             type: 'video/webm',
           },
           {
             src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p.mp4',
             type: 'video/mp4',
           },
-        ]
-      }
-    },
-    {
-      title: 'AI Proof of Concept',
-      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-      smallVideo: {
-        videoTitle: 'AI Proof of Concept',
-        videoId: 'baustelle',
-        poster: baustelle,
-        sources: [
-          {
-            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p.mp4',
-            type: 'video/mp4',
-          },
-          {
-            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p.webm',
-            type: 'video/webm',
-          },
-        ]
-      }
+        ],
+      },
     },
     {
       title: 'μLink Data-hub',

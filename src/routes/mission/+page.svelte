@@ -12,6 +12,7 @@
 
   import teardown from '$lib/assets/img/custom-software/product_teardown.svg'
   import goals from '$lib/assets/img/intro/shared_goals.svg'
+  import baustelle from '$lib/assets/img/thumbnail/baustelle-poster.png'
 
   let contents: BlockContent[] = [
     {
@@ -24,6 +25,26 @@
         email: 'serge@triarc-labs.com',
         highlight: 'green',
         linkedin: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
+      },
+    },
+    {
+      title: 'Erfolgreich digitalisieren',
+      content:
+        'Wir sind Ihr Partner für erfolgreiche Digitalisierungsprojekte. Software nach Mass, inklusive Strategieberatung und Change Management Begleitung; alles aus einem Haus.',
+      smallVideo: {
+        videoTitle: 'Triarc auf der Baustelle',
+        videoId: 'baustelle',
+        poster: baustelle,
+        sources: [
+          {
+            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p_v2_h264.mp4',
+            type: 'video/mp4',
+          },
+          {
+            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p.webm',
+            type: 'video/webm',
+          },
+        ],
       },
     },
     {

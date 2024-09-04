@@ -96,7 +96,7 @@
   <hr />
 {/if}
 
-{#if content.title }
+{#if content.title}
   <div class="alternating md:min-h-0 group">
     <Container>
       <div
@@ -218,7 +218,7 @@
         {/if}
         {#if content.smallVideo}
           <div class="h-full w-full mt-8 group-even:mr-12 group-odd:ml-12">
-          <VideoSmall bind:content={content.smallVideo} />
+            <VideoSmall bind:content={content.smallVideo} />
           </div>
         {/if}
       </div>
@@ -236,6 +236,7 @@
     </Container>
   </div>
 {/if}
+
 <style lang="postcss">
   /*  .block-background:nth-child(odd) {*/
   /*      @apply bg-white;*/
