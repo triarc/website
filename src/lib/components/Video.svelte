@@ -29,4 +29,3 @@
     <source src={source.src} type={source.type} />
   {/each}
 </video>
-
