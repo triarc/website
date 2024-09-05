@@ -5,6 +5,7 @@
   import pascal from '$lib/assets/team/pascal.jpg?w=768&format=webp;png&metadata&enhanced'
   import mlinkLogo from '$lib/assets/img/mlink/tree.svg'
   import m3expressIcon from '$lib/assets/img/lab/m3express-icon.svg'
+  import zimmerpflanzenIcon from '$lib/assets/img/lab/zimmerpflanzen-icon.svg'
   import fairpizzaIcon from '$lib/assets/img/lab/fairpizza-icon-512.png'
   import aiPoc from '$lib/assets/img/thumbnail/ai-poc-poster.png'
   import slothiIcon from '$lib/assets/img/lab/slothi.svg'
@@ -50,6 +51,14 @@
         'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
       image: { src: mlinkLogo, alt: 'mlink logo' },
       link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' },
+    },
+    {
+      title: 'Zimmerpflanzen.de',
+      content:
+        'Ein Online-Shop für Zimmerpflanzen und Zubehör. Durch eine direkte Anbindung an die Schnittstellen der Züchter, ist die Zimmerpflanze in kürzester Zeit beim Kunden.',
+
+      image: { src: zimmerpflanzenIcon, width: 200, alt: 'zimmerpflanzen.de' },
+      link: { href: 'https://zimmerpflanzen.de', text: 'Mehr dazu', target: '_blank' },
     },
     {
       title: 'M3Express',
