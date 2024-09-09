@@ -58,14 +58,16 @@ export class EmailService {
     const today = new Date()
     const bucketFolder = `${data.firstName}_${data.lastName}_${today.getDate().toString().padStart(2, '0')}-${(today.getMonth() + 1).toString().padStart(2, '0')}-${today.getFullYear()}_${today.getHours().toString().padStart(2, '0')}-${today.getMinutes().toString().padStart(2, '0')}-${today.getSeconds().toString().padStart(2, '0')}`
     const filenames = attachments.map((file) => file.originalname).join('\n')
+
     const attachmentLinks: GitlabLink[] = []
 
     for (const file of attachments) {
       await this.gStorage.uploadFile(this.gStorage.getDefaultBucket(), file.originalname, file.buffer, bucketFolder)
-      const fileUrl = `${gCloudBaseURL}${this.gStorage.getDefaultBucket()}/${bucketFolder}/${file.originalname}`
+      const fileURI = encodeURIComponent(file.originalname)
+      const fileUrl = `${gCloudBaseURL}${this.gStorage.getDefaultBucket()}/${bucketFolder}/${fileURI}`
       const fileLink: GitlabLink = {
         title: file.originalname,
-        url: encodeURIComponent(fileUrl),
+        url: fileUrl,
       }
 
       attachmentLinks.push(fileLink)
