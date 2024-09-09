@@ -328,7 +328,9 @@
           </div>
           <div class="sm:col-span-2">
             <div class="flex justify-between">
-              <label for="arbeitgeber" class="block text-sm font-medium text-gray-900">Was liegt dir bei einem Arbeitgeber besonders am Herzen?</label>
+              <label for="arbeitgeber" class="block text-sm font-medium text-gray-900"
+                >Was liegt dir bei einem Arbeitgeber besonders am Herzen?</label
+              >
               <span id="arbeitgeber-optional" class="text-sm text-gray-500">Optional</span>
             </div>
             <div class="mt-1">
@@ -417,9 +419,15 @@
                     type="checkbox"
                     id="condition-checkbox"
                   />
-                  <label for="condition-checkbox" class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc">
-                    Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span class="decoration-red-triarc underline">Schweiz</span>
-                    oder <span class="decoration-red-triarc underline">Deutschland</span> haben. Ich bestätige, diese Bedingung zu erfüllen.
+                  <label
+                    for="condition-checkbox"
+                    class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
+                  >
+                    Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span
+                      class="decoration-red-triarc underline">Schweiz</span
+                    >
+                    oder <span class="decoration-red-triarc underline">Deutschland</span> haben. Ich bestätige, diese Bedingung
+                    zu erfüllen.
                   </label>
                 </div>
                 <!--{#if checkboxTouched && !conditionAccepted}-->
