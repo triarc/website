@@ -37,11 +37,11 @@
         poster: baustelle,
         sources: [
           {
-            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p_v2_h264.mp4',
+            src: 'https://storage.googleapis.com/triarc-website/baustelle_1080p_v2_h264.mp4',
             type: 'video/mp4',
           },
           {
-            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p_v2.webm',
+            src: 'https://storage.googleapis.com/triarc-website/baustelle_1080p_v2.webm',
             type: 'video/webm',
           },
         ],
