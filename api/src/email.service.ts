@@ -84,7 +84,7 @@ export class EmailService {
           : `#### Bewerbung von ${data.firstName} ${data.lastName} als ${data.jobListing}\n\n`
       }` +
       `Email: ${data.email}\n\n` +
-      `Lohnvorstellung: ${data.lohn}\n` +
+      `Lohnvorstellung: ${data.lohn}\n\n` +
       `Telefon: ${data.phone ?? '-'}\n\n` +
       `Nachricht: ${data.message ?? '-'}\n\n` +
       `Was liegt dir beim Arbeitgeber besonders am Herz: ${data.arbeitgeber ?? '-'}\n\n` +
