@@ -41,7 +41,7 @@
             type: 'video/mp4',
           },
           {
-            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p.webm',
+            src: 'https://storage.googleapis.com/triarc-website/baustelle-1080p_v2.webm',
             type: 'video/webm',
           },
         ],
