@@ -11,6 +11,7 @@ export interface BlockContent {
   cards?: { title: string; content: string }[]
   steps?: { title: string; content: string }[]
   items?: { title: string; content: string }[]
+  smallVideo?: VideoContent
   quote?: {
     content: string
     person: string
@@ -22,19 +23,14 @@ export interface BlockContent {
     email?: string
     highlight?: 'green' | 'blue' | 'red'
   }
-  video?: {
-    poster: string
-    sources: [
-      {
-        src: string
-        type: string
-      },
-      {
-        src: string
-        type: string
-      },
-    ]
-  }
+  video?: VideoContent
+}
+
+export interface VideoContent {
+  videoTitle?: string
+  videoId: string
+  poster: string
+  sources: { src: string; type: string }[]
 }
 
 export interface JobPosting {

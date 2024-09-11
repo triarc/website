@@ -5,7 +5,9 @@
   import pascal from '$lib/assets/team/pascal.jpg?w=768&format=webp;png&metadata&enhanced'
   import mlinkLogo from '$lib/assets/img/mlink/tree.svg'
   import m3expressIcon from '$lib/assets/img/lab/m3express-icon.svg'
+  import zimmerpflanzenIcon from '$lib/assets/img/lab/zimmerpflanzen-icon.svg'
   import fairpizzaIcon from '$lib/assets/img/lab/fairpizza-icon-512.png'
+  import aiPoc from '$lib/assets/img/thumbnail/ai-poc-poster.png'
   import slothiIcon from '$lib/assets/img/lab/slothi.svg'
   import heroImage from '$lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
@@ -24,11 +26,39 @@
       },
     },
     {
+      title: 'Voice Reporting',
+      content:
+        'Das AI-unterstützte Voice Reporting lässt Menschen mit Arbeitsgeräten sprechen. Das Rapportieren von Zeit, Aufwänden, Leistungen, Materialien, usw. kann vor Ort, sei es auf der Baustelle, im Sportzentrum, in der Produktionshalle, bei Kunden, usw. durch Spracheingabe erfasst werden. Ein AI-Assistenz stellt sicher, dass alle benötigten Informationen abgefragt werden, um den Rapport abzuschliessen. Danach übermittelt das Voice Reporting Tool die Spracheingaben mittels Text an die Schnittstelle ins ERP und/oder in die Reporting-Applikation, je nach Bedürfnis. Der Verwendungszweck des Voice Reporting Tool kann individuell vom Kunden definiert und entsprechend angepasst werden.',
+      smallVideo: {
+        videoTitle: 'AI Proof of Concept',
+        videoId: 'ai',
+        poster: aiPoc,
+        sources: [
+          {
+            src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p_h264.webm',
+            type: 'video/webm',
+          },
+          {
+            src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p.mp4',
+            type: 'video/mp4',
+          },
+        ],
+      },
+    },
+    {
       title: 'μLink Data-hub',
       content:
         'μLink ist eine Kommunikationsschnittstelle mit dem Fokus, Informationen schnell auffindbar und schnell lesbar zu machen. Es erlaubt fliessende Prozesse über Systemgrenzen hinweg und gewährleistet, dass Informationen auf allen verbundenen Systemen identisch und in Echtzeit verfügbar sind. Mit μLink lassen sich unbegrenzt Umsysteme in ein Software Ökosystem integrieren.',
       image: { src: mlinkLogo, alt: 'mlink logo' },
       link: { href: '/mlink', text: 'Mehr dazu', target: '_blank' },
+    },
+    {
+      title: 'Zimmerpflanzen.de',
+      content:
+        'Ein Online-Shop für Zimmerpflanzen und Zubehör. Durch eine direkte Anbindung an die Schnittstellen der Züchter, ist die Zimmerpflanze in kürzester Zeit beim Kunden.',
+
+      image: { src: zimmerpflanzenIcon, width: 200, alt: 'zimmerpflanzen.de' },
+      link: { href: 'https://zimmerpflanzen.de', text: 'Mehr dazu', target: '_blank' },
     },
     {
       title: 'M3Express',

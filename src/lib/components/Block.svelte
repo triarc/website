@@ -3,6 +3,8 @@
   import type { BlockContent } from '$lib/components/TypeDefinitions'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   import Container from '$lib/components/Container.svelte'
+  import Video from '$lib/components/Video.svelte'
+  import VideoSmall from '$lib/components/VideoSmall.svelte'
   export let content: BlockContent
 </script>
 
@@ -214,10 +216,23 @@
             alt={content.image.alt}
           />
         {/if}
+        {#if content.smallVideo}
+          <div class="h-full w-full mt-8 md:group-even:mr-12 md:group-odd:ml-12">
+            <VideoSmall bind:content={content.smallVideo} />
+          </div>
+        {/if}
       </div>
       <slot />
 
       <hr />
+    </Container>
+  </div>
+{/if}
+
+{#if content.video}
+  <div class="bg-blue-triarc py-8">
+    <Container>
+      <Video bind:content={content.video} />
     </Container>
   </div>
 {/if}
