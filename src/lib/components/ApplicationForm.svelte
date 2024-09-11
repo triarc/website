@@ -194,14 +194,11 @@
       <div class="py-16">
         <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Bewerbungsformular</h2>
         <h3 class="text-lg mt-3 mb-8 font-medium text-gray-500">Interessiert? Bewirb dich direkt über das Formular</h3>
-        <form
-          id="application-form"
-          on:submit|preventDefault={sendMail}
-          action="#"
-          method="POST"
-        >
+        <form id="application-form" on:submit|preventDefault={sendMail} action="#" method="POST">
           <div class="space-y-12 pb-12">
-            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+            <div
+              class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3"
+            >
               <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Personalien</h2>
               </div>
@@ -279,75 +276,77 @@
                 </div>
               </div>
             </div>
-            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+            <div
+              class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3"
+            >
               <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Job</h2>
               </div>
               <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
-          <div class="col-span-full">
-            <label for="jobListing" class="block text-sm font-medium text-gray-900">Stelle</label>
-            <div class="mt-1">
-              <select
-                name="jobListing"
-                id="jobListing"
-                bind:value={jobListing}
-                class="{isDefinedListing
-                  ? 'pointer-events-none'
-                  : ''} block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-              >
-                {#if !isDefinedListing}
-                  <option selected={jobListing === 'Initiativbewerbung'}>Initiativbewerbung</option>
-                {/if}
-                {#each availableJobs as job}
-                  <option selected={jobListing === job}>{job}</option>
-                {/each}
-              </select>
-            </div>
-          </div>
-          <div class="col-span-full">
-            <div class="flex justify-between">
-              <label for="lohn" class="block text-sm font-medium text-gray-900">Deine Lohnvorstellung</label>
-              <span id="lohn-required" class="text-sm text-gray-500">Pflichtfeld</span>
-            </div>
-            <div class="mt-1">
-              <input
-                id="lohn"
-                name="lohn"
-                type="text"
-                required
-                placeholder="90'000"
-                bind:value={lohn}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-              />
-              <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>-->
-            </div>
-          </div>
-          <div class="col-span-full">
-            <div class="flex justify-between">
-              <label for="arbeitgeber" class="block text-sm font-medium text-gray-900"
-                >Was liegt dir bei einem Arbeitgeber besonders am Herzen?</label
-              >
-              <span id="arbeitgeber-optional" class="text-sm text-gray-500">Optional</span>
-            </div>
-            <div class="mt-1">
-              <textarea
-                id="arbeitgeber"
-                name="arbeitgeber"
-                rows="4"
-                bind:value={arbeitgeber}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-                aria-describedby="message-max"
-              />
+                <div class="col-span-full">
+                  <label for="jobListing" class="block text-sm font-medium text-gray-900">Stelle</label>
+                  <div class="mt-1">
+                    <select
+                      name="jobListing"
+                      id="jobListing"
+                      bind:value={jobListing}
+                      class="{isDefinedListing
+                        ? 'pointer-events-none'
+                        : ''} block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                    >
+                      {#if !isDefinedListing}
+                        <option selected={jobListing === 'Initiativbewerbung'}>Initiativbewerbung</option>
+                      {/if}
+                      {#each availableJobs as job}
+                        <option selected={jobListing === job}>{job}</option>
+                      {/each}
+                    </select>
+                  </div>
+                </div>
+                <div class="col-span-full">
+                  <div class="flex justify-between">
+                    <label for="lohn" class="block text-sm font-medium text-gray-900">Deine Lohnvorstellung</label>
+                    <span id="lohn-required" class="text-sm text-gray-500">Pflichtfeld</span>
+                  </div>
+                  <div class="mt-1">
+                    <input
+                      id="lohn"
+                      name="lohn"
+                      type="text"
+                      required
+                      placeholder="90'000"
+                      bind:value={lohn}
+                      class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                    />
+                    <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>-->
+                  </div>
+                </div>
+                <div class="col-span-full">
+                  <div class="flex justify-between">
+                    <label for="arbeitgeber" class="block text-sm font-medium text-gray-900"
+                      >Was liegt dir bei einem Arbeitgeber besonders am Herzen?</label
+                    >
+                    <span id="arbeitgeber-optional" class="text-sm text-gray-500">Optional</span>
+                  </div>
+                  <div class="mt-1">
+                    <textarea
+                      id="arbeitgeber"
+                      name="arbeitgeber"
+                      rows="4"
+                      bind:value={arbeitgeber}
+                      class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                      aria-describedby="message-max"
+                    />
                   </div>
                 </div>
               </div>
             </div>
-          <!--        <input name="documents" id="documents" bind:value={appFiles} class="hidden"/>-->
-            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+            <!--        <input name="documents" id="documents" bind:value={appFiles} class="hidden"/>-->
+            <div
+              class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3"
+            >
               <div>
-                <h2 class="text-base font-semibold leading-7 text-gray-900">
-                  Anhänge
-                </h2>
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Anhänge</h2>
               </div>
               <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
                 <div class="col-span-full flex flex-col">
@@ -393,13 +392,11 @@
                   <!--{/if}-->
                 </div>
                 {#if appFiles.length !== 0}
-                <div class="col-span-full flex flex-col">
-                  <div class="flex">
-                    <label for="dateien" class="block text-sm font-medium text-gray-900"
-                    >Hochgeladene Dateien</label
-                    >
-                  </div>
-                  <div class="mt-1">
+                  <div class="col-span-full flex flex-col">
+                    <div class="flex">
+                      <label for="dateien" class="block text-sm font-medium text-gray-900">Hochgeladene Dateien</label>
+                    </div>
+                    <div class="mt-1">
                       {#each appFiles as file}
                         <div class="py-1 flex flex-row gap-x-4 items-center">
                           <button type="button" on:click={() => checkPDF(file)}>
@@ -417,35 +414,36 @@
                           {/if}
                         </div>
                       {/each}
-
+                    </div>
                   </div>
-                </div>
                 {/if}
               </div>
             </div>
-            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+            <div
+              class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3"
+            >
               <div>
                 <h2 class="text-base font-semibold leading-7 text-gray-900">Bemerkungen</h2>
               </div>
               <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
-            <div class="col-span-full">
-              <div class="flex justify-between">
-                <label for="message" class="block text-sm font-medium text-gray-900">Nachricht</label>
-                <span id="message-optional" class="text-sm text-gray-500">Optional</span>
-              </div>
-              <div class="mt-1">
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                bind:value={message}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-                aria-describedby="message-max"
-              />
+                <div class="col-span-full">
+                  <div class="flex justify-between">
+                    <label for="message" class="block text-sm font-medium text-gray-900">Nachricht</label>
+                    <span id="message-optional" class="text-sm text-gray-500">Optional</span>
+                  </div>
+                  <div class="mt-1">
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      bind:value={message}
+                      class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                      aria-describedby="message-max"
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
           </div>
           <div class="sm:col-span-2 flex flex-col">
             <div class="flex flex-col md:flex-row md:justify-between">

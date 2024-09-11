@@ -338,17 +338,14 @@
   }
 
   :global:nth-child(even of .alternating) .form-section {
-      @apply border-b-gray-900/20
+    @apply border-b-gray-900/20;
   }
 
   :global:nth-child(even of .alternating) .drop-area {
-      @apply bg-white
+    @apply bg-white;
   }
 
   :global:nth-child(even of .alternating) .drop-area:hover {
-      @apply bg-gray-100
+    @apply bg-gray-100;
   }
-
-
-
 </style>
