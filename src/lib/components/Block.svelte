@@ -217,7 +217,7 @@
           />
         {/if}
         {#if content.smallVideo}
-          <div class="h-full w-full mt-8 group-even:mr-12 group-odd:ml-12">
+          <div class="h-full w-full mt-8 md:group-even:mr-12 md:group-odd:ml-12">
             <VideoSmall bind:content={content.smallVideo} />
           </div>
         {/if}
