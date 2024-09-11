@@ -193,15 +193,98 @@
     <Container>
       <div class="py-16">
         <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Bewerbungsformular</h2>
-        <h3 class="text-lg mt-3 font-medium text-gray-500">Interessiert? Bewirb dich direkt über das Formular</h3>
+        <h3 class="text-lg mt-3 mb-8 font-medium text-gray-500">Interessiert? Bewirb dich direkt über das Formular</h3>
         <form
           id="application-form"
           on:submit|preventDefault={sendMail}
           action="#"
           method="POST"
-          class="mt-6 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
         >
-          <div class="sm:col-span-2">
+          <div class="space-y-12 pb-12">
+            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+              <div>
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Personalien</h2>
+              </div>
+              <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+                <div class="sm:col-span-3">
+                  <div class="flex justify-between">
+                    <label for="firstName" class="block text-sm font-medium text-gray-900">Vorname</label>
+                    <span id="first-name-required" class="text-sm text-gray-500">Pflichtfeld</span>
+                  </div>
+                  <div class="mt-1">
+                    <input
+                      type="text"
+                      name="firstName"
+                      id="firstName"
+                      required
+                      autocomplete="given-name"
+                      bind:value={firstName}
+                      class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                    />
+                    <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte Vornamen eingeben</span>-->
+                  </div>
+                </div>
+                <div class="sm:col-span-3">
+                  <div class="flex justify-between">
+                    <label for="lastName" class="block text-sm font-medium text-gray-900">Nachname</label>
+                    <span id="last-name-required" class="text-sm text-gray-500">Pflichtfeld</span>
+                  </div>
+                  <div class="mt-1">
+                    <input
+                      type="text"
+                      name="lastName"
+                      id="lastName"
+                      required
+                      autocomplete="family-name"
+                      bind:value={lastName}
+                      class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                    />
+                    <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte Nachnamen eingeben</span>-->
+                  </div>
+                </div>
+                <div class="sm:col-span-3">
+                  <div class="flex justify-between">
+                    <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
+                    <span id="email-required" class="text-sm text-gray-500">Pflichtfeld</span>
+                  </div>
+                  <div class="mt-1">
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      autocomplete="email"
+                      bind:value={email}
+                      class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                    />
+                    <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>-->
+                  </div>
+                </div>
+                <div class="sm:col-span-3">
+                  <div class="flex justify-between">
+                    <label for="phone" class="block text-sm font-medium text-gray-900">Telefon</label>
+                    <span id="phone-optional" class="text-sm text-gray-500">Optional</span>
+                  </div>
+                  <div class="mt-1">
+                    <input
+                      type="text"
+                      name="phone"
+                      id="phone"
+                      autocomplete="tel"
+                      bind:value={phone}
+                      class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                      aria-describedby="phone-optional"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+              <div>
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Job</h2>
+              </div>
+              <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+          <div class="col-span-full">
             <label for="jobListing" class="block text-sm font-medium text-gray-900">Stelle</label>
             <div class="mt-1">
               <select
@@ -221,78 +304,7 @@
               </select>
             </div>
           </div>
-          <div>
-            <div class="flex justify-between">
-              <label for="firstName" class="block text-sm font-medium text-gray-900">Vorname</label>
-              <span id="first-name-required" class="text-sm text-gray-500">Pflichtfeld</span>
-            </div>
-            <div class="mt-1">
-              <input
-                type="text"
-                name="firstName"
-                id="firstName"
-                required
-                autocomplete="given-name"
-                bind:value={firstName}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-              />
-              <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte Vornamen eingeben</span>-->
-            </div>
-          </div>
-          <div>
-            <div class="flex justify-between">
-              <label for="lastName" class="block text-sm font-medium text-gray-900">Nachname</label>
-              <span id="last-name-required" class="text-sm text-gray-500">Pflichtfeld</span>
-            </div>
-            <div class="mt-1">
-              <input
-                type="text"
-                name="lastName"
-                id="lastName"
-                required
-                autocomplete="family-name"
-                bind:value={lastName}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-              />
-              <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte Nachnamen eingeben</span>-->
-            </div>
-          </div>
-          <div>
-            <div class="flex justify-between">
-              <label for="email" class="block text-sm font-medium text-gray-900">Email</label>
-              <span id="email-required" class="text-sm text-gray-500">Pflichtfeld</span>
-            </div>
-            <div class="mt-1">
-              <input
-                id="email"
-                name="email"
-                type="email"
-                required
-                autocomplete="email"
-                bind:value={email}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-              />
-              <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>-->
-            </div>
-          </div>
-          <div>
-            <div class="flex justify-between">
-              <label for="phone" class="block text-sm font-medium text-gray-900">Telefon</label>
-              <span id="phone-optional" class="text-sm text-gray-500">Optional</span>
-            </div>
-            <div class="mt-1">
-              <input
-                type="text"
-                name="phone"
-                id="phone"
-                autocomplete="tel"
-                bind:value={phone}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-                aria-describedby="phone-optional"
-              />
-            </div>
-          </div>
-          <div class="sm:col-span-2">
+          <div class="col-span-full">
             <div class="flex justify-between">
               <label for="lohn" class="block text-sm font-medium text-gray-900">Deine Lohnvorstellung</label>
               <span id="lohn-required" class="text-sm text-gray-500">Pflichtfeld</span>
@@ -310,23 +322,7 @@
               <!--            <span class="hidden text-red-triarc py-1 validation-message">Bitte gültige E-Mail Adresse eingeben</span>-->
             </div>
           </div>
-          <div class="sm:col-span-2">
-            <div class="flex justify-between">
-              <label for="message" class="block text-sm font-medium text-gray-900">Nachricht</label>
-              <span id="message-optional" class="text-sm text-gray-500">Optional</span>
-            </div>
-            <div class="mt-1">
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                bind:value={message}
-                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
-                aria-describedby="message-max"
-              />
-            </div>
-          </div>
-          <div class="sm:col-span-2">
+          <div class="col-span-full">
             <div class="flex justify-between">
               <label for="arbeitgeber" class="block text-sm font-medium text-gray-900"
                 >Was liegt dir bei einem Arbeitgeber besonders am Herzen?</label
@@ -342,78 +338,121 @@
                 class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                 aria-describedby="message-max"
               />
+                  </div>
+                </div>
+              </div>
+            </div>
+          <!--        <input name="documents" id="documents" bind:value={appFiles} class="hidden"/>-->
+            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+              <div>
+                <h2 class="text-base font-semibold leading-7 text-gray-900">
+                  Anhänge
+                </h2>
+              </div>
+              <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+                <div class="col-span-full flex flex-col">
+                  <div class="flex justify-between mb-1">
+                    <label for="dropzone" class="block text-sm font-medium text-gray-900"
+                      >Unterlagen (Lebenslauf, Motivationsschreiben, Zeugnisse etc.)</label
+                    >
+                    <span id="message-optional" class="text-sm text-gray-500">Mindestens ein Dokument</span>
+                  </div>
+                  <Dropzone
+                    isValid={filesValid}
+                    id="dropzone"
+                    on:drop={dropHandle}
+                    on:dragover={(event) => {
+                      event.preventDefault()
+                    }}
+                    on:blur={() => checkFiles(appFiles)}
+                    on:change={handleChange}
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="mb-3 w-10 h-10 text-gray-400"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      ><path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                      /></svg
+                    >
+                    <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
+                      <span class="text-blue-triarc font-semibold">Zum hochladen klicken</span> oder Files ziehen
+                    </p>
+                    <p class="text-xs text-gray-500 dark:text-gray-400">PDF (Max. 10Mb)</p>
+                  </Dropzone>
+                  <!--{#if (!filesValid)}-->
+                  <!--  {#each Object.values(fileValidationState) as value}-->
+                  <!--    <span class="text-red-triarc py-1 validation-message">{value}</span>-->
+                  <!--  {/each}-->
+                  <!--{/if}-->
+                </div>
+                {#if appFiles.length !== 0}
+                <div class="col-span-full flex flex-col">
+                  <div class="flex">
+                    <label for="dateien" class="block text-sm font-medium text-gray-900"
+                    >Hochgeladene Dateien</label
+                    >
+                  </div>
+                  <div class="mt-1">
+                      {#each appFiles as file}
+                        <div class="py-1 flex flex-row gap-x-4 items-center">
+                          <button type="button" on:click={() => checkPDF(file)}>
+                            <img class="min-w-4 min-h-4" src={paperclip} alt="attachment icon" />
+                          </button>
+                          <p class="w-full md:w-96 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</p>
+                          <p class="min-w-16 w-16">{bytesToMB(file.size)}</p>
+                          <button
+                            class="rounded-md px-3 text-white bg-blue-triarc"
+                            type="button"
+                            on:click={() => deleteFile(file)}>Delete</button
+                          >
+                          {#if file.size > maxFileSize}
+                            <p class="text-red-500">Dateigrösse überschritten</p>
+                          {/if}
+                        </div>
+                      {/each}
+
+                  </div>
+                </div>
+                {/if}
+              </div>
+            </div>
+            <div class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3">
+              <div>
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Bemerkungen</h2>
+              </div>
+              <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+            <div class="col-span-full">
+              <div class="flex justify-between">
+                <label for="message" class="block text-sm font-medium text-gray-900">Nachricht</label>
+                <span id="message-optional" class="text-sm text-gray-500">Optional</span>
+              </div>
+              <div class="mt-1">
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                bind:value={message}
+                class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
+                aria-describedby="message-max"
+              />
+              </div>
             </div>
           </div>
-          <!--        <input name="documents" id="documents" bind:value={appFiles} class="hidden"/>-->
-          <div class="sm:col-span-2 flex flex-col">
-            <div class="flex justify-between">
-              <label for="dropzone" class="block text-sm font-medium text-gray-900"
-                >Unterlagen (Lebenslauf, Motivationsschreiben, Zeugnisse etc.)</label
-              >
-              <span id="message-optional" class="text-sm text-gray-500">Mindestens ein Dokument</span>
-            </div>
-            <Dropzone
-              isValid={filesValid}
-              id="dropzone"
-              on:drop={dropHandle}
-              on:dragover={(event) => {
-                event.preventDefault()
-              }}
-              on:blur={() => checkFiles(appFiles)}
-              on:change={handleChange}
-            >
-              <svg
-                aria-hidden="true"
-                class="mb-3 w-10 h-10 text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-                ><path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                /></svg
-              >
-              <p class="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                <span class="font-semibold">Zum hochladen klicken</span> oder Files ziehen
-              </p>
-              <p class="text-xs text-gray-500 dark:text-gray-400">PDF (Max. 10Mb)</p>
-            </Dropzone>
-            <!--{#if (!filesValid)}-->
-            <!--  {#each Object.values(fileValidationState) as value}-->
-            <!--    <span class="text-red-triarc py-1 validation-message">{value}</span>-->
-            <!--  {/each}-->
-            <!--{/if}-->
-            <div class="pt-8">
-              {#if appFiles}
-                {#each appFiles as file}
-                  <div class="py-1 flex flex-row gap-x-4 items-center">
-                    <button type="button" on:click={() => checkPDF(file)}>
-                      <img class="min-w-4 min-h-4" src={paperclip} alt="attachment icon" />
-                    </button>
-                    <p class="w-96 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</p>
-                    <p class="w-16">{bytesToMB(file.size)}</p>
-                    <button
-                      class="rounded-md px-2 text-white bg-red-triarc"
-                      type="button"
-                      on:click={() => deleteFile(file)}>Delete</button
-                    >
-                    {#if file.size > maxFileSize}
-                      <p class="text-red-500">Dateigrösse überschritten</p>
-                    {/if}
-                  </div>
-                {/each}
-              {/if}
-            </div>
+        </div>
           </div>
           <div class="sm:col-span-2 flex flex-col">
             <div class="flex flex-col md:flex-row md:justify-between">
               <div class="flex flex-col">
                 <div class="flex md:pr-8">
                   <input
-                    class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-300"
+                    class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-600"
                     required
                     bind:checked={conditionAccepted}
                     type="checkbox"
@@ -473,7 +512,7 @@
               </button>
             </div>
           </div>
-          <div class="sm:col-span-2 flex flex-col md:gap-x-6">
+          <div class="col-span-full flex flex-col md:gap-x-6">
             {#if errorMessages.length && !sent && !valid}
               <div class="rounded-md bg-red-triarc bg-opacity-10 p-4 mt-2 flex-grow">
                 <div class="flex">

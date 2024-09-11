@@ -20,7 +20,7 @@
 <button
   class="{isValid
     ? ''
-    : 'border-red-triarc'} flex flex-col justify-center items-center w-full h-40 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer hover:bg-gray-100"
+    : 'border-red-triarc'} drop-area flex flex-col justify-center items-center w-full h-40 bg-gray-50 rounded-lg border-2 border-gray-300 border-dashed cursor-pointer hover:bg-gray-100"
   on:keydown={keydown}
   on:click={onClick}
   on:focus
