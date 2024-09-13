@@ -1,7 +1,5 @@
 <script lang="ts">
   import Block from '$lib/components/Block.svelte'
-  import Video from '$lib/components/Video.svelte'
-  import Container from '$lib/components/Container.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
 
@@ -27,8 +25,9 @@
       image: { src: mLinkTree, alt: 'mlink logo' },
     },
     {
-      title: 'μLink der Kommunikationshub',
       video: {
+        videoTitle: 'μLink der Kommunikationshub',
+        videoId: 'mlink',
         poster: mLinkPoster,
         sources: [
           {
@@ -175,15 +174,7 @@
 
 <div class="bg-white">
   {#each contents as content}
-    {#if content.video}
-      <div class="bg-blue-triarc py-8">
-        <Container>
-          <Video bind:content={content.video} />
-        </Container>
-      </div>
-    {:else}
-      <Block bind:content />
-    {/if}
+    <Block bind:content />
   {/each}
 
   {#each quotes as quote}
