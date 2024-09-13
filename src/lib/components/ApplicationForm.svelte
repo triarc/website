@@ -26,6 +26,7 @@
   let valid = true
   let filesValid = true
   let conditionAccepted = false
+  let noAgencyAccepted = false;
 
   let errorMessages: string[] = []
   let fileValidationState: Record<string, string> = {
@@ -69,6 +70,9 @@
     if (sending) {
       valid = false
     }
+    if (sent) {
+      valid = false;
+    }
     if (!firstName) {
       valid = false
     }
@@ -87,10 +91,10 @@
     if (!conditionAccepted) {
       valid = false
     }
-    if (appFiles.reduce((sum, current) => sum + current.size, 0) > maxFileSize) {
+    if (!noAgencyAccepted) {
       valid = false
     }
-    if (sending) {
+    if (appFiles.reduce((sum, current) => sum + current.size, 0) > maxFileSize) {
       valid = false
     }
   }
@@ -169,23 +173,6 @@
       error = true
     }
   }
-  // async function send() {
-  //   const baseUrl = 'https://chatbot.triarc-labs.com'
-  //   const chatMessage = `Person: ${firstName} ${lastName}\nBetreff: ${subject}\nNachricht: ${message}\nEmail: ${email}\nTelefon: ${
-  //     phone ?? '-'
-  //   }`
-  //   sending = true
-  //   await fetch(`${baseUrl}/chat/send`, {
-  //     body: JSON.stringify({ message: chatMessage }),
-  //     method: 'POST',
-  //     headers: {
-  //       'Content-Type': 'application/json',
-  //     },
-  //   }).then(() => {
-  //     sending = false
-  //     sent = true
-  //   })
-  // }
 </script>
 
 <div class="alternating">
@@ -407,7 +394,7 @@
                           <button
                             class="rounded-md px-3 text-white bg-blue-triarc"
                             type="button"
-                            on:click={() => deleteFile(file)}>Delete</button
+                            on:click={() => deleteFile(file)}>Löschen</button
                           >
                           {#if file.size > maxFileSize}
                             <p class="text-red-500">Dateigrösse überschritten</p>
@@ -444,70 +431,92 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="sm:col-span-2 flex flex-col">
-            <div class="flex flex-col md:flex-row md:justify-between">
-              <div class="flex flex-col">
-                <div class="flex md:pr-8">
-                  <input
-                    class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-600"
-                    required
-                    bind:checked={conditionAccepted}
-                    type="checkbox"
-                    id="condition-checkbox"
-                  />
-                  <label
-                    for="condition-checkbox"
-                    class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
-                  >
-                    Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span
-                      class="decoration-red-triarc underline">Schweiz</span
-                    >
-                    oder <span class="decoration-red-triarc underline">Deutschland</span> haben. Ich bestätige, diese Bedingung
-                    zu erfüllen.
-                  </label>
-                </div>
-                <!--{#if checkboxTouched && !conditionAccepted}-->
-                <!--<span class="text-red-triarc py-1 validation-message">Bitte akzeptiere die Bedingung.</span>-->
-                <!--{/if}-->
+            <div
+              class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3"
+            >
+              <div>
+                <h2 class="text-base font-semibold leading-7 text-gray-900">Bestätigung</h2>
               </div>
-              <button
-                type="submit"
-                disabled={sent}
-                class="mt-4 md:mt-0 max-h-[50px] min-w-40 w-full items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-green-triarc px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
-              >
-                {#if sending}
-                  <svg
-                    class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                  >
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
-                    <path
-                      class="opacity-75"
-                      fill="currentColor"
-                      d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                    />
-                  </svg>
-                {/if}
-                {#if sent}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    class="h-5 w-5"
-                    ><path
-                      fill-rule="evenodd"
-                      d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                      clip-rule="evenodd"
-                    /></svg
-                  >
-                {:else}
-                  Absenden
-                {/if}
-              </button>
+              <div class="grid max-w-2xl grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6 md:col-span-2">
+                <div class="col-span-full">
+                  <div class="flex flex-col items-start gap-y-3">
+                    <div class="flex md:pr-8">
+                      <input
+                        class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-600"
+                        required
+                        bind:checked={conditionAccepted}
+                        type="checkbox"
+                        id="condition-checkbox"
+                      />
+                      <label
+                        for="condition-checkbox"
+                        class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
+                      >
+                        Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span
+                        class="decoration-red-triarc underline">Schweiz</span
+                      >
+                        oder <span class="decoration-red-triarc underline">Deutschland</span> haben. Ich bestätige, diese Bedingung
+                        zu erfüllen.
+                      </label>
+                    </div>
+                    <div class="flex md:pr-8">
+                      <input
+                        class="self-center focus:border-blue-triarc focus:ring-blue-triarc shadow-sm py-2 px-2 rounded-md border-gray-600"
+                        required
+                        bind:checked={noAgencyAccepted}
+                        type="checkbox"
+                        id="condition-checkbox"
+                      />
+                      <label
+                        for="condition-checkbox"
+                        class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
+                      >
+                        Wir akzeptieren keine Bewerbungen über Personalvermittlern oder Headhuntern. Ich bestätige, dass ich mich direkt bewerbe.
+                      </label>
+                    </div>
+                    <!--{#if checkboxTouched && !conditionAccepted}-->
+                    <!--<span class="text-red-triarc py-1 validation-message">Bitte akzeptiere die Bedingung.</span>-->
+                    <!--{/if}-->
+                    <button
+                      type="submit"
+                      disabled={sent}
+                      class="mt-4 md:mt-0 max-h-[50px] items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc hover:bg-blue-triarc/90 disabled:bg-blue-triarc/30 px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
+                    >
+                      {#if sending}
+                        <svg
+                          class="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" />
+                          <path
+                            class="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                          />
+                        </svg>
+                      {/if}
+                      {#if sent}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          aria-hidden="true"
+                          class="h-5 w-5"
+                        ><path
+                          fill-rule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clip-rule="evenodd"
+                        /></svg
+                        >
+                      {:else}
+                        Absenden
+                      {/if}
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="col-span-full flex flex-col md:gap-x-6">
