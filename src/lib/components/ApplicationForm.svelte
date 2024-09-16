@@ -26,7 +26,7 @@
   let valid = true
   let filesValid = true
   let conditionAccepted = false
-  let noAgencyAccepted = false;
+  let noAgencyAccepted = false
 
   let errorMessages: string[] = []
   let fileValidationState: Record<string, string> = {
@@ -71,7 +71,7 @@
       valid = false
     }
     if (sent) {
-      valid = false;
+      valid = false
     }
     if (!firstName) {
       valid = false
@@ -453,10 +453,10 @@
                         class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
                       >
                         Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span
-                        class="decoration-red-triarc underline">Schweiz</span
-                      >
-                        oder <span class="decoration-red-triarc underline">Deutschland</span> haben. Ich bestätige, diese Bedingung
-                        zu erfüllen.
+                          class="decoration-red-triarc underline">Schweiz</span
+                        >
+                        oder <span class="decoration-red-triarc underline">Deutschland</span> haben. Ich bestätige, diese
+                        Bedingung zu erfüllen.
                       </label>
                     </div>
                     <div class="flex md:pr-8">
@@ -471,7 +471,8 @@
                         for="condition-checkbox"
                         class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
                       >
-                        Wir akzeptieren keine Bewerbungen über Personalvermittlern oder Headhuntern. Ich bestätige, dass ich mich direkt bewerbe.
+                        Wir akzeptieren keine Bewerbungen über Personalvermittlern oder Headhuntern. Ich bestätige, dass
+                        ich mich direkt bewerbe.
                       </label>
                     </div>
                     <!--{#if checkboxTouched && !conditionAccepted}-->
@@ -479,8 +480,8 @@
                     <!--{/if}-->
                     <button
                       type="submit"
-                      disabled={sent}
-                      class="mt-4 md:mt-0 max-h-[50px] items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc hover:bg-blue-triarc/90 disabled:bg-blue-triarc/30 px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"
+                      disabled={sent || sending}
+                      class="min-w-40 sm:w-auto mt-4 max-h-[50px] items-center inline-flex justify-center rounded-md border border-transparent bg-blue-triarc hover:bg-blue-triarc/90 disabled:bg-blue-triarc/30 px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2"
                     >
                       {#if sending}
                         <svg
@@ -504,11 +505,11 @@
                           fill="currentColor"
                           aria-hidden="true"
                           class="h-5 w-5"
-                        ><path
-                          fill-rule="evenodd"
-                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
-                          clip-rule="evenodd"
-                        /></svg
+                          ><path
+                            fill-rule="evenodd"
+                            d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                            clip-rule="evenodd"
+                          /></svg
                         >
                       {:else}
                         Absenden
