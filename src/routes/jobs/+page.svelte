@@ -8,7 +8,7 @@
   import Button from '$lib/components/Button.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import CompanyAbout from '$lib/components/CompanyAbout.svelte'
-  import { Initiativbewerbung, JobListings, JobPostings } from '$lib/content/job-listings'
+  import { Initiativbewerbung, JobPostings } from '$lib/content/job-listings'
   import { DetailedJobListings } from '$lib/content/job-listings.js'
   const listedJob = 'Initiativbewerbung'
 
