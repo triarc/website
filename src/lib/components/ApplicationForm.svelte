@@ -278,7 +278,7 @@
                       id="jobListing"
                       bind:value={jobListing}
                       class="{isDefinedListing
-                        ? 'pointer-events-none'
+                        ? 'pointer-events-none bg-none'
                         : ''} block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                     >
                       {#if !isDefinedListing}

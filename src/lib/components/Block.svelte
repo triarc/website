@@ -103,10 +103,25 @@
         class="flex items-center relative pb-16 pt-8 md:py-32 flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
       >
         <div class="">
-          <h2 class="mt-3 text-2xl font-bold text-gray-600">
-            <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-            {@html content.title}
-          </h2>
+          <div class="flex flex-col sm:flex-row">
+            <h2 class="mt-3 text-2xl font-bold text-gray-600">
+              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+              {@html content.title}
+            </h2>
+            {#if content.jobDetails}
+              {#if content.jobDetails?.currentlyHiring}
+                <span
+                  class="font-bold self-start sm:self-end sm:mb-0.5 flex-grow-0 my-3 sm:mt-0 block sm:inline sm:mx-3 text-base bg-blue-triarc/20 text-blue-triarc px-3 py-1 rounded-md"
+                  >Offene Stellen</span
+                >
+              {:else if !content.jobDetails?.currentlyHiring}
+                <span
+                  class="font-bold self-start sm:self-end sm:mb-0.5 flex-grow-0 my-3 sm:mt-0 sm:inline sm:mx-3 text-base bg-gray-200 text-gray-800 px-3 py-1 rounded-md"
+                  >Zurzeit keine offenen Stellen</span
+                >
+              {/if}
+            {/if}
+          </div>
           {#if content.content}
             <p class="mt-2 text-base leading-6 text-gray-600">
               <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->

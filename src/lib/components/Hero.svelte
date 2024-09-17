@@ -19,8 +19,10 @@
   </div>
   <Container>
     <div class="py-24 sm:py-32">
-      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{title}</h1>
-      <p class="mt-6 max-w-3xl text-xl text-white">{content}</p>
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{@html title}</h1>
+      <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+      <p class="mt-6 max-w-3xl text-xl text-white">{@html content}</p>
     </div>
   </Container>
 </div>
