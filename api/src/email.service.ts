@@ -19,12 +19,18 @@ export class ApplicationFormDto {
   @IsEmail()
   @IsNotEmpty()
   email: string
+  @IsString()
+  @IsNotEmpty()
+  lohn: string
   @IsOptional()
   @IsString()
   phone?: string
   @IsOptional()
   @IsString()
   message?: string
+  @IsOptional()
+  @IsString()
+  arbeitgeber?: string
 }
 
 export interface GitlabLink {
@@ -82,8 +88,10 @@ export class EmailService {
           : `#### Bewerbung von ${data.firstName} ${data.lastName} als ${data.jobListing}\n\n`
       }` +
       `Email: ${data.email}\n\n` +
+      `Lohnvorstellung: ${data.lohn}\n\n` +
       `Telefon: ${data.phone ?? '-'}\n\n` +
       `Nachricht: ${data.message ?? '-'}\n\n` +
+      `Was liegt dir beim Arbeitgeber besonders am Herz: ${data.arbeitgeber ?? '-'}\n\n` +
       `Anhang:\n` +
       attachmentLinks.map((link) => `- [${link.title}](${link.url})`).join('\n\n')
 
@@ -97,8 +105,10 @@ export class EmailService {
       `Vorname: ${data.firstName}\n` +
       `Nachname: ${data.lastName}\n` +
       `Email: ${data.email}\n` +
+      `Lohnvorstellung: ${data.lohn}\n` +
       `Telefon: ${data.phone ?? '-'}\n` +
       `Nachricht: ${data.message ?? '-'}\n\n` +
+      `Was liegt dir beim Arbeitgeber besonders am Herz: ${data.arbeitgeber ?? '-'}\n\n` +
       `Anhang:\n` +
       `${filenames}\n\n` +
       `Vielen Dank für Deine Bewerbung, wir melden uns so schnell wie möglich bei Dir.`
