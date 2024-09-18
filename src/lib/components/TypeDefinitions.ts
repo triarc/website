@@ -12,7 +12,7 @@ export interface BlockContent {
   steps?: { title: string; content: string }[]
   items?: { title: string; content: string }[]
   smallVideo?: VideoContent
-  jobDetails?: { currentlyHiring: boolean; slug: string; jobName: string }
+  jobDetails?: { currentlyHiring: boolean; jobName: string; jobPensum: string }
   quote?: Quote
   video?: VideoContent
 }
@@ -27,6 +27,12 @@ export interface Quote {
   linkedin?: string
   email?: string
   highlight?: 'green' | 'blue' | 'red'
+}
+
+export interface JobDetails {
+  currentlyHiring: boolean
+  jobName: string
+  jobPensum: string
 }
 
 export interface VideoContent {

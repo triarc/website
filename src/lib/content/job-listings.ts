@@ -5,6 +5,10 @@ import beHero from '$lib/assets/img/jobs/be_the_hero.svg'
 import cloud from '$lib/assets/img/jobs/cloud_hosting.svg'
 import initiative from '$lib/assets/img/jobs/exploring.svg'
 import checklist from '$lib/assets/img/jobs/list.svg'
+import sales from '$lib/assets/img/jobs/sales.svg'
+import design from '$lib/assets/img/jobs/design.svg'
+import office from '$lib/assets/img/jobs/office.svg'
+import projectlead from '$lib/assets/img/jobs/projectlead.svg'
 
 // Serialized to json
 export const JobPostings: JobPosting[] = [
@@ -74,7 +78,7 @@ export const DetailedJobListings: { slug: string; BasicJobInfo: BlockContent; Ex
   {
     slug: 'junior',
     BasicJobInfo: {
-      jobDetails: { currentlyHiring: false, slug: 'junior', jobName: 'Junior Software Engineer' },
+      jobDetails: { currentlyHiring: false, jobName: 'Junior Software Engineer', jobPensum: '80-100%' },
       title: '<span class="text-sm">wir suchen</span><br/>Junior Software Engineer',
       content:
         'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
@@ -94,7 +98,7 @@ export const DetailedJobListings: { slug: string; BasicJobInfo: BlockContent; Ex
   {
     slug: 'professional',
     BasicJobInfo: {
-      jobDetails: { currentlyHiring: false, slug: 'professional', jobName: 'Professional Software Engineer' },
+      jobDetails: { currentlyHiring: false, jobName: 'Professional Software Engineer', jobPensum: '80-100%' },
       title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
       content:
         'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
@@ -124,7 +128,7 @@ export const DetailedJobListings: { slug: string; BasicJobInfo: BlockContent; Ex
   {
     slug: 'senior',
     BasicJobInfo: {
-      jobDetails: { currentlyHiring: true, slug: 'senior', jobName: 'Senior Software Engineer' },
+      jobDetails: { currentlyHiring: true, jobName: 'Senior Software Engineer', jobPensum: '80-100%' },
       title: '<span class="text-sm">Wir suchen</span><br/>Senior Software Engineer',
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
@@ -157,8 +161,8 @@ export const DetailedJobListings: { slug: string; BasicJobInfo: BlockContent; Ex
     BasicJobInfo: {
       jobDetails: {
         currentlyHiring: false,
-        slug: 'devops',
         jobName: '(Dev)Ops Engineer',
+        jobPensum: '80-100%',
       },
       title: '<span class="text-sm">Wir suchen</span><br/>(Dev)Ops Engineer',
       content:
@@ -186,61 +190,182 @@ export const DetailedJobListings: { slug: string; BasicJobInfo: BlockContent; Ex
       ],
     },
   },
+  {
+    slug: 'sales',
+    BasicJobInfo: {
+      jobDetails: {
+        currentlyHiring: false,
+        jobName: 'Technical Sales',
+        jobPensum: '80-100%',
+      },
+      title: '<span class="text-sm">Wir suchen</span><br/>Technical Sales',
+      content:
+        'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
+
+      image: { src: sales, alt: 'Dev/Ops Engineer' },
+      bulletPoints: ['Lorem Ipsum', 'Lorem Ipsum', 'Lorem Ipsum'],
+    },
+    ExtendedJobInfo: {
+      title: 'Anforderungen',
+      content: 'Was erwarten wir konkret von dir?',
+      image: { src: checklist, alt: 'Requirements' },
+      bulletPoints: [
+        'Abschluss in Informatik',
+        'Idealerweise 5 Jahre Berufserfahrung (Softwareentwicklungs- und/oder Integrationsprojekte und/oder Consulting)',
+        'Du hast eine hohe Sozialkompetenz und gehst empathisch auf Dein Gegenüber zu',
+        'Du pflegst mit Begeisterung ein breites Netzwerk und kannst Dich gut auch in neue Gruppen integrieren',
+        'Du kannst ein komplexes Problem erfassen und konstruktive Lösungsansätze erarbeiten. Diese Lösungsansätze präsentierst Du gerne und kannst diese auch überzeugend in einer Offerte darstellen',
+        'Du verstehst die Anliegen unserer Kunden auch aus unternehmerischer Sicht',
+        'Du hast sehr gute Deutsch- und Englisch-Kenntnisse',
+      ],
+    },
+  },
+  {
+    slug: 'design',
+    BasicJobInfo: {
+      jobDetails: {
+        currentlyHiring: false,
+        jobName: 'UI/UX Designer',
+        jobPensum: '80-100%',
+      },
+      title: '<span class="text-sm">Wir suchen</span><br/>UI/UX Designer',
+      content:
+        'Du arbeitest eng mit Kunden zusammen, um Projektanforderungen zu sammeln und aufzubereiten. Du entwickelst Designideen und visualisierst diese durch Storyboards, Prozessabläufe und Seitenübersichten. Dabei gestaltest du grafische Benutzeroberflächen für Mobile- und Web-Anwendungen, erstellst UI-Konzepte und Prototypen und schaffst originelle Grafiken. Zudem identifizierst und behebst du UX-Probleme in bestehenden Projekten und setzt Stilstandards für Schriftarten, Farben und Bilder um.',
+      image: { src: design, alt: 'Dev/Ops Engineer' },
+      bulletPoints: ['Lorem Ipsum', 'Lorem Ipsum', 'Lorem Ipsum'],
+    },
+    ExtendedJobInfo: {
+      title: 'Anforderungen',
+      content: 'Was erwarten wir konkret von dir?',
+      image: { src: checklist, alt: 'Requirements' },
+      bulletPoints: [
+        'Nachgewiesene Berufserfahrung als UI/UX Designer oder ähnlicher Funktion',
+        'Hochschulabschluss (ETH/Universität/FH/vergleichbarer Leistungsnachweis) in Design, Computerwissenschaften oder ähnlichem Bereich',
+        'Starke Kommunikationsfähigkeiten, um mit verschiedenen Interessensvertretern zusammenarbeiten zu können',
+        'Lösungsorientiertes Denken und Handeln',
+        'Gutes Zeitmanagement',
+        'Gute Deutsch- und Englisch-Kenntnisse',
+      ],
+    },
+  },
+  {
+    slug: 'projectlead',
+    BasicJobInfo: {
+      jobDetails: {
+        currentlyHiring: false,
+        jobName: 'Projektleiter / Requirements Engineer in der Custom Softwareentwicklung',
+        jobPensum: '80-100%',
+      },
+      title: '<span class="text-sm">Wir suchen</span><br/>Projektmanager<br/>',
+      content:
+        'Du übernimmst die Verantwortung für Softwareprojekte, von der Kundenvision bis zum Go-Live. Du identifizierst und managst Anforderungen, erstellst Angebote und führst Verkaufsgespräche zur Projektakquisition. Dabei planst du Ressourcen und Zeiten, führst agile Teams und coachst sie regelmässig. Zudem organisierst und leitest du Meetings, pflegst Kundenbeziehungen und kümmerst dich um die Koordination von Wartungsarbeiten sowie das Eskalationsmanagement bei Problemen.',
+      image: { src: projectlead, alt: 'Dev/Ops Engineer' },
+      bulletPoints: ['Lorem Ipsum', 'Lorem Ipsum', 'Lorem Ipsum'],
+    },
+    ExtendedJobInfo: {
+      title: 'Anforderungen',
+      content: 'Was erwarten wir konkret von dir?',
+      image: { src: checklist, alt: 'Requirements' },
+      bulletPoints: [
+        'Hochschulabschluss in Informatik (BSc)',
+        'Mindestens 5 Jahre Berufserfahrung (Softwareentwicklungs- und/oder Integrationsprojekte)',
+        'Du besitzt eine hohe Methodenkompetenz in der agilen Softwareentwicklung und logisches, vernetztes Denken',
+        'Du handelst und denkst lösungsorientiert und strukturiert',
+        'Du arbeitest gerne im Team und im direkten Kontakt mit Kunden',
+        'Du gehst Konflikten nicht aus dem Weg, sondern klärst sie auf',
+        'Du bist interessiert an deiner kontinuierlichen Weiterentwicklung - Priorisieren und einen kühlen Kopf zu bewahren liegt dir',
+        'Du vertiefst dich gerne in die Details von Anforderungsspezifikationen für Softwarefeatures',
+        'Du hast ein Flair dafür, dem Kunden weiterführende Digitalisierungspotenziale aufzuzeigen',
+        'Du bist verantwortungsbewusst, sehr selbstständig und sorgfältig',
+        'Du hast sehr gute Deutsch- und Englisch-Kenntnisse',
+      ],
+    },
+  },
+  {
+    slug: 'officemanager',
+    BasicJobInfo: {
+      jobDetails: {
+        currentlyHiring: false,
+        jobName: 'Office Manager',
+        jobPensum: '80-100%',
+      },
+      title: '<span class="text-sm">Wir suchen</span><br/>Office Manager',
+      content:
+        'Du kümmerst dich um das Office- und Materialmanagement, organisierst Reparaturen und betreust unser Reinigungspersonal sowie Gärtner. Du unterstützt in der Buchhaltung, indem du Rechnungen prüfst und Spesen sammelst. Im HR-Bereich koordinierst du Stellenausschreibungen, organisierst den Onboardingprozess und bist Ansprechpartner für Mitarbeiter. Zudem planst du Events und unterstützt die Geschäftsleitung bei administrativen Aufgaben und der Koordination von Meetings.',
+      image: { src: office, alt: 'Dev/Ops Engineer' },
+      bulletPoints: ['Lorem Ipsum', 'Lorem Ipsum', 'Lorem Ipsum'],
+    },
+    ExtendedJobInfo: {
+      title: 'Anforderungen',
+      content: 'Was erwarten wir konkret von dir?',
+      image: { src: checklist, alt: 'Requirements' },
+      bulletPoints: [
+        'Mindestens 3 Jahre Erfahrung in einer ähnlichen Funktion',
+        'Du hast eine kaufmännische Grundausbildung oder ähnliches',
+        'Du arbeitest gern digital, d.h. neben der Officepalette hast Du keine Berührungsängste, dich in digitale Tools einzuarbeiten und diese anzuwenden',
+        'Du bist offen, hilfsbereit und kommunikativ',
+        'Du hast deine Todoliste im Griff',
+        'Du bist verantwortungsbewusst, sehr selbstständig und sorgfältig',
+        'Du arbeitest gerne in einem flexiblen und dynamischen Umfeld',
+        'Du hast sehr gute Deutsch- und Englisch-Kenntnisse',
+      ],
+    },
+  },
 ]
 // Page content
-//TODO: Add Initiativbewerbung, PL, Sales
-export const JobListings: BlockContent[] = [
-  {
-    jobDetails: { currentlyHiring: false, slug: 'junior', jobName: 'Junior Software Engineer' },
-    title: '<span class="text-sm">wir suchen</span><br/>Junior Software Engineer',
-    content:
-      'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
-    image: { src: juniorDev, alt: 'Junior Software Engineer' },
-    bulletPoints: ['Erste Erfahrungen mit C# oder Java', 'Erste Erfahrungen im Bereich Web / Single Page Applications'],
-  },
-  {
-    jobDetails: { currentlyHiring: false, slug: 'professional', jobName: 'Professional Software Engineer' },
-    title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
-    content:
-      'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
-    image: { src: beHero, alt: 'Professional Software Engineer' },
-    bulletPoints: [
-      "Erfahrungen mit C# in der Entwicklung von API's",
-      'Erfahrungen im Bereich Web und Angular',
-      'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
-    ],
-  },
-  {
-    jobDetails: { currentlyHiring: true, slug: 'senior', jobName: 'Senior Software Engineer' },
-    title: '<span class="text-sm">Wir suchen</span><br/>Senior Software Engineer',
-    content:
-      'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
-    image: { src: jobListingImage, alt: 'Senior Software Engineer' },
-    bulletPoints: [
-      "Erfahrungen mit C# in der Entwicklung von API's",
-      'Erfahrungen im Bereich Web und Angular',
-      'Erfahrungen mit Elasticsearch / Postgres / MongoDB',
-      'Erfahrungen Docker / Kubernetes / Gitlab CI',
-    ],
-  },
-  {
-    jobDetails: {
-      currentlyHiring: false,
-      slug: 'devops',
-      jobName: '(Dev)Ops Engineer',
-    },
-    title: '<span class="text-sm">Wir suchen</span><br/>(Dev)Ops Engineer',
-    content:
-      'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
-
-    image: { src: cloud, alt: 'Dev/Ops Engineer' },
-    bulletPoints: [
-      'Erfahrungen Docker / Kubernetes / Gitlab CI',
-      'Erfahrungen mit Google Cloud / Azure von Vorteil',
-      'Erfahrungen mit Cypress / E2E Testing von Vorteil',
-    ],
-  },
-]
+// //TODO: Add Initiativbewerbung, PL, Sales
+// export const JobListings: BlockContent[] = [
+//   {
+//     jobDetails: { currentlyHiring: false, jobName: 'Junior Software Engineer', jobPensum: '80-100%' },
+//     title: '<span class="text-sm">wir suchen</span><br/>Junior Software Engineer',
+//     content:
+//       'Als Junior bist hast du bereits erste Erfahrungen in der Softwareentwicklung gesammelt. Du verstehst die Basics, kannst jedoch noch nicht viel praktische Erfahrung vorweisen. Du bist motiviert und begeistert dies zu ändern.',
+//     image: { src: juniorDev, alt: 'Junior Software Engineer' },
+//     bulletPoints: ['Erste Erfahrungen mit C# oder Java', 'Erste Erfahrungen im Bereich Web / Single Page Applications'],
+//   },
+//   {
+//     jobDetails: { currentlyHiring: false, slug: 'professional', jobName: 'Professional Software Engineer' },
+//     title: '<span class="text-sm">wir suchen</span><br/>Professional Software Engineer',
+//     content:
+//       'Als Professional hast du bereits mehrjährige Erfahrung in Softwareentwicklungsprojekten. Dir fehlen jedoch noch das Know-How zu einigen Technologien in unserem Stack. Du bist selbstständig und übernimmst Verantwortung für deine Aufgaben.',
+//     image: { src: beHero, alt: 'Professional Software Engineer' },
+//     bulletPoints: [
+//       "Erfahrungen mit C# in der Entwicklung von API's",
+//       'Erfahrungen im Bereich Web und Angular',
+//       'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
+//     ],
+//   },
+//   {
+//     jobDetails: { currentlyHiring: true, slug: 'senior', jobName: 'Senior Software Engineer' },
+//     title: '<span class="text-sm">Wir suchen</span><br/>Senior Software Engineer',
+//     content:
+//       'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
+//     image: { src: jobListingImage, alt: 'Senior Software Engineer' },
+//     bulletPoints: [
+//       "Erfahrungen mit C# in der Entwicklung von API's",
+//       'Erfahrungen im Bereich Web und Angular',
+//       'Erfahrungen mit Elasticsearch / Postgres / MongoDB',
+//       'Erfahrungen Docker / Kubernetes / Gitlab CI',
+//     ],
+//   },
+//   {
+//     jobDetails: {
+//       currentlyHiring: false,
+//       slug: 'devops',
+//       jobName: '(Dev)Ops Engineer',
+//     },
+//     title: '<span class="text-sm">Wir suchen</span><br/>(Dev)Ops Engineer',
+//     content:
+//       'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
+//
+//     image: { src: cloud, alt: 'Dev/Ops Engineer' },
+//     bulletPoints: [
+//       'Erfahrungen Docker / Kubernetes / Gitlab CI',
+//       'Erfahrungen mit Google Cloud / Azure von Vorteil',
+//       'Erfahrungen mit Cypress / E2E Testing von Vorteil',
+//     ],
+//   },
+// ]
 
 export const Initiativbewerbung: BlockContent = {
   title: 'Initiativ bewerben',
@@ -248,5 +373,10 @@ export const Initiativbewerbung: BlockContent = {
     'Auch wenn wir derzeit keine offenen Stellen ausgeschrieben haben oder keine der derzeitigen Stellen deine Fähigkeiten passend abbildet, sind wir stets an talentierten und motivierten Bewerbern interessiert. Wenn Du der Meinung bist, dass Deine Fähigkeiten und Erfahrungen gut zu uns passen, freuen wir uns auf Deine Initiativbewerbung.',
 
   image: { src: initiative, alt: 'Initiativbewerbung' },
-  bulletPoints: ['Lorem Ipsum', 'Lorem Ipsum', 'Lorem Ipsum'],
+  bulletPoints: [
+    'Spass an der Arbeit im Team',
+    'Lernfähigkeit und kontinuierliche Weiterentwicklung',
+    'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+    'Leidenschaft für die Software Entwicklung',
+  ],
 }

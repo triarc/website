@@ -3,7 +3,7 @@
   import JobIntro from './job-intro.svelte'
   import Block from '$lib/components/Block.svelte'
   import heroImage from '$lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
-  import type { BlockContent, JobPosting } from '$lib/components/TypeDefinitions'
+  import type { BlockContent, DetailedJobListing, JobPosting } from '$lib/components/TypeDefinitions'
   import ApplicationForm from '$lib/components/ApplicationForm.svelte'
   import Button from '$lib/components/Button.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
@@ -84,9 +84,7 @@
   const jobPostings = JobPostings
 
   let initiativbewerbung = Initiativbewerbung
-  let listings: BlockContent[] = DetailedJobListings.map((jobListing) => {
-    return jobListing.BasicJobInfo
-  })
+  let listings: DetailedJobListing[] = DetailedJobListings;
 </script>
 
 <svelte:head>
@@ -120,12 +118,12 @@
 </div>
 
 {#each listings as listing}
-  <Block bind:content={listing}>
+  <Block bind:content={listing.BasicJobInfo}>
     <div class="flex items-center justify-center mb-8">
       <Button
         buttonSize="Standard"
         buttonMargin="None"
-        reference="jobs/{listing.jobDetails?.slug}"
+        reference="jobs/{listing.slug}"
         label="Mehr erfahren"
       />
     </div>
