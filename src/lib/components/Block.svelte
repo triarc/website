@@ -164,7 +164,7 @@
                 (m/w/d) - {content.jobDetails.jobPensum}
               </h3>
             {/if}
-            <div class="transition-all overflow-hidden {!content.collapsed ? 'max-h-infiniti' : 'max-h-0'}">
+            <div class="overflow-hidden {!content.collapsed ? 'max-h-infiniti' : 'max-h-0'}">
               {#if content.content}
                 <p class="mt-2 text-base leading-6 text-gray-600">
                   <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->

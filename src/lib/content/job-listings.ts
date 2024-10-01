@@ -167,54 +167,53 @@ export const DetailedJobListings: {
       content: 'Was erwarten wir konkret von dir?',
       image: { src: checklist, alt: 'Requirements' },
       bulletPoints: [
-        'Leidenschaft für die Software Entwicklung',
-        'Hochschulabschluss in Informatik (ETH/FH/vergleichbarer Leistungsnachweis)',
-        'Hohe Methodenkompetenz und logisches, vernetztes Denken',
-        'Spass an der Arbeit im Team',
-        'Lösungsorientiertes Denken und Handeln',
-        'Lernfähigkeit und kontinuierliche Weiterentwicklung',
-        'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
-        '5 Jahre Erfahrung mit Angular, dotnet, Postgres, Docker und Kubernetes',
+        'Komplexe Anforderungen verstehen und entsprechende Softwarelösungen konzipieren und umsetzen können',
+        'Gutes Verständnis für die eingesetzte Toolchain entwickeln und diese erweitern können',
+        'Aktive Teilnahme bei der Planung von neuen Projekten',
+        'Gutes Verständnis für verteilte Systemarchitekturen',
+        'Neue Technologien evaluieren und einbinden',
+        'Verschiedene Programmierstrategien verstehen und passend einsetzen können',
+        'Als gleichwertiges Teammitglied wahrgenommen werden',
       ],
     },
   },
-  {
-    slug: 'devops',
-    hasTechnologySection: true,
-    BasicJobInfo: {
-      jobDetails: {
-        currentlyHiring: false,
-        jobName: '(Dev)Ops Engineer',
-        jobPensum: '80-100%',
-      },
-      title: '(Dev)Ops Engineer',
-      content:
-        'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
-
-      image: { src: cloud, alt: 'Dev/Ops Engineer' },
-      bulletPoints: [
-        'Erfahrungen Docker / Kubernetes / Gitlab CI',
-        'Erfahrungen mit Google Cloud / Azure von Vorteil',
-        'Erfahrungen mit Cypress / E2E Testing von Vorteil',
-      ],
-      collapsible: true,
-      collapsed: true,
-    },
-    ExtendedJobInfo: {
-      title: 'Anforderungen',
-      content: 'Was erwarten wir konkret von dir?',
-      image: { src: checklist, alt: 'Requirements' },
-      bulletPoints: [
-        'Leidenschaft für die Software Entwicklung',
-        'Praktische Erfahrung mit Kubernetes, Docker und GCP',
-        'Wünscheswerte Erfahrung mit Cert Manager, Postgres, Elasticsearch und MongoDB',
-        'Spass an der Arbeit im Team',
-        'Lösungsorientiertes Denken und Handeln',
-        'Lernfähigkeit und kontinuierliche Weiterentwicklung',
-        'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
-      ],
-    },
-  },
+  // {
+  //   slug: 'devops',
+  //   hasTechnologySection: true,
+  //   BasicJobInfo: {
+  //     jobDetails: {
+  //       currentlyHiring: false,
+  //       jobName: '(Dev)Ops Engineer',
+  //       jobPensum: '80-100%',
+  //     },
+  //     title: '(Dev)Ops Engineer',
+  //     content:
+  //       'Als (Dev)Ops betreust du unsere Projekte im Unterhalt. Du reagierst auf Meldungen in unserem Monitoringsystem und verbesserst dieses laufend. Du hilfst im Team Infrastrukturen in unserer Projekte aufzubauen und diese zu automatisieren. Dein Ziel ist eine stabile Umgebung für die Entwicklung und den Kunden zu liefern.',
+  //
+  //     image: { src: cloud, alt: 'Dev/Ops Engineer' },
+  //     bulletPoints: [
+  //       'Erfahrungen Docker / Kubernetes / Gitlab CI',
+  //       'Erfahrungen mit Google Cloud / Azure von Vorteil',
+  //       'Erfahrungen mit Cypress / E2E Testing von Vorteil',
+  //     ],
+  //     collapsible: true,
+  //     collapsed: true,
+  //   },
+  //   ExtendedJobInfo: {
+  //     title: 'Anforderungen',
+  //     content: 'Was erwarten wir konkret von dir?',
+  //     image: { src: checklist, alt: 'Requirements' },
+  //     bulletPoints: [
+  //       'Leidenschaft für die Software Entwicklung',
+  //       'Praktische Erfahrung mit Kubernetes, Docker und GCP',
+  //       'Wünscheswerte Erfahrung mit Cert Manager, Postgres, Elasticsearch und MongoDB',
+  //       'Spass an der Arbeit im Team',
+  //       'Lösungsorientiertes Denken und Handeln',
+  //       'Lernfähigkeit und kontinuierliche Weiterentwicklung',
+  //       'Gute Deutsch- sowie Englisch- Kenntnisse in Wort und Schrift',
+  //     ],
+  //   },
+  // },
   // {
   //   slug: 'sales',
   //   hasTechnologySection: false,
