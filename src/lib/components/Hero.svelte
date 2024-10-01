@@ -2,7 +2,7 @@
   import Container from '$lib/components/Container.svelte'
   import type { Picture } from 'imagetools-core'
   export let title: string
-  export let content: string
+  export let content: string | undefined
   export let image: Picture
   export let imageAlt: string
 </script>
@@ -21,8 +21,11 @@
     <div class="py-24 sm:py-32">
       <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
       <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">{@html title}</h1>
-      <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-      <p class="mt-6 max-w-3xl text-xl text-white">{@html content}</p>
+
+      {#if content}
+        <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+        <p class="mt-6 max-w-3xl text-xl text-white">{@html content}</p>
+      {/if}
     </div>
   </Container>
 </div>

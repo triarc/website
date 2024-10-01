@@ -4,15 +4,20 @@
   import ApplicationForm from '$lib/components/ApplicationForm.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import heroImage from '$lib/assets/hero/Jobs.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
-  import CompanyAbout from '$lib/components/CompanyAbout.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Button from '$lib/components/Button.svelte'
 
   import type { PageData } from './$types'
+  import { ourBenefits } from '$lib/content/benefits'
+  import { ourApplicationProcess } from '$lib/content/application-process'
   export let data: PageData
+
+  let benefits = ourBenefits
+  let hiringProcess = ourApplicationProcess
 
   let jobListingBase = data.jobListing.BasicJobInfo
   let jobListingExtended = data.jobListing.ExtendedJobInfo
+  let hiring = jobListingBase.jobDetails?.currentlyHiring
   let jobHero = jobListingBase.title!
   let jobTitle = jobListingBase.jobDetails!.jobName
 </script>
@@ -21,22 +26,43 @@
   <title>Developer Job - triarc-labs</title>
 </svelte:head>
 <Hero
-  title={jobHero}
-  content="Erfahre mehr über die Stelle als {jobTitle} und das Arbeitsumfeld bei Triarc."
+  title="{jobHero} ({jobListingBase.jobDetails?.jobPensum})"
+  content={jobListingBase.content}
   image={heroImage}
   imageAlt="Triarc Jobs Header"
 />
 
-<Block bind:content={jobListingBase}></Block>
+<div>
+  <div
+    class="font-bold text-lg py-8 text-center {hiring
+      ? 'bg-blue-triarc/20 text-blue-triarc'
+      : 'bg-gray-200 text-gray-800'}"
+  >
+    {#if jobListingBase.jobDetails?.currentlyHiring}
+      <span>Wir nehmen zurzeit Bewerbungen als {jobHero} an </span>
+    {:else}
+      <span>
+        Zurzeit nehmen wir keine Bewerbungen als {jobHero} an
+      </span>
+    {/if}
+  </div>
+</div>
 {#if jobListingExtended}
   <Block bind:content={jobListingExtended}>
-    <div class="flex items-center justify-center mb-8">
-      <Button buttonSize="Standard" buttonMargin="None" reference="#applicationForm" label="Jetzt bewerben" />
-    </div>
+    {#if hiring}
+      <div class="flex items-center justify-center mb-8">
+        <Button buttonSize="Standard" buttonMargin="None" reference="#applicationForm" label="Jetzt bewerben" />
+      </div>
+    {/if}
   </Block>
 {/if}
 
-<Technology />
-<CompanyAbout />
-<ApplicationForm availableJobs={[jobTitle]} jobString={jobTitle} isDefinedListing={true} />
+{#if data.jobListing.hasTechnologySection}
+  <Technology />
+{/if}
+<Block bind:content={benefits} />
+{#if hiring}
+  <Block bind:content={hiringProcess} />
+  <ApplicationForm availableJobs={[jobTitle]} jobString={jobTitle} isDefinedListing={true} />
+{/if}
 <FooterNoContact />

@@ -12,9 +12,11 @@ export interface BlockContent {
   steps?: { title: string; content: string }[]
   items?: { title: string; content: string }[]
   smallVideo?: VideoContent
-  jobDetails?: { currentlyHiring: boolean; jobName: string; jobPensum: string }
+  jobDetails?: JobDetails
   quote?: Quote
   video?: VideoContent
+  collapsible?: boolean
+  collapsed?: boolean
 }
 
 export interface Quote {
