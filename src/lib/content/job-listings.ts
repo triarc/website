@@ -106,7 +106,7 @@ export const DetailedJobListings: {
         'Entwicklungsworkflow befolgen',
         'Verständnis für sinnvolles Testing',
         'Verständnis für Objektorientierte Programmierung',
-        'Sauberen“ Code schreiben können',
+        '"Sauberen“ Code schreiben können',
         'In Meetings aktiv teilnehmen und Probleme ansprechen',
       ],
     },
