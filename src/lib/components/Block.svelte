@@ -119,8 +119,8 @@
             <div class="mt-4 mr-4">
               <svg
                 class="self-start transform duration-100 transition-all {content.collapsed
-                  ? ''
-                  : '-rotate-90'} h-10 w-10 inline-block"
+                  ? '-rotate-90'
+                  : ''} h-10 w-10 inline-block"
                 viewBox="0 0 20 20"
                 fill="currentColor"
               >

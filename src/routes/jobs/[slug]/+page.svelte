@@ -10,6 +10,7 @@
   import type { PageData } from './$types'
   import { ourBenefits } from '$lib/content/benefits'
   import { ourApplicationProcess } from '$lib/content/application-process'
+  import Container from '$lib/components/Container.svelte'
   export let data: PageData
 
   let benefits = ourBenefits
@@ -36,15 +37,17 @@
   <div
     class="font-bold text-lg py-8 text-center {hiring
       ? 'bg-blue-triarc/20 text-blue-triarc'
-      : 'bg-gray-200 text-gray-800'}"
+      : 'bg-red-triarc/10 text-red-triarc'}"
   >
-    {#if jobListingBase.jobDetails?.currentlyHiring}
-      <span>Wir nehmen zurzeit Bewerbungen als {jobHero} an </span>
-    {:else}
-      <span>
-        Zurzeit nehmen wir keine Bewerbungen als {jobHero} an
-      </span>
-    {/if}
+    <Container>
+      {#if jobListingBase.jobDetails?.currentlyHiring}
+        <span>Wir nehmen zurzeit Bewerbungen als {jobHero} an </span>
+      {:else}
+        <span>
+          Zurzeit nehmen wir keine Bewerbungen als {jobHero} an
+        </span>
+      {/if}
+    </Container>
   </div>
 </div>
 {#if jobListingExtended}
