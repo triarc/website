@@ -124,7 +124,7 @@ export const DetailedJobListings: {
       bulletPoints: [
         "Erfahrungen mit C# in der Entwicklung von API's",
         'Erfahrungen im Bereich Web und Angular',
-        'Kentnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
+        'Kenntnisse von Elasticsearch / Postgres / MongoDB von Vorteil',
       ],
       collapsible: true,
       collapsed: true,
@@ -406,7 +406,7 @@ export const DetailedJobListings: {
 export const Initiativbewerbung: BlockContent = {
   title: 'Initiativ bewerben',
   content:
-    'Auch wenn wir derzeit keine offenen Stellen ausgeschrieben haben oder keine der derzeitigen Stellen deine Fähigkeiten passend abbildet, sind wir stets an talentierten und motivierten Bewerbern interessiert. Wenn Du der Meinung bist, dass Deine Fähigkeiten und Erfahrungen gut zu uns passen, freuen wir uns auf Deine Initiativbewerbung.',
+    'Auch wenn wir derzeit keine offenen Stellen ausgeschrieben haben oder keine der derzeitigen Stellen deine Fähigkeiten passend abbildet, sind wir stets an talentierten und motivierten Bewerbern interessiert. Wenn du der Meinung bist, dass deine Fähigkeiten und Erfahrungen gut zu uns passen, freuen wir uns auf deine Initiativbewerbung.',
 
   image: { src: initiative, alt: 'Initiativbewerbung' },
   bulletPoints: [
