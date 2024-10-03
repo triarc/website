@@ -12,18 +12,29 @@ export interface BlockContent {
   steps?: { title: string; content: string }[]
   items?: { title: string; content: string }[]
   smallVideo?: VideoContent
-  quote?: {
-    content: string
-    person: string
-    // string is needed for svgs
-    image: Picture | string
-    imageCss?: string
-    personTitle: string
-    linkedin?: string
-    email?: string
-    highlight?: 'green' | 'blue' | 'red'
-  }
+  jobDetails?: JobDetails
+  quote?: Quote
   video?: VideoContent
+  collapsible?: boolean
+  collapsed?: boolean
+}
+
+export interface Quote {
+  content: string
+  person: string
+  // string is needed for svgs
+  image: Picture | string
+  imageCss?: string
+  personTitle: string
+  linkedin?: string
+  email?: string
+  highlight?: 'green' | 'blue' | 'red'
+}
+
+export interface JobDetails {
+  currentlyHiring: boolean
+  jobName: string
+  jobPensum: string
 }
 
 export interface VideoContent {
@@ -41,6 +52,12 @@ export interface JobPosting {
   responsibilities: string
   skills: Array<string>
   experienceRequirements: string
+}
+
+export interface DetailedJobListing {
+  slug: string
+  BasicJobInfo: BlockContent
+  ExtendedJobInfo?: BlockContent
 }
 
 export interface MetaInfo {

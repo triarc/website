@@ -20,6 +20,9 @@ module.exports = {
         'blue-ideesport-weak': 'rgba(30, 170, 230, 0.1)',
       },
       maxWidth: {},
+      maxHeight: {
+        infiniti: '9999px',
+      },
       animation: {
         wiggle: 'wiggle 1s ease',
       },

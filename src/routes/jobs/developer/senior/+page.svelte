@@ -7,6 +7,7 @@
   import CompanyAbout from '$lib/components/CompanyAbout.svelte'
   import seniorDev from '$lib/assets/img/jobs/super_woman.svg'
   import Hero from '$lib/components/Hero.svelte'
+  import Button from '$lib/components/Button.svelte'
 
   let listedJob = 'Senior Software Engineer'
 
@@ -34,7 +35,11 @@
   imageAlt="Triarc Jobs Header"
 />
 
-<Block bind:content={block} />
+<Block bind:content={block}>
+  <div class="flex items-center justify-center mb-8">
+    <Button buttonSize="Standard" buttonMargin="None" reference="#applicationForm" label="Mehr erfahren" />
+  </div>
+</Block>
 <Technology />
 <!--<Hero-->
 <!--  title="Developer Job"-->

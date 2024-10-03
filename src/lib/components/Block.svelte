@@ -100,121 +100,188 @@
   <div class="alternating md:min-h-0 group">
     <Container>
       <div
-        class="flex items-center relative pb-16 pt-8 md:py-32 flex-col group-odd:md:flex-row group-even:md:flex-row-reverse"
+        class="flex relative transition-all {!content.collapsed
+          ? 'pb-16 pt-8 md:py-32 items-center'
+          : 'py-6'} flex-col {content.collapsible
+          ? 'md:flex-row'
+          : 'group-odd:md:flex-row group-even:md:flex-row-reverse'}"
       >
-        <div class="">
-          <h2 class="mt-3 text-2xl font-bold text-gray-600">
-            <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-            {@html content.title}
-          </h2>
-          {#if content.content}
-            <p class="mt-2 text-base leading-6 text-gray-600">
-              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-              {@html content.content}
-            </p>
-          {/if}
-          {#if content.footer}
-            <p class="text-sm text-gray-500">{content.footer}</p>
-          {/if}
-          {#if content.link}
-            <Button
-              buttonSize="Small"
-              reference={content.link.href}
-              label={content.link.text}
-              target={content.link.target ?? ''}
-            />
-          {/if}
-          {#if content.bulletPoints}
-            <div class="mt-8 flex flex-col">
-              <ul class="">
-                {#each content.bulletPoints as bulletPoint}
-                  <li class="flex my-1 items-center">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      height="1em"
-                      viewBox="0 0 512 512"
-                      class="flex-shrink-0 h-2 w-2"
-                      ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
-                        d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
-                      /></svg
-                    >
-                    <div class="ml-3">
-                      <span class="text-base text-gray-600">
-                        {bulletPoint}
-                      </span>
-                    </div>
-                  </li>
-                {/each}
-              </ul>
+        <!--{#if content.collapsible}-->
+        <!--svelte-ignore a11y-click-events-have-key-events -->
+        <div
+          role="button"
+          class="flex-main flex flex-row {content.collapsible ? '' : 'pointer-events-none'}"
+          tabindex="-1"
+          aria-label="Öffne {content.title}"
+          on:click={content.collapsible ? () => (content.collapsed = !content.collapsed) : null}
+        >
+          {#if content.collapsible}
+            <div class="mt-4 mr-4">
+              <svg
+                class="self-start transform duration-100 transition-all {content.collapsed
+                  ? '-rotate-90'
+                  : ''} h-10 w-10 inline-block"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
             </div>
           {/if}
-          {#if content.cards}
-            <ul
-              class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
-            >
-              {#each content.cards as card}
-                <li class="block-card rounded-2xl group-odd:bg-gray-100 group-even:bg-white p-8">
-                  <!--					<feature.icon class="h-8 w-8" />-->
-                  <h3 class="font-semibold text-gray-700">
-                    {card.title}
-                  </h3>
-                  <p class="mt-2 text-gray-600">{card.content}</p>
-                </li>
-              {/each}
-            </ul>
-          {/if}
-          {#if content.steps}
-            <ul class="-mb-8 mt-6">
-              {#each content.steps as step, i}
-                <li>
-                  <div class="relative pb-8">
-                    {#if i < content.steps.length - 1}
-                      <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
-                    {/if}
-                    <div class="relative flex space-x-3">
-                      <div>
-                        <span class="h-8 w-8 text-sm rounded-full bg-gray-200 flex items-center justify-center">
-                          {i + 1}
-                        </span>
+          <div>
+            {#if !content.jobDetails}
+              <h2 class="text-2xl font-bold text-gray-600">
+                <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+                {@html content.title}
+              </h2>
+            {/if}
+            {#if content.jobDetails}
+              <div class="flex flex-col sm:flex-row">
+                <h2 class="text-2xl font-bold text-gray-600">
+                  <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+                  {@html content.title}
+                </h2>
+                <h3 class="sm:hidden mt-1 text-lg font-bold text-gray-600 w-full">
+                  (m/w/d) - {content.jobDetails.jobPensum}
+                </h3>
+                {#if content.jobDetails.currentlyHiring}
+                  <span
+                    class="font-bold self-start sm:self-end sm:mb-0.5 flex-grow-0 my-3 sm:mt-0 block sm:inline sm:mx-3 text-base bg-blue-triarc/20 text-blue-triarc px-3 py-1 rounded-md"
+                    >Offene Stellen</span
+                  >
+                {:else if !content.jobDetails.currentlyHiring}
+                  <span
+                    class="font-bold self-start sm:self-end sm:mb-0.5 flex-grow-0 my-3 sm:mt-0 sm:inline sm:mx-3 text-base bg-gray-200 text-gray-800 px-3 py-1 rounded-md"
+                    >Zurzeit keine offenen Stellen</span
+                  >
+                {/if}
+              </div>
+              <h3 class="hidden sm:inline-block text-lg font-bold text-gray-600">
+                (m/w/d) - {content.jobDetails.jobPensum}
+              </h3>
+            {/if}
+            <div class="overflow-hidden {!content.collapsed ? 'max-h-infiniti' : 'max-h-0'}">
+              {#if content.content}
+                <p class="mt-2 text-base leading-6 text-gray-600">
+                  <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+                  {@html content.content}
+                </p>
+              {/if}
+
+              {#if content.footer}
+                <p class="text-sm text-gray-500">{content.footer}</p>
+              {/if}
+              {#if content.link}
+                <Button
+                  buttonSize="Small"
+                  reference={content.link.href}
+                  label={content.link.text}
+                  target={content.link.target ?? ''}
+                />
+              {/if}
+              {#if content.bulletPoints}
+                <div class="mt-8 flex flex-col">
+                  <ul class="">
+                    {#each content.bulletPoints as bulletPoint}
+                      <li class="flex my-1 items-center">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="1em"
+                          viewBox="0 0 512 512"
+                          class="flex-shrink-0 h-2 w-2"
+                          ><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path
+                            d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+                          /></svg
+                        >
+                        <div class="ml-3">
+                          <span class="text-base text-gray-600">
+                            {bulletPoint}
+                          </span>
+                        </div>
+                      </li>
+                    {/each}
+                  </ul>
+                </div>
+              {/if}
+              {#if content.cards}
+                <ul
+                  class="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-6 text-sm sm:mt-20 sm:grid-cols-2 md:gap-y-10 lg:max-w-none lg:grid-cols-3"
+                >
+                  {#each content.cards as card}
+                    <li class="block-card rounded-2xl group-odd:bg-gray-100 group-even:bg-white p-8">
+                      <!--					<feature.icon class="h-8 w-8" />-->
+                      <h3 class="font-semibold text-gray-700">
+                        {card.title}
+                      </h3>
+                      <p class="mt-2 text-gray-600">{card.content}</p>
+                    </li>
+                  {/each}
+                </ul>
+              {/if}
+              {#if content.steps}
+                <ul class="-mb-8 mt-6">
+                  {#each content.steps as step, i}
+                    <li>
+                      <div class="relative pb-8">
+                        {#if i < content.steps.length - 1}
+                          <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
+                        {/if}
+                        <div class="relative flex space-x-3">
+                          <div>
+                            <span class="h-8 w-8 text-sm rounded-full bg-gray-200 flex items-center justify-center">
+                              {i + 1}
+                            </span>
+                          </div>
+                          <div class="min-w-0 flex-1 pt-1.5">
+                            <h3 class="font-semibold text-sm text-gray-700">
+                              {step.title}
+                            </h3>
+                            <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+                            <p class="text-gray-600">{@html step.content}</p>
+                          </div>
+                        </div>
                       </div>
-                      <div class="min-w-0 flex-1 pt-1.5">
-                        <h3 class="font-semibold text-sm text-gray-700">
-                          {step.title}
+                    </li>
+                  {/each}
+                </ul>
+              {/if}
+              {#if content.items}
+                <ul class="-mb-8 mt-6">
+                  {#each content.items as item}
+                    <li>
+                      <div class="min-w-0 pb-8 flex-1 pt-1.5">
+                        <h3 class="font-semibold text-sm underline decoration-red-triarc text-gray-700">
+                          {item.title}
                         </h3>
-                        <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-                        <p class="text-gray-600">{@html step.content}</p>
+                        <p class="text-gray-600">{item.content}</p>
                       </div>
-                    </div>
-                  </div>
-                </li>
-              {/each}
-            </ul>
-          {/if}
-          {#if content.items}
-            <ul class="-mb-8 mt-6">
-              {#each content.items as item}
-                <li>
-                  <div class="min-w-0 pb-8 flex-1 pt-1.5">
-                    <h3 class="font-semibold text-sm underline decoration-red-triarc text-gray-700">
-                      {item.title}
-                    </h3>
-                    <p class="text-gray-600">{item.content}</p>
-                  </div>
-                </li>
-              {/each}
-            </ul>
-          {/if}
+                    </li>
+                  {/each}
+                </ul>
+              {/if}
+            </div>
+          </div>
         </div>
 
         <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
         {#if content.image}
-          <img
-            src={content.image.src}
-            class="mt-8 mx-12"
-            width={content.image.width ?? 320}
-            height={content.image.height}
-            alt={content.image.alt}
-          />
+          <div
+            class="overflow-hidden {!content.collapsed
+              ? 'w-full mt-8 mx-12 flex-side flex items-center justify-center'
+              : 'w-0'}"
+          >
+            <img
+              src={content.image.src}
+              class=""
+              width={content.image.width ?? 320}
+              height={content.image.height}
+              alt={content.image.alt}
+            />
+          </div>
         {/if}
         {#if content.smallVideo}
           <div class="h-full w-full mt-8 md:group-even:mr-12 md:group-odd:ml-12">
@@ -222,7 +289,10 @@
           </div>
         {/if}
       </div>
-      <slot />
+
+      <div class="overflow-hidden {!content.collapsed ? 'max-h-infiniti' : 'max-h-0'}">
+        <slot />
+      </div>
 
       <hr />
     </Container>
@@ -251,4 +321,12 @@
   /*  .block-background:nth-child(even) .block-card {*/
   /*      @apply bg-white;*/
   /*  }*/
+
+  .flex-main {
+    flex: 1 1 70%;
+  }
+
+  .flex-side {
+    flex: 1 1 30%;
+  }
 </style>

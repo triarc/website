@@ -1,6 +1,8 @@
 import type { BlockContent } from '$lib/components/TypeDefinitions'
 
 export const ourBenefits: BlockContent = {
+  collapsible: false,
+  collapsed: false,
   title: 'Was wir dir bieten',
   content:
     'Wir sind eine Software-Boutique im Herzen von Zürich, entwickeln leidenschaftlich gerne Software und sind immer auf der Suche nach neuen Talenten die uns ergänzen.',
