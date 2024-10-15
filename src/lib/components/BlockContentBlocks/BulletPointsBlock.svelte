@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let bulletPoints: String[]
+  export let bulletPoints: string[]
 </script>
 
 <div class="mt-8 flex flex-col">
