@@ -1,6 +1,6 @@
-<script  lang="ts">
+<script lang="ts">
   import type { Item } from '$lib/components/TypeDefinitions'
-  export let items: Item[];
+  export let items: Item[]
 </script>
 
 <ul class="-mb-8 mt-6">

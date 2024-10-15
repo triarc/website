@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Step } from '$lib/components/TypeDefinitions'
-  export let steps: Step[];
+  export let steps: Step[]
 </script>
 
 <ul class="-mb-8 mt-6">
@@ -12,9 +12,9 @@
         {/if}
         <div class="relative flex space-x-3">
           <div>
-                            <span class="h-8 w-8 text-sm rounded-full bg-gray-200 flex items-center justify-center">
-                              {i + 1}
-                            </span>
+            <span class="h-8 w-8 text-sm rounded-full bg-gray-200 flex items-center justify-center">
+              {i + 1}
+            </span>
           </div>
           <div class="min-w-0 flex-1 pt-1.5">
             <h3 class="font-semibold text-sm text-gray-700">

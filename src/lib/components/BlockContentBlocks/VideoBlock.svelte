@@ -17,16 +17,15 @@
 
 <!-- svelte-ignore a11y-media-has-caption -->
 <video
-    id={`${content.videoId}-player`}
-    playsinline
-    controls
-    style="height: 100%; width: 100%;"
-    class="overflow-hidden {content.embedded ? 'md:min-w-[400px] lg:min-w-[600px]' : 'rounded'} aspect-video"
-    title={content.videoTitle ?? ''}
-    data-poster={content.poster}
-  >
-    {#each content.sources as source}
-      <source src={source.src} type={source.type} />
-    {/each}
+  id={`${content.videoId}-player`}
+  playsinline
+  controls
+  style="height: 100%; width: 100%;"
+  class="overflow-hidden {content.embedded ? 'md:min-w-[400px] lg:min-w-[600px]' : 'rounded'} aspect-video"
+  title={content.videoTitle ?? ''}
+  data-poster={content.poster}
+>
+  {#each content.sources as source}
+    <source src={source.src} type={source.type} />
+  {/each}
 </video>
-

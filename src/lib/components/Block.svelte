@@ -49,10 +49,7 @@
               <TitleBlock bind:title={content.title} />
             {/if}
             {#if content.jobDetails}
-              <JobDetailsBlock
-                bind:jobDetails={content.jobDetails}
-                bind:title={content.title}
-              />
+              <JobDetailsBlock bind:jobDetails={content.jobDetails} bind:title={content.title} />
             {/if}
             <div class="overflow-hidden {!content.collapsed ? 'max-h-infiniti' : 'max-h-0'}">
               {#if content.content}
@@ -88,9 +85,7 @@
 
         <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
         {#if content.image}
-          <ImageBlock
-            bind:collapsed={content.collapsed}
-            bind:image={content.image}/>
+          <ImageBlock bind:collapsed={content.collapsed} bind:image={content.image} />
         {/if}
         {#if content.video && content.video.embedded}
           <div class="h-full w-full mt-8 md:group-even:mr-12 md:group-odd:ml-12">

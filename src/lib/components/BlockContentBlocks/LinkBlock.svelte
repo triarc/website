@@ -4,9 +4,4 @@
   export let link: LinkContent
 </script>
 
-<Button
-  buttonSize="Small"
-  reference={link.href}
-  label={link.text}
-  target={link.target ?? ''}
-/>
+<Button buttonSize="Small" reference={link.href} label={link.text} target={link.target ?? ''} />

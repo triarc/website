@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Card } from '$lib/components/TypeDefinitions'
-  export let cards: Card[];
+  export let cards: Card[]
 </script>
 
 <ul
