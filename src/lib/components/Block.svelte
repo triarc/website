@@ -109,8 +109,8 @@
         <!--{#if content.collapsible}-->
         <!--svelte-ignore a11y-click-events-have-key-events -->
         <div
-          role="button"
-          class="flex-main flex flex-row {content.collapsible ? '' : 'pointer-events-none'}"
+          role={content.collapsible ? 'button': ''}
+          class="flex-main flex flex-row"
           tabindex="-1"
           aria-label="Öffne {content.title}"
           on:click={content.collapsible ? () => (content.collapsed = !content.collapsed) : null}

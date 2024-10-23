@@ -1,6 +1,7 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import iris from '$lib/assets/team/iris.jpg?w=768&format=webp;png&metadata&enhanced'
+  import bsoLogo from '$lib/assets/img/partners/bso_logo_desktop.svg'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import heroImage from '$lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
@@ -23,7 +24,7 @@
       email: 'iris@triarc-labs.com',
       highlight: 'green',
       contactButton: 'Kontaktiere mich',
-      customLogos: ['src/lib/assets/img/partners/bso_logo_desktop.svg'],
+      customLogos: [bsoLogo],
     },
     categories: [
       {
