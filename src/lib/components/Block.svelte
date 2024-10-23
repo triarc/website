@@ -107,7 +107,6 @@
           : 'group-odd:md:flex-row group-even:md:flex-row-reverse'}"
       >
         <!--{#if content.collapsible}-->
-        <!--svelte-ignore a11y-click-events-have-key-events -->
         <div
           role={content.collapsible ? 'button' : ''}
           class="flex-main flex flex-row"
