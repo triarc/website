@@ -109,7 +109,7 @@
         <!--{#if content.collapsible}-->
         <!--svelte-ignore a11y-click-events-have-key-events -->
         <div
-          role={content.collapsible ? 'button': ''}
+          role={content.collapsible ? 'button' : ''}
           class="flex-main flex flex-row"
           tabindex="-1"
           aria-label="Öffne {content.title}"
