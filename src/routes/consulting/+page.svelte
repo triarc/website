@@ -62,7 +62,7 @@
         link: {
           href: 'https://www.coaching-digitalisierung.ch',
           text: 'Mehr dazu',
-          target : '_self'
+          target: '_self',
         },
         posts: data.posts.coaching as MappedPost[],
       },
@@ -81,17 +81,16 @@
       },
       {
         testimonial: {
-            logo: analytica,
-            quote: {
-              source: 'Andrea Isler von Analytica',
-              content:
-                '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
-                'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
-                'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»',
-            },
+          logo: analytica,
+          quote: {
+            source: 'Andrea Isler von Analytica',
+            content:
+              '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
+              'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
+              'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»',
+          },
         },
       },
-
     ],
   }
 </script>

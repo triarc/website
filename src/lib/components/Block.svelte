@@ -27,24 +27,17 @@
 
 {#if content.title}
   <div class="alternating md:min-h-0 group">
-    <Container
-      size="{inline ? 'small' : 'wide' }"
-      class={inline ? 'ml-0' : '' }
-    >
+    <Container size={inline ? 'small' : 'wide'} class={inline ? 'ml-0' : ''}>
       <div
         class="
-          {!content.collapsed
-            ? 'pb-16 pt-8 md:py-32 items-center'
-            : 'py-6'} flex-col
-          {content.collapsible
-            ? 'md:flex-row'
-            : 'group-odd:md:flex-row group-even:md:flex-row-reverse'}
-          {!content.collapsed && inline ? 'md:py-8': ''} flex relative transition-all"
+          {!content.collapsed ? 'pb-16 pt-8 md:py-32 items-center' : 'py-6'} flex-col
+          {content.collapsible ? 'md:flex-row' : 'group-odd:md:flex-row group-even:md:flex-row-reverse'}
+          {!content.collapsed && inline ? 'md:py-8' : ''} flex relative transition-all"
       >
         <!--{#if content.collapsible}-->
         <!--svelte-ignore a11y-click-events-have-key-events -->
         <div
-          role="{content.collapsible ? 'button': ''}"
+          role={content.collapsible ? 'button' : ''}
           class="flex-main flex flex-row"
           tabindex="-1"
           aria-label="Öffne {content.title}"
@@ -76,7 +69,7 @@
                 <LinkBlock bind:link={content.link} />
               {/if}
 
-              {#if content.posts }
+              {#if content.posts}
                 <BlogPostBlock posts={content.posts} />
               {/if}
 
@@ -116,6 +109,14 @@
       <div class="overflow-hidden {!content.collapsed ? 'max-h-infiniti' : 'max-h-0'}">
         <slot />
       </div>
+    </Container>
+  </div>
+{/if}
+
+{#if content.testimonial}
+  <div class="alternating">
+    <Container size={inline ? 'small' : 'wide'} class={inline ? 'ml-0' : ''}>
+      <Testimonials bind:testimonial={content.testimonial} />
     </Container>
   </div>
 {/if}

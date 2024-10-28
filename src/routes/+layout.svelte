@@ -350,6 +350,6 @@
   }
 
   :global:nth-child(even of .alternating) .testimonial {
-      @apply lg:order-last;
+    @apply lg:order-last;
   }
 </style>

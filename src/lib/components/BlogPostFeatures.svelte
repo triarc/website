@@ -102,12 +102,9 @@
       </div>
       <div class="flex-grow">
         {#each content.categories as category}
-          <Block
-            bind:content={category}
-            inline={true}
-          />
+          <Block bind:content={category} inline={true} />
         {/each}
-    </div>
+      </div>
     </div>
   </div>
 {/if}
