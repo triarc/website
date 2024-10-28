@@ -34,8 +34,6 @@
           {content.collapsible ? 'md:flex-row' : 'group-odd:md:flex-row group-even:md:flex-row-reverse'}
           {!content.collapsed && inline ? 'md:py-8' : ''} flex relative transition-all"
       >
-        <!--{#if content.collapsible}-->
-        <!--svelte-ignore a11y-click-events-have-key-events -->
         <div
           role={content.collapsible ? 'button' : ''}
           class="flex-main flex flex-row"
