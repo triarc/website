@@ -11,11 +11,34 @@ export interface BlockContent {
   cards?: Card[]
   steps?: Step[]
   items?: Item[]
+  posts?: MappedPost[]
   jobDetails?: JobDetails
   quote?: Quote
+  testimonial?: Testimonial
+  blockquote?: InlineQuote
   video?: VideoContent
   collapsible?: boolean
   collapsed?: boolean
+}
+
+export interface MappedPost {
+  slug: string
+  title: string
+  content: string
+  image: {
+    srcset: string
+    sizes: string
+    src: string
+    alt: string
+  }
+  link: {
+    href: string
+    text: string
+    target: string
+  }
+  featured: boolean
+  published_at: Date
+  footer: string
 }
 
 export interface Quote {
@@ -28,6 +51,16 @@ export interface Quote {
   linkedin?: string
   email?: string
   highlight?: 'green' | 'blue' | 'red'
+}
+
+export interface Testimonial {
+  logo: string
+  quote: { source: string; content: string }
+}
+
+export interface InlineQuote {
+  source: string
+  content: string
 }
 
 export interface ImageContent {
@@ -57,6 +90,7 @@ export interface LinkContent {
   text: string
   target?: string
 }
+
 export interface JobDetails {
   currentlyHiring: boolean
   jobName: string

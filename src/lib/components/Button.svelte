@@ -12,7 +12,7 @@
   type="button"
   target={target ?? ''}
   on:click={clicked}
-  class="inline-flex md:inline-block justify-center items-center w-full sm:w-auto
+  class="inline-flex md:inline-block justify-center items-center w-full sm:w-auto pointer-events-auto
   {buttonMargin === 'Standard' ? 'my-4' : 'my-0'} px-6 py-3
   {buttonSize === 'Standard' ? 'md:px-6 md:py-3' : 'md:px-3 md:py-1'}
   bg-blue-triarc text-white text-base font-medium

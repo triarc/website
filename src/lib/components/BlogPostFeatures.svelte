@@ -1,9 +1,8 @@
 <script lang="ts">
   import type { FeaturedContent } from '$lib/components/FeaturedContent'
-  import Testimonials from '$lib/index/Testimonials.svelte'
-  import Container from '$lib/components/Container.svelte'
   import Button from '$lib/components/Button.svelte'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
+  import Block from '$lib/components/Block.svelte'
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   export let content: FeaturedContent
 </script>
@@ -12,9 +11,10 @@
   <div class="bg-white">
     <div class="flex flex-col lg:flex-row">
       <div
-        class="{content.quote?.highlight
+        class="flex-grow pb-8 lg:pb-0 {content.quote?.highlight
           ? `${highlightColors[content.quote.highlight]} bg-opacity-10`
-          : 'group-even:bg-gray-100'} flex-grow pb-8 lg:pb-0"
+          : 'group-even:bg-gray-100'}
+          "
       >
         <div class="lg:sticky lg:top-20">
           <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center px-8 gap-x-8 lg:ml-auto">
@@ -100,176 +100,9 @@
           </div>
         </div>
       </div>
-      <div class="flex-grow group">
+      <div class="flex-grow">
         {#each content.categories as category}
-          <div class="bg-gray-100 even:bg-white">
-            <Container class="ml-0" size="small">
-              <div class="py-8 lg:mr-auto">
-                {#if category.title}
-                  <h2 class="mt-3 text-2xl font-bold text-gray-600">
-                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-                    {@html category.title}
-                  </h2>
-                {/if}
-                {#if category.content}
-                  <p class="mt-2 text-base leading-6 text-gray-600">
-                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-                    {@html category.content}
-                  </p>
-                {/if}
-                {#if category.link}
-                  <Button buttonSize="Small" reference={category.link} label="Mehr dazu" target="_blank" />
-                {/if}
-                {#if category.quote}
-                  <blockquote
-                    class="bg-transparent border-l-4 border-l-gray-500 mx-8 p-4 rounded-xl my-6 text-gray-500"
-                  >
-                    <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-                    {@html category.quote}
-                  </blockquote>
-                {/if}
-                {#if category.steps}
-                  <ul class="-mb-8 mt-6">
-                    {#each category.steps as step, i}
-                      <li>
-                        <div class="relative pb-8">
-                          {#if i < category.steps.length - 1}
-                            <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
-                          {/if}
-                          <div class="relative flex space-x-3">
-                            <div>
-                              <span class="h-8 w-8 text-sm rounded-full bg-gray-200 flex items-center justify-center">
-                                {i + 1}
-                              </span>
-                            </div>
-                            <div class="min-w-0 flex-1 pt-1.5">
-                              <h3 class="font-semibold text-sm text-gray-700">
-                                {step.title}
-                              </h3>
-                              <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-                              <p class="text-gray-600">{@html step.content}</p>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    {/each}
-                  </ul>
-                {/if}
-                {#if category.posts && category.posts.length === 3}
-                  <div
-                    class="flex flex-col lg:flex-row lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-16 mt-16 lg:mt-8"
-                  >
-                    {#each category.posts as post}
-                      <div class="max-w-sm flex flex-row">
-                        <a
-                          href="/stories/{post.slug}"
-                          class="break-inside-avoid flex flex-col rounded-md hover:opacity-80"
-                        >
-                          <div class="relative rounded-xl rounded-b-none h-60 overflow-hidden shadow">
-                            <img
-                              src={post.image.src}
-                              srcset={post.image.srcset}
-                              sizes={post.image.sizes}
-                              loading="lazy"
-                              alt={post.image.alt}
-                              class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top"
-                            />
-                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
-                          </div>
-                          <div
-                            class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-t-none h-60 rounded-xl shadow"
-                          >
-                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
-                          </div>
-                        </a>
-                      </div>
-                    {/each}
-                  </div>
-                {/if}
-                {#if category.posts && category.posts.length === 2}
-                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-8 mt-16 lg:mt-8">
-                    {#each category.posts as post, index}
-                      <div class="flex flex-row mt-2">
-                        <a
-                          href="/stories/{post.slug}"
-                          class="break-inside-avoid flex flex-col lg:flex-row {index % 2 === 1
-                            ? 'lg:flex-row-reverse'
-                            : ''} rounded-md hover:opacity-80"
-                        >
-                          <div
-                            class="relative rounded-xl rounded-b-none {index % 2 === 1
-                              ? 'lg:rounded-l-none'
-                              : 'lg:rounded-r-none'} h-60 lg:w-[33%] overflow-hidden shadow"
-                          >
-                            <img
-                              src={post.image.src}
-                              srcset={post.image.srcset}
-                              sizes={post.image.sizes}
-                              loading="lazy"
-                              alt={post.image.alt}
-                              class="object-cover rounded-xl {index % 2 === 1
-                                ? 'rounded-l-none'
-                                : 'rounded-r-none'} overflow-hidden block h-60 max-w-auto w-full object-left-top"
-                            />
-                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
-                          </div>
-                          <div
-                            class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between {index % 2 === 1
-                              ? 'lg:rounded-r-none'
-                              : 'lg:rounded-l-none'} h-60 rounded-xl lg:rounded-xl rounded-t-none shadow lg:max-w-[66%]"
-                          >
-                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
-                          </div>
-                        </a>
-                      </div>
-                    {/each}
-                  </div>
-                {/if}
-                {#if category.posts && category.posts.length === 1}
-                  <div class="flex flex-col lg:flex-nowrap lg:overflow-hidden gap-x-8 gap-y-16 mt-16 lg:mt-8">
-                    {#each category.posts as post}
-                      <div class="flex flex-row mt-2">
-                        <a
-                          href="/stories/{post.slug}"
-                          class="break-inside-avoid flex flex-col lg:flex-row rounded-md hover:opacity-80"
-                        >
-                          <div
-                            class="relative rounded-xl rounded-b-none lg:rounded-r-none lg:rounded-xl h-60 lg:w-[33%] overflow-hidden shadow"
-                          >
-                            <img
-                              src={post.image.src}
-                              srcset={post.image.srcset}
-                              sizes={post.image.sizes}
-                              loading="lazy"
-                              alt={post.image.alt}
-                              class="object-cover rounded-xl lg:rounded-r-none lg:rounded-xl rounded-b-none overflow-hidden block h-60 max-w-auto w-full object-left-top"
-                            />
-                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
-                          </div>
-                          <div
-                            class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-xl rounded-t-none lg:rounded-l-none h-60 lg:rounded-xl shadow lg:max-w-[66%]"
-                          >
-                            <h3 class="font-bold text-xl line-clamp-3">{post.title}</h3>
-                            <p class="line-clamp-4 mb-1 text-gray-500">{post.content}</p>
-                          </div>
-                        </a>
-                      </div>
-                    {/each}
-                  </div>
-                {/if}
-              </div>
-            </Container>
-          </div>
-        {/each}
-
-        {#each content.testimonials as testimonial, i}
-          <div class="bg-gray-100 even:bg-white">
-            <Container class="ml-0 " size="small">
-              <Testimonials {testimonial} {i} />
-            </Container>
-          </div>
+          <Block bind:content={category} inline={true} />
         {/each}
       </div>
     </div>

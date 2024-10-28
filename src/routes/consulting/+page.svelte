@@ -1,6 +1,7 @@
 <script lang="ts">
   import Hero from '$lib/components/Hero.svelte'
   import iris from '$lib/assets/team/iris.jpg?w=768&format=webp;png&metadata&enhanced'
+  import bsoLogo from '$lib/assets/img/partners/bso_logo_desktop.svg'
   import BlogPostFeatures from '$lib/components/BlogPostFeatures.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import heroImage from '$lib/assets/hero/Beratung.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
@@ -23,7 +24,7 @@
       email: 'iris@triarc-labs.com',
       highlight: 'green',
       contactButton: 'Kontaktiere mich',
-      customLogos: ['src/lib/assets/img/partners/bso_logo_desktop.svg'],
+      customLogos: [bsoLogo],
     },
     categories: [
       {
@@ -58,30 +59,36 @@
         title: 'Führungs-, Team- und Mitarbeiter Coaching',
         content:
           'Die digitale Transformation birgt unzählige und vielschichtige Herausforderungen und Stolpersteine. Wir begleiten und befähigen Führungskräfte, Mitarbeiter und Teams auf dem Weg durch den Wandel. <br/><br/>Wir arbeiten mit einem systemisch-lösungsorientierten Beratungsansatz und verfolgen das Ziel der Selbstbefähigung. Je nach Bedarf agieren wir auch als Sparring-Partner.',
-        link: 'https://www.coaching-digitalisierung.ch',
+        link: {
+          href: 'https://www.coaching-digitalisierung.ch',
+          text: 'Mehr dazu',
+          target: '_self',
+        },
         posts: data.posts.coaching as MappedPost[],
       },
-    ],
-    testimonials: [
       {
-        logo: analytica,
-        quote: {
-          source: 'Andrea Isler von Analytica',
-          content:
-            '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
-            'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
-            'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»',
+        testimonial: {
+          logo: helvetas,
+          quote: {
+            source: 'Patric Masar von Helvetas',
+            content:
+              '«Dank der effizienten und zielorientierten Methodik konnten wir in nur zwei von Triarc moderierten halbtägigen Workshops ' +
+              'ein umfassendes Konzept für eine Zeiterfassunges und Spesenapp mit dem Erweiterungspotential für eine vielzahl weiterer ' +
+              'Anwendung erarbeiten. Neben dem definieren der Kernanforderungen haben wir in Brainstormingsessions auch Ideen für zukünftige ' +
+              'Anwendungsgebiete der App erarbeitet. Es ist erstaunlich welche Vielzahl an guten und realisierbaren Ideen daraus resultierten.»',
+          },
         },
       },
       {
-        logo: helvetas,
-        quote: {
-          source: 'Patric Masar von Helvetas',
-          content:
-            '«Dank der effizienten und zielorientierten Methodik konnten wir in nur zwei von Triarc moderierten halbtägigen Workshops ' +
-            'ein umfassendes Konzept für eine Zeiterfassunges und Spesenapp mit dem Erweiterungspotential für eine vielzahl weiterer ' +
-            'Anwendung erarbeiten. Neben dem definieren der Kernanforderungen haben wir in Brainstormingsessions auch Ideen für zukünftige ' +
-            'Anwendungsgebiete der App erarbeitet. Es ist erstaunlich welche Vielzahl an guten und realisierbaren Ideen daraus resultierten.»',
+        testimonial: {
+          logo: analytica,
+          quote: {
+            source: 'Andrea Isler von Analytica',
+            content:
+              '«Dank der Organisationsanalyse der Firma Triarc konnten wir die komplexe Struktur unserer ICT-Organisation besser verstehen und in der Folge die Effizienz unserer Abläufe verbessern sowie deren Innovation fördern.' +
+              'Der didaktische Ansatz der Berater:innen einerseits Wissen zu vermitteln und andererseits unsere Fachkräfte persönlich zu coachen wurde als besonders gewinnbringend eingeschätzt.' +
+              'Zusammenfassend beurteilt war der Einsatz der Firma Triarc für uns ein voller Erfolg.»',
+          },
         },
       },
     ],

@@ -14,29 +14,29 @@
   import TitleBlock from '$lib/components/BlockContentBlocks/TitleBlock.svelte'
   import CollapsibleCaret from '$lib/components/BlockContentBlocks/CollapsibleCaret.svelte'
   import QuoteBlock from '$lib/components/BlockContentBlocks/QuoteBlock.svelte'
+  import InlineQuoteBlock from '$lib/components/BlockContentBlocks/InlineQuoteBlock.svelte'
+  import BlogPostBlock from '$lib/components/BlockContentBlocks/BlogPostBlock.svelte'
+  import Testimonials from '$lib/index/Testimonials.svelte'
   export let content: BlockContent
+  export let inline: boolean = false
 </script>
 
 {#if content.quote}
   <QuoteBlock bind:quote={content.quote} />
-  <hr />
 {/if}
 
 {#if content.title}
   <div class="alternating md:min-h-0 group">
-    <Container>
+    <Container size={inline ? 'small' : 'wide'} class={inline ? 'ml-0' : ''}>
       <div
-        class="flex relative transition-all {!content.collapsed
-          ? 'pb-16 pt-8 md:py-32 items-center'
-          : 'py-6'} flex-col {content.collapsible
-          ? 'md:flex-row'
-          : 'group-odd:md:flex-row group-even:md:flex-row-reverse'}"
+        class="
+          {!content.collapsed ? 'pb-16 pt-8 md:py-32 items-center' : 'py-6'} flex-col
+          {content.collapsible ? 'md:flex-row' : 'group-odd:md:flex-row group-even:md:flex-row-reverse'}
+          {!content.collapsed && inline ? 'md:py-8' : ''} flex relative transition-all"
       >
-        <!--{#if content.collapsible}-->
-        <!--svelte-ignore a11y-click-events-have-key-events -->
         <div
-          role="button"
-          class="flex-main flex flex-row {content.collapsible ? '' : 'pointer-events-none'}"
+          role={content.collapsible ? 'button' : ''}
+          class="flex-main flex flex-row"
           tabindex="-1"
           aria-label="Öffne {content.title}"
           on:click={content.collapsible ? () => (content.collapsed = !content.collapsed) : null}
@@ -55,6 +55,9 @@
               {#if content.content}
                 <TextContentBlock bind:content={content.content} />
               {/if}
+              {#if content.blockquote}
+                <InlineQuoteBlock bind:quote={content.blockquote} />
+              {/if}
 
               {#if content.footer}
                 <FooterBlock bind:footer={content.footer}></FooterBlock>
@@ -62,6 +65,10 @@
 
               {#if content.link}
                 <LinkBlock bind:link={content.link} />
+              {/if}
+
+              {#if content.posts}
+                <BlogPostBlock posts={content.posts} />
               {/if}
 
               {#if content.bulletPoints}
@@ -83,6 +90,9 @@
           </div>
         </div>
 
+        {#if content.testimonial}
+          <Testimonials bind:testimonial={content.testimonial} />
+        {/if}
         <!-- Svelte Enhanced images do not work with SVGs as of now, might be able to adjust this if support for svgs gets added to the feature -->
         {#if content.image}
           <ImageBlock bind:collapsed={content.collapsed} bind:image={content.image} />
@@ -98,7 +108,14 @@
         <slot />
       </div>
     </Container>
-    <hr />
+  </div>
+{/if}
+
+{#if content.testimonial}
+  <div class="alternating">
+    <Container size={inline ? 'small' : 'wide'} class={inline ? 'ml-0' : ''}>
+      <Testimonials bind:testimonial={content.testimonial} />
+    </Container>
   </div>
 {/if}
 
