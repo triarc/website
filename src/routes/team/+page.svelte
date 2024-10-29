@@ -1,5 +1,6 @@
 <script lang="ts">
   import TeamMembers from '$lib/index/TeamMembers.svelte'
+  import careerImage from '$lib/assets/img/custom-software/triarc-adventure.svg'
   import Footer from '$lib/components/Footer.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Block from '$lib/components/Block.svelte'
@@ -10,7 +11,7 @@
     content:
       'Zusammen können wir alles erreichen. <br/><br/>' +
       'Werde Teil des Teams und bewirb dich, wenn du Leidenschaft, Elan und Tatendrang hast und du dich mit unseren Werten identifizieren kannst. ',
-    image: { src: 'src/lib/assets/img/custom-software/triarc-adventure.svg', alt: 'Triarc Career' },
+    image: { src: careerImage, alt: 'Triarc Career' },
     link: { href: '/jobs', text: 'Unsere Jobs' },
   }
 </script>
