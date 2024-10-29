@@ -5,12 +5,22 @@
   export let contactString: string = data.title
   import Container from '$lib/components/Container.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
+  import { goto, afterNavigate } from '$app/navigation';
+  import { base } from '$app/paths'
+
+  let previousPage : string = base ;
+
+  afterNavigate(({from}) => {
+    previousPage = from?.url.pathname || previousPage
+  })
+
   export function nav_back() {
-    if (window.history.length > 1) {
-      window.history.back()
-    } else {
-      window.location.href = '/stories'
-    }
+    // if (window.history.length > 1) {
+    //   window.history.back()
+    // } else {
+    //   window.location.href = '/stories'
+    // }
+    goto(previousPage)
   }
 </script>
 
