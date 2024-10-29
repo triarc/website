@@ -5,12 +5,12 @@
   export let contactString: string = data.title
   import Container from '$lib/components/Container.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
-  import { goto, afterNavigate } from '$app/navigation';
+  import { goto, afterNavigate } from '$app/navigation'
   import { base } from '$app/paths'
 
-  let previousPage : string = base ;
+  let previousPage: string = base
 
-  afterNavigate(({from}) => {
+  afterNavigate(({ from }) => {
     previousPage = from?.url.pathname || previousPage
   })
 
