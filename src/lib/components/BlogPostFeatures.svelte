@@ -16,7 +16,7 @@
           : 'group-even:bg-gray-100'}
           "
       >
-        <div class="lg:sticky lg:top-20">
+        <div class="lg:sticky lg:top-36">
           <div class="flex max-w-full lg:max-w-sm min-w-sm flex-col items-center px-8 gap-x-8 lg:ml-auto">
             <div class="-mt-8 w-full">
               <div class="relative aspect-[3/4] h-full flex justify-center items-center">
