@@ -7,6 +7,7 @@ import { GStorageService } from './gStorage.service'
 import { Client } from '@microsoft/microsoft-graph-client'
 import { ClientSecretCredential } from '@azure/identity'
 import { TokenCredentialAuthenticationProvider } from '@microsoft/microsoft-graph-client/lib/src/authentication/azureTokenCredentials'
+import { Message } from '@microsoft/microsoft-graph-types'
 
 export class ApplicationFormDto {
   @IsString()
@@ -165,7 +166,7 @@ export class EmailService {
       `Vielen Dank für Deine Bewerbung, wir melden uns so schnell wie möglich bei Dir.`
     )
   }
-  private createIssueEmail(issueSubject: string, issueText: string) {
+  private createIssueEmail(issueSubject: string, issueText: string): Message {
     return {
       subject: issueSubject,
       toRecipients: [
@@ -176,12 +177,12 @@ export class EmailService {
         },
       ],
       body: {
-        contentType: 'Text',
+        contentType: 'text',
         content: issueText,
       },
     }
   }
-  private createConfirmationEmail(data: ApplicationFormDto, replySubject: string, replyText: string) {
+  private createConfirmationEmail(data: ApplicationFormDto, replySubject: string, replyText: string): Message {
     return {
       subject: replySubject,
       toRecipients: [
@@ -192,7 +193,7 @@ export class EmailService {
         },
       ],
       body: {
-        contentType: 'Text',
+        contentType: 'text',
         content: replyText,
       },
     }
@@ -250,7 +251,7 @@ export class EmailService {
       `Nachricht: ${data.message ?? '-'}\n\n`
     )
   }
-  private async sendEmail(email: any, errorMessage: string) {
+  private async sendEmail(email: Message, errorMessage: string) {
     try {
       await this.client.api(`/users/${this.getConfigValue('MAIL_USER')}/sendMail`).post({ message: email })
     } catch (error) {
