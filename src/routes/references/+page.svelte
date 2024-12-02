@@ -14,7 +14,7 @@
   let content: BlockContent = {
     quote: {
       image: serge,
-      content: 'Gewinnen Sie durch maßgeschneiderte Software einen entscheidenden Wettbewerbsvorteil!',
+      content: 'Gewinnen Sie durch massgeschneiderte Software einen entscheidenden Wettbewerbsvorteil!',
       person: 'Serge Müller',
       personTitle: 'CEO Triarc Laboratories',
       email: 'serge@triarc-labs.com',
