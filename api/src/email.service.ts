@@ -1,4 +1,4 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common'
+import { HttpException, HttpStatus, Injectable, Logger } from '@nestjs/common'
 import { ConfigService } from '@nestjs/config'
 import { IsEmail, IsNotEmpty, IsOptional, IsString } from 'class-validator'
 import { ChatService } from './chat.service'
@@ -35,6 +35,10 @@ export class ApplicationFormDto {
   @IsString()
   arbeitgeber?: string
 }
+export interface MailtoTemplate {
+  template: string
+  buttonText: string
+}
 
 export interface GitlabLink {
   title: string
@@ -46,6 +50,7 @@ const gCloudBaseURL = 'https://storage.cloud.google.com/'
 @Injectable()
 export class EmailService {
   client: Client
+  private readonly logger = new Logger(EmailService.name, { timestamp: true })
 
   constructor(
     private config: ConfigService,
@@ -114,23 +119,30 @@ export class EmailService {
   private createResponseButtons(data: ApplicationFormDto, replySubject: string) {
     const subject = encodeURIComponent(replySubject)
     const templateTexts = this.createResponsesFromTemplateStrings(data)
-    const bodyPositiveResponse = encodeURIComponent(templateTexts[0])
-    const bodyNegativeResponse = encodeURIComponent(templateTexts[1])
-    return [
-      `<a href="mailto:${data.email}?subject=${subject}&body=${bodyPositiveResponse}">Zu Interview Einladen</a>`,
-      `<a href="mailto:${data.email}?subject=${subject}&body=${bodyNegativeResponse}">Vorläufig Absagen</a>`,
-    ]
+    const responseButtons: string[] = []
+    for (const response of templateTexts) {
+      responseButtons.push(
+        `<a href="mailto:${data.email}?subject=${subject}&body=${encodeURIComponent(response.template)}">${response.buttonText}</a>`
+      )
+    }
+    return responseButtons
   }
-  private createResponsesFromTemplateStrings(data: ApplicationFormDto) {
-    const positiveResponse =
-      `Hallo ${data.firstName},\n\n` +
-      `${
-        data.jobListing === 'Initiativbewerbung'
-          ? `Herzlichen Dank für deine Initiativbewerbung und dein Interesse an unserem Team „triarc-laboratories“. \n`
-          : `Herzlichen Dank für deine Bewerbung und dein Interesse an der Position als ${data.jobListing} in unserem Team „triarc-laboratories“.\n`
-      }` +
-      `${this.getConfigValue('MAIL_RESPONSE_POSITIVE')}`
-    const negativeResponse = `Hallo ${data.firstName},\n\n` + `${this.getConfigValue('MAIL_RESPONSE_NEGATIVE')}`
+  private createResponsesFromTemplateStrings(data: ApplicationFormDto): MailtoTemplate[] {
+    const positiveResponse = {
+      template:
+        `Hallo ${data.firstName},\n\n` +
+        `${
+          data.jobListing === 'Initiativbewerbung'
+            ? `Herzlichen Dank für deine Initiativbewerbung und dein Interesse an unserem Team „triarc-laboratories“. \n`
+            : `Herzlichen Dank für deine Bewerbung und dein Interesse an der Position als ${data.jobListing} in unserem Team „triarc-laboratories“.\n`
+        }` +
+        `${this.getConfigValue('MAIL_RESPONSE_POSITIVE')}`,
+      buttonText: 'Zu Interview Einladen',
+    }
+    const negativeResponse = {
+      template: `Hallo ${data.firstName},\n\n` + `${this.getConfigValue('MAIL_RESPONSE_NEGATIVE')}`,
+      buttonText: 'Vorläufig Absagen',
+    }
     return [positiveResponse, negativeResponse]
   }
   private createGitlabIssue(data: ApplicationFormDto, attachmentLinks: GitlabLink[], issueButtons: string[]) {
@@ -147,7 +159,7 @@ export class EmailService {
       `Was liegt dir beim Arbeitgeber besonders am Herz: ${data.arbeitgeber ?? '-'}\n\n` +
       `Anhang:\n` +
       attachmentLinks.map((link) => `- [${link.title}](${link.url})`).join('\n\n') +
-      `\n\n${issueButtons[0]}\n\n${issueButtons[1]}`
+      issueButtons.map((button) => `\n\n${button}`).join('')
     )
   }
   private createConfirmationText(data: ApplicationFormDto, filenames: string) {
@@ -255,6 +267,7 @@ export class EmailService {
     try {
       await this.client.api(`/users/${this.getConfigValue('MAIL_USER')}/sendMail`).post({ message: email })
     } catch (error) {
+      this.logger.error(errorMessage, error, `E-Mail Contents: ${email}`)
       throw new HttpException(errorMessage, HttpStatus.INTERNAL_SERVER_ERROR)
     }
   }
@@ -262,6 +275,7 @@ export class EmailService {
     try {
       await this.chat.postMessage('', message, blocks)
     } catch (error) {
+      this.logger.error('Error sending Slack Message', error.stack, `Message Text: ${message}`)
       throw new HttpException('Internal Server Error sending Slack Message', HttpStatus.INTERNAL_SERVER_ERROR)
     }
   }
