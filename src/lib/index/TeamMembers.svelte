@@ -7,13 +7,14 @@
   import iris from '$lib/assets/team/iris.jpg?format=webp;png&w=500&enhanced'
   import michel from '$lib/assets/team/michel.jpg?format=webp;png&w=500&enhanced'
   import luka from '$lib/assets/team/luka.jpg?format=webp;png&w=500&enhanced'
-  import chris from '$lib/assets/team/chris.jpg?format=webp;png&w=500&enhanced'
   import till from '$lib/assets/team/till.jpg?format=webp;png&w=500&enhanced'
   import david from '$lib/assets/team/david.jpg?format=webp;png&w=500&enhanced'
   import bammbamm from '$lib/assets/team/bambam.jpg?format=webp;png&w=500&enhanced'
   import lukas from '$lib/assets/team/lukas.jpg?format=webp;png&w=500&enhanced'
-  import alexa from '$lib/assets/team/alexa.jpg?format=webp;png&w=500&enhanced'
-  import sakima from '$lib/assets/team/sakima.jpg?format=webp;png&w=500&enhanced'
+  import markus from '$lib/assets/team/markus.jpg?format=webp;png&w=500&enhanced'
+  import sec from '$lib/assets/team/sec.jpg?format=webp;png&w=500&enhanced'
+  import gregor from '$lib/assets/team/gregor.jpg?format=webp;png&w=500&enhanced'
+  import sascha from '$lib/assets/team/sascha.jpg?format=webp;png&w=500&enhanced'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
 
   let teamMember = [
@@ -90,15 +91,6 @@
       linkedIn: 'https://www.linkedin.com/in/luka-kramer/',
     },
     {
-      name: 'Chris Thonfeld',
-      job: 'Software Developer',
-      nerdJob: 'Software Developer',
-      image: chris,
-      special: false,
-      email: 'chris@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/christopher-thonfeld-guckes-452b771b7/',
-    },
-    {
       name: 'Till Wegmüller',
       job: 'Operation Engineer',
       nerdJob: 'Operation Engineer',
@@ -118,21 +110,48 @@
     },
     {
       name: 'Lukas Hartmann',
-      job: 'Praktikant',
-      nerdJob: 'Praktikant',
+      job: 'Software Developer',
+      nerdJob: 'Software Developer',
       image: lukas,
       special: false,
       email: 'lukas@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
     },
     {
-      name: 'Alexa Weich',
-      job: 'UI/UX Designerin',
-      nerdJob: 'UI/UX Designerin',
-      image: alexa,
+      name: 'Markus Müller',
+      job: 'Software Developer',
+      nerdJob: 'Software Developer',
+      image: markus,
       special: false,
-      email: 'alexa@triarc-labs.com',
-      linkedIn: 'https://ch.linkedin.com/in/alexandra-weich-a13229140',
+      email: 'markus@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/markus-mueller-zh/',
+    },
+    {
+      name: 'Gregor Paka',
+      job: 'Business Developer',
+      nerdJob: 'Business Developer',
+      image: gregor,
+      special: false,
+      email: 'gregor@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/gregor-paka-788b44245/',
+    },
+    {
+      name: 'Sascha Wydler',
+      job: 'Projektleiter',
+      nerdJob: 'Projektleiter',
+      image: sascha,
+      special: false,
+      email: 'sascha@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/saschawydler/',
+    },
+    {
+      name: 'Seç Ergin',
+      job: 'Office Manager',
+      nerdJob: 'Office Manager',
+      image: sec,
+      special: false,
+      email: 'seç@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/se%C3%A7kin-ergin-328656241/',
     },
     {
       name: 'Bamm Bamm',
@@ -141,15 +160,6 @@
       image: bammbamm,
       special: true,
       email: 'bammbamm@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
-    },
-    {
-      name: 'Sakima',
-      job: 'Head of Security',
-      nerdJob: '',
-      image: sakima,
-      special: false,
-      email: 'sakima@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
     },
   ]
