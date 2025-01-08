@@ -3,7 +3,7 @@
   import Footer from '$lib/components/Footer.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Block from '$lib/components/Block.svelte'
-  import joinTheTeam from '$lib/assets/intro/content_team.svg'
+  import joinTheTeam from '$lib/assets/img/intro/content_team.svg'
   import heroImage from '$lib/assets/hero/Team.jpg?width=300;600;1000;2000&format=webp&enhanced'
 
   let content = {
