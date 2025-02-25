@@ -180,12 +180,12 @@
 </script>
 
 <svelte:head>
-  <title>together we succeed - triarc-labs</title>
+  <title>together you succeed - triarc-labs</title>
 </svelte:head>
 
 <div class="bg-white">
   <Hero
-    title="together we succeed"
+    title="together you succeed"
     content="Für Ihren Fortschritt. Wir sind fokussiert das nächste, höhere Level zu erreichen - vor allem für unsere Kunden, für Sie."
     image={heroImage}
     imageAlt="Triarc Mission Header"

@@ -15,6 +15,10 @@
   import sec from '$lib/assets/team/sec.jpg?format=webp;png&w=500&enhanced'
   import gregor from '$lib/assets/team/gregor.jpg?format=webp;png&w=500&enhanced'
   import sascha from '$lib/assets/team/sascha.jpg?format=webp;png&w=500&enhanced'
+  import nina from '$lib/assets/team/nina.png?format=webp;png&w=500&enhanced'
+  import luca from '$lib/assets/team/luca.png?format=webp;png&w=500&enhanced'
+  import bucky from '$lib/assets/team/bucky.png?format=webp;png&w=500&enhanced'
+
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
 
   let teamMember = [
@@ -152,6 +156,33 @@
       special: false,
       email: 'seç@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/se%C3%A7kin-ergin-328656241/',
+    },
+    {
+      name: 'Nina Karli',
+      job: 'UI/UX Designerin',
+      nerdJob: 'UI/UX Designerin',
+      image: nina,
+      special: false,
+      email: 'nina@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/nina-karli/',
+    },
+    {
+      name: 'Luca Salzani',
+      job: 'Software Developer',
+      nerdJob: 'Software Developer',
+      image: luca,
+      special: false,
+      email: 'luca@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/in/luca-salzani-21351394/',
+    },
+    {
+      name: 'Bucky',
+      job: 'Emotional Support Dog',
+      nerdJob: 'Emotional Support Dog',
+      image: bucky,
+      special: false,
+      email: 'bucky@triarc-labs.com',
+      linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
     },
     {
       name: 'Bamm Bamm',
