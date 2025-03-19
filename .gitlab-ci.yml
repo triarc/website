@@ -31,11 +31,10 @@ website:build-api:
     - cd api
     - npm ci
     - npm run build
-  only:
-    changes:
-      - api/**/*
   rules:
     - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
+      changes:
+        - api/**/*
 
 website:docker-push-api:
   tags:
@@ -49,10 +48,5 @@ website:docker-push-api:
    - ./scripts/push-docker.sh
   variables:
     TAG: $CI_COMMIT_REF_SLUG
-  only:
-    refs:
-      - master
-    changes:
-      - .gitlab-ci.yml
   rules:
     - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"

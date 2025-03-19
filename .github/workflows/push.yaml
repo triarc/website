@@ -1,42 +1,42 @@
-name: push
-on: [push]
-
-jobs:
-  lint:
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - run: npm ci
-      - run: npm run lint
-  web:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-      - run: npm ci
-      - run: npm run build
-  api:
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-      - name: Inject slug/short variables
-        uses: rlespinasse/github-slug-action@v4.x
-      - name: build docker image
-        run: ./scripts/build-docker.sh
-        working-directory: api
-        env:
-          TAG: ${{ env.GITHUB_REF_SLUG }}
-      - name: push docker image
-        run: ./scripts/push-docker.sh
-        working-directory: api
-        env:
-          TAG: ${{ env.GITHUB_REF_SLUG }}
-          GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
+#name: push
+#on: [push]
+#
+#jobs:
+#  lint:
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 5
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: actions/setup-node@v4
+#        with:
+#          node-version: '18'
+#      - run: npm ci
+#      - run: npm run lint
+#  web:
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 10
+#    steps:
+#      - uses: actions/checkout@v4
+#      - uses: actions/setup-node@v4
+#        with:
+#          node-version: '18'
+#      - run: npm ci
+#      - run: npm run build
+#  api:
+#    runs-on: ubuntu-latest
+#    timeout-minutes: 10
+#    steps:
+#      - uses: actions/checkout@v4
+#      - name: Inject slug/short variables
+#        uses: rlespinasse/github-slug-action@v4.x
+#      - name: build docker image
+#        run: ./scripts/build-docker.sh
+#        working-directory: api
+#        env:
+#          TAG: ${{ env.GITHUB_REF_SLUG }}
+#      - name: push docker image
+#        run: ./scripts/push-docker.sh
+#        working-directory: api
+#        env:
+#          TAG: ${{ env.GITHUB_REF_SLUG }}
+#          GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
