@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-docker push registry.gitlab.com/triarc-labs/sales/website:$TAG
+docker push registry.gitlab.com/triarc-labs/website:$TAG
