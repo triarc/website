@@ -1,0 +1,53 @@
+default:
+  image: node:18-alpine
+
+stages:
+  - lint
+  - build
+  - push
+
+website:lint:
+  stage: lint
+  timeout: 5m
+  script:
+    - npm ci
+    - npm run lint
+
+website:build-web:
+  stage: build
+  timeout: 10m
+  script:
+    - npm ci
+    - npm run build
+  only:
+    changes:
+      - api/**/*
+
+website:build-api:
+  stage: build
+  timeout: 10m
+  script:
+    - cd api
+    - npm ci
+    - npm run build
+  only:
+    changes:
+      - api/**/*
+
+website:docker-push-api:
+  tags:
+    - shell
+    - dedicated
+  stage: push
+  timeout: 10m
+  script:
+   - cd api
+   - ./scripts/build-docker.sh
+   - ./scripts/push-docker.sh
+  variables:
+    TAG: $CI_COMMIT_REF_SLUG
+  only:
+    refs:
+      - master
+    changes:
+      - .gitlab-ci.yml
