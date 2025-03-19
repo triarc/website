@@ -12,6 +12,8 @@ website:lint:
   script:
     - npm ci
     - npm run lint
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
 
 website:build-web:
   stage: build
@@ -19,9 +21,8 @@ website:build-web:
   script:
     - npm ci
     - npm run build
-  only:
-    changes:
-      - api/**/*
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
 
 website:build-api:
   stage: build
@@ -33,6 +34,8 @@ website:build-api:
   only:
     changes:
       - api/**/*
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
 
 website:docker-push-api:
   tags:
@@ -51,3 +54,5 @@ website:docker-push-api:
       - master
     changes:
       - .gitlab-ci.yml
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
