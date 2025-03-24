@@ -14,6 +14,7 @@ website:lint:
     - npm run lint
   rules:
     - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
+  when: never
 
 website:build-web:
   stage: build
@@ -23,6 +24,7 @@ website:build-web:
     - npm run build
   rules:
     - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
+  when: never
 
 website:build-api:
   stage: build
@@ -35,6 +37,7 @@ website:build-api:
     - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
       changes:
         - api/**/*
+  when: never
 
 website:docker-push-api:
   tags:
@@ -50,3 +53,4 @@ website:docker-push-api:
     TAG: $CI_COMMIT_REF_SLUG
   rules:
     - if: $CI_PIPELINE_SOURCE == "external_pull_request_event"
+  when: never
