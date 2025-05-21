@@ -11,8 +11,6 @@
   import david from '$lib/assets/team/david.jpg?format=webp;png&w=500&enhanced'
   import bammbamm from '$lib/assets/team/bambam.jpg?format=webp;png&w=500&enhanced'
   import lukas from '$lib/assets/team/lukas.jpg?format=webp;png&w=500&enhanced'
-  import markus from '$lib/assets/team/markus.jpg?format=webp;png&w=500&enhanced'
-  import sec from '$lib/assets/team/sec.jpg?format=webp;png&w=500&enhanced'
   import gregor from '$lib/assets/team/gregor.jpg?format=webp;png&w=500&enhanced'
   import sascha from '$lib/assets/team/sascha.jpg?format=webp;png&w=500&enhanced'
   import nina from '$lib/assets/team/nina.png?format=webp;png&w=500&enhanced'
@@ -122,15 +120,6 @@
       linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
     },
     {
-      name: 'Markus Müller',
-      job: 'Software Developer',
-      nerdJob: 'Software Developer',
-      image: markus,
-      special: false,
-      email: 'markus@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/markus-mueller-zh/',
-    },
-    {
       name: 'Gregor Paka',
       job: 'Business Developer',
       nerdJob: 'Business Developer',
@@ -147,15 +136,6 @@
       special: false,
       email: 'sascha@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/saschawydler/',
-    },
-    {
-      name: 'Seç Ergin',
-      job: 'Office Manager',
-      nerdJob: 'Office Manager',
-      image: sec,
-      special: false,
-      email: 'seç@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/se%C3%A7kin-ergin-328656241/',
     },
     {
       name: 'Nina Karli',
@@ -180,7 +160,7 @@
       job: 'Emotional Support Dog',
       nerdJob: 'Emotional Support Dog',
       image: bucky,
-      special: false,
+      special: true,
       email: 'bucky@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/company/triarc-laboratories-ltd/',
     },
