@@ -1,41 +1,46 @@
 <script lang="ts">
+  import { run, preventDefault } from 'svelte/legacy'
+
   import Container from '$lib/components/Container.svelte'
   import Dropzone from '$lib/components/Dropzone.svelte'
   import { goto } from '$app/navigation'
   import paperclip from '$lib/assets/icons/paperclip-solid.svg'
 
-  export let availableJobs: string[] = []
-  export let jobString: string = ''
-  export let isDefinedListing: boolean = false
+  interface Props {
+    availableJobs?: string[]
+    jobString?: string
+    isDefinedListing?: boolean
+  }
+
+  let { availableJobs = [], jobString = '', isDefinedListing = false }: Props = $props()
   const baseUrl = 'https://chatbot.triarc-labs.com'
   const maxFileSize = 10485760
 
-  let jobListing = ''
-  $: jobListing = jobString || 'Initiativbewerbung'
-  let firstName = '',
-    lastName = '',
-    phone = '',
-    email = '',
-    lohn = '',
-    message = '',
-    arbeitgeber = '',
-    appFiles: File[] = []
-  let sent = false
-  let error = false
-  let sending = false
-  let valid = true
-  let filesValid = true
-  let conditionAccepted = false
-  let noAgencyAccepted = false
+  let jobListing = $derived(() => jobString || 'Initiativbewerbung')
+  let firstName = $state(''),
+    lastName = $state(''),
+    phone = $state(''),
+    email = $state(''),
+    lohn = $state(''),
+    message = $state(''),
+    arbeitgeber = $state(''),
+    appFiles: File[] = $state([])
+  let sent = $state(false)
+  let error = $state(false)
+  let sending = $state(false)
+  let valid = $state(true)
+  let filesValid = $state(true)
+  let conditionAccepted = $state(false)
+  let noAgencyAccepted = $state(false)
 
-  let errorMessages: string[] = []
-  let fileValidationState: Record<string, string> = {
+  let errorMessages: string[] = $state([])
+  let fileValidationState: Record<string, string> = $state({
     appFileAvailability: '',
     appFileSize: '',
     appFileType: '',
-  }
+  })
 
-  $: {
+  run(() => {
     errorMessages = []
     if (!firstName || !lastName || !email) errorMessages.push('Bitte fülle alle Pflichtfelder aus.')
     if (!appFiles.length) {
@@ -51,7 +56,7 @@
       errorMessages.push(fileValidationState.appFileType)
     }
     if (!conditionAccepted) errorMessages.push('Bitte akzeptiere die Bedingung.')
-  }
+  })
 
   function checkFiles(files: File[]) {
     // noinspection RedundantIfStatementJS
@@ -173,6 +178,10 @@
       error = true
     }
   }
+
+  // Fix: Use unique IDs for checkboxes to avoid duplicate id="condition-checkbox" and for accessibility
+  const conditionCheckboxId = 'condition-checkbox'
+  const noAgencyCheckboxId = 'no-agency-checkbox'
 </script>
 
 <div class="alternating">
@@ -181,7 +190,7 @@
       <div class="py-16">
         <h2 class="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">Bewerbungsformular</h2>
         <h3 class="text-lg mt-3 mb-8 font-medium text-gray-500">Interessiert? Bewirb dich direkt über das Formular</h3>
-        <form id="application-form" on:submit|preventDefault={sendMail} action="#" method="POST">
+        <form id="application-form" onsubmit={preventDefault(sendMail)} action="#" method="POST">
           <div class="space-y-12 pb-12">
             <div
               class="form-section grid grid-cols-1 gap-x-8 gap-y-10 border-b border-gray-900/10 pb-12 md:grid-cols-3"
@@ -323,7 +332,7 @@
                       bind:value={arbeitgeber}
                       class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                       aria-describedby="message-max"
-                    />
+                    ></textarea>
                   </div>
                 </div>
               </div>
@@ -386,7 +395,7 @@
                     <div class="mt-1">
                       {#each appFiles as file}
                         <div class="py-1 flex flex-row gap-x-4 items-center">
-                          <button type="button" on:click={() => checkPDF(file)}>
+                          <button type="button" onclick={() => checkPDF(file)}>
                             <img class="min-w-4 min-h-4" src={paperclip} alt="attachment icon" />
                           </button>
                           <p class="w-full md:w-96 whitespace-nowrap overflow-hidden text-ellipsis">{file.name}</p>
@@ -394,7 +403,7 @@
                           <button
                             class="rounded-md px-3 text-white bg-blue-triarc"
                             type="button"
-                            on:click={() => deleteFile(file)}>Löschen</button
+                            onclick={() => deleteFile(file)}>Löschen</button
                           >
                           {#if file.size > maxFileSize}
                             <p class="text-red-500">Dateigrösse überschritten</p>
@@ -426,7 +435,7 @@
                       bind:value={message}
                       class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                       aria-describedby="message-max"
-                    />
+                    ></textarea>
                   </div>
                 </div>
               </div>
@@ -446,10 +455,10 @@
                         required
                         bind:checked={conditionAccepted}
                         type="checkbox"
-                        id="condition-checkbox"
+                        id={conditionCheckboxId}
                       />
                       <label
-                        for="condition-checkbox"
+                        for={conditionCheckboxId}
                         class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
                       >
                         Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span
@@ -465,10 +474,10 @@
                         required
                         bind:checked={noAgencyAccepted}
                         type="checkbox"
-                        id="condition-checkbox"
+                        id={noAgencyCheckboxId}
                       />
                       <label
-                        for="condition-checkbox"
+                        for={noAgencyCheckboxId}
                         class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
                       >
                         Wir akzeptieren keine Bewerbungen über Personalvermittlern oder Headhuntern. Ich bestätige, dass

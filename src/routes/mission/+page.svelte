@@ -14,7 +14,7 @@
   import goals from '$lib/assets/img/intro/shared_goals.svg'
   import baustelle from '$lib/assets/img/thumbnail/baustelle-poster.png'
 
-  let contents: BlockContent[] = [
+  let contents: BlockContent[] = $state([
     {
       quote: {
         image: serge,
@@ -176,7 +176,7 @@
     //   image: { src: 'img/custom-software/scrum_board.svg', alt: 'Scrum Board' },
     //   link: { href: '/services#agil', text: 'Agile Software' },
     // },
-  ]
+  ])
 </script>
 
 <svelte:head>
@@ -191,8 +191,8 @@
     imageAlt="Triarc Mission Header"
   />
 
-  {#each contents as content}
-    <Block bind:content />
+  {#each contents as content, i}
+    <Block bind:content={contents[i]} />
   {/each}
 
   <!--  <Manifest />-->

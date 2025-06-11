@@ -11,9 +11,13 @@
   import ContactForm from '$lib/components/ContactForm.svelte'
   import type { FeaturedContent } from '$lib/components/FeaturedContent'
 
-  export let data
-  export let contactString = 'Iris direkt kontaktieren'
-  let content: FeaturedContent = {
+  interface Props {
+    data: any
+    contactString?: string
+  }
+
+  let { data, contactString = 'Iris direkt kontaktieren' }: Props = $props()
+  let content: FeaturedContent = $state({
     quote: {
       content:
         'Der Mensch digitalisiert für die Menschen - wir stellen den User in den Mittelpunkt damit der Wandel von allen getragen und gelebt wird. Nur dann ist die Digitalisierung nachhaltig. ',
@@ -86,7 +90,7 @@
         },
       },
     ],
-  }
+  })
 </script>
 
 <svelte:head>

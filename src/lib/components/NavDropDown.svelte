@@ -1,9 +1,14 @@
 <script lang="ts">
-  export let title: string
-  export let open = false
-  export let inline = false
+  interface Props {
+    title: string
+    open?: boolean
+    inline?: boolean
+    children?: import('svelte').Snippet
+  }
 
-  let dropdown: HTMLElement
+  let { title, open = $bindable(false), inline = false, children }: Props = $props()
+
+  let dropdown: HTMLElement = $state()
 
   function toggle() {
     open = !open
@@ -55,7 +60,7 @@
       ? 'cursor-default rounded bg-black mb-1 text-white px-4 -mx-4'
       : 'cursor-pointer rounded bg-black lg:bg-transparent text-white lg:text-gray-800 px-4 -mx-4 mb-1 lg:rounded-none lg:px-0 lg:-mx-0 lg:mb-0'}"
     aria-expanded="false"
-    on:click={toggle}
+    onclick={toggle}
   >
     <span>{title}</span>
     {#if !inline}
@@ -70,13 +75,13 @@
   </button>
 
   <div class="{inline ? 'flex flex-col' : 'lg:hidden'} {open ? 'open' : 'closed'}">
-    <div on:click={close} class="container" role="none">
-      <slot />
+    <div onclick={close} class="container" role="none">
+      {@render children?.()}
     </div>
   </div>
   <div class=" {inline ? 'hidden' : 'dialog hidden lg:flex'} {open ? 'open' : 'closed'}">
-    <div on:click={close} class="container" role="none">
-      <slot />
+    <div onclick={close} class="container" role="none">
+      {@render children?.()}
     </div>
   </div>
 </div>

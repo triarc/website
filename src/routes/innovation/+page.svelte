@@ -12,7 +12,7 @@
   import heroImage from '$lib/assets/hero/InnovationLab.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
 
-  let contents: BlockContent[] = [
+  let contents: BlockContent[] = $state([
     {
       quote: {
         image: pascal,
@@ -90,7 +90,7 @@
       image: { src: slothiIcon, width: 200, alt: 'slothi' },
       link: { href: 'https://slothi.ch', text: 'Mehr dazu', target: '_blank' },
     },
-  ]
+  ])
 </script>
 
 <svelte:head>
@@ -105,8 +105,8 @@
 />
 
 <div class="bg-white min-h-screen">
-  {#each contents as content}
-    <Block bind:content />
+  {#each contents as content, i}
+    <Block bind:content={contents[i]} />
   {/each}
 
   <Footer />

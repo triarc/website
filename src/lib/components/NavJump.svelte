@@ -33,7 +33,7 @@
   aria-label="Zur Navigation scrollen"
   id="nav-jump-button"
   class="z-40 sticky hidden mr-6 ml-auto bottom-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full items-center justify-center"
-  on:click={scrollToMenu}
+  onclick={scrollToMenu}
 >
   <svg
     class="w-6 h-6 text-blue-triarc"

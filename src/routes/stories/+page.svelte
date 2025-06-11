@@ -11,12 +11,16 @@
   import type { MappedPost } from '../consulting/+page'
   import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
 
-  export let data: PageData
-  let pageNumber = 2 //
-  let reachedEnd = false
-  let loading = false
-  let filter!: HTMLDialogElement
-  let items: MappedPost[] = []
+  interface Props {
+    data: PageData
+  }
+
+  let { data }: Props = $props()
+  let pageNumber = $state(2) //
+  let reachedEnd = $state(false)
+  let loading = $state(false)
+  let filter!: HTMLDialogElement = $state()
+  let items: MappedPost[] = $state([])
 
   onMount(() => {
     filter = document.getElementById('filter') as HTMLDialogElement
@@ -113,7 +117,7 @@
           ''
             ? ''
             : 'active'}"
-          on:click={() => filter.showModal()}
+          onclick={() => filter.showModal()}
         >
           <span class="badge flex-shrink">Filter</span>
           {#if data.selectedTag.startsWith('beratung')}
@@ -166,34 +170,35 @@
           pageNumber++
           loading = false
         }}
-        let:visibleItems
       >
-        {#each visibleItems as item}
-          <div class="item max-w-full md:max-w-md">
-            <a href="/stories/{item.data.slug}" class=" break-inside-avoid shadow flex flex-col group rounded-md">
-              {#if item.data.image.src !== ''}
-                <div class="relative rounded-md shadow">
-                  <img
-                    src={item.data.image.src}
-                    srcset={item.data.image.srcset}
-                    sizes={item.data.image.sizes}
-                    loading="lazy"
-                    alt={item.data.image.alt}
-                    data-width={item.data.image.width}
-                    data-height={item.data.image.height}
-                    class="object-cover rounded-md rounded-b-none overflow-hidden block h-auto max-w-auto w-full object-center group-hover:opacity-75"
-                  />
-                  <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
+        {#snippet children({ visibleItems })}
+          {#each visibleItems as item}
+            <div class="item max-w-full md:max-w-md">
+              <a href="/stories/{item.data.slug}" class=" break-inside-avoid shadow flex flex-col group rounded-md">
+                {#if item.data.image.src !== ''}
+                  <div class="relative rounded-md shadow">
+                    <img
+                      src={item.data.image.src}
+                      srcset={item.data.image.srcset}
+                      sizes={item.data.image.sizes}
+                      loading="lazy"
+                      alt={item.data.image.alt}
+                      data-width={item.data.image.width}
+                      data-height={item.data.image.height}
+                      class="object-cover rounded-md rounded-b-none overflow-hidden block h-auto max-w-auto w-full object-center group-hover:opacity-75"
+                    />
+                    <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md"></div>
+                  </div>
+                {/if}
+                <div class="px-4 py-3 bg-white rounded-md">
+                  <h3 class="font-bold text-xl">{item.data.title}</h3>
+                  <p class="line-clamp-3 mb-1 text-gray-500">{item.data.content}</p>
+                  <p class="text-sm text-gray-500">{item.data.footer}</p>
                 </div>
-              {/if}
-              <div class="px-4 py-3 bg-white rounded-md">
-                <h3 class="font-bold text-xl">{item.data.title}</h3>
-                <p class="line-clamp-3 mb-1 text-gray-500">{item.data.content}</p>
-                <p class="text-sm text-gray-500">{item.data.footer}</p>
-              </div>
-            </a>
-          </div>
-        {/each}
+              </a>
+            </div>
+          {/each}
+        {/snippet}
       </MasonryInfiniteGrid>
     </div>
   </div>

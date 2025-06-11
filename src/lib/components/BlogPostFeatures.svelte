@@ -5,7 +5,11 @@
   import Button from '$lib/components/Button.svelte'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
-  export let content: FeaturedContent
+  interface Props {
+    content: FeaturedContent
+  }
+
+  let { content }: Props = $props()
 </script>
 
 {#if content}
@@ -134,7 +138,8 @@
                       <li>
                         <div class="relative pb-8">
                           {#if i < category.steps.length - 1}
-                            <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
+                            <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"
+                            ></span>
                           {/if}
                           <div class="relative flex space-x-3">
                             <div>
@@ -174,7 +179,7 @@
                               alt={post.image.alt}
                               class="object-cover rounded-xl rounded-b-none overflow-hidden block h-full max-w-auto w-full object-left-top"
                             />
-                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
+                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md"></div>
                           </div>
                           <div
                             class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-t-none h-60 rounded-xl shadow"
@@ -212,7 +217,7 @@
                                 ? 'rounded-l-none'
                                 : 'rounded-r-none'} overflow-hidden block h-60 max-w-auto w-full object-left-top"
                             />
-                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
+                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md"></div>
                           </div>
                           <div
                             class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between {index % 2 === 1
@@ -246,7 +251,7 @@
                               alt={post.image.alt}
                               class="object-cover rounded-xl lg:rounded-r-none lg:rounded-xl rounded-b-none overflow-hidden block h-60 max-w-auto w-full object-left-top"
                             />
-                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md" />
+                            <div class="absolute bg-opacity-20 top-0 left-0 w-full h-full rounded-md"></div>
                           </div>
                           <div
                             class="px-4 py-3 bg-blue-triarc bg-opacity-10 flex flex-col justify-between rounded-xl rounded-t-none lg:rounded-l-none h-60 lg:rounded-xl shadow lg:max-w-[66%]"

@@ -10,7 +10,7 @@
 <div class="bg-white h-screen relative">
   <div class="bg-white mt-24 overflow-hidden">
     <div class="relative max-w-7xl mx-auto pt-8 px-4 sm:px-6 lg:px-8">
-      <div class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />
+      <div class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen"></div>
       <div class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none">
         <div>
           <h2 class="text-base text-blue-triarc font-semibold tracking-wide uppercase">day @ triarc</h2>
@@ -92,7 +92,7 @@
               Goto – Kleinhirn meldet an Grosshirn, dass es Mittag geworden ist. Ich überprüfe die Küche nach Essbarem.
             </p>
           </div>
-          <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1" />
+          <div class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"></div>
         </div>
       </div>
     </div>
@@ -100,7 +100,7 @@
 
   <div class="bg-white overflow-hidden">
     <div class="relative max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
-      <div class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen" />
+      <div class="hidden lg:block absolute top-0 bottom-0 left-3/4 w-screen"></div>
       <div class="lg:grid lg:grid-cols-3 lg:gap-8">
         <div class="mb-8">
           <div class="relative text-base mx-auto max-w-prose lg:max-w-none flex items-center justify-center">

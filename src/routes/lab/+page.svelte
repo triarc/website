@@ -1,10 +1,12 @@
 <script lang="ts">
+  import { preventDefault } from 'svelte/legacy'
+
   import Footer from '$lib/components/Footer.svelte'
   import FairPizza from '$lib/assets/img/lab/fairpizza-dashboard.png?format=webp;png&w=500&enhanced'
   import Slothi from '$lib/assets/img/lab/slothi.png?format=webp;png&w=500&enhanced'
   import labImage from '$lib/assets/img/lab/lab.svg'
-  let email = ''
-  let submitted = false
+  let email = $state('')
+  let submitted = $state(false)
 
   function submitNewsletter() {
     if (submitted) {
@@ -154,7 +156,7 @@
             <p class="mt-6 text-xl text-gray-600 max-w-lg">Bist du interessiert an unseren Projekten?</p>
             <p class="text-base text-gray-600">Wir halten dich gerne auf dem Laufenden.</p>
           </div>
-          <form on:submit|preventDefault={submitNewsletter} class="sm:mx-auto w-full sm:flex">
+          <form onsubmit={preventDefault(submitNewsletter)} class="sm:mx-auto w-full sm:flex">
             <div class={submitted ? 'w-0 overflow-hidden' : 'min-w-0 sm:mr-3 flex-grow'} style="max-width: 400px">
               <label for="cta-email" class="sr-only">Email address</label>
               <input

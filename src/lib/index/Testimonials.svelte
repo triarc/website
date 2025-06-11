@@ -1,8 +1,12 @@
 <script lang="ts">
   import type { Testimonial } from '$lib/components/FeaturedContent'
 
-  export let testimonial: Testimonial
-  export let i: number
+  interface Props {
+    testimonial: Testimonial
+    i: number
+  }
+
+  let { testimonial, i }: Props = $props()
 </script>
 
 <div class="py-16 lg:mr-auto">

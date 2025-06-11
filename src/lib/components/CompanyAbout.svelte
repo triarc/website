@@ -4,9 +4,9 @@
   import { ourBenefits } from '$lib/content/benefits'
   import { ourApplicationProcess } from '$lib/content/application-process'
 
-  let contents: BlockContent[] = [ourBenefits, ourApplicationProcess]
+  let contents: BlockContent[] = $state([ourBenefits, ourApplicationProcess])
 </script>
 
-{#each contents as content}
-  <Block bind:content />
+{#each contents as content, i}
+  <Block bind:content={contents[i]} />
 {/each}

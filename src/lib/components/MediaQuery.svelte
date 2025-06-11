@@ -1,12 +1,14 @@
-<script>
+<script lang="ts">
+  import { run } from 'svelte/legacy'
+
   import { onMount } from 'svelte'
 
-  export let query
+  let { query, children } = $props()
 
   let mql
   let mqlListener
-  let wasMounted = false
-  let matches = false
+  let wasMounted = $state(false)
+  let matches = $state(false)
 
   onMount(() => {
     wasMounted = true
@@ -14,13 +16,6 @@
       removeActiveListener()
     }
   })
-
-  $: {
-    if (wasMounted) {
-      removeActiveListener()
-      addNewListener(query)
-    }
-  }
 
   function addNewListener(query) {
     mql = window.matchMedia(query)
@@ -34,6 +29,12 @@
       mql.removeListener(mqlListener)
     }
   }
+  $: {
+    if (wasMounted) {
+      removeActiveListener()
+      addNewListener(query)
+    }
+  }
 </script>
 
-<slot {matches} />
+{@render children?.({ matches })}
