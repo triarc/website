@@ -18,7 +18,7 @@
   })
 </script>
 
-<!-- svelte-ignore a11y_media_has_caption -->
+<!-- svelte-ignore a11y-media-has-caption -->
 
 <video
   id={`${content.videoId}-player`}
