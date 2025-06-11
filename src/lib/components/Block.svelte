@@ -6,11 +6,11 @@
   import Video from '$lib/components/Video.svelte'
   import VideoSmall from '$lib/components/VideoSmall.svelte'
   interface Props {
-    content: BlockContent;
-    children?: import('svelte').Snippet;
+    content: BlockContent
+    children?: import('svelte').Snippet
   }
 
-  let { content = $bindable(), children }: Props = $props();
+  let { content = $bindable(), children }: Props = $props()
 </script>
 
 {#if content.quote}

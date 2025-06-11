@@ -4,11 +4,11 @@
   import Container from '$lib/components/Container.svelte'
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   interface Props {
-    data: PageData;
-    contactString?: string;
+    data: PageData
+    contactString?: string
   }
 
-  let { data, contactString = data.title }: Props = $props();
+  let { data, contactString = data.title }: Props = $props()
   export function nav_back() {
     if (window.history.length > 1) {
       window.history.back()

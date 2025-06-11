@@ -249,7 +249,7 @@
     style="border:0;"
     loading="lazy"
     referrerpolicy="no-referrer-when-downgrade"
-></iframe>
+  ></iframe>
 
   <hr />
 
@@ -341,7 +341,7 @@
                 bind:value={message}
                 class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                 aria-describedby="message-max"
-></textarea>
+              ></textarea>
             </div>
           </div>
           <div class="sm:col-span-2 sm:flex sm:justify-end space-between gap-x-6">

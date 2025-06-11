@@ -12,11 +12,11 @@
   import type { FeaturedContent } from '$lib/components/FeaturedContent'
 
   interface Props {
-    data: any;
-    contactString?: string;
+    data: any
+    contactString?: string
   }
 
-  let { data, contactString = 'Iris direkt kontaktieren' }: Props = $props();
+  let { data, contactString = 'Iris direkt kontaktieren' }: Props = $props()
   let content: FeaturedContent = $state({
     quote: {
       content:

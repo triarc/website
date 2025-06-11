@@ -1,22 +1,16 @@
 <script lang="ts">
-  import { createBubbler } from 'svelte/legacy';
+  import { createBubbler } from 'svelte/legacy'
 
-  const bubble = createBubbler();
+  const bubble = createBubbler()
   interface Props {
-    value?: string;
-    files?: FileList | undefined;
-    isValid?: boolean;
-    children?: import('svelte').Snippet;
+    value?: string
+    files?: FileList | undefined
+    isValid?: boolean
+    children?: import('svelte').Snippet
     [key: string]: any
   }
 
-  let {
-    value = $bindable(''),
-    files = $bindable(undefined),
-    isValid = true,
-    children,
-    ...rest
-  }: Props = $props();
+  let { value = $bindable(''), files = $bindable(undefined), isValid = true, children, ...rest }: Props = $props()
   let input: HTMLInputElement = $state()
 
   function keydown(ev: KeyboardEvent) {

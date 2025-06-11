@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { run, preventDefault } from 'svelte/legacy';
+  import { run, preventDefault } from 'svelte/legacy'
 
   import Container from '$lib/components/Container.svelte'
   import Dropzone from '$lib/components/Dropzone.svelte'
@@ -7,16 +7,16 @@
   import paperclip from '$lib/assets/icons/paperclip-solid.svg'
 
   interface Props {
-    availableJobs?: string[];
-    jobString?: string;
-    isDefinedListing?: boolean;
+    availableJobs?: string[]
+    jobString?: string
+    isDefinedListing?: boolean
   }
 
-  let { availableJobs = [], jobString = '', isDefinedListing = false }: Props = $props();
+  let { availableJobs = [], jobString = '', isDefinedListing = false }: Props = $props()
   const baseUrl = 'https://chatbot.triarc-labs.com'
   const maxFileSize = 10485760
 
-  let jobListing = $derived(() => jobString || 'Initiativbewerbung');
+  let jobListing = $derived(() => jobString || 'Initiativbewerbung')
   let firstName = $state(''),
     lastName = $state(''),
     phone = $state(''),
@@ -56,7 +56,7 @@
       errorMessages.push(fileValidationState.appFileType)
     }
     if (!conditionAccepted) errorMessages.push('Bitte akzeptiere die Bedingung.')
-  });
+  })
 
   function checkFiles(files: File[]) {
     // noinspection RedundantIfStatementJS
@@ -180,8 +180,8 @@
   }
 
   // Fix: Use unique IDs for checkboxes to avoid duplicate id="condition-checkbox" and for accessibility
-  const conditionCheckboxId = 'condition-checkbox';
-  const noAgencyCheckboxId = 'no-agency-checkbox';
+  const conditionCheckboxId = 'condition-checkbox'
+  const noAgencyCheckboxId = 'no-agency-checkbox'
 </script>
 
 <div class="alternating">
@@ -332,7 +332,7 @@
                       bind:value={arbeitgeber}
                       class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                       aria-describedby="message-max"
-></textarea>
+                    ></textarea>
                   </div>
                 </div>
               </div>
@@ -435,7 +435,7 @@
                       bind:value={message}
                       class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
                       aria-describedby="message-max"
-></textarea>
+                    ></textarea>
                   </div>
                 </div>
               </div>

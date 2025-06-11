@@ -12,10 +12,10 @@
   import { ourApplicationProcess } from '$lib/content/application-process'
   import Container from '$lib/components/Container.svelte'
   interface Props {
-    data: PageData;
+    data: PageData
   }
 
-  let { data }: Props = $props();
+  let { data }: Props = $props()
 
   let benefits = $state(ourBenefits)
   let hiringProcess = $state(ourApplicationProcess)

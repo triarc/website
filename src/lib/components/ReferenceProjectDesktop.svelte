@@ -2,22 +2,15 @@
   import Container from '$lib/components/Container.svelte'
 
   interface Props {
-    appName: string;
-    companyDescription: string;
-    situation: string;
-    challenges: string;
-    solutions: string;
-    imageSource: string;
+    appName: string
+    companyDescription: string
+    situation: string
+    challenges: string
+    solutions: string
+    imageSource: string
   }
 
-  let {
-    appName,
-    companyDescription,
-    situation,
-    challenges,
-    solutions,
-    imageSource
-  }: Props = $props();
+  let { appName, companyDescription, situation, challenges, solutions, imageSource }: Props = $props()
 </script>
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10">

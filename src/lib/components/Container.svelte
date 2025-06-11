@@ -1,14 +1,11 @@
 <script lang="ts">
-  
-
   interface Props {
-    class?: string;
-    size?: 'wide' | 'small';
-    children?: import('svelte').Snippet;
+    class?: string
+    size?: 'wide' | 'small'
+    children?: import('svelte').Snippet
   }
 
-  let { class: clazz = '', size = 'wide', children }: Props = $props();
-  
+  let { class: clazz = '', size = 'wide', children }: Props = $props()
 </script>
 
 <div

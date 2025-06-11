@@ -2,11 +2,11 @@
   import type { Testimonial } from '$lib/components/FeaturedContent'
 
   interface Props {
-    testimonial: Testimonial;
-    i: number;
+    testimonial: Testimonial
+    i: number
   }
 
-  let { testimonial, i }: Props = $props();
+  let { testimonial, i }: Props = $props()
 </script>
 
 <div class="py-16 lg:mr-auto">

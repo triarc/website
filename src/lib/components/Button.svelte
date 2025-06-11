@@ -1,11 +1,11 @@
 <script lang="ts">
   interface Props {
-    buttonSize: 'Standard' | 'Small';
-    buttonMargin?: 'Standard' | 'None';
-    reference?: string;
-    label?: string;
-    target?: string;
-    clicked?: () => void;
+    buttonSize: 'Standard' | 'Small'
+    buttonMargin?: 'Standard' | 'None'
+    reference?: string
+    label?: string
+    target?: string
+    clicked?: () => void
   }
 
   let {
@@ -14,8 +14,8 @@
     reference = '',
     label = '',
     target = '',
-    clicked = () => {}
-  }: Props = $props();
+    clicked = () => {},
+  }: Props = $props()
 </script>
 
 <a

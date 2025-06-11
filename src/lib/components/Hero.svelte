@@ -2,18 +2,13 @@
   import Container from '$lib/components/Container.svelte'
   import type { Picture } from 'imagetools-core'
   interface Props {
-    title: string;
-    content: string | undefined;
-    image: Picture;
-    imageAlt: string;
+    title: string
+    content: string | undefined
+    image: Picture
+    imageAlt: string
   }
 
-  let {
-    title,
-    content,
-    image,
-    imageAlt
-  }: Props = $props();
+  let { title, content, image, imageAlt }: Props = $props()
 </script>
 
 <div class="relative bg-blue-triarc">

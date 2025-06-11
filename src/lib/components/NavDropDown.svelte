@@ -1,17 +1,12 @@
 <script lang="ts">
   interface Props {
-    title: string;
-    open?: boolean;
-    inline?: boolean;
-    children?: import('svelte').Snippet;
+    title: string
+    open?: boolean
+    inline?: boolean
+    children?: import('svelte').Snippet
   }
 
-  let {
-    title,
-    open = $bindable(false),
-    inline = false,
-    children
-  }: Props = $props();
+  let { title, open = $bindable(false), inline = false, children }: Props = $props()
 
   let dropdown: HTMLElement = $state()
 

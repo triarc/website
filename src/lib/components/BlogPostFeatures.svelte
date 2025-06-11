@@ -6,10 +6,10 @@
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   const highlightColors = { green: 'bg-green-triarc', blue: 'bg-blue-triarc' }
   interface Props {
-    content: FeaturedContent;
+    content: FeaturedContent
   }
 
-  let { content }: Props = $props();
+  let { content }: Props = $props()
 </script>
 
 {#if content}
@@ -138,7 +138,8 @@
                       <li>
                         <div class="relative pb-8">
                           {#if i < category.steps.length - 1}
-                            <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
+                            <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"
+                            ></span>
                           {/if}
                           <div class="relative flex space-x-3">
                             <div>

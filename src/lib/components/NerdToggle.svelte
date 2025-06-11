@@ -1,10 +1,10 @@
 <script lang="ts">
   import { createEventDispatcher } from 'svelte'
   interface Props {
-    enabled?: boolean;
+    enabled?: boolean
   }
 
-  let { enabled = $bindable(false) }: Props = $props();
+  let { enabled = $bindable(false) }: Props = $props()
   const dispatch = createEventDispatcher()
   function toggle() {
     enabled = !enabled
@@ -29,7 +29,7 @@
       class:translate-x-5={enabled}
       class:translate-x-0={!enabled}
       class="pointer-events-none inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"
-></span>
+    ></span>
   </button>
   <span class="ml-3" id="annual-billing-label">
     <span class="text-sm font-medium" class:text-blue-triarc={enabled} class:text-gray-500={!enabled}>Nerd mode</span>

@@ -1,19 +1,13 @@
 <script lang="ts">
   interface Props {
-    title: string;
-    description: string;
-    path: string;
-    close: () => void;
-    inline?: boolean;
+    title: string
+    description: string
+    path: string
+    close: () => void
+    inline?: boolean
   }
 
-  let {
-    title,
-    description,
-    path,
-    close,
-    inline = false
-  }: Props = $props();
+  let { title, description, path, close, inline = false }: Props = $props()
 </script>
 
 <a

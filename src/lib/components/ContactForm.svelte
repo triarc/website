@@ -3,10 +3,10 @@
   import { onMount } from 'svelte'
 
   interface Props {
-    contactString: string;
+    contactString: string
   }
 
-  let { contactString }: Props = $props();
+  let { contactString }: Props = $props()
 
   let firstName = $state(''),
     lastName = $state(''),
@@ -126,7 +126,7 @@
               bind:value={message}
               class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
               aria-describedby="message-max"
-></textarea>
+            ></textarea>
           </div>
         </div>
         <div class="sm:col-span-2 sm:flex sm:justify-end space-between gap-x-6">

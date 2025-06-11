@@ -1,15 +1,14 @@
 <script lang="ts">
   import 'plyr/dist/plyr.css'
 
-
   import { onMount } from 'svelte'
   import Plyr from 'plyr'
   import type { VideoContent } from '$lib/components/TypeDefinitions'
   interface Props {
-    content: VideoContent;
+    content: VideoContent
   }
 
-  let { content }: Props = $props();
+  let { content }: Props = $props()
 
   onMount(async () => {
     new Plyr(`#${content.videoId}-player`, {

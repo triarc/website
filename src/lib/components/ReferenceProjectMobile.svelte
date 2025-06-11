@@ -5,26 +5,19 @@
   import type { Picture } from 'imagetools-core'
   import { browser } from '$app/environment'
   interface Props {
-    appName: string;
-    companyDescription: string;
-    situation: string;
-    challenges: string;
-    solutions: string;
-    imageSources: Picture[];
+    appName: string
+    companyDescription: string
+    situation: string
+    challenges: string
+    solutions: string
+    imageSources: Picture[]
   }
 
-  let {
-    appName,
-    companyDescription,
-    situation,
-    challenges,
-    solutions,
-    imageSources
-  }: Props = $props();
+  let { appName, companyDescription, situation, challenges, solutions, imageSources }: Props = $props()
 
-  let carousel: any;
-  const goToPrev = () => carousel && carousel.goToPrev();
-  const goToNext = () => carousel && carousel.goToNext();
+  let carousel: any
+  const goToPrev = () => carousel && carousel.goToPrev()
+  const goToNext = () => carousel && carousel.goToNext()
 </script>
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10">
@@ -66,9 +59,21 @@
                   height="1.25em"
                   viewBox="0 0 512 512"
                 >
-                  <defs><style>.fa-secondary { opacity: 0.4; }</style></defs>
-                  <path class="fa-primary" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
-                  <path class="fa-secondary" d="M233.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                  <defs
+                    ><style>
+                      .fa-secondary {
+                        opacity: 0.4;
+                      }
+                    </style></defs
+                  >
+                  <path
+                    class="fa-primary"
+                    d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                  />
+                  <path
+                    class="fa-secondary"
+                    d="M233.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                  />
                 </svg>
               </button>
             </div>
@@ -80,9 +85,21 @@
                   height="1.25em"
                   viewBox="0 0 512 512"
                 >
-                  <defs><style>.fa-secondary { opacity: 0.4; }</style></defs>
-                  <path class="fa-primary" d="M470.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L402.7 256 265.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
-                  <path class="fa-secondary" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                  <defs
+                    ><style>
+                      .fa-secondary {
+                        opacity: 0.4;
+                      }
+                    </style></defs
+                  >
+                  <path
+                    class="fa-primary"
+                    d="M470.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L402.7 256 265.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+                  />
+                  <path
+                    class="fa-secondary"
+                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
+                  />
                 </svg>
               </button>
             </div>

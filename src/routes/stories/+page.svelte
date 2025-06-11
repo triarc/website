@@ -12,10 +12,10 @@
   import { MasonryInfiniteGrid } from '@egjs/svelte-infinitegrid'
 
   interface Props {
-    data: PageData;
+    data: PageData
   }
 
-  let { data }: Props = $props();
+  let { data }: Props = $props()
   let pageNumber = $state(2) //
   let reachedEnd = $state(false)
   let loading = $state(false)
@@ -170,10 +170,9 @@
           pageNumber++
           loading = false
         }}
-        
       >
         {#snippet children({ visibleItems })}
-                {#each visibleItems as item}
+          {#each visibleItems as item}
             <div class="item max-w-full md:max-w-md">
               <a href="/stories/{item.data.slug}" class=" break-inside-avoid shadow flex flex-col group rounded-md">
                 {#if item.data.image.src !== ''}
@@ -199,8 +198,8 @@
               </a>
             </div>
           {/each}
-                      {/snippet}
-            </MasonryInfiniteGrid>
+        {/snippet}
+      </MasonryInfiniteGrid>
     </div>
   </div>
 
