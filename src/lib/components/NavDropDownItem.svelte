@@ -30,7 +30,7 @@
   <p class="text-gray-600">{description}</p>
 </a>
 
-<!-- svelte-ignore css_unused_selector -->
+<!-- svelte-ignore css-unused-selector -->
 <style lang="postcss">
   /*noinspection CssUnusedSymbol*/
   .dialog-link {
