@@ -17,9 +17,7 @@
   const maxFileSize = 10485760
 
   let jobListing = $state('')
-  run(() => {
-    jobListing = jobString || 'Initiativbewerbung'
-  });
+  $: jobListing = jobString || 'Initiativbewerbung';
   let firstName = $state(''),
     lastName = $state(''),
     phone = $state(''),
