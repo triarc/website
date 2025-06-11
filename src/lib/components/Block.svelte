@@ -5,7 +5,12 @@
   import Container from '$lib/components/Container.svelte'
   import Video from '$lib/components/Video.svelte'
   import VideoSmall from '$lib/components/VideoSmall.svelte'
-  export let content: BlockContent
+  interface Props {
+    content: BlockContent;
+    children?: import('svelte').Snippet;
+  }
+
+  let { content = $bindable(), children }: Props = $props();
 </script>
 
 {#if content.quote}
@@ -112,7 +117,7 @@
           class="flex-main flex flex-row"
           tabindex="-1"
           aria-label="Öffne {content.title}"
-          on:click={content.collapsible ? () => (content.collapsed = !content.collapsed) : null}
+          onclick={content.collapsible ? () => (content.collapsed = !content.collapsed) : null}
         >
           {#if content.collapsible}
             <div class="mt-4 mr-4">
@@ -227,7 +232,7 @@
                     <li>
                       <div class="relative pb-8">
                         {#if i < content.steps.length - 1}
-                          <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true" />
+                          <span class="absolute top-4 left-4 -ml-px h-full w-0.5 bg-gray-200" aria-hidden="true"></span>
                         {/if}
                         <div class="relative flex space-x-3">
                           <div>
@@ -290,7 +295,7 @@
       </div>
 
       <div class="overflow-hidden {!content.collapsed ? 'max-h-infiniti' : 'max-h-0'}">
-        <slot />
+        {@render children?.()}
       </div>
 
       <hr />

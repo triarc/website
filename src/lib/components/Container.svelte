@@ -1,9 +1,14 @@
 <script lang="ts">
-  let clazz = ''
-  export { clazz as class }
+  
 
-  let size: 'wide' | 'small' = 'wide'
-  export { size }
+  interface Props {
+    class?: string;
+    size?: 'wide' | 'small';
+    children?: import('svelte').Snippet;
+  }
+
+  let { class: clazz = '', size = 'wide', children }: Props = $props();
+  
 </script>
 
 <div
@@ -11,5 +16,5 @@
     ? 'max-w-screen-xl'
     : 'max-w-4xl'} mx-auto flex-col {clazz}"
 >
-  <slot />
+  {@render children?.()}
 </div>

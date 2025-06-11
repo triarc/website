@@ -1,10 +1,19 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte'
   import type { Picture } from 'imagetools-core'
-  export let title: string
-  export let content: string | undefined
-  export let image: Picture
-  export let imageAlt: string
+  interface Props {
+    title: string;
+    content: string | undefined;
+    image: Picture;
+    imageAlt: string;
+  }
+
+  let {
+    title,
+    content,
+    image,
+    imageAlt
+  }: Props = $props();
 </script>
 
 <div class="relative bg-blue-triarc">
@@ -15,7 +24,7 @@
       src={image}
       alt={imageAlt}
     />
-    <div class="absolute inset-0 bg-green-triarc mix-blend-multiply" aria-hidden="true" />
+    <div class="absolute inset-0 bg-green-triarc mix-blend-multiply" aria-hidden="true"></div>
   </div>
   <Container>
     <div class="py-24 sm:py-32">

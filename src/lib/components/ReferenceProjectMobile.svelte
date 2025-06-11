@@ -4,14 +4,25 @@
   import Container from '$lib/components/Container.svelte'
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   import type { Picture } from 'imagetools-core'
-  export let appName: string
-  export let companyDescription: string
-  export let situation: string
-  export let challenges: string
-  export let solutions: string
-  export let imageSources: Picture[]
+  interface Props {
+    appName: string;
+    companyDescription: string;
+    situation: string;
+    challenges: string;
+    solutions: string;
+    imageSources: Picture[];
+  }
 
-  let emblaCarousel: EmblaCarouselType
+  let {
+    appName,
+    companyDescription,
+    situation,
+    challenges,
+    solutions,
+    imageSources
+  }: Props = $props();
+
+  let emblaCarousel: EmblaCarouselType = $state()
   let options: EmblaOptionsType = { loop: true }
   let plugins: EmblaPluginType[] = []
 
@@ -32,7 +43,7 @@
     <div class="relative overflow-hidden pt-8">
       <div class="px-10">
         <div class="embla">
-          <div class="embla__viewport" use:emblaCarouselSvelte={{ options, plugins }} on:emblaInit={onInit}>
+          <div class="embla__viewport" use:emblaCarouselSvelte={{ options, plugins }} onemblaInit={onInit}>
             <div class="embla__container">
               {#each imageSources as imageSource}
                 <div class="embla__slide">
@@ -48,7 +59,7 @@
               {/each}
             </div>
           </div>
-          <button class="embla__button embla__button--prev" on:click={() => emblaCarousel.scrollPrev()}>
+          <button class="embla__button embla__button--prev" onclick={() => emblaCarousel.scrollPrev()}>
             <svg
               class="embla__button__svg__prev"
               xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +80,7 @@
               /></svg
             >
           </button>
-          <button class="embla__button embla__button--next" on:click={() => emblaCarousel.scrollNext()}>
+          <button class="embla__button embla__button--next" onclick={() => emblaCarousel.scrollNext()}>
             <svg
               class="embla__button__svg__next"
               xmlns="http://www.w3.org/2000/svg"

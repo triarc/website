@@ -11,7 +11,7 @@
   import NavJump from '$lib/components/NavJump.svelte'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
 
-  let content: BlockContent = {
+  let content: BlockContent = $state({
     quote: {
       image: serge,
       content: 'Gewinnen Sie durch massgeschneiderte Software einen entscheidenden Wettbewerbsvorteil!',
@@ -21,7 +21,7 @@
       highlight: 'green',
       linkedin: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
     },
-  }
+  })
 </script>
 
 <svelte:head>

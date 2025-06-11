@@ -15,7 +15,7 @@
   import kibagLogo from '$lib/assets/img/customer/kibag-logo.svg'
   import waloLogo from '$lib/assets/img/customer/walo-logo.svg'
 
-  let contents: BlockContent[] = [
+  let contents: BlockContent[] = $state([
     {
       title: 'μLink Datahub',
       content:
@@ -101,7 +101,7 @@
         },
       ],
     },
-  ]
+  ])
 
   let quotes: { left: BlockContent; right: BlockContent }[] = [
     {
@@ -173,8 +173,8 @@
 </svelte:head>
 
 <div class="bg-white">
-  {#each contents as content}
-    <Block bind:content />
+  {#each contents as content, i}
+    <Block bind:content={contents[i]} />
   {/each}
 
   {#each quotes as quote}

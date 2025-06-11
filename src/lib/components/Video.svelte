@@ -1,11 +1,15 @@
 <script lang="ts">
   import 'plyr/dist/plyr.css'
 
-  export let content: VideoContent
 
   import { onMount } from 'svelte'
   import Plyr from 'plyr'
   import type { VideoContent } from '$lib/components/TypeDefinitions'
+  interface Props {
+    content: VideoContent;
+  }
+
+  let { content }: Props = $props();
 
   onMount(async () => {
     new Plyr(`#${content.videoId}-player`, {
@@ -14,7 +18,7 @@
   })
 </script>
 
-<!-- svelte-ignore a11y-media-has-caption -->
+<!-- svelte-ignore a11y_media_has_caption -->
 
 <video
   id={`${content.videoId}-player`}

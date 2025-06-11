@@ -1,6 +1,6 @@
 <script lang="ts">
   let thread = undefined
-  let messages = []
+  let messages = $state([])
 
   function addMessage(message) {
     messages = [...messages, message]
@@ -67,7 +67,7 @@
           type="text"
           name="chat"
           placeholder="Sprich mit uns über dein nächstes Projekt!"
-          on:keyup={onKeyUp}
+          onkeyup={onKeyUp}
           class="px-4 py-4 sm:px-6 block w-full sm:text-sm rounded-md focus:outline-none"
         />
       </div>

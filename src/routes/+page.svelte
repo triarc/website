@@ -40,7 +40,7 @@
   <button
     aria-label="Zur Navigation scrollen"
     class="animate-bounce z-40 lg:hidden absolute bottom-6 right-6 bg-white p-2 w-10 h-10 ring-1 ring-red-triarc/5 shadow-lg rounded-full flex items-center justify-center"
-    on:click={scrollToMenu}
+    onclick={scrollToMenu}
   >
     <svg
       class="w-6 h-6 text-blue-triarc"

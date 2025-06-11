@@ -2,16 +2,20 @@
   import Container from '$lib/components/Container.svelte'
   import { onMount } from 'svelte'
 
-  export let contactString: string
+  interface Props {
+    contactString: string;
+  }
 
-  let firstName = '',
-    lastName = '',
-    phone = '',
-    email = '',
-    subject = '',
-    message = ''
-  let sent = false
-  let sending = false
+  let { contactString }: Props = $props();
+
+  let firstName = $state(''),
+    lastName = $state(''),
+    phone = $state(''),
+    email = $state(''),
+    subject = $state(''),
+    message = $state('')
+  let sent = $state(false)
+  let sending = $state(false)
 
   onMount(() => {
     subject = contactString
@@ -122,7 +126,7 @@
               bind:value={message}
               class="block w-full rounded-md border-gray-300 py-3 px-4 text-gray-900 shadow-sm focus:border-blue-triarc focus:ring-blue-triarc"
               aria-describedby="message-max"
-            />
+></textarea>
           </div>
         </div>
         <div class="sm:col-span-2 sm:flex sm:justify-end space-between gap-x-6">
@@ -139,7 +143,7 @@
           {/if}
 
           <button
-            on:click={send}
+            onclick={send}
             disabled={sending || !firstName || !lastName || !subject || !message}
             type="button"
             class="mt-2 inline-flex w-full items-center justify-center rounded-md border border-transparent bg-blue-triarc disabled:bg-gray-500 px-6 py-3 text-base font-medium text-white shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2 sm:w-auto"

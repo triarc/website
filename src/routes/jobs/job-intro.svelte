@@ -4,7 +4,7 @@
   import type { BlockContent } from '$lib/components/TypeDefinitions'
   import adventurer from '$lib/assets/img/custom-software/triarc-adventure.svg'
 
-  let contents: BlockContent[] = [
+  let contents: BlockContent[] = $state([
     {
       quote: {
         image: elke,
@@ -26,9 +26,9 @@
         'Lehrabschluss/HF/Bachelor/Master oder selbst beigebracht. Bei uns ist nichts strikt vorgegeben, wir evaluieren immer zu deiner Situation. ',
       image: { src: adventurer, alt: 'Triarc Career' },
     },
-  ]
+  ])
 </script>
 
-{#each contents as content}
-  <Block bind:content />
+{#each contents as content, i}
+  <Block bind:content={contents[i]} />
 {/each}

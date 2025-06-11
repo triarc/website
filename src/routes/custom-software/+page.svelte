@@ -7,7 +7,7 @@
   import heroImage from '$lib/assets/hero/CustomSoftware.jpg?width=300;600;1000;2000&format=webp&metadata&enhanced'
   import type { BlockContent } from '$lib/components/TypeDefinitions'
 
-  let contents: BlockContent[] = [
+  let contents: BlockContent[] = $state([
     {
       quote: {
         image: elke,
@@ -107,7 +107,7 @@
         'Regelmässige Wartung der Software sowie das Einspielen von sicherheitsrelevanten Patches ist für uns ein Routine-Job und läst uns Nachts besser schlafen.',
       image: { src: maintenance, alt: 'Wartung' },
     },
-  ]
+  ])
 </script>
 
 <svelte:head>
@@ -122,8 +122,8 @@
     imageAlt="Triarc Custom Software Header"
   />
 
-  {#each contents as content}
-    <Block bind:content />
+  {#each contents as content, i}
+    <Block bind:content={contents[i]} />
   {/each}
 
   <Footer />

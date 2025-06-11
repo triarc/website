@@ -1,12 +1,23 @@
 <script lang="ts">
   import Container from '$lib/components/Container.svelte'
 
-  export let appName: string
-  export let companyDescription: string
-  export let situation: string
-  export let challenges: string
-  export let solutions: string
-  export let imageSource: string
+  interface Props {
+    appName: string;
+    companyDescription: string;
+    situation: string;
+    challenges: string;
+    solutions: string;
+    imageSource: string;
+  }
+
+  let {
+    appName,
+    companyDescription,
+    situation,
+    challenges,
+    solutions,
+    imageSource
+  }: Props = $props();
 </script>
 
 <div class="even:bg-white odd:bg-gray-100 py-24 sm:py-32 z-10">

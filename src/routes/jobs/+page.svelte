@@ -83,8 +83,8 @@
 
   const jobPostings = JobPostings
 
-  let initiativbewerbung = Initiativbewerbung
-  let listings: DetailedJobListing[] = DetailedJobListings
+  let initiativbewerbung = $state(Initiativbewerbung)
+  let listings: DetailedJobListing[] = $state(DetailedJobListings)
 </script>
 
 <svelte:head>

@@ -11,13 +11,17 @@
   import { ourBenefits } from '$lib/content/benefits'
   import { ourApplicationProcess } from '$lib/content/application-process'
   import Container from '$lib/components/Container.svelte'
-  export let data: PageData
+  interface Props {
+    data: PageData;
+  }
 
-  let benefits = ourBenefits
-  let hiringProcess = ourApplicationProcess
+  let { data }: Props = $props();
+
+  let benefits = $state(ourBenefits)
+  let hiringProcess = $state(ourApplicationProcess)
 
   let jobListingBase = data.jobListing.BasicJobInfo
-  let jobListingExtended = data.jobListing.ExtendedJobInfo
+  let jobListingExtended = $state(data.jobListing.ExtendedJobInfo)
   let hiring = jobListingBase.jobDetails?.currentlyHiring
   let jobHero = jobListingBase.title!
   let jobTitle = jobListingBase.jobDetails!.jobName
