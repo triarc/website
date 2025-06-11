@@ -30,12 +30,12 @@
       mql.removeListener(mqlListener)
     }
   }
-  run(() => {
+  $: {
     if (wasMounted) {
-      removeActiveListener()
-      addNewListener(query)
+      removeActiveListener();
+      addNewListener(query);
     }
-  });
+  }
 </script>
 
 {@render children?.({ matches, })}
