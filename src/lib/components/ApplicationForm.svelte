@@ -16,8 +16,7 @@
   const baseUrl = 'https://chatbot.triarc-labs.com'
   const maxFileSize = 10485760
 
-  let jobListing = $state('')
-  $: jobListing = jobString || 'Initiativbewerbung';
+  let jobListing = $derived(() => jobString || 'Initiativbewerbung');
   let firstName = $state(''),
     lastName = $state(''),
     phone = $state(''),
@@ -179,6 +178,10 @@
       error = true
     }
   }
+
+  // Fix: Use unique IDs for checkboxes to avoid duplicate id="condition-checkbox" and for accessibility
+  const conditionCheckboxId = 'condition-checkbox';
+  const noAgencyCheckboxId = 'no-agency-checkbox';
 </script>
 
 <div class="alternating">
@@ -452,10 +455,10 @@
                         required
                         bind:checked={conditionAccepted}
                         type="checkbox"
-                        id="condition-checkbox"
+                        id={conditionCheckboxId}
                       />
                       <label
-                        for="condition-checkbox"
+                        for={conditionCheckboxId}
                         class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
                       >
                         Aus rechtlichen Gründen können wir nur Bewerber berücksichtigen, die ihren Wohnsitz in der <span
@@ -471,10 +474,10 @@
                         required
                         bind:checked={noAgencyAccepted}
                         type="checkbox"
-                        id="condition-checkbox"
+                        id={noAgencyCheckboxId}
                       />
                       <label
-                        for="condition-checkbox"
+                        for={noAgencyCheckboxId}
                         class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
                       >
                         Wir akzeptieren keine Bewerbungen über Personalvermittlern oder Headhuntern. Ich bestätige, dass
