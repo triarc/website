@@ -29,82 +29,44 @@
       </div>
     </div>
     <div class="relative overflow-hidden pt-8">
-      <div class="px-10">
-        {#if browser}
-          <Carousel
-            bind:this={carousel}
-            infinite={true}
-            arrows={false}
-            dots={true}
-            particlesToShow={1}
-            class="carousel-embla"
-          >
-            {#each imageSources as imageSource}
-              <div class="embla__slide">
-                <div class="embla__slide__inner">
-                  <EnhancedImage
-                    imgClass="embla__slide__img object-contain max-h-[450px] lg:max-h-[600px]"
-                    image={imageSource}
-                    loading="lazy"
-                    alt="Screenshot of {appName}"
-                  />
+      <div class="flex justify-center w-full">
+        <div class="relative w-full max-w-xl mx-auto flex items-center">
+          {#if browser}
+            <Carousel
+              bind:this={carousel}
+              infinite={true}
+              arrows={false}
+              dots={true}
+              particlesToShow={1}
+              class="carousel-embla w-full"
+            >
+              {#each imageSources as imageSource}
+                <div class="embla__slide">
+                  <div class="embla__slide__inner">
+                    <EnhancedImage
+                      imgClass="embla__slide__img object-contain max-h-[450px] lg:max-h-[600px]"
+                      image={imageSource}
+                      loading="lazy"
+                      alt="Screenshot of {appName}"
+                    />
+                  </div>
                 </div>
-              </div>
-            {/each}
-            <div slot="prev">
-              <button class="embla__button embla__button--prev" onclick={goToPrev} aria-label="Previous slide">
-                <svg
-                  class="embla__button__svg__prev"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1.25em"
-                  viewBox="0 0 512 512"
-                >
-                  <defs
-                    ><style>
-                      .fa-secondary {
-                        opacity: 0.4;
-                      }
-                    </style></defs
-                  >
-                  <path
-                    class="fa-primary"
-                    d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-                  />
-                  <path
-                    class="fa-secondary"
-                    d="M233.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
-                  />
-                </svg>
-              </button>
-            </div>
-            <div slot="next">
-              <button class="embla__button embla__button--next" onclick={goToNext} aria-label="Next slide">
-                <svg
-                  class="embla__button__svg__next"
-                  xmlns="http://www.w3.org/2000/svg"
-                  height="1.25em"
-                  viewBox="0 0 512 512"
-                >
-                  <defs
-                    ><style>
-                      .fa-secondary {
-                        opacity: 0.4;
-                      }
-                    </style></defs
-                  >
-                  <path
-                    class="fa-primary"
-                    d="M470.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L402.7 256 265.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
-                  />
-                  <path
-                    class="fa-secondary"
-                    d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"
-                  />
-                </svg>
-              </button>
-            </div>
-          </Carousel>
-        {/if}
+              {/each}
+            </Carousel>
+            <button class="embla__button embla__button--prev left-2 top-1/2 -translate-y-1/2" on:click={goToPrev} aria-label="Previous slide">
+              <svg class="embla__button__svg__prev" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                <path class="fa-primary" d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+                <path class="fa-secondary" d="M233.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+              </svg>
+            </button>
+            <button class="embla__button embla__button--next right-2 top-1/2 -translate-y-1/2" on:click={goToNext} aria-label="Next slide">
+              <svg class="embla__button__svg__next" xmlns="http://www.w3.org/2000/svg" height="1.25em" viewBox="0 0 512 512">
+                <path class="fa-primary" d="M470.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L402.7 256 265.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+                <path class="fa-secondary" d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/>
+              </svg>
+            </button>
+          {/if}
+        </div>
       </div>
     </div>
     <div class="mt-16 sm:mt-5 md:mt-10">
@@ -182,8 +144,9 @@
     flex: 0 0 100%;
     max-height: 80vh;
     position: relative;
-    margin-left: 2.5vh;
-    margin-right: 2.5vh;
+    /* Remove margin-left and margin-right for perfect centering */
+    margin-left: 0;
+    margin-right: 0;
   }
   /* Phone sideways or Tablet */
   @media (min-width: 400px) {
@@ -192,8 +155,9 @@
       max-width: 80vh;
       flex: 0 0 100%;
       max-height: 80vh;
-      margin-left: 2.5vh;
-      margin-right: 2.5vh;
+      /* Remove margin-left and margin-right for perfect centering */
+      margin-left: 0;
+      margin-right: 0;
       position: relative;
     }
   }
@@ -204,8 +168,9 @@
       max-width: 80vh;
       flex: 0 0 31%;
       max-height: 80vh;
-      margin-left: 2.5vh;
-      margin-right: 2.5vh;
+      /* Remove margin-left and margin-right for perfect centering */
+      margin-left: 0;
+      margin-right: 0;
       position: relative;
     }
   }
@@ -219,12 +184,12 @@
     background-color: transparent;
     position: absolute;
     display: grid;
-    z-index: 1;
+    z-index: 10;
     top: 50%;
     transform: translateY(-50%);
     border: 0;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     align-items: center;
     cursor: pointer;
     padding: 0;
@@ -246,8 +211,7 @@
   }
 
   .embla__button--prev {
-    left: -30px;
-    z-index: 10;
+    left: 2px;
   }
   /* Desktop */
   @media (min-width: 992px) {
@@ -256,8 +220,7 @@
   }
 
   .embla__button--next {
-    right: -30px;
-    z-index: 10;
+    right: 2px;
   }
 
   /* Desktop */
