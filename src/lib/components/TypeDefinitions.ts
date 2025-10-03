@@ -87,3 +87,16 @@ export interface NavItemLink {
   path: string
 }
 export type NavItem = NavItemHeading | NavItemLink
+
+export interface TriarcSectionText {
+  prefix: string
+  title: string
+  description: string
+}
+
+export interface TriarcLandingPageText {
+  content: TriarcSectionText
+  strategy: TriarcSectionText
+  operations: TriarcSectionText
+  future: TriarcSectionText
+}
