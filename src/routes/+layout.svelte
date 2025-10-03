@@ -163,7 +163,7 @@
   })
 </script>
 
-<div id="page" class="{data.pathname === '/' ? 'landing' : 'content'} {menuOpen ? 'open' : 'closed'}">
+<div id="page" class="content {menuOpen ? 'open' : 'closed'}">
   <nav class="navbar" id="nav-menu">
     <div class="navbar-container">
       <a href="/" class="flex items-center px-12 py-2">
@@ -182,14 +182,13 @@
                 <!--            <div class="font-light text-sm">{navItem.description}</div>-->
               </a>
             {:else}
-              <NavDropDown title={navItem.title} inline={data.pathname === '/'}>
+              <NavDropDown title={navItem.title}>
                 {#each navItem.items as subItem}
                   <NavDropDownItem
                     title={subItem.title}
                     description={subItem.description}
                     close={hideMenu}
                     path={subItem.path}
-                    inline={data.pathname === '/'}
                   />
                 {/each}
               </NavDropDown>
@@ -200,7 +199,7 @@
     </div>
   </nav>
 
-  <div class="main-container w-full {data.pathname === '/' ? 'landing' : 'content'}">
+  <div class="main-container w-full content">
     <div class="mobile-bar z-20 bg-white w-full py-2 px-4 flex items-center lg:hidden" id="mobile-bar">
       <button class="py-2 px-2 rounded-md" on:click={toggle} aria-label="Navigation Menu">
         <svg width="32px" height="25px" viewBox="0 0 29 25" xmlns="http://www.w3.org/2000/svg">
@@ -229,9 +228,9 @@
   }
 
   /*noinspection CssUnusedSymbol*/
-  #page.landing {
-    @apply flex-col-reverse lg:flex-row;
-  }
+  /*#page.landing {*/
+  /*  @apply flex-col-reverse lg:flex-row;*/
+  /*}*/
   /*noinspection CssUnusedSymbol*/
   #page.content {
     @apply flex flex-col;
@@ -242,12 +241,13 @@
       group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all flex-grow;
   }
 
-  #page.landing .navbar {
-    @apply max-h-screen;
-  }
-  #page.landing .mobile-bar {
-    @apply hidden;
-  }
+  /*#page.landing .navbar {*/
+  /*  @apply max-h-screen;*/
+  /*}*/
+
+  /*#page.landing .mobile-bar {*/
+  /*  @apply hidden;*/
+  /*}*/
 
   #page .mobile-bar {
     @apply h-16;
@@ -256,6 +256,7 @@
   #page.content.closed .navbar {
     @apply max-h-0 overflow-hidden lg:max-h-max lg:overflow-visible;
   }
+
   #page.content.open .mobile-bar {
     @apply bottom-0;
   }
@@ -298,16 +299,17 @@
     @apply min-h-0 px-8;
   }
 
-  #page.landing .navbar {
-    @apply px-0 py-8 items-stretch flex-col justify-center w-full lg:max-w-sm lg:fixed lg:top-0 overflow-x-hidden;
-  }
-  #page.landing .navbar-container {
-    @apply flex-col;
-  }
+  /*#page.landing .navbar {*/
+  /*  @apply px-0 py-8 items-stretch flex-col justify-center w-full lg:max-w-sm lg:fixed lg:top-0 overflow-x-hidden;*/
+  /*}*/
 
-  #page.landing .navbar .nav-links {
-    @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8;
-  }
+  /*#page.landing .navbar-container {*/
+  /*  @apply flex-col;*/
+  /*}*/
+
+  /*#page.landing .navbar .nav-links {*/
+  /*  @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8;*/
+  /*}*/
   #page .navbar .nav-links {
     @apply scrollbar-thin scrollbar-thumb-blue-triarc lg:overflow-visible scrollbar-track-transparent;
     /* scrollbar-track-gray-800*/
@@ -316,6 +318,7 @@
   #page.landing .main-container {
     @apply lg:pl-96;
   }
+
   #nav-menu {
     transition: max-height 200ms;
   }

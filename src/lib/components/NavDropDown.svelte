@@ -74,7 +74,7 @@
       <slot />
     </div>
   </div>
-  <div class=" {inline ? 'hidden' : 'dialog hidden lg:flex'} {open ? 'open' : 'closed'}">
+  <div class=" {inline ? 'hidden' : 'dialog'} {open ? 'open' : 'closed'}">
     <div on:click={close} class="container" role="none">
       <slot />
     </div>
@@ -92,7 +92,7 @@
   }
   /* noinspection CssUnusedSymbol*/
   .dialog.closed {
-    @apply transition ease-in duration-150 opacity-0 translate-y-1;
+    @apply transition ease-in duration-150 opacity-0 translate-y-1 pointer-events-none;
   }
   /* noinspection CssUnusedSymbol*/
   .dialog .container {
