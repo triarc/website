@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
   import Landing from '$lib/index/Landing.svelte'
+  import LandingMission from '$lib/index/LandingMission.svelte'
 
   let navMenuElement: HTMLElement | null
 
@@ -23,5 +24,6 @@
 </svelte:head>
 
 <Landing></Landing>
+<LandingMission></LandingMission>
 
 
