@@ -1,6 +1,5 @@
 <script lang="ts">
   import TeamMembers from '$lib/index/TeamMembers.svelte'
-  import careerImage from '$lib/assets/img/custom-software/triarc-adventure.svg'
   import Footer from '$lib/components/Footer.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Block from '$lib/components/Block.svelte'
