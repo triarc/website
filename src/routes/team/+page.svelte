@@ -4,6 +4,7 @@
   import Footer from '$lib/components/Footer.svelte'
   import Hero from '$lib/components/Hero.svelte'
   import Block from '$lib/components/Block.svelte'
+  import joinTheTeam from '$lib/assets/img/intro/content_team.svg'
   import heroImage from '$lib/assets/hero/Team.jpg?width=300;600;1000;2000&format=webp&enhanced'
 
   let content = {
@@ -11,7 +12,7 @@
     content:
       'Zusammen können wir alles erreichen. <br/><br/>' +
       'Werde Teil des Teams und bewirb dich, wenn du Leidenschaft, Elan und Tatendrang hast und du dich mit unseren Werten identifizieren kannst. ',
-    image: { src: careerImage, alt: 'Triarc Career' },
+    image: { src: joinTheTeam, alt: 'Triarc Career' },
     link: { href: '/jobs', text: 'Unsere Jobs' },
   }
 </script>

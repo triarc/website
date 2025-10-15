@@ -39,4 +39,5 @@ jobs:
         working-directory: api
         env:
           TAG: ${{ env.GITHUB_REF_SLUG }}
-          GCP_SA_KEY: ${{secrets.GCP_SA_KEY}}
+          DOCKER_PUSH_KEY: ${{secrets.DOCKER_PUSH_KEY}}
+          DOCKER_PUSH_USER: ${{secrets.DOCKER_PUSH_USER}}

@@ -43,7 +43,7 @@
       errorMessages.push(fileValidationState.appFileAvailability)
     }
     if (appFiles.reduce((sum, current) => sum + current.size, 0) > maxFileSize) {
-      fileValidationState.appFileSize = 'Die Gesamtgröße der Dateien überschreitet das Maximum von 10 MB.'
+      fileValidationState.appFileSize = 'Die Gesamtgrösse der Dateien überschreitet das Maximum von 10 MB.'
       errorMessages.push(fileValidationState.appFileSize)
     }
     if (appFiles.some((file) => file.type !== 'application/pdf')) {

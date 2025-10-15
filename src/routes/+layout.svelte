@@ -25,7 +25,7 @@
   const navItems: NavItem[] = [
     {
       type: 'heading',
-      title: 'together we succeed',
+      title: 'together you succeed',
       items: [
         {
           type: 'link',
