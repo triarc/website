@@ -38,7 +38,7 @@
   }
 
   function blurListener(evt: MouseEvent) {
-    if (dropdown && evt.target && evt.target instanceof HTMLElement && dropdown.contains(evt.target)) {
+    if (dropdown && evt.target && (evt.target instanceof HTMLElement || evt.target instanceof SVGElement)  && dropdown.contains(evt.target)) {
       return
     }
     if (open) {
@@ -54,31 +54,31 @@
     class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 {inline
       ? 'cursor-default rounded bg-black mb-1 text-white px-4 -mx-4'
       : 'cursor-pointer rounded bg-black lg:bg-transparent text-white lg:text-gray-800 px-4 -mx-4 mb-1 lg:rounded-none lg:px-0 lg:-mx-0 lg:mb-0'}"
-    aria-expanded="false"
+    aria-expanded="{open}"
     on:click={toggle}
   >
     <span>{title}</span>
-    {#if !inline}
-      <svg class="h-5 w-5 hidden lg:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <svg class="h-5 w-5 hidden lg:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
         <path
           fill-rule="evenodd"
           d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
           clip-rule="evenodd"
         />
-      </svg>
-    {/if}
+    </svg>
   </button>
 
-  <div class="{inline ? 'flex flex-col' : 'lg:hidden'} {open ? 'open' : 'closed'}">
+  <div class="lg:hidden {open ? 'open' : 'closed'}">
     <div on:click={close} class="container" role="none">
       <slot />
     </div>
   </div>
-  <div class=" {inline ? 'hidden' : 'dialog'} {open ? 'open' : 'closed'}">
+  {#if open}
+  <div class="dialog {open ? 'open' : 'closed'}">
     <div on:click={close} class="container" role="none">
       <slot />
     </div>
   </div>
+  {/if}
 </div>
 
 <style lang="postcss">
@@ -92,7 +92,7 @@
   }
   /* noinspection CssUnusedSymbol*/
   .dialog.closed {
-    @apply transition ease-in duration-150 opacity-0 translate-y-1 pointer-events-none;
+    @apply transition ease-in duration-150 opacity-0 translate-y-1 lg:pointer-events-none;
   }
   /* noinspection CssUnusedSymbol*/
   .dialog .container {
