@@ -247,6 +247,7 @@ module.exports = {
     require('tailwind-scrollbar'),
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    require('@tailwindcss/container-queries'),
     // require('@tailwindcss/ui')(),
     // require('@tailwindcss/aspect-ratio')
   ],

@@ -21,7 +21,7 @@
   playsinline
   controls
   style="height: 100%; width: 100%;"
-  class="overflow-hidden md:min-w-[400px] lg:min-w-[600px] aspect-video"
+  class="overflow-hidden {content.embedded ? 'md:min-w-[400px] lg:min-w-[600px]' : 'rounded'} aspect-video"
   title={content.videoTitle ?? ''}
   data-poster={content.poster}
 >

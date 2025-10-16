@@ -29,10 +29,11 @@
       title: 'Voice Reporting',
       content:
         'Das AI-unterstützte Voice Reporting lässt Menschen mit Arbeitsgeräten sprechen. Das Rapportieren von Zeit, Aufwänden, Leistungen, Materialien, usw. kann vor Ort, sei es auf der Baustelle, im Sportzentrum, in der Produktionshalle, bei Kunden, usw. durch Spracheingabe erfasst werden. Ein AI-Assistenz stellt sicher, dass alle benötigten Informationen abgefragt werden, um den Rapport abzuschliessen. Danach übermittelt das Voice Reporting Tool die Spracheingaben mittels Text an die Schnittstelle ins ERP und/oder in die Reporting-Applikation, je nach Bedürfnis. Der Verwendungszweck des Voice Reporting Tool kann individuell vom Kunden definiert und entsprechend angepasst werden.',
-      smallVideo: {
+      video: {
         videoTitle: 'AI Proof of Concept',
         videoId: 'ai',
         poster: aiPoc,
+        embedded: true,
         sources: [
           {
             src: 'https://storage.googleapis.com/triarc-website/ai-poc-1080p_h264.webm',
