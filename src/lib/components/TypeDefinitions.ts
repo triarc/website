@@ -163,3 +163,10 @@ export interface TriarcLandingPageText {
   operations: TriarcSectionDefinition
   future: TriarcSectionDefinition
 }
+
+export interface TriarcGradientDividerContent {
+  title: string
+  content: string
+  linksTo: string
+  buttonLabel: string
+}

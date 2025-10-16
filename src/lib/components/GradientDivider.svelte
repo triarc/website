@@ -1,26 +1,35 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte';
-  let gradientColor: 'green-blue' | 'blue-red' | 'red-green' = 'green-blue';
+  import Container from '$lib/components/Container.svelte'
+  import type { TriarcGradientDividerContent } from '$lib/components/TypeDefinitions'
+  export let gradientColor: 'green-blue' | 'blue-red' | 'red-green' = 'green-blue';
+  export let gradientContent: TriarcGradientDividerContent
 </script>
 
-<div class={`flex gradient-${gradientColor}`}>
-  <span class="text-2xl font-bold">Software passend für Sie.</span>
-  <span class="text-xs">So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein.
-    Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.
-  </span>
-  <Button buttonSize="Standard">Test</Button>
+<div class={`flex justify-center text-center text-white py-20 min-h-80 h-80  w-full gradient-${gradientColor}`}>
+  <Container>
+    <div>
+      <div class="text-2xl font-bold pb-4">{gradientContent.title}</div>
+      <div class="text-xs max-w-prose pb-2">{gradientContent.content}</div>
+      <Button
+        buttonColorScheme="Secondary"
+        label={gradientContent.buttonLabel}
+        reference={gradientContent.linksTo}
+        buttonSize="Small">Test</Button>
+    </div>
+  </Container>
 </div>
 
 <style>
   .gradient-green-blue {
-      @apply bg-gradient-to-tr from-green-triarc-blended to-blue-triarc-blended
+      @apply bg-gradient-to-tr from-green-triarc-blended  to-blue-triarc-blended
   }
 
   .gradient-blue-red {
-      @apply bg-gradient-to-tr from-blue-triarc-blended to-green-triarc-blended
+      @apply bg-gradient-to-tr from-blue-triarc-blended to-red-triarc-blended
   }
 
   .gradient-red-green {
-      @apply bg-gradient-to-tr from-red-triarc-blended to-blue-triarc-blended
+      @apply bg-gradient-to-tr from-red-triarc-blended to-green-triarc-blended
   }
 </style>

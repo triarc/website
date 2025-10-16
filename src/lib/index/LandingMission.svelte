@@ -2,7 +2,7 @@
 import underline from '$lib/assets/img/landing/rainbow-underline.svg'
 import Container from '$lib/components/Container.svelte'
 import serge from '$lib/assets/team/serge.jpg?w=768&format=webp;png&metadata&enhanced'
-import type { BlockContent, Quote } from '$lib/components/TypeDefinitions'
+import type { BlockContent, Quote, TriarcGradientDividerContent } from '$lib/components/TypeDefinitions'
 import Block from '$lib/components/Block.svelte'
 import GradientDivider from '$lib/components/GradientDivider.svelte'
 
@@ -18,6 +18,14 @@ let content: BlockContent = {
     linkedin: 'https://www.linkedin.com/in/serge-m%C3%BCller-568a0a134/',
   },
 }
+
+let gradientContent:TriarcGradientDividerContent = {
+  title: "Software passend für Sie.",
+  content: "So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.",
+  buttonLabel: "Custom Software",
+  linksTo: "",
+}
+
 </script>
 
 
@@ -47,6 +55,6 @@ let content: BlockContent = {
   <div></div>
   <Block bind:content></Block>
 </div>
-    <GradientDivider gradientColor="green-blue"></GradientDivider>
+    <GradientDivider bind:gradientContent gradientColor="green-blue"></GradientDivider>
   </div>
 
