@@ -238,7 +238,7 @@
   }
 
   #page .navbar {
-    @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full fixed flex-col lg:flex-row h-auto lg:h-16
+    @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col lg:flex-row h-auto lg:h-16
       group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all flex-grow;
   }
 
