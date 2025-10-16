@@ -348,4 +348,8 @@
   :global:nth-child(even of .alternating) .drop-area:hover {
     @apply bg-gray-100;
   }
+
+  :global:nth-child(even of .alternating) .testimonial {
+    @apply lg:order-last;
+  }
 </style>

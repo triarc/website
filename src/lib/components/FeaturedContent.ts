@@ -1,5 +1,6 @@
 import type { MappedPost } from '../../routes/consulting/+page'
 import type { Picture } from 'imagetools-core'
+import type { BlockContent } from '$lib/components/TypeDefinitions'
 
 export interface FeaturedContent {
   quote: {
@@ -14,8 +15,7 @@ export interface FeaturedContent {
     contactButton: string
     customLogos?: string[]
   }
-  categories: Category[]
-  testimonials: Testimonial[]
+  categories: BlockContent[]
 }
 
 export interface Category {

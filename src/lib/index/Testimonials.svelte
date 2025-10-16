@@ -1,15 +1,13 @@
 <script lang="ts">
   import type { Testimonial } from '$lib/components/FeaturedContent'
-
   export let testimonial: Testimonial
-  export let i: number
 </script>
 
 <div class="py-16 lg:mr-auto">
   <div class="grid lg:grid-cols-3 gap-8 items-center">
     <img
       height="80"
-      class="max-h-20 lg:col-span-1 object-cover {i % 2 === 1 ? 'lg:order-last' : ''}"
+      class="max-h-20 lg:col-span-1 object-cover testimonial"
       src={testimonial.logo}
       loading="lazy"
       alt="logo"

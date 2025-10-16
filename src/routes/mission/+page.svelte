@@ -31,10 +31,11 @@
       title: 'Erfolgreich digitalisieren',
       content:
         'Wir sind Ihr Partner für erfolgreiche Digitalisierungsprojekte. Software nach Mass, inklusive Strategieberatung und Change Management Begleitung; alles aus einem Haus.',
-      smallVideo: {
+      video: {
         videoTitle: 'Triarc auf der Baustelle',
         videoId: 'baustelle',
         poster: baustelle,
+        embedded: true,
         sources: [
           {
             src: 'https://storage.googleapis.com/triarc-website/baustelle_1080p_v2_h264.mp4',

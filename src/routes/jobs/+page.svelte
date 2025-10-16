@@ -23,6 +23,7 @@
           name: jobPosting.claim,
           hiringOrganization: {
             '@types': 'Organization',
+            // Remove
             email: 'development@triarc-labs.com',
             name: 'triarc laboratories ltd.',
             url: 'https://triarc-labs.com',
@@ -35,7 +36,6 @@
               addressCountry: 'CH',
               postalCode: '8005',
               streetAddress: 'Neue Hard 14',
-              email: 'development@triarc-labs.com',
             },
           },
           jobBenefits:
