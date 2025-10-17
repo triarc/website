@@ -41,6 +41,8 @@ export interface MappedPost {
   footer: string
 }
 
+export type TriarcQuoteHighlight = 'green' | 'blue' | 'red' | 'white'
+
 export interface Quote {
   content: string
   person: string
@@ -50,7 +52,7 @@ export interface Quote {
   personTitle: string
   linkedin?: string
   email?: string
-  highlight?: 'green' | 'blue' | 'red'
+  highlight?: TriarcQuoteHighlight
 }
 
 export interface Testimonial {

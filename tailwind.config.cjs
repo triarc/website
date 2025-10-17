@@ -11,6 +11,7 @@ module.exports = {
         'red-triarc': '#C8102E',
         'green-triarc': '#009639',
         'blue-triarc': '#0077c8',
+        'white-triarc': '#FFFFFF',
         'blue-triarc-light': '#3392d3',
         'red-triarc-blended': '#780a1c',
         'green-triarc-blended': '#005a2d',

@@ -68,6 +68,7 @@ let gradientContent:TriarcGradientDivider = {
       </div>
     {/each}
 </div>
+<div class="h-40"></div>
 <FooterNoContact/>
 
 

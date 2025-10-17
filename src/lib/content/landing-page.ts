@@ -1,4 +1,4 @@
-import type { MissionBlock, TriarcGradientDivider, TriarcLandingPageText } from '$lib/components/TypeDefinitions'
+import type { MissionBlock, TriarcLandingPageText } from '$lib/components/TypeDefinitions'
 import puzzle from '$lib/assets/icons/puzzle-piece-light-full.svg'
 import gear from '$lib/assets/icons/gear-light-full.svg'
 import rocket from '$lib/assets/icons/rocket-launch-light-full.svg'
@@ -47,6 +47,7 @@ export const missionPageQuotes: MissionBlock[] = [
     content: {
       quote: {
         image: serge,
+        highlight: 'white',
         content:
           'Für Ihren Erfolg zögern wir nicht Herausforderndes zu meistern, Kompliziertes zu vereinfachen, Effizienz zu steigern und Schwerfälliges zu beschleunigen.',
         person: 'Serge Müller',
@@ -68,6 +69,7 @@ export const missionPageQuotes: MissionBlock[] = [
     content: {
       quote: {
         image: marco,
+        highlight: 'white',
         content:
           'Als Spezialisten konzipieren und entwickeln wir massgeschneiderte Software, ausschliesslich inhouse. Für uns steht es ausser Frage, dass die Lösung Ihren spezifischen Anforderungen entsprechen muss und nicht umgekehrt.',
         person: 'Marco Schmidlin',
@@ -89,6 +91,7 @@ export const missionPageQuotes: MissionBlock[] = [
     content: {
       quote: {
         image: iris,
+        highlight: 'white',
         content:
           'Zusammen mit Ihnen stellen wir sicher, dass das Team die Veränderungen mitträgt und die neuen Prozesse gelebt werden.',
         person: 'Iris Zenegaglia',
@@ -110,6 +113,7 @@ export const missionPageQuotes: MissionBlock[] = [
     content: {
       quote: {
         image: elke,
+        highlight: 'white',
         content:
           'Unsere Form der co-kreativen, agilen und ja, manchmal auch intensiven, direkten Zusammenarbeit ist ein grundlegender Erfolgsfaktor für digitale Resultate, die Sie weiterbringen.',
         person: 'Elke Engel',
@@ -131,6 +135,7 @@ export const missionPageQuotes: MissionBlock[] = [
     content: {
       quote: {
         image: bammbamm,
+        highlight: 'white',
         content:
           'Denn wir lieben was wir tun, und dass wir das gemeinsam tun. So kommen Spass und Freude in der Zusammenarbeit mit triarc-labs garantiert nicht zu kurz.',
         person: 'Bamm Bamm',
