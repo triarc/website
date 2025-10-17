@@ -37,7 +37,12 @@
   }
 
   function blurListener(evt: MouseEvent) {
-    if (dropdown && evt.target && (evt.target instanceof HTMLElement || evt.target instanceof SVGElement) && dropdown.contains(evt.target)) {
+    if (
+      dropdown &&
+      evt.target &&
+      (evt.target instanceof HTMLElement || evt.target instanceof SVGElement) &&
+      dropdown.contains(evt.target)
+    ) {
       return
     }
     if (open) {
@@ -51,7 +56,7 @@
   <button
     type="button"
     class="pointer-events-none lg:pointer-events-auto inline-flex items-center gap-x-1 text-sm font-semibold leading-6 cursor-pointer rounded bg-black lg:bg-transparent text-white lg:text-gray-800 px-4 -mx-4 mb-1 lg:rounded-none lg:px-0 lg:-mx-0 lg:mb-0"
-    aria-expanded="{open}"
+    aria-expanded={open}
     on:click={toggle}
   >
     <span>{title}</span>
@@ -79,23 +84,23 @@
 </div>
 
 <style lang="postcss">
-    /* noinspection CssUnusedSymbol*/
-    .dialog {
-        @apply absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4;
-    }
+  /* noinspection CssUnusedSymbol*/
+  .dialog {
+    @apply absolute left-1/2 z-10 mt-5 w-screen max-w-max -translate-x-1/2 px-4;
+  }
 
-    /* noinspection CssUnusedSymbol*/
-    .dialog.open {
-        @apply transition ease-out duration-200 opacity-100 translate-y-0 z-30;
-    }
+  /* noinspection CssUnusedSymbol*/
+  .dialog.open {
+    @apply transition ease-out duration-200 opacity-100 translate-y-0 z-30;
+  }
 
-    /* noinspection CssUnusedSymbol*/
-    .dialog.closed {
-        @apply transition ease-in duration-150 opacity-0 translate-y-1 lg:pointer-events-none;
-    }
+  /* noinspection CssUnusedSymbol*/
+  .dialog.closed {
+    @apply transition ease-in duration-150 opacity-0 translate-y-1 lg:pointer-events-none;
+  }
 
-    /* noinspection CssUnusedSymbol*/
-    .dialog .container {
-        @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4 rounded;
-    }
+  /* noinspection CssUnusedSymbol*/
+  .dialog .container {
+    @apply w-screen max-w-sm flex-auto bg-white text-sm leading-6 shadow-lg ring-1 ring-gray-900/5 px-4 rounded;
+  }
 </style>

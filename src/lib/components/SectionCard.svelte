@@ -3,12 +3,15 @@
   import Icon from '$lib/components/Icon.svelte'
   import arrow from '$lib/assets/icons/arrow-right-light-full.svg'
 
-  export let color: "green" | "blue" | "red"
+  export let color: 'green' | 'blue' | 'red'
   export let content: TriarcSectionDefinition
-
 </script>
+
 <!-- ToDo Improve text handling for word breaks -->
-<a href="{content.sectionLink}" class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-8 justify-between w-full max-w-[400px]">
+<a
+  href={content.sectionLink}
+  class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-8 justify-between w-full max-w-[400px]"
+>
   <div class="flex flex-row w-full max-w-[400px]">
     <div lang="de" class="flex flex-col flex-1 hyphens-auto w-0 lg:pr-4">
       <span class="text-lg w-full max-w-full">
@@ -19,7 +22,7 @@
       </span>
     </div>
     <div class="flex-shrink-0 lg:pl-4">
-      <Icon src="{content.iconSource}" size="large"></Icon>
+      <Icon src={content.iconSource} size="large"></Icon>
     </div>
   </div>
   <div lang="de" class="flex flex-row text-balance break-normal whitespace-normal hyphens-auto">
@@ -33,8 +36,13 @@
 </a>
 
 <style>
-    .green { @apply bg-green-triarc }
-    .blue { @apply bg-blue-triarc }
-    .red { @apply bg-red-triarc }
+  .green {
+    @apply bg-green-triarc;
+  }
+  .blue {
+    @apply bg-blue-triarc;
+  }
+  .red {
+    @apply bg-red-triarc;
+  }
 </style>
-

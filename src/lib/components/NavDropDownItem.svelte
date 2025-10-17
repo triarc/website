@@ -9,16 +9,18 @@
 <a
   href={path}
   on:click={(event) => {
-        if (isCurrentPath){
-          event.preventDefault();
-          close()
-        }
-        close()
+    if (isCurrentPath) {
+      event.preventDefault()
+      close()
+    }
+    close()
   }}
   on:click={() => {
-    if (!isCurrentPath) close();
+    if (!isCurrentPath) close()
   }}
-  class="{isCurrentPath ? 'disabled' : ''} relative lg:dialog-link inline-link block group hover:bg-blue-triarc rounded hover:bg-opacity-10"
+  class="{isCurrentPath
+    ? 'disabled'
+    : ''} relative lg:dialog-link inline-link block group hover:bg-blue-triarc rounded hover:bg-opacity-10"
 >
   <div class="font-semibold text-gray-900 group-hover:text-blue-triarc">
     {title}
@@ -28,17 +30,17 @@
 
 <!-- svelte-ignore css-unused-selector -->
 <style lang="postcss">
-    /*noinspection CssUnusedSymbol*/
-    .dialog-link {
-        @apply px-6 py-4;
-    }
+  /*noinspection CssUnusedSymbol*/
+  .dialog-link {
+    @apply px-6 py-4;
+  }
 
-    /* noinspection CssUnusedSymbol*/
-    .inline-link {
-        @apply -mx-4 px-4 py-2;
-    }
+  /* noinspection CssUnusedSymbol*/
+  .inline-link {
+    @apply -mx-4 px-4 py-2;
+  }
 
-    .disabled {
-        @apply border-l-4 border-blue-triarc
-    }
+  .disabled {
+    @apply border-l-4 border-blue-triarc;
+  }
 </style>
