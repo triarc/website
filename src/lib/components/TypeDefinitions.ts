@@ -164,9 +164,17 @@ export interface TriarcLandingPageText {
   future: TriarcSectionDefinition
 }
 
-export interface TriarcGradientDividerContent {
+export type GradientColor: 'green-blue' | 'blue-red' | 'red-green'
+
+export interface TriarcGradientDivider {
   title: string
   content: string
+  color: GradientColor
   linksTo: string
   buttonLabel: string
+}
+
+export interface MissionBlock {
+  content: BlockContent
+  divider?: TriarcGradientDivider
 }

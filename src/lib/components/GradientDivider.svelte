@@ -1,12 +1,11 @@
 <script lang="ts">
   import Button from '$lib/components/Button.svelte';
   import Container from '$lib/components/Container.svelte'
-  import type { TriarcGradientDividerContent } from '$lib/components/TypeDefinitions'
-  export let gradientColor: 'green-blue' | 'blue-red' | 'red-green' = 'green-blue';
-  export let gradientContent: TriarcGradientDividerContent
+  import type { TriarcGradientDivider } from '$lib/components/TypeDefinitions'
+  export let gradientContent: TriarcGradientDivider
 </script>
 
-<div class={`flex justify-center text-center text-white py-20 min-h-80 h-80  w-full gradient-${gradientColor}`}>
+<div class={`flex justify-center text-center text-white py-20 min-h-80 h-80 mb-48  w-full gradient-${gradientContent.color}`}>
   <Container>
     <div>
       <div class="text-2xl font-bold pb-4">{gradientContent.title}</div>
