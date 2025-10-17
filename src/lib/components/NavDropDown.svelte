@@ -1,7 +1,6 @@
 <script lang="ts">
   export let title: string
   export let open = false
-  export let inline = false
 
   let dropdown: HTMLElement
 
@@ -51,9 +50,7 @@
 <div class="relative" bind:this={dropdown}>
   <button
     type="button"
-    class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 {inline
-      ? 'cursor-default rounded bg-black mb-1 text-white px-4 -mx-4'
-      : 'cursor-pointer rounded bg-black lg:bg-transparent text-white lg:text-gray-800 px-4 -mx-4 mb-1 lg:rounded-none lg:px-0 lg:-mx-0 lg:mb-0'}"
+    class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 cursor-pointer rounded bg-black lg:bg-transparent text-white lg:text-gray-800 px-4 -mx-4 mb-1 lg:rounded-none lg:px-0 lg:-mx-0 lg:mb-0"
     aria-expanded="{open}"
     on:click={toggle}
   >

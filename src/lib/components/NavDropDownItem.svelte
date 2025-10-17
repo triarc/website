@@ -3,7 +3,6 @@
   export let description: string
   export let path: string
   export let close: () => void
-  export let inline = false
 </script>
 
 <a
