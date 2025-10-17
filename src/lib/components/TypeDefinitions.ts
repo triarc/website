@@ -149,6 +149,7 @@ export interface NavItemLink {
   description: string
   path: string
 }
+
 export type NavItem = NavItemHeading | NavItemLink
 
 export interface TriarcSectionDefinition {
@@ -156,6 +157,14 @@ export interface TriarcSectionDefinition {
   title: string
   description: string
   iconSource: string
+  sectionLink: string
+}
+
+export interface TriarcSectionDefinition {
+  prefix: string
+  title: string
+  description: string
+  iconSource?: string
   sectionLink: string
 }
 
