@@ -10,20 +10,21 @@
   import type { TriarcLandingPageText } from '$lib/components/TypeDefinitions'
   import { landingPageCards } from '$lib/content/landing-page'
 </script>
-<div class="h-[calc(100vh-4rem)] triarc-gradient text-white">
-  <Container>
-    <div class="pt-24 flex flex-col">
-      <span class="text-lg pb-4">
+<div class="lg:h-[calc(100vh-4rem)] triarc-gradient text-white">
+  <Container class="pb-16 lg:pb-0">
+    <div class="pt-10 lg:pt-24 flex flex-col">
+      <span class="text-lg pb-4 ">
         {landingContent.content.prefix}
       </span>
-      <span class="text-7xl pb-12">
+      <!-- ToDo better way to breask words or maybe alt text for mobile -->
+      <span class="text-7xl pb-12 break-words">
          {landingContent.content.title}
       </span>
       <span class="text-lg pb-20">
          {landingContent.content.description}
       </span>
     </div>
-    <div class="grid grid-cols-3 gap-8 justify-between -mr-16 -ml-16">
+    <div class="grid grid-cols-1 justify-items-center lg:grid-cols-3 gap-8 lg:-mr-16 lg:-ml-16">
       <SectionCard color="red"
                    content={landingContent.strategy}>
       </SectionCard>

@@ -8,9 +8,9 @@
 
 </script>
 <!-- ToDo Improve text handling for word breaks -->
-<a href="{content.sectionLink}" class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-8 justify-between max-w-[400px]">
+<a href="{content.sectionLink}" class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-8 justify-between w-full max-w-[400px]">
   <div class="flex flex-row w-full max-w-[400px]">
-    <div lang="de" class="flex flex-col flex-1 hyphens-auto w-0 pr-4">
+    <div lang="de" class="flex flex-col flex-1 hyphens-auto w-0 lg:pr-4">
       <span class="text-lg w-full max-w-full">
         {content.prefix}
       </span>
@@ -18,12 +18,12 @@
         {content.title}
       </span>
     </div>
-    <div class="flex-shrink-0 pl-4">
+    <div class="flex-shrink-0 lg:pl-4">
       <Icon src="{content.iconSource}" size="large"></Icon>
     </div>
   </div>
   <div lang="de" class="flex flex-row text-balance break-normal whitespace-normal hyphens-auto">
-    <div class="text-lg flex-1 w-0 pr-10">
+    <div class="text-lg flex-1 w-0 pr-2 lg:pr-10">
       {content.description}
     </div>
     <div class="flex flex-shrink-0 items-end">

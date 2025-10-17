@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.postcss'
 
-  import { beforeUpdate, onMount } from 'svelte'
+  import { beforeUpdate, onMount, tick } from 'svelte'
   import logo from '../lib/assets/triarc-labs-black.svg'
   import NavDropDown from '$lib/components/NavDropDown.svelte'
   import NavDropDownItem from '$lib/components/NavDropDownItem.svelte'
@@ -13,12 +13,17 @@
   export let mobileSubTitle = ''
 
   export let data: { pathname: string }
+  let lastScrollPosition = 0;
 
   beforeUpdate(() => {
     const navItem = linkMetaInfo[data.pathname]
     if (navItem) {
       mobileTitle = navItem.title
       mobileSubTitle = navItem.description
+    }
+    else {
+      mobileTitle = 'Home'
+      mobileSubTitle = 'Welcome to Triarc Labs'
     }
   })
 
@@ -120,10 +125,24 @@
     return map
   }, {})
 
-  function toggle() {
-    menuOpen = !menuOpen
-    console.log('menuOpen', menuOpen)
+  async function toggle() {
+    if (!menuOpen) {
+      lastScrollPosition = window.scrollY;
+    }
+    menuOpen = !menuOpen;
+    if (!menuOpen) {
+      setTimeout(() => {
+        window.scrollTo(0, lastScrollPosition);
+      }, 0);
+    }
+    console.log('menuOpen', menuOpen);
   }
+
+  // function toggle() {
+  //   menuOpen = !menuOpen
+  //   console.log('menuOpen', menuOpen)
+  //   lastScrollY = window.scrollY;
+  // }
   function hideMenu() {
     menuOpen = false
     console.log('hideMenu', menuOpen)
@@ -166,13 +185,19 @@
 <div id="page" class="content {menuOpen ? 'open' : 'closed'}">
   <nav class="navbar" id="nav-menu">
     <div class="navbar-container">
-      <a href="/" class="flex items-center px-12 py-2">
+      <a href="/" on:click={(event) => {
+        if (data.pathname === '/'){
+          event.preventDefault();
+          hideMenu()
+        }
+        hideMenu()
+      }} class="flex items-center px-12 py-2">
         <img src={logo} alt="triarc laboratories ltd" width="172" height="29" />
       </a>
       <ul class="nav-links">
         {#each navItems as navItem}
           <li
-            class="my-4 last:mb-4 first:mt-4 py-2 px-4 {navItem.type === 'link' && navItem.path === data.pathname
+            class="my-2 lg:my-4 last:mb-4 first:mt-4 py-2 px-4 {navItem.type === 'link' && navItem.path === data.pathname
               ? 'rounded-md bg-gray-100 bg-opacity-10'
               : ''}"
           >
@@ -189,6 +214,7 @@
                     description={subItem.description}
                     close={hideMenu}
                     path={subItem.path}
+                    isCurrentPath={subItem.path === data.pathname}
                   />
                 {/each}
               </NavDropDown>

@@ -30,6 +30,6 @@
       @apply bg-blue-triarc text-white;
   }
   .secondary {
-      @apply bg-white text-black;
+      @apply bg-white text-black w-auto;
   }
 </style>
