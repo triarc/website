@@ -192,3 +192,17 @@ export interface TriarcProjectContent {
   image: Picture
   content: Omit<TriarcSectionDefinition, 'iconSource'>
 }
+
+export interface TriarcProjectDetailContent {
+  title: string
+  description: string
+  highlightImage: Picture
+  image: Picture
+  situation: string
+  challenges: string
+  solution: string
+  icons: {
+    iconSource: string
+    iconColor: TriarcColor
+  }[]
+}
