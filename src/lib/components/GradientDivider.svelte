@@ -34,4 +34,12 @@
   .gradient-red-green {
     @apply bg-gradient-to-tr from-red-triarc-blended to-green-triarc-blended;
   }
+
+  .gradient-green-red {
+      @apply bg-gradient-to-tr from-green-triarc-blended to-red-triarc-blended;
+  }
+
+  .gradient-red-blue {
+      @apply bg-gradient-to-tr from-red-triarc-blended to-blue-triarc-blended;
+  }
 </style>

@@ -1,6 +1,6 @@
 <script lang="ts">
   export let src: string
-  export let size: 'small' | 'large' = 'small'
+  export let size: 'small' | 'medium' |  'large' = 'small'
   export let color: 'red' | 'green' | 'blue' | 'transparent' = 'transparent'
 
   const colorMap = {
@@ -23,3 +23,4 @@
 <div class="{sizeClass} {colorClass} {size === 'small' ? 'p-0' : 'p-0.5' } rounded-md">
   <img {src} alt="icon" class="w-full h-full" />
 </div>
+

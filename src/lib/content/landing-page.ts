@@ -22,7 +22,7 @@ export const landingPageCards: TriarcLandingPageText = {
     description:
       'Mit klaren Entscheidungsgrundlagen, verfügbaren Kapazitäten und einem ganzheitlichen Ansatz schaffen wir die Basis, damit Veränderungen zielgerichtet, effizient und nachhaltig wirken.',
     iconSource: puzzle,
-    sectionLink: 'tbd',
+    sectionLink: '/strategy',
   },
   operations: {
     prefix: 'Wir reduzieren',
@@ -30,7 +30,7 @@ export const landingPageCards: TriarcLandingPageText = {
     description:
       'Automatisierte Abläufe, intuitive Bedienung und gezielter Wissenstransfer sorgen für reibungslose Zusammenarbeit, hochwertige Daten und eine starke operative Performance.',
     iconSource: gear,
-    sectionLink: 'tbd',
+    sectionLink: 'operations',
   },
   future: {
     prefix: 'Wir sichern',
@@ -38,7 +38,7 @@ export const landingPageCards: TriarcLandingPageText = {
     description:
       'Skalierbare Lösungen, agile Strukturen und gezielte Innovation stärken die Wettbewerbsfähigkeit und ermöglichen eine klare Positionierung mit einem einzigartigen USP.',
     iconSource: rocket,
-    sectionLink: 'tbd',
+    sectionLink: '/future',
   },
 }
 
