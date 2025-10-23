@@ -1,11 +1,16 @@
-<script>
-  import puzzle from '$lib/assets/icons/puzzle-piece-light-full.svg'
+<script lang="ts">
   import Icon from '$lib/components/Icon.svelte'
+  import { isMobile } from '$lib/stores/layoutStore';
+
+  export let iconSrc: string
+  export let title: string
+
+  $: iconSize = $isMobile ? 'medium' : 'large';
 </script>
 
 
-<div class="sticky top-0 flex z-10 flex-row gap-x-4 items-center bg-transparent py-8">
-  <Icon size="large" color="red" src={puzzle} />
-  <span class="text-5xl text-white font-bold">Wir übersetzen Strategie in die Praxis.</span>
+<div class="lg:sticky lg:top-0 flex z-10 flex-col lg:flex-row gap-y-2 gap-x-4 lg:items-center bg-transparent py-8">
+  <Icon size="{iconSize}" color="red" src={iconSrc} />
+  <span class="text-5xl text-white font-bold text-balance">{title}</span>
 </div>
 

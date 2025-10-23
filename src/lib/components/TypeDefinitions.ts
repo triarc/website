@@ -160,14 +160,6 @@ export interface TriarcSectionDefinition {
   sectionLink: string
 }
 
-export interface TriarcSectionDefinition {
-  prefix: string
-  title: string
-  description: string
-  iconSource?: string
-  sectionLink: string
-}
-
 export interface TriarcLandingPageText {
   content: Omit<TriarcSectionDefinition, 'iconSource' | 'sectionLink'>
   strategy: TriarcSectionDefinition
@@ -185,7 +177,17 @@ export interface TriarcGradientDivider {
   buttonLabel: string
 }
 
+export interface TriarcSubsectionDefinition {
+  main: Omit<TriarcSectionDefinition, 'sectionLink' | 'prefix'>
+  projects: TriarcProjectContent[]
+}
+
 export interface MissionBlock {
   content: BlockContent
   divider?: TriarcGradientDivider
+}
+
+export interface TriarcProjectContent {
+  image: Picture
+  content: Omit<TriarcSectionDefinition, 'iconSource'>
 }

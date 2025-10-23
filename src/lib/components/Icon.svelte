@@ -10,9 +10,16 @@
     transparent: 'bg-transparent'
   };
 
+  const sizeMap = {
+    small: 'w-6 h-6',
+    medium: 'w-9 h-9',
+    large: 'w-11 h-11'
+  };
+
   $: colorClass = colorMap[color] ?? 'bg-transparent';
+  $: sizeClass = sizeMap[size] ?? sizeMap.small;
 </script>
 
-<div class="{size === 'small' ? 'w-6 h-6' : 'w-10 h-10'} {colorClass} rounded-md">
+<div class="{sizeClass} {colorClass} {size === 'small' ? 'p-0' : 'p-0.5' } rounded-md">
   <img {src} alt="icon" class="w-full h-full" />
 </div>

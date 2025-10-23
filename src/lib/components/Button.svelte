@@ -2,6 +2,8 @@
   import arrow from '$lib/assets/icons/arrow-right-light-full.svg'
   import Icon from '$lib/components/Icon.svelte'
 
+  let clazz = ''
+  export { clazz as class }
   export let buttonSize: 'Standard' | 'Small'
   export let buttonMargin: 'Standard' | 'None' = 'Standard'
   export let reference = ''
@@ -24,7 +26,8 @@
   text-base font-medium
   border md:border-0 border-transparent rounded-md md:rounded
   shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2
-  disabled:bg-gray-500"
+  disabled:bg-gray-500
+  {clazz}"
 >
   {label}
   {#if buttonColorScheme === 'Tertiary'}
