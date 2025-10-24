@@ -2,11 +2,11 @@
   import EnhancedImage from '$lib/index/EnhancedImage.svelte'
   import Button from '$lib/components/Button.svelte'
   import type { TriarcProjectContent, } from '$lib/components/TypeDefinitions'
-  import { isMobile } from '$lib/stores/layoutStore';
 
   export let card: TriarcProjectContent
 </script>
 
+<!-- ToDo Try to do it with just CSS without a duplication. Svelte Store for mobile check has refresh/load stutters/transforms that look ugly -->
 <div class="project-card grid grid-cols-1 lg:grid-cols-2 bg-white place-items-center items-center rounded-3xl lg:h-[476px] mb-16">
   <div class="p-10 w-full hyphens-auto">
       <div class="text-lg w-full max-w-full mb-2">
@@ -15,15 +15,13 @@
     <div class="text-3xl font-bold w-full max-w-full mb-2 whitespace-pre-line">
       {card.content.title}
     </div>
-    {#if $isMobile}
-      <div class="project-card-image w-full overflow-hidden">
+    <div class="lg:hidden project-card-image w-full overflow-hidden">
         <EnhancedImage
           alt=''
           image={card.image}
           imgClass="object-contain"
         />
-      </div>
-    {/if}
+    </div>
     <div lang="de" class="text-xs max-w-prose whitespace-normal hyphens-auto mb-4">
       {card.content.description}
       </div>
@@ -34,15 +32,13 @@
             label="Mehr dazu">
     </Button>
   </div>
-  {#if !$isMobile}
-    <div class="project-card-image w-full overflow-hidden">
+  <div class="hidden lg:block project-card-image w-full overflow-hidden">
       <EnhancedImage
         alt=''
         image={card.image}
         imgClass="object-contain"
       />
-    </div>
-  {/if}
+  </div>
 </div>
 
 
