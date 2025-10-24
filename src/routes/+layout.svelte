@@ -6,6 +6,8 @@
   import NavDropDown from '$lib/components/NavDropDown.svelte'
   import NavDropDownItem from '$lib/components/NavDropDownItem.svelte'
   import type { MetaInfo, NavItem } from '$lib/components/TypeDefinitions'
+  import ContactButton from '$lib/components/ContactButton.svelte'
+  import { afterNavigate } from '$app/navigation'
 
   export let menuOpen = false
 
@@ -14,6 +16,16 @@
 
   export let data: { pathname: string }
   let lastScrollPosition = 0
+  let closeOnNavigate = false
+
+  // Experimental to wait for page to be loaded before hiding the Nav Menu
+  afterNavigate(() => {
+    if (closeOnNavigate) {
+      menuOpen = false
+      closeOnNavigate = false
+      console.log('hideMenu after navigate', menuOpen)
+    }
+  })
 
   beforeUpdate(() => {
     const navItem = linkMetaInfo[data.pathname]
@@ -181,6 +193,7 @@
   })
 </script>
 
+<ContactButton></ContactButton>
 <div id="page" class="content {menuOpen ? 'open' : 'closed'}">
   <nav class="navbar" id="nav-menu">
     <div class="navbar-container">
@@ -206,7 +219,7 @@
               : ''}"
           >
             {#if navItem.type === 'link'}
-              <a href={navItem.path} on:click={hideMenu}>
+              <a href={navItem.path} on:click={() => (closeOnNavigate = true)}>
                 <div class="font-semibold leading-6 text-gray-900 text-sm">{navItem.title}</div>
                 <!--            <div class="font-light text-sm">{navItem.description}</div>-->
               </a>
@@ -217,6 +230,7 @@
                     title={subItem.title}
                     description={subItem.description}
                     close={hideMenu}
+                    on:closeAfterNavigate={() => (closeOnNavigate = true)}
                     path={subItem.path}
                     isCurrentPath={subItem.path === data.pathname}
                   />
