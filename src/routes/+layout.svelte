@@ -1,7 +1,7 @@
 <script lang="ts">
   import '../app.postcss'
 
-  import { beforeUpdate, onMount, tick } from 'svelte'
+  import { beforeUpdate, onMount } from 'svelte'
   import logo from '../lib/assets/triarc-labs-black.svg'
   import NavDropDown from '$lib/components/NavDropDown.svelte'
   import NavDropDownItem from '$lib/components/NavDropDownItem.svelte'

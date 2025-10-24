@@ -1,13 +1,9 @@
 <script lang="ts">
   import SectionCard from '$lib/components/SectionCard.svelte'
-  import puzzle from '$lib/assets/icons/puzzle-piece-light-full.svg'
-  import gear from '$lib/assets/icons/gear-light-full.svg'
-  import rocket from '$lib/assets/icons/rocket-launch-light-full.svg'
-  const landingContent = landingPageCards
-
   import Container from '$lib/components/Container.svelte'
-  import type { TriarcLandingPageText } from '$lib/components/TypeDefinitions'
   import { landingPageCards } from '$lib/content/landing-page'
+
+  const landingContent = landingPageCards
 </script>
 
 <div class="lg:h-[calc(100vh-4rem)] triarc-gradient text-white">
