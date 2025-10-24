@@ -2,7 +2,7 @@
 import Container from '$lib/components/Container.svelte'
 import FooterNoContact from '$lib/components/FooterNoContact.svelte'
 import Icon from '$lib/components/Icon.svelte'
-import { GearIcon, PuzzleIcon, RocketIcon } from '$lib/content/icons.js'
+import { Gear, Puzzle, Rocket } from '$lib/content/icons.js'
 import TeamWerk from '$lib/assets/img/strategy/TeamWerkExample.png?w=768&format=webp;png&metadata&enhanced'
 import TeamWerkFloating from '$lib/assets/img/TeamWerk_DetailImage.png?w=768&format=webp;png&metadata&enhanced'
 import type { GradientColor, TriarcProjectDetailContent } from '$lib/components/TypeDefinitions'
@@ -19,9 +19,9 @@ let project: TriarcProjectDetailContent  = {
   challenges: 'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
   solution: 'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
   icons: [
-    { iconSource: PuzzleIcon, iconColor: 'red' },
-    { iconSource: GearIcon, iconColor: 'green' },
-    { iconSource: RocketIcon, iconColor: 'blue' },
+    { iconSource: Puzzle, iconColor: 'red' },
+    { iconSource: Gear, iconColor: 'green' },
+    { iconSource: Rocket, iconColor: 'blue' },
   ],
 }
 
@@ -29,7 +29,7 @@ let project: TriarcProjectDetailContent  = {
 
 <div class="relative h-full {`gradient-${projectGradientColor}`} ">
   <Container>
-    <div class="flex flex-col lg:flex-row gap-y-2 gap-x-4 bg-transparent py-8 mb-36">
+    <div class="flex flex-col lg:flex-row gap-y-2 gap-x-4 bg-transparent py-8 mt-12 lg:mt-32 mb-36">
       <div class="grid grid-cols-3 max-w-fit gap-2 lg:grid-cols-2 h-full flex-grow-0 lg:flex-shrink-0 lg:mt-1 pr-4 ">
         {#each project.icons as icon}
           <Icon size="large" color={icon.iconColor} src={icon.iconSource} />
