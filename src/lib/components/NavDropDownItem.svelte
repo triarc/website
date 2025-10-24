@@ -6,7 +6,6 @@
   export let isCurrentPath: boolean = false
   export let close: () => void
 
-
   const dispatch = createEventDispatcher()
 
   // Experimental to wait for page to be loaded before hiding the Nav Menu

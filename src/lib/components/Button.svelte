@@ -18,11 +18,10 @@
   type="button"
   target={target ?? ''}
   on:click={clicked}
-  class="inline-flex md:inline-block justify-center items-center w-full sm:w-auto pointer-events-auto
+  class="inline-flex justify-center items-center w-full sm:w-auto pointer-events-auto
   {buttonMargin === 'Standard' ? 'my-4' : 'my-0'} px-6 py-3
   {buttonSize === 'Standard' ? 'md:px-6 md:py-3' : 'md:px-3 md:py-1'}
-  {buttonColorScheme === 'Primary' ? 'primary' :
-   buttonColorScheme === 'Secondary' ? 'secondary': 'tertiary'}
+  {buttonColorScheme === 'Primary' ? 'primary' : buttonColorScheme === 'Secondary' ? 'secondary' : 'tertiary'}
   text-base font-medium
   border md:border-0 border-transparent rounded-md md:rounded
   shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2
@@ -43,6 +42,6 @@
     @apply bg-white text-black w-auto;
   }
   .tertiary {
-      @apply bg-red-triarc text-white w-auto md:inline-flex gap-x-3;
+    @apply bg-red-triarc text-white w-auto gap-x-3;
   }
 </style>
