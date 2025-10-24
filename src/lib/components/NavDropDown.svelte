@@ -56,7 +56,7 @@
   <button
     type="button"
     class="inline-flex items-center gap-x-1 text-sm font-semibold leading-6 cursor-pointer rounded bg-black lg:bg-transparent text-white lg:text-gray-800 px-4 -mx-4 mb-1 lg:rounded-none lg:px-0 lg:-mx-0 lg:mb-0"
-    aria-expanded="{open}"
+    aria-expanded={open}
     on:click={toggle}
   >
     <span>{title}</span>

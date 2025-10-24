@@ -166,7 +166,7 @@ export interface TriarcLandingPageText {
   future: TriarcSectionDefinition
 }
 
-export type GradientColor: 'green-blue' | 'blue-red' | 'red-green'
+export type GradientColor = 'green-blue' | 'blue-red' | 'red-green'
 
 export interface TriarcGradientDivider {
   title: string
