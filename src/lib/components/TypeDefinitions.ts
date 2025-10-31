@@ -206,3 +206,9 @@ export interface TriarcProjectDetailContent {
     iconColor: TriarcColor
   }[]
 }
+
+export interface TriarcPageMetadata {
+  title: string
+  metaTitle?: string
+  description: string
+}
