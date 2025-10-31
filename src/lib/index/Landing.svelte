@@ -12,7 +12,7 @@
       <span class="text-lg pb-4">
         {landingContent.content.prefix}
       </span>
-      <!-- ToDo better way to breask words or maybe alt text for mobile -->
+      <!-- ToDo better way to break words or maybe alt text for mobile -->
       <span class="text-7xl pb-12 break-words">
         {landingContent.content.title}
       </span>

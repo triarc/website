@@ -39,7 +39,7 @@
     @apply bg-blue-triarc text-white;
   }
   .secondary {
-    @apply bg-white text-black w-auto;
+    @apply bg-white text-black w-auto rounded-full;
   }
   .tertiary {
     @apply bg-red-triarc text-white w-auto gap-x-3;
