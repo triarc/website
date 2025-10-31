@@ -6,12 +6,12 @@
 </script>
 
 <div
-  class={`flex justify-center text-center text-white py-20 min-h-80 md:h-80 lg:mb-48 w-full gradient-${gradientContent.color}`}
+  class={`flex justify-center text-center text-white py-[90px] min-h-80 lg:mb-24 xl:mb-48 w-full gradient-${gradientContent.color}`}
 >
   <Container>
     <div>
       <div class="text-2xl font-bold pb-4">{gradientContent.title}</div>
-      <div class="text-xs max-w-prose pb-2">{gradientContent.content}</div>
+      <div class="text-base max-w-prose pb-2">{gradientContent.content}</div>
       <Button
         buttonColorScheme="Secondary"
         label={gradientContent.buttonLabel}

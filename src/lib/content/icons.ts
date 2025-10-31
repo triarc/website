@@ -5,6 +5,7 @@ import EnvelopeIconDefault from '$lib/assets/icons/envelope-solid-full.svg'
 import EnvelopeIconWhite from '$lib/assets/icons/envelope-solid-full-white.svg'
 import LinkedInIconDefault from '$lib/assets/icons/square-linkedin-brands-solid-full.svg'
 import ArrowIconDefault from '$lib/assets/icons/arrow-right-light-full.svg'
+import ArrowIconSolid from '$lib/assets/icons/arrow-right-solid-full.svg'
 
 export const Puzzle = PuzzleIconDefault
 export const Gear = GearIconDefault
@@ -13,3 +14,4 @@ export const Envelope = EnvelopeIconDefault
 export const EnvelopeWhite = EnvelopeIconWhite
 export const LinkedIn = LinkedInIconDefault
 export const Arrow = ArrowIconDefault
+export const ArrowSolid = ArrowIconSolid

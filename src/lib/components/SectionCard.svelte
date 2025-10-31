@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { TriarcSectionDefinition } from '$lib/components/TypeDefinitions'
   import Icon from '$lib/components/Icon.svelte'
-  import arrow from '$lib/assets/icons/arrow-right-light-full.svg'
+  import { ArrowSolid } from '$lib/content/icons'
 
   export let color: 'green' | 'blue' | 'red'
   export let content: TriarcSectionDefinition
@@ -10,9 +10,9 @@
 <!-- ToDo Improve text handling for word breaks -->
 <a
   href={content.sectionLink}
-  class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-8 justify-between w-full max-w-[400px]"
+  class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-8 justify-between w-full max-w-full md:max-w-[400px]"
 >
-  <div class="flex flex-row w-full max-w-[400px]">
+  <div class="flex flex-row w-full">
     <div lang="de" class="flex flex-col flex-1 hyphens-auto w-0 lg:pr-4">
       <span class="text-lg w-full max-w-full">
         {content.prefix}
@@ -25,12 +25,12 @@
       <Icon src={content.iconSource} size="large"></Icon>
     </div>
   </div>
-  <div lang="de" class="flex flex-row text-balance break-normal whitespace-normal hyphens-auto">
-    <div class="text-lg flex-1 w-0 pr-2 lg:pr-10">
+  <div lang="de" class="flex flex-row text-balance justify-between break-normal whitespace-normal hyphens-auto w-full">
+    <div class="text-lg flex-1 w-0 pr-2 max-w-[85%] lg:max-w-none lg:pr-10">
       {content.description}
     </div>
     <div class="flex flex-shrink-0 items-end">
-      <Icon src={arrow} size="small"></Icon>
+      <Icon src={ArrowSolid} size="small"></Icon>
     </div>
   </div>
 </a>

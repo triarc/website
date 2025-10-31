@@ -6,8 +6,8 @@
   const landingContent = landingPageCards
 </script>
 
-<div class="lg:h-[calc(100vh-4rem)] triarc-gradient text-white">
-  <Container class="pb-16 lg:pb-0">
+<div class="triarc-gradient text-white">
+  <Container class="pb-20">
     <div class="pt-10 lg:pt-24 flex flex-col">
       <span class="text-lg pb-4">
         {landingContent.content.prefix}
@@ -20,10 +20,17 @@
         {landingContent.content.description}
       </span>
     </div>
-    <div class="grid grid-cols-1 justify-items-center lg:grid-cols-3 gap-8 lg:-mr-16 lg:-ml-16">
-      <SectionCard color="red" content={landingContent.strategy}></SectionCard>
-      <SectionCard color="green" content={landingContent.operations}></SectionCard>
-      <SectionCard color="blue" content={landingContent.future}></SectionCard>
+    <div class="grid grid-cols-1 justify-items-center md:grid-cols-2 xl:grid-cols-3 gap-8 lg:-mr-16 lg:-ml-16">
+      <div class="w-full flex md:justify-end">
+        <SectionCard color="red" content={landingContent.strategy}></SectionCard>
+      </div>
+      <div class="w-full flex md:justify-start">
+        <SectionCard color="green" content={landingContent.operations}></SectionCard>
+      </div>
+      <div class="w-full md:col-span-2 xl:col-span-1 flex justify-center">
+        <SectionCard color="blue" content={landingContent.future} />
+      </div>
+      <!--      <SectionCard color="blue" content={landingContent.future}></SectionCard>-->
     </div>
   </Container>
 </div>
