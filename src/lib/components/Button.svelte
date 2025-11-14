@@ -1,5 +1,5 @@
 <script lang="ts">
-  import arrow from '$lib/assets/icons/arrow-right-light-full.svg'
+  import { ArrowSolid } from '$lib/content/icons'
   import Icon from '$lib/components/Icon.svelte'
 
   let clazz = ''
@@ -23,14 +23,14 @@
   {buttonSize === 'Standard' ? 'md:px-6 md:py-3' : 'md:px-3 md:py-1'}
   {buttonColorScheme === 'Primary' ? 'primary' : buttonColorScheme === 'Secondary' ? 'secondary' : 'tertiary'}
   text-base font-medium
-  border md:border-0 border-transparent rounded-md md:rounded
+  border md:border-0 border-transparent rounded-full
   shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-triarc focus:ring-offset-2
   disabled:bg-gray-500
   {clazz}"
 >
   {label}
   {#if buttonColorScheme === 'Tertiary'}
-    <Icon src={arrow} size="small" />
+    <Icon src={ArrowSolid} size="small" />
   {/if}
 </a>
 

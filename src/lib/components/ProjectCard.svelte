@@ -10,7 +10,7 @@
 <div
   class="project-card grid grid-cols-1 lg:grid-cols-2 bg-white place-items-center items-center rounded-3xl lg:h-[476px] mb-16"
 >
-  <div class="p-10 w-full hyphens-auto">
+  <div class="p-5 w-full hyphens-auto">
     <div class="text-lg w-full max-w-full mb-2">
       {card.content.prefix}
     </div>

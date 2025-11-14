@@ -2,19 +2,22 @@
   import SectionCard from '$lib/components/SectionCard.svelte'
   import Container from '$lib/components/Container.svelte'
   import { landingPageCards } from '$lib/content/landing-page'
+  import triarcLogo from '$lib/assets/triarc-labs-white.svg'
 
   const landingContent = landingPageCards
 </script>
 
-<div class="triarc-gradient text-white">
-  <Container class="pb-20">
+<div class="triarc-gradient text-white pb-40">
+  <Container class="">
     <div class="pt-10 lg:pt-24 flex flex-col">
-      <span class="text-lg pb-4">
+      <span class="text-lg">
         {landingContent.content.prefix}
       </span>
       <!-- ToDo better way to break words or maybe alt text for mobile -->
-      <span class="text-7xl pb-12 break-words">
-        {landingContent.content.title}
+      <span class="py-6">
+        <!-- ToDo: Richtiger Schriftzug -->
+        <img class="h-16" src={triarcLogo} alt="triarc laboratories ltd" height="72" />
+        <!--{landingContent.content.title}-->
       </span>
       <span class="text-lg pb-20">
         {landingContent.content.description}

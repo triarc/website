@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Arrow, EnvelopeWhite } from '$lib/content/icons'
+  import { ArrowSolid, EnvelopeWhite } from '$lib/content/icons'
   import Icon from '$lib/components/Icon.svelte'
 </script>
 
@@ -11,7 +11,7 @@
 >
   <span class="hidden md:inline">Kontaktieren sie uns!</span>
   <Icon src={EnvelopeWhite} size="medium" class="block md:hidden" />
-  <Icon src={Arrow} size="small" class="hidden md:block" />
+  <Icon src={ArrowSolid} size="small" class="hidden md:block" />
 </a>
 
 <style>

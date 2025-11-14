@@ -33,9 +33,11 @@
 <div class="relative h-full {`gradient-${projectGradientColor}`} ">
   <Container>
     <div class="flex flex-col lg:flex-row gap-y-2 gap-x-4 bg-transparent py-8 mt-12 lg:mt-32 mb-36">
-      <div class="grid grid-cols-3 max-w-fit gap-2 lg:grid-cols-2 h-full flex-grow-0 lg:flex-shrink-0 lg:mt-1 pr-4">
+      <div
+        class="icon-grid grid grid-cols-3 max-w-fit gap-2 lg:grid-cols-2 h-full flex-grow-0 lg:flex-shrink-0 lg:mt-1 pr-4"
+      >
         {#each project.icons as icon}
-          <Icon size="large" color={icon.iconColor} src={icon.iconSource} />
+          <Icon size="large" color={icon.iconColor} src={icon.iconSource} class="category-icon" />
         {/each}
       </div>
       <div class="flex flex-col w-full">
@@ -55,21 +57,21 @@
     <!--          image={project.highlightImage}-->
     <!--          imgClass="object-contain" />-->
     <!--      </div>-->
-    <div class="grid grid-cols-1 lg:grid-cols-3">
+    <div class="grid grid-cols-1 lg:grid-cols-3 pb-8">
       <div class="-mt-32 lg:w-full lg:order-last mb-20 lg:mb-0">
         <EnhancedImage alt="" image={project.highlightImage} imgClass="object-contain lg:w-full" />
       </div>
       <div class="flex flex-col gap-y-2 lg:col-span-2 lg:pt-20 max-w-prose">
-        <div class="text-lg font-bold">Ausgangslage</div>
-        <div class="text-sm">
+        <div class="text-lg font-bold pb-2">Ausgangslage</div>
+        <div class="text-base pb-2">
           {project.situation}
         </div>
-        <div class="text-lg font-bold">Herausforderungen</div>
-        <div class="text-sm">
+        <div class="text-lg font-bold pb-2">Herausforderungen</div>
+        <div class="text-base pb-2">
           {project.challenges}
         </div>
-        <div class="text-lg font-bold">Lösungen und Mehrwerte</div>
-        <div class="text-sm">
+        <div class="text-lg font-bold pb-2">Lösungen und Mehrwerte</div>
+        <div class="text-base pb-2">
           {project.solution}
         </div>
       </div>
@@ -100,5 +102,13 @@
 
   .gradient-red-blue {
     @apply bg-gradient-to-tr from-red-triarc-blended to-blue-triarc-blended;
+  }
+
+  .icon-grid > :global(.category-icon:nth-child(odd):nth-child(n + 3)) {
+    grid-column-start: 2;
+  }
+
+  .icon-grid > :global(.category-icon:nth-child(even):nth-child(n + 4)) {
+    grid-column-start: 1;
   }
 </style>

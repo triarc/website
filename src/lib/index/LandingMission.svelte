@@ -10,7 +10,7 @@
 </script>
 
 <div class="flex flex-col pb-16 lg:pb-32">
-  <Container class="justify-center text-center">
+  <Container class="justify-center items-center text-center">
     <span
       class="pt-20 pb-28 font-semibold font-sans text-7xl bg-gradient-to-r from-red-triarc via-green-triarc to-blue-triarc bg-clip-text text-transparent"
     >
@@ -38,8 +38,8 @@
       <!--        <img src={underline} alt="fancy underline" class="absolute block mt-2 pointer-events-none max-w-none" />-->
       <!--      </span> succeed-->
     </span>
-    <span class="text-lg font-bold"> Warum triarc laboratories? </span>
-    <span class="text-lg max-w-prose lg:pb-8">
+    <span class="text-lg text-center font-bold pb-2"> Warum triarc laboratories? </span>
+    <span class="text-lg max-w-prose lg:pb-12">
       Wir verstehen die Herausforderungen von KMU und entwickeln seit über einem Jahrzehnt massgeschneiderte Lösungen.
       Unser bewährter Ansatz kombiniert strategisches Denken mit praktischer Umsetzung - für messbare Ergebnisse und
       nachhaltigen Geschäftserfolg.

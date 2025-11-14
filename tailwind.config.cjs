@@ -23,6 +23,9 @@ module.exports = {
         'orange-ebl-weak': 'rgba(254, 107, 21, 0.1)',
         'blue-ideesport-weak': 'rgba(30, 170, 230, 0.1)',
       },
+      spacing: {
+        navbar: '64px',
+      },
       maxWidth: {},
       maxHeight: {
         infiniti: '9999px',
