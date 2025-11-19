@@ -10,17 +10,17 @@
 <!-- ToDo Improve text handling for word breaks -->
 <a
   href={content.sectionLink}
-  class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-4 justify-between w-full md:h-[400px] max-w-full md:max-w-[400px]"
+  class="p-6 {color} text-white rounded-3xl flex flex-col gap-y-4 justify-between w-full md:h-[450px] lg:h-[400px] max-w-full md:max-w-[400px]"
 >
   <div class="flex flex-row h-full w-full">
     <div lang="de" class="flex text-balance flex-col flex-1 h-full hyphens-auto">
-      <span class="text-lg w-full max-w-full pb-3">
+      <span class="text-lg w-full max-w-full pb-4">
         {content.prefix}
       </span>
-      <span class="text-4xl w-full max-w-full whitespace-pre-line">
+      <span class="text-4xl w-full max-w-full whitespace-pre-line pb-4">
         {content.title}
       </span>
-      <div class="mt-auto pb-6 text-lg md:w-full max-w-[85%] md:max-w-none">
+      <div class="text-lg md:w-full md:max-w-none line-clamp">
         {content.description}
       </div>
     </div>

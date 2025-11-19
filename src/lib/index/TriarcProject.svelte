@@ -62,16 +62,16 @@
         <EnhancedImage alt="" image={project.highlightImage} imgClass="object-contain lg:w-full" />
       </div>
       <div class="flex flex-col gap-y-2 lg:col-span-2 lg:pt-20 max-w-prose">
-        <div class="text-lg font-bold pb-2">Ausgangslage</div>
-        <div class="text-base pb-2">
+        <div class="text-lg font-bold pb-1">Ausgangslage</div>
+        <div class="text-base pb-8">
           {project.situation}
         </div>
-        <div class="text-lg font-bold pb-2">Herausforderungen</div>
-        <div class="text-base pb-2">
+        <div class="text-lg font-bold pb-1">Herausforderungen</div>
+        <div class="text-base pb-8">
           {project.challenges}
         </div>
-        <div class="text-lg font-bold pb-2">Lösungen und Mehrwerte</div>
-        <div class="text-base pb-2">
+        <div class="text-lg font-bold pb-1">Lösungen und Mehrwerte</div>
+        <div class="text-base pb-8">
           {project.solution}
         </div>
       </div>

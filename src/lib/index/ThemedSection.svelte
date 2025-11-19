@@ -43,7 +43,7 @@
         {sectionContent.main.description}
       </div>
       {#each sectionContent.projects as project}
-        <ProjectCard card={project} />
+        <ProjectCard card={project} buttonColor={sectionColor} />
       {/each}
     </div>
   </Container>
@@ -52,7 +52,11 @@
 
 <style>
   .gradient-green-blue {
-    @apply bg-gradient-to-tr from-green-triarc-blended  to-blue-triarc-blended;
+    @apply bg-gradient-to-tr from-green-triarc-blended via-[#005540] to-blue-triarc-blended;
+  }
+
+  .gradient-blue-green {
+    @apply bg-gradient-to-tr from-blue-triarc-blended to-green-triarc-blended;
   }
 
   .gradient-blue-red {

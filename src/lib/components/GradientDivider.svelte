@@ -13,7 +13,8 @@
       <div class="text-2xl font-bold pb-4">{gradientContent.title}</div>
       <div class="text-base max-w-prose pb-2">{gradientContent.content}</div>
       <Button
-        buttonColorScheme="Secondary"
+        buttonGraphicStyle="secondary"
+        buttonColor="white"
         label={gradientContent.buttonLabel}
         reference={gradientContent.linksTo}
         buttonSize="Small">Test</Button

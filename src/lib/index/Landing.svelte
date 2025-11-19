@@ -2,7 +2,7 @@
   import SectionCard from '$lib/components/SectionCard.svelte'
   import Container from '$lib/components/Container.svelte'
   import { landingPageCards } from '$lib/content/landing-page'
-  import triarcLogo from '$lib/assets/triarc-labs-white.svg'
+  import triarcLogo from '$lib/assets/triarc-logo-negativ-ohneTM.svg'
 
   const landingContent = landingPageCards
 </script>

@@ -249,7 +249,7 @@
   </nav>
 
   <div class="main-container w-full content">
-    <div class="mobile-bar z-20 bg-white w-full py-2 px-8 flex items-center md:hidden" id="mobile-bar">
+    <div class="shadow-xl mobile-bar z-20 bg-white w-full py-2 px-8 flex items-center md:hidden" id="mobile-bar">
       <button class="py-2 px-2 rounded-md" on:click={toggle} aria-label="Navigation Menu">
         <svg width="32px" height="25px" viewBox="0 0 29 25" xmlns="http://www.w3.org/2000/svg">
           <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2">
