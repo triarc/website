@@ -3,9 +3,12 @@
 
   import { beforeUpdate, onMount } from 'svelte'
   import logo from '../lib/assets/triarc-labs-black.svg'
+  import logoNoText from '../lib/assets/triarc-logo.svg'
   import NavDropDown from '$lib/components/NavDropDown.svelte'
   import NavDropDownItem from '$lib/components/NavDropDownItem.svelte'
   import type { MetaInfo, NavItem } from '$lib/components/TypeDefinitions'
+  import ContactButton from '$lib/components/ContactButton.svelte'
+  import { afterNavigate } from '$app/navigation'
 
   export let menuOpen = false
 
@@ -13,12 +16,26 @@
   export let mobileSubTitle = ''
 
   export let data: { pathname: string }
+  let lastScrollPosition = 0
+  let closeOnNavigate = false
+
+  // Experimental to wait for page to be loaded before hiding the Nav Menu
+  afterNavigate(() => {
+    if (closeOnNavigate) {
+      menuOpen = false
+      closeOnNavigate = false
+      console.log('hideMenu after navigate', menuOpen)
+    }
+  })
 
   beforeUpdate(() => {
     const navItem = linkMetaInfo[data.pathname]
     if (navItem) {
       mobileTitle = navItem.title
       mobileSubTitle = navItem.description
+    } else {
+      mobileTitle = 'Home'
+      mobileSubTitle = 'Welcome to Triarc Labs'
     }
   })
 
@@ -120,10 +137,24 @@
     return map
   }, {})
 
-  function toggle() {
+  async function toggle() {
+    if (!menuOpen) {
+      lastScrollPosition = window.scrollY
+    }
     menuOpen = !menuOpen
+    if (!menuOpen) {
+      setTimeout(() => {
+        window.scrollTo(0, lastScrollPosition)
+      }, 0)
+    }
     console.log('menuOpen', menuOpen)
   }
+
+  // function toggle() {
+  //   menuOpen = !menuOpen
+  //   console.log('menuOpen', menuOpen)
+  //   lastScrollY = window.scrollY;
+  // }
   function hideMenu() {
     menuOpen = false
     console.log('hideMenu', menuOpen)
@@ -163,32 +194,50 @@
   })
 </script>
 
+<ContactButton></ContactButton>
 <div id="page" class="content {menuOpen ? 'open' : 'closed'}">
   <nav class="navbar" id="nav-menu">
     <div class="navbar-container">
-      <a href="/" class="flex items-center px-12 py-2">
+      <a
+        href="/"
+        on:click={(event) => {
+          if (data.pathname === '/') {
+            event.preventDefault()
+            hideMenu()
+          }
+          hideMenu()
+        }}
+        class="flex items-center px-8 lg:pl-0 py-2"
+      >
         <img src={logo} alt="triarc laboratories ltd" width="172" height="29" />
+        <!--        <img  src={logoNoText} alt="triarc laboratories ltd" width="172" height="29" />-->
       </a>
       <ul class="nav-links">
         {#each navItems as navItem}
           <li
-            class="my-4 last:mb-4 first:mt-4 py-2 px-4 {navItem.type === 'link' && navItem.path === data.pathname
+            class="my-2 md:my-2 last:mb-2 first:mt-2 py-3 px-4 {navItem.type === 'link' &&
+            navItem.path === data.pathname
               ? 'rounded-md bg-gray-100 bg-opacity-10'
               : ''}"
           >
             {#if navItem.type === 'link'}
-              <a href={navItem.path} on:click={hideMenu}>
+              <a href={navItem.path} on:click={() => (closeOnNavigate = true)}>
                 <div class="font-semibold leading-6 text-gray-900 text-sm">{navItem.title}</div>
                 <!--            <div class="font-light text-sm">{navItem.description}</div>-->
               </a>
             {:else}
-              <NavDropDown title={navItem.title}>
+              <NavDropDown
+                title={navItem.title}
+                isCurrentCategory={navItem.items.some((item) => item.path === data.pathname)}
+              >
                 {#each navItem.items as subItem}
                   <NavDropDownItem
                     title={subItem.title}
                     description={subItem.description}
                     close={hideMenu}
+                    on:closeAfterNavigate={() => (closeOnNavigate = true)}
                     path={subItem.path}
+                    isCurrentPath={subItem.path === data.pathname}
                   />
                 {/each}
               </NavDropDown>
@@ -200,7 +249,7 @@
   </nav>
 
   <div class="main-container w-full content">
-    <div class="mobile-bar z-20 bg-white w-full py-2 px-4 flex items-center lg:hidden" id="mobile-bar">
+    <div class="shadow-xl mobile-bar z-20 bg-white w-full py-2 px-8 flex items-center md:hidden" id="mobile-bar">
       <button class="py-2 px-2 rounded-md" on:click={toggle} aria-label="Navigation Menu">
         <svg width="32px" height="25px" viewBox="0 0 29 25" xmlns="http://www.w3.org/2000/svg">
           <g stroke="none" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-width="2">
@@ -224,7 +273,7 @@
 <!-- svelte-ignore css-unused-selector -->
 <style style lang="postcss">
   #page {
-    @apply bg-white flex flex-col min-h-screen;
+    @apply bg-white flex flex-col min-h-screen md:pt-navbar;
   }
 
   /*noinspection CssUnusedSymbol*/
@@ -237,8 +286,8 @@
   }
 
   #page .navbar {
-    @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col lg:flex-row h-auto lg:h-16
-      group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all flex-grow;
+    @apply text-[323F33] bg-white min-h-0 flex flex-shrink-0 z-20 shadow-2xl w-full relative flex-col md:flex-row h-auto md:h-16
+      group-odd:xl:flex-row group-even:xl:flex-row-reverse transition-all flex-grow md:fixed md:top-0;
   }
 
   /*#page.landing .navbar {*/
@@ -254,28 +303,28 @@
   }
 
   #page.content.closed .navbar {
-    @apply max-h-0 overflow-hidden lg:max-h-max lg:overflow-visible;
+    @apply max-h-0 overflow-hidden md:max-h-max md:overflow-visible;
   }
 
   #page.content.open .mobile-bar {
     @apply bottom-0;
   }
   #page.content.open .main-container {
-    @apply h-16 overflow-hidden sticky bottom-0 z-20 lg:h-auto lg:relative lg:overflow-visible lg:z-auto;
+    @apply h-16 overflow-hidden sticky bottom-0 z-20 md:h-auto md:relative md:overflow-visible md:z-auto;
   }
   /*noinspection CssUnusedSymbol*/
   #page.content.open .page-content {
-    @apply max-h-0 lg:max-h-max;
+    @apply max-h-0 md:max-h-max;
   }
   #page.content.open .navbar-container {
-    @apply pt-8 lg:pt-0;
+    @apply pt-2 md:pt-0;
   }
   #page.content.closed .mobile-bar {
     @apply sticky top-0;
   }
 
   .navbar-container {
-    @apply max-w-screen-xl mx-auto flex w-full flex-col lg:flex-row min-h-0;
+    @apply max-w-screen-xl mx-auto flex w-full flex-col md:flex-row md:h-16 min-h-0;
   }
 
   #page .main-container {
@@ -292,11 +341,11 @@
   }
 
   #page .navbar .nav-links {
-    @apply flex flex-col lg:flex-row w-full;
+    @apply flex flex-col md:flex-row w-full;
   }
 
   #page.content .navbar .nav-links {
-    @apply min-h-0 px-8;
+    @apply min-h-0 px-8 md:pl-0;
   }
 
   /*#page.landing .navbar {*/
@@ -310,13 +359,13 @@
   /*#page.landing .navbar .nav-links {*/
   /*  @apply flex-col flex-grow overflow-y-auto overflow-x-hidden min-h-0 px-8 py-8;*/
   /*}*/
-  #page .navbar .nav-links {
-    @apply scrollbar-thin scrollbar-thumb-blue-triarc lg:overflow-visible scrollbar-track-transparent;
-    /* scrollbar-track-gray-800*/
-  }
+  /*#page .navbar .nav-links {*/
+  /*  @apply scrollbar-thin scrollbar-thumb-blue-triarc md:overflow-visible scrollbar-track-transparent;*/
+  /* scrollbar-track-gray-800*/
+  /*}*/
 
   #page.landing .main-container {
-    @apply lg:pl-96;
+    @apply md:pl-96;
   }
 
   #nav-menu {

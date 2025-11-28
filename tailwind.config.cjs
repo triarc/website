@@ -11,6 +11,7 @@ module.exports = {
         'red-triarc': '#C8102E',
         'green-triarc': '#009639',
         'blue-triarc': '#0077c8',
+        'white-triarc': '#FFFFFF',
         'blue-triarc-light': '#3392d3',
         'red-triarc-blended': '#780a1c',
         'green-triarc-blended': '#005a2d',
@@ -21,6 +22,9 @@ module.exports = {
         'orange-ebl-medium': 'rgba(254, 107, 21, 0.6)',
         'orange-ebl-weak': 'rgba(254, 107, 21, 0.1)',
         'blue-ideesport-weak': 'rgba(30, 170, 230, 0.1)',
+      },
+      spacing: {
+        navbar: '64px',
       },
       maxWidth: {},
       maxHeight: {
