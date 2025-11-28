@@ -41,6 +41,8 @@ export interface MappedPost {
   footer: string
 }
 
+export type TriarcQuoteHighlight = 'green' | 'blue' | 'red' | 'white'
+
 export interface Quote {
   content: string
   person: string
@@ -50,7 +52,7 @@ export interface Quote {
   personTitle: string
   linkedin?: string
   email?: string
-  highlight?: 'green' | 'blue' | 'red'
+  highlight?: TriarcQuoteHighlight
 }
 
 export interface Testimonial {
@@ -147,4 +149,66 @@ export interface NavItemLink {
   description: string
   path: string
 }
+
 export type NavItem = NavItemHeading | NavItemLink
+
+export interface TriarcSectionDefinition {
+  prefix: string
+  title: string
+  description: string
+  iconSource: string
+  sectionLink: string
+}
+
+export interface TriarcLandingPageText {
+  content: Omit<TriarcSectionDefinition, 'iconSource' | 'sectionLink'>
+  strategy: TriarcSectionDefinition
+  operations: TriarcSectionDefinition
+  future: TriarcSectionDefinition
+}
+
+export type GradientColor = 'green-blue' | 'blue-red' | 'red-green' | 'green-red' | 'red-blue'
+export type TriarcColor = 'green' | 'blue' | 'red'
+
+export interface TriarcGradientDivider {
+  title: string
+  content: string
+  color: GradientColor
+  linksTo: string
+  buttonLabel: string
+}
+
+export interface TriarcSubsectionDefinition {
+  main: Omit<TriarcSectionDefinition, 'sectionLink' | 'prefix'>
+  projects: TriarcProjectContent[]
+}
+
+export interface MissionBlock {
+  content: BlockContent
+  divider?: TriarcGradientDivider
+}
+
+export interface TriarcProjectContent {
+  image: Picture
+  content: Omit<TriarcSectionDefinition, 'iconSource'>
+}
+
+export interface TriarcProjectDetailContent {
+  title: string
+  description: string
+  highlightImage: Picture
+  image: Picture
+  situation: string
+  challenges: string
+  solution: string
+  icons: {
+    iconSource: string
+    iconColor: TriarcColor
+  }[]
+}
+
+export interface TriarcPageMetadata {
+  title: string
+  metaTitle?: string
+  description: string
+}
