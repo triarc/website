@@ -17,7 +17,7 @@ export const operationSectionContent: TriarcSubsectionDefinition = {
         title: 'Modulare Work Management Plattform.',
         description:
           'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
-        sectionLink: 'tbd',
+        sectionLink: '/operations/teamwerk',
       },
     },
     {
@@ -27,7 +27,7 @@ export const operationSectionContent: TriarcSubsectionDefinition = {
         title: 'Modulare Work Management Plattform.',
         description:
           'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
-        sectionLink: 'tbd',
+        sectionLink: '/operations/teamwerk',
       },
     },
     {
@@ -37,7 +37,7 @@ export const operationSectionContent: TriarcSubsectionDefinition = {
         title: 'Modulare Work Management Plattform.',
         description:
           'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
-        sectionLink: 'tbd',
+        sectionLink: '/operations/teamwerk',
       },
     },
   ],

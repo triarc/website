@@ -4,30 +4,28 @@
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import ProjectStickyTitle from '$lib/components/ProjectStickyTitle.svelte'
   import type { GradientColor, TriarcColor, TriarcSubsectionDefinition } from '$lib/components/TypeDefinitions'
-  import { onMount } from 'svelte'
-  import { isMobile } from '$lib/stores/layoutStore'
+  import { onMount, tick } from 'svelte'
 
   export let sectionContent: TriarcSubsectionDefinition
   export let sectionColor: TriarcColor
   export let sectionGradientColor: GradientColor
 
   let scrollY = 0
+  let elementScrolled = false
   let navbarHeight = 64
 
   function handleScroll() {
-    if (!$isMobile) {
-      scrollY = Math.max(0, window.scrollY - navbarHeight)
-    }
+    scrollY = Math.max(0, window.scrollY)
+    elementScrolled = scrollY > 16
   }
 
-  onMount(() => {
-    if (!$isMobile) {
-      handleScroll()
-      const container = document.querySelector('.navbar') as HTMLElement
-      if (container) {
-        navbarHeight = container.offsetHeight
-      }
+  onMount(async () => {
+    await tick()
+    const container = document.querySelector('.navbar') as HTMLElement
+    if (container) {
+      navbarHeight = container.offsetHeight
     }
+    handleScroll()
   })
 </script>
 
@@ -38,13 +36,14 @@
       title={sectionContent.main.title}
       iconSrc={sectionContent.main.iconSource}
       iconColor={sectionColor}
+      scrolled={elementScrolled}
     ></ProjectStickyTitle>
-    <div id="projects" style="clip-path: inset({scrollY}px 0px 0px 0px);">
-      <div class="text-lg text-white lg:ml-[3.75rem] pb-20">
+    <div id="projects" class="md:[clip-path:inset(var(--scroll-y)_0_0_0)]" style="--scroll-y: {scrollY}px;">
+      <div class="text-lg text-white md:ml-[3.75rem] pb-20">
         {sectionContent.main.description}
       </div>
       {#each sectionContent.projects as project}
-        <ProjectCard card={project} />
+        <ProjectCard card={project} buttonColor={sectionColor} />
       {/each}
     </div>
   </Container>
@@ -53,7 +52,11 @@
 
 <style>
   .gradient-green-blue {
-    @apply bg-gradient-to-tr from-green-triarc-blended  to-blue-triarc-blended;
+    @apply bg-gradient-to-tr from-green-triarc-blended via-[#005540] to-blue-triarc-blended;
+  }
+
+  .gradient-blue-green {
+    @apply bg-gradient-to-tr from-blue-triarc-blended to-green-triarc-blended;
   }
 
   .gradient-blue-red {

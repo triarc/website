@@ -2,6 +2,8 @@
   export let src: string
   export let size: 'small' | 'medium' | 'large' = 'small'
   export let color: 'red' | 'green' | 'blue' | 'transparent' = 'transparent'
+  let clazz = ''
+  export { clazz as class }
 
   const colorMap = {
     red: 'bg-red-triarc',
@@ -20,6 +22,6 @@
   $: sizeClass = sizeMap[size] ?? sizeMap.small
 </script>
 
-<div class="{sizeClass} {colorClass} {size === 'small' ? 'p-0' : 'p-0.5'} rounded-md">
+<div class="{sizeClass} {colorClass} {size === 'small' ? 'p-0' : 'p-0.5'} rounded-md {clazz}">
   <img {src} alt="icon" class="w-full h-full" />
 </div>

@@ -62,7 +62,7 @@ export const missionPageQuotes: MissionBlock[] = [
         'So spezifisch Ihre Bedürfnisse und Anforderungen sind, sollten auch die digitalen Lösungen sein. Standardisierte Software erfüllt selten anspruchsvolle Kundenbedürfnisse und spezialisierte Leistungen.',
       color: 'green-blue',
       buttonLabel: 'Custom Software',
-      linksTo: '',
+      linksTo: '/custom-software',
     },
   },
   {
@@ -84,7 +84,7 @@ export const missionPageQuotes: MissionBlock[] = [
         'Technologie ist nur ein Teil der digitalen Transformation. Wir betrachten den Prozess ganzheitlich und verbinden die Technologie mit den Menschen, der Unternehmenskultur, den Prozessen und Strategie Ihrer Organisation.',
       color: 'blue-red',
       buttonLabel: 'Beratung',
-      linksTo: '',
+      linksTo: '/consulting',
     },
   },
   {
@@ -106,7 +106,7 @@ export const missionPageQuotes: MissionBlock[] = [
         'Topform erreichen wir nur in enger Zusammenarbeit mit Ihnen. Im interdisziplinären Team erkennen wir die exakten Bedürfnisse und binden Ihre Erfahrungen und Anforderungen fortlaufend in den Prozess ein.',
       color: 'green-blue',
       buttonLabel: 'Referenzen',
-      linksTo: '',
+      linksTo: '/references',
     },
   },
   {
@@ -128,7 +128,7 @@ export const missionPageQuotes: MissionBlock[] = [
         'Unseren Anspruch, revolutionäre Lösungen zu entwickeln, erreichen wir nur mit der Leidenschaft, die uns ausmacht. Da können Schnittstellen, Synapsen und Diskussionen auch mal heisslaufen.',
       color: 'red-green',
       buttonLabel: 'InnovationLab',
-      linksTo: '',
+      linksTo: 'innovation',
     },
   },
   {
