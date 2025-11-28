@@ -1,6 +1,7 @@
 <script lang="ts">
   export let title: string
   export let open = false
+  export let isCurrentCategory = false
 
   let dropdown: HTMLElement
 
@@ -52,15 +53,16 @@
   }
 </script>
 
-<div class="relative" bind:this={dropdown}>
+<div class="relative min-w-0" bind:this={dropdown}>
   <button
     type="button"
-    class="pointer-events-none lg:pointer-events-auto inline-flex items-center gap-x-1 text-sm font-semibold leading-6 cursor-pointer rounded bg-black lg:bg-transparent text-white lg:text-gray-800 px-4 -mx-4 mb-1 lg:rounded-none lg:px-0 lg:-mx-0 lg:mb-0"
+    class="{isCurrentCategory ? 'md:text-triarc-blue' : 'md:text-gray-800'}
+    pointer-events-none md:pointer-events-auto inline-flex items-center gap-x-1 text-sm font-semibold leading-6 cursor-pointer rounded bg-black md:bg-transparent text-white md:text-gray-800 px-4 -mx-4 mb-1 md:rounded-none md:px-0 md:-mx-0 md:mb-0"
     aria-expanded={open}
     on:click={toggle}
   >
-    <span>{title}</span>
-    <svg class="h-5 w-5 hidden lg:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+    <span class="flex-1 min-w-0 truncate">{title}</span>
+    <svg class="h-5 w-5 flex-shrink-0 hidden md:block" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
       <path
         fill-rule="evenodd"
         d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
@@ -69,7 +71,7 @@
     </svg>
   </button>
 
-  <div class="lg:hidden {open ? 'open' : 'closed'}">
+  <div class="md:hidden {open ? 'open' : 'closed'}">
     <div on:click={close} class="container" role="none">
       <slot />
     </div>
@@ -96,7 +98,7 @@
 
   /* noinspection CssUnusedSymbol*/
   .dialog.closed {
-    @apply transition ease-in duration-150 opacity-0 translate-y-1 lg:pointer-events-none;
+    @apply transition ease-in duration-150 opacity-0 translate-y-1 md:pointer-events-none;
   }
 
   /* noinspection CssUnusedSymbol*/

@@ -7,8 +7,37 @@
   import FooterNoContact from '$lib/components/FooterNoContact.svelte'
   import { goto, afterNavigate } from '$app/navigation'
   import { base } from '$app/paths'
+  import { page } from '$app/stores'
 
   let previousPage: string = base
+
+  $: schema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    publisher: {
+      '@type': 'Organization',
+      name: 'triarc laboratories Ltd.',
+      url: 'https://www.triarc-labs.com/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://www.triarc-labs.com/_app/immutable/assets/triarc-labs-black.DWW4zUTq.svg',
+      },
+    },
+    author: {
+      '@type': 'Person',
+      name: data.primary_author.name ?? '',
+    },
+    headline: data.title,
+    url: $page.url.href,
+    datePublished: data.published_at ?? '',
+    dateModified: data.updated_at ?? '',
+    image: {
+      '@type': 'ImageObject',
+      url: data.feature_image,
+    },
+    description: data.meta_description ?? data.excerpt,
+    mainEntityOfPage: $page.url.href,
+  }
 
   afterNavigate(({ from }) => {
     previousPage = from?.url.pathname || previousPage
@@ -26,6 +55,11 @@
 
 <svelte:head>
   <title>{data.title} - triarc-labs</title>
+  <meta property="title" content={data.meta_title ?? data.title} />
+  <meta property="og:title" content={data.meta_title ?? data.title} />
+  <meta name="description" content={data.meta_description ?? data.excerpt ?? ''} />
+  <meta property="og:description" content={data.meta_description ?? data.excerpt ?? ''} />
+  {@html `<script type="application/ld+json">${JSON.stringify(schema)}</script>`}
 </svelte:head>
 
 <div class="bg-white min-h-screen pt-16 md:pt-24 w-full">
