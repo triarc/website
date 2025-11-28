@@ -149,6 +149,7 @@ export interface NavItemLink {
   description: string
   path: string
 }
+
 export type NavItem = NavItemHeading | NavItemLink
 
 export interface TriarcSectionDefinition {
@@ -166,7 +167,8 @@ export interface TriarcLandingPageText {
   future: TriarcSectionDefinition
 }
 
-export type GradientColor = 'green-blue' | 'blue-red' | 'red-green'
+export type GradientColor = 'green-blue' | 'blue-red' | 'red-green' | 'green-red' | 'red-blue'
+export type TriarcColor = 'green' | 'blue' | 'red'
 
 export interface TriarcGradientDivider {
   title: string
@@ -176,7 +178,37 @@ export interface TriarcGradientDivider {
   buttonLabel: string
 }
 
+export interface TriarcSubsectionDefinition {
+  main: Omit<TriarcSectionDefinition, 'sectionLink' | 'prefix'>
+  projects: TriarcProjectContent[]
+}
+
 export interface MissionBlock {
   content: BlockContent
   divider?: TriarcGradientDivider
+}
+
+export interface TriarcProjectContent {
+  image: Picture
+  content: Omit<TriarcSectionDefinition, 'iconSource'>
+}
+
+export interface TriarcProjectDetailContent {
+  title: string
+  description: string
+  highlightImage: Picture
+  image: Picture
+  situation: string
+  challenges: string
+  solution: string
+  icons: {
+    iconSource: string
+    iconColor: TriarcColor
+  }[]
+}
+
+export interface TriarcPageMetadata {
+  title: string
+  metaTitle?: string
+  description: string
 }
