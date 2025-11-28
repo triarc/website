@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit'
 import type { PageLoad } from './$types'
 export const load: PageLoad = ({ params }) => {
   return fetch(
-    `https://blog.triarc-labs.com/ghost/api/content/posts/slug/${params.slug}?key=93ed4aea5970c22ed269d4ec35`
+    `https://blog.triarc-labs.com/ghost/api/content/posts/slug/${params.slug}?key=93ed4aea5970c22ed269d4ec35&include=authors`
   )
     .then(async (response) => {
       const data = await response.json()

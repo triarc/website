@@ -4,19 +4,25 @@
   import Icon from '$lib/components/Icon.svelte'
   import envelope from '$lib/assets/icons/envelope-solid-full.svg'
   import linkedIn from '$lib/assets/icons/square-linkedin-brands-solid-full.svg'
+  import Container from '$lib/components/Container.svelte'
   export let quote: Quote
 </script>
 
 <div
   class="{quote.highlight
     ? 'bg-' + quote.highlight + '-triarc bg-opacity-10'
-    : 'alternating'} pb-20 sm:pb-24 xl:pb-0 group"
+    : 'alternating'} pb-16 sm:pb-16 md:pb-0 group"
 >
-  <div
-    class="mx-auto flex max-w-7xl flex-col items-center gap-y-10 gap-x-8 px-8 sm:gap-y-8 lg:px-8 xl:items-stretch group-odd:xl:flex-row-reverse group-even:xl:flex-row"
+  <!--  <div-->
+  <!--    class="mx-auto flex max-w-7xl flex-col items-center gap-y-10 gap-x-8 px-8 sm:gap-y-8 lg:px-8 xl:items-stretch group-odd:xl:flex-row-reverse group-even:xl:flex-row"-->
+  <!--  >-->
+  <Container
+    class="max-w-4xl items-center gap-y-10 gap-x-8 sm:gap-y-8 md:items-stretch group-odd:md:flex-row-reverse group-even:md:flex-row md:px-8"
   >
-    <div class="-mt-8 w-full max-w-2xl xl:-mb-8 xl:w-96 xl:flex-none">
-      <div class="relative aspect-[3/4] h-full md:-mx-8 xl:mx-0 xl:aspect-auto flex justify-center items-center">
+    <div
+      class="hidden md:block mx-auto -mt-8 md:-mx-4 lg:-mx-8 w-full max-w-[337.5px] lg:max-w-[375px] xl:max-w-[412.5px] md:-mb-8 md:w-full md:flex-none xl:h-[550px] lg:h-[500px] h-[450px] md:place-self-end"
+    >
+      <div class="relative aspect-[3/4] h-full md:aspect-auto flex w-auto justify-center items-center">
         <!-- Needed as safeguard if images in use are svgs -->
         {#if typeof quote.image === 'string'}
           <img
@@ -24,7 +30,7 @@
             alt={quote.person}
             class={quote.imageCss
               ? quote.imageCss
-              : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
+              : 'aspect-[3/4] absolute h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
           />
         {:else}
           <EnhancedImage
@@ -37,32 +43,22 @@
         {/if}
       </div>
     </div>
-    <div class="w-full max-w-2xl xl:max-w-none xl:flex-auto xl:py-24 xl:px-8">
-      <figure class="relative isolate pt-6 sm:pt-12">
-        <svg
-          viewBox="0 0 162 128"
-          fill="none"
-          aria-hidden="true"
-          class="absolute top-0 left-0 -z-10 h-32 stroke-white/20"
-        >
-          <path
-            id="b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb"
-            d="M65.5697 118.507L65.8918 118.89C68.9503 116.314 71.367 113.253 73.1386 109.71C74.9162 106.155 75.8027 102.28 75.8027 98.0919C75.8027 94.237 75.16 90.6155 73.8708 87.2314C72.5851 83.8565 70.8137 80.9533 68.553 78.5292C66.4529 76.1079 63.9476 74.2482 61.0407 72.9536C58.2795 71.4949 55.276 70.767 52.0386 70.767C48.9935 70.767 46.4686 71.1668 44.4872 71.9924L44.4799 71.9955L44.4726 71.9988C42.7101 72.7999 41.1035 73.6831 39.6544 74.6492C38.2407 75.5916 36.8279 76.455 35.4159 77.2394L35.4047 77.2457L35.3938 77.2525C34.2318 77.9787 32.6713 78.3634 30.6736 78.3634C29.0405 78.3634 27.5131 77.2868 26.1274 74.8257C24.7483 72.2185 24.0519 69.2166 24.0519 65.8071C24.0519 60.0311 25.3782 54.4081 28.0373 48.9335C30.703 43.4454 34.3114 38.345 38.8667 33.6325C43.5812 28.761 49.0045 24.5159 55.1389 20.8979C60.1667 18.0071 65.4966 15.6179 71.1291 13.7305C73.8626 12.8145 75.8027 10.2968 75.8027 7.38572C75.8027 3.6497 72.6341 0.62247 68.8814 1.1527C61.1635 2.2432 53.7398 4.41426 46.6119 7.66522C37.5369 11.6459 29.5729 17.0612 22.7236 23.9105C16.0322 30.6019 10.618 38.4859 6.47981 47.558L6.47976 47.558L6.47682 47.5647C2.4901 56.6544 0.5 66.6148 0.5 77.4391C0.5 84.2996 1.61702 90.7679 3.85425 96.8404L3.8558 96.8445C6.08991 102.749 9.12394 108.02 12.959 112.654L12.959 112.654L12.9646 112.661C16.8027 117.138 21.2829 120.739 26.4034 123.459L26.4033 123.459L26.4144 123.465C31.5505 126.033 37.0873 127.316 43.0178 127.316C47.5035 127.316 51.6783 126.595 55.5376 125.148L55.5376 125.148L55.5477 125.144C59.5516 123.542 63.0052 121.456 65.9019 118.881L65.5697 118.507Z"
-          />
-          <use href="#b56e9dab-6ccb-4d32-ad02-6b4bb5d9bbeb" x="86" />
-        </svg>
-        <blockquote
-          class="text-xl font-semibold leading-8 {quote.highlight
-            ? 'text-gray-900'
-            : 'text-gray-600'} sm:text-2xl sm:leading-9"
-        >
-          <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
-          <p>{@html quote.content}</p>
-        </blockquote>
-        <figcaption class="mt-8 text-base {quote.highlight ? 'text-gray-900' : 'text-gray-600'}">
+    <div class="w-full md:flex-auto mt-8 md:pt-24 md:pb-12 group-even:lg:pr-8 group-odd:lg:pl-8 lg:px-8">
+      <!--      <figure class="relative isolate pt-6 sm:pt-12">-->
+      <blockquote
+        class="hidden md:block text-xl font-semibold leading-8 {quote.highlight
+          ? 'text-gray-900'
+          : 'text-gray-600'} sm:text-2xl sm:leading-9"
+      >
+        <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+        <!-- ToDo Ask about quote size -->
+        <p><span class="">&laquo;</span> {@html quote.content} <span class="">&raquo;</span></p>
+      </blockquote>
+      <div class="flex mt-8 justify-between group-odd:flex-row-reverse group-even:flex-row">
+        <div class="text-base {quote.highlight ? 'text-gray-900' : 'text-gray-600'} self-end">
           <div class="font-semibold">{quote.person}</div>
           <div class="mt-1">{quote.personTitle}</div>
-          <div class="flex space-x-2 mt-4 {quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
+          <div class="flex space-x-2 mt-2 {quote.highlight ? 'fill-gray-900' : 'fill-gray-600'}">
             {#if quote.email}
               <a href="mailto:{quote.email}" aria-label="Email">
                 <Icon size="small" src={envelope}></Icon>
@@ -88,8 +84,41 @@
               </a>
             {/if}
           </div>
-        </figcaption>
-      </figure>
+        </div>
+        <div class="md:hidden h-[200px]">
+          <div class="relative aspect-[3/4] h-full flex w-auto justify-center items-center">
+            <!-- Needed as safeguard if images in use are svgs -->
+            {#if typeof quote.image === 'string'}
+              <img
+                src={quote.image}
+                alt={quote.person}
+                class={quote.imageCss
+                  ? quote.imageCss
+                  : 'aspect-[3/4] absolute h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
+              />
+            {:else}
+              <EnhancedImage
+                alt={quote.person}
+                image={quote.image}
+                imgClass={quote.imageCss
+                  ? quote.imageCss
+                  : 'aspect-[3/4] absolute inset-0 h-full w-full rounded-2xl bg-gray-800 object-cover shadow-2xl'}
+              />
+            {/if}
+          </div>
+        </div>
+      </div>
+      <blockquote
+        class="pt-8 md:hidden text-xl font-semibold leading-8 {quote.highlight
+          ? 'text-gray-900'
+          : 'text-gray-600'} sm:text-2xl sm:leading-9"
+      >
+        <!-- eslint-disable-next-line svelte/no-at-html-tags -- HTML-Content is static -->
+        <!-- ToDo Ask about quote size -->
+        <p><span class="">&laquo;</span> {@html quote.content} <span class="">&raquo;</span></p>
+      </blockquote>
+      <!--      </figure>-->
     </div>
-  </div>
+  </Container>
+  <!--  </div>-->
 </div>

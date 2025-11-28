@@ -23,10 +23,10 @@
   href={path}
   on:click={handleClick}
   class="{isCurrentPath
-    ? 'disabled'
-    : ''} relative lg:dialog-link inline-link block group hover:bg-blue-triarc rounded hover:bg-opacity-10"
+    ? ''
+    : ''} relative md:dialog-link inline-link block group md:hover:bg-blue-triarc rounded md:hover:bg-opacity-10"
 >
-  <div class="font-semibold text-gray-900 group-hover:text-blue-triarc">
+  <div class="{isCurrentPath ? 'text-blue-triarc' : 'text-gray-900'} font-semibold md:group-hover:text-blue-triarc">
     {title}
   </div>
   <p class="text-gray-600">{description}</p>
