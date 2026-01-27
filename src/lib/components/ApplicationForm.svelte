@@ -465,10 +465,10 @@
                         required
                         bind:checked={noAgencyAccepted}
                         type="checkbox"
-                        id="condition-checkbox"
+                        id="condition-box"
                       />
                       <label
-                        for="condition-checkbox"
+                        for="condition-box"
                         class="inline pl-4 text-wrap text-s font-medium text-gray-900 decoration-red-triarc"
                       >
                         Wir akzeptieren keine Bewerbungen über Personalvermittlern oder Headhuntern. Ich bestätige, dass

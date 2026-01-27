@@ -17,13 +17,14 @@ export const JobPostings: JobPosting[] = [
       'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. ',
     claim: 'Senior Software Engineer',
     img: jobListingImage,
-    open: false,
+    open: true,
     responsibilities:
       'sind so breit gefächert und abwechslungsreich wie die Arbeit, die dich bei uns erwartet: vom Design bis zur Lösungsfindung ist alles dabei, individuell angepasst auf unsere branchenübergreifenden Kunden. In unserem Team aus den qualifiziertesten Entwicklern profitierst du von unserer jahrelangen Erfahrung, und wir von deiner. Durch die agile Entwicklung nach SCRUM arbeiten wir effizient und motiviert. Du arbeitest an Web- und Mobile-Anwendungen (inkl. Backend) und wendest dabei Clean Code an. Du bist vertraut mit unserem aktuell eingesetzten <a class="underline" href="/#technology">Stack</a>.',
     skills: [
       'Leidenschaft für die Software Entwicklung',
       'Hochschulabschluss in Informatik (ETH/FH/vergleichbarer Leistungsnachweis)',
       'Hohe Methodenkompetenz und logisches, vernetztes Denken',
+      'Erfahrung mit KI (Einsatz während Software Entwicklung), sowie Umsetzung von Software mit KI-Funktionalitäten',
       'Spass an der Arbeit im Team',
       'Lösungsorientiertes Denken und Handeln',
       'Lernfähigkeit und kontinuierliche Weiterentwicklung',
@@ -147,7 +148,7 @@ export const DetailedJobListings: {
     slug: 'senior',
     hasTechnologySection: true,
     BasicJobInfo: {
-      jobDetails: { currentlyHiring: false, jobName: 'Senior Software Engineer', jobPensum: '80-100%' },
+      jobDetails: { currentlyHiring: true, jobName: 'Senior Software Engineer', jobPensum: '60-100%' },
       title: 'Senior Software Engineer',
       content:
         'Als Senior begleitest du Projekte vom Requirements-Engineering bis in den Betrieb. Du bist der Vermittler zwischen dem Kunden und deinen Entwickler-KollegInnen. Und du machst das nicht zum ersten Mal. Du kannst im Team unterstützen, wo es an was fehlt.',
@@ -157,6 +158,7 @@ export const DetailedJobListings: {
         'Erfahrungen im Bereich Web und Angular',
         'Erfahrungen mit Elasticsearch / Postgres / MongoDB',
         'Erfahrungen Docker / Kubernetes / Gitlab CI',
+        'Erfahrungen mit KI (Einsatz und Entwicklung)',
       ],
       collapsible: true,
       collapsed: true,
@@ -168,6 +170,7 @@ export const DetailedJobListings: {
       bulletPoints: [
         'Komplexe Anforderungen verstehen und entsprechende Softwarelösungen konzipieren und umsetzen können',
         'Gutes Verständnis für die eingesetzte Toolchain entwickeln und diese erweitern können',
+        'Erfahrung mit KI (Einsatz während Software Entwicklung), sowie Umsetzung von Software mit KI-Funktionalitäten',
         'Aktive Teilnahme bei der Planung von neuen Projekten',
         'Gutes Verständnis für verteilte Systemarchitekturen',
         'Neue Technologien evaluieren und einbinden',
