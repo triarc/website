@@ -11,7 +11,6 @@
   import david from '$lib/assets/team/david.jpg?format=webp;png&w=500&enhanced'
   import bammbamm from '$lib/assets/team/bambam.jpg?format=webp;png&w=500&enhanced'
   import lukas from '$lib/assets/team/lukas.jpg?format=webp;png&w=500&enhanced'
-  import gregor from '$lib/assets/team/gregor.jpg?format=webp;png&w=500&enhanced'
   import sascha from '$lib/assets/team/sascha.jpg?format=webp;png&w=500&enhanced'
   import nina from '$lib/assets/team/nina.png?format=webp;png&w=500&enhanced'
   import luca from '$lib/assets/team/luca.png?format=webp;png&w=500&enhanced'
@@ -118,15 +117,6 @@
       special: false,
       email: 'lukas@triarc-labs.com',
       linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
-    },
-    {
-      name: 'Gregor Paka',
-      job: 'Business Developer',
-      nerdJob: 'Business Developer',
-      image: gregor,
-      special: false,
-      email: 'gregor@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/gregor-paka-788b44245/',
     },
     {
       name: 'Sascha Wydler',
