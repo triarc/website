@@ -120,15 +120,6 @@
       linkedIn: 'https://www.linkedin.com/in/lukas-hartmann-433170277/',
     },
     {
-      name: 'Gregor Paka',
-      job: 'Business Developer',
-      nerdJob: 'Business Developer',
-      image: gregor,
-      special: false,
-      email: 'gregor@triarc-labs.com',
-      linkedIn: 'https://www.linkedin.com/in/gregor-paka-788b44245/',
-    },
-    {
       name: 'Sascha Wydler',
       job: 'Projektleiter',
       nerdJob: 'Projektleiter',
