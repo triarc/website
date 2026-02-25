@@ -9,36 +9,5 @@ export const operationSectionContent: TriarcSubsectionDefinition = {
       'Automatisierte Abläufe, intuitive Bedienung und gezielter Wissenstransfer sorgen für reibungslose Zusammenarbeit, hochwertige Daten und eine starke operative Performance.',
     iconSource: gear,
   },
-  projects: [
-    {
-      image: teamwerk,
-      content: {
-        prefix: 'TeamWerk',
-        title: 'Modulare Work Management Plattform.',
-        description:
-          'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
-        sectionLink: '/operations/teamwerk',
-      },
-    },
-    {
-      image: teamwerk,
-      content: {
-        prefix: 'TeamWerk',
-        title: 'Modulare Work Management Plattform.',
-        description:
-          'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
-        sectionLink: '/operations/teamwerk',
-      },
-    },
-    {
-      image: teamwerk,
-      content: {
-        prefix: 'TeamWerk',
-        title: 'Modulare Work Management Plattform.',
-        description:
-          'Um die Zusammenarbeit in Projekten und zwischen Teams optimal zu unterstützen, braucht es eine digitale Lösung, die flexibel mitwächst. Eine modulare Work Management Plattform bietet genau das: Sie vereint Arbeitsaufträge, Projektkoordination, Protokollierung, interne Kommunikation und ein zentrales Wiki in einem System – für effiziente Abläufe und transparente Zusammenarbeit.',
-        sectionLink: '/operations/teamwerk',
-      },
-    },
-  ],
+  projects: [],
 }

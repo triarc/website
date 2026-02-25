@@ -39,6 +39,58 @@ module.exports = {
           '50%': { transform: 'rotate(3deg)' },
         },
       },
+      typography: (theme) => ({
+        custom: {
+          css: {
+            img: {
+              paddingTop: theme('spacing.8'),
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            },
+            h2: {
+              fontSize: theme('fontSize.lg'),
+              fontWeight: theme('fontWeight.bold'),
+              paddingTop: theme('spacing.8'),
+              paddingBottom: theme('spacing.3'),
+              lineHeight: theme('lineHeight.7'),
+              marginTop: 0,
+              marginBottom: 0,
+              marginLeft: 128,
+            },
+            p: {
+              fontSize: theme('fontSize.base'),
+              fontWeight: theme('fontWeight.normal'),
+              maxWidth: theme('maxWidth.prose'),
+              marginLeft: 128,
+            },
+            ul: {
+              listStyleType: 'disc',
+              paddingLeft: theme('spacing.5'),
+              marginTop: theme('spacing.4'),
+              marginBottom: theme('spacing.4'),
+              marginLeft: 128,
+            },
+            ol: {
+              listStyleType: 'decimal',
+              paddingLeft: theme('spacing.5'),
+              marginTop: theme('spacing.4'),
+              marginBottom: theme('spacing.4'),
+              marginLeft: 128,
+            },
+            li: {
+              marginTop: theme('spacing.2'),
+              marginBottom: theme('spacing.2'),
+              '&::marker': {
+                color: theme('colors.gray.900'), // Optional: customize bullet color
+              },
+            },
+            '.kg-card.kg-product-card': {
+              display: 'none',
+            },
+            // kg,
+          },
+        },
+      }),
     },
   },
   variants: {

@@ -14,7 +14,7 @@
 >
   <Icon class="lg:hidden inline" size="medium" color={iconColor} src={iconSrc} />
   <Icon class="hidden lg:inline" size="large" color={iconColor} src={iconSrc} />
-  <span id="sticky-title" class="project-title text-5xl text-white font-bold text-balance">{title}</span>
+  <span id="sticky-title" class="project-title text-2xl lg:text-5xl text-white font-bold text-balance">{title}</span>
 </div>
 
 <style>

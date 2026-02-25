@@ -1,6 +1,6 @@
 import type { PageLoad } from './$types'
 
-import { mapPosts } from './utils'
+import { mapPosts } from '$lib/util/ghost-helpers'
 import type { Tag } from '$lib/components/TypeDefinitions'
 
 export const load: PageLoad = ({ url }) => {
