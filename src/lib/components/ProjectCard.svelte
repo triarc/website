@@ -15,11 +15,18 @@
     <div class="text-lg w-full max-w-full mb-2">
       {card.content.prefix}
     </div>
-    <div class="text-3xl font-bold w-full max-w-full mb-2 whitespace-pre-line">
+    <div class="text-xl md:text-3xl font-bold w-full max-w-full mb-2 whitespace-pre-line">
       {card.content.title}
     </div>
     <div class="lg:hidden project-card-image w-full overflow-hidden">
-      <EnhancedImage alt="" image={card.image} imgClass="object-contain" />
+      <img
+        src={card.image.src}
+        srcset={card.image.srcset}
+        sizes={card.image.sizes}
+        loading="lazy"
+        alt={card.image.alt}
+        class="w-full object-contain"
+      />
     </div>
     <div lang="de" class="text-base max-w-prose whitespace-normal hyphens-auto mb-4">
       {card.content.description}
@@ -33,7 +40,14 @@
     ></Button>
   </div>
   <div class="hidden lg:block project-card-image w-full overflow-hidden">
-    <EnhancedImage alt="" image={card.image} imgClass="object-contain" />
+    <img
+      src={card.image.src}
+      srcset={card.image.srcset}
+      sizes="auto"
+      loading="lazy"
+      alt={card.image.alt}
+      class="object-contain"
+    />
   </div>
 </div>
 

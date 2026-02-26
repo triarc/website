@@ -1,5 +1,12 @@
 import type { Picture } from 'imagetools-core'
 
+export interface GhostImage {
+  srcset: string
+  sizes: string
+  src: string
+  alt: string
+}
+
 export interface BlockContent {
   title?: string
   content?: string
@@ -189,18 +196,16 @@ export interface MissionBlock {
 }
 
 export interface TriarcProjectContent {
-  image: Picture
+  image: GhostImage
   content: Omit<TriarcSectionDefinition, 'iconSource'>
 }
 
 export interface TriarcProjectDetailContent {
   title: string
   description: string
-  highlightImage: Picture
-  image: Picture
-  situation: string
-  challenges: string
-  solution: string
+  image: GhostImage
+  secondaryImage?: GhostImage
+  htmlContent: string
   icons: {
     iconSource: string
     iconColor: TriarcColor

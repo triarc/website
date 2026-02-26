@@ -1,5 +1,5 @@
 import type { PageLoad } from './$types'
-import { mapPosts } from '../stories/utils'
+import { mapPosts } from '$lib/util/ghost-helpers'
 
 export interface MappedPost {
   slug: string
