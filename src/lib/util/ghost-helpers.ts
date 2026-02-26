@@ -166,7 +166,7 @@ export function getIconsFromTags(tags: { slug: string }[] = []) {
 
 export async function fetchGhostPages(fetch: LoadEvent['fetch'], tag: string) {
   const response = await fetch(
-    `https://blog.triarc-labs.com/ghost/api/content/pages?include=tags,authors&tag:${tag}&key=93ed4aea5970c22ed269d4ec35&order=published_at%20desc`
+    `https://blog.triarc-labs.com/ghost/api/content/pages?include=tags,authors&filter=tag:${tag}&key=93ed4aea5970c22ed269d4ec35&order=published_at%20desc`
   )
 
   if (!response.ok) {

@@ -3,6 +3,6 @@ import type { PageLoad } from './$types'
 
 export const load: PageLoad = async ({ fetch }) => {
   return {
-    pages: await fetchGhostPages(fetch, 'operations'),
+    pages: await fetchGhostPages(fetch, 'hash-operations'),
   }
 }
